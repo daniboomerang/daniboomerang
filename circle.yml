@@ -1,0 +1,9 @@
+test:
+  override:
+    - echo "pending to prepare tests to be runned here"
+deployment:
+  staging:
+    branch: master
+    commands:
+      - gem install compass
+      - ./build-tools/push-to-heroku.sh

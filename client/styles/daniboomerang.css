@@ -1,0 +1,30 @@
+html,body{
+    height:100%;
+}
+body{
+	margin:0;
+	margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	padding:0;
+}
+
+
+
+/************************/
+/******* FOOTER *********/
+/************************/
+.footer {
+	padding: 10px;
+	background-color: black;
+	color: #cccccc;
+	text-align: center;
+	height: 25px;
+}
+.footer p {
+ 	font-size: 11px;
+}
+.footer a {
+ 	color: red;
+}
+/************************/
+/************************/
+/************************/
