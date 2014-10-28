@@ -34,9 +34,13 @@
     <body ng-app="daniboomerangApp">
 
         <!-- DANIBOOMERANG APP -->
-        <navbar></navbar>
-        <content></content>
-        <footer></footer>
+        <div id="wrapper" ng-controller="LayoutController">
+            <navbar></navbar>
+            <menu></menu>
+            <content></content>
+            {{isToggledMenu}}
+        </div>
+         <!-- /#wrapper -->
         <!-- -->
 
         <!-- build:js scripts/vendor.js -->
@@ -59,7 +63,7 @@
                 <script src="scripts/daniboomerang.js"></script>
                 <script src="scripts/directives.js"></script>
                 <script src="scripts/controllers.js"></script>
-            <!-- -->    
+            <!-- -->
         <!-- endbuild -->
 
     </body>
