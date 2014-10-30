@@ -6,6 +6,7 @@ daniboomerangControllers.controller('LayoutController', function($scope){
 
 	function init(){
 		$scope.isToggledMenu = false;
+		$scope.currentSection = "Who I am";
 	}
 
 });
