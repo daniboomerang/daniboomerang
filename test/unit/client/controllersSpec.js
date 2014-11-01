@@ -7,8 +7,14 @@ describe('controllers', function(){
 
     it('should ....', inject(function($controller) {
     //spec body
-    var navCtrl = $controller('NavController', { $scope: {} });
-    expect(navCtrl).toBeDefined();
+    var navbarCtrl = $controller('NavbarCtrl', { $scope: {} });
+    expect(navbarCtrl).toBeDefined();
+    var layoutCtrl = $controller('LayoutCtrl', { $scope: {} });
+    expect(layoutCtrl).toBeDefined();
+    var sidebarCtrl = $controller('SidebarCtrl', { $scope: {} });
+    expect(sidebarCtrl).toBeDefined();
+    var sidebarResponsiveCtrl = $controller('SidebarResponsiveCtrl', { $scope: {} });
+    expect(sidebarResponsiveCtrl).toBeDefined();
   }));
   
 });

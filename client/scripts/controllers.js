@@ -1,21 +1,34 @@
 var daniboomerangControllers = angular.module('daniboomerangControllers', []);
 
-daniboomerangControllers.controller('LayoutController', function($scope){
+daniboomerangControllers.controller('LayoutCtrl', function ($scope){
 
 	init();
 
 	function init(){
-		$scope.isToggledMenu = false;
+		$scope.isToggledMenu = true;
 		$scope.currentSection = "Who I am";
 	}
 
 });
 
-daniboomerangControllers.controller('NavController', function($scope){
+daniboomerangControllers.controller('NavbarCtrl', function ($scope){
 	
 	$scope.toggleMenu = function(){
 		$scope.$parent.isToggledMenu = !$scope.$parent.isToggledMenu;
 	}
+
+	$scope.isToggledMenu = function(){
+		return $scope.$parent.isToggledMenu;
+	}
+
+});
+
+daniboomerangControllers.controller('SidebarCtrl', function ($scope){
+	
+
+});
+
+daniboomerangControllers.controller('SidebarResponsiveCtrl', function ($scope){
 
 	$scope.isToggledMenu = function(){
 		return $scope.$parent.isToggledMenu;

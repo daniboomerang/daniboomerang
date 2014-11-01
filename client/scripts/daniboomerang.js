@@ -2,6 +2,9 @@
 
 angular.module('daniboomerangApp', [
   'ngRoute',
+  'ngAnimate',
+  // VENDOR
+  'ngResize',
   // DANIBOOMERANG
   'daniboomerangDirectives',
   'daniboomerangControllers'
