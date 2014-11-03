@@ -1,8 +1,8 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/getting-started.md */
+/* https://github.com/angular/protractor/blob/master/docs/getting-started.md 
 
-describe('Daniboomerang Scenarios', function() {
+describe('Daniboomerang Responsive Scenarios', function() {
 
   browser.get('index.html');
 
@@ -45,6 +45,13 @@ describe('Daniboomerang Scenarios', function() {
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
 
+    // The responsive sidebar menu
+    it("should show correctly show image for 'Who I am: The boomerang", function() {
+      var section = element(by.repeater('section in sidebar.sections').row(0).column('sectionImg'));
+      var sectionImgPath = '/images/boomerang-white-24.svg '
+      expect(section.getText()).toEqual(sectionImgPath);
+    });
+
   });
 
   describe('whatILike', function() {
@@ -76,6 +83,13 @@ describe('Daniboomerang Scenarios', function() {
       var section = element(by.repeater('section in sidebar.sections').row(1).column('section'));
       var sectionWith4spaces = currentSectionName + '    ';
       expect(section.getText()).toEqual(sectionWith4spaces);
+    });
+
+    // The responsive sidebar menu
+    it("should show correctly show image for 'What I like': The Heart", function() {
+      var section = element(by.repeater('section in sidebar.sections').row(1).column('sectionImg'));
+      var sectionImgPath = '/images/heart-24.png'
+      expect(section.getText()).toEqual(sectionImgPath);
     });
 
   });
@@ -111,6 +125,13 @@ describe('Daniboomerang Scenarios', function() {
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
 
+    // The responsive sidebar menu
+    it("should show correctly show image for 'What I've done': Github", function() {
+      var section = element(by.repeater('section in sidebar.sections').row(2).column('sectionImg'));
+      var sectionImgPath = '/images/github-24.png'
+      expect(section.getText()).toEqual(sectionImgPath);
+    });
+
   });
 
   describe('whatIveLearnt', function() {
@@ -143,6 +164,13 @@ describe('Daniboomerang Scenarios', function() {
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
 
+    // The responsive sidebar menu
+    it("should show correctly show image for 'What I've learnt': The CV", function() {
+      var section = element(by.repeater('section in sidebar.sections').row(3).column('sectionImg'));
+      var sectionImgPath = '/images/cv-24.png'
+      expect(section.getText()).toEqual(sectionImgPath);
+    });
+
   });
 
-});
+}); */

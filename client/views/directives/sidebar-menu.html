@@ -4,11 +4,9 @@
         <li class="navbar-height sidebar-brand"><img src="/images/boomerang-bluesky-62-41-rotated.svg" alt=""></li>
     </ul>
     <ul class="sidebar-nav sidebar-sections">
-        <li><a href="#">What I like to do &nbsp;&nbsp;<img src="/images/heart-24.png" alt=""></a></li>
-        <li><a href="#">Who I am &nbsp;&nbsp;<img src="/images/boomerang-white-24.svg" alt=""></a></li>
-        <li><a href="#">What I´ve done &nbsp;&nbsp;<img src="/images/github-24.png" alt=""></a></li>
-        <li><a href="#">What I´ve learnt &nbsp;&nbsp;<img src="/images/cv-24.png" alt=""> </a></li>
-        <li><a href="#">Status &nbsp;&nbsp;<img src="/images/unlock-24.png" alt=""></a></li>
+        <li ng-repeat="section in sidebar.sections" ng-class="{'active-sidebar-link': activeSection == section.sectionAcronym}">
+            <a href="#{{section.sectionURL}}">{{section.section}}&nbsp;&nbsp;&nbsp;&nbsp;<img src={{section.sectionImg}} alt=""></a>
+        </li>
     </ul>
 </div>
 <!-- /#sidebar-wrapper -->

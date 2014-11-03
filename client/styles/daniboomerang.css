@@ -38,6 +38,6 @@ body{
 	color: rgba(0,179,215,255);
 }
 
-.responsive-width {
-    width: 94%;
+.text-orange {
+    color: rgba(255,82,29,255);
 }

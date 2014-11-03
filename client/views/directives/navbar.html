@@ -9,8 +9,10 @@
                 <span class="icon-bar"></span>
             </button>
             <span>
-                 <a class="navbar-brand visible-xs" ><img src="/images/boomerang-orange-62-41-rotated.svg" alt=""></a>
-                 <a class="navbar-center navbar-brand"> {{currentSection}} </a>
+                <a class="navbar-brand visible-xs" ><img src="/images/boomerang-orange-62-41-rotated.svg" alt=""></a>
+                <div id="current-section" class="navbar-center navbar-brand">
+                    <span ng-class="{'text-bluesky': !size.smallDevice, 'text-orange': size.smallDevice }">{{currentSection}}</span>
+                </div>
             </span>
         </div>      
     </div>
