@@ -55,7 +55,7 @@ daniboomerangControllers.controller('SidebarCtrl', function ($scope, $rootScope,
 		
 		// Sidebar subscribes to possible changes on URL
 		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
-		    $scope.currentSection = dataServices.getObjectFiledCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		    $scope.currentSection = dataServices.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
 		});
 
 		$scope.currentSection = locationService.getCurrentSection();
@@ -74,7 +74,7 @@ daniboomerangControllers.controller('SidebarResponsiveCtrl', function ($scope, $
 
 		// Responsive sidebar subscribes to possible changes on URL
 		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
-		    $scope.currentSection = dataServices.getObjectFiledCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		    $scope.currentSection = dataServices.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
 		});
 
 		// Responsive sidebar subscribes on responsive sidebar menu changes

@@ -58,8 +58,10 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, resiz
   return {
 
     init: function() {
+
       $rootScope.$on('resize', function(data, $event){
         windowSize = $event;
+        console.log($event);
         var width = windowSize.width;
         var height = windowSize.height;
         isResponsive = windowSize.width < 768;
