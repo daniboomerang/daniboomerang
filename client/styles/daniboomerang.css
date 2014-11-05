@@ -15,6 +15,19 @@ body{
 @media(min-width:768px) {
     body{
         margin-top: 70px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        font-size: 16px;
+    }
+}
+
+@media(min-width:1000px) {
+    body{
+        font-size: 22px;
+    }
+}
+
+@media(min-width:1200px) {
+    body{
+        font-size: 23px;
     }
 }
 

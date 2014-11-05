@@ -47,7 +47,7 @@ daniboomerangServices.factory('locationService', function ($rootScope) {
   }      
 });
 
-daniboomerangServices.factory('responsivityService', function ($rootScope, resize) {
+daniboomerangServices.factory('responsivityService', function ($rootScope, $window, resize) {
   
   var SUBSCRIPTION_RESIZE = 'event:screenResize-changed';
   var SUBSCRIPTION_SIDEBAR_TOGGLING = 'event:responsiveSidebarMenu-changed';
@@ -61,7 +61,7 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, resiz
 
       $rootScope.$on('resize', function(data, $event){
         windowSize = $event;
-        console.log($event);
+        console.log("Event", $event);
         var width = windowSize.width;
         var height = windowSize.height;
         isResponsive = windowSize.width < 768;
