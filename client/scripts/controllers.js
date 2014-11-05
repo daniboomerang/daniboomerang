@@ -1,135 +1,89 @@
 var daniboomerangControllers = angular.module('daniboomerangControllers', []);
 
-daniboomerangControllers.controller('LayoutCtrl', function ($scope){
-
+daniboomerangControllers.controller('NavbarCtrl', function ($scope, $rootScope, locationService, responsivityService, dataServices){
+	
 	init();
 
 	function init(){
-		$scope.isToggledMenu = true;
-		$scope.currentSection = "Who I am";
-		$scope.activeSection = "Who";
+
+		$scope.resizeData = {};
+
+		// Navbar subscribes to possible changes on URL
+		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
+		    $scope.currentSection = dataServices.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		});
+		// Navbar subscribes to possible changes on URL
+		$rootScope.$on(responsivityService.subscribeResize(), function(event, resizeData) {
+		    $scope.resizeData = resizeData;
+		});
+		$scope.currentSection = locationService.getCurrentSection();
+
+	}
+
+	// Toggling sidebar menu on responsive
+	$scope.toggleSidebarMenu = function(){
+		responsivityService.toggleSidebarMenu();
 	}
 
 });
 
-daniboomerangControllers.controller('NavbarCtrl', function ($scope){
+daniboomerangControllers.controller('ContentCtrl', function ($scope, $rootScope, responsivityService){
 	
-	$scope.toggleMenu = function(){
-		$scope.$parent.isToggledMenu = !$scope.$parent.isToggledMenu;
-	}
+	init();
 
-	$scope.isToggledMenu = function(){
-		return $scope.$parent.isToggledMenu;
+	function init(){
+		// Content subscribes to possible changes on URL
+		$rootScope.$on(responsivityService.subscribeResize(), function(event, resizeData) {
+		    $scope.resizeData = resizeData;
+		});
+		// Content subscribes on responsive sidebar menu changes
+		$rootScope.$on(responsivityService.subscribeSidebarToggling(), function(event, isSidebarMenuToggled) {
+		    $scope.isSidebarMenuToggled = isSidebarMenuToggled;
+		});
+		$scope.isSidebarMenuToggled = responsivityService.isSidebarMenuToggled();
 	}
-
 });
 
-daniboomerangControllers.controller('SidebarCtrl', function ($scope){
+daniboomerangControllers.controller('SidebarCtrl', function ($scope, $rootScope, $http, locationService, dataServices){
 
 	init();
 
 	function init(){
 
 		$scope.sidebar = {};
-		$scope.sidebar.sections =
-		[
-			{
-				section: 'Who I am',
-				sectionAcronym: 'Who',
-				sectionURL: 'whoIAm',
-				sectionImg: '/images/boomerang-white-24.svg'
-			},
-			{
-				section: 'What I like',
-				sectionAcronym: 'What',
-				sectionURL: 'whatILike',
-				sectionImg: '/images/heart-24.png'
-			},
-					{
-				section: "What I've done",
-				sectionAcronym: 'Github',
-				sectionURL: 'whatIveDone',
-				sectionImg: '/images/github-24.png'
-			},
-			{
-				section: "What I've learnt",
-				sectionAcronym: 'CV',
-				sectionURL: 'whatIveLearnt',
-				sectionImg: '/images/cv-24.png'
-			},
-			{
-				section: 'Status',
-				sectionAcronym: 'Status',
-				sectionURL: 'Status',
-				sectionImg: '/images/unlock-24.png'
-			},
-			{
-				section: 'Contact',
-				sectionAcronym: 'Contact',
-				sectionURL: 'Contact',
-				sectionImg: '/images/contact-24.png'
-			}
-		];
+		$scope.sidebar.sectionsData = dataServices.getSidebarData();
 		
-		$scope.activeSection = $scope.$parent.activeSection;
+		// Sidebar subscribes to possible changes on URL
+		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
+		    $scope.currentSection = dataServices.getObjectFiledCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		});
 
+		$scope.currentSection = locationService.getCurrentSection();
 	}
 
 });
 
-daniboomerangControllers.controller('SidebarResponsiveCtrl', function ($scope){
+daniboomerangControllers.controller('SidebarResponsiveCtrl', function ($scope, $rootScope, $http, locationService, responsivityService, dataServices){
 
 	init();
-
-	$scope.isToggledMenu = function(){
-		return $scope.$parent.isToggledMenu;
-	}
 
 	function init(){
 
 		$scope.sidebarResponsive = {};
-		$scope.sidebarResponsive.sections =
-		[
-			{
-				section: 'Who I am',
-				sectionAcronym: 'Who',
-				sectionURL: 'whoIAm',
-				sectionImg: '/images/boomerang-white-24.svg'
-			},
-			{
-				section: 'What I like',
-				sectionAcronym: 'What',
-				sectionURL: 'whatILike',
-				sectionImg: '/images/heart-24.png'
-			},
-					{
-				section: "What I've done",
-				sectionAcronym: 'Github',
-				sectionURL: 'whatIveDone',
-				sectionImg: '/images/github-24.png'
-			},
-			{
-				section: "What I've learnt",
-				sectionAcronym: 'CV',
-				sectionURL: 'whatIveLearnt',
-				sectionImg: '/images/cv-24.png'
-			},
-			{
-				section: 'Status',
-				sectionAcronym: 'Status',
-				sectionURL: 'Status',
-				sectionImg: '/images/unlock-24.png'
-			},
-			{
-				section: 'Contact',
-				sectionAcronym: 'Contact',
-				sectionURL: 'Contact',
-				sectionImg: '/images/contact-24.png'
-			}
-		];
+		$scope.sidebarResponsive.sectionsData = dataServices.getSidebarData();
 
-		$scope.activeSection = $scope.$parent.activeSection; 
+		// Responsive sidebar subscribes to possible changes on URL
+		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
+		    $scope.currentSection = dataServices.getObjectFiledCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		});
 
+		// Responsive sidebar subscribes on responsive sidebar menu changes
+		$rootScope.$on(responsivityService.subscribeSidebarToggling(), function(event, isSidebarMenuToggled) {
+		    $scope.isSidebarMenuToggled = isSidebarMenuToggled;
+		});
+		
+		$scope.currentSection = locationService.getCurrentSection();
+		$scope.isSidebarMenuToggled = responsivityService.isSidebarMenuToggled;
 	}
 
 });

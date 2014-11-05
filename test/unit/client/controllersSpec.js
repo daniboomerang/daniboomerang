@@ -9,7 +9,7 @@ describe('controllers', function(){
     //spec body
     var navbarCtrl = $controller('NavbarCtrl', { $scope: {} });
     expect(navbarCtrl).toBeDefined();
-    var layoutCtrl = $controller('LayoutCtrl', { $scope: {} });
+    var layoutCtrl = $controller('ContentCtrl', { $scope: {} });
     expect(layoutCtrl).toBeDefined();
     var sidebarCtrl = $controller('SidebarCtrl', { $scope: {} });
     expect(sidebarCtrl).toBeDefined();

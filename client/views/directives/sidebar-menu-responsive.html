@@ -1,11 +1,9 @@
 <!-- Sidebar Responsive-->
-<div ng-controller="SidebarResponsiveCtrl" id="sidebar-wrapper-responsive" ng-show="isToggledMenu()">
+<div ng-controller="SidebarResponsiveCtrl" id="sidebar-wrapper-responsive" ng-show="isSidebarMenuToggled">
     <ul class="sidebar-nav-responsive">
-        <li ng-class="{'active-responsive-sidebar-link': true}"><a href="#"><img src="/images/boomerang-white-24.svg" alt=""></a></li>
-        <li ng-class="{'active-responsive-sidebar-link': false}"><a href="#"><img src="/images/heart-24.png" alt=""></a></li>
-        <li ng-class="{'active-responsive-sidebar-link': false}"><a href="#"><img src="/images/github-24.png" alt=""></a></li>
-        <li ng-class="{'active-responsive-sidebar-link': false}"><a href="#"><img src="/images/cv-24.png" alt=""></a></li>
-        <li ng-class="{'active-responsive-sidebar-link': false}"><a href="#"><img src="/images/unlock-24.png" alt=""></a></li>
+     	<li ng-repeat="section in sidebarResponsive.sectionsData" ng-class="{'active-responsive-sidebar-link': currentSection == section.section}">
+            <a href="{{section.sectionURL}}"><img src={{section.sectionImg}} alt=""></a>
+        </li>
     </ul>
 </div>
 <!-- /#sidebar-wrapper-responsive -->

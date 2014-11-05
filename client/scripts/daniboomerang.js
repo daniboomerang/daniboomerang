@@ -7,7 +7,8 @@ angular.module('daniboomerangApp', [
   'ngResize',
   // DANIBOOMERANG
   'daniboomerangDirectives',
-  'daniboomerangControllers'
+  'daniboomerangControllers',
+  'daniboomerangServices'
 ])
 .config(function($routeProvider, $locationProvider) {
   
@@ -19,5 +20,9 @@ angular.module('daniboomerangApp', [
     otherwise({redirectTo: '/whoIAm'});
   $locationProvider.html5Mode(true);
 
+})
+.run(function (locationService, responsivityService, dataServices) {
+  locationService.init();
+  responsivityService.init();
+  dataServices.init();
 });
-
