@@ -27,7 +27,7 @@ daniboomerangControllers.controller('NavbarCtrl', function ($scope, $rootScope, 
 
 });
 
-daniboomerangControllers.controller('ContentCtrl', function ($scope, $rootScope, responsivityService){
+daniboomerangControllers.controller('ContentCtrl', function ($scope, $rootScope, $window, responsivityService){
 	
 	init();
 
@@ -42,6 +42,11 @@ daniboomerangControllers.controller('ContentCtrl', function ($scope, $rootScope,
 		});
 		$scope.isSidebarMenuToggled = responsivityService.isSidebarMenuToggled();
 	}
+
+	$scope.openResponsiveApp = function(){
+		$window.open("http://localhost:8080/whatIveDone", "Daniboomerang", "width=767,height=600,resizable=1");
+    }  	
+
 });
 
 daniboomerangControllers.controller('SidebarCtrl', function ($scope, $rootScope, $http, locationService, dataServices){
