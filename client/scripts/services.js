@@ -51,10 +51,9 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
   
   var SUBSCRIPTION_RESIZE = 'event:screenResize-changed';
   var SUBSCRIPTION_SIDEBAR_TOGGLING = 'event:responsiveSidebarMenu-changed';
-  var isSidebarMenuToggled = 'true';
-  var windowSize;
-  var isSmallDevice;
-
+  var responsiveData = {};
+  responsiveData.showResponsiveMenu = true;
+  
   return {
 
     init: function() {
@@ -62,12 +61,10 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
       $rootScope.$on('resize', function(data, $event){
         windowSize = $event;
         console.log("Event", $event);
-        var width = windowSize.width;
-        var height = windowSize.height;
-        isResponsive = windowSize.width < 768;
-        $rootScope.$broadcast('event:screenResize-changed',
-          {width: width, height: height, isResponsive: isResponsive}
-        );
+        responsiveData.width = windowSize.width;
+        responsiveData.height = windowSize.height;
+        responsiveData.isResponsive = windowSize.width < 768;
+        $rootScope.$broadcast('event:screenResize-changed', responsiveData);
       });
     },
     subscribeResize: function(){
@@ -76,15 +73,12 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
     subscribeSidebarToggling: function(){
       return SUBSCRIPTION_SIDEBAR_TOGGLING;
     },
-    isSidebarMenuToggled : function(){
-      return isSidebarMenuToggled;
+    getResponsiveData: function (){
+      return responsiveData;
     },
     toggleSidebarMenu : function() {
-      isSidebarMenuToggled = !isSidebarMenuToggled;
-      $rootScope.$broadcast('event:responsiveSidebarMenu-changed', isSidebarMenuToggled);
-    },
-    isSmallDevice : function(){
-      return isSmallDevice;
+      responsiveData.showResponsiveMenu = !responsiveData.showResponsiveMenu;
+      $rootScope.$broadcast('event:responsiveSidebarMenu-changed', responsiveData.showResponsiveMenu);
     }
   }
 });

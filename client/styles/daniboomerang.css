@@ -31,6 +31,13 @@ body{
     }
 }
 
+/* bootstraps' .visible-xs class adds display:block for visible elemets which breaks
+   angular's ng-show and ng-hide classes. */
+@media (max-width: 767px) {
+    .custom-visible-xs {
+        display: none !important;
+    }
+}
 /* ------------- */
 /* ------------- */
 /* ------------- */

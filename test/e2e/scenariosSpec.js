@@ -4,10 +4,26 @@
 
 describe('Daniboomerang Scenarios', function() {
 
-  browser.get('index.html');
+  browser.get('/');
 
-  it('should automatically redirect to /whoIAm when location hash/fragment is empty', function() {
-    expect(browser.getLocationAbsUrl()).toMatch("/whoIAm");
+  browser.driver.manage().window().setSize(1280, 800);
+
+  // The sidebar menu
+  it("should not show the sidebar menu", function() {
+      var sidebarDiv = 'sidebar-wrapper';  
+      expect(element(by.id(sidebarDiv)).isDisplayed()).toBe(true);
+  });
+
+
+  // The responsive sidebar menu
+  it("should show the sidebar menu", function() {
+      var sidebarResponsiveDiv = 'sidebar-wrapper-responsive';  
+      expect(element(by.id(sidebarResponsiveDiv)).isDisplayed()).toBe(false);
+  });
+
+  it('should have 6 sections', function() {
+    var sectionsDataLength = element.all(by.repeater('section in sidebar.sectionsData'));
+    expect(sectionsDataLength.count()).toEqual(6);
   });
 
   // TOPNAVBAR GLOBAL DIVS
@@ -40,7 +56,7 @@ describe('Daniboomerang Scenarios', function() {
 
     // The sidebar menu
     it("should show correctly show section 'Who I am'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(0).column('section'));
+      var section = element(by.repeater('section in sidebar.sectionsData').row(0).column('section'));
       var sectionWith4spaces = currentSectionName + '    ';
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
@@ -73,7 +89,7 @@ describe('Daniboomerang Scenarios', function() {
 
      // The sidebar menu
     it("should show correctly show section 'What I like'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(1).column('section'));
+      var section = element(by.repeater('section in sidebar.sectionsData').row(1).column('section'));
       var sectionWith4spaces = currentSectionName + '    ';
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
@@ -106,7 +122,7 @@ describe('Daniboomerang Scenarios', function() {
 
     // The sidebar menu
     it("should show correctly show section 'What I've done'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(2).column('section'));
+      var section = element(by.repeater('section in sidebar.sectionsData').row(2).column('section'));
       var sectionWith4spaces = currentSectionName + '    ';
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
@@ -138,7 +154,7 @@ describe('Daniboomerang Scenarios', function() {
 
     // The sidebar menu
     it("should show correctly show section 'What I've learnt'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(3).column('section'));
+      var section = element(by.repeater('section in sidebar.sectionsData').row(3).column('section'));
       var sectionWith4spaces = currentSectionName + '    ';
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
@@ -146,3 +162,4 @@ describe('Daniboomerang Scenarios', function() {
   });
 
 });
+

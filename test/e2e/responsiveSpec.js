@@ -1,13 +1,36 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/getting-started.md 
+/*https://github.com/angular/protractor/blob/master/docs/getting-started.md */
 
 describe('Daniboomerang Responsive Scenarios', function() {
 
-  browser.get('index.html');
+  browser.get('/');
 
-  it('should automatically redirect to /whoIAm when location hash/fragment is empty', function() {
-    expect(browser.getLocationAbsUrl()).toMatch("/whoIAm");
+  browser.driver.manage().window().setSize(676, 800);
+
+  // The responsive sidebar menu
+  it("should show the sidebar menu", function() {
+      var sidebarRespDiv = 'sidebar-wrapper-responsive';  
+      expect(element(by.id(sidebarRespDiv)).isDisplayed()).toBe(true);
+  });
+
+  // The  sidebar menu
+  it("should not show the sidebar menu", function() {
+      var sidebarDiv = 'sidebar-wrapper';  
+      expect(element(by.id(sidebarDiv)).isDisplayed()).toBe(false);
+  });
+
+  it('should have 6 sections', function() {
+    var sectionsDataLength = element.all(by.repeater('section in sidebarResp.sectionsData'));
+    expect(sectionsDataLength.count()).toEqual(6);
+  });
+
+  it('should to correctly toggle the sidebar menu when responsive button on navbar is clicked', function(){
+    var sidebarRespDiv = 'sidebar-wrapper-responsive';  
+    element( by.css('[ng-click="toggleSidebarMenu()"]') ).click();
+    expect(element(by.id(sidebarRespDiv)).getAttribute('class')).toMatch('ng-hide');
+    element( by.css('[ng-click="toggleSidebarMenu()"]') ).click();
+    expect(element(by.id(sidebarRespDiv)).getAttribute('class')).not.toMatch('ng-hide');
   });
 
   // TOPNAVBAR GLOBAL DIVS
@@ -38,20 +61,6 @@ describe('Daniboomerang Responsive Scenarios', function() {
       expect(element(by.id(whoIAmDiv)).isPresent()).toBe(true);
     });
 
-    // The sidebar menu
-    it("should show correctly show section 'Who I am'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(0).column('section'));
-      var sectionWith4spaces = currentSectionName + '    ';
-      expect(section.getText()).toEqual(sectionWith4spaces);
-    });
-
-    // The responsive sidebar menu
-    it("should show correctly show image for 'Who I am: The boomerang", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(0).column('sectionImg'));
-      var sectionImgPath = '/images/boomerang-white-24.svg '
-      expect(section.getText()).toEqual(sectionImgPath);
-    });
-
   });
 
   describe('whatILike', function() {
@@ -76,20 +85,6 @@ describe('Daniboomerang Responsive Scenarios', function() {
     // The main content
     it('should render whatILike at page content when user navigates to /whatILike', function() {
       expect(element(by.id(whatILikeDiv)).isPresent()).toBe(true);
-    });
-
-     // The sidebar menu
-    it("should show correctly show section 'What I like'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(1).column('section'));
-      var sectionWith4spaces = currentSectionName + '    ';
-      expect(section.getText()).toEqual(sectionWith4spaces);
-    });
-
-    // The responsive sidebar menu
-    it("should show correctly show image for 'What I like': The Heart", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(1).column('sectionImg'));
-      var sectionImgPath = '/images/heart-24.png'
-      expect(section.getText()).toEqual(sectionImgPath);
     });
 
   });
@@ -118,20 +113,6 @@ describe('Daniboomerang Responsive Scenarios', function() {
       expect(element(by.id(whatIveDoneDiv)).isPresent()).toBe(true);
     });
 
-    // The sidebar menu
-    it("should show correctly show section 'What I've done'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(2).column('section'));
-      var sectionWith4spaces = currentSectionName + '    ';
-      expect(section.getText()).toEqual(sectionWith4spaces);
-    });
-
-    // The responsive sidebar menu
-    it("should show correctly show image for 'What I've done': Github", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(2).column('sectionImg'));
-      var sectionImgPath = '/images/github-24.png'
-      expect(section.getText()).toEqual(sectionImgPath);
-    });
-
   });
 
   describe('whatIveLearnt', function() {
@@ -157,20 +138,6 @@ describe('Daniboomerang Responsive Scenarios', function() {
       expect(element(by.id(whatIveLearntDiv)).isPresent()).toBe(true);
     });
 
-    // The sidebar menu
-    it("should show correctly show section 'What I've learnt'", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(3).column('section'));
-      var sectionWith4spaces = currentSectionName + '    ';
-      expect(section.getText()).toEqual(sectionWith4spaces);
-    });
-
-    // The responsive sidebar menu
-    it("should show correctly show image for 'What I've learnt': The CV", function() {
-      var section = element(by.repeater('section in sidebar.sections').row(3).column('sectionImg'));
-      var sectionImgPath = '/images/cv-24.png'
-      expect(section.getText()).toEqual(sectionImgPath);
-    });
-
   });
-
-}); */
+ 
+});

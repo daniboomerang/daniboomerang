@@ -1,7 +1,7 @@
 <!-- Sidebar Responsive-->
-<div ng-controller="SidebarResponsiveCtrl" id="sidebar-wrapper-responsive" ng-show="isSidebarMenuToggled">
+<div ng-controller="SidebarResponsiveCtrl" id="sidebar-wrapper-responsive" ng-show="responsiveData.showResponsiveMenu">
     <ul class="sidebar-nav-responsive">
-     	<li ng-repeat="section in sidebarResponsive.sectionsData" ng-class="{'active-responsive-sidebar-link': currentSection == section.section}">
+     	<li ng-repeat="section in sidebarResp.sectionsData" ng-class="{'active-responsive-sidebar-link': currentSection == section.section}">
             <a href="{{section.sectionURL}}"><img src={{section.sectionImg}} alt=""></a>
         </li>
     </ul>

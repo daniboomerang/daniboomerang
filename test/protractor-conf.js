@@ -1,12 +1,11 @@
 exports.config = {
-  allScriptsTimeout: 11000,
 
-  specs: [
-    'e2e/*.js'
-  ],
+  specs: ['e2e/responsiveSpec.js','e2e/scenariosSpec.js'],
 
   capabilities: {
-    'browserName': 'chrome'
+    browserName: 'chrome',
+    shardTestFiles: true,
+    maxInstances: 2
   },
 
   chromeDriver: '../node_modules/protractor/selenium/chromedriver',
@@ -15,7 +14,4 @@ exports.config = {
 
   framework: 'jasmine',
 
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
-  }
 };

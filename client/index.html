@@ -31,17 +31,15 @@
     </head>
 
     <!-- apply our angular app to our site -->
-    <body ng-app="daniboomerangApp">
+    <body ng-app="daniboomerangApp" class="daniboomerang">
 
         <!-- DANIBOOMERANG APP -->
         <div id="wrapper">
             <navbar></navbar>
-            <section class="hidden-xs">
-                <sidebar-menu></sidebar-menu>
-            </section>
+            <sidebar-menu></sidebar-menu>
             <section class="visible-xs">
                 <sidebar-menu-responsive></sidebar-menu-responsive>
-            </section>
+            </section>    
             <content></content>
         </div>
          <!-- /#wrapper -->
