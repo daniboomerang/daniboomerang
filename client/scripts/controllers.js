@@ -6,6 +6,10 @@ daniboomerangControllers.controller('NavbarCtrl', function ($scope, $rootScope, 
 
 	function init(){
 
+		var SECTION_URL_FIELD = 'sectionURL';
+		var SECTION_FIELD = 'section';
+		var currentSectionURL = locationService.getCurrentSectionURL();
+
 		$scope.responsiveData = responsivityService.getResponsiveData();
 
 		// Navbar subscribes to possible changes on URL
@@ -16,8 +20,7 @@ daniboomerangControllers.controller('NavbarCtrl', function ($scope, $rootScope, 
 		$rootScope.$on(responsivityService.subscribeResize(), function(event, responsiveData) {
 		    $scope.responsiveData = responsiveData;
 		});
-		console.log("initchotommmmmmm");
-		$scope.currentSection = dataService.getObjectFieldCorrespondence('sectionURL', locationService.getCurrentSectionURL(), 'section');
+		$scope.currentSection = dataService.getObjectFieldCorrespondence(SECTION_URL_FIELD, currentSectionURL, SECTION_FIELD);
 	}
 
 	// Toggling sidebar menu on responsive

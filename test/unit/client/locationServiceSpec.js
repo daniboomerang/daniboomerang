@@ -28,12 +28,7 @@ describe('Location Service', function ($rootScope){
       // inject services.
       inject(function($rootScope, _locationService_) {
         locationService = _locationService_;
-        //create a new child scope and call it root scope
-        rootScope = $rootScope.$new();
-        //instead don't create a child scope and keep a reference to the actual rootScope
         rootScope = $rootScope;
-        //this.$rootScope = $rootScope;
-
         spyOn(rootScope, '$broadcast').andCallThrough();
       });
     });
@@ -58,7 +53,6 @@ describe('Location Service', function ($rootScope){
       // Lets call init()
       locationService.init();
 
-      // We subscribe to possible URL changes
       var expectedBroadcastedObject = {
         currentURL: getMockedData().currentURL,
         previousURL: getMockedData().previousURL,

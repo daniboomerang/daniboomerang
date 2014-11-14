@@ -17,7 +17,6 @@ daniboomerangServices.factory('locationService', function ($rootScope) {
 
     init: function() {
 
-console.log("initchoto");
       // DEALING WITH A LOCATION SERVICE (Current Location)
       $rootScope.$on("$locationChangeSuccess", function (event, current, previous, rejection) {
           currentURL = current;
@@ -52,11 +51,10 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
   
   return {
 
-    init: function() {console.log("initchdsfsdfoto");
+    init: function() {
 
       $rootScope.$on('resize', function(data, $event){
         windowSize = $event;
-        console.log("Event", $event);
         responsiveData.width = windowSize.width;
         responsiveData.height = windowSize.height;
         responsiveData.isResponsive = windowSize.width < 768;
@@ -72,7 +70,7 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
     getResponsiveData: function (){
       return responsiveData;
     },
-    toggleSidebarMenu : function() {
+    toggleSidebarMenu: function() {
       responsiveData.showResponsiveMenu = !responsiveData.showResponsiveMenu;
       $rootScope.$broadcast('event:responsiveSidebarMenu-changed', responsiveData.showResponsiveMenu);
     }
@@ -86,15 +84,15 @@ daniboomerangServices.factory('dataService', function ($http) {
   
   return {
 
-    init: function() {console.log("initchoto2398749028");
+    init: function() {
       $http.get('common/data/sidebar-data.json').success (function(data){
         sidebarData = data;
       });
     },
-    getSidebarData : function(){
+    getSidebarData: function(){
       return sidebarData;
     },
-    getObjectFieldCorrespondence : function(forThisField, andThisValue, thisOtherField){
+    getObjectFieldCorrespondence: function(forThisField, andThisValue, thisOtherField){
       for (var i = 0; i < sidebarData.length -1; i++){
         if (sidebarData[i][forThisField] == andThisValue){
           return sidebarData[i][thisOtherField];
