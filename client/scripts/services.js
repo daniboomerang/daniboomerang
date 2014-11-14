@@ -3,27 +3,26 @@ var daniboomerangServices = angular.module('daniboomerangServices', []);
 daniboomerangServices.factory('locationService', function ($rootScope) {
    
   var SUBSCRIPTION = 'event:currentLocation-changed';
-  var INITIAL_STATE = 'Who I am';
 
   var previousURL;
   var currentURL;
-  var currentSection = INITIAL_STATE; 
-  var currentSubsection;
+  var currentSectionURL;
+
+  function getSectionURL (URL){
+      var splitURL = URL.split("/");
+      return splitURL[splitURL.length - 1];
+  };
 
   return {
 
     init: function() {
 
-      var currentSection = function(URL){
-          var splitURL = URL.split("/");
-          return splitURL[splitURL.length - 1];
-      };
-
+console.log("initchoto");
       // DEALING WITH A LOCATION SERVICE (Current Location)
       $rootScope.$on("$locationChangeSuccess", function (event, current, previous, rejection) {
           currentURL = current;
           previousURL = previous;
-          currentSectionURL = currentSection(currentURL);
+          currentSectionURL = getSectionURL(currentURL);
           $rootScope.$broadcast('event:currentLocation-changed',
             {currentURL: currentURL, previousURL: previousURL, currentSectionURL: currentSectionURL}
           );
@@ -38,13 +37,10 @@ daniboomerangServices.factory('locationService', function ($rootScope) {
     getCurrentURL: function(){
       return currentURL;
     },
-    getCurrentSection: function(){
-      return currentSection;
-    },
-    getCurrentSubsection: function(){
-      return currentSubsection;
+    getCurrentSectionURL: function(){
+      return currentSectionURL;
     }
-  }      
+  }     
 });
 
 daniboomerangServices.factory('responsivityService', function ($rootScope, $window, resize) {
@@ -56,7 +52,7 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
   
   return {
 
-    init: function() {
+    init: function() {console.log("initchdsfsdfoto");
 
       $rootScope.$on('resize', function(data, $event){
         windowSize = $event;
@@ -84,13 +80,13 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
 });
 
 
-daniboomerangServices.factory('dataServices', function ($http) {
+daniboomerangServices.factory('dataService', function ($http) {
   
   var sidebarData;
   
   return {
 
-    init: function() {
+    init: function() {console.log("initchoto2398749028");
       $http.get('common/data/sidebar-data.json').success (function(data){
         sidebarData = data;
       });

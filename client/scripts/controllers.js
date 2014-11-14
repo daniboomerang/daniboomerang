@@ -1,6 +1,6 @@
 var daniboomerangControllers = angular.module('daniboomerangControllers', []);
 
-daniboomerangControllers.controller('NavbarCtrl', function ($scope, $rootScope, locationService, responsivityService, dataServices){
+daniboomerangControllers.controller('NavbarCtrl', function ($scope, $rootScope, locationService, responsivityService, dataService){
 	
 	init();
 
@@ -10,14 +10,14 @@ daniboomerangControllers.controller('NavbarCtrl', function ($scope, $rootScope, 
 
 		// Navbar subscribes to possible changes on URL
 		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
-		    $scope.currentSection = dataServices.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		    $scope.currentSection = dataService.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
 		});
 		// Navbar subscribes to possible changes on responsivity
 		$rootScope.$on(responsivityService.subscribeResize(), function(event, responsiveData) {
 		    $scope.responsiveData = responsiveData;
 		});
-		$scope.currentSection = locationService.getCurrentSection();
-
+		console.log("initchotommmmmmm");
+		$scope.currentSection = dataService.getObjectFieldCorrespondence('sectionURL', locationService.getCurrentSectionURL(), 'section');
 	}
 
 	// Toggling sidebar menu on responsive
@@ -51,38 +51,38 @@ daniboomerangControllers.controller('ContentCtrl', function ($scope, $rootScope,
 
 });
 
-daniboomerangControllers.controller('SidebarCtrl', function ($scope, $rootScope, $http, locationService, dataServices){
+daniboomerangControllers.controller('SidebarCtrl', function ($scope, $rootScope, locationService, dataService){
 
 	init();
 
 	function init(){
 
 		$scope.sidebar = {};
-		$scope.sidebar.sectionsData = dataServices.getSidebarData();
+		$scope.sidebar.sectionsData = dataService.getSidebarData();
 		
 		// Sidebar subscribes to possible changes on URL
 		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
-		    $scope.currentSection = dataServices.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		    $scope.currentSection = dataService.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
 		});
 
-		$scope.currentSection = locationService.getCurrentSection();
+		$scope.currentSection = dataService.getObjectFieldCorrespondence('sectionURL', locationService.getCurrentSectionURL(), 'section');
 	}
 
 });
 
-daniboomerangControllers.controller('SidebarResponsiveCtrl', function ($scope, $rootScope, $http, locationService, responsivityService, dataServices){
+daniboomerangControllers.controller('SidebarResponsiveCtrl', function ($scope, $rootScope, locationService, responsivityService, dataService){
 
 	init();
 
 	function init(){
 		$scope.sidebarResp = {};
-		$scope.sidebarResp.sectionsData = dataServices.getSidebarData();
+		$scope.sidebarResp.sectionsData = dataService.getSidebarData();
 		$scope.responsiveData = responsivityService.getResponsiveData();
-		$scope.currentSection = locationService.getCurrentSection();
+		$scope.currentSection = dataService.getObjectFieldCorrespondence('sectionURL', locationService.getCurrentSectionURL(), 'section');
 
 		// Responsive sidebar subscribes to possible changes on URL
 		$rootScope.$on(locationService.subscribe(), function(event, locationData) {
-		    $scope.currentSection = dataServices.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
+		    $scope.currentSection = dataService.getObjectFieldCorrespondence('sectionURL', locationData.currentSectionURL, 'section');
 		});
 
 		// Content subscribes on responsive sidebar menu changes
