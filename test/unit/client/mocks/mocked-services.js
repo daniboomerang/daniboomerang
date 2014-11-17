@@ -48,8 +48,10 @@ daniboomerangMockedServices.factory('sidebarDataProviderMockedService', function
 
     return {
         getObjectFieldCorrespondence: function(sectionURL, MOCKED_CURRENT_SECTION_URL, section) {
-            return mockedDataServiceProvider.getDataMockedData().currentSection;
-;
+            return mockedDataServiceProvider.getSidebarMockedData().currentSection;
+        },
+        getSidebarData: function(){
+            return mockedDataServiceProvider.getSidebarMockedData().sectionsData;
         }
     }     
 });
