@@ -1,62 +1,42 @@
-var daniboomerangMockedServices = angular.module('daniboomerangMockedServices', []);
+var daniboomerangMockedServices = angular.module('daniboomerangMockedServices', ['daniboomerangMockedDataServiceProvider']);
 
-daniboomerangMockedServices.factory('locationMockedService', function () {
+daniboomerangMockedServices.factory('locationMockedService', function (mockedDataServiceProvider) {
    
-    // Location Service Data
-
-    var MOCKED_SUBSCRIPTION_TO_LOCATION = 'event:currentLocation-changed';
-    var MOCKED_PREVIOUS_URL = '://path/to/previousMocked';
-    var MOCKED_CURRENT_URL = '://path/to/currentMocked';
-    var MOCKED_CURRENT_SECTION_URL = 'whoIAm';
-
     return {
         getCurrentSectionURL: function() {
-            return MOCKED_CURRENT_SECTION_URL;
+            return mockedDataServiceProvider.getLocationMockedData().currentSectionURL;
         },
         subscribe: function(){
-            return MOCKED_SUBSCRIPTION_TO_LOCATION;
+            return mockedDataServiceProvider.getLocationMockedData().subscription
         }
     }     
 });
 
-daniboomerangMockedServices.factory('responsivityMockedService', function () {
-   
-    // Responsivity Service Data
-
-    var MOCKED_SUBSCRIPTION_TO_SCREEN_RESIZE = 'event:screenResize-changed';
-    var MOCKED_SUBSCRIPTION_TO_SIDEBAR = 'event:responsiveSidebarMenu-changed';
-    var MOCKED_SHOW_RESPONSIVE_MENU = true;
-    var MOCKED_SCREEN_WIDTH = 1280;
-    var MOCKED_SCREEN_HEIGHT = 680;
-    var MOCKED_IS_RESPONSIVE = false;
-
-    var responsiveMockedData = {
-        showResponsiveMenu: true,
-        width: MOCKED_SCREEN_WIDTH,
-        height: MOCKED_SCREEN_HEIGHT,
-        isResponsive: MOCKED_IS_RESPONSIVE
-    };
+daniboomerangMockedServices.factory('responsivityMockedService', function (mockedDataServiceProvider) {
 
     return {
-        getResponsiveData: function() {       
+        getResponsiveData: function() {    
+            var responsiveMockedData = {
+                showResponsiveMenu: mockedDataServiceProvider.getResponsivityMockedData().showResponsiveMenu,
+                width: mockedDataServiceProvider.getResponsivityMockedData().width,
+                height: mockedDataServiceProvider.getResponsivityMockedData().height,
+                isResponsive: mockedDataServiceProvider.getResponsivityMockedData().isResponsive
+            };   
             return responsiveMockedData;
         },
         subscribeResize: function() {
-            return MOCKED_SUBSCRIPTION_TO_SCREEN_RESIZE;
+            return mockedDataServiceProvider.getResponsivityMockedData().subscriptionResize;
         },
         subscribeSidebarToggling: function(){
-            return MOCKED_SUBSCRIPTION_TO_SIDEBAR;
+            return mockedDataServiceProvider.getResponsivityMockedData().subscriptionTogglingSidebar
         }
     }         
 });
 
 
-daniboomerangMockedServices.factory('dataMockedService', function () {
+daniboomerangMockedServices.factory('sidebarDataProviderMockedService', function (mockedDataServiceProvider) {
    
-     // Data Servcice Data
-    
-    var MOCKED_CURRENT_SECTION = 'Who I am';
-    var MOCKED_CURRENT_SECTION_URL = 'whoIAm';
+    var MOCKED_CURRENT_SECTION_URL = mockedDataServiceProvider.getLocationMockedData().currentSectionURL;
 
     // Those 2 variables are aimed to be able to mock the method 
     // getObjectFieldCorrespondence of the service dataService
@@ -68,7 +48,8 @@ daniboomerangMockedServices.factory('dataMockedService', function () {
 
     return {
         getObjectFieldCorrespondence: function(sectionURL, MOCKED_CURRENT_SECTION_URL, section) {
-            return MOCKED_CURRENT_SECTION;
+            return mockedDataServiceProvider.getDataMockedData().currentSection;
+;
         }
     }     
 });

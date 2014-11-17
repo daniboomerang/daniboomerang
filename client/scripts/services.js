@@ -78,7 +78,7 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
 });
 
 
-daniboomerangServices.factory('dataService', function ($http) {
+daniboomerangServices.factory('sidebarDataProviderService', function ($http) {
   
   var sidebarData;
   

@@ -18,7 +18,7 @@ daniboomerangMockedDataServiceProvider.value('defaultMockedData',
             "height": 680,
             "isResponsive": false
         },
-        "dataMockedData": {
+        "sidebarMockedData": {
             "currentSection": "Who I am"
         }   
     });
@@ -30,10 +30,10 @@ daniboomerangMockedDataServiceProvider.factory('mockedDataServiceProvider', func
             return defaultMockedData.locationMockedData;
         },
         getResponsivityMockedData: function() {
-            return defaultMockedData.responsivityMockedData;
+            return defaultMockedData.responsiveMockedData;
         },
         getDataMockedData: function() {
-            return defaultMockedData.dataMockedData;
+            return defaultMockedData.sidebarMockedData;
         },
         getMockedData: function() {
             return defaultMockedData;

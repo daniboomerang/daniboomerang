@@ -5,9 +5,9 @@ describe('Navbar Controller', function() {
 
     var scope;
     var rootScope;
-    var LocationMockedService;
-    var ResponsivityMockedService;
-    var DataMockedService;
+    var _locationMockedService_;
+    var _responsivityMockedService_;
+    var _sidebarDataProviderMockedService_;
     var NavbarCtrl;
     var mockedData;
 
@@ -20,12 +20,12 @@ describe('Navbar Controller', function() {
     // inject the required services and instantiate the controller
     beforeEach(inject(function($injector, $rootScope, $controller,
                                locationMockedService, responsivityMockedService,
-                               dataMockedService, mockedDataServiceProvider) {
+                               sidebarDataProviderMockedService, mockedDataServiceProvider) {
 
         // Injecting Mocked Services
-        LocationMockedService = locationMockedService;
-        ResponsivityMockedService = responsivityMockedService;
-        DataMockedService = dataMockedService;
+        _locationMockedService_ = locationMockedService;
+        _responsivityMockedService_ = responsivityMockedService;
+        _sidebarDataProviderMockedService_ = sidebarDataProviderMockedService;
 
         // Getting mocked data
         mockedData = mockedDataServiceProvider.getMockedData();
@@ -40,9 +40,9 @@ describe('Navbar Controller', function() {
         NavbarCtrl = $controller('NavbarCtrl', {
             $scope: scope,
             rootScope: $rootScope,
-            locationService: LocationMockedService,
-            responsivityService: ResponsivityMockedService,
-            dataService: DataMockedService
+            locationService: _locationMockedService_,
+            responsivityService: _responsivityMockedService_,
+            sidebarDataProviderService: _sidebarDataProviderMockedService_
         });
     }));
 
@@ -51,7 +51,7 @@ describe('Navbar Controller', function() {
         expect(scope.responsiveData.width).toBe(mockedData.responsiveMockedData.width);
         expect(scope.responsiveData.height).toBe(mockedData.responsiveMockedData.height);
         expect(scope.responsiveData.isResponsive).toBe(mockedData.responsiveMockedData.isResponsive);
-        expect(scope.currentSection).toBe(mockedData.dataMockedData.currentSection)
+        expect(scope.currentSection).toBe(mockedData.sidebarMockedData.currentSection)
     });
 
     it('should be listening and get changes on location', function() {
@@ -71,13 +71,18 @@ describe('Navbar Controller', function() {
                              mockedData.locationMockedData.currentURL,
                              mockedData.locationMockedData.previousURL,
                              mockedData.locationMockedData.currentSectionURL);
-        expect(scope.currentSection).toBe(mockedData.dataMockedData.currentSection);
+        expect(scope.currentSection).toBe(mockedData.sidebarMockedData.currentSection);
 
     });
 
     it('should be listening and get changes on screen resizing', function() {
 
-        var responsiveMockedData = ResponsivityMockedService.getResponsiveData();
+        var responsiveMockedData = {
+                showResponsiveMenu: mockedData.responsiveMockedData.showResponsiveMenu,
+                width: mockedData.responsiveMockedData.width,
+                height: mockedData.responsiveMockedData.height,
+                isResponsive: mockedData.responsiveMockedData.isResponsive
+        };   
 
         rootScope.$broadcast(mockedData.responsiveMockedData.subscriptionResize, responsiveMockedData);
         expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.responsiveMockedData.subscriptionResize, responsiveMockedData);

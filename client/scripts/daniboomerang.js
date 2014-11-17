@@ -21,8 +21,8 @@ angular.module('daniboomerangApp', [
   $locationProvider.html5Mode(true);
 
 })
-.run(function (locationService, responsivityService, dataService) {
+.run(function (locationService, responsivityService, sidebarDataProviderService) {
   locationService.init();
   responsivityService.init();
-  dataService.init();
+  sidebarDataProviderService.init();
 });
