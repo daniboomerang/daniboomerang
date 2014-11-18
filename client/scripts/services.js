@@ -47,6 +47,7 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
   var SUBSCRIPTION_RESIZE = 'event:screenResize-changed';
   var SUBSCRIPTION_SIDEBAR_TOGGLING = 'event:responsiveSidebarMenu-changed';
   var responsiveData = {};
+  responsiveData.showResponsiveMenu = true;
   
   return {
 
