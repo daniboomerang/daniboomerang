@@ -47,11 +47,12 @@ daniboomerangServices.factory('responsivityService', function ($rootScope, $wind
   var SUBSCRIPTION_RESIZE = 'event:screenResize-changed';
   var SUBSCRIPTION_SIDEBAR_TOGGLING = 'event:responsiveSidebarMenu-changed';
   var responsiveData = {};
-  responsiveData.showResponsiveMenu = true;
-  
+
   return {
 
     init: function() {
+
+      responsiveData.showResponsiveMenu = true;
 
       $rootScope.$on('resize', function(data, $event){
         windowSize = $event;

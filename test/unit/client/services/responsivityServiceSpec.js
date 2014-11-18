@@ -41,21 +41,24 @@ describe('Responsivity Service', function ($rootScope, $window){
       
       responsivityService.init();
 
-      var expectedBroadcastedObject = {
-        width: mockedData.width,
-        height: mockedData.height,
-        isResponsive: mockedData.isResponsive
-      };
-
-      // Preparing the triggering of resize event, so the service is listening and will get the mocked data
-      // that we want
+      // Preparing the triggering of resize event, so the service is listening and will 
+      // get the mocked data that we want
       window.innerWidth = mockedData.width;
       window.innerHeight = mockedData.height;
-      resize.trigger();
-      expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscriptionResize, expectedBroadcastedObject);
       
-      // expected to correctly return the corrent 
-      expect(responsivityService.getResponsiveData()).toEqual(expectedBroadcastedObject);
+      resize.trigger();
+      
+      expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscriptionResize,
+      { showResponsiveMenu : mockedData.showResponsiveMenu,
+        width : mockedData.width,
+        height : mockedData.height,
+        isResponsive : mockedData.isResponsive });
+
+      expect(responsivityService.getResponsiveData()).toEqual(
+      { width: mockedData.width,
+        height: mockedData.height,
+        isResponsive: mockedData.isResponsive,
+        showResponsiveMenu: mockedData.showResponsiveMenu });
       
     });
 

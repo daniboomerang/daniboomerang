@@ -11,8 +11,7 @@ module.exports = function(config){
       'client/scripts/**/*.js',
       'client/scripts/vendor/ngresize.js',
       'client/**/*.js',
-      'test/unit/client/**/*.js',
-      'test/unit/client/mocks/*.js'
+      'test/unit/client/**/*.js'
     ],
 
     autoWatch : true,
