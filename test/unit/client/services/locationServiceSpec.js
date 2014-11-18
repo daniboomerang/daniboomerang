@@ -1,8 +1,5 @@
-describe('Location Service', function ($rootScope){
+describe('Location Service', function (){
   
-    var scope;
-    var mockedData;
-
     // excuted before each "it" is run.
     beforeEach(function (){
 
@@ -10,11 +7,11 @@ describe('Location Service', function ($rootScope){
       module('daniboomerangMockedDataServiceProvider');
 
       // inject services.
-      inject(function($rootScope, _locationService_, mockedDataServiceProvider) {
+      inject(function(_$rootScope_, _locationService_, mockedDataServiceProvider) {
         locationService = _locationService_;
         mockedData = mockedDataServiceProvider.getLocationMockedData();
-        rootScope = $rootScope;
-        spyOn(rootScope, '$broadcast').andCallThrough();
+        $rootScope = _$rootScope_;
+        spyOn($rootScope, '$broadcast').andCallThrough();
       });
     });
       
@@ -43,8 +40,8 @@ describe('Location Service', function ($rootScope){
         previousURL: mockedData.previousURL,
         currentSectionURL: mockedData.currentSectionURL
       }
-      rootScope.$broadcast('$locationChangeSuccess', mockedData.currentURL, mockedData.previousURL);
-      expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscription, expectedBroadcastedObject);
+      $rootScope.$broadcast('$locationChangeSuccess', mockedData.currentURL, mockedData.previousURL);
+      expect($rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscription, expectedBroadcastedObject);
       
       // expected to correctly return the previous URL
       expect(locationService.getPreviousURL()).toBe(mockedData.previousURL);

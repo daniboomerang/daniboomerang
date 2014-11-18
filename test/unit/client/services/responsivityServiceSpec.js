@@ -1,8 +1,5 @@
-describe('Responsivity Service', function ($rootScope, $window){
+describe('Responsivity Service', function (){
   
-    var scope;
-    var mockedData;
-
     // excuted before each "it" is run.
     beforeEach(function (){
 
@@ -11,13 +8,13 @@ describe('Responsivity Service', function ($rootScope, $window){
       module('ngResize');
 
       // inject services.
-      inject(function($rootScope, $window, _responsivityService_, mockedDataServiceProvider, _resize_) {
-        window = $window;
+      inject(function(_$rootScope_, _$window_, _responsivityService_, mockedDataServiceProvider, _resize_) {
+        $window = _$window_;
+        $rootScope = _$rootScope_;
         responsivityService = _responsivityService_;
         mockedData = mockedDataServiceProvider.getResponsivityMockedData();
-        rootScope = $rootScope;
         resize = _resize_;
-        spyOn(rootScope, '$broadcast').andCallThrough();
+        spyOn($rootScope, '$broadcast').andCallThrough();
       });
     });
       
@@ -43,12 +40,12 @@ describe('Responsivity Service', function ($rootScope, $window){
 
       // Preparing the triggering of resize event, so the service is listening and will 
       // get the mocked data that we want
-      window.innerWidth = mockedData.width;
-      window.innerHeight = mockedData.height;
+      $window.innerWidth = mockedData.width;
+      $window.innerHeight = mockedData.height;
       
       resize.trigger();
       
-      expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscriptionResize,
+      expect($rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscriptionResize,
       { showResponsiveMenu : mockedData.showResponsiveMenu,
         width : mockedData.width,
         height : mockedData.height,
@@ -70,10 +67,10 @@ describe('Responsivity Service', function ($rootScope, $window){
 
       // Preparing the triggering of resize event, so the service is listening and will get the mocked data
       // that we want
-      window.innerWidth = mockedData.widthResponsive;
-      window.innerHeight = mockedData.heightResponsive;
+      $window.innerWidth = mockedData.widthResponsive;
+      $window.innerHeight = mockedData.heightResponsive;
       resize.trigger();
-      expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscriptionTogglingSidebar, showResponsiveMenuMocked);
+      expect($rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscriptionTogglingSidebar, showResponsiveMenuMocked);
       
       // expected to correctly return the corrent 
       expect(responsivityService.getResponsiveData().showResponsiveMenu).toEqual(showResponsiveMenuMocked);

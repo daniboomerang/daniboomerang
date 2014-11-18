@@ -1,13 +1,12 @@
 'use strict';
 
-
 describe('Navbar Controller', function() {
 
-    var scope;
-    var rootScope;
+    var $scope;
+    var $rootScope;
     var _locationMockedService_;
-    var _responsivityMockedService_;
     var _sidebarDataProviderMockedService_;
+    var _responsivityMockedService_;
     var NavbarCtrl;
     var mockedData;
 
@@ -18,7 +17,7 @@ describe('Navbar Controller', function() {
     });
 
     // inject the required services and instantiate the controller
-    beforeEach(inject(function($injector, $rootScope, $controller,
+    beforeEach(inject(function($injector, $controller,
                                locationMockedService, responsivityMockedService,
                                sidebarDataProviderMockedService, mockedDataServiceProvider) {
 
@@ -31,15 +30,15 @@ describe('Navbar Controller', function() {
         mockedData = mockedDataServiceProvider.getMockedData();
 
         //////////////////////
-        rootScope = $injector.get('$rootScope');
+        $rootScope = $injector.get('$rootScope');
         // Spying on the broadcasting to test if we listen the events correctly
         spyOn($rootScope, '$broadcast').andCallThrough();
         
         // And the Scope and the Controller
-        scope = $rootScope.$new();
+        $scope = $rootScope.$new();
         NavbarCtrl = $controller('NavbarCtrl', {
-            $scope: scope,
-            rootScope: $rootScope,
+            $scope: $scope,
+            $rootScope: $rootScope,
             locationService: _locationMockedService_,
             responsivityService: _responsivityMockedService_,
             sidebarDataProviderService: _sidebarDataProviderMockedService_
@@ -47,11 +46,11 @@ describe('Navbar Controller', function() {
     }));
 
     it('should get the current section and the responsive data', function() {
-        expect(scope.responsiveData.showResponsiveMenu).toBe(mockedData.responsiveMockedData.showResponsiveMenu);
-        expect(scope.responsiveData.width).toBe(mockedData.responsiveMockedData.width);
-        expect(scope.responsiveData.height).toBe(mockedData.responsiveMockedData.height);
-        expect(scope.responsiveData.isResponsive).toBe(mockedData.responsiveMockedData.isResponsive);
-        expect(scope.currentSection).toBe(mockedData.sidebarMockedData.urlSectionToSectionFieldCorrespondence)
+        expect($scope.responsiveData.showResponsiveMenu).toBe(mockedData.responsiveMockedData.showResponsiveMenu);
+        expect($scope.responsiveData.width).toBe(mockedData.responsiveMockedData.width);
+        expect($scope.responsiveData.height).toBe(mockedData.responsiveMockedData.height);
+        expect($scope.responsiveData.isResponsive).toBe(mockedData.responsiveMockedData.isResponsive);
+        expect($scope.currentSection).toBe(mockedData.sidebarMockedData.urlSectionToSectionFieldCorrespondence)
     });
 
     it('should be listening and get changes on location', function() {
@@ -62,16 +61,16 @@ describe('Navbar Controller', function() {
             currentSectionURL: mockedData.locationMockedData.currentSectionURL
         }
 
-        rootScope.$broadcast(mockedData.locationMockedData.subscription,
+        $rootScope.$broadcast(mockedData.locationMockedData.subscription,
                              mockedData.locationMockedData.currentURL,
                              mockedData.locationMockedData.previousURL,
                              mockedData.locationMockedData.currentSectionURL);
-        expect(rootScope.$broadcast).toHaveBeenCalledWith(
+        expect($rootScope.$broadcast).toHaveBeenCalledWith(
                              mockedData.locationMockedData.subscription,
                              mockedData.locationMockedData.currentURL,
                              mockedData.locationMockedData.previousURL,
                              mockedData.locationMockedData.currentSectionURL);
-        expect(scope.currentSection).toBe(mockedData.sidebarMockedData.urlSectionToSectionFieldCorrespondence);
+        expect($scope.currentSection).toBe(mockedData.sidebarMockedData.urlSectionToSectionFieldCorrespondence);
 
     });
 
@@ -84,9 +83,9 @@ describe('Navbar Controller', function() {
                 isResponsive: mockedData.responsiveMockedData.isResponsive
         };   
 
-        rootScope.$broadcast(mockedData.responsiveMockedData.subscriptionResize, responsiveMockedData);
-        expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.responsiveMockedData.subscriptionResize, responsiveMockedData);
-        expect(scope.responsiveData).toBe(responsiveMockedData);
+        $rootScope.$broadcast(mockedData.responsiveMockedData.subscriptionResize, responsiveMockedData);
+        expect($rootScope.$broadcast).toHaveBeenCalledWith(mockedData.responsiveMockedData.subscriptionResize, responsiveMockedData);
+        expect($scope.responsiveData).toBe(responsiveMockedData);
         
     });
 });   
