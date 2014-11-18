@@ -7,7 +7,7 @@ daniboomerangMockedDataServiceProvider.value('defaultMockedData',
         "locationMockedData": {
             "subscription": "event:currentLocation-changed",
             "previousURL": "://path/to/previousMocked",
-            "currentURL": "://path/to/currentMocked",
+            "currentURL": "://path/to/whoIAm",
             "currentSectionURL": "whoIAm"
         },
         "responsiveMockedData": {
@@ -16,6 +16,8 @@ daniboomerangMockedDataServiceProvider.value('defaultMockedData',
             "showResponsiveMenu": true,
             "width": 1280,
             "height": 680,
+            "widthResponsive": 767,
+            "heightResponsive": 680,
             "isResponsive": false
         },
         "sidebarMockedData": {

@@ -1,33 +1,18 @@
 describe('Location Service', function ($rootScope){
   
     var scope;
-
-    function getMockedData(){
-
-      var SUBSCRIPTION = 'event:currentLocation-changed';
-      var MOCKED_PREVIOUS_URL = '://path/to/previousMocked';
-      var MOCKED_CURRENT_URL = '://path/to/currentMocked';
-      var MOCKED_CURRENT_SECTION_URL = 'currentMocked';
-
-      var mockedData = {
-        subscription: SUBSCRIPTION,
-        previousURL: MOCKED_PREVIOUS_URL,
-        currentURL: MOCKED_CURRENT_URL,
-        currentSectionURL: MOCKED_CURRENT_SECTION_URL
-      };
-      
-      return mockedData;
-    }
+    var mockedData;
 
     // excuted before each "it" is run.
     beforeEach(function (){
 
       module('daniboomerangServices');
-      module('ngResize');
+      module('daniboomerangMockedDataServiceProvider');
 
       // inject services.
-      inject(function($rootScope, _locationService_) {
+      inject(function($rootScope, _locationService_, mockedDataServiceProvider) {
         locationService = _locationService_;
+        mockedData = mockedDataServiceProvider.getLocationMockedData();
         rootScope = $rootScope;
         spyOn(rootScope, '$broadcast').andCallThrough();
       });
@@ -44,7 +29,7 @@ describe('Location Service', function ($rootScope){
 
     // check the subscription is correctly returned
     it('should return the broadcasted event for subscription when someone attends to subscribe', function (){
-      expect(locationService.subscribe()).toBe(getMockedData().subscription);
+      expect(locationService.subscribe()).toBe(mockedData.subscription);
     }); 
 
     // check to see if they do what they are supposed to do.
@@ -54,18 +39,18 @@ describe('Location Service', function ($rootScope){
       locationService.init();
 
       var expectedBroadcastedObject = {
-        currentURL: getMockedData().currentURL,
-        previousURL: getMockedData().previousURL,
-        currentSectionURL: getMockedData().currentSectionURL
+        currentURL: mockedData.currentURL,
+        previousURL: mockedData.previousURL,
+        currentSectionURL: mockedData.currentSectionURL
       }
-      rootScope.$broadcast('$locationChangeSuccess', getMockedData().currentURL, getMockedData().previousURL);
-      expect(rootScope.$broadcast).toHaveBeenCalledWith(getMockedData().subscription, expectedBroadcastedObject);
+      rootScope.$broadcast('$locationChangeSuccess', mockedData.currentURL, mockedData.previousURL);
+      expect(rootScope.$broadcast).toHaveBeenCalledWith(mockedData.subscription, expectedBroadcastedObject);
       
       // expected to correctly return the previous URL
-      expect(locationService.getPreviousURL()).toBe(getMockedData().previousURL);
+      expect(locationService.getPreviousURL()).toBe(mockedData.previousURL);
       // expected to correctly return the current URL
-      expect(locationService.getCurrentURL()).toBe(getMockedData().currentURL);
+      expect(locationService.getCurrentURL()).toBe(mockedData.currentURL);
       // expected to correctly return the current section URL
-      expect(locationService.getCurrentSectionURL()).toBe(getMockedData().currentSectionURL);
+      expect(locationService.getCurrentSectionURL()).toBe(mockedData.currentSectionURL);
     });
 });
