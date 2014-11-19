@@ -27,10 +27,11 @@ module.exports = app;
 var db = require('./server/db/mongo').db;
 
 // Bootstrap models
-var modelsPath = path.join(__dirname, 'server/models');
+// ! Commented while no models
+/*var modelsPath = path.join(__dirname, 'server/models');
 fs.readdirSync(modelsPath).forEach(function (file) {
     require(modelsPath + '/' + file);
-});
+});*/
 
 // configuration ===============================================================
 
