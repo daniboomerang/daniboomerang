@@ -1,0 +1,16 @@
+{
+  "name": "daniboomerang",
+  "version": "0.1.0",
+  "homepage": "www.daniboomerang.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "json3": "3.3.2",
+    "es5-shim": "4.0.3",
+    "angular-animate": "~1.2.0"
+  }
+}
