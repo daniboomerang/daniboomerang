@@ -1,30 +1,63 @@
+/* ------------- */
+/** HTML & BODY **/
+/* ------------- */
+
 html,body{
     height:100%;
 }
+
 body{
 	margin:0;
-	margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	margin-top: 60px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 	padding:0;
 }
 
+@media(min-width:768px) {
+    body{
+        margin-top: 70px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        font-size: 16px;
+    }
+}
 
+@media(min-width:1000px) {
+    body{
+        font-size: 22px;
+    }
+}
 
-/************************/
-/******* FOOTER *********/
-/************************/
-.footer {
-	padding: 10px;
-	background-color: black;
-	color: #cccccc;
-	text-align: center;
-	height: 25px;
+@media(min-width:1200px) {
+    body{
+        font-size: 23px;
+    }
 }
-.footer p {
- 	font-size: 11px;
+
+/* bootstraps' .visible-xs class adds display:block for visible elemets which breaks
+   angular's ng-show and ng-hide classes. */
+@media (max-width: 767px) {
+    .custom-visible-xs {
+        display: none !important;
+    }
 }
-.footer a {
- 	color: red;
+/* ------------- */
+/* ------------- */
+/* ------------- */
+
+/* ---------- */
+/* Pure style */
+/* ---------- */
+
+.white {
+    background: white;
 }
-/************************/
-/************************/
-/************************/
+
+.black {
+    background: black;
+}
+
+.text-bluesky {
+	color: rgba(0,179,215,255);
+}
+
+.text-orange {
+    color: rgba(255,82,29,255);
+}

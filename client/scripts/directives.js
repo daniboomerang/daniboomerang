@@ -1,11 +1,19 @@
 var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 
-daniboomerangDirectives.directive('menu', function() {
+daniboomerangDirectives.directive('sidebarMenu', function() {
   return {
     restrict: 'E',
-    templateUrl: '/views/directives/menu.html'
+    templateUrl: '/views/directives/sidebar-menu.html'
   };
 })
+
+daniboomerangDirectives.directive('sidebarMenuResponsive', function() {
+  return {
+    restrict: 'E',
+    templateUrl: '/views/directives/sidebar-menu-responsive.html'
+  };
+})
+
 
 daniboomerangDirectives.directive('content', function() {
   return {
@@ -19,11 +27,4 @@ daniboomerangDirectives.directive('navbar', function() {
     restrict: 'E',
     templateUrl: '/views/directives/navbar.html'
   };
-});
-
-daniboomerangDirectives.directive('footer', function() {
-  return {
-    restrict: 'E',
-    templateUrl: '/views/directives/footer.html'
-  };
-});
+})

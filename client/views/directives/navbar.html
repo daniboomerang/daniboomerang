@@ -1,39 +1,21 @@
-<!-- Navigation -->
-<nav ng-controller="NavController" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav ng-controller="NavbarCtrl" class="navbar navbar-default navbar-fixed-top custom-navbar navbar-preheader" role="navigation">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" ng-click="toggleSidebarMenu()">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
-               Daniboomerang
-            </a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">What I like to do</a>
-                </li>
-                <li>
-                    <a href="#">Who I am</a>
-                </li>
-                <li>
-                    <a href="#">What I´ve done / Github</a>
-                </li>
-                <li>
-                    <a href="#">What I´ve learnt / CV</a>
-                </li>
-                <li>
-                    <a href="#">Status</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+            <span>
+                <a class="navbar-brand visible-xs" ><img src="/images/boomerang-orange-62-41-rotated.svg" alt=""></a>
+                <div id="current-section" class="navbar-center navbar-brand">
+                    <span ng-class="{'text-bluesky': !responsiveData.isResponsive, 'text-orange': responsiveData.isResponsive }">{{currentSection}}</span>
+                </div>
+            </span>
+        </div>      
     </div>
     <!-- /.container -->
 </nav>
+
