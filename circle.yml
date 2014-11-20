@@ -2,6 +2,7 @@ test:
   pre:
     - bower install
     - npm run update-webdriver --standalone
+    - node server.js
 deployment:
   production:
     branch: master
