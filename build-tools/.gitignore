@@ -1,8 +1,0 @@
-node_modules
-public
-.tmp
-client/bower_components
-.DS_Store
-.env
-npm-debug.log
-@@public-to-ignore

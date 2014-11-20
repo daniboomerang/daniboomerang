@@ -1,9 +1,8 @@
 test:
-  override:
-    - echo "pending to prepare tests to be runned here"
+  pre:
+    - bower install
 deployment:
-  staging:
+  production:
     branch: master
-    commands:
-      - gem install compass
-      - ./build-tools/push-to-heroku.sh
+    heroku:
+      appname: daniboomerang
