@@ -29,6 +29,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('unit', ['karma:unit', 'watch']);
+    grunt.registerTask('unitNoWatch', ['karma:unit']);
+
     grunt.registerTask('e2e', ['protractor']);
+    grunt.registerTask('testDevMode', ['e2e','unit']);
     grunt.registerTask('test', ['e2e','unit']);
 };

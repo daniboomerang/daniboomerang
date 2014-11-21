@@ -1,5 +1,9 @@
 test:
   pre:
+    - npm update-webdriver
+    - npm start
+  override:
+    - grunt testCI
 deployment:
   production:
     branch: master
