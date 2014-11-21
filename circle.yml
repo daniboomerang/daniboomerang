@@ -1,8 +1,7 @@
 test:
   pre:
-    - bower install
     - npm run update-webdriver --standalone
-    - node server.js
+    - grunt server --force &
 deployment:
   production:
     branch: master
