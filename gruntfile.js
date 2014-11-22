@@ -33,5 +33,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('e2e', ['protractor']);
     grunt.registerTask('testDevMode', ['e2e','unit']);
-    grunt.registerTask('test', ['e2e','unit']);
+    grunt.registerTask('testCI', ['e2e','unitNoWatch']);
 };
