@@ -2,9 +2,6 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         shell:{
-            updateWebdriver: {
-                command: 'npm run update-webdriver',
-            },
             serverAsync: {
                 command: 'node server.js',
                 options: {
@@ -37,13 +34,23 @@ module.exports = function(grunt) {
             },
         },
         protractor: {
-            options: {
-              configFile: "./test/karma-e2e.conf.js",
-              keepAlive: true, // The grunt process stops when the test fails.
-              noColor: false, // We use colors in its output.
-              args: { }
+            dev: {
+                options: {
+                    configFile: "./test/karma-e2e.conf.js",
+                    keepAlive: true, // The grunt process stops when the test fails.
+                    noColor: false, // We use colors in its output.
+                    args: { }
+                },
+                all: { },
             },
-            all: { },
+            ci: {
+                options : {
+                    configFile: "./test/karma-e2e-ci.conf.js",
+                    keepAlive: true,
+                    args: { }
+                },
+                all: { },
+            },
         },
     });
 
@@ -62,7 +69,8 @@ module.exports = function(grunt) {
     grunt.registerTask('updateWebdriver', ['shell:updateWebdriver']);    
     grunt.registerTask('server', ['run:server']);    
 
-    grunt.registerTask('e2e', ['serverAsync', 'protractor']);
-    grunt.registerTask('testDEV', ['server', 'e2e', 'unitWatch']);
-    grunt.registerTask('testCI', ['updateWebdriver', 'e2e','unitNoWatch']);
+    grunt.registerTask('e2eDEV', ['serverAsync', 'protractor:dev']);
+    grunt.registerTask('e2eCI', ['serverAsync', 'protractor:ci']);
+    grunt.registerTask('testDEV', ['e2eDEV', 'unitWatch']);
+    grunt.registerTask('testCI', ['e2eCI','unitNoWatch']);
 };
