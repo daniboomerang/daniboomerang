@@ -1,6 +1,6 @@
 test:
   override:
-    - grunt unitNoWatch
+    - grunt testCI
 deployment:
   production:
     branch: master
