@@ -64,5 +64,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('e2e', ['serverAsync', 'protractor']);
     grunt.registerTask('testDEV', ['server', 'e2e', 'unitWatch']);
-    grunt.registerTask('testCI', ['serverAsync', 'updateWebdriver', 'e2e','unitNoWatch']);
+    grunt.registerTask('testCI', ['updateWebdriver', 'e2e','unitNoWatch']);
 };
