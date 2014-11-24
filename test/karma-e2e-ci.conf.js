@@ -8,7 +8,7 @@ exports.config = {
     maxInstances: 2
   },
 
-  chromeDriver: '/usr/local/lib/node_modules/chromedriver/lib/chromedriver/chromedriver',
+  chromeDriver: '/usr/local/bin/chromedriver',
 
   baseUrl: 'http://localhost:8080/',
 
