@@ -2,6 +2,9 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         shell:{
+            updateWebdriver: {
+                command: 'npm run update-webdriver',
+            },
             serverAsync: {
                 command: 'node server.js',
                 options: {
@@ -60,6 +63,6 @@ module.exports = function(grunt) {
     grunt.registerTask('server', ['run:server']);    
 
     grunt.registerTask('e2e', ['serverAsync', 'protractor']);
-    grunt.registerTask('testDEV', ['e2e', 'unit']);
-    grunt.registerTask('testCI', ['e2e','unit']);
+    grunt.registerTask('testDEV', ['updateWebdriver', 'e2e', 'unit']);
+    grunt.registerTask('testCI', ['updateWebdriver', 'e2e','unit']);
 };
