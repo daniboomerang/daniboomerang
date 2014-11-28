@@ -5,7 +5,7 @@ exports.config = {
   capabilities: {
     browserName: 'chrome',
     shardTestFiles: true,
-    maxInstances: 2
+    maxInstances: 1
   },
 
 	onPrepare: function() {	
