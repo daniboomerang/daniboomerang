@@ -34,23 +34,13 @@ module.exports = function(grunt) {
             },
         },
         protractor: {
-            dev: {
-                options: {
-                    configFile: "./test/karma-e2e.conf.js",
-                    keepAlive: true, // The grunt process stops when the test fails.
-                    noColor: false, // We use colors in its output.
-                    args: { }
-                },
-                all: { },
+            options: {
+                configFile: "./test/karma-e2e.conf.js",
+                keepAlive: true, // The grunt process stops when the test fails.
+                noColor: false, // We use colors in its output.
+                args: { }
             },
-            ci: {
-                options : {
-                    configFile: "./test/karma-e2e-ci.conf.js",
-                    keepAlive: true,
-                    args: { }
-                },
-                all: { },
-            },
+            all: { },
         },
     });
 
@@ -62,15 +52,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('unitWatch', ['karma:unit', 'watch']);
+    grunt.registerTask('unit', ['karma:unit', 'watch']);
     grunt.registerTask('unitNoWatch', ['karma:unit']);
 
     grunt.registerTask('serverAsync', ['shell:serverAsync']);    
     grunt.registerTask('updateWebdriver', ['shell:updateWebdriver']);    
     grunt.registerTask('server', ['run:server']);    
 
-    grunt.registerTask('e2eDEV', ['serverAsync', 'protractor:dev']);
-    grunt.registerTask('e2eCI', ['serverAsync', 'protractor:ci']);
-    grunt.registerTask('testDEV', ['e2eDEV', 'unitWatch']);
-    grunt.registerTask('testCI', ['e2eCI','unitNoWatch']);
+    grunt.registerTask('e2e', ['serverAsync', 'protractor']);
+    grunt.registerTask('testDEV', ['e2e', 'unit']);
+    grunt.registerTask('testCI', ['e2e','unit']);
 };
