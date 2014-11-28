@@ -8,9 +8,8 @@ exports.config = {
     maxInstances: 2
   },
 
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+
   chromeDriver: '../node_modules/protractor/selenium/chromedriver',
-  seleniumPort: 4444,
 
   baseUrl: 'http://localhost:8080/',
 
