@@ -1,9 +1,8 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/getting-started.md */
-
 describe('Daniboomerang Scenarios', function() {
 
+  /*
   var ptor= protractor.getInstance();
   beforeEach(function() {
           ptor.get('/');
@@ -11,17 +10,16 @@ describe('Daniboomerang Scenarios', function() {
   
   browser.driver.manage().window().setSize(1280, 800);
 
-  // The sidebar menu
-  it("should not show the sidebar menu", function() {
-      var sidebarDiv = 'sidebar-wrapper';  
-      expect(element(by.id(sidebarDiv)).isDisplayed()).toBe(true);
-  });
-
-
   // The responsive sidebar menu
   it("should show the sidebar menu", function() {
       var sidebarResponsiveDiv = 'sidebar-wrapper-responsive';  
       expect(element(by.id(sidebarResponsiveDiv)).isDisplayed()).toBe(false);
+  });
+
+  // The sidebar menu
+  it("should not show the sidebar menu", function() {
+      var sidebarDiv = 'sidebar-wrapper';  
+      expect(element(by.id(sidebarDiv)).isDisplayed()).toBe(true);
   });
 
   it('should have 6 sections', function() {
@@ -162,7 +160,7 @@ describe('Daniboomerang Scenarios', function() {
       expect(section.getText()).toEqual(sectionWith4spaces);
     });
 
-  });
+  });*/
 
 });
 
