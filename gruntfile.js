@@ -24,7 +24,6 @@ module.exports = function(grunt) {
             unit: {
                 configFile: './test/karma.conf.js'
             },
-            //continuous integration mode: run tests once in PhantomJS browser.
             continuous: {
                 configFile: './test/karma.conf.js',
                 singleRun: true
@@ -55,14 +54,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('unit', ['karma:unit', 'watch']);
-    grunt.registerTask('unitNoWatch', ['karma:unit']);
+    grunt.registerTask('unitDEV', ['karma:unit', 'watch']);
+    grunt.registerTask('unitCI', ['karma:continuous']);
 
     grunt.registerTask('serverAsync', ['shell:serverAsync']);    
     grunt.registerTask('updateWebdriver', ['shell:updateWebdriver']);    
     grunt.registerTask('server', ['run:server']);    
 
     grunt.registerTask('e2e', ['serverAsync', 'protractor']);
-    grunt.registerTask('testDEV', ['updateWebdriver', 'e2e', 'unit']);
-    grunt.registerTask('testCI', ['updateWebdriver', 'e2e','unit']);
+    grunt.registerTask('testDEV', ['updateWebdriver', 'e2e', 'unitDEV']);
+    grunt.registerTask('testCI', ['updateWebdriver', 'e2e','unitCI']);
 };

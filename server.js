@@ -35,19 +35,13 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 
 // configuration ===============================================================
 
-if ('development' == config.env) {
+// WE DON´T CARE IF WE ARE IN DEV, CI OR PROD
+if (('development' == config.env) || ('production' == config.env) || ('test' == config.env)) {
   app.use(express.static(path.join(__dirname, 'client')));
   app.use(errorHandler());
   app.set('views', __dirname + '/client');
   app.use(morgan('dev')); // log every request to the console
 }
-
-else if ('production' == config.env) {
-  app.use(express.static(path.join(__dirname, 'client')));
-  app.use(errorHandler());
-  app.set('views', __dirname + '/client');
-  app.use(morgan('prod')); // log every request to the console
-};
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

@@ -20,13 +20,5 @@ module.exports = function(config){
 
     browsers : ['Chrome'],
 
-    plugins : [
-      'karma-junit-reporter',
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-phantomjs-launcher',
-      'karma-jasmine'
-    ]
-
   });
 };
