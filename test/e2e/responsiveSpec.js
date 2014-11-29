@@ -4,8 +4,11 @@
 
 describe('Daniboomerang Responsive Scenarios', function() {
 
-  browser.get('/');
-
+  var ptor= protractor.getInstance();
+  beforeEach(function() {
+          ptor.get('/');
+  });
+  
   browser.driver.manage().window().setSize(676, 800);
 
   // The responsive sidebar menu

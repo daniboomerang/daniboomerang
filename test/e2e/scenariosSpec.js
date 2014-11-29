@@ -4,8 +4,11 @@
 
 describe('Daniboomerang Scenarios', function() {
 
-  browser.get('/');
-
+  var ptor= protractor.getInstance();
+  beforeEach(function() {
+          ptor.get('/');
+  });
+  
   browser.driver.manage().window().setSize(1280, 800);
 
   // The sidebar menu

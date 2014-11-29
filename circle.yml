@@ -1,6 +1,6 @@
 test:
-  pre:
-    - bower install
+  override:
+    - grunt testCI
 deployment:
   production:
     branch: master
