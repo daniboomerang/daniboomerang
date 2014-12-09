@@ -4,11 +4,10 @@ daniboomerangDirectives.directive('heading', function($document) {
   return {
     restrict: 'E',  
     templateUrl: '/views/heading.html',
-    transclude: true,
+    transclude: false,
     scope: {},
     link: function (scope, element) {
 
-      scope.isHeaderExpanded = false;
       var headerId = angular.element(document.querySelector('#header'));
       headerId.addClass('hideIt');
       $document.scrollToElementAnimated(headerId);
@@ -19,14 +18,11 @@ daniboomerangDirectives.directive('heading', function($document) {
         var hash = $element.prop('hash');
         if ('cover' == hash.substr(1)){
           console.log('Leaving ', hash.substr(1), ' area');
-          if ($document.scrollTop() > 100){
             if (headerId.hasClass('hideIt')){
               headerId.removeClass('hideIt');
               headerId.addClass('showIt');
             }
             header.addClass('expand');
-            scope.isHeaderExpanded = true;
-          }   
         }
         
 
@@ -39,7 +35,6 @@ daniboomerangDirectives.directive('heading', function($document) {
           header.removeClass('expand')
           headerId.addClass('hideIt');
           headerId.removeClass('showIt');
-          scope.isHeaderExpanded = false;
         }
       });
 
@@ -51,7 +46,7 @@ daniboomerangDirectives.directive('content', function($document) {
   return {
     restrict: 'E',
     templateUrl: '/views/content/content.html',
-    transclude: true,
+    transclude: false,
     scope: {},
     rootScope: {},
     link: function (rootScope, scope, element) {

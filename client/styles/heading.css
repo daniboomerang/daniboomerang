@@ -29,10 +29,10 @@ header.expand {
 }
 
 .hiddeIt{
-  max-height: 0px;
+  z-index: -1;
 }
 .showIt{
-  max-height: 90px;
+  z-index: 999;
 }
 
 @media(min-width:768px) {

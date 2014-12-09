@@ -13,7 +13,7 @@ body{
 }
 
 a {color: white; transition: all .5s ease-in-out;}
-a:hover {color: orange; text-decoration:none; transition: all .5s ease-in-out;}
+a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;}
 
 .btn-social {
     display: inline-block;
@@ -47,6 +47,6 @@ a:hover {color: orange; text-decoration:none; transition: all .5s ease-in-out;}
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: orange;
+    color: #FF9933;
     background: #fff;
 }
