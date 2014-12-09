@@ -11,63 +11,46 @@
         <title>Daniboomerang Portfolio</title>
         <meta name="description" content="Daniel Estevez as Software Engineer">
         <meta name="viewport" content="width=device-width">
-        
-        <!-- build:css styles/vendor.css -->
-            <!-- Bootstrap -->
-            <link rel="stylesheet" href="styles/vendor/bootstrap.css">
-            <!-- bower:css -->
-            <!--<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />-->
-            <!-- endbower -->
-        <!-- endbuild -->
-        
-        <!-- build:css({.tmp,client}) styles/main.css -->
-            <!-- CSS DANIBOOMERANG -->
-            <link rel="stylesheet" href="styles/layout.css">
-            <link rel="stylesheet" href="styles/daniboomerang.css">
-            <!-- CSS ANIMATE -->
-            <link rel="stylesheet" href="styles/animate.css">
-        <!-- endbuild -->
+    
+        <!-- CSS BOOTSTRAP -->
+        <link rel="stylesheet" href="styles/vendor/bootstrap.css">
+
+        <!-- CSS DANIBOOMERANG -->
+        <link rel="stylesheet" href="styles/daniboomerang.css">
+        <link rel="stylesheet" href="styles/heading.css">
+        <link rel="stylesheet" href="styles/custom-navbar.css">
+        <link rel="stylesheet" href="styles/content.css">
+        <link rel="stylesheet" href="styles/cover.css">
+ 
+        <!-- CSS FONT AWESOME -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 
     </head>
 
     <!-- apply our angular app to our site -->
-    <body ng-app="daniboomerangApp" class="daniboomerang">
+    <body ng-app="daniboomerangApp">
 
         <!-- DANIBOOMERANG APP -->
-        <div id="wrapper">
-            <navbar></navbar>
-            <sidebar-menu></sidebar-menu>
-            <section class="visible-xs">
-                <sidebar-menu-responsive></sidebar-menu-responsive>
-            </section>    
-            <content></content>
-        </div>
-         <!-- /#wrapper -->
+        <heading></heading>
+        <cover></cover>
+        <content></content>
         <!-- -->
 
-        <!-- build:js scripts/vendor.js -->
-            <!-- bower:js -->
-                <script src="scripts/vendor/jquery.js"></script>
-                <script src="bower_components/angular/angular.js"></script>
-                <script src="bower_components/es5-shim/es5-shim.js"></script>
-                <script src="bower_components/json3/lib/json3.min.js"></script>
-                <script src="bower_components/angular-route/angular-route.js"></script>
-                <script src="bower_components/angular-animate/angular-animate.js"></script>
-                <script src="scripts/vendor/bootstrap.js"></script>
-                <script src="scripts/vendor/ngresize.js"></script>
-                <!--<script src="bower_components/angular-resource/angular-resource.js"></script>
-                <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-                <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
-            <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js({.tmp,client}) scripts/scripts.js -->
-            <!-- DANIBOOMERANG -->
-                <script src="scripts/daniboomerang.js"></script>
-                <script src="scripts/directives.js"></script>
-                <script src="scripts/controllers.js"></script>
-                <script src="scripts/services.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/vendor/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+        <script src="bower_components/ng-parallax/angular-parallax.js"></script>
+        <script src="bower_components/angular-parallax/scripts/angular-parallax.js"></script>
+        <script src="scripts/vendor/bootstrap.js"></script>
+  
+        <!-- DANIBOOMERANG SCRIPTS-->
+        <script src="scripts/daniboomerang.js"></script>
+        <script src="scripts/directives.js"></script>
+        <script src="scripts/controllers.js"></script>
+        <!-- -->    
 
     </body>
 </html>
