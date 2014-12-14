@@ -113,7 +113,7 @@
 /************/
 
 .stars-parallax-background {
-  background: url(/images/landscapeStars.svg) no-repeat center center fixed; 
+  background: url(/images/fullBackgroundImage.svg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
