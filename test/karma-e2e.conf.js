@@ -1,6 +1,6 @@
 exports.config = {
 
-  specs: ['e2e/scenariosSpec.js'],
+  specs: ['e2e/indexSpec.js'],
 
   capabilities: {
     browserName: 'chrome',

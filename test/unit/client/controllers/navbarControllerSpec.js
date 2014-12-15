@@ -1,10 +1,10 @@
 'use strict';
 
-describe('Navbar Controller', function() {
+describe('Cover Controller', function() {
 
     var $scope;
     var $rootScope;
-    var NavbarCtrl;
+    var CoverCtrl;
 
     beforeEach(function () {        
         module('daniboomerangControllers');
@@ -17,7 +17,7 @@ describe('Navbar Controller', function() {
         
         // And the Scope and the Controller
         $scope = $rootScope.$new();
-        NavbarCtrl = $controller('NavbarCtrl', {
+        CoverCtrl = $controller('CoverCtrl', {
             $scope: $scope,
             $rootScope: $rootScope
         });
@@ -28,3 +28,4 @@ describe('Navbar Controller', function() {
     });
 
 });   
+

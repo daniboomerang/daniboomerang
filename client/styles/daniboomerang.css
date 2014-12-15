@@ -46,7 +46,7 @@ a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;}
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
+    border: solid 3px #fff;
     color: #FF9933;
     background: #fff;
 }
