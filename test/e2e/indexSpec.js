@@ -34,12 +34,13 @@ describe('Daniboomerang - index scenario', function() {
   // The Cover //
   ///////////////  
 
-  it("should show the cover with its elements", function() {
+  it("should show the cover elements correctly", function() {
+
       var cover = element(by.id('cover'));
       expect(cover.isPresent()).toBe(true);
-      
+
       // PARALLAX
-      expect(cover.element(by.css('.stars-parallax-background')).isPresent()).toBe(true);
+      expect(element(by.css('.stars-parallax-background')).isPresent()).toBe(true);
 
       // NAVBAR
         expect(cover.element(by.id('cover-navbar')).isPresent()).toBe(true);
@@ -78,11 +79,11 @@ describe('Daniboomerang - index scenario', function() {
 
     // CONTENT
       expect(content.element(by.id('who-i-am')).isPresent()).toBe(true);
-      expect(content.element(by.css('.book-shell-background')).isPresent()).toBe(true);
+      expect(content.element(by.css('.bookshell-parallax-background')).isPresent()).toBe(true);
       expect(content.element(by.id('what-i-like')).isPresent()).toBe(true);
       expect(content.element(by.css('.desk-parallax-background')).isPresent()).toBe(true);
       expect(content.element(by.id('what-ive-done')).isPresent()).toBe(true);
-      expect(content.element(by.css('.flat-parallax-background')).isPresent()).toBe(true);
+      expect(content.element(by.css('.floor-parallax-background')).isPresent()).toBe(true);
       expect(content.element(by.id('what-ive-learnt')).isPresent()).toBe(true);
   });
 
