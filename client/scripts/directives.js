@@ -1,6 +1,33 @@
 var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 
-daniboomerangDirectives.directive('cover', function($document, $rootScope) {
+daniboomerangDirectives.directive('topnavbar', function() {
+  return {
+    restrict: 'E',  
+    templateUrl: 'views/topnavbar.html',
+    link: function (scope, element) {
+      var head = element.find('#head');
+      head.addClass('hide-it');
+      var header = element.find('header');
+
+      scope.$on('event:expand-navbar', function($event, $element){  
+        if (head.hasClass('hide-it')){
+          head.removeClass('hide-it');
+          head.addClass('show-it');
+        }
+        header.addClass('expand');
+        head.addClass('fixed');
+      });  
+
+      scope.$on('event:hide-navbar', function($event, $element){
+        header.removeClass('expand');
+        head.addClass('hide-it');
+        head.removeClass('show-it');
+      });
+    }
+  };
+});
+ 
+daniboomerangDirectives.directive('cover', function($document) {
   return {
     restrict: 'E',
     templateUrl: 'views/cover.html',
@@ -13,34 +40,8 @@ daniboomerangDirectives.directive('cover', function($document, $rootScope) {
   };
 });
 
-daniboomerangDirectives.directive('heading', function($document) {
-  return {
-    restrict: 'E',  
-    templateUrl: 'views/heading.html',
-    scope: {},
-    link: function (scope, element) {
-      var headerId = angular.element(document.querySelector('#header'));
-      headerId.addClass('hideIt');
-      var header = angular.element(document.querySelector('header'));
 
-      scope.$on('event:show-header', function($event, $element){  
-        if (headerId.hasClass('hideIt')){
-          headerId.removeClass('hideIt');
-          headerId.addClass('showIt');
-        }
-        header.addClass('expand');
-      });  
-
-      scope.$on('event:hide-header', function($event, $element){
-        header.removeClass('expand');
-        headerId.addClass('hideIt');
-        headerId.removeClass('showIt');
-      });
-    }
-  };
-});
- 
-daniboomerangDirectives.directive('content', function($document) {
+daniboomerangDirectives.directive('content', function() {
   return {
     restrict: 'E',
     templateUrl: 'views/content/content.html'

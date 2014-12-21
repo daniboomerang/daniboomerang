@@ -6,9 +6,6 @@ header {
   height: 0px;
   width: 100%;
   overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 999;
   background: rgba(0, 0, 0, 0.7);
   -webkit-transition: height 1s;
@@ -22,16 +19,23 @@ header.expand {
     height: 70px;
 }
 
-#header {
+.fixed{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left:0;
+}
+
+#content-header {
   -webkit-transition: max-height 0.8s;
   -moz-transition: max-height 0.8s;
   transition: max-height 0.8s;
 }
 
-.hiddeIt{
+.hidde-it{
   z-index: -1;
 }
-.showIt{
+.show-it{
   z-index: 999;
 }
 

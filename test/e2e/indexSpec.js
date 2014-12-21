@@ -74,17 +74,17 @@ describe('Daniboomerang - index scenario', function() {
   /////////////////  
 
   it('should have 4 sections', function() {
-    var content = element(by.id('content'));
-    expect(content.isPresent()).toBe(true);
+    var sections = element(by.id('sections'));
+    expect(sections.isPresent()).toBe(true);
 
     // CONTENT
-      expect(content.element(by.id('who-i-am')).isPresent()).toBe(true);
-      expect(content.element(by.css('.bookshell-parallax-background')).isPresent()).toBe(true);
-      expect(content.element(by.id('what-i-like')).isPresent()).toBe(true);
-      expect(content.element(by.css('.desk-parallax-background')).isPresent()).toBe(true);
-      expect(content.element(by.id('what-ive-done')).isPresent()).toBe(true);
-      expect(content.element(by.css('.floor-parallax-background')).isPresent()).toBe(true);
-      expect(content.element(by.id('what-ive-learnt')).isPresent()).toBe(true);
+      expect(sections.element(by.id('who-i-am')).isPresent()).toBe(true);
+      expect(sections.element(by.css('.bookshell-parallax-background')).isPresent()).toBe(true);
+      expect(sections.element(by.id('what-i-like')).isPresent()).toBe(true);
+      expect(sections.element(by.css('.desk-parallax-background')).isPresent()).toBe(true);
+      expect(sections.element(by.id('what-ive-done')).isPresent()).toBe(true);
+      expect(sections.element(by.css('.floor-parallax-background')).isPresent()).toBe(true);
+      expect(sections.element(by.id('what-ive-learnt')).isPresent()).toBe(true);
   });
 
 
