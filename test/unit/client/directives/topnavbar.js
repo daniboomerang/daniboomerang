@@ -9,10 +9,7 @@ describe('navbar', function() {
 
 		inject(function($injector, $compile) {
 
-	 		$rootScope = $injector.get('$rootScope');
-	 		$document = $injector.get('$document');
-	      
-
+	 		$rootScope = $injector.get('$rootScope');	   
 			elm = angular.element(
 			'<topnavbar></topnavbar>' 
 			);
