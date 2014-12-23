@@ -1,0 +1,68 @@
+/************/
+/* SECTIONS */
+/************/
+
+/* WHO I AM */
+
+#who-i-am {
+	background: white;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+/***********/
+/* CONTENT */
+/***********/
+
+#sections{
+	height: 100%;
+}
+
+.dboom-section{
+	padding:20px;
+	border-bottom: #F2F2F2 2px solid;
+}
+
+/************/
+/* PARALLAX */
+/************/
+
+.parallax-image-section{
+	height:1200px;
+}
+
+/* BOOKSHELL PARALLAX BACKGROUND */
+.bookshell-parallax-background {
+	background: url(/images/bookShell.svg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: relative;
+}   
+
+/* DESK PARALLAX BACKGROUND */
+.desk-parallax-background {
+	background: url(/images/deskCut.svg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+/* FLAT PARALLAX BACKGROUND */
+.floor-parallax-background {
+	background: url(/images/deskCut.svg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: relative;
+}    

@@ -1,0 +1,44 @@
+/***********/
+/* HEADING */
+/***********/
+
+header {
+  height: 0px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  -ms-transition: height 1s;
+  -o-transition: height 1s;
+  transition: height 1s;
+}
+
+header.expand {
+    height: 70px;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left:0;
+}
+
+#content-header {
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+}
+
+.hidde-it{
+  z-index: -1;
+}
+.show-it{
+  z-index: 999;
+}
+
+@media(min-width:768px) {
+  header.expand {height: 90px;}
+}
