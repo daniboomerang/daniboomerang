@@ -1,6 +1,6 @@
 exports.config = {
 
-  specs: ['e2e/indexSpec.js'],
+  specs: ['e2e/indexSpec.js', 'e2e/scrollingSpec.js'],
 
   capabilities: {
     browserName: 'chrome',
