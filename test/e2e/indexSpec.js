@@ -6,14 +6,13 @@ describe('Daniboomerang - index scenario', function() {
   /**** DANIBOOMERANG.COM - /#/cover */
   /////////////////////////////////////
 
-  var ptor= protractor.getInstance();
   beforeEach(function() {
-    ptor.get('/');
+     browser.get('/');
   });
   
   it('should scroll to cover section', function() {
-    ptor.waitForAngular();
-    expect(ptor.getCurrentUrl()).toContain('/#/cover');
+    browser.waitForAngular();
+    expect(browser.getCurrentUrl()).toContain('/#/cover');
   }, 200000);
 
   /////////////  

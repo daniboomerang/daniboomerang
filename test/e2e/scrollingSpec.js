@@ -2,14 +2,13 @@
 
 describe('Daniboomerang - scrolling scenario', function() {
 
-	var ptor= protractor.getInstance();
 	beforeEach(function() {
-		ptor.get('/');
+		browser.get('/');
 	});
 
 	it('should scroll to cover section', function() {
-		ptor.waitForAngular();
-		expect(ptor.getCurrentUrl()).toContain('/#/cover');
+		browser.waitForAngular();
+		expect(browser.getCurrentUrl()).toContain('/#/cover');
 	}, 200000);
 
 	////////////////
@@ -44,16 +43,16 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to Who I am and expand topnavbar with Who I am link active', function() {
 
-			ptor.sleep(2000);
+			browser.sleep(2000);
 
 			var whoIAmLinkCover = element.all(by.css('.masthead-nav li')).get(0);
 
 			expect(whoIAmLinkCover.isPresent()).toBe(true);
 			whoIAmLinkCover.click();
 
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/who-i-am');
+			expect(browser.getCurrentUrl()).toContain('/#/who-i-am');
 
 			// header is expanded 
 			var headerElement = element(by.tagName('header'));
@@ -75,16 +74,16 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to What I like and expand topnavbar with What I like link active', function() {
 
-			ptor.sleep(2000);
+			browser.sleep(2000);
 
 			var whatILikeLinkCover = element.all(by.css('.masthead-nav li')).get(1);
 
 			expect(whatILikeLinkCover.isPresent()).toBe(true);
 			whatILikeLinkCover.click();
 
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/what-i-like');
+			expect(browser.getCurrentUrl()).toContain('/#/what-i-like');
 
 			// header is expanded 
 			var headerElement = element(by.tagName('header'));
@@ -106,16 +105,16 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to What I´ve done and expand topnavbar with What I´ve done link active', function() {
 
-			ptor.sleep(2000);
+			browser.sleep(2000);
 
 			var whatIveDoneLinkCover = element.all(by.css('.masthead-nav li')).get(2);
 
 			expect(whatIveDoneLinkCover.isPresent()).toBe(true);
 			whatIveDoneLinkCover.click();
 
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/what-ive-done');
+			expect(browser.getCurrentUrl()).toContain('/#/what-ive-done');
 
 			// header is expanded 
 			var headerElement = element(by.tagName('header'));
@@ -137,16 +136,16 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to What I´ve learnt and expand topnavbar with What I´ve learnt link active', function() {
 
-			ptor.sleep(2000);
+			browser.sleep(2000);
 
 			var whatIveLearntLinkCover = element.all(by.css('.masthead-nav li')).get(3);
 
 			expect(whatIveLearntLinkCover.isPresent()).toBe(true);
 			whatIveLearntLinkCover.click();
 
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/what-ive-learnt');
+			expect(browser.getCurrentUrl()).toContain('/#/what-ive-learnt');
 
 			// header is expanded 
 			var headerElement = element(by.tagName('header'));
@@ -168,14 +167,14 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll from section to section when clicking at the fixed topnavbar ', function() {
 
-			ptor.sleep(2000);
+			browser.sleep(2000);
 
 			var whatIveLearntLinkCover = element.all(by.css('.masthead-nav li')).get(3);
 			whatIveLearntLinkCover.click();
 			
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/what-ive-learnt');
+			expect(browser.getCurrentUrl()).toContain('/#/what-ive-learnt');
 
 			// header is expanded 
 			var headerElement = element(by.tagName('header'));
@@ -194,9 +193,9 @@ describe('Daniboomerang - scrolling scenario', function() {
 			
 			var whoIAmLinkTopnavbar = element.all(by.css('.navbar-collapse li')).get(0);
 			whoIAmLinkTopnavbar.click();
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/who-i-am');
+			expect(browser.getCurrentUrl()).toContain('/#/who-i-am');
 			// navbar section gets 'active'
 			expect(whoIAmLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
@@ -204,9 +203,9 @@ describe('Daniboomerang - scrolling scenario', function() {
 			
 			var whatILkeLinkTopnavbar = element.all(by.css('.navbar-collapse li')).get(1);
 			whatILkeLinkTopnavbar.click();
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/what-i-like');
+			expect(browser.getCurrentUrl()).toContain('/#/what-i-like');
 			// navbar section gets 'active'
 			expect(whatILkeLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
@@ -214,9 +213,9 @@ describe('Daniboomerang - scrolling scenario', function() {
 			
 			var whatIveDoneLinkTopnavbar = element.all(by.css('.navbar-collapse li')).get(2);
 			whatIveDoneLinkTopnavbar.click();
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/what-ive-done');
+			expect(browser.getCurrentUrl()).toContain('/#/what-ive-done');
 			// navbar section gets 'active'
 			expect(whatIveDoneLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
@@ -224,9 +223,9 @@ describe('Daniboomerang - scrolling scenario', function() {
 			
 			var whatIveLearntLinkTopnavbar = element.all(by.css('.navbar-collapse li')).get(3);
 			whatIveLearntLinkTopnavbar.click();
-			ptor.sleep(3000);
+			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
-			expect(ptor.getCurrentUrl()).toContain('/#/what-ive-learnt');
+			expect(browser.getCurrentUrl()).toContain('/#/what-ive-learnt');
 			// navbar section gets 'active'
 			expect(whatIveLearntLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 		});
