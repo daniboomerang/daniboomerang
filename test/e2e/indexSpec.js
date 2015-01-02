@@ -15,20 +15,6 @@ describe('Daniboomerang - index scenario', function() {
     expect(browser.getCurrentUrl()).toContain('/#/cover');
   }, 200000);
 
-  /////////////  
-  // Heading //
-  /////////////  
-  
-  // The heading must be hidden
-  it("should not show the header, nor the navbar", function() {
-      var headerElement = element(by.tagName('header'));
-      expect(headerElement.isDisplayed()).toBe(false);
-      var nav = headerElement.element(by.id('navbar'));
-      expect(nav.isDisplayed()).toBe(false);
-      var navResponsive = headerElement.element(by.id('responsive-navbar'));
-      expect(navResponsive.isDisplayed()).toBe(false);
-  });
-
   ///////////////  
   // The Cover //
   ///////////////  
@@ -51,21 +37,33 @@ describe('Daniboomerang - index scenario', function() {
 
         // What I like to do <li> contains the correct text 
         var whatILike = navbarList.get(1);
-        expect(whatILike.getText()).toBe('What I like to do   ');
+        expect(whatILike.getText()).toBe('What I like   ');
 
         // What I've done <li> contains the correct text 
         var whatIveDone = navbarList.get(2);
-        expect(whatIveDone.getText()).toBe('What I´ve done / Github   ');
+        expect(whatIveDone.getText()).toBe('What I´ve done   ');
 
         // What I've learnt <li> contains the correct text 
         var whatIveLearnt = navbarList.get(3);
-        expect(whatIveLearnt.getText()).toBe('What I´ve learnt / CV   ');
+        expect(whatIveLearnt.getText()).toBe('What I´ve learnt   ');
         
       // CONTENT
         expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
 
       // FOOT
         expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true);
+  });
+
+  ////////////  
+  // Header //
+  ////////////  
+  
+  // The heading must be hidden
+  it("should not show the header, nor the navbar", function() {
+      var headerElement = element(by.tagName('header'));
+      expect(headerElement.isDisplayed()).toBe(false);
+      var nav = headerElement.element(by.id('navbar'));
+      expect(nav.isDisplayed()).toBe(false);
   });
 
   /////////////////  

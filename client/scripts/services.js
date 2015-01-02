@@ -6,21 +6,45 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 		init: function (){
 			$rootScope.$on('duScrollspy:becameActive', function($event, $element){
 				var hash = $element.prop('hash');
-				//Automaticly update location
 				if(hash) {
 					var section = hash.replace('#', '');
+					//Automaticly update location
 					$location.path('/' + section);
 					$rootScope.$apply();
 					if ('cover' == hash.substr(1)){
-			          $rootScope.$broadcast('event:hide-navbar', {});
+			          	$rootScope.$broadcast('event:activeArea', 'Cover');
 			        }
+			        if ('who-i-am' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'Who I am');
+			        }
+			        if ('what-i-like' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'What I like');
+			        }
+			        if ('what-ive-done' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'What I´ve done');
+			        }
+			        if ('what-ive-learnt' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'What I´ve learnt');
+			        }
+			        
 				}
 			});
 			$rootScope.$on('duScrollspy:becameInactive', function($event, $element){  
 		        var hash = $element.prop('hash');
-		        console.log('Leaving ', hash.substr(1), ' area');
-		        if ('cover' == hash.substr(1)){
-		          $rootScope.$broadcast('event:expand-navbar', {});
+		        if (('cover' == hash.substr(1))){
+		        	$rootScope.$broadcast('event:inactiveArea', 'Cover');
+		        }
+		        if ('who-i-am' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'Who I am');
+		        }
+		        if ('what-i-like' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'What I like');
+		        }
+		        if ('what-ive-done' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'What I´ve done');
+		        }
+		        if ('what-ive-learnt' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'What I´ve learnt');
 		        }
 		    });
 		}
