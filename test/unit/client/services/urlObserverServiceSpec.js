@@ -2,8 +2,9 @@
 
 describe('Scroll Observer', function() {
 
-	var scrollObserverService;
+	var urlObserverService;
 	var $rootScope;
+	var $location;
 
 	// excuted before each "it" is run.
 	beforeEach(function (){
@@ -11,9 +12,10 @@ describe('Scroll Observer', function() {
 		module('daniboomerangServices');
 
 		// inject services.
-		inject(function($injector, _scrollObserverService_) {
+		inject(function($injector, _urlObserverService_) {
 	 		$rootScope = $injector.get('$rootScope');	   
-			scrollObserverService = _scrollObserverService_;
+	 		$location = $injector.get('$location');
+			urlObserverService = _urlObserverService_;
 			spyOn($rootScope, '$broadcast').andCallThrough();
 		});
 	
@@ -21,18 +23,13 @@ describe('Scroll Observer', function() {
     
     // Triggering the scroll active and inactive sections
     it('should be listening when cover becomes active to broadcast ', function (){
-    	
-    	scrollObserverService.init();
-
-		var mockedElement = angular.element('<a class="navbar-brand btn-social btn-outline active" href="#cover" du-smooth-scroll="" du-scrollspy=""><img src="/images/logo-orange.svg" alt=""></a>');
-   		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
-      	
-      	// expected to broadcast the actions to be done when cover becomes active 
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'Cover');
-      
+    	urlObserverService.init();
+ 		$location.path('/whatever');
+    	$rootScope.$digest();
+    	expect($location.path()).toBe('/');
     });
 
-	// Triggering the scroll inactive sections
+	/* Triggering the scroll inactive sections
     it('should be listening when cover becomes inactive to broadcast ', function (){
     	
     	scrollObserverService.init();
@@ -41,8 +38,8 @@ describe('Scroll Observer', function() {
 
 		$rootScope.$broadcast('duScrollspy:becameInactive', mockedElement);
 		// expected to broadcast the actions to be done when cover becomes inactive 
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'Cover');
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', {});
       
-    });
+    });*/
 });   
 

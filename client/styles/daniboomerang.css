@@ -26,6 +26,16 @@ a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;}
     line-height: 45px;
 }
 
+.btn-social-lg {
+    padding-right: 15px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+}
+
+
 .btn:focus,
 .btn:active,
 .btn.active {
