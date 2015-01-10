@@ -1,19 +1,23 @@
 <header>
-    <nav id="navbar" class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-              <a class="navbar-brand btn-social-lg" href="#cover" du-smooth-scroll du-scrollspy><i ng-mouseenter="spinBoomerang = true" ng-mouseleave="spinBoomerang = false" ng-class="{'faa-spin animated': spinBoomerang}" class="fa fa-fw fa-2x icon-dboom"></i></a>
-        </div>
-        <nav>
-            <ul class="nav navbar-nav pull-right">
-                <li><a id="who-i-am-link" href="#who-i-am" du-smooth-scroll du-scrollspy offset='90'>Who I am &nbsp;&nbsp;<i id="who-i-am-icon" class="fa fa-fw fa-2x fa-chevron-circle-down"></i></a></li>
-                <li><a id="what-i-like-link"href="#what-i-like" du-smooth-scroll du-scrollspy offset='90'>What I like &nbsp;&nbsp;<i id="what-i-like-icon" class="fa fa-fw fa-2x fa-heart"></i></a></li>
-                <li><a id="what-ive-done-link" href="#what-ive-done" du-smooth-scroll du-scrollspy offset='90'>What I´ve done &nbsp;&nbsp;<i id="what-ive-done-icon" class="fa fa-fw fa-2x fa-github"></i></a></li>
-                <li><a id="what-ive-learnt-link" href="#what-ive-learnt" du-smooth-scroll du-scrollspy offset='90'>What I´ve learnt &nbsp;&nbsp;<i id="what-ive-learnt-icon"class="fa fa-fw fa-2x fa-newspaper-o"></i></a></li>
-            </ul>
-        </nav>
+
+  <!-- ------ -->
+  <!-- NAVBAR -->
+  <!-- ------ -->
+
+  <div id="navbar" class="navbar navbar-custom">
+    <div class="container custom-fluid-container">
+      <div class="navbar-header">
+         <a class="navbar-brand logo" href="#cover" du-smooth-scroll du-scrollspy ng-mouseenter="spinBoomerang = true" ng-mouseleave="spinBoomerang = false" ><i ng-class="{'faa-spin animated': spinBoomerang}" class="fa fa-fw fa-2x icon-dboom"></i></a>
       </div>
-    </nav>
-</header><!-- /header -->
+      <div>
+        <ul class="nav navbar-nav pull-right nav-custom-width">
+          <li><a id="who-i-am-link" href="#who-i-am" du-smooth-scroll du-scrollspy offset='90'><span class="hidden-xs">Who I am &nbsp;&nbsp;</span><i id="who-i-am-icon" class="fa fa-fw fa-2x icon-dboom"></i></a></li>
+          <li><a id="what-i-like-link"href="#what-i-like" du-smooth-scroll du-scrollspy offset='90'><span class="hidden-xs">What I like &nbsp;&nbsp;</span><i id="what-i-like-icon" class="fa fa-fw fa-2x fa-heart"></i></a></li>
+          <li><a id="what-ive-done-link" href="#what-ive-done" du-smooth-scroll du-scrollspy offset='90'><span class="hidden-xs">What I´ve done &nbsp;&nbsp;</span><i id="what-ive-done-icon" class="fa fa-fw fa-2x fa-github"></i></a></li>
+          <li><a id="what-ive-learnt-link" href="#what-ive-learnt" du-smooth-scroll du-scrollspy offset='90'><span class="hidden-xs">What I´ve learnt &nbsp;&nbsp;</span><i id="what-ive-learnt-icon"class="fa fa-fw fa-2x fa-newspaper-o"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-
+</header>

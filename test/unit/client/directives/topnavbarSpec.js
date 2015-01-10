@@ -41,7 +41,7 @@ describe('navbar', function() {
 		var area = 'Cover'; 
 		$rootScope.$broadcast('event:inactiveArea', area);
 		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', area);
-		var header = elm.find('header.expand.fixed');
+		var header = elm.find('header.expand.navbar-fixed-top');
 		expect(header.length).toBe(1);
 
 		/* If Who I am, it must expand and the section active */
@@ -53,7 +53,7 @@ describe('navbar', function() {
 		expect(whoIAmLink.hasClass('active')).toBe(true);
         var whoIAmIcon = elm.find('#who-i-am-icon');
       	expect(whoIAmIcon.length).toBe(1);
-      	expect(whoIAmIcon.hasClass('faa-pulse')).toBe(true);
+      	expect(whoIAmIcon.hasClass('faa-spin')).toBe(true);
 
       			/* If Waht I like, it must expand and the section active */
 		area = 'What I like';

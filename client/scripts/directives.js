@@ -27,19 +27,19 @@ daniboomerangDirectives.directive('topnavbar', function($timeout, $document) {
           }
           else if (area == 'Who I am'){
             whoIAmLink.addClass('active');
-            whoIAmIcon.addClass('faa-pulse animated fa-3x');
+            whoIAmIcon.addClass('faa-spin animated ');
           }
           else if (area == 'What I like'){
             whatILikeLink.addClass('active');
-            whatILikeIcon.addClass('faa-pulse animated fa-3x');            
+            whatILikeIcon.addClass('faa-pulse animated');
           }
           else if (area == 'What I´ve done'){
             whatIveDoneLink.addClass('active');
-            whatIveDoneIcon.addClass('faa-pulse animated fa-3x');
+            whatIveDoneIcon.addClass('faa-pulse animated');
           }
           else if (area == 'What I´ve learnt'){
             whatIveLearntLink.addClass('active');
-            whatIveLearntIcon.addClass('faa-pulse animated fa-3x');
+            whatIveLearntIcon.addClass('faa-pulse animated');
           }
 
         });  
@@ -48,23 +48,23 @@ daniboomerangDirectives.directive('topnavbar', function($timeout, $document) {
 
           if (area == 'Cover'){
             header.addClass('expand');
-            header.addClass('fixed');
+            header.addClass('navbar-fixed-top');
           }
           else if (area == 'Who I am'){
-            whoIAmLink.removeClass('active')
-            whoIAmIcon.removeClass('faa-pulse animated fa-3x')
+            whoIAmLink.removeClass('active');
+            whoIAmIcon.removeClass('faa-spin animated ');
           }
-          else if (area == 'What I like'){          
-            whatILikeLink.removeClass('active')
-            whatILikeIcon.removeClass('faa-pulse animated fa-3x')
+          else if (area == 'What I like'){
+            whatILikeLink.removeClass('active');
+            whatILikeIcon.removeClass('faa-pulse animated');
           }
           else if (area == 'What I´ve done'){
-            whatIveDoneLink.removeClass('active')
-            whatIveDoneIcon.removeClass('faa-pulse animated fa-3x')
+            whatIveDoneLink.removeClass('active');
+            whatIveDoneIcon.removeClass('faa-pulse animated');
           }
           else if (area == 'What I´ve learnt'){
-            whatIveLearntLink.removeClass('active')
-            whatIveLearntIcon.removeClass('faa-pulse animated fa-3x')
+            whatIveLearntLink.removeClass('active');
+            whatIveLearntIcon.removeClass('faa-pulse animated');
           }
 
         });
@@ -73,17 +73,23 @@ daniboomerangDirectives.directive('topnavbar', function($timeout, $document) {
   };
 });
  
-daniboomerangDirectives.directive('cover', function($document, $timeout) {
+daniboomerangDirectives.directive('cover', function($document, $timeout, $window) {
   return {
     restrict: 'E',
     templateUrl: 'views/cover.html',
     scope: {},
     link: function (scope, element) {
+      scope.$watch(function(){
+       return $window.innerWidth;
+    }, function(value) {
+      
+       scope.screenSize = value;
+   });
       scope.sections = [
         {hash: '#who-i-am', text:'Who I am', awesomeIcon: 'fa-chevron-circle-down  fa-rotate-90', animation:'fx-zoom-left'},
-        {hash: '#what-i-like', text:'What I Like', awesomeIcon: 'fa-heart', animation:'fx-zoom-left'},
+        {hash: '#what-i-like', text:'What I like', awesomeIcon: 'fa-heart', animation:'fx-zoom-left'},
         {hash: '#what-ive-done', text:'What I´ve done', awesomeIcon: 'fa-github', animation:'fx-zoom-right'},
-        {hash: '#what-ive-learnt', text:'Who I´ve learnt', awesomeIcon: 'fa-newspaper-o', animation:'fx-zoom-right'}
+        {hash: '#what-ive-learnt', text:'What I´ve learnt', awesomeIcon: 'fa-newspaper-o', animation:'fx-zoom-right'}
       ];
       scope.share = [
         {awesomeIcon: 'fa-fw fa-facebook', animation:'fx-zoom-left'},
