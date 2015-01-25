@@ -2,51 +2,41 @@
 /* DANIBOOMERANG */
 /*****************/
 
-html,body{
-    height:100%;
-}
-
-body{
-  margin:0;
-  padding:0;
-
-}
+html,body{ height:100%; }
+body { font-size: 3px; margin:0; padding:0;}
 
 a {color: white; transition: all .5s ease-in-out;}
 a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;}
 
-.btn-social {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    text-align: center;
-    font-size: 20px;
-    line-height: 45px;
-}
+.custom-fluid-container {width: 90%;}
+h1{font-size: 1.5em;}
 
-.btn:focus,
-.btn:active,
-.btn.active {
-    outline: 0;
-}
+/* Medium devices (desktops, 200px and up) */
+@media (min-width: 200px) { body{font-size: 1.4em} }
 
+/* Medium devices (desktops, 320px and up) */
+@media (min-width: 320px) { body{font-size: 1.8em} }
 
-.btn-outline {
-    margin-top: 15px;
-    border: solid 2px #fff;
-    font-size: 20px;
-    color: #fff;
-    background: 0 0;
-    transition: all .3s ease-in-out;
-}
+/* Medium devices (desktops, 500px and up) */
+@media (min-width: 500px) { body{font-size: 2.0em} }
 
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
-    border: solid 3px #fff;
-    color: #FF9933;
-    background: #fff;
-}
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) { body{font-size: 2.2em} }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { body{font-size: 2.4em} }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 1280px) { body{font-size: 2.4em} }
+
+/* Large devices (large desktops, 1600px and up) */
+@media (min-width: 1600px) { body{font-size: 3.8em} }
+
+/* Extra large devices (extra large desktops, 2000 and up) */
+@media (min-width: 2000px) { body{font-size: 4.8em} }
+
+/* Extra large devices (extra large desktops, 3000 and up) */
+@media (min-width: 3000px) { body{font-size: 5.9em} }
+
+/* Extra large devices (extra large desktops, 3500 and up) */
+@media (min-width: 3000px) { body{font-size: 6.9em} }

@@ -25,33 +25,31 @@ describe('Daniboomerang - index scenario', function() {
       expect(cover.isPresent()).toBe(true);
 
       // PARALLAX
-      expect(element(by.css('.stars-parallax-background')).isPresent()).toBe(true);
+        expect(element(by.css('.stars-parallax-background')).isPresent()).toBe(true);
 
       // NAVBAR
         expect(cover.element(by.id('cover-navbar')).isPresent()).toBe(true);
-        var navbarList = element.all(by.css('.masthead-nav li'));
-
-        // Who I am <li> contains the correct text 
+        var navbarList = element.all(by.css('.nav-cover li'));
+        
+        // Who I am <li> contains boomerang icon
         var whoIAm = navbarList.get(0);
-        expect(whoIAm.getText()).toBe('Who I am   ');
+        expect(whoIAm.element(by.css('.icon-dboom')).isPresent()).toBe(true);
 
-        // What I like to do <li> contains the correct text 
+        // What I like to do <li> contains heart icon
         var whatILike = navbarList.get(1);
-        expect(whatILike.getText()).toBe('What I like   ');
+        expect(whatILike.element(by.css('.fa-heart')).isPresent()).toBe(true);
 
-        // What I've done <li> contains the correct text 
+        // What I've done <li> contains github icon
         var whatIveDone = navbarList.get(2);
-        expect(whatIveDone.getText()).toBe('What I´ve done   ');
+        expect(whatIveDone.element(by.css('.fa-github')).isPresent()).toBe(true);
 
-        // What I've learnt <li> contains the correct text 
+        // What I've learnt <li> contains newspaper icon
         var whatIveLearnt = navbarList.get(3);
-        expect(whatIveLearnt.getText()).toBe('What I´ve learnt   ');
+        expect(whatIveLearnt.element(by.css('.fa-newspaper-o')).isPresent()).toBe(true);
         
       // CONTENT
         expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
 
-      // FOOT
-        expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true);
   });
 
   ////////////  

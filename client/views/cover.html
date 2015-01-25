@@ -1,23 +1,42 @@
-<div id="cover" parallax-background parallax-ratio="0.3" class="stars-parallax-background">
-    <div class="cover-wrapper">
-        <div class="cover-wrapper-inner">
-            <div class="cover-container">
-                <div id="cover-navbar" class="masthead clearfix">
-                    <h4 class="masthead-brand"></h4>
-                <ul id="nav" class="masthead-nav">
-                  <li class='{{ section.animation }} fx-easing-bounce fx-speed-800' ng-repeat="section in sections">
-                        <a href="{{section.hash}}" du-smooth-scroll du-scrollspy offset="90">{{ section.text }} &nbsp;&nbsp;<i class="fa fa-fw fa-2x {{ section.awesomeIcon }}"></i></a>
+<div id="cover" parallax-background parallax-ratio="0.3" class="stars-parallax-background"> 
+    
+    <div id="moon-and-boom" ng-show="showMoon" class="fx-fade-normal fx-speed-800">
+        <span class="fa-stack fa-lg">
+          <i style="color: #FF9933;" class="fa fa-circle fa-stack-2x"></i>
+          <i style="color: black;"class="fa icon-dboom fa-stack-1x fa-inverse fa-spin"></i>
+        </span>
+    </div>
+
+    <div id="cover-navbar" class="container-fluid">
+        <div class="navbar navbar-custom-cover">
+            <ul class="nav navbar-nav nav-cover">
+                <li class='{{ section.animation }}' ng-repeat="section in sections">
+                    <a href="{{section.hash}}" du-smooth-scroll du-scrollspy><span class="hidden-xs hidden-sm">{{ section.text }} &nbsp;&nbsp;</span><i class="fa fa-3x {{ section.awesomeIcon }}"></i></a>
+                </li>
+            </ul>
+        </div> 
+        {{windowSizeHeight}} 
+        {{windowSizeWidth}} 
+    </div>
+    <div id="cover-content">
+        <div class="cover-content-row">
+            <div class="col-md-12">
+                <div class="cover-text">
+                    <span class="name">{{name}}</span>
+                    <span class="skills">{{position}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="cover-content-row">
+            <div class="col-md-12">
+                <div class="cover-text">
+                    <span class="share">{{shareMessage}}</span>
+                </div>
+                <ul class="list-inline">
+                    <li class='{{ share.animation }}' ng-repeat="share in sharing">
+                        <a href=""><i class="fa {{ share.awesomeIcon }}"></i></a>
                     </li>
                 </ul>
-                </div>
-                <hr class="star-primary" style="margin: 15px;">
-                <div id="cover-content" class="inner cover">
-                                  <h1 class="brand-heading">{{screenSize}}</h1>
-
-                </div>
-                <div id="cover-footer" class="row">
-                    
-                </div>
             </div>
         </div>
     </div>

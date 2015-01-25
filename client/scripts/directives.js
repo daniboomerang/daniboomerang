@@ -73,30 +73,41 @@ daniboomerangDirectives.directive('topnavbar', function($timeout, $document) {
   };
 });
  
-daniboomerangDirectives.directive('cover', function($document, $timeout, $window) {
+daniboomerangDirectives.directive('cover', function($timeout, $window) {
   return {
     restrict: 'E',
     templateUrl: 'views/cover.html',
     scope: {},
     link: function (scope, element) {
-      scope.$watch(function(){
-       return $window.innerWidth;
-    }, function(value) {
-      
-       scope.screenSize = value;
-   });
-      scope.sections = [
-        {hash: '#who-i-am', text:'Who I am', awesomeIcon: 'fa-chevron-circle-down  fa-rotate-90', animation:'fx-zoom-left'},
-        {hash: '#what-i-like', text:'What I like', awesomeIcon: 'fa-heart', animation:'fx-zoom-left'},
-        {hash: '#what-ive-done', text:'What I´ve done', awesomeIcon: 'fa-github', animation:'fx-zoom-right'},
-        {hash: '#what-ive-learnt', text:'What I´ve learnt', awesomeIcon: 'fa-newspaper-o', animation:'fx-zoom-right'}
-      ];
-      scope.share = [
-        {awesomeIcon: 'fa-fw fa-facebook', animation:'fx-zoom-left'},
-        {awesomeIcon: 'fa-fw fa-google-plus', animation:'fx-zoom-left'},
-        {awesomeIcon: 'fa-fw fa-twitter', animation:'fx-zoom-right'},
-        {awesomeIcon: 'fa-fw fa-linkedin', animation:'fx-zoom-right'}
-      ];
+
+      init();
+
+      function init(){
+
+        scope.windowSizeHeight = $window.innerHeight;
+        scope.windowSizeWidth = $window.innerWidth;
+
+        $timeout(function() {
+          scope.sections = [
+            {linkId: 'who-i-am', hash: '#who-i-am', text:'Who I am', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000'},
+            {linkId: 'what-i-like', hash: '#what-i-like', text:'What I like', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000'},
+            {linkId: 'what-ive-done', hash: '#what-ive-done', text:'What I´ve done', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000'},
+            {linkId: 'what-ive-learnt', hash: '#what-ive-learnt', text:'What I´ve learnt', awesomeIcon: 'fa-newspaper-o', animation:'fx-bounce-normal fx-speed-1000'}
+          ];
+          scope.shareMessage = "Share daniboomerang.com";          
+          scope.sharing = [
+            {awesomeIcon: 'fa-fw fa-facebook', animation:'fx-bounce-normal fx-speed-1000'},
+            {awesomeIcon: 'fa-fw fa-google-plus', animation:'fx-bounce-normal fx-speed-1000'},
+            {awesomeIcon: 'fa-fw fa-twitter', animation:'fx-bounce-normal fx-speed-1000'},
+            {awesomeIcon: 'fa-fw fa-linkedin', animation:'fx-bounce-normal fx-speed-1000'}
+          ];
+          scope.name = "Daniel Estévez Martín";
+          scope.position = "Software Engineer";          
+        }, 800);
+
+        $timeout(function() {scope.showMoon = true;}, 400);
+      }
+
     }
   }  
 });
