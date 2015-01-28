@@ -2,19 +2,13 @@
 /* DANIBOOMERANG */
 /*****************/
 
-html,body{
-    height:100%;
-}
-
-body{
-  margin:0;
-  padding:0;
-
-}
+html,body{ height:100%; }
+body { margin:0; padding:0; font-size: 3px; font: "Lucida Grande", Arial, Verdana, sans-serif; color: black; line-height: 2.5;}
 
 a {color: white; transition: all .5s ease-in-out;}
 a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;}
 
+<<<<<<< HEAD
 .btn-social {
     display: inline-block;
     width: 50px;
@@ -60,3 +54,45 @@ a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;}
     color: #FF9933;
     background: #fff;
 }
+=======
+h1{font-size: 2.5em;}
+.custom-fluid-container {width: 90%;}
+
+
+/*h1 { color: #000000; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+
+h2 { color: #000000; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+
+p { color: #000000; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }*/
+
+
+/* Medium devices (desktops, 200px and up) */
+@media (min-width: 200px) { body{font-size: 1.4em} }
+
+/* Medium devices (desktops, 320px and up) */
+@media (min-width: 320px) { body{font-size: 1.6em} }
+
+/* Medium devices (desktops, 500px and up) */
+@media (min-width: 500px) { body{font-size: 1.8em} }
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) { body{font-size: 2em} }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { body{font-size: 2em} }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 1280px) { body{font-size: 2em} }
+
+/* Large devices (large desktops, 1600px and up) */
+@media (min-width: 1600px) { body{font-size: 2.4em} }
+
+/* Extra large devices (extra large desktops, 2000 and up) */
+@media (min-width: 2000px) { body{font-size: 3.5em} }
+
+/* Extra large devices (extra large desktops, 3000 and up) */
+@media (min-width: 3000px) { body{font-size: 4.5em} }
+
+/* Extra large devices (extra large desktops, 3500 and up) */
+@media (min-width: 3500px) { body{font-size: 5.5em} }
+>>>>>>> responsiveness

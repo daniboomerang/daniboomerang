@@ -1,0 +1,229 @@
+/***********/
+/* NAVBARS */
+/***********/
+
+	.navbar{ margin-bottom: 0 !important; }
+
+	/****************************************/
+	/**************  TOP NAVBAR *************/
+	/****************************************/
+
+	.navbar-custom { font-size: 4px; background-color: rgba(13, 27, 51, 0.8); border: none !important;}
+	.navbar-custom .navbar-nav>li>a:hover { background-color: transparent !important; color: white !important; background-color: rgba(118, 129, 149, 0.1); transition: all .5s ease-in-out; }
+	.navbar-custom .navbar-nav>li>a:focus { background-color: transparent; !important; transition: all .5s ease-in-out; color: #FF9933 !important;}
+	.navbar-brand {color: #FF9933 !important; padding: 0 0 0 0!important; margin-left: 0 !important;}
+	.navbar-custom .navbar-brand:hover { background:  #FF9933; color: black !important; transform:rotate(360deg); -ms-transform:rotate(360deg); -webkit-transform:rotate(360deg); }
+	.navbar-custom .navbar-nav>li>a { color: #FF9933; padding-top: 0;}
+	.navbar-custom .navbar-nav>li>a.active { box-shadow:inset 0px 1px 0px 0px #FF9933; background-color: rgba(118, 129, 149, 0.1); transition: all .2s ease-in-out;}
+	ul.nav li {width: 25%;}
+	ul.nav li a { display: block; padding: 1em; margin-right: 0.5em; margin-left: 0.5em;text-align: center; }
+	.logo {width: 3em; height: 3em; border: 2px solid #fff; border-radius: 100%; text-align: center; border: solid 0.1em white;}
+
+	/**********************************/
+	/**********  COVER NAVBAR *********/
+	/**********************************/
+
+	.navbar-custom-cover { min-height: 0px !important; font-size: 4px; width: 100% !important;  margin-left: auto; margin-right: auto;}
+	.navbar-custom-cover .navbar-nav>li>a:hover { background-color: transparent !important; /*background-color: #FF9933 !important;*/ border-radius: 5%; color: #FF9933; /*color: rgba(11, 27, 55, 1) !important;*/ transition: all .5s ease-in-out; }
+	.navbar-custom-cover .navbar-nav>li>a:focus { background-color: transparent; !important; transition: all .5s ease-in-out; color: #FF9933 !important;}
+	.navbar-custom-cover .navbar-nav>li>a { color: white;  padding-top: 0;}
+	ul.nav-cover {width: 100%;}
+	ul.nav-cover li a {margin-right: 0em; margin-left: 0em;}
+
+	/*********************************/
+	/* Non-responsive overrides: CSS to disable the responsive-ness navbar */ 
+	/*********************************/
+
+	/* Undo the collapsing navbar */
+	.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;visibility: visible !important;}
+	/* Always apply the floated nav */
+	.navbar-nav {margin: 0;}
+	.navbar-nav > li {float: left;}
+
+
+	/*========== RESPONSIVENESS FOR NAVBARS ==========*/
+
+	/* Extra small Devices, (phones, 480px and up) */
+	@media (min-width: 200px) {
+		ul.nav li a { font-size: 1.6em; }
+		/* TOP NAVBAR */
+		.navbar-header {position: absolute; left: 12%; top:23%;}
+		.nav-custom-width {width: 85% !important;}
+		.navbar-brand {font-size: 2em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 50px; height: 50px !important;}
+		.navbar-custom .navbar-nav>li>a.active {box-shadow:inset 0px 1px 0px 0px #FF9933;}
+		.navbar-custom .navbar-nav>li>a:hover {box-shadow: inset 0 -0.3em 0 0 #FFFFFF;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 40px; height: 40px !important;}	
+	}
+
+	/* Extra small Devices, (phones, 320px and up) */
+	@media (min-width: 320px) {
+		ul.nav li a { font-size: 2.5em; }
+		/* TOP NAVBAR */
+		.navbar-brand {font-size: 3em;} 
+		.navbar-custom .navbar-nav>li>a { line-height: 85px; height: 85px !important;}
+		.navbar-custom .navbar-nav>li>a.active {box-shadow:inset 0px 2px 0px 0px #FF9933;}
+		.navbar-custom .navbar-nav>li>a:hover {box-shadow: inset 0 -0.2em 0 0 #FFFFFF;}	
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 55px; height: 55px !important;}	
+	}
+
+	/* Extra small Devices, (phones, 500px and up) */
+	@media (min-width: 500px) {
+		ul.nav li a { font-size: 3em; }
+		/* TOP NAVBAR */
+		.navbar-brand {font-size: 4em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 100px; height: 100px !important;}
+		.navbar-custom .navbar-nav>li>a.active {box-shadow:inset 0px 3px 0px 0px #FF9933;}
+		.navbar-custom .navbar-nav>li>a:hover {box-shadow: inset 0 -0.2em 0 0 #FFFFFF;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 70px; height: 70px !important;}	
+	}
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) {
+		ul.nav li a { font-size: 3.5em; }
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 5em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 120px; height: 120px !important;}
+		.navbar-custom .navbar-nav>li>a.active {box-shadow:inset 0px 3px 0px 0px #FF9933;}
+		.container .navbar-header {margin-left: -15px !important; margin-right: -15px !important;} /* Bootstrap erases margins at min768 and I don´t like it*/
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 75px; height: 75px !important;}	
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+		ul.nav li a { font-size: 3.3em;}
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 5.5em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 120px; height: 120px !important;}
+		.nav-custom-width {width: 90% !important;}
+		.navbar-header {position: absolute; left: 8%; top:23%;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 95px; height: 95px !important;}
+	}
+
+	/* Large devices (large desktops, 1280px and up) */
+	@media (min-width: 1280px) { 
+		ul.nav li a {font-size: 4em;}
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 5.5em;}
+		.navbar-custom .navbar-nav>li>a.active {box-shadow:inset 0px 3px 0px 0px #FF9933;}
+		.navbar-custom .navbar-nav>li>a { line-height: 120px; height: 120px !important;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 105px; height: 105px !important;}	
+	}
+
+	/* Extra large devices (extra large desktops, 1400px and up) */
+	@media (min-width: 1400px) { 
+		ul.nav li a { font-size: 4.5em; }
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 6em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 120px; height: 120px !important;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 125px; height: 125px !important;}	
+	}
+
+	/* Extra large devices (extra large desktops, 1600px and up) */
+	@media (min-width: 1600px) { 
+		ul.nav li a { font-size: 5em; }
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 6.5em}
+		.navbar-custom .navbar-nav>li>a { line-height: 135px; height: 135px !important;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 160px; height: 160px !important;}	
+	}
+
+	/* Extra large devices (extra large desktops, 2000px and up) */
+	@media (min-width: 2000px) {
+		ul.nav li a { font-size: 5.5em;}
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 7em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 145px; height: 145px !important;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 185px; height: 185px !important;}	
+	}
+
+	/* Extra large devices (extra large desktops, 2500px and up) */
+	@media (min-width: 2500px) {
+		ul.nav li a { font-size: 7em;}
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 8.5em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 175px; height: 175px !important;}
+		.navbar-custom .navbar-nav>li>a.active {box-shadow:inset 0px 3px 0px 0px #FF9933;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 205px; height: 205px !important;}	
+	}
+
+	/* Extra large devices (extra large desktops, 2500px and up) */
+	@media (min-width: 3000px) {
+		ul.nav li a { font-size: 7.5em; }
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 10em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 190px; height: 190px !important;}
+		.navbar-custom .navbar-nav>li>a.active {box-shadow:inset 0px 4px 0px 0px #FF9933;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 265px; height: 265px !important;}	
+	}
+
+	/* Extra large devices (extra large desktops, 2500px and up) */
+	@media (min-width: 3500px) {
+		ul.nav li a { font-size: 12em;}
+		/* TOP NAVABAR */
+		.navbar-brand {font-size: 14em;}
+		.navbar-custom .navbar-nav>li>a { line-height: 300px; height: 300px !important;}
+		/* COVER NAVBAR */
+		.navbar-custom-cover .navbar-nav>li>a { line-height: 300px; height: 300px !important;}	
+	}
+
+/**********/
+/* HEADER */
+/**********/
+
+	header { height: 0px; width: 100%; overflow: hidden; z-index: 1; background: rgba(0, 0, 0, 0.7); -webkit-transition: height 1s; -moz-transition: height 1s; -ms-transition: height 1s; -o-transition: height 1s; transition: height 1s;}
+
+
+	/*==========  RESPONSIVENESS FOR HEADER  ==========*/
+
+	/* Small devices (tablets, 767px and down)*/
+	@media (min-width: 200px) {header.expand {height: 50px;}}
+
+	/* Extra small Devices, (phones, 320 and up) */
+	@media (min-width: 320px) {header.expand {height: 85px;}}
+
+	/* Extra small Devices, (phones, 480px and up) */
+	@media (min-width: 500px) {header.expand {height: 100px;}}
+
+	/*////////////////////////////////////*/
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) {header.expand {height: 120px;}}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) {header.expand {height: 120px;}}
+
+	/* Large devices (large desktops, 1280px and up) */
+	@media (min-width: 1280px) {header.expand {height: 120px;}}
+
+	/* Large devices (large desktops, 1400px and up) */
+	@media (min-width: 1400px) {header.expand {height: 120px;}}
+
+	/*////////////////////////////////////*/
+
+	/* Extra large devices (extra large desktops, 1600px and up) */
+	@media (min-width: 1600px) {header.expand {height: 135px;}}
+
+	/* Extra large devices (extra large desktops, 2000px and up) */
+	@media (min-width: 2000px) {header.expand {height: 135px;}}
+
+	/* Extra large devices (extra large desktops, 2000px and up) */
+	@media (min-width: 2500px) {header.expand {height: 175px;}}
+
+	/* Extra large devices (extra large desktops, 2000px and up) */
+	@media (min-width: 3000px) {header.expand {height: 190px;}}
+
+	/* Extra large devices (extra large desktops, 2000px and up) */
+	@media (min-width: 3500px) { header.expand {height: 300px;}}
+

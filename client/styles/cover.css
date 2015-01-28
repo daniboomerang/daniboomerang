@@ -1,124 +1,55 @@
-/*
- * Base structure
- */
+/*********/
+/* COVER */
+/*********/
 
-#cover{
-  height: 200%;
-  padding-top: 24%;
+#cover{ color: white; }
+#cover-content{ text-align: center; }
+#moon-and-boom{ margin-left: 10%; margin-bottom: 5%; }
+
+.cover-content-row { line-height: 1.5;}
+.cover-text .name {display: block; font-weight: 500; font-size: 1.2em; }
+.cover-text .skills {display: block; text-transform: uppercase; font-weight: 200; font-size: 1.4em; }
+.cover-text .share {font-weight: 100; font-size: 1em; }
+
+
+/* BOOKSHELL PARALLAX BACKGROUND */
+
+@media all and (orientation:portrait) { #cover{ padding-top: 10%; height: 110%; } 
+	.stars-parallax-background { background: url(/images/landscapeStars-portrait.svg) ; background-size: cover; }
+}
+@media (min-width: 200px) and (orientation:landscape) { #cover{ padding-top: 5%; height: 150%; }
+	.stars-parallax-background { background: url(/images/landscapeStars-landscape.svg) ; background-size: cover;  }
+}
+@media (min-width: 1280px) and (orientation:landscape) { #cover{ padding-top: 5%; height: 150%; }
+	.stars-parallax-background { background: url(/images/landscapeStars-landscape-lg.svg) ; background-size: cover;  }
 }
 
-.cover{
-  color: white;
-  height: 100%;
-  padding-top: 150px;
-}
+/* Medium devices (desktops, 200px and up) */
+@media (min-width: 200px) { #moon-and-boom{font-size: 15px;} #cover-navbar{width: 80%;} }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.cover-wrapper {
-	background: transparent;
-	color: #fff;
-	text-align: center;
-	display: table;
-	width: 100%;
-	height: 100%; /* For at least Firefox */
-	min-height: 100%;
-}
-.cover-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
+/* Medium devices (desktops, 320px and up) */
+@media (min-width: 320px) { #moon-and-boom{font-size: 30px;} }
 
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
+/* Medium devices (desktops, 500px and up) */
+@media (min-width: 500px) { #moon-and-boom{font-size: 45px;} }
 
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) { #moon-and-boom{font-size: 50px;} }
 
-/*
- * Header
- */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { #moon-and-boom{font-size: 55px; } #cover-navbar{width: 90%;} }
 
-.masthead-nav > li {
-  display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 1280px) { #moon-and-boom{font-size: 60px;} #cover-navbar{width: 80%;} }
 
-.masthead-nav>li>a:focus { color: #FF9933 !important;}
+/* Large devices (large desktops, 1600px and up) */
+@media (min-width: 1600px) { #moon-and-boom{font-size: 75px;} .cover-content-row { line-height: 1.8;}}
 
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent !important;
-  color: #FF9933 !important;
-    transition: all .5s ease-in-out;
-}
+/* Extra large devices (extra large desktops, 2000 and up) */
+@media (min-width: 2000px) { #moon-and-boom{font-size: 90px;} #cover-navbar{width: 80%;} }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
+/* Extra large devices (extra large desktops, 3000 and up) */
+@media (min-width: 3000px) { #moon-and-boom{font-size: 100px;} }
 
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-  /* Pull out the header */
-  .masthead {
-    top: 0;
-  }
-  /* Start the vertical centering */
-  .cover-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
-@media (min-width: 992px) {
-  .masthead,
-  .cover-container {
-    width: 900px;
-  }
-}
-
-
-/************/
-/* PARALLAX */
-/************/
-
-.stars-parallax-background {
-  background: url(/images/fullBackgroundImage.svg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  position: relative;
-}   
+/* Extra large devices (extra large desktops, 3500 and up) */
+@media (min-width: 3500px) { #moon-and-boom{font-size: 150px;} #cover-navbar{width: 85%;}}

@@ -4,8 +4,8 @@ angular.module('daniboomerangApp', [
 	'ngRoute',
 	// VENDOR
 	'duScroll',
-	'duParallax',
 	'angular-parallax',
+	'ngFx',
 	// DANIBOOMERANG
 	'daniboomerangDirectives',
 	'daniboomerangControllers',

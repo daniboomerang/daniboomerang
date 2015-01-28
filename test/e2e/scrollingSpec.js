@@ -20,19 +20,20 @@ describe('Daniboomerang - scrolling scenario', function() {
 	 		var cover = element(by.id('cover'));
 	      	expect(cover.isPresent()).toBe(true);
 
-  			element.all(by.css('.masthead-nav li')).then(function(navbarList) {
+  			element.all(by.css('.nav-cover li')).then(function(navbarList) {
 				expect(navbarList.length).toBe(4);
-				// Who I am <li> contains the correct text 
-	        	expect(navbarList[0].getText()).toBe('Who I am   ');
 
-		        // What I like to do <li> contains the correct text 
-		        expect(navbarList[1].getText()).toBe('What I like   ');
+				// Who I am <li> contains boomerang icon
+				expect(navbarList[0].element(by.css('.icon-dboom')).isPresent()).toBe(true);
 
-		        // What I've done <li> contains the correct text 
-		        expect(navbarList[2].getText()).toBe('What I´ve done   ');
+		        // What I like to do <li> contains heart icon
+		        expect(navbarList[1].element(by.css('.fa-heart')).isPresent()).toBe(true);
 
-		        // What I've learnt <li> contains the correct text 
-		        expect(navbarList[3].getText()).toBe('What I´ve learnt   ');
+		        // What I've done <li> contains github icon
+				expect(navbarList[2].element(by.css('.fa-github')).isPresent()).toBe(true);
+
+		        // What I've learnt <li> contains newspaper icon
+		        expect(navbarList[3].element(by.css('.fa-newspaper-o')).isPresent()).toBe(true);
   			});
 			
 		});
@@ -45,7 +46,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 			browser.sleep(2000);
 
-			var whoIAmLinkCover = element.all(by.css('.masthead-nav li')).get(0);
+			var whoIAmLinkCover = element.all(by.css('.nav-cover li')).get(0);
 
 			expect(whoIAmLinkCover.isPresent()).toBe(true);
 			whoIAmLinkCover.click();
@@ -61,7 +62,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(nav.isDisplayed()).toBe(true);
 
 			// navbar section gets 'active'
-			var whoIAmLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(0);
+			var whoIAmLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(0);
 			expect(whoIAmLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 		});
@@ -74,7 +75,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 			browser.sleep(2000);
 
-			var whatILikeLinkCover = element.all(by.css('.masthead-nav li')).get(1);
+			var whatILikeLinkCover = element.all(by.css('.nav-cover li')).get(1);
 
 			expect(whatILikeLinkCover.isPresent()).toBe(true);
 			whatILikeLinkCover.click();
@@ -90,7 +91,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(nav.isDisplayed()).toBe(true);
 			
 			// navbar section gets 'active'
-			var whatILkeLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(1);
+			var whatILkeLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(1);
 			expect(whatILkeLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 		});
@@ -103,7 +104,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 			browser.sleep(2000);
 
-			var whatIveDoneLinkCover = element.all(by.css('.masthead-nav li')).get(2);
+			var whatIveDoneLinkCover = element.all(by.css('.nav-cover li')).get(2);
 
 			expect(whatIveDoneLinkCover.isPresent()).toBe(true);
 			whatIveDoneLinkCover.click();
@@ -119,7 +120,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(nav.isDisplayed()).toBe(true);
 
 			// navbar section gets 'active'
-			var whatIveDoneLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(2);
+			var whatIveDoneLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(2);
 			expect(whatIveDoneLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 		});
@@ -132,7 +133,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 			browser.sleep(2000);
 
-			var whatIveLearntLinkCover = element.all(by.css('.masthead-nav li')).get(3);
+			var whatIveLearntLinkCover = element.all(by.css('.nav-cover li')).get(3);
 
 			expect(whatIveLearntLinkCover.isPresent()).toBe(true);
 			whatIveLearntLinkCover.click();
@@ -148,7 +149,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(nav.isDisplayed()).toBe(true);
 
 			// navbar section gets 'active'
-			var whatIveLearntLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(3);
+			var whatIveLearntLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(3);
 			expect(whatIveLearntLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 		});
@@ -161,7 +162,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 			browser.sleep(2000);
 
-			var whatIveLearntLinkCover = element.all(by.css('.masthead-nav li')).get(3);
+			var whatIveLearntLinkCover = element.all(by.css('.nav-cover li')).get(3);
 			whatIveLearntLinkCover.click();
 			
 			browser.sleep(3000);
@@ -175,13 +176,12 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(nav.isDisplayed()).toBe(true);
 			
 			// navbar section gets 'active'
-			var whatIveLearntLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(3);
+			var whatIveLearntLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(3);
 			expect(whatIveLearntLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 
 			///////////// CLICK TO Who I am  ///////////
-			
-			var whoIAmLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(0);
+			var whoIAmLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(0);
 			whoIAmLinkTopnavbar.click();
 			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
@@ -190,8 +190,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(whoIAmLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 			///////////// CLICK TO What I like  ///////////
-			
-			var whatILkeLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(1);
+			var whatILkeLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(1);
 			whatILkeLinkTopnavbar.click();
 			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
@@ -200,8 +199,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(whatILkeLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 			///////////// CLICK TO What I´ve done  ///////////
-			
-			var whatIveDoneLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(2);
+			var whatIveDoneLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(2);
 			whatIveDoneLinkTopnavbar.click();
 			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
@@ -210,8 +208,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(whatIveDoneLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 			///////////// CLICK TO What I´ve learnt  ///////////
-			
-			var whatIveLearntLinkTopnavbar = element.all(by.css('.navbar-nav li')).get(3);
+			var whatIveLearntLinkTopnavbar = element.all(by.css('.nav-custom-width li')).get(3);
 			whatIveLearntLinkTopnavbar.click();
 			browser.sleep(3000);
 			// it scrolls to Who I am section (check url)
