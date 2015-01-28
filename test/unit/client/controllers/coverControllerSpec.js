@@ -8,6 +8,7 @@ describe('Cover Controller', function() {
 
     beforeEach(function () {        
         module('daniboomerangControllers');
+        module('duScroll');
     });
 
     // inject the required services and instantiate the controller

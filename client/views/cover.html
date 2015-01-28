@@ -1,50 +1,41 @@
-<div id="cover" parallax-background parallax-ratio="0.3" class="stars-parallax-background">
-    <div class="cover-wrapper">
-        <div class="cover-wrapper-inner">
-            <div class="cover-container">
-                <div id="cover-navbar" class="masthead clearfix">
-                    <div class="inner">
-                        <h4 class="masthead-brand"></h4>
-                        <nav>
-                            <ul class="nav masthead-nav">
-                               <li><a href="#who-i-am" du-smooth-scroll du-scrollspy offset='90'>Who I am &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-chevron-circle-down fa-shield fa-rotate-90"></i></a></li>
-                                <li><a href="#what-i-like" du-smooth-scroll du-scrollspy offset='90'>What I like to do &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-heart"></i></a></li>
-                                <li><a href="#what-ive-done" du-smooth-scroll du-scrollspy offset='90'>What I´ve done / Github &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-github"></i></a></li>
-                                <li><a href="#what-ive-learnt" du-smooth-scroll du-scrollspy offset='90'>What I´ve learnt / CV &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-newspaper-o"></i></a></li>
-                            </ul>
-                        </nav>
-                    </div>
+<div id="cover" parallax-background parallax-ratio="0.3" class="stars-parallax-background"> 
+    
+    <div id="moon-and-boom" ng-show="showMoon" class="fx-fade-normal fx-speed-800">
+        <span class="fa-stack fa-lg">
+          <i style="color: #FF9933;" class="fa fa-circle fa-stack-2x"></i>
+          <i style="color: black;"class="fa icon-dboom fa-stack-1x fa-inverse fa-spin"></i>
+        </span>
+        {{windowSizeHeight}} 
+        {{windowSizeWidth}} 
+    </div>
+
+    <div id="cover-navbar" class="container-fluid">
+        <div class="navbar navbar-custom-cover">
+            <ul class="nav navbar-nav nav-cover">
+                <li class='{{ section.animation }}' ng-repeat="section in sections">
+                    <a href="{{section.hash}}" du-smooth-scroll du-scrollspy duration="1000"><span class="hidden-xs hidden-sm">{{ section.text }} &nbsp;&nbsp;</span><i class="fa fa-3x {{ section.awesomeIcon }}"></i></a>
+                </li>
+            </ul>
+        </div> 
+    </div>
+    <div id="cover-content">
+        <div class="cover-content-row">
+            
+                <div class="cover-text">
+                    <span class="name">{{name}}</span>
+                    <span class="skills">{{position.engineer}}</span>
+                    <span class="skills">{{position.fullStack}}</span>
                 </div>
-                <hr class="star-primary" style="margin: 15px;">
-                <div id="cover-content" class="inner cover">
-                    <h2 class="cover-heading">Daniel Estévez Martín</h2>
-                    <p class="lead">Software Enginner</p>
-                    <p class="lead">
-                    <a href="#who-i-am" du-smooth-scroll du-scrollspy offset='90'><i class="fa fa-arrow-circle-o-down fa-4x"></i></a>
-                    </p>
+        </div>
+        <div class="cover-content-row">
+                <div class="cover-text">
+                    <span class="share">{{shareMessage}}</span>
                 </div>
-                <div id="cover-footer" class="row">
-                    <div class="col-md-4">
-                        <h4>Around the Web</h4>
-                        <p>By e-mail: estevez.dani@gmail.com</p>
-                        <p>On Linkedin: <a href="http://www.linkedin.com/in/estevezdani" target="_blank">http://www.linkedin.com/in/estevezdani</a></p>
-                        
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Share Daniel Estévez Portfolio</h4>
-                        <ul class="list-inline">
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a></li>
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a></li>
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
-                            <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>About www.daniboomerang.com</h4>
-                        <p>Daniboomerang project is a free to use, open source portfolio created by <a href="http://www.linkedin.com/in/estevezdani" target="_blank">Daniel Estévez</a>.</p>
-                    </div>
-                </div>
-            </div>
+                <ul class="list-inline">
+                    <li class='{{ share.animation }}' ng-repeat="share in sharing">
+                        <a href=""><i class="fa fa-lg {{ share.awesomeIcon }}"></i></a>
+                    </li>
+                </ul>
         </div>
     </div>
 </div>

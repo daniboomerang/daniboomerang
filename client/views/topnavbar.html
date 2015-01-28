@@ -1,30 +1,23 @@
-<div id="head">
-	<header>
-        <nav id="navbar" class="navbar navbar-inverse hidden-xs" role="navigation">
-		  <div class="container">
-		    <div class="navbar-header">
-		          <a class="navbar-brand btn-social btn-outline" href="#cover" du-smooth-scroll du-scrollspy><img src="/images/logo-orange.svg" alt=""></a>
-		    </div>
-		    <nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation">
-		        <ul class="nav navbar-nav pull-right">
-		            <li><a href="#who-i-am" du-smooth-scroll du-scrollspy offset='90'>Who I am &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-chevron-circle-down"></i></a></li>
-		            <li><a href="#what-i-like" du-smooth-scroll du-scrollspy offset='90'>What I like to do &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-heart"></i></a></li>
-		            <li><a href="#what-ive-done" du-smooth-scroll du-scrollspy offset='90'>What I´ve done / Github &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-github"></i></a></li>
-		            <li><a href="#what-ive-learnt" du-smooth-scroll du-scrollspy offset='90'>What I´ve learnt / CV &nbsp;&nbsp;<i class="fa fa-fw fa-2x fa-newspaper-o"></i></a></li>
-		        </ul>
-		    </nav>
-		  </div>
-		</nav>
-		<nav id="responsive-navbar" class="navbar navbar-inverse navbar-fixed-top visible-xs" role="navigation">
-		    <div class="container-fluid">
-		         <!-- Brand and toggle get grouped for better mobile display -->
-		        <div class="navbar-header">
-		            <a class="navbar-brand btn-social btn-outline" href="#cover" du-smooth-scroll du-scrollspy><img src="/images/boomerang-orange-24.svg" alt=""></a>
-		        </div>      
-		    </div>
-		    <!-- /.container -->
-		</nav>
-	</header><!-- /header -->
-</div>    
+<header>
 
+  <!-- ---------- -->
+  <!-- TOP NAVBAR -->
+  <!-- ---------- -->
 
+  <div id="navbar" class="navbar navbar-custom">
+    <div class="container custom-fluid-container">
+      <div class="navbar-header">
+         <a class="navbar-brand logo" href="#cover" du-smooth-scroll du-scrollspy duration="1000" ng-mouseenter="spinBoomerang = true" ng-mouseleave="spinBoomerang = false" ><i ng-class="{'faa-spin animated': spinBoomerang}" class="fa fa-fw fa-2x icon-dboom"></i></a>
+      </div>
+      <div>
+        <ul id="top-navbar-li" class="nav navbar-nav pull-right nav-custom-width">
+          <li><a id="who-i-am-link" href="#who-i-am" du-smooth-scroll du-scrollspy offset="90" duration="1000"><span class="hidden-sm hidden-xs">Who I am &nbsp;&nbsp;</span><i id="who-i-am-icon" class="fa fa-fw fa-2x icon-dboom"></i></a></li>
+          <li><a id="what-i-like-link"href="#what-i-like" du-smooth-scroll du-scrollspy duration="1000"><span class="hidden-sm hidden-xs">What I like &nbsp;&nbsp;</span><i id="what-i-like-icon" class="fa fa-fw fa-2x fa-heart"></i></a></li>
+          <li><a id="what-ive-done-link" href="#what-ive-done" du-smooth-scroll du-scrollspy duration="1000"><span class="hidden-sm hidden-xs">What I´ve done &nbsp;&nbsp;</span><i id="what-ive-done-icon" class="fa fa-fw fa-2x fa-github"></i></a></li>
+          <li><a id="what-ive-learnt-link" href="#what-ive-learnt" du-smooth-scroll du-scrollspy duration="1000"><span class="hidden-sm hidden-xs">What I´ve learnt &nbsp;&nbsp;</span><i id="what-ive-learnt-icon"class="fa fa-fw fa-2x fa-newspaper-o"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</header>
