@@ -1,16 +1,31 @@
-#cover{ padding-top: 5%; height: 125%; color: white; }
-#cover-content{ text-align: center;}
-#moon-and-boom{ margin-left: 10%; margin-bottom: 10%;}
+/*********/
+/* COVER */
+/*********/
 
-.cover-content-row { margin-top: 2%; margin-bottom: 2%;}
-.cover-text .name {display: block; font-weight: 500; font-size: 1.2em}
-.cover-text .skills {text-transform: uppercase; font-weight: 200; font-size: 1.4em}
-.cover-text .share {font-weight: 100; font-size: 1em}
+#cover{ color: white; }
+#cover-content{ text-align: center; }
+#moon-and-boom{ margin-left: 10%; margin-bottom: 5%; }
 
- .stars-parallax-background {  background: url(/images/landscapeStars-768x2250.png); background-size: cover; }
+.cover-content-row { line-height: 1.5;}
+.cover-text .name {display: block; font-weight: 500; font-size: 1.2em; }
+.cover-text .skills {display: block; text-transform: uppercase; font-weight: 200; font-size: 1.4em; }
+.cover-text .share {font-weight: 100; font-size: 1em; }
+
+
+/* BOOKSHELL PARALLAX BACKGROUND */
+
+@media all and (orientation:portrait) { #cover{ padding-top: 10%; height: 110%; } 
+	.stars-parallax-background { background: url(/images/landscapeStars-portrait.svg) ; background-size: cover; }
+}
+@media (min-width: 200px) and (orientation:landscape) { #cover{ padding-top: 5%; height: 150%; }
+	.stars-parallax-background { background: url(/images/landscapeStars-landscape.svg) ; background-size: cover;  }
+}
+@media (min-width: 1280px) and (orientation:landscape) { #cover{ padding-top: 5%; height: 150%; }
+	.stars-parallax-background { background: url(/images/landscapeStars-landscape-lg.svg) ; background-size: cover;  }
+}
 
 /* Medium devices (desktops, 200px and up) */
-@media (min-width: 200px) { #moon-and-boom{font-size: 15px;} }
+@media (min-width: 200px) { #moon-and-boom{font-size: 15px;} #cover-navbar{width: 80%;} }
 
 /* Medium devices (desktops, 320px and up) */
 @media (min-width: 320px) { #moon-and-boom{font-size: 30px;} }
@@ -22,19 +37,19 @@
 @media (min-width: 768px) { #moon-and-boom{font-size: 50px;} }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { #moon-and-boom{font-size: 55px;} }
+@media (min-width: 992px) { #moon-and-boom{font-size: 55px; } #cover-navbar{width: 90%;} }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 1280px) { #moon-and-boom{font-size: 60px;} }
+@media (min-width: 1280px) { #moon-and-boom{font-size: 60px;} #cover-navbar{width: 80%;} }
 
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { #moon-and-boom{font-size: 75px;} }
+@media (min-width: 1600px) { #moon-and-boom{font-size: 75px;} .cover-content-row { line-height: 1.8;}}
 
 /* Extra large devices (extra large desktops, 2000 and up) */
-@media (min-width: 2000px) { #moon-and-boom{font-size: 90px;} }
+@media (min-width: 2000px) { #moon-and-boom{font-size: 90px;} #cover-navbar{width: 80%;} }
 
 /* Extra large devices (extra large desktops, 3000 and up) */
 @media (min-width: 3000px) { #moon-and-boom{font-size: 100px;} }
 
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3000px) { #moon-and-boom{font-size: 130px;} }
+@media (min-width: 3500px) { #moon-and-boom{font-size: 150px;} #cover-navbar{width: 85%;}}

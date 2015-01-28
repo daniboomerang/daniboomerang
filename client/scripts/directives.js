@@ -86,6 +86,7 @@ daniboomerangDirectives.directive('cover', function($timeout, $window) {
 
         scope.windowSizeHeight = $window.innerHeight;
         scope.windowSizeWidth = $window.innerWidth;
+        scope.position = {};
 
         $timeout(function() {
           scope.sections = [
@@ -102,7 +103,8 @@ daniboomerangDirectives.directive('cover', function($timeout, $window) {
             {awesomeIcon: 'fa-fw fa-linkedin', animation:'fx-bounce-normal fx-speed-1000'}
           ];
           scope.name = "Daniel Estévez Martín";
-          scope.position = "Software Engineer";          
+          scope.position.engineer = "Software Engineer";
+          scope.position.fullStack = "Full Stack Web Developer";
         }, 800);
 
         $timeout(function() {scope.showMoon = true;}, 400);

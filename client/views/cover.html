@@ -5,39 +5,37 @@
           <i style="color: #FF9933;" class="fa fa-circle fa-stack-2x"></i>
           <i style="color: black;"class="fa icon-dboom fa-stack-1x fa-inverse fa-spin"></i>
         </span>
+        {{windowSizeHeight}} 
+        {{windowSizeWidth}} 
     </div>
 
     <div id="cover-navbar" class="container-fluid">
         <div class="navbar navbar-custom-cover">
             <ul class="nav navbar-nav nav-cover">
                 <li class='{{ section.animation }}' ng-repeat="section in sections">
-                    <a href="{{section.hash}}" du-smooth-scroll du-scrollspy><span class="hidden-xs hidden-sm">{{ section.text }} &nbsp;&nbsp;</span><i class="fa fa-3x {{ section.awesomeIcon }}"></i></a>
+                    <a href="{{section.hash}}" du-smooth-scroll du-scrollspy duration="1000"><span class="hidden-xs hidden-sm">{{ section.text }} &nbsp;&nbsp;</span><i class="fa fa-3x {{ section.awesomeIcon }}"></i></a>
                 </li>
             </ul>
         </div> 
-        {{windowSizeHeight}} 
-        {{windowSizeWidth}} 
     </div>
     <div id="cover-content">
         <div class="cover-content-row">
-            <div class="col-md-12">
+            
                 <div class="cover-text">
                     <span class="name">{{name}}</span>
-                    <span class="skills">{{position}}</span>
+                    <span class="skills">{{position.engineer}}</span>
+                    <span class="skills">{{position.fullStack}}</span>
                 </div>
-            </div>
         </div>
         <div class="cover-content-row">
-            <div class="col-md-12">
                 <div class="cover-text">
                     <span class="share">{{shareMessage}}</span>
                 </div>
                 <ul class="list-inline">
                     <li class='{{ share.animation }}' ng-repeat="share in sharing">
-                        <a href=""><i class="fa {{ share.awesomeIcon }}"></i></a>
+                        <a href=""><i class="fa fa-lg {{ share.awesomeIcon }}"></i></a>
                     </li>
                 </ul>
-            </div>
         </div>
     </div>
 </div>
