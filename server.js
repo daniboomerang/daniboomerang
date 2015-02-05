@@ -1,8 +1,4 @@
 'use strict';
-/* Load .env */
-var dotenv = require('dotenv');
-dotenv.load();
-/*************/
 
 // Module dependencies.
 var express = require('express'),
@@ -17,31 +13,16 @@ var express = require('express'),
     path = require('path'),
     fs = require('fs'),
     errorHandler = require('express-error-handler'),
-    mongoStore = require('connect-mongo')(session),
     config = require('./server/config/config');
 
 var app = express();
 module.exports = app;
 
-// Connect to database
-var db = require('./server/db/mongo').db;
-
-// Bootstrap models
-// ! Commented while no models
-/*var modelsPath = path.join(__dirname, 'server/models');
-fs.readdirSync(modelsPath).forEach(function (file) {
-    require(modelsPath + '/' + file);
-});*/
-
 // configuration ===============================================================
-
-// WE DON´T CARE IF WE ARE IN DEV, CI OR PROD
-if (('development' == config.env) || ('production' == config.env) || ('test' == config.env)) {
-  app.use(express.static(path.join(__dirname, 'client')));
-  app.use(errorHandler());
-  app.set('views', __dirname + '/client');
-  app.use(morgan('dev')); // log every request to the console
-}
+app.use(express.static(path.join(__dirname, 'client')));
+app.use(errorHandler());
+app.set('views', __dirname + '/client');
+app.use(morgan('dev')); // log every request to the console
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -50,26 +31,18 @@ app.set('view engine', 'html');
 app.use(cookieParser())
 
 // bodyParser should be above methodOverride
-app.use(bodyParser());
-app.use(methodOverride());
-
-// express/mongo session storage
-app.use(session({
-  secret: 'MEAN',
-  store: new mongoStore({
-    db: db.connection.db,
-    //collection: 'sessions'
-  })
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
 }));
 
-//routes should be at the last
-//app.use(app.router);
+app.use(methodOverride());
 
 //Bootstrap routes
 require('./server/config/routes')(app);
 
 // Start server
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8000;
 
 app.listen(port, function () {
   console.log('Express server listening on port %d in %s mode', port, app.get('env'));
