@@ -42,7 +42,7 @@ app.use(methodOverride());
 require('./server/config/routes')(app);
 
 // Start server
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 8080;
 
 app.listen(port, function () {
   console.log('Express server listening on port %d in %s mode', port, app.get('env'));

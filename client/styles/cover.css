@@ -3,29 +3,24 @@
 /*********/
 
 #cover{ color: white; }
-#cover-content{ text-align: center; }
-#moon-and-boom{ margin-left: 10%; margin-bottom: 5%; }
+#cover-content{ text-align: center; margin-top: 5%; }
+#moon-and-boom{ margin-left: 10%; }
 
 .cover-content-row { line-height: 1.5;}
 .cover-text .name {display: block; font-weight: 500; font-size: 1.2em; }
 .cover-text .skills {display: block; text-transform: uppercase; font-weight: 200; font-size: 1.4em; }
 .cover-text .share {font-weight: 100; font-size: 1em; }
 
-
-/* BOOKSHELL PARALLAX BACKGROUND */
-
-@media all and (orientation:portrait) { #cover{ padding-top: 10%; height: 110%; } 
-	.stars-parallax-background { background: url(/images/landscapeStars-portrait.svg) ; background-size: cover; }
-}
-@media (min-width: 200px) and (orientation:landscape) { #cover{ padding-top: 5%; height: 150%; }
-	.stars-parallax-background { background: url(/images/landscapeStars-landscape.svg) ; background-size: cover;  }
-}
-@media (min-width: 1280px) and (orientation:landscape) { #cover{ padding-top: 5%; height: 150%; }
-	.stars-parallax-background { background: url(/images/landscapeStars-landscape-lg.svg) ; background-size: cover;  }
-}
+@media all and (orientation:portrait) { #cover{ padding-top: 10%; } #moon-and-boom{ margin-bottom: 10%; } .stars-parallax-background { background: url(/images/testLightCover.svg); background-size: cover;  } }
+@media all and (orientation:landscape) { #cover{ padding-top: 5%; } #moon-and-boom{ margin-bottom: 2%; } .stars-parallax-background { background: url(/images/testLightCover.svg); background-size: cover; background-repeat: no-repeat; } }
+@media (min-width: 200px) and (orientation:landscape) { #cover{ height: 120%; } }
+@media (min-width: 200px) and (orientation:portrait) { #cover{ height: 120%; } }
+@media (min-width: 768px) { #cover{ height: 120%; } }
+@media (min-width: 992px) and (orientation:landscape) { #cover{ height: 200%; } }
+@media (min-width: 1024px) and (orientation:portrait) { #cover{ height: 150%; } }
 
 /* Medium devices (desktops, 200px and up) */
-@media (min-width: 200px) { #moon-and-boom{font-size: 15px;} #cover-navbar{width: 80%;} }
+@media (min-width: 200px) { #moon-and-boom{font-size: 15px;} }
 
 /* Medium devices (desktops, 320px and up) */
 @media (min-width: 320px) { #moon-and-boom{font-size: 30px;} }
@@ -37,19 +32,19 @@
 @media (min-width: 768px) { #moon-and-boom{font-size: 50px;} }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { #moon-and-boom{font-size: 55px; } #cover-navbar{width: 90%;} }
+@media (min-width: 992px) { #moon-and-boom{font-size: 55px; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 1280px) { #moon-and-boom{font-size: 60px;} #cover-navbar{width: 80%;} }
+@media (min-width: 1280px) { #moon-and-boom{font-size: 60px;} }
 
 /* Large devices (large desktops, 1600px and up) */
 @media (min-width: 1600px) { #moon-and-boom{font-size: 75px;} .cover-content-row { line-height: 1.8;}}
 
 /* Extra large devices (extra large desktops, 2000 and up) */
-@media (min-width: 2000px) { #moon-and-boom{font-size: 90px;} #cover-navbar{width: 80%;} }
+@media (min-width: 2000px) { #moon-and-boom{font-size: 90px;} }
 
 /* Extra large devices (extra large desktops, 3000 and up) */
 @media (min-width: 3000px) { #moon-and-boom{font-size: 100px;} }
 
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) { #moon-and-boom{font-size: 150px;} #cover-navbar{width: 85%;}}
+@media (min-width: 3500px) { #moon-and-boom{font-size: 150px;}}
