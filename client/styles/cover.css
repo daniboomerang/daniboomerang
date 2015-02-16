@@ -2,33 +2,38 @@
 /* COVER */
 /*********/
 
-#cover{ color: white; }
-#cover-content{ text-align: center; margin-top: 5%; }
-#moon-and-boom{ margin-left: 10%; }
+#cover { color: white; }
+#cover-content { text-align: center; margin-top: 5%; }
+#moon-and-boom { margin-left: 10%; }
 
-.cover-content-row { line-height: 1.5;}
-.cover-text .name {display: block; font-weight: 500; font-size: 1.2em; }
-.cover-text .skills {display: block; text-transform: uppercase; font-weight: 200; font-size: 1.4em; }
-.cover-text .share {font-weight: 100; font-size: 1em; }
+.scroll-right-arrow { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.5em; }
+.scroll-down { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.8em;}
+.cover-content-row { line-height: 1.5; }
+.cover-text .name { display: block; font-size: 1.2em; }
+.cover-text .skills { display: block; text-transform: uppercase; font-weight: lighter; font-size: 1.4em; }
+.moon { color: #FF9933; }
+.boomerang-moon { color: black !important; }
 
-@media all and (orientation:portrait) { #cover{ padding-top: 10%; } #moon-and-boom{ margin-bottom: 10%; } .stars-parallax-background { background: url(/images/testLightCover.svg); background-size: cover;  } }
-@media all and (orientation:landscape) { #cover{ padding-top: 5%; } #moon-and-boom{ margin-bottom: 2%; } .stars-parallax-background { background: url(/images/testLightCover.svg); background-size: cover; background-repeat: no-repeat; } }
+@media all and (orientation:portrait) { #cover{ padding-top: 15%; } #moon-and-boom{ margin-bottom: 7%; } .scroll-down { margin-top: 8%; } .stars-parallax-background { background: url(/images/gradientAndStars.svg); background-size: cover;  } }
+@media all and (orientation:landscape) { #cover{ padding-top: 5%; } #moon-and-boom{ margin-bottom: 2%; } .scroll-down { margin-top: 3%; } .stars-parallax-background { background: url(/images/gradientAndStars.svg); background-size: cover; background-repeat: no-repeat; } }
 @media (min-width: 200px) and (orientation:landscape) { #cover{ height: 120%; } }
 @media (min-width: 200px) and (orientation:portrait) { #cover{ height: 120%; } }
 @media (min-width: 768px) { #cover{ height: 120%; } }
-@media (min-width: 992px) and (orientation:landscape) { #cover{ height: 200%; } }
-@media (min-width: 1024px) and (orientation:portrait) { #cover{ height: 150%; } }
+@media (min-width: 768px) and (orientation:portrait) { #moon-and-boom{ margin-bottom: 7%; } .scroll-down { margin-top: 8%; } }
+@media (min-width: 768px) and (orientation:landscape) { #cover{ padding-top: 8%; } #moon-and-boom{ margin-bottom: 5%; } .scroll-down { margin-top: 8%; } }
+@media (min-width: 992px) { #cover{ height: 200%; } #moon-and-boom{ margin-bottom: 3%; } .scroll-down { margin-top: 3%; } }
+@media (min-width: 1024px) { #cover{ height: 150%; } #cover{ padding-top: 5%; } #moon-and-boom{ margin-bottom: 1%; } .scroll-down { margin-top: 2%; } }
 
-/* Medium devices (desktops, 200px and up) */
+/* Extra small Devices, (phones, 200px and up) */
 @media (min-width: 200px) { #moon-and-boom{font-size: 15px;} }
 
-/* Medium devices (desktops, 320px and up) */
+/* Extra small Devices, (phones, 320px and up) */
 @media (min-width: 320px) { #moon-and-boom{font-size: 30px;} }
 
-/* Medium devices (desktops, 500px and up) */
+/* Small devices (tablets, 500px and up) */
 @media (min-width: 500px) { #moon-and-boom{font-size: 45px;} }
 
-/* Medium devices (desktops, 768px and up) */
+/* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { #moon-and-boom{font-size: 50px;} }
 
 /* Medium devices (desktops, 992px and up) */
@@ -38,7 +43,7 @@
 @media (min-width: 1280px) { #moon-and-boom{font-size: 60px;} }
 
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { #moon-and-boom{font-size: 75px;} .cover-content-row { line-height: 1.8;}}
+@media (min-width: 1600px) { #moon-and-boom{font-size: 75px; } .cover-content-row { line-height: 1.8;} }
 
 /* Extra large devices (extra large desktops, 2000 and up) */
 @media (min-width: 2000px) { #moon-and-boom{font-size: 90px;} }
@@ -47,4 +52,4 @@
 @media (min-width: 3000px) { #moon-and-boom{font-size: 100px;} }
 
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) { #moon-and-boom{font-size: 150px;}}
+@media (min-width: 3500px) { #moon-and-boom{font-size: 150px;} }

@@ -10,27 +10,30 @@ footer { position: fixed; bottom: 0; text-align: center; color: white; max-heigh
   -moz-border-radius: 9px 9px 0px 0px;
   -webkit-border-radius: 9px 9px 0px 0px;
   background: rgba(0, 0, 0, 0.7);
+  bottom: -5px;
+  width: 0px;
 }
 
-footer.expand-small { max-height: 15%; transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
-footer.expand-big { max-height: 25%; transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
-.footer-small { width: 40%; margin-left: 30%;   background-color: rgba(255,255,255,0.8); }
-.footer-big { width: 60%; margin-left: 20%;  background-color: rgba(13, 27, 51, 0.8); }
+footer.expand-small { font-size: 1.3em; width: 40%; margin-left: 30%; background-color: rgba(255,255,255,0.8); max-height: 15%; transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
+footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background-color: rgba(13, 27, 51, 0.8); max-height: 25%;  transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
 .footer-container { width: auto; text-align: center; color: rgba(13, 27, 51, 0.8); }
-.floating-button { z-index: 1; position: fixed; right: 0;  width: 0px; height: 0px; webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.floating-button { z-index: 1; position: fixed; right: 0;  width: 0px; height: 0px;  webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
 
-#footer-wrapper a { color: white; transition: all .5pxs ease-in-out;}
-#footer-wrapper a:hover { color: #FF9933; text-decoration:none; transition: all .5pxs ease-in-out;}
+#footer-wrapper a { color: white; transition: all .5px ease-in-out;}
+#footer-wrapper a:hover { color: #FF9933; text-decoration:none; transition: all .5px ease-in-out;}
 #footer-wrapper .btn { background-color: rgba(13, 27, 51, 0.8) !important; width: 50px; height: 50px; border-radius: 100%; line-height: 2em; border: solid white 2px; }
 #footer-wrapper .reveal{ -webkit-transition: height 0.5s; -moz-transition: height 0.5s; -ms-transition: height 0.5s; -o-transition: height 0.5s; transition: height 0.5s; }
 
 /*========== RESPONSIVENESS ==========*/
 
-/* Medium devices (desktops, 200px and up) */
+/* Extra small Devices, (phones, 200px and up) */
 @media (min-width: 200px) { .footer { font-size: 1em !important;} #to-top-button.reveal{ width: 50px; height: 50px; bottom: 0.5%; right: 0.5%; } #share-button.reveal{ width: 50px; height: 50px; bottom: 0.5%; left: 0.5%; } }
 
-/* Medium devices (desktops, 320px and up) */
+/* Extra small Devices, (phones, 320px and up) */
 @media (min-width: 320px) { .footer { font-size: 1em !important;} }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { .footer { font-size: 1.1em !important;} #to-top-button.reveal{ bottom: 1%; right: 3%; } #share-button.reveal{ bottom: 1%; left: 3%; } footer.expand-big { font-size: 1.2em;} }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { .footer { font-size: 1.1em !important;} #to-top-button.reveal{ bottom: 1%; right: 3%; } #share-button.reveal{ bottom: 1%; left: 3%; } }

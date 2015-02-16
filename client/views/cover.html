@@ -1,41 +1,44 @@
-<div id="cover" parallax-background parallax-ratio="0.3" class="stars-parallax-background"> 
-    
-    <div id="moon-and-boom" ng-show="showMoon" class="fx-fade-normal fx-speed-800">
+<div id="cover" parallax-background parallax-ratio="0.3" class="stars-parallax-background">  
+    <div id="moon-and-boom" ng-show="showMoon">
         <span class="fa-stack fa-lg">
-          <i style="color: #FF9933;" class="fa fa-circle fa-stack-2x"></i>
-          <i style="color: black;"class="fa icon-dboom fa-stack-1x fa-inverse fa-spin"></i>
+          <i class="fa fa-circle fa-stack-2x moon"></i>
+          <i class="fa icon-dboom fa-stack-1x fa-inverse fa-spin boomerang-moon"></i>
         </span>
         {{windowSizeHeight}} 
         {{windowSizeWidth}} 
     </div>
-
     <div id="cover-navbar" class="container-fluid custom-fluid-container">
-        <div class="navbar navbar-custom-cover">
+        <div id="cover-navbar" class="navbar navbar-custom-cover hidden-xs hidden-xxs hidden-tn">
             <ul class="nav navbar-nav nav-cover">
                 <li class='{{ section.animation }}' ng-repeat="section in sections">
-                    <a href="{{section.hash}}" du-smooth-scroll du-scrollspy duration="1000"><span class="hidden-xs hidden-sm">{{ section.text }} &nbsp;&nbsp;</span><i class="fa fa-3x {{ section.awesomeIcon }}"></i></a>
+                    <a href="{{section.hash}}" du-smooth-scroll du-scrollspy duration='{{section.duration}}'><span>{{ section.text }} &nbsp;&nbsp;&nbsp;</span><i class="fa fa-2x {{ section.awesomeIcon }}"></i></a>
                 </li>
             </ul>
         </div> 
+        <div id="responsive-navbar" class="hidden-sm hidden-md hidden-lg">
+            <div class="text-center scroll-right-arrow hidden-sm hidden-md hidden-lg" ng-show="showScrollRightArrow">
+                <span class="fa faa-passing animated"><i class="fa fa-2x fa-angle-right"></i><i class="fa fa-2x fa-angle-right"></i></span>
+            </div>
+            <ul class="nav-cover-responsive" ng-show="showResponsiveNavbar">
+                <li style="margin-right: 9%;"><a href="#who-i-am" du-smooth-scroll du-scrollspy duration="1000"><span>About</span><i class="fa fa-2x icon-dboom"></i></a></li>
+                <li><a href="#what-i-like" du-smooth-scroll du-scrollspy duration="1500"><span>Loving&nbsp;&nbsp;&nbsp;</span><i class="fa fa-2x fa-heart"></i></a></li>
+                <li><a href="#what-ive-done" du-smooth-scroll du-scrollspy duration="2000"><span>Work&nbsp;&nbsp;&nbsp;</span><i class="fa fa-2x fa-github"></i></a></li>
+                <li><a href="#what-ive-learnt" du-smooth-scroll du-scrollspy duration="2500"><span>Chat&nbsp;&nbsp;&nbsp;</span><i class="fa fa-2x fa-wechat"></i></a></li>
+            </ul>
+        </div>
     </div>
     <div id="cover-content">
-        <div class="cover-content-row">
-            
-                <div class="cover-text">
-                    <span class="name">{{name}}</span>
-                    <span class="skills">{{position.engineer}}</span>
-                    <span class="skills">{{position.fullStack}}</span>
-                </div>
+        <div class="cover-content-row">            
+            <div class="cover-text">
+                <span class="name">{{name}}</span>
+                <br>
+                <span class="skills">{{position.engineer}}</span>
+                <span class="skills">{{position.fullStack}}</span>
+            </div>
         </div>
-        <div class="cover-content-row">
-                <div class="cover-text">
-                    <span class="share">{{shareMessage}}</span>
-                </div>
-                <ul class="list-inline">
-                    <li class='{{ share.animation }}' ng-repeat="share in sharing">
-                        <a href=""><i class="fa fa-lg {{ share.awesomeIcon }}"></i></a>
-                    </li>
-                </ul>
-        </div>
+    </div>
+    <div id="cover-footer" class="text-center scroll-down" ng-show="showScrollDownArrow" >
+        <div style="margin-bottom:1.5%;"><i class="faa-float animated"> SCROLL DOWN </i></div>
+        <div><i class="fa fa-2x fa-long-arrow-down faa-passing-vertical animated"></i></div>
     </div>
 </div>

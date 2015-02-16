@@ -1,6 +1,6 @@
 var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 
-daniboomerangDirectives.directive('topnavbar', function($timeout, $document) {
+daniboomerangDirectives.directive('topnavbar', function($document) {
   return {
     restrict: 'E',  
     templateUrl: 'views/topnavbar.html',
@@ -21,23 +21,20 @@ daniboomerangDirectives.directive('topnavbar', function($timeout, $document) {
         var whatIveLearntIcon = element.find('#what-ive-learnt-icon');
 
         scope.$on('event:activeArea', function($event, area){ 
-
           // Dealing with Navbar
-          if (area == 'Cover'){header.removeClass('expand');}
-          else{ header.addClass('expand'); header.addClass('navbar-fixed-top');}
-
+          if (area == 'Cover'){ header.removeClass('expand'); }
+          else{ header.addClass('expand'); header.addClass('navbar-fixed-top'); }
           // Dealing with sections
-          if (area == 'Who I am'){ whoIAmLink.addClass('active'); whoIAmIcon.addClass('faa-spin animated ');}
+          if (area == 'Who I am'){ whoIAmLink.addClass('active'); whoIAmIcon.addClass('faa-spin animated '); }
           else if (area == 'What I like'){ whatILikeLink.addClass('active'); whatILikeIcon.addClass('faa-pulse animated'); }
           else if (area == 'What I´ve done'){ whatIveDoneLink.addClass('active'); whatIveDoneIcon.addClass('faa-pulse animated'); }
           else if (area == 'What I´ve learnt'){ whatIveLearntLink.addClass('active'); whatIveLearntIcon.addClass('faa-pulse animated'); }
         });  
 
         scope.$on('event:inactiveArea', function($event, area){
-
           // Dealing with sections
           if (area == 'Who I am'){ whoIAmLink.removeClass('active'); whoIAmIcon.removeClass('faa-spin animated '); } 
-          else if (area == 'What I like'){ whatILikeLink.removeClass('active'); whatILikeIcon.removeClass('faa-pulse animated');}
+          else if (area == 'What I like'){ whatILikeLink.removeClass('active'); whatILikeIcon.removeClass('faa-pulse animated'); }
           else if (area == 'What I´ve done'){ whatIveDoneLink.removeClass('active'); whatIveDoneIcon.removeClass('faa-pulse animated'); }
           else if (area == 'What I´ve learnt'){ whatIveLearntLink.removeClass('active'); whatIveLearntIcon.removeClass('faa-pulse animated'); }
         });
@@ -56,33 +53,22 @@ daniboomerangDirectives.directive('cover', function($timeout, $window) {
       init();
 
       function init(){
-
         scope.windowSizeHeight = $window.innerHeight;
         scope.windowSizeWidth = $window.innerWidth;
         scope.position = {};
 
-        $timeout(function() {
-          scope.sections = [
-            {linkId: 'who-i-am', hash: '#who-i-am', text:'Who I am', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000'},
-            {linkId: 'what-i-like', hash: '#what-i-like', text:'What I like', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000'},
-            {linkId: 'what-ive-done', hash: '#what-ive-done', text:'What I´ve done', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000'},
-            {linkId: 'what-ive-learnt', hash: '#what-ive-learnt', text:'What I´ve learnt', awesomeIcon: 'fa-newspaper-o', animation:'fx-bounce-normal fx-speed-1000'}
-          ];
-          scope.shareMessage = "Share daniboomerang.com";          
-          scope.sharing = [
-            {awesomeIcon: 'fa-fw fa-facebook', animation:'fx-bounce-normal fx-speed-1000'},
-            {awesomeIcon: 'fa-fw fa-google-plus', animation:'fx-bounce-normal fx-speed-1000'},
-            {awesomeIcon: 'fa-fw fa-twitter', animation:'fx-bounce-normal fx-speed-1000'},
-            {awesomeIcon: 'fa-fw fa-linkedin', animation:'fx-bounce-normal fx-speed-1000'}
-          ];
-          scope.name = "Daniel Estévez Martín";
-          scope.position.engineer = "Software Engineer";
-          scope.position.fullStack = "Full Stack Web Developer";
-        }, 1200);
-
-        $timeout(function() {scope.showMoon = true;}, 400);
+        $timeout(function() { scope.showMoon = true; }, 500);
+        $timeout(function() { scope.showScrollRightArrow = true; }, 1000);
+        $timeout(function() {  scope.sections = [
+            {linkId: 'who-i-am', hash: '#who-i-am', text:'About', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
+            {linkId: 'what-i-like', hash: '#what-i-like', text:'Loving', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
+            {linkId: 'what-ive-done', hash: '#what-ive-done', text:'Work', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
+            {linkId: 'what-ive-learnt', hash: '#what-ive-learnt', text:'Contact', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
+          ]; }, 1500); 
+        $timeout(function() { scope.showResponsiveNavbar = true; }, 1700);
+        $timeout(function() { scope.name = "Daniel Estévez"; scope.position.engineer = "Software Engineer"; scope.position.fullStack = "Full Stack Web Developer"; }, 1900);
+        $timeout(function() { scope.showScrollDownArrow = true; }, 2100);
       }
-
     }
   }  
 });
@@ -145,18 +131,18 @@ daniboomerangDirectives.directive('foot', function($timeout) {
     scope: {},
     link: function (scope, element) {
 
-      var SECTION_FOOTER, SHARING_FOOTER, footer, toToButoon, share, ICON_SHARE, ICON_PROCESSING_SHARE;
+      var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButton, shareButton, ICON_SHARE, ICON_PROCESSING_SHARE;
 
       scope.toogleFooters = function (){
         if (scope.displayMenu == SECTION_FOOTER){
           footer.removeClass('expand-small');
           scope.shareIconToDisplay = ICON_PROCESSING_SHARE;
-          $timeout(function() { footer.removeClass('footer-small'); footer.addClass('expand-big'); footer.addClass('footer-big'); scope.displayMenu = SHARING_FOOTER; }, 500);
+          $timeout(function() { footer.addClass('expand-big'); scope.displayMenu = SHARING_FOOTER; }, 500);
         }
         else {
           footer.removeClass('expand-big');
           scope.shareIconToDisplay = ICON_SHARE;
-          $timeout(function() { footer.removeClass('footer-big'); footer.addClass('expand-small'); footer.addClass('footer-small'); scope.displayMenu = SECTION_FOOTER; }, 500);
+          $timeout(function() { footer.addClass('expand-small'); scope.displayMenu = SECTION_FOOTER; }, 500);
         }      
       }
 
@@ -167,22 +153,21 @@ daniboomerangDirectives.directive('foot', function($timeout) {
         /* INIT CONSTANTS */
         SECTION_FOOTER = 'sectionFooter'; SHARING_FOOTER = 'sharingFooter'; ICON_SHARE = 'fa-share-alt'; ICON_PROCESSING_SHARE = 'fa-close faa faa-shake animated';
         /* INIT SCOPE */
-        scope.displayMenu = SECTION_FOOTER; scope.shareIconToDisplay = ICON_SHARE; scope.shareInconAnimation = '';
+        scope.displayMenu = SECTION_FOOTER; scope.shareIconToDisplay = ICON_SHARE;
         /* INIT DOM ELEMENTS */
-        footer = element.find('footer'); toToButoon = element.find('#to-top-button'); shareButton = element.find('#share-button');
+        footer = element.find('footer'); toTopButton = element.find('#to-top-button'); shareButton = element.find('#share-button');
 
         scope.$on('event:activeArea', function($event, area){ 
           if (area == 'Cover'){
             footer.removeClass('expand-small'); footer.removeClass('expand-big');
-            $timeout(function() { footer.removeClass('footer-small'); footer.removeClass('footer-big'); }, 500);
-            toToButoon.removeClass('reveal'); shareButton.removeClass('reveal');
+            toTopButton.removeClass('reveal'); shareButton.removeClass('reveal');
           }
-          else {
-            if (scope.displayMenu == SECTION_FOOTER) { $timeout(function() { footer.addClass('expand-small'); footer.addClass('footer-small'); }, 500); }
-            else { $timeout(function() { footer.addClass('expand-big'); footer.addClass('footer-big'); }, 500); }  
-            toToButoon.addClass('reveal'); shareButton.addClass('reveal');
+          else{
+            scope.currentSection = area;
+            if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
+            else { footer.addClass('expand-big'); }
+            toTopButton.addClass('reveal'); shareButton.addClass('reveal');
           }
-          scope.currentSection = area;
           scope.$apply();
         })  
       }
