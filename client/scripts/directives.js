@@ -60,10 +60,10 @@ daniboomerangDirectives.directive('cover', function($timeout, $window) {
         $timeout(function() { scope.showMoon = true; }, 500);
         $timeout(function() { scope.showScrollRightArrow = true; }, 1000);
         $timeout(function() {  scope.sections = [
-            {linkId: 'who-i-am', hash: '#who-i-am', text:'About', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
-            {linkId: 'what-i-like', hash: '#what-i-like', text:'Loving', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
-            {linkId: 'what-ive-done', hash: '#what-ive-done', text:'Work', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
-            {linkId: 'what-ive-learnt', hash: '#what-ive-learnt', text:'Contact', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
+            {linkId: 'who-i-am', hash: '#who-i-am', text:'Who I am', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
+            {linkId: 'what-i-like', hash: '#what-i-like', text:'What I like', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
+            {linkId: 'what-ive-done', hash: '#what-ive-done', text:'What I´ve done', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
+            {linkId: 'what-ive-learnt', hash: '#what-ive-learnt', text:'What I´ve learnt', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
           ]; }, 1500); 
         $timeout(function() { scope.showResponsiveNavbar = true; }, 1700);
         $timeout(function() { scope.name = "Daniel Estévez"; scope.position.engineer = "Software Engineer"; scope.position.fullStack = "Full Stack Web Developer"; }, 1900);
