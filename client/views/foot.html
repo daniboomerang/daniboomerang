@@ -6,13 +6,13 @@
 	</div>
 	<footer class="box-shadow-up">
 	    <div class="container footer-container">
-	        <span ng-show="displayMenu == 'sectionFooter'" class="hidden-md hidden-lg">	{{ currentSection }} </span>
-	        <span ng-show="displayMenu == 'sharingFooter'">
+	        <div id="current-section-menu" ng-show="displayMenu == 'sectionFooter'" class="hidden-md hidden-lg">	{{ currentSection }} </div>
+	        <div id="share-menu" ng-show="displayMenu == 'sharingFooter'">
 	        	<a href="#"><i class="fa fa-fw fa-lg fa-facebook"></i></a>&nbsp;&nbsp;
 				<a href="#"><i class="fa fa-fw fa-lg fa-google-plus"></i></i></a>&nbsp;&nbsp;
 				<a href="#"><i class="fa fa-fw fa-lg fa-twitter"></i></a>&nbsp;&nbsp;
 				<a href="#"><i class="fa fa-fw fa-lg fa-linkedin"></i></a>
-	        </span>
+	        </div>
 	    </div>
 	</footer>
 	<div id="to-top-button" class="floating-button">

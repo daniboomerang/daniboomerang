@@ -9,7 +9,6 @@ module.exports = function(config){
       'client/bower_components/angular-route/angular-route.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       'client/bower_components/angular-parallax/scripts/angular-parallax.js',
-      'client/bower_components/ng-parallax/angular-parallax.js',
       'client/bower_components/angular-scroll/angular-scroll.js',
       'client/scripts/**/*.js',
       'client/views/**/*.html',

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Daniboomerang - index scenario', function() {
+describe('Daniboomerang - common scenario for all devices when on load', function() {
 
   /////////////////////////////////////
   /**** DANIBOOMERANG.COM - /#/cover */
@@ -26,42 +26,15 @@ describe('Daniboomerang - index scenario', function() {
 
       // PARALLAX
         expect(element(by.css('.stars-parallax-background')).isPresent()).toBe(true);
-
-      // NAVBAR
-        expect(cover.element(by.id('cover-navbar')).isPresent()).toBe(true);
-        var navbarList = element.all(by.css('.nav-cover li'));
-        
-        // Who I am <li> contains boomerang icon
-        var whoIAm = navbarList.get(0);
-        expect(whoIAm.element(by.css('.icon-dboom')).isPresent()).toBe(true);
-
-        // What I like to do <li> contains heart icon
-        var whatILike = navbarList.get(1);
-        expect(whatILike.element(by.css('.fa-heart')).isPresent()).toBe(true);
-
-        // What I've done <li> contains github icon
-        var whatIveDone = navbarList.get(2);
-        expect(whatIveDone.element(by.css('.fa-github')).isPresent()).toBe(true);
-
-        // What I've learnt <li> contains newspaper icon
-        var whatIveLearnt = navbarList.get(3);
-        expect(whatIveLearnt.element(by.css('.fa-newspaper-o')).isPresent()).toBe(true);
         
       // CONTENT
         expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
+      
+      // FOOTER
+        expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
+        var coverFooter = cover.element(by.id('cover-footer'));
+        expect(coverFooter.element(by.id('scroll-down')).isPresent()).toBe(true);
 
-  });
-
-  ////////////  
-  // Header //
-  ////////////  
-  
-  // The heading must be hidden
-  it("should not show the header, nor the navbar", function() {
-      var headerElement = element(by.tagName('header'));
-      expect(headerElement.isDisplayed()).toBe(false);
-      var nav = headerElement.element(by.id('navbar'));
-      expect(nav.isDisplayed()).toBe(false);
   });
 
   ////////////  
@@ -94,6 +67,20 @@ describe('Daniboomerang - index scenario', function() {
       expect(sections.element(by.id('what-ive-learnt')).isPresent()).toBe(true);
   });
 
+  ////////////////  
+  // The Footer //
+  //////////////// 
 
+  it("should have its elements present, but shouldn´t be revealed", function() {
+      var footerWrapper = element(by.id('footer-wrapper'));
+      expect(footerWrapper.isPresent()).toBe(true);
+      expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(false);
+      var footer = footerWrapper.element(by.tagName('footer'));  
+      expect(footer.isPresent()).toBe(true);    
+      var shareButton = element(by.id('share-button'));
+      expect(shareButton.isPresent()).toBe(true);
+      var toTopButton = element(by.id('to-top-button'));
+      expect(toTopButton.isPresent()).toBe(true);
+  });
 });
 

@@ -5,9 +5,9 @@
 #cover { color: white; }
 #cover-content { text-align: center; margin-top: 5%; }
 #moon-and-boom { margin-left: 10%; }
+#scroll-right-arrow { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.5em; }
+#scroll-down { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.8em;}
 
-.scroll-right-arrow { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.5em; }
-.scroll-down { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.8em;}
 .cover-content-row { line-height: 1.5; }
 .cover-text .name { display: block; font-size: 1.2em; }
 .cover-text .skills { display: block; text-transform: uppercase; font-weight: lighter; font-size: 1.4em; }

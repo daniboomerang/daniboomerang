@@ -7,7 +7,7 @@
         {{windowSizeHeight}} 
         {{windowSizeWidth}} 
     </div>
-    <div id="cover-navbar" class="container-fluid custom-fluid-container">
+    <div id="cover-navbar-wrapper" class="container-fluid custom-fluid-container">
         <div id="cover-navbar" class="navbar navbar-custom-cover hidden-xs hidden-xxs hidden-tn">
             <ul class="nav navbar-nav nav-cover">
                 <li class='{{ section.animation }}' ng-repeat="section in sections">
@@ -15,8 +15,8 @@
                 </li>
             </ul>
         </div> 
-        <div id="responsive-navbar" class="hidden-sm hidden-md hidden-lg">
-            <div class="text-center scroll-right-arrow hidden-sm hidden-md hidden-lg" ng-show="showScrollRightArrow">
+        <div id="cover-responsive-navbar" class="hidden-sm hidden-md hidden-lg">
+            <div id="scroll-right-arrow" class="text-center hidden-sm hidden-md hidden-lg" ng-show="showScrollRightArrow">
                 <span class="fa faa-passing animated"><i class="fa fa-2x fa-angle-right"></i><i class="fa fa-2x fa-angle-right"></i></span>
             </div>
             <ul class="nav-cover-responsive" ng-show="showResponsiveNavbar">
@@ -37,8 +37,10 @@
             </div>
         </div>
     </div>
-    <div id="cover-footer" class="text-center scroll-down" ng-show="showScrollDownArrow" >
-        <div style="margin-bottom:1.5%;"><i class="faa-float animated"> SCROLL DOWN </i></div>
-        <div><i class="fa fa-2x fa-long-arrow-down faa-passing-vertical animated"></i></div>
+    <div id="cover-footer">
+        <div id="scroll-down" class="text-center" ng-show="showScrollDownArrow">
+            <div style="margin-bottom:1.5%;"><i class="faa-float animated"> SCROLL DOWN </i></div>
+            <div><i class="fa fa-2x fa-long-arrow-down faa-passing-vertical animated"></i></div>
+        </div>    
     </div>
 </div>
