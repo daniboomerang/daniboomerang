@@ -14,7 +14,7 @@
 	.navbar-custom .navbar-nav>li>a { color: #FF9933; padding-top: 0;}
 	.navbar-custom .navbar-nav>li>a.active { box-shadow:inset 0px 1px 0px 0px #FF9933; background-color: rgba(118, 129, 149, 0.1); transition: all .2s ease-in-out;}
 	ul.nav li { width: 25%;}
-	ul.nav li a { display: block; padding: 1em; margin-right: 0.5em; margin-left: 0.5em;text-align: center; }
+	ul.nav li a { display: block; padding: 0; margin-right: 0.5em; margin-left: 0.5em;text-align: center; }
 	
 	/**********************************/
 	/**********  COVER NAVBAR *********/
