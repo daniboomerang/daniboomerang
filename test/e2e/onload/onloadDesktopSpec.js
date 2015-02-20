@@ -29,7 +29,7 @@ describe('Daniboomerang - Scenario for desktop devices when on load', function()
 
         var coverNavbar = coverNavbarWrapper.element(by.id('cover-navbar'));
         coverNavbar.getAttribute('class').then(function(attrClass) {;
-          expect(attrClass).toBe('navbar navbar-custom-cover hidden-xs hidden-xxs hidden-tn');
+          expect(attrClass).toBe('navbar navbar-custom-cover hidden-sm hidden-xs hidden-xxs hidden-tn');
         });
         var navbarList = element.all(by.css('.nav-cover li'));
         
