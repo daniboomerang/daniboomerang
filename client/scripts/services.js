@@ -14,17 +14,17 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					if ('cover' == hash.substr(1)){
 			          	$rootScope.$broadcast('event:activeArea', 'Cover');
 			        }
-			        if ('who-i-am' == hash.substr(1)){
-			        	$rootScope.$broadcast('event:activeArea', 'Who I am');
+			        if ('about' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'About');
 			        }
-			        if ('what-i-like' == hash.substr(1)){
-			        	$rootScope.$broadcast('event:activeArea', 'What I like');
+			        if ('loving' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'Loving');
 			        }
-			        if ('what-ive-done' == hash.substr(1)){
-			        	$rootScope.$broadcast('event:activeArea', 'What I´ve done');
+			        if ('work' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'Work');
 			        }
-			        if ('what-ive-learnt' == hash.substr(1)){
-			        	$rootScope.$broadcast('event:activeArea', 'What I´ve learnt');
+			        if ('contact' == hash.substr(1)){
+			        	$rootScope.$broadcast('event:activeArea', 'Contact');
 			        }
 			        
 				}
@@ -34,17 +34,17 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 		        if (('cover' == hash.substr(1))){
 		        	$rootScope.$broadcast('event:inactiveArea', 'Cover');
 		        }
-		        if ('who-i-am' == hash.substr(1)){
-		        	$rootScope.$broadcast('event:inactiveArea', 'Who I am');
+		        if ('about' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'About');
 		        }
-		        if ('what-i-like' == hash.substr(1)){
-		        	$rootScope.$broadcast('event:inactiveArea', 'What I like');
+		        if ('loving' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'Loving');
 		        }
-		        if ('what-ive-done' == hash.substr(1)){
-		        	$rootScope.$broadcast('event:inactiveArea', 'What I´ve done');
+		        if ('work' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'Work');
 		        }
-		        if ('what-ive-learnt' == hash.substr(1)){
-		        	$rootScope.$broadcast('event:inactiveArea', 'What I´ve learnt');
+		        if ('contact' == hash.substr(1)){
+		        	$rootScope.$broadcast('event:inactiveArea', 'Contact');
 		        }
 		    });
 		}

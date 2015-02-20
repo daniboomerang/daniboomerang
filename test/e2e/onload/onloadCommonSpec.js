@@ -58,13 +58,13 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
     expect(sections.isPresent()).toBe(true);
 
     // CONTENT
-      expect(sections.element(by.id('who-i-am')).isPresent()).toBe(true);
+      expect(sections.element(by.id('about')).isPresent()).toBe(true);
       expect(sections.element(by.css('.bookshell-parallax-background')).isPresent()).toBe(true);
-      expect(sections.element(by.id('what-i-like')).isPresent()).toBe(true);
+      expect(sections.element(by.id('loving')).isPresent()).toBe(true);
       expect(sections.element(by.css('.desk-parallax-background')).isPresent()).toBe(true);
-      expect(sections.element(by.id('what-ive-done')).isPresent()).toBe(true);
+      expect(sections.element(by.id('work')).isPresent()).toBe(true);
       expect(sections.element(by.css('.floor-parallax-background')).isPresent()).toBe(true);
-      expect(sections.element(by.id('what-ive-learnt')).isPresent()).toBe(true);
+      expect(sections.element(by.id('contact')).isPresent()).toBe(true);
   });
 
   ////////////////  
