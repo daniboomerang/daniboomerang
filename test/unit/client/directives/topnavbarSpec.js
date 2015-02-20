@@ -40,25 +40,25 @@ describe('navbar', function() {
 
     it('should be listening "event:inactiveArea" and expand', function (){
 
-		/* If Who I am, it must expand and the section active */
-		area = 'Who I am';
+		/* If About, it must expand and the section active */
+		area = 'About';
 		$rootScope.$broadcast('event:activeArea', area);
 		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
-		var whoIAmLink = elm.find('#who-i-am-link');
+		var whoIAmLink = elm.find('#about-link');
 		expect(whoIAmLink.length).toBe(1);
 		expect(whoIAmLink.hasClass('active')).toBe(true);
-        var whoIAmIcon = elm.find('#who-i-am-icon');
+        var whoIAmIcon = elm.find('#about-icon');
       	expect(whoIAmIcon.length).toBe(1);
       	expect(whoIAmIcon.hasClass('faa-spin')).toBe(true);
 
       	/* If Waht I like, it must expand and the section active */
-		area = 'What I like';
+		area = 'Loving';
 		$rootScope.$broadcast('event:activeArea', area);
 		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
-		var whatILikeLink = elm.find('#what-i-like-link');
+		var whatILikeLink = elm.find('#loving-link');
 		expect(whatILikeLink.length).toBe(1);
 		expect(whatILikeLink.hasClass('active')).toBe(true);
-        var whatILikeIcon = elm.find('#what-i-like-icon');
+        var whatILikeIcon = elm.find('#loving-icon');
       	expect(whatILikeIcon.length).toBe(1);
       	expect(whatILikeIcon.hasClass('faa-pulse')).toBe(true);
     });	

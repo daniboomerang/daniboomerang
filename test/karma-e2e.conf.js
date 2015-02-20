@@ -11,18 +11,18 @@ exports.config = {
 	multiCapabilities: [
     /* TINY DEVICES */
     {   
-  	   'browserName': 'chrome',
-  	   'chromeOptions' : {
-  	    args: ['--window-size=320,800']
-  	   },
+       'browserName': 'chrome',
+       'chromeOptions' : {
+        args: ['--window-size=320,800']
+       },
 
-  	   specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadMobileTabletSpec.js', 'e2e/footer/footerMobileTabletSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingMobileTabletSpec.js']
-  	},
+       specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadMobileTabletSpec.js', 'e2e/footer/footerMobileTabletSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingMobileTabletSpec.js']
+    },
     /* SMALL DEVICES */
     {
        'browserName': 'chrome',
        'chromeOptions' : {
-        args: ['--window-size=768,800']
+        args: ['--window-size=680,800']
        },
 
        specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadMobileTabletSpec.js', 'e2e/footer/footerMobileTabletSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingMobileTabletSpec.js']

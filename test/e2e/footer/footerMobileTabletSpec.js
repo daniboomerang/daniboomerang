@@ -30,7 +30,7 @@ describe('Daniboomerang - footer scenario for movbiles and tablets', function() 
         
       // It is revealed when whe scroll down to any section
         // Go to the last section
-        var lastSection = element(by.id('what-ive-learnt'));
+        var lastSection = element(by.id('contact'));
         browser.driver.executeScript("arguments[0].scrollIntoView(true);", lastSection.getWebElement());
         browser.sleep(1000);
         expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(true);
@@ -48,7 +48,7 @@ describe('Daniboomerang - footer scenario for movbiles and tablets', function() 
       var footer = footerWrapper.element(by.tagName('footer'));
 
       // Go to the last section
-      var lastSection = element(by.id('what-ive-learnt'));
+      var lastSection = element(by.id('contact'));
       browser.driver.executeScript("arguments[0].scrollIntoView(true);", lastSection.getWebElement());
       browser.sleep(1000);
 
