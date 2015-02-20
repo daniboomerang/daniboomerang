@@ -11,32 +11,32 @@ daniboomerangDirectives.directive('topnavbar', function($document) {
       function init(){
 
         var header = element.find('header');
-        var whoIAmLink = element.find('#who-i-am-link');
-        var whoIAmIcon = element.find('#who-i-am-icon');
-        var whatILikeLink = element.find('#what-i-like-link');
-        var whatILikeIcon = element.find('#what-i-like-icon');
-        var whatIveDoneLink = element.find('#what-ive-done-link');
-        var whatIveDoneIcon = element.find('#what-ive-done-icon');
-        var whatIveLearntLink = element.find('#what-ive-learnt-link');
-        var whatIveLearntIcon = element.find('#what-ive-learnt-icon');
+        var aboutLink = element.find('#about-link');
+        var aboutIcon = element.find('#about-icon');
+        var lovingLink = element.find('#loving-link');
+        var lovingIcon = element.find('#loving-icon');
+        var workLink = element.find('#work-link');
+        var workIcon = element.find('#work-icon');
+        var contactLink = element.find('#contact-link');
+        var contactIcon = element.find('#contact-icon');
 
         scope.$on('event:activeArea', function($event, area){ 
           // Dealing with Navbar
           if (area == 'Cover'){ header.removeClass('expand'); }
           else{ header.addClass('expand'); header.addClass('navbar-fixed-top'); }
           // Dealing with sections
-          if (area == 'Who I am'){ whoIAmLink.addClass('active'); whoIAmIcon.addClass('faa-spin animated '); }
-          else if (area == 'What I like'){ whatILikeLink.addClass('active'); whatILikeIcon.addClass('faa-pulse animated'); }
-          else if (area == 'What I´ve done'){ whatIveDoneLink.addClass('active'); whatIveDoneIcon.addClass('faa-pulse animated'); }
-          else if (area == 'What I´ve learnt'){ whatIveLearntLink.addClass('active'); whatIveLearntIcon.addClass('faa-pulse animated'); }
+          if (area == 'About'){ aboutLink.addClass('active'); aboutIcon.addClass('faa-spin animated '); }
+          else if (area == 'Loving'){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); }
+          else if (area == 'Work'){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); }
+          else if (area == 'Contact'){ contactLink.addClass('active'); contactIcon.addClass('faa-pulse animated'); }
         });  
 
         scope.$on('event:inactiveArea', function($event, area){
           // Dealing with sections
-          if (area == 'Who I am'){ whoIAmLink.removeClass('active'); whoIAmIcon.removeClass('faa-spin animated '); } 
-          else if (area == 'What I like'){ whatILikeLink.removeClass('active'); whatILikeIcon.removeClass('faa-pulse animated'); }
-          else if (area == 'What I´ve done'){ whatIveDoneLink.removeClass('active'); whatIveDoneIcon.removeClass('faa-pulse animated'); }
-          else if (area == 'What I´ve learnt'){ whatIveLearntLink.removeClass('active'); whatIveLearntIcon.removeClass('faa-pulse animated'); }
+          if (area == 'About'){ aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); } 
+          else if (area == 'Loving'){ lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); }
+          else if (area == 'Work'){ workLink.removeClass('active'); workIcon.removeClass('faa-pulse animated'); }
+          else if (area == 'Contact'){ contactLink.removeClass('active'); contactIcon.removeClass('faa-pulse animated'); }
         });
       }
     }
@@ -60,10 +60,10 @@ daniboomerangDirectives.directive('cover', function($timeout, $window) {
         $timeout(function() { scope.showMoon = true; }, 500);
         $timeout(function() { scope.showScrollRightArrow = true; }, 1000);
         $timeout(function() {  scope.sections = [
-            {linkId: 'who-i-am', hash: '#who-i-am', text:'Who I am', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
-            {linkId: 'what-i-like', hash: '#what-i-like', text:'What I like', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
-            {linkId: 'what-ive-done', hash: '#what-ive-done', text:'What I´ve done', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
-            {linkId: 'what-ive-learnt', hash: '#what-ive-learnt', text:'What I´ve learnt', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
+            {linkId: 'about', hash: '#about', text:'About', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
+            {linkId: 'loving', hash: '#loving', text:'Loving', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
+            {linkId: 'work', hash: '#work', text:'Work', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
+            {linkId: 'contact', hash: '#contact', text:'Contact', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
           ]; }, 1500); 
         $timeout(function() { scope.showResponsiveNavbar = true; }, 1700);
         $timeout(function() { scope.name = "Daniel Estévez"; scope.position.engineer = "Software Engineer"; scope.position.fullStack = "Full Stack Web Developer"; }, 1900);
@@ -81,31 +81,31 @@ daniboomerangDirectives.directive('content', function() {
   };
 });
 
-daniboomerangDirectives.directive('whoIAm', function() {
+daniboomerangDirectives.directive('about', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/who-i-am.html'
+    templateUrl: 'views/content/about.html'
   };
 });
 
-daniboomerangDirectives.directive('whatILike', function() {
+daniboomerangDirectives.directive('loving', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/what-i-like.html'
+    templateUrl: 'views/content/loving.html'
   };
 });
 
-daniboomerangDirectives.directive('whatIveDone', function() {
+daniboomerangDirectives.directive('work', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/what-ive-done.html'
+    templateUrl: 'views/content/work.html'
   };
 });
 
-daniboomerangDirectives.directive('whatIveLearnt', function() {
+daniboomerangDirectives.directive('contact', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/what-ive-learnt.html'
+    templateUrl: 'views/content/contact.html'
   };
 });
 

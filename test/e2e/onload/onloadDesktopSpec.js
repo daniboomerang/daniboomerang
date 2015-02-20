@@ -33,19 +33,19 @@ describe('Daniboomerang - Scenario for desktop devices when on load', function()
         });
         var navbarList = element.all(by.css('.nav-cover li'));
         
-        // Who I am <li> contains boomerang icon
+        // About <li> contains boomerang icon
         var whoIAm = navbarList.get(0);
         expect(whoIAm.element(by.css('.icon-dboom')).isPresent()).toBe(true);
 
-        // What I like to do <li> contains heart icon
+        // Loving to do <li> contains heart icon
         var whatILike = navbarList.get(1);
         expect(whatILike.element(by.css('.fa-heart')).isPresent()).toBe(true);
 
-        // What I've done <li> contains github icon
+        // Work <li> contains github icon
         var whatIveDone = navbarList.get(2);
         expect(whatIveDone.element(by.css('.fa-github')).isPresent()).toBe(true);
 
-        // What I've learnt <li> contains chat icon
+        // Contact <li> contains chat icon
         var whatIveLearnt = navbarList.get(3);
         expect(whatIveLearnt.element(by.css('.fa-wechat')).isPresent()).toBe(true);
 

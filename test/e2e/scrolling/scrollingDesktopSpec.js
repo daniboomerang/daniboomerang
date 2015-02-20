@@ -23,82 +23,82 @@ describe('Daniboomerang - scrolling scenario', function() {
   			element.all(by.css('.nav-cover li')).then(function(navbarList) {
 				expect(navbarList.length).toBe(4);
 
-				// Who I am <li> contains boomerang icon
+				// About <li> contains boomerang icon
 				expect(navbarList[0].element(by.css('.icon-dboom')).isPresent()).toBe(true);
 
-		        // What I like to do <li> contains heart icon
+		        // Loving to do <li> contains heart icon
 		        expect(navbarList[1].element(by.css('.fa-heart')).isPresent()).toBe(true);
 
-		        // What I've done <li> contains github icon
+		        // Work <li> contains github icon
 				expect(navbarList[2].element(by.css('.fa-github')).isPresent()).toBe(true);
 
-		        // What I've learnt <li> contains chat icon
+		        // Contact <li> contains chat icon
 		        expect(navbarList[3].element(by.css('.fa-wechat')).isPresent()).toBe(true);
   			});
 			
 		});
 
+		//////////////////////////////////////
+		// If click to navbar section About //
+		//////////////////////////////////////
+
+		it('should scroll to About and expand topnavbar with About link active', function() {
+
+			browser.sleep(2000);
+			var aboutLinkCover = element.all(by.css('.nav-cover li')).get(0);
+			expect(aboutLinkCover.isPresent()).toBe(true);
+			aboutLinkCover.click();
+			browser.sleep(4000);
+			// it scrolls to About section (check url)
+			expect(browser.getCurrentUrl()).toContain('/#/about');
+
+		});
+
+		////////////////////////////////////////
+		// If clicks to navbar section Loving //
+		////////////////////////////////////////
+
+		it('should scroll to Loving and expand topnavbar with Loving link active', function() {
+
+			browser.sleep(2000);
+			var lovingLinkCover = element.all(by.css('.nav-cover li')).get(1);
+			expect(lovingLinkCover.isPresent()).toBe(true);
+			lovingLinkCover.click();
+			browser.sleep(4000);
+			// it scrolls to About section (check url)
+			expect(browser.getCurrentUrl()).toContain('/#/loving');
+
+		});
+
+		//////////////////////////////////////
+		// If clicks to navbar section Work //
+		//////////////////////////////////////
+
+		it('should scroll to Work and expand topnavbar with Work link active', function() {
+
+			browser.sleep(2000);
+			var workLinkCover = element.all(by.css('.nav-cover li')).get(2);
+			expect(workLinkCover.isPresent()).toBe(true);
+			workLinkCover.click();
+			browser.sleep(4000);
+			// it scrolls to About section (check url)
+			expect(browser.getCurrentUrl()).toContain('/#/work');
+
+		});
+
 		/////////////////////////////////////////
-		// If click to navbar section Who I am //
+		// If clicks to navbar section Contact //
 		/////////////////////////////////////////
 
-		it('should scroll to Who I am and expand topnavbar with Who I am link active', function() {
+		it('should scroll to Contact and expand topnavbar with Contact link active', function() {
 
 			browser.sleep(2000);
-			var whoIAmLinkCover = element.all(by.css('.nav-cover li')).get(0);
-			expect(whoIAmLinkCover.isPresent()).toBe(true);
-			whoIAmLinkCover.click();
+			var contactLinkCover = element.all(by.css('.nav-cover li')).get(3);
+			expect(contactLinkCover.isPresent()).toBe(true);
+			contactLinkCover.click();
 			browser.sleep(4000);
-			// it scrolls to Who I am section (check url)
-			expect(browser.getCurrentUrl()).toContain('/#/who-i-am');
-
-		});
-
-		/////////////////////////////////////////////
-		// If clicks to navbar section What I like //
-		/////////////////////////////////////////////
-
-		it('should scroll to What I like and expand topnavbar with What I like link active', function() {
-
-			browser.sleep(2000);
-			var whatILikeLinkCover = element.all(by.css('.nav-cover li')).get(1);
-			expect(whatILikeLinkCover.isPresent()).toBe(true);
-			whatILikeLinkCover.click();
-			browser.sleep(4000);
-			// it scrolls to Who I am section (check url)
-			expect(browser.getCurrentUrl()).toContain('/#/what-i-like');
-
-		});
-
-		////////////////////////////////////////////////
-		// If clicks to navbar section What I've done //
-		////////////////////////////////////////////////
-
-		it('should scroll to What I´ve done and expand topnavbar with What I´ve done link active', function() {
-
-			browser.sleep(2000);
-			var whatIveDoneLinkCover = element.all(by.css('.nav-cover li')).get(2);
-			expect(whatIveDoneLinkCover.isPresent()).toBe(true);
-			whatIveDoneLinkCover.click();
-			browser.sleep(4000);
-			// it scrolls to Who I am section (check url)
-			expect(browser.getCurrentUrl()).toContain('/#/what-ive-done');
-
-		});
-
-		//////////////////////////////////////////////////
-		// If clicks to navbar section What I've learnt //
-		//////////////////////////////////////////////////
-
-		it('should scroll to What I´ve learnt and expand topnavbar with What I´ve learnt link active', function() {
-
-			browser.sleep(2000);
-			var whatIveLearntLinkCover = element.all(by.css('.nav-cover li')).get(3);
-			expect(whatIveLearntLinkCover.isPresent()).toBe(true);
-			whatIveLearntLinkCover.click();
-			browser.sleep(4000);
-			// it scrolls to Who I am section (check url)
-			expect(browser.getCurrentUrl()).toContain('/#/what-ive-learnt');
+			// it scrolls to About section (check url)
+			expect(browser.getCurrentUrl()).toContain('/#/contact');
 
 		});
 
