@@ -44,7 +44,6 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to About and expand topnavbar with About link active', function() {
 
-			browser.sleep(2000);
 			var aboutLinkCover = element.all(by.css('.nav-cover li')).get(0);
 			expect(aboutLinkCover.isPresent()).toBe(true);
 			aboutLinkCover.click();
@@ -60,7 +59,6 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to Loving and expand topnavbar with Loving link active', function() {
 
-			browser.sleep(2000);
 			var lovingLinkCover = element.all(by.css('.nav-cover li')).get(1);
 			expect(lovingLinkCover.isPresent()).toBe(true);
 			lovingLinkCover.click();
@@ -76,7 +74,6 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to Work and expand topnavbar with Work link active', function() {
 
-			browser.sleep(2000);
 			var workLinkCover = element.all(by.css('.nav-cover li')).get(2);
 			expect(workLinkCover.isPresent()).toBe(true);
 			workLinkCover.click();
@@ -92,7 +89,6 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 		it('should scroll to Contact and expand topnavbar with Contact link active', function() {
 
-			browser.sleep(2000);
 			var contactLinkCover = element.all(by.css('.nav-cover li')).get(3);
 			expect(contactLinkCover.isPresent()).toBe(true);
 			contactLinkCover.click();

@@ -8,15 +8,15 @@
         {{windowSizeWidth}} 
     </div>
     <div id="cover-navbar-wrapper" class="container-fluid custom-fluid-container">
-        <div id="cover-navbar" class="navbar navbar-custom-cover hidden-xs hidden-xxs hidden-tn">
+        <div id="cover-navbar" class="navbar navbar-custom-cover hidden-sm hidden-xs hidden-xxs hidden-tn">
             <ul class="nav navbar-nav nav-cover">
                 <li class='{{ section.animation }}' ng-repeat="section in sections">
                     <a href="{{section.hash}}" du-smooth-scroll du-scrollspy duration='{{section.duration}}'><span>{{ section.text }} &nbsp;&nbsp;&nbsp;</span><i class="fa fa-2x {{ section.awesomeIcon }}"></i></a>
                 </li>
             </ul>
         </div> 
-        <div id="cover-responsive-navbar" class="hidden-sm hidden-md hidden-lg">
-            <div id="scroll-right-arrow" class="text-center hidden-sm hidden-md hidden-lg" ng-show="showScrollRightArrow">
+        <div id="cover-responsive-navbar" class="hidden-md hidden-lg">
+            <div id="scroll-right-arrow" class="text-center hidden-md hidden-lg" ng-show="showScrollRightArrow">
                 <span class="fa faa-passing animated"><i class="fa fa-2x fa-angle-right"></i><i class="fa fa-2x fa-angle-right"></i></span>
             </div>
             <ul class="nav-cover-responsive" ng-show="showResponsiveNavbar">

@@ -29,7 +29,7 @@ describe('Daniboomerang - Scenario for mobile and tablet devices when on load', 
       
         var responsiveNavbar = coverNavbarWrapper.element(by.id('cover-responsive-navbar'));
         responsiveNavbar.getAttribute('class').then(function(attrClass) {;
-          expect(attrClass).toBe('hidden-sm hidden-md hidden-lg');
+          expect(attrClass).toBe('hidden-md hidden-lg');
         });
 
         var navbarResponsiveList = element.all(by.css('.nav-cover-responsive li'));
