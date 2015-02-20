@@ -2,72 +2,26 @@
 /* DANIBOOMERANG */
 /*****************/
 
+@font-face {
+    font-family: '/fonts/lane-narrow_regular_macroman/lane_-_upperregular';
+    src: url('/fonts/lane-narrow_regular_macroman/LANENAR_-webfont.eot');
+    src: url('/fonts/lane-narrow_regular_macroman/LANENAR_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/lane-narrow_regular_macroman/LANENAR_-webfont.woff') format('woff'),
+         url('/fonts/lane-narrow_regular_macroman/LANENAR_-webfont.ttf') format('truetype'),
+         url('/fonts/lane-narrow_regular_macroman/LANENAR_-webfont.svg#lane_-_upperregular') format('svg');
+}
+
 html,body{ height:100%; }
-body { margin:0; padding:0; font-size: 3px; font: "Lucida Grande", Arial, Verdana, sans-serif; color: black; line-height: 2.5;}
+body { margin:0; padding:0; font-size: 3px;  font-weight: 200;  -webkit-font-smoothing: antialiased; color: black; line-height: 2.5; }
+a {color: white; transition: all .5s ease-in-out; }
+a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out; }
+h1{ font-size: 2.5em; font-weight: 100;  -webkit-font-smoothing: antialiased; }
 
-a {color: white; transition: all .5s ease-in-out;}
-a:hover {color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;}
+.box-shadow-up{ -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); }
+.box-shadow-down{ -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); }
 
-<<<<<<< HEAD
-.btn-social {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    text-align: center;
-    font-size: 20px;
-    line-height: 45px;
-}
-
-.btn-social-lg {
-    padding-right: 15px;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    text-align: center;
-}
-
-
-.btn:focus,
-.btn:active,
-.btn.active {
-    outline: 0;
-}
-
-
-.btn-outline {
-    margin-top: 15px;
-    border: solid 2px #fff;
-    font-size: 20px;
-    color: #fff;
-    background: 0 0;
-    transition: all .3s ease-in-out;
-}
-
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
-    border: solid 3px #fff;
-    color: #FF9933;
-    background: #fff;
-}
-=======
-h1{font-size: 2.5em;}
-.custom-fluid-container {width: 90%;}
-
-
-/*h1 { color: #000000; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
-
-h2 { color: #000000; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
-
-p { color: #000000; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }*/
-
-
-/* Medium devices (desktops, 200px and up) */
-@media (min-width: 200px) { body{font-size: 1.4em} }
+/* Extra small devices (desktops, 200px and up) */
+@media (min-width: 200px) { body{font-size: 1.4em; line-height: 2;} .custom-fluid-container {width: 95%;} }
 
 /* Medium devices (desktops, 320px and up) */
 @media (min-width: 320px) { body{font-size: 1.6em} }
@@ -76,10 +30,13 @@ p { color: #000000; font-family: 'Raleway',sans-serif; font-size: 18px; font-wei
 @media (min-width: 500px) { body{font-size: 1.8em} }
 
 /* Medium devices (desktops, 768px and up) */
+@media (min-width: 680px) { .custom-fluid-container {width: 90%;} }
+
+/* Medium devices (desktops, 768px and up) */
 @media (min-width: 768px) { body{font-size: 2em} }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { body{font-size: 2em} }
+@media (min-width: 992px) { body{font-size: 2em} .custom-fluid-container {width: 80%;} }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 1280px) { body{font-size: 2em} }
@@ -95,4 +52,3 @@ p { color: #000000; font-family: 'Raleway',sans-serif; font-size: 18px; font-wei
 
 /* Extra large devices (extra large desktops, 3500 and up) */
 @media (min-width: 3500px) { body{font-size: 5.5em} }
->>>>>>> responsiveness

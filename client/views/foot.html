@@ -1,0 +1,23 @@
+<div id="footer-wrapper">
+	<div id="share-button" class="floating-button">
+		<a class="btn" ng-click="toogleFooters()">
+	        <i class="fa fa-fw {{ shareIconToDisplay }} fa-lg"></i>
+	    </a>
+	</div>
+	<footer class="box-shadow-up">
+	    <div class="container footer-container">
+	        <div id="current-section-menu" ng-show="displayMenu == 'sectionFooter'" class="hidden-md hidden-lg">	{{ currentSection }} </div>
+	        <div id="share-menu" ng-show="displayMenu == 'sharingFooter'">
+	        	<a href="#"><i class="fa fa-fw fa-lg fa-facebook"></i></a>&nbsp;&nbsp;
+				<a href="#"><i class="fa fa-fw fa-lg fa-google-plus"></i></i></a>&nbsp;&nbsp;
+				<a href="#"><i class="fa fa-fw fa-lg fa-twitter"></i></a>&nbsp;&nbsp;
+				<a href="#"><i class="fa fa-fw fa-lg fa-linkedin"></i></a>
+	        </div>
+	    </div>
+	</footer>
+	<div id="to-top-button" class="floating-button">
+		<a class="btn" href="#cover" du-smooth-scroll du-scrollspy duration="2500">
+	        <i class="fa fa-fw fa-chevron-up fa-lg"></i>
+	    </a>
+	</div>
+</div>

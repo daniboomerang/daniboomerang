@@ -1,5 +1,6 @@
 'use strict';
 
+
 angular.module('daniboomerangApp', [
 	'ngRoute',
 	// VENDOR
@@ -8,7 +9,6 @@ angular.module('daniboomerangApp', [
 	'ngFx',
 	// DANIBOOMERANG
 	'daniboomerangDirectives',
-	'daniboomerangControllers',
 	'daniboomerangServices'
 ])
 .config(function($locationProvider) {
@@ -18,3 +18,4 @@ angular.module('daniboomerangApp', [
 	urlObserverService.init();
 	scrollObserverService.init();
 })
+.value('duScrollEasing', function easingFunction(t) { return t*(2-t) });
