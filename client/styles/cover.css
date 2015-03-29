@@ -14,8 +14,8 @@
 .moon { color: #FF9933; }
 .boomerang-moon { color: black !important; }
 
-@media all and (orientation:portrait) { #cover{ padding-top: 15%; } #moon-and-boom{ margin-bottom: 7%; } .scroll-down { margin-top: 8%; } .stars-parallax-background { background: url(/images/gradientAndStars.svg); background-size: cover;  } }
-@media all and (orientation:landscape) { #cover{ padding-top: 5%; } #moon-and-boom{ margin-bottom: 2%; } .scroll-down { margin-top: 3%; } .stars-parallax-background { background: url(/images/gradientAndStars.svg); background-size: cover; background-repeat: no-repeat; } }
+@media all and (orientation:portrait) { #cover{ padding-top: 15%; } #moon-and-boom{ margin-bottom: 7%; } .scroll-down { margin-top: 8%; }}
+@media all and (orientation:landscape) { #cover{ padding-top: 5%; } #moon-and-boom{ margin-bottom: 2%; } .scroll-down { margin-top: 3%; }}
 @media (min-width: 200px) and (orientation:landscape) { #cover{ height: 120%; } }
 @media (min-width: 200px) and (orientation:portrait) { #cover{ height: 120%; } }
 @media (min-width: 768px) { #cover{ height: 120%; } }
