@@ -12,8 +12,8 @@
   /*****************/
   /* COVER SECTION */
   /*****************/
-  #cover-section { height: 150vh; z-index: 1; }
-  #cover-section .parallax__layer--deep {
+  #cover-parallax-section { height: 150vh; z-index: 1; }
+  #cover-parallax-section .parallax__layer--deep {
     background-image: url(/images/stars.svg);  background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -24,7 +24,7 @@
     background-image: url(/images/stars.svg),      -o-linear-gradient(0deg, #134163 10%, #000000 90%); /* Opera 11.10+ */
     background-image: url(/images/stars.svg),         linear-gradient(0deg, #134163 10%, #000000 90%); /* W3C */          
   }
-  #cover-section .parallax__layer--back { border: solid green 1px; }
+  #cover-parallax-section .parallax__layer--back { border: solid green 1px; }
 
   /*********************************/
   /* FIRST IMAGE SECTION */
@@ -47,8 +47,8 @@
   /*********/
   /* ABOUT */
   /*********/
-  #about-section { height: 320vh; z-index: 2;  4 */}
-  #about-section .parallax__layer--base { background: url(/images/paper.svg);
+  #about-parallax-section { height: 320vh; z-index: 2;  4 */}
+  #about-parallax-section .parallax__layer--base { background: url(/images/paper.svg);
     background-repeat: no-repeat; background-size: 100%;
   }
 
@@ -74,8 +74,8 @@
   /**********/
   /* LOVING */
   /**********/
-  #loving-section { height: 190vh; z-index: 2; }
-  #loving-section .parallax__layer--base { background: url(/images/paper.svg);
+  #loving-parallax-section { height: 190vh; z-index: 2; }
+  #loving-parallax-section .parallax__layer--base { background: url(/images/paper.svg);
     background-repeat:no-repeat;
     background-size:cover;
   }
@@ -105,8 +105,8 @@
   /********/
   /* WORK */
   /********/
-  #work-section { height: 320vh; z-index: 2; }
-  #work-section .parallax__layer--base { background: url(/images/paper.svg);
+  #work-parallax-section { height: 320vh; z-index: 2; }
+  #work-parallax-section .parallax__layer--base { background: url(/images/paper.svg);
     background-repeat:no-repeat;
     background-size:cover;
   }
@@ -132,8 +132,8 @@
   /***********/
   /* CONTACT */
   /***********/
-  #contact-section { height: 320vh; z-index: 1; }
-  #contact-section .parallax__layer--base { background: url(/images/paper.svg);
+  #contact-parallax-section { height: 320vh; z-index: 1; }
+  #contact-parallax-section .parallax__layer--base { background: url(/images/paper.svg);
     background-repeat:no-repeat;
     background-size:cover;
   }

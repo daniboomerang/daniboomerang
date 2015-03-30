@@ -40,26 +40,49 @@ describe('navbar', function() {
 
     it('should be listening "event:inactiveArea" and expand', function (){
 
-		/* If About, it must expand and the section active */
+		/* If About, it must expand and set the section active */
 		area = 'About';
 		$rootScope.$broadcast('event:activeArea', area);
 		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
-		var whoIAmLink = elm.find('#about-link');
-		expect(whoIAmLink.length).toBe(1);
-		expect(whoIAmLink.hasClass('active')).toBe(true);
-        var whoIAmIcon = elm.find('#about-icon');
-      	expect(whoIAmIcon.length).toBe(1);
-      	expect(whoIAmIcon.hasClass('faa-spin')).toBe(true);
+		var aboutLink = elm.find('#about-link');
+		expect(aboutLink.length).toBe(1);
+		expect(aboutLink.hasClass('active')).toBe(true);
+        var aboutIcon = elm.find('#about-icon');
+      	expect(aboutIcon.length).toBe(1);
+      	expect(aboutIcon.hasClass('faa-spin')).toBe(true);
 
-      	/* If Waht I like, it must expand and the section active */
+      	/* If Loving, it must expand and set the section active */
 		area = 'Loving';
 		$rootScope.$broadcast('event:activeArea', area);
 		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
-		var whatILikeLink = elm.find('#loving-link');
-		expect(whatILikeLink.length).toBe(1);
-		expect(whatILikeLink.hasClass('active')).toBe(true);
-        var whatILikeIcon = elm.find('#loving-icon');
-      	expect(whatILikeIcon.length).toBe(1);
-      	expect(whatILikeIcon.hasClass('faa-pulse')).toBe(true);
+		var lovingLink = elm.find('#loving-link');
+		expect(lovingLink.length).toBe(1);
+		expect(lovingLink.hasClass('active')).toBe(true);
+        var lovingIcon = elm.find('#loving-icon');
+      	expect(lovingIcon.length).toBe(1);
+      	expect(lovingIcon.hasClass('faa-pulse')).toBe(true);
+
+
+		/* If Work, it must expand and set the section active */
+		area = 'Work';
+		$rootScope.$broadcast('event:activeArea', area);
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+		var workLink = elm.find('#work-link');
+		expect(workLink.length).toBe(1);
+		expect(workLink.hasClass('active')).toBe(true);
+        var workIcon = elm.find('#work-icon');
+      	expect(workIcon.length).toBe(1);
+      	expect(workIcon.hasClass('faa-pulse')).toBe(true);
+
+      	/* If Contact, it must expand and set the section active */
+		area = 'Contact';
+		$rootScope.$broadcast('event:activeArea', area);
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+		var contactLink = elm.find('#contact-link');
+		expect(contactLink.length).toBe(1);
+		expect(contactLink.hasClass('active')).toBe(true);
+        var contactIcon = elm.find('#contact-icon');
+      	expect(contactIcon.length).toBe(1);
+      	expect(contactIcon.hasClass('faa-pulse')).toBe(true);
     });	
 });

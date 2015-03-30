@@ -20,29 +20,49 @@ describe('Scroll Observer', function() {
 	});
     
     // Triggering the scroll active and inactive sections
-    it('should be listening when cover becomes active to broadcast ', function (){
-    	
+    it('should be listening when about becomes active to broadcast ', function (){
     	scrollObserverService.init();
 
-		var mockedElement = angular.element('<a class="navbar-brand btn-social btn-outline active" href="#cover" du-smooth-scroll="" du-scrollspy=""><img src="/images/logo-orange.svg" alt=""></a>');
-   		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
-      	
-      	// expected to broadcast the actions to be done when cover becomes active 
+    	// COVER
+		var mockedElement = angular.element('<a class="btn active" href="#cover" du-smooth-scroll="" du-scrollspy="" duration="2500"><i class="fa fa-fw fa-chevron-up fa-lg"></i></a>');
+		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
+		// expected to broadcast section 'Cover' as active
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'Cover');
-      
+
+    	// ABOUT
+		var mockedElement = angular.element('<a id="about-link" href="#about" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="about-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
+   		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
+      	// expected to broadcast section 'About' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'About');
+
+      	// LOVING
+      	mockedElement = angular.element('<a id="loving-link" href="#loving" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="loving-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
+		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
+		// expected to broadcast section 'Loving' as inactive
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'Loving');      
     });
 
 	// Triggering the scroll inactive sections
-    it('should be listening when cover becomes inactive to broadcast ', function (){
-    	
+    it('should be listening when about becomes inactive to broadcast ', function (){ 	
     	scrollObserverService.init();
 
-		var mockedElement = angular.element('<a class="navbar-brand btn-social btn-outline active" href="#cover" du-smooth-scroll="" du-scrollspy=""><img src="/images/logo-orange.svg" alt=""></a>');
-
+    	// COVER
+		var mockedElement = angular.element('<a class="btn active" href="#cover" du-smooth-scroll="" du-scrollspy="" duration="2500"><i class="fa fa-fw fa-chevron-up fa-lg"></i></a>');
 		$rootScope.$broadcast('duScrollspy:becameInactive', mockedElement);
-		// expected to broadcast the actions to be done when cover becomes inactive 
+		// expected to broadcast section 'Cover' as inactive
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'Cover');
-      
+
+    	// ABOUT
+		var mockedElement = angular.element('<a id="about-link" href="#about" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="about-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
+		$rootScope.$broadcast('duScrollspy:becameInactive', mockedElement);
+		// expected to broadcast section 'About' as inactive
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'About');
+
+      	// LOVING
+      	mockedElement = angular.element('<a id="loving-link" href="#loving" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="loving-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
+		$rootScope.$broadcast('duScrollspy:becameInactive', mockedElement);
+		// expected to broadcast section 'Loving' as inactive
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'Loving');
     });
 });   
 
