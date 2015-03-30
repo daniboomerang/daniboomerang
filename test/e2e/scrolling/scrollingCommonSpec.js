@@ -24,44 +24,44 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(nav.isDisplayed()).toBe(true);
 			
 			// navbar section gets 'active'
-			var whatIveLearntLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
-			expect(whatIveLearntLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+			var contactLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
+			expect(contactLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 			///////////// CLICK TO About  ///////////
-			var whoIAmLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(0);
-			whoIAmLinkTopnavbar.click();
+			var aboutLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(0);
+			aboutLinkTopnavbar.click();
 			browser.sleep(4000);
 			// it scrolls to About section (check url)
 			expect(browser.getCurrentUrl()).toContain('/#/about');
 			// navbar section gets 'active'
-			expect(whoIAmLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+			expect(aboutLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 			///////////// CLICK TO Loving  ///////////
-			var whatILkeLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(1);
-			whatILkeLinkTopnavbar.click();
+			var lovingLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(1);
+			lovingLinkTopnavbar.click();
 			browser.sleep(4000);
 			// it scrolls to About section (check url)
 			expect(browser.getCurrentUrl()).toContain('/#/loving');
 			// navbar section gets 'active'
-			expect(whatILkeLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+			expect(lovingLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 			///////////// CLICK TO Work  ///////////
-			var whatIveDoneLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(2);
-			whatIveDoneLinkTopnavbar.click();
+			var workLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(2);
+			workLinkTopnavbar.click();
 			browser.sleep(4000);
 			// it scrolls to About section (check url)
 			expect(browser.getCurrentUrl()).toContain('/#/work');
 			// navbar section gets 'active'
-			expect(whatIveDoneLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+			expect(workLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
 			///////////// CLICK TO Contact  ///////////
-			var whatIveLearntLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
-			whatIveLearntLinkTopnavbar.click();
+			var contactLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
+			contactLinkTopnavbar.click();
 			browser.sleep(4000);
 			// it scrolls to About section (check url)
 			expect(browser.getCurrentUrl()).toContain('/#/contact');
 			// navbar section gets 'active'
-			expect(whatIveLearntLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+			expect(contactLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 		});
 
 });

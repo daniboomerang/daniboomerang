@@ -2,9 +2,9 @@
 
 describe('Daniboomerang - common scenario for all devices when on load', function() {
 
-  /////////////////////////////////////
-  /**** DANIBOOMERANG.COM - /#/cover */
-  /////////////////////////////////////
+  /////////////////////////////
+  /**** DANIBOOMERANG.COM ****/
+  /////////////////////////////
 
   beforeEach(function() {
      browser.get('/');
@@ -14,28 +14,6 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
     browser.waitForAngular();
     expect(browser.getCurrentUrl()).toContain('/#/cover');
   }, 200000);
-
-  ///////////////  
-  // The Cover //
-  ///////////////  
-
-  it("should show the cover elements correctly", function() {
-
-      var cover = element(by.id('cover'));
-      expect(cover.isPresent()).toBe(true);
-
-      // PARALLAX
-        expect(element(by.css('.stars-parallax-background')).isPresent()).toBe(true);
-        
-      // CONTENT
-        expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
-      
-      // FOOTER
-        expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
-        var coverFooter = cover.element(by.id('cover-footer'));
-        expect(coverFooter.element(by.id('scroll-down')).isPresent()).toBe(true);
-
-  });
 
   ////////////  
   // Header //
@@ -49,23 +27,36 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
       expect(nav.isDisplayed()).toBe(false);
   });
 
-  /////////////////  
-  // The Content //
-  /////////////////  
+  ///////////////////////
+  // Parallax sections //
+  ///////////////////////  
 
-  it('should have 4 sections', function() {
-    var sections = element(by.id('sections'));
-    expect(sections.isPresent()).toBe(true);
-
-    // CONTENT
-      expect(sections.element(by.id('about')).isPresent()).toBe(true);
-      expect(sections.element(by.css('.bookshell-parallax-background')).isPresent()).toBe(true);
-      expect(sections.element(by.id('loving')).isPresent()).toBe(true);
-      expect(sections.element(by.css('.desk-parallax-background')).isPresent()).toBe(true);
-      expect(sections.element(by.id('work')).isPresent()).toBe(true);
-      expect(sections.element(by.css('.floor-parallax-background')).isPresent()).toBe(true);
-      expect(sections.element(by.id('contact')).isPresent()).toBe(true);
-  });
+    it('should have 5 sections', function() {
+      var parallax = element(by.id('parallax-wrapper'));
+      expect(parallax.isPresent()).toBe(true);
+      // COVER-PARALLAX-SECTION
+      expect(element(by.id('cover-parallax-section')).isPresent()).toBe(true);
+        // Cover
+        var cover = element(by.id('cover'));
+        expect(cover.isPresent()).toBe(true);
+        expect(element(by.id('moon-and-boom')).isPresent()).toBe(true);
+        expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
+        expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
+        var coverFooter = cover.element(by.id('cover-footer'));
+        expect(coverFooter.element(by.id('scroll-down')).isPresent()).toBe(true);
+      // ABOUT-PARALLAX-SECTION
+      expect(element(by.id('about-parallax-section')).isPresent()).toBe(true);
+      expect(element(by.id('about')).isPresent()).toBe(true);
+      // LOVING-PARALLAX-SECTION
+      expect(element(by.id('loving-parallax-section')).isPresent()).toBe(true);
+      expect(element(by.id('loving')).isPresent()).toBe(true);
+      // WORK-PARALLAX-SECTION
+      expect(element(by.id('work-parallax-section')).isPresent()).toBe(true);      
+      expect(element(by.id('work')).isPresent()).toBe(true);
+      // CONTACT-PARALLAX-SECTION
+      expect(element(by.id('contact-parallax-section')).isPresent()).toBe(true);
+      expect(element(by.id('contact')).isPresent()).toBe(true);
+    });
 
   ////////////////  
   // The Footer //
