@@ -1,0 +1,59 @@
+/***********/
+/* CONTENT */
+/***********/
+
+#sections{ height: 100%; }
+
+.section{ /*-webkit-box-shadow: 0 0 2px 2px #000000; box-shadow: 0 0 2px 2px #000000; */}
+
+/************/
+/* SECTIONS */
+/************/
+
+#about { }
+#loving { }
+#work { }
+#contact { }
+
+/*==========  RESPONSIVENESS  ==========*/
+
+/* Small devices (tablets, 767px and down)*/
+@media (min-width: 200px) {.section{ padding-top:35%; }
+
+/* Extra small Devices, (phones, 320 and up) */
+@media (min-width: 320px) {.section{ padding-top:32%; }
+
+/* Extra small Devices, (phones, 480px and up) */
+@media (min-width: 500px) {.section{ padding-top:22%; }
+
+/*////////////////////////////////////*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {.section{ padding-top:5%;
+padding-bottom:5%; }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {.section{  }
+
+/* Large devices (large desktops, 1280px and up) */
+@media (min-width: 1280px) {.section{  }
+
+/* Large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {.section{  }
+
+/*////////////////////////////////////*/
+
+/* Extra large devices (extra large desktops, 1600px and up) */
+@media (min-width: 1600px) {.section{ padding-top:10%; }
+
+/* Extra large devices (extra large desktops, 2000px and up) */
+@media (min-width: 2000px) {.section{ padding-top:10%; }
+
+/* Extra large devices (extra large desktops, 2000px and up) */
+@media (min-width: 2500px) {.section{ padding-top:10%; }
+
+/* Extra large devices (extra large desktops, 2000px and up) */
+@media (min-width: 3000px) {.section{ padding-top:10%; }
+
+/* Extra large devices (extra large desktops, 2000px and up) */
+@media (min-width: 3500px) { .section{ padding-top:10%; }

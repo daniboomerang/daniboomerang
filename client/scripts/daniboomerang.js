@@ -1,11 +1,9 @@
 'use strict';
 
-
 angular.module('daniboomerangApp', [
 	'ngRoute',
 	// VENDOR
 	'duScroll',
-	'angular-parallax',
 	'ngFx',
 	// DANIBOOMERANG
 	'daniboomerangDirectives',

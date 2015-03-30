@@ -1,62 +1,29 @@
 var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 
-daniboomerangDirectives.directive('topnavbar', function($document) {
-  return {
-    restrict: 'E',  
-    templateUrl: 'views/topnavbar.html',
-    link: function (scope, element) {
 
-      init();
+/*******************************************************/
+/****************** PARALLAX SECTIONS ******************/
+/*******************************************************/
 
-      function init(){
-
-        var header = element.find('header');
-        var aboutLink = element.find('#about-link');
-        var aboutIcon = element.find('#about-icon');
-        var lovingLink = element.find('#loving-link');
-        var lovingIcon = element.find('#loving-icon');
-        var workLink = element.find('#work-link');
-        var workIcon = element.find('#work-icon');
-        var contactLink = element.find('#contact-link');
-        var contactIcon = element.find('#contact-icon');
-
-        scope.$on('event:activeArea', function($event, area){ 
-          // Dealing with Navbar
-          if (area == 'Cover'){ header.removeClass('expand'); }
-          else{ header.addClass('expand'); header.addClass('navbar-fixed-top'); }
-          // Dealing with sections
-          if (area == 'About'){ aboutLink.addClass('active'); aboutIcon.addClass('faa-spin animated '); }
-          else if (area == 'Loving'){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); }
-          else if (area == 'Work'){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); }
-          else if (area == 'Contact'){ contactLink.addClass('active'); contactIcon.addClass('faa-pulse animated'); }
-        });  
-
-        scope.$on('event:inactiveArea', function($event, area){
-          // Dealing with sections
-          if (area == 'About'){ aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); } 
-          else if (area == 'Loving'){ lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); }
-          else if (area == 'Work'){ workLink.removeClass('active'); workIcon.removeClass('faa-pulse animated'); }
-          else if (area == 'Contact'){ contactLink.removeClass('active'); contactIcon.removeClass('faa-pulse animated'); }
-        });
-      }
-    }
-  };
-});
- 
-daniboomerangDirectives.directive('cover', function($timeout, $window) {
+daniboomerangDirectives.directive('parallax', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/cover.html',
+    templateUrl: 'views/parallax.html'
+  };
+});
+
+daniboomerangDirectives.directive('cover', function($timeout) {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/sections/cover.html',
     scope: {},
     link: function (scope, element) {
 
       init();
 
       function init(){
-        scope.windowSizeHeight = $window.innerHeight;
-        scope.windowSizeWidth = $window.innerWidth;
+       
         scope.position = {};
-
         $timeout(function() { scope.showMoon = true; }, 500);
         $timeout(function() { scope.showScrollRightArrow = true; }, 1000);
         $timeout(function() {  scope.sections = [
@@ -73,56 +40,37 @@ daniboomerangDirectives.directive('cover', function($timeout, $window) {
   }  
 });
 
-
-daniboomerangDirectives.directive('content', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/content/content.html'
-  };
-});
-
 daniboomerangDirectives.directive('about', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/about.html'
+    templateUrl: 'views/sections/about.html'
   };
 });
 
 daniboomerangDirectives.directive('loving', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/loving.html'
+    templateUrl: 'views/sections/loving.html'
   };
 });
 
 daniboomerangDirectives.directive('work', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/work.html'
+    templateUrl: 'views/sections/work.html'
   };
 });
 
 daniboomerangDirectives.directive('contact', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/content/contact.html'
+    templateUrl: 'views/sections/contact.html'
   };
 });
 
-daniboomerangDirectives.directive('parallaxImage', ['$compile', function ($compile) {
-  return {
-      restrict: 'AE', 
-      replace: 'true',
-      scope: {},
-      template: '', // template is assigned in the 'link' function
-      link: function ($scope, element, attrs) {
-          $scope.parallaxBackground = attrs.parallaxCss;
-          var templateHtml = '<div parallax-background parallax-ratio="0.3" class="parallax-image-section {{parallaxBackground}}"></div>';
-          element.html(templateHtml).show();
-          $compile(element.contents())($scope);
-      }
-  };
-}]);
+/******************************************/
+/****************** FOOT ******************/
+/******************************************/
 
 daniboomerangDirectives.directive('foot', function($timeout) {
   return {
@@ -172,5 +120,52 @@ daniboomerangDirectives.directive('foot', function($timeout) {
         })  
       }
     }  
+  };
+});
+
+/******************************************/
+/**************** TOPNAVBAR ***************/
+/******************************************/
+
+daniboomerangDirectives.directive('topnavbar', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/topnavbar.html',
+    link: function (scope, element) {
+
+      init();
+      
+      function init(){
+
+        var header = element.find('header');
+        var aboutLink = element.find('#about-link');
+        var aboutIcon = element.find('#about-icon');
+        var lovingLink = element.find('#loving-link');
+        var lovingIcon = element.find('#loving-icon');
+        var workLink = element.find('#work-link');
+        var workIcon = element.find('#work-icon');
+        var contactLink = element.find('#contact-link');
+        var contactIcon = element.find('#contact-icon');
+
+        scope.$on('event:activeArea', function($event, area){ 
+          // Dealing with Navbar
+          if (area == 'Cover'){ header.removeClass('expand'); }
+          else{ header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); }
+          // Dealing with sections
+          if (area == 'About'){ aboutLink.addClass('active'); aboutIcon.addClass('faa-spin animated '); }
+          else if (area == 'Loving'){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); }
+          else if (area == 'Work'){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); }
+          else if (area == 'Contact'){ contactLink.addClass('active'); contactIcon.addClass('faa-pulse animated'); }
+        });  
+
+        scope.$on('event:inactiveArea', function($event, area){
+          // Dealing with sections
+          if (area == 'About'){ aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); } 
+          else if (area == 'Loving'){ lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); }
+          else if (area == 'Work'){ workLink.removeClass('active'); workIcon.removeClass('faa-pulse animated'); }
+          else if (area == 'Contact'){ contactLink.removeClass('active'); contactIcon.removeClass('faa-pulse animated'); }
+        });
+      }
+    }
   };
 });
