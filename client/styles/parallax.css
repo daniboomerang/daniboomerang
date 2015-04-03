@@ -3,7 +3,7 @@
   /************/
   .parallax { height: 100%; /* fallback for older browsers */ height: 100vh; overflow-x: hidden; overflow-y: auto; -webkit-perspective: 300px; perspective: 300px; -webkit-perspective-origin-x: 100%; perspective-origin-x: 100%; }
   .parallax__section { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
-  .parallax__layer { position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
+  .parallax__layer { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
   .parallax__layer--fore { -webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 1; }
   .parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 4; }
   .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
@@ -12,19 +12,11 @@
   /*****************/
   /* COVER SECTION */
   /*****************/
-  #cover-parallax-section { height: 150vh; z-index: 1; }
-  #cover-parallax-section .parallax__layer--deep {
-    background-image: url(/images/stars.svg);  background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
-    background-image: url(/images/stars.svg), -webkit-gradient(linear, left top, left bottom, from(#6cab26), to(#6ceb86)); /* Saf4+, Chrome */
-    background-image: url(/images/stars.svg), -webkit-linear-gradient(0deg, #134163 10%, #000000 90%); /* Chrome 10+, Saf5.1+ */
-    background-image: url(/images/stars.svg),    -moz-linear-gradient(0deg, #134163 10%, #000000 90%); /* FF3.6+ */
-    background-image: url(/images/stars.svg),     -ms-linear-gradient(0deg, #134163 10%, #000000 90%); /* IE10 */
-    background-image: url(/images/stars.svg),      -o-linear-gradient(0deg, #134163 10%, #000000 90%); /* Opera 11.10+ */
-    background-image: url(/images/stars.svg),         linear-gradient(0deg, #134163 10%, #000000 90%); /* W3C */          
-  }
-  #cover-parallax-section .parallax__layer--back { border: solid green 1px; }
+  #cover-parallax-section { height: 200vh; z-index: 1; }
+  #cover-parallax-section .parallax__layer--deep { background-size: cover; }
+  #cover-parallax-section .parallax__layer--back { background-size: cover; background-position: center; background-image: url(/images/moon.svg);}
+  @media all and (orientation:portrait) { #cover-parallax-section .parallax__layer--deep { background-image: url(/images/skyAndSee-portrait.svg); } }
+  @media all and (orientation:landscape) { #cover-parallax-section .parallax__layer--deep { background-image: url(/images/sunrise-step1-landscape.svg); } } 
 
   /*********************************/
   /* FIRST IMAGE SECTION */
@@ -34,74 +26,65 @@
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
-    border: solid black 1px;
   } 
   #first-image-section .parallax__layer--fore { background: url();
-    border: solid black 1px;
     background-repeat:no-repeat;
     background-size:contain;
     background-position:center;
   }
-  #first-image-section .parallax__layer--back { border: solid green 1px; }
+  #first-image-section .parallax__layer--back { }
+  @media all and (orientation:portrait) { #first-image-section .parallax__layer--base { background-image: url(/images/rift-portrait.svg); margin-top: -80%; border: solid yellow;} }
+  @media all and (orientation:landscape) { 
+    #first-image-section .parallax__layer--fore { background-image: url(/images/firstRowOfBooksFullWidth.svg); margin-top: -50%; }
+    #first-image-section .parallax__layer--base { background-image: url(/images/rift-landscape.svg); margin-top: -30%; }
+  } 
 
   /*********/
   /* ABOUT */
   /*********/
-  #about-parallax-section { height: 320vh; z-index: 2;  4 */}
-  #about-parallax-section .parallax__layer--base { background: url(/images/paper.svg);
-    background-repeat: no-repeat; background-size: 100%;
-  }
+  #about-parallax-section { height: 320vh; z-index: 2; }
+  #about-parallax-section .parallax__layer--base { background: url(/images/paper.svg); background-repeat: no-repeat; background-size: 100%; }
 
-  /***********************************/
-  /* SECOND BOOKSHELL IMEAGE SECTION */
-  /***********************************/
-  #second-image-section { height: 100vh; z-index: 1;  5 */}
-  #second-image-section .parallax__layer--deep {
-    background: -webkit-linear-gradient(0deg, #DE6262 10%, #FFB88C 90%); /* Chrome 10+, Saf5.1+ */
-    background:    -moz-linear-gradient(0deg, #DE6262 10%, #FFB88C 90%); /* FF3.6+ */
-    background:     -ms-linear-gradient(0deg, #DE6262 10%, #FFB88C 90%); /* IE10 */
-    background:      -o-linear-gradient(0deg, #DE6262 10%, #FFB88C 90%); /* Opera 11.10+ */
-    background:         linear-gradient(0deg, #DE6262 10%, #FFB88C 90%); /* W3C */
-    border: solid black 1px;
-  }
-  #second-image-section .parallax__layer--base { background: url();
-    background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;
-    border: solid red 1px;
-  }
-
+  /*************************/
+  /* SECOND IMAGES SECTION */
+  /*************************/
+  #second-image-section { height: 220vh; z-index: 1; }
+  #second-image-section .parallax__layer--deep  { background-size: cover; }
+  #second-image-section .parallax__layer--back { background-size: cover; background-position: center; background-repeat:no-repeat; }
+  #second-image-section .parallax__layer--base { background-size: 100%; background-position:center;  background-repeat:no-repeat;}
+  #second-image-section .parallax__layer--fore { background-size: contain; background-position: center; background-repeat:no-repeat;}
+  @media all and (orientation:portrait) { }
+  @media all and (orientation:landscape) {
+    #second-image-section .parallax__layer--deep { background-image: url(/images/sunrise-step3-landscape.svg); }
+    #second-image-section .parallax__layer--back { background-image: url(/images/rift-nest-landscape.svg);}
+    #second-image-section .parallax__layer--base { background-image: url(); margin-top: -30%; }
+    #second-image-section .parallax__layer--fore { background-image: url(/images/books-clouds-landscape.svg); margin-top: -20%; }
+  } 
+  
   /**********/
   /* LOVING */
   /**********/
-  #loving-parallax-section { height: 190vh; z-index: 2; }
+  #loving-parallax-section { height: 350vh; z-index: 2; }
   #loving-parallax-section .parallax__layer--base { background: url(/images/paper.svg);
     background-repeat:no-repeat;
     background-size:cover;
   }
 
-  /**********************/
-  /* DESK IMAGE SECTION */
-  /**********************/
-  #third-image-section { height: 120vh; z-index: 1; }
-  #third-image-section .parallax__layer--base { background: url();
-    border: solid red 1px;
-    background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;
-    border: solid green 1px;
-  }
-  #third-image-section .parallax__layer--back {
-    background: -webkit-linear-gradient(0deg, #3CA55C 10%, #B5AC49 90%); /* Chrome 10+, Saf5.1+ */
-    background:    -moz-linear-gradient(0deg, #3CA55C 10%, #B5AC49 90%); /* FF3.6+ */
-    background:     -ms-linear-gradient(0deg, #3CA55C 10%, #B5AC49 90%); /* IE10 */
-    background:      -o-linear-gradient(0deg, #3CA55C 10%, #B5AC49 90%); /* Opera 11.10+ */
-    background:         linear-gradient(0deg, #3CA55C 10%, #B5AC49 90%); /* W3C */       
-    border: solid red 1px;
-  }
-  #desk-images-section .parallax__layer--deep {
-    border: solid yellow 1px;
-  }  
+  /*************************/
+  /* THIRD IMAGES SECTION */
+  /*************************/
+  #third-image-section { height: 220vh; z-index: 1; }
+  #third-image-section .parallax__layer--deep  { background-size: cover; }
+  #third-image-section .parallax__layer--back { background-size: cover; }
+  #third-image-section .parallax__layer--base { background-size: 100%; background-position:center;  background-repeat:no-repeat;}
+  #third-image-section .parallax__layer--fore { background-size: contain; background-position: center; background-repeat:no-repeat;}
+  @media all and (orientation:portrait) { }
+  @media all and (orientation:landscape) {
+    #third-image-section .parallax__layer--deep { background-image: url(/images/sunrise-step3-landscape.svg); }
+    #third-image-section .parallax__layer--back { background-image: url();}
+    #third-image-section .parallax__layer--base { background-image: url(); margin-top: -30%; }
+    #third-image-section .parallax__layer--fore { background-image: url(/images/desk.svg); margin-top: -20%; }
+  }   
   /********/
   /* WORK */
   /********/
@@ -111,9 +94,9 @@
     background-size:cover;
   }
 
-  /************************/
-  /* GARAGE IMAGE SECTION */
-  /************************/
+  /*************************/
+  /* FOURTH IMAGES SECTION */
+  /*************************/
   #fourth-image-section { z-index: 1; }
   #fourth-image-section .parallax__layer--fore { background: url();
     background-repeat:no-repeat;
