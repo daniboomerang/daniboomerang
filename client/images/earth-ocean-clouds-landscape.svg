@@ -1,0 +1,28 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="400" width="599.99" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 599.99403 400.00201" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <linearGradient id="b" x1="276.85" gradientUnits="userSpaceOnUse" y1="242.56" gradientTransform="matrix(1 0 0 .65392 4.0395 -316.93)" x2="284.53" y2="197.43">
+   <stop stop-color="#143748" offset="0"/>
+   <stop stop-color="#121c2a" offset="1"/>
+  </linearGradient>
+  <linearGradient id="c" x1="215.22" gradientUnits="userSpaceOnUse" y1="485.84" gradientTransform="matrix(1.007 0 0 1.028 -89.576 -101.99)" x2="521.85" y2="188.05">
+   <stop stop-opacity=".83077" offset="0"/>
+   <stop stop-opacity=".82745" stop-color="#061621" offset=".44190"/>
+   <stop stop-color="#0e324d" stop-opacity=".80392" offset=".67363"/>
+   <stop stop-color="#7d497b" stop-opacity=".42564" offset="0.895"/>
+   <stop stop-color="#c89036" stop-opacity=".63590" offset="1"/>
+  </linearGradient>
+  <linearGradient id="a" y2="-141.78" gradientUnits="userSpaceOnUse" x2="531.87" gradientTransform="matrix(1.2 0 0 1.0195 -390.89 384.49)" y1="-209.27" x1="547.83">
+   <stop stop-color="#006285" stop-opacity=".97949" offset="0"/>
+   <stop stop-color="#b0d7e5" stop-opacity=".15897" offset=".22559"/>
+   <stop stop-color="#d5e5eb" stop-opacity=".23137" offset=".43045"/>
+   <stop stop-color="#e5eff2" stop-opacity=".15897" offset=".75111"/>
+   <stop stop-opacity=".030769" stop-color="#fff" offset="1"/>
+  </linearGradient>
+ </defs>
+ <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="355.50269" x="1336.0771" line-height="125%"><tspan y="355.50269" x="1336.0771"/></text>
+ <g fill-rule="evenodd">
+  <path fill="url(#b)" d="m0 167.62s114.05 2.4636 309.01 37.62c196.9 35.506 291.73 63.012 291.73 63.012-0.0228 118.25-0.72709 131.75-0.72709 131.75h-600.01z"/>
+  <path fill="url(#a)" d="m-60.206 136.19s142.97 1.6664 375.74 44.522c230.11 42.367 346.73 80.28 346.73 80.28-0.0276 120.55-2.9114 53.342-2.4678 80.027 4.7514 285.82-720-166.58-720-166.58z"/>
+  <path fill="url(#c)" d="m0 167.62s114.05 2.4636 309.01 37.62c196.9 35.506 291.73 63.012 291.73 63.012-0.023 118.25-0.7271 131.75-0.7271 131.75h-600.01z"/>
+ </g>
+</svg>

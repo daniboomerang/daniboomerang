@@ -4,7 +4,7 @@
 
 #sections{ height: 100%; }
 
-.section{ /*-webkit-box-shadow: 0 0 2px 2px #000000; box-shadow: 0 0 2px 2px #000000; */}
+.section{ /*-webkit-box-shadow: 0 0 2px 2px #000000; box-shadow: 0 0 2px 2px #000000; */ background-color: white;}
 
 /************/
 /* SECTIONS */
