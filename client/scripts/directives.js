@@ -5,10 +5,40 @@ var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 /****************** PARALLAX SECTIONS ******************/
 /*******************************************************/
 
-daniboomerangDirectives.directive('parallax', function() {
+daniboomerangDirectives.directive('parallax', function($interval) {
   return {
     restrict: 'E',
-    templateUrl: 'views/parallax.html'
+    templateUrl: 'views/parallax.html',
+    scope: {},
+    link: function (scope, element) {
+      init();
+      function init(){
+        scope.showCometBlue = false;
+        scope.showCometRed = false;
+        var orbit = element.find('#orbit');
+        var i = 0;
+        $interval(function() {
+          if(i & 1){
+            scope.showCometBlue = true;
+            scope.showCometRed = false;
+            
+            /*orbit.removeClass('comet-red');
+            orbit.addClass('comet-blue');
+            orbit.removeClass('from-left-orbit');
+            orbit.addClass('from-right-orbit');*/
+          }
+          else {
+            scope.showCometBlue = false;
+            scope.showCometRed = true;
+            /*orbit.removeClass('comet-blue');
+            orbit.addClass('comet-red');
+            orbit.removeClass('from-right-orbit');
+            orbit.addClass('from-left-orbit');*/
+          }  
+          i++;
+        }, 500);
+      }
+    }
   };
 });
 
@@ -159,6 +189,7 @@ daniboomerangDirectives.directive('topnavbar', function() {
         });  
 
         scope.$on('event:inactiveArea', function($event, area){
+          header.removeClass('expand'); 
           // Dealing with sections
           if (area == 'About'){ aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); } 
           else if (area == 'Loving'){ lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); }

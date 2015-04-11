@@ -5,10 +5,10 @@
   .parallax { height: 100vh; /* fallback for older browsers */ height: 100vh; overflow-x: hidden; overflow-y: auto; -webkit-perspective: 300px; perspective: 300px; -webkit-perspective-origin-x: 100%; perspective-origin-x: 100%; }
   .parallax__section { position: relative; height: 100vh; /* fallback for older browsers */ height: 100vh; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
   .parallax__layer { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
-  .parallax__layer--fore { -webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 1; }
-  .parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 4; }
-  .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
-  .parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 2; }
+  .parallax__layer--fore { -webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 4; }
+  .parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 3; }
+  .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 2; }
+  .parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; }
 
   /*****************/
   /* COVER SECTION */
@@ -16,73 +16,104 @@
   #cover-parallax-section { z-index: 1; }
   #cover-parallax-section .parallax__layer--deep { background-size: 100%; background-position: center; background-repeat: no-repeat; }
   #cover-parallax-section .parallax__layer--back { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon.svg); }
-  #cover-parallax-section .parallax__layer--base { margin-top: 15vh; }
-  @media all and (orientation: portrait){ 
-    #cover-parallax-section { height: 220vh;  }
-    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-&-sun-portrait.svg);  margin-top: -50%;} 
-    #cover-parallax-section .parallax__layer--back { margin-top: 30vh; }
-  }
-  @media all and (orientation: landscape){
+  @media (orientation: portrait){ 
+    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-&-sun-portrait.svg); } 
+    @media (min-width: 200px) and (max-width: 0px) {
+      #cover-parallax-section { height: 120vh; }      #cover-parallax-section .parallax__layer--deep { margin-top: -100vh; }
+      #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
+      #cover-parallax-section .parallax__layer--back { margin-top: 70vh; }
+    }
+    @media (min-width: 0px) and (max-width: 680px) {
+      #cover-parallax-secion { height: 220vh; }
+      #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
+      #cover-parallax-section .parallax__layer--back { margin-top: 130vh; }
+    }
+    @media (min-width: 680px) {
+      #cover-parallax-section { height: 220vh; }
+      #cover-parallax-section .parallax__layer--deep { margin-top: -50%; } 
+      #cover-parallax-section .parallax__layer--back { margin-top: 150vh; }
+    }
+  }  
+  @media (orientation: landscape){
     #cover-parallax-section { height: 220vh; }
-    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-&-sun-landscape.svg);   }
+    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-&-sun-landscape.svg); }
     #cover-parallax-section .parallax__layer--back { margin-top: 120vh;}
-  } 
-  @media (min-width: 2900px) and (orientation:landscape) { 
-    #cover-parallax-section .parallax__layer--deep { margin-top: -10%; }
+    #cover-parallax-section .parallax__layer--base { margin-top: 15vh; }
+    @media (max-width: 800px) { #cover-parallax-section { height: 150vh; } }
+    @media (max-width: 992px) { #cover-parallax-section .parallax__layer--base { margin-top: 10vh; } }
+    @media (min-width: 1024px) { #cover-parallax-section .parallax__layer--deep { margin-top: -10%; } }
+    @media (min-width: 2900px) { #cover-parallax-section .parallax__layer--deep { margin-top: -10%; } }
+    @media (min-width: 31500px) { #cover-parallax-section .parallax__layer--deep { margin-top: -20%; } } 
   }
-  @media (min-width: 3500px) and (orientation:landscape) { 
-    #cover-parallax-section .parallax__layer--deep { margin-top: -20%; }
-  } 
-
+  
   /*********************************/
   /* FIRST IMAGE SECTION */
   /*********************************/
-  #first-image-section { z-index: 1; }
+  #first-image-section { z-index: 2; }
   #first-image-section .parallax__layer--deep { } 
-  #first-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/earth-ocean-clouds-landscape.svg); } 
-  #first-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat;  } 
-  #first-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books-clouds-landscape.svg);}
-  @media all and (orientation: portrait){ 
-    #first-image-section {  }
-    #first-image-section .parallax__layer--back { }
-    #first-image-section .parallax__layer--base { margin-top: -20%; background-image: url(/images/cliff-top-zoomed.svg); }
+  #first-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/internet-earth-sea.svg); } 
+  #first-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff-top.svg); } 
+  #first-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books-clouds-landscape.svg); }
+  @media (orientation: portrait){ 
+    #first-image-section { height: 50vh; }
+    #first-image-section .parallax__layer--back { margin-top: 0%; height: 100vh; }
+    #first-image-section .parallax__layer--base { margin-top: -30%; background-size:130%; }
     #first-image-section .parallax__layer--fore { margin-top: -5%; }
+    @media (min-width: 200px) and (max-width: 0px) {
+      #first-image-section { height: 70vh; margi-top: -40vh; }
+      #first-image-section .parallax__layer--back { margin-top: 50vh; }
+      #first-image-section .parallax__layer--base { margin-top: 0vh; }
+      #first-image-section .parallax__layer--fore { margin-top: 0vh; } 
+    }
+    @media (min-width: 0px) and (max-width: 680px) {
+      #first-image-sectio { }
+        #first-image-section .parallax__layer--back { }
+      #first-image-section .parallax__layer--base { margin-top: -60%; }
+      #first-image-section .parallax__layer--fore { margin-top: -45vh;  } 
+    }
+  }  
+  @media (orientation: landscape){
+    #first-image-section .parallax__layer--fore {  }
+    @media (min-width: 680px) and (max-width: 1024px){ 
+      #first-image-section { height: 120vh; }
+      #first-image-section .parallax__layer--back { margin-top: -10vh; }
+      #first-image-section .parallax__layer--base { margin-top: -55vh; }
+      #first-image-section .parallax__layer--fore { margin-top: -5%; }
+    }
+    @media (min-width: 1024px) and (max-width: 2900px) { #first-image-section { height: 160vh; } }
+    @media (min-width: 2900px) { #first-image-section .parallax__layer--fore { margin-top: -10%; } }
+    @media (min-width: 31500px) { #first-image-section .parallax__layer--fore { margin-top: -20%; } }
   }
-  @media all and (orientation: landscape){
-    #first-image-section { height: 150vh; }
-    #first-image-section .parallax__layer--back { margin-top: 10%; }
-    #first-image-section .parallax__layer--base { margin-top: -30%; background-image: url(/images/cliff-top-zoomed.svg);}
-    #first-image-section .parallax__layer--fore { margin-top: -5%; }
-  } 
-  @media (max-width: 1024px) and (orientation:landscape) { 
-    #first-image-section { height: 100vh; }
-  }
-  @media (min-width: 2900px) and (orientation:landscape) { 
-    #first-image-section .parallax__layer--fore { margin-top: -10%; }
-  }
-  @media (min-width: 3500px) and (orientation:landscape) { 
-    #first-image-section .parallax__layer--fore { margin-top: -20%; }
-  }
-
+  
   /*********/
   /* ABOUT */
   /*********/
-  #about-parallax-section { height: 320vh; z-index: 2; }
+  #about-parallax-section { height: 320vh; z-index: 3; }
   #about-parallax-section .parallax__layer--base { }
 
   /*************************/
   /* SECOND IMAGES SECTION */
   /*************************/
-  #second-image-section { height: 300vh; z-index: 1; }
-  #second-image-section .parallax__layer--deep  { background-size: 100%; margin-top: 40%; }
-  #second-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; margin-top: 45%; border:solid black;}
-  #second-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; margin-top: 45%; }
-  #second-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; margin-top: 26%; }
-  @media all { }
-  @media all {
-    #second-image-section .parallax__layer--deep { background: black; }
-    #second-image-section .parallax__layer--back { background-image: url(/images/FE-books-clouds-landscape.svg); }
-    
+  #second-image-section { z-index: 1; }
+  #second-image-section .parallax__layer--deep  { background-size: 100%; background-image: url(/images/FE-space-&-sun.svg); }
+  #second-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-elements-on-earth.svg); }
+  #second-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-books.svg); }
+  #second-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-responsiveness.svg); }
+  @media (orientation: landscape){
+    #second-image-section .parallax__layer--fore {  }
+    @media (min-width: 680px) and (max-width: 1024px){ 
+      #second-image-section { height: 120vh; }
+      #second-image-section .parallax__layer--back { margin-top: -10vh; }
+      #second-image-section .parallax__layer--base { margin-top: -55vh; }
+      #second-image-section .parallax__layer--fore { margin-top: -5%; }
+    }
+    @media (min-width: 1024px) and (max-width: 2900px) {
+      #second-image-section { height: 300vh; }
+      #second-image-section .parallax__layer--back { margin-top: 120vh; }
+      #second-image-section .parallax__layer--base { margin-top:140vh; }
+    }
+    @media (min-width: 2900px) { #second-image-section .parallax__layer--fore { margin-top: -10%; } }
+    @media (min-width: 31500px) { #second-image-section .parallax__layer--fore { margin-top: -20%; } }
   } 
   
   /**********/
@@ -148,19 +179,14 @@
     #px-text-books { margin-top: -5%; }
   }
 
-  #satellite {
-    background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;
-    height: 10%; width: 10%; margin-left: 60%; top: 50%; -webkit-animation-name: spin; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear;
-  }
-  #comet {
-    background-image: url(/images/comet.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;
-    
-    height: 10%; width: 10%; margin-left: 60%; top: 50%;
-    -webkit-animation: moveclouds 55s linear infinite;
-    -moz-animation: moveclouds 55s linear infinite;
-    -o-animation: moveclouds 55s linear infinite;
-  }
-
+  #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 25%; width: 15%; margin-left: 60%; top: 50%; }
+  #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 3%; width: 3%; -webkit-animation: move-from-left 10s normal forwards; -moz-animation: move-from-left 10s normal forwards; -o-animation: move-from-left 10s normal forwards;}
+  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-left 10s normal forwards; -moz-animation: move-from-left 10s normal forwards; -o-animation: move-from-left 10s normal forwards;}
+  #orbit-one { position: absolute; left: 10%; top: 0%;  height: 150vh; width: 150vh; }
+  #orbit-two { position: absolute; left: 10%; top: 20%;  height: 150vh; width: 150vh; }
+  .spin { -webkit-animation-name: spin; -webkit-animation-duration: 300000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-duration: 300000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin; -ms-animation-duration: 300000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .from-left-orbit { -webkit-animation: move-from-left 2s normal forwards; -moz-animation: move-from-left 2s normal forwards; -o-animation: move-from-left 2s normal forwards; }
+  .from-right-orbit { -webkit-animation: move-from-right 15s normal forwards; -moz-animation: move-from-right 15s normal forwards; -o-animation: move-from-right 15s normal forwards; }
 
 /**************/
 /* ANIMATIONS */
@@ -170,15 +196,28 @@
   to { -webkit-transform:rotate(360deg); }
 }
 
-@-webkit-keyframes moveclouds {
-  0% {margin-left: 1000px;}
-  100% {margin-left: -1000px;}
+@-webkit-keyframes move-from-left {
+  0% {margin-left: 0px;}
+  100% {margin-left: 1500px;}
 }
-@-moz-keyframes moveclouds {
-  0% {margin-left: 1000px;}
-  100% {margin-left: -1000px;}
+@-moz-keyframes move-from-left {
+  0% {margin-left: 0px;}
+  100% {margin-left: 1500px;}
 }
-@-o-keyframes moveclouds {
-  0% {margin-left: 1000px;}
-  100% {margin-left: -1000px;}
+@-o-keyframes move-from-left {
+  0% {margin-left: 0pxpx;}
+  100% {margin-left: 1500px;}
+}
+
+@-webkit-keyframes move-from-right {
+  100% {margin-left: 0px;}
+  0% {margin-left: -150px;}
+}
+@-moz-keyframes move-from-right {
+  100% {margin-left: 0px;}
+  0% {margin-left: -150px;}
+}
+@-o-keyframes move-from-right {
+  100% {margin-left: 0px;}
+  0% {margin-left: -150px;}
 }
