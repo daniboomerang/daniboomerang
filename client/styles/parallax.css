@@ -1,7 +1,7 @@
   /************/
   /* PARALLAX */
   /************/
-  /** { -webkit-overflow-scrolling: touch; }*/
+  * { -webkit-overflow-scrolling: touch; }
   .parallax { height: 100vh; /* fallback for older browsers */ height: 100vh; overflow-x: hidden; overflow-y: auto; -webkit-perspective: 300px; perspective: 300px; -webkit-perspective-origin-x: 100%; perspective-origin-x: 100%; }
   .parallax__section { position: relative; height: 100vh; /* fallback for older browsers */ height: 100vh; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
   .parallax__layer { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
@@ -18,12 +18,12 @@
   #cover-parallax-section .parallax__layer--back { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon.svg); }
   @media (orientation: portrait){ 
     #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-&-sun-portrait.svg); } 
-    @media (min-width: 200px) and (max-width: 0px) {
+    @media (min-width: 200px) and (max-width: 500px) {
       #cover-parallax-section { height: 120vh; }      #cover-parallax-section .parallax__layer--deep { margin-top: -100vh; }
       #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
       #cover-parallax-section .parallax__layer--back { margin-top: 70vh; }
     }
-    @media (min-width: 0px) and (max-width: 680px) {
+    @media (min-width: 500px) and (max-width: 680px) {
       #cover-parallax-secion { height: 220vh; }
       #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
       #cover-parallax-section .parallax__layer--back { margin-top: 130vh; }
@@ -51,7 +51,7 @@
   /*********************************/
   #first-image-section { z-index: 2; }
   #first-image-section .parallax__layer--deep { } 
-  #first-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/internet-earth-sea.svg); } 
+  #first-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/internet-earth-sea-testtt.svg); } 
   #first-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff-top.svg); } 
   #first-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books-clouds-landscape.svg); }
   @media (orientation: portrait){ 
@@ -59,13 +59,13 @@
     #first-image-section .parallax__layer--back { margin-top: 0%; height: 100vh; }
     #first-image-section .parallax__layer--base { margin-top: -30%; background-size:130%; }
     #first-image-section .parallax__layer--fore { margin-top: -5%; }
-    @media (min-width: 200px) and (max-width: 0px) {
+    @media (min-width: 200px) and (max-width: 500px) {
       #first-image-section { height: 70vh; margi-top: -40vh; }
       #first-image-section .parallax__layer--back { margin-top: 50vh; }
       #first-image-section .parallax__layer--base { margin-top: 0vh; }
       #first-image-section .parallax__layer--fore { margin-top: 0vh; } 
     }
-    @media (min-width: 0px) and (max-width: 680px) {
+    @media (min-width: 500px) and (max-width: 680px) {
       #first-image-sectio { }
         #first-image-section .parallax__layer--back { }
       #first-image-section .parallax__layer--base { margin-top: -60%; }
@@ -73,14 +73,15 @@
     }
   }  
   @media (orientation: landscape){
-    #first-image-section .parallax__layer--fore {  }
+    #first-image-section .parallax__layer--fore { background-size: 100%; border: }
     @media (min-width: 680px) and (max-width: 1024px){ 
       #first-image-section { height: 120vh; }
       #first-image-section .parallax__layer--back { margin-top: -10vh; }
       #first-image-section .parallax__layer--base { margin-top: -55vh; }
       #first-image-section .parallax__layer--fore { margin-top: -5%; }
     }
-    @media (min-width: 1024px) and (max-width: 2900px) { #first-image-section { height: 160vh; } }
+    @media (min-width: 1024px) and (max-width: 2900px) { #first-image-section { height: 160vh; }
+      #first-image-section .parallax__layer--base { margin-top: -40%;} } 
     @media (min-width: 2900px) { #first-image-section .parallax__layer--fore { margin-top: -10%; } }
     @media (min-width: 31500px) { #first-image-section .parallax__layer--fore { margin-top: -20%; } }
   }
@@ -181,13 +182,11 @@
 
   #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 25%; width: 15%; margin-left: 60%; top: 50%; }
   #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 3%; width: 3%; -webkit-animation: move-from-left 10s normal forwards; -moz-animation: move-from-left 10s normal forwards; -o-animation: move-from-left 10s normal forwards;}
-  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-left 10s normal forwards; -moz-animation: move-from-left 10s normal forwards; -o-animation: move-from-left 10s normal forwards;}
+  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-right 8s normal forwards; -moz-animation: move-from-right 8s normal forwards; -o-animation: move-from-right 8s normal forwards;}
   #orbit-one { position: absolute; left: 10%; top: 0%;  height: 150vh; width: 150vh; }
   #orbit-two { position: absolute; left: 10%; top: 20%;  height: 150vh; width: 150vh; }
-  .spin { -webkit-animation-name: spin; -webkit-animation-duration: 300000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-duration: 300000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin; -ms-animation-duration: 300000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
-  .from-left-orbit { -webkit-animation: move-from-left 2s normal forwards; -moz-animation: move-from-left 2s normal forwards; -o-animation: move-from-left 2s normal forwards; }
-  .from-right-orbit { -webkit-animation: move-from-right 15s normal forwards; -moz-animation: move-from-right 15s normal forwards; -o-animation: move-from-right 15s normal forwards; }
-
+  .spin { -webkit-animation-name: spin; -webkit-animation-duration: 100000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-duration: 100000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin; -ms-animation-duration: 100000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+    
 /**************/
 /* ANIMATIONS */
 /**************/
