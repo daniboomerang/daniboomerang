@@ -14,12 +14,13 @@
   /* COVER SECTION */
   /*****************/
   #cover-parallax-section { z-index: 1; }
-  #cover-parallax-section .parallax__layer--deep { background-size: 100%; background-position: center; background-repeat: no-repeat; }
+  #cover-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; }
   #cover-parallax-section .parallax__layer--back { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon.svg); }
   @media (orientation: portrait){ 
     #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-&-sun-portrait.svg); } 
     @media (min-width: 200px) and (max-width: 500px) {
-      #cover-parallax-section { height: 120vh; }      #cover-parallax-section .parallax__layer--deep { margin-top: -100vh; }
+      #cover-parallax-section { height: 120vh; }
+      #cover-parallax-section .parallax__layer--deep { margin-top: -100vh; }
       #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
       #cover-parallax-section .parallax__layer--back { margin-top: 70vh; }
     }
@@ -36,7 +37,7 @@
   }  
   @media (orientation: landscape){
     #cover-parallax-section { height: 220vh; }
-    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-&-sun-landscape.svg); }
+    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-landscape.svg); }
     #cover-parallax-section .parallax__layer--back { margin-top: 120vh;}
     #cover-parallax-section .parallax__layer--base { margin-top: 15vh; }
     @media (max-width: 800px) { #cover-parallax-section { height: 150vh; } }
@@ -51,9 +52,9 @@
   /*********************************/
   #first-image-section { z-index: 2; }
   #first-image-section .parallax__layer--deep { } 
-  #first-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/internet-earth-sea-testtt.svg); } 
-  #first-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff-top.svg); } 
-  #first-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books-clouds-landscape.svg); }
+  #first-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/earth-connectivity-test.svg); } 
+  #first-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); } 
+  #first-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books.svg); }
   @media (orientation: portrait){ 
     #first-image-section { height: 50vh; }
     #first-image-section .parallax__layer--back { margin-top: 0%; height: 100vh; }
@@ -66,8 +67,7 @@
       #first-image-section .parallax__layer--fore { margin-top: 0vh; } 
     }
     @media (min-width: 500px) and (max-width: 680px) {
-      #first-image-sectio { }
-        #first-image-section .parallax__layer--back { }
+      #first-image-section .parallax__layer--back { }
       #first-image-section .parallax__layer--base { margin-top: -60%; }
       #first-image-section .parallax__layer--fore { margin-top: -45vh;  } 
     }
@@ -80,8 +80,10 @@
       #first-image-section .parallax__layer--base { margin-top: -55vh; }
       #first-image-section .parallax__layer--fore { margin-top: -5%; }
     }
-    @media (min-width: 1024px) and (max-width: 2900px) { #first-image-section { height: 160vh; }
-      #first-image-section .parallax__layer--base { margin-top: -40%;} } 
+    @media (min-width: 1024px) and (max-width: 2900px) {
+      #first-image-section { height: 160vh; }
+      #first-image-section .parallax__layer--base { margin-top: -40%;}
+    } 
     @media (min-width: 2900px) { #first-image-section .parallax__layer--fore { margin-top: -10%; } }
     @media (min-width: 31500px) { #first-image-section .parallax__layer--fore { margin-top: -20%; } }
   }
@@ -96,10 +98,10 @@
   /* SECOND IMAGES SECTION */
   /*************************/
   #second-image-section { z-index: 1; }
-  #second-image-section .parallax__layer--deep  { background-size: 100%; background-image: url(/images/FE-space-&-sun.svg); }
-  #second-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-elements-on-earth.svg); }
-  #second-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-books.svg); }
-  #second-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-responsiveness.svg); }
+  #second-image-section .parallax__layer--deep  { background-size: 100%; background-image: url(/images/BE-space.svg); }
+  #second-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-earth-right.svg); }
+  #second-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-elements.svg); }
+  #second-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-books.svg); }
   @media (orientation: landscape){
     #second-image-section .parallax__layer--fore {  }
     @media (min-width: 680px) and (max-width: 1024px){ 
@@ -109,13 +111,15 @@
       #second-image-section .parallax__layer--fore { margin-top: -5%; }
     }
     @media (min-width: 1024px) and (max-width: 2900px) {
-      #second-image-section { height: 300vh; }
-      #second-image-section .parallax__layer--back { margin-top: 120vh; }
-      #second-image-section .parallax__layer--base { margin-top:140vh; }
+      #second-image-section { height: 250vh; }
+      #second-image-section .parallax__layer--deep { margin-top: 0vh; }
+      #second-image-section .parallax__layer--back { margin-top: 40vh; }
+      #second-image-section .parallax__layer--base { margin-top: 70vh; }
+      #second-image-section .parallax__layer--fore { margin-top: 80vh; }
     }
     @media (min-width: 2900px) { #second-image-section .parallax__layer--fore { margin-top: -10%; } }
     @media (min-width: 31500px) { #second-image-section .parallax__layer--fore { margin-top: -20%; } }
-  } 
+  }  
   
   /**********/
   /* LOVING */
@@ -126,17 +130,30 @@
   /*************************/
   /* THIRD IMAGES SECTION */
   /*************************/
-  #third-image-section { height: 250vh; z-index: 1; }
-  #third-image-section .parallax__layer--deep  { background-size: 100%; }
-  #third-image-section .parallax__layer--back { background-size: 100%; margin-top: -20%;}
-  #third-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat;}
-  #third-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; margin-top: 20%;}
-  @media all { }
-  @media all {
-    #third-image-section .parallax__layer--deep { background: black; }
-    #third-image-section .parallax__layer--base { background-image: url(/images/screen-&-laptop-clouds-landscape.svg); }
-    #third-image-section .parallax__layer--fore { background-image: url(/images/mobile-clouds-landscape.svg); }
-  }   
+  #third-image-section { z-index: 1; }
+  #third-image-section .parallax__layer--deep  { background-size: 100%; background-image: url(/images/BE-sky.svg); }
+  #third-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-clouds.svg); }
+  #third-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-city.svg); }
+  #third-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-books.svg); }
+  @media (orientation: landscape){
+    #third-image-section .parallax__layer--fore {  }
+    @media (min-width: 680px) and (max-width: 1024px){ 
+      #third-image-section { height: 120vh; }
+      #third-image-section .parallax__layer--back { margin-top: -10vh; }
+      #third-image-section .parallax__layer--base { margin-top: -55vh; }
+      #third-image-section .parallax__layer--fore { margin-top: -5%; }
+    }
+    @media (min-width: 1024px) and (max-width: 2900px) {
+      #third-image-section { height: 250vh; }
+      #third-image-section .parallax__layer--deep { margin-top: 0vh; }
+      #third-image-section .parallax__layer--back { margin-top: 60vh; }
+      #third-image-section .parallax__layer--base { margin-top: 80vh; }
+      #third-image-section .parallax__layer--fore { margin-top: 100vh; }
+    }
+    @media (min-width: 2900px) { #third-image-section .parallax__layer--fore { margin-top: -10%; } }
+    @media (min-width: 31500px) { #third-image-section .parallax__layer--fore { margin-top: -20%; } }
+  } 
+
   /********/
   /* WORK */
   /********/
@@ -146,18 +163,30 @@
   /*************************/
   /* FOURTH IMAGES SECTION */
   /*************************/
-  fourth-image-section { height: 220vh; z-index: 3; }
-  fourth-image-section .parallax__layer--deep  { background-size: 100%; }
-  fourth-image-section .parallax__layer--back { background-size: 100%; }
-  fourth-image-section .parallax__layer--base { background-size: 100%; }
-  fourth-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat;}
-  @media all { }
-  @media all {
-    fourth-image-section .parallax__layer--deep { background-image: url(/images/sunrise-step3-landscape.svg); }
-    fourth-image-section .parallax__layer--back { background-image: url();}
-    fourth-image-section .parallax__layer--base { background-image: url(); }
-    fourth-image-section .parallax__layer--fore { background-image: url(); }
-  }   
+
+  #fourth-image-section { z-index: 1; }
+  #fourth-image-section .parallax__layer--deep  { background-repeat: no-repeat; background-size: 100%; background-image: url(/images/space-&-sun-landscape-test.svg); }
+  #fourth-image-section .parallax__layer--back { background-repeat: no-repeat; background-size: 100%; }
+  #fourth-image-section .parallax__layer--base { background-repeat: no-repeat; background-size: 100%; background-image: url(/images/screen-&-laptop-clouds-landscape.svg); }
+  #fourth-image-section .parallax__layer--fore { background-repeat: no-repeat; background-size: 100%; background-image: url(/images/mobile-clouds-landscape.svg); }
+  @media (orientation: landscape){
+    #fourth-image-section .parallax__layer--fore {  }
+    @media (min-width: 680px) and (max-width: 1024px){ 
+      #fourth-image-section { height: 120vh; }
+      #fourth-image-section .parallax__layer--back { margin-top: -10vh; }
+      #fourth-image-section .parallax__layer--base { margin-top: -55vh; }
+      #fourth-image-section .parallax__layer--fore { margin-top: -5%; }
+    }
+    @media (min-width: 1024px) and (max-width: 2900px) {
+      #fourth-image-section { height: 250vh; }
+      #fourth-image-section .parallax__layer--deep { margin-top: 0vh; }
+      #fourth-image-section .parallax__layer--back { margin-top: 0vh; }
+      #fourth-image-section .parallax__layer--base { margin-top: 0vh; }
+      #fourth-image-section .parallax__layer--fore { margin-top: 0vh; }
+    }
+    @media (min-width: 2900px) { #fourth-image-section .parallax__layer--fore { margin-top: -10%; } }
+    @media (min-width: 31500px) { #fourth-image-section .parallax__layer--fore { margin-top: -20%; } }
+  } 
 
   /***********/
   /* CONTACT */
@@ -180,43 +209,84 @@
     #px-text-books { margin-top: -5%; }
   }
 
-  #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 25%; width: 15%; margin-left: 60%; top: 50%; }
-  #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 3%; width: 3%; -webkit-animation: move-from-left 10s normal forwards; -moz-animation: move-from-left 10s normal forwards; -o-animation: move-from-left 10s normal forwards;}
-  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-right 8s normal forwards; -moz-animation: move-from-right 8s normal forwards; -o-animation: move-from-right 8s normal forwards;}
-  #orbit-one { position: absolute; left: 10%; top: 0%;  height: 150vh; width: 150vh; }
-  #orbit-two { position: absolute; left: 10%; top: 20%;  height: 150vh; width: 150vh; }
-  .spin { -webkit-animation-name: spin; -webkit-animation-duration: 100000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin; -moz-animation-duration: 100000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin; -ms-animation-duration: 100000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 15%; width: 5%; -webkit-animation: move-from-left 6s infinite; -moz-animation: move-from-left 6s infinite; -o-animation: move-from-left 6s infinite; }
+  #iss { background-image: url(/images/iss.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #space-stone { background-image: url(/images/stone.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #space-stones { background-image: url(/images/stones.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #space-stones-1 { background-image: url(/images/stones-1.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 2%; width: 2%; -webkit-animation: move-from-right 10s normal infinite; -moz-animation: move-from-right 10s normal infinite; -o-animation: move-from-right 10s normal infinite;}
+  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-left 10s normal infinite; -moz-animation: move-from-left 10s normal infinite; -o-animation: move-from-left 10s normal infinite;}
+  #comet-white { background-image: url(/images/comet-white.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 1.5%; width: 1.5%; -webkit-animation: move-from-left 12s normal infinite; -moz-animation: move-from-left 12s normal infinite; -o-animation: move-from-left 12s normal infinite;}
+  #orbit-one { position: absolute; left: 0%; top: 0%;  height: 20vh; width: 150vh; }
+  #orbit-two { position: absolute; left: 0%; top: 20%;  height: 20vh; width: 150vh; }
+  #orbit-three { position: absolute; left: 0%; top: 30%;  height: 20vh; width: 150vh; }
+  #orbit-four { margin-left: 50%; margin-top: -5%;  height: 20vh; width: 20vh; }
+  #orbit-five { margin-left: 30%; margin-top: 25%;  height: 25vh; width: 25vh; }
+  #orbit-six { margin-left: 10%; margin-top: 15%;  height: 25vh; width: 25vh; }
+  #orbit-seven { margin-left: 10%; margin-top: 0%;  height: 25vh; width: 25vh; }
+  #BE-dboom{ background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 65%; width: 65%; position:absolute; bottom:20%; right:0; }
+  #boomerang { background-image: url(/images/dboom-icon.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 15%; width: 25%; margin-bottom: 20%;}
+  .spin-right { -webkit-animation-name: spin-right; -webkit-animation-duration: 100000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right; -moz-animation-duration: 100000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right; -ms-animation-duration: 100000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-right-fast { -webkit-animation-name: spin-right-fast; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-fast; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-fast; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-boomerang { -webkit-animation-name: spin-right-fast; -webkit-animation-duration: 1000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-fast; -moz-animation-duration: 1000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-fast; -ms-animation-duration: 1000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-left { -webkit-animation-name: spin-left; -webkit-animation-duration: 100000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left; -moz-animation-duration: 100000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left; -ms-animation-duration: 100000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+
     
 /**************/
 /* ANIMATIONS */
 /**************/
-@-webkit-keyframes spin {
-  from { -webkit-transform:rotate(0deg); }
-  to { -webkit-transform:rotate(360deg); }
+@keyframes spin-right-fast {
+  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
+  to { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -o-transform:rotate(360deg); /* Opera */-webkit-transform:rotate(360deg); }
+}
+
+@keyframes spin-right {
+  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
+  to { transform:rotate(50deg); -ms-transform:rotate(50deg); /* IE 9 */ -moz-transform:rotate(50deg); /* Firefox */ -o-transform:rotate(50deg); /* Opera */-webkit-transform:rotate(50deg); }
+}
+
+@keyframes spin-left {
+  from { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -webkit-transform:rotate(360deg); /* Safari and Chrome */ -o-transform:rotate(360deg); /* Opera */ }
+  to { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -o-transform:rotate(0deg); /* Opera */-webkit-transform:rotate(0deg); }
+}
+
+@-webkit-keyframes spin-right-fast {
+  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
+  to { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -o-transform:rotate(360deg); /* Opera */-webkit-transform:rotate(360deg); }
+}
+
+@-webkit-keyframes spin-right {
+  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
+  to { transform:rotate(50deg); -ms-transform:rotate(50deg); /* IE 9 */ -moz-transform:rotate(50deg); /* Firefox */ -o-transform:rotate(50deg); /* Opera */-webkit-transform:rotate(50deg); }
+}
+
+@-webkit-keyframes spin-left {
+  from { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -webkit-transform:rotate(360deg); /* Safari and Chrome */ -o-transform:rotate(360deg); /* Opera */ }
+  to { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -o-transform:rotate(0deg); /* Opera */-webkit-transform:rotate(0deg); }
 }
 
 @-webkit-keyframes move-from-left {
-  0% {margin-left: 0px;}
-  100% {margin-left: 1500px;}
+  0% {margin-left: -300vh;}
+  100% {margin-left: 300vh;}
 }
 @-moz-keyframes move-from-left {
-  0% {margin-left: 0px;}
-  100% {margin-left: 1500px;}
+  0% {margin-left: -300vh;}
+  100% {margin-left: 300vh;}
 }
 @-o-keyframes move-from-left {
-  0% {margin-left: 0pxpx;}
-  100% {margin-left: 1500px;}
+  0% {margin-left: -300vh;}
+  100% {margin-left: 300vh;}
 }
 
 @-webkit-keyframes move-from-right {
-  100% {margin-left: 0px;}
-  0% {margin-left: -150px;}
+  0% {margin-right: 0px;}
+  100% {margin-right: 1500px;}
 }
 @-moz-keyframes move-from-right {
-  100% {margin-left: 0px;}
-  0% {margin-left: -150px;}
+  0% {margin-right: 0px;}
+  100% {margin-right: 1500px;}
 }
 @-o-keyframes move-from-right {
-  100% {margin-left: 0px;}
-  0% {margin-left: -150px;}
+  0% {margin-right: 0px;}
+  100% {margin-right: 1500px;}
 }

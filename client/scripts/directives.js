@@ -13,30 +13,6 @@ daniboomerangDirectives.directive('parallax', function($interval) {
     link: function (scope, element) {
       init();
       function init(){
-        scope.showCometBlue = false;
-        scope.showCometRed = false;
-        var orbit = element.find('#orbit');
-        var i = 0;
-        $interval(function() {
-          if(i & 1){
-            scope.showCometBlue = true;
-            scope.showCometRed = false;
-            
-            /*orbit.removeClass('comet-red');
-            orbit.addClass('comet-blue');
-            orbit.removeClass('from-left-orbit');
-            orbit.addClass('from-right-orbit');*/
-          }
-          else {
-            scope.showCometBlue = false;
-            scope.showCometRed = true;
-            /*orbit.removeClass('comet-blue');
-            orbit.addClass('comet-red');
-            orbit.removeClass('from-right-orbit');
-            orbit.addClass('from-left-orbit');*/
-          }  
-          i++;
-        }, 500);
       }
     }
   };
