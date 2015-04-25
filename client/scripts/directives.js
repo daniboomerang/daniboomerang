@@ -161,7 +161,7 @@ daniboomerangDirectives.directive('topnavbar', function() {
           if (area == 'About'){ aboutLink.addClass('active'); aboutIcon.addClass('faa-spin animated '); }
           else if (area == 'Loving'){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); }
           else if (area == 'Work'){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); }
-          else if (area == 'Contact'){ contactLink.addClass('active'); contactIcon.addClass('faa-pulse animated'); }
+          else if (area == 'Contact'){ header.removeClass('expand'); }
         });  
 
         scope.$on('event:inactiveArea', function($event, area){
@@ -170,7 +170,6 @@ daniboomerangDirectives.directive('topnavbar', function() {
           if (area == 'About'){ aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); } 
           else if (area == 'Loving'){ lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); }
           else if (area == 'Work'){ workLink.removeClass('active'); workIcon.removeClass('faa-pulse animated'); }
-          else if (area == 'Contact'){ contactLink.removeClass('active'); contactIcon.removeClass('faa-pulse animated'); }
         });
       }
     }

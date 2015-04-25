@@ -1,0 +1,52 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="386.84" width="386.84" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 386.84656 386.84702">
+ <defs>
+  <style type="text/css">.str0 {stroke:#1F1A17;stroke-width:0.00710253}
+    .str1 {stroke:#DEDEDD;stroke-width:0.0426112}
+    .fil2 {fill:none}
+    .fil5 {fill:#00923F}
+    .fil0 {fill:#1F1A17}
+    .fil3 {fill:#00923F;fill-rule:nonzero}
+    .fil4 {fill:#2AAD78;fill-rule:nonzero}
+    .fil1 {fill:white;fill-rule:nonzero}</style>
+  <style type="text/css">.str0 {stroke:#4D4948;stroke-width:0.147924}
+    .str2 {stroke:#582E3A;stroke-width:0.29589}
+    .str3 {stroke:#582E3A;stroke-width:0.29589;stroke-linecap:round}
+    .str1 {stroke:#E77817;stroke-width:0.591821;stroke-linecap:round}
+    .fil2 {fill:none}
+    .fil1 {fill:#4D4948}
+    .fil5 {fill:#582E3A}
+    .fil3 {fill:#DEDEDD}
+    .fil4 {fill:#582E3A;fill-rule:nonzero}
+    .fil0 {fill:black;fill-rule:nonzero}</style>
+  <style type="text/css">.str0 {stroke:#4D4948;stroke-width:0.147924}
+    .str2 {stroke:#582E3A;stroke-width:0.29589}
+    .str3 {stroke:#582E3A;stroke-width:0.29589;stroke-linecap:round}
+    .str1 {stroke:#E77817;stroke-width:0.591821;stroke-linecap:round}
+    .fil2 {fill:none}
+    .fil1 {fill:#4D4948}
+    .fil5 {fill:#582E3A}
+    .fil3 {fill:#DEDEDD}
+    .fil4 {fill:#582E3A;fill-rule:nonzero}
+    .fil0 {fill:black;fill-rule:nonzero}</style>
+  <filter id="c" height="1.5021" width="1.4598" y="-.25106" x="-.22988">
+   <feGaussianBlur stdDeviation="28.711558"/>
+  </filter>
+  <radialGradient id="a" gradientUnits="userSpaceOnUse" cy="400" cx="400" r="379.03">
+   <stop stop-color="#ec3f25" offset="0"/>
+   <stop stop-color="#381e1e" stop-opacity="0" offset="1"/>
+  </radialGradient>
+  <filter id="b">
+   <feGaussianBlur stdDeviation="1.8532722"/>
+  </filter>
+ </defs>
+ <g transform="matrix(0.8 0 0 .80001 -200.36 -45.535)">
+  <g transform="translate(92.229 -101.3)">
+   <g transform="matrix(.64 0 0 .64 144 144)">
+    <circle style="color:#000000" transform="translate(-.0000018515 -4.0344e-7)" cy="400" cx="400" r="377.78" fill="url(#a)"/>
+    <path stroke-linejoin="round" style="color:#000000" d="m544 409.02c8.3222 13.742 11.254 27.892-5.4694 47.206-15.547 22.013-10.003 27.391-30.473 46.249-19.902 5.7655-4.8183 32.384-31.501 40.207-25.752 11.342-64.517-8.3086-74.899-12.859-25.644-7.7189-32.959 10.686-58.332 8.616-26.606-8.5149-32.841-30.009-50.232-33.85-8.1265-21.563 3.743-40.882-12.182-52.949 1.9804-12.455-32.883-17.637-28.928-46.108-5.2256-10.76-5.3118-50.616-6.3151-73.23 12.042-8.0362 59.269-17.519 63.414-24.881 22.633-12.312 9.2705-43.14 27.467-40.319 8.1168-1.9562 60.174 4.8984 72.244-2.0243 24.701 8.4068 16.35 14.498 40.406 14.78 22.162-1.3158 62.757-42.044 68.829-21.864 16.1 22.021 32.999 83.72 36.898 109.92 8.3282 26.632-25.925 7.2364-24.278 36.386 7.5116-6.6012 12.786 14.226 14.119 4.3156" transform="translate(-.0000018515 -4.0344e-7)" filter="url(#c)" stroke="#000" stroke-linecap="round" stroke-width="2.5" fill="#8a8a8a"/>
+    <circle stroke-linejoin="round" style="color:#000000" cx="400" stroke-linecap="round" transform="translate(-.0000018515 -4.0344e-7)" stroke="#000" cy="400" r="149.21" stroke-width="2.5"/>
+    <path style="color:#000000" transform="matrix(.40259 -.26341 .54751 .8368 514.86 281.11)" filter="url(#b)" fill="#f4d7d7" d="m11.111 68.254-26.929-25.018 20.531 29.894-23-28.673 15.96 32.565-18.579-31.716 11.048 34.542-13.764-34.083l5.9014 35.782-8.6548-35.724 0.62858 36.26-3.3611-36.603-4.6577 35.965 2.0042-36.703-9.8446 34.904 7.3268-36.02-14.822 33.099 12.493-34.569-19.483 30.588 17.393-32.382-23.729 27.425 21.923-29.504-27.469 23.678 25.985-25.998-30.624 19.426 29.494-21.937-33.126 14.76 32.373-17.409-34.922 9.7796 34.563-12.51-35.974 4.5906 36.016-7.3443-36.259-0.69614 36.702-2.022-35.771-5.9681 36.605 3.3433-34.521-11.115 35.728 8.638-32.535-16.021 34.09 13.748-29.856-20.587 31.725 18.564-26.54-24.715 28.684 22.986-22.659-28.316 25.031 26.917-18.295-31.313 20.845 30.275-13.54-33.643 16.215 32.988-8.4976-35.256 11.239 34.997-3.2737-36.118 6.024 36.26 2.0199-36.209 0.68026 36.751 7.2705-35.529-4.676 36.459 12.366-34.092-9.936 35.389 17.198-31.929-14.983 33.565 21.663-29.084-19.71 31.026 25.667-25.62-24.018 27.825 29.124-21.609-27.813 24.032 31.96-17.139-31.016 19.726 34.115-12.303-33.558 15 35.543-7.205-35.384 9.954 36.213-1.952-36.456 4.695 36.111 3.341-36.751-0.662 35.24 8.563-36.263-6.006 33.617 13.603-35.002-11.223 31.279 18.353-32.995-16.199 28.273 22.712-30.285-20.831z"/>
+   </g>
+  </g>
+ </g>
+</svg>

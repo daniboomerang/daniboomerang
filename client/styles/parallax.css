@@ -37,55 +37,57 @@
   }  
   @media (orientation: landscape){
     #cover-parallax-section { height: 220vh; }
-    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/space-landscape.svg); }
+    #cover-parallax-section .parallax__layer--deep { background-image: url(/images/cover-space-ld.svg); }
     #cover-parallax-section .parallax__layer--back { margin-top: 120vh;}
     #cover-parallax-section .parallax__layer--base { margin-top: 15vh; }
     @media (max-width: 800px) { #cover-parallax-section { height: 150vh; } }
     @media (max-width: 992px) { #cover-parallax-section .parallax__layer--base { margin-top: 10vh; } }
-    @media (min-width: 1024px) { #cover-parallax-section .parallax__layer--deep { margin-top: -10%; } }
+    @media (min-width: 1024px) { #cover-parallax-section .parallax__layer--deep { margin-top: 0%; } }
     @media (min-width: 2900px) { #cover-parallax-section .parallax__layer--deep { margin-top: -10%; } }
     @media (min-width: 31500px) { #cover-parallax-section .parallax__layer--deep { margin-top: -20%; } } 
   }
   
-  /*********************************/
-  /* FIRST IMAGE SECTION */
-  /*********************************/
-  #first-image-section { z-index: 2; }
-  #first-image-section .parallax__layer--deep { } 
-  #first-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/earth-connectivity-test.svg); } 
-  #first-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); } 
-  #first-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books.svg); }
+  
+  /***********************/
+  /* COVER IMAGE SECTION */
+  /***********************/
+  #cover-image-section { z-index: 2; }
+  #cover-image-section .parallax__layer--deep { } 
+  #cover-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/earth-connectivity-test.svg); } 
+  #cover-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); } 
+  #cover-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books.svg); }
   @media (orientation: portrait){ 
-    #first-image-section { height: 50vh; }
-    #first-image-section .parallax__layer--back { margin-top: 0%; height: 100vh; }
-    #first-image-section .parallax__layer--base { margin-top: -30%; background-size:130%; }
-    #first-image-section .parallax__layer--fore { margin-top: -5%; }
+    #cover-image-section { height: 50vh; }
+    #cover-image-section .parallax__layer--back { margin-top: 0%; height: 100vh; }
+    #cover-image-section .parallax__layer--base { margin-top: -30%; background-size:130%; }
+    #cover-image-section .parallax__layer--fore { margin-top: -5%; }
     @media (min-width: 200px) and (max-width: 500px) {
-      #first-image-section { height: 70vh; margi-top: -40vh; }
-      #first-image-section .parallax__layer--back { margin-top: 50vh; }
-      #first-image-section .parallax__layer--base { margin-top: 0vh; }
-      #first-image-section .parallax__layer--fore { margin-top: 0vh; } 
+      #cover-image-section { height: 70vh; margi-top: -40vh; }
+      #cover-image-section .parallax__layer--back { margin-top: 50vh; }
+      #cover-image-section .parallax__layer--base { margin-top: 0vh; }
+      #cover-image-section .parallax__layer--fore { margin-top: 0vh; } 
     }
     @media (min-width: 500px) and (max-width: 680px) {
-      #first-image-section .parallax__layer--back { }
-      #first-image-section .parallax__layer--base { margin-top: -60%; }
-      #first-image-section .parallax__layer--fore { margin-top: -45vh;  } 
+      #cover-image-section .parallax__layer--back { }
+      #cover-image-section .parallax__layer--base { margin-top: -60%; }
+      #cover-image-section .parallax__layer--fore { margin-top: -45vh;  } 
     }
   }  
   @media (orientation: landscape){
-    #first-image-section .parallax__layer--fore { background-size: 100%; border: }
+    #cover-image-section .parallax__layer--fore { background-size: 100%; border: }
     @media (min-width: 680px) and (max-width: 1024px){ 
-      #first-image-section { height: 120vh; }
-      #first-image-section .parallax__layer--back { margin-top: -10vh; }
-      #first-image-section .parallax__layer--base { margin-top: -55vh; }
-      #first-image-section .parallax__layer--fore { margin-top: -5%; }
+      #cover-image-section { height: 120vh; }
+      #cover-image-section .parallax__layer--back { margin-top: -10vh; }
+      #cover-image-section .parallax__layer--base { margin-top: -55vh; }
+      #cover-image-section .parallax__layer--fore { margin-top: -5%; }
     }
     @media (min-width: 1024px) and (max-width: 2900px) {
-      #first-image-section { height: 160vh; }
-      #first-image-section .parallax__layer--base { margin-top: -40%;}
+      #cover-image-section { height: 160vh; }
+      #cover-image-section .parallax__layer--base { margin-top: -40%;}
+      #cover-image-section .parallax__layer--back { margin-top: 10%;}
     } 
-    @media (min-width: 2900px) { #first-image-section .parallax__layer--fore { margin-top: -10%; } }
-    @media (min-width: 31500px) { #first-image-section .parallax__layer--fore { margin-top: -20%; } }
+    @media (min-width: 2900px) { #cover-image-section .parallax__layer--fore { margin-top: -10%; } }
+    @media (min-width: 31500px) { #cover-image-section .parallax__layer--fore { margin-top: -20%; } }
   }
   
   /*********/
@@ -98,8 +100,8 @@
   /* SECOND IMAGES SECTION */
   /*************************/
   #second-image-section { z-index: 1; }
-  #second-image-section .parallax__layer--deep  { background-size: 100%; background-image: url(/images/BE-space.svg); }
-  #second-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-earth-right.svg); }
+  #second-image-section .parallax__layer--deep { background-size: 100%; background-image: url(/images/BE-space.svg); }
+  #second-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-earth.svg); }
   #second-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-elements.svg); }
   #second-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-books.svg); }
   @media (orientation: landscape){
@@ -114,8 +116,8 @@
       #second-image-section { height: 250vh; }
       #second-image-section .parallax__layer--deep { margin-top: 0vh; }
       #second-image-section .parallax__layer--back { margin-top: 40vh; }
-      #second-image-section .parallax__layer--base { margin-top: 70vh; }
-      #second-image-section .parallax__layer--fore { margin-top: 80vh; }
+      #second-image-section .parallax__layer--base { margin-top: 110vh; }
+      #second-image-section .parallax__layer--fore { margin-top: -20vh; }
     }
     @media (min-width: 2900px) { #second-image-section .parallax__layer--fore { margin-top: -10%; } }
     @media (min-width: 31500px) { #second-image-section .parallax__layer--fore { margin-top: -20%; } }
@@ -131,10 +133,10 @@
   /* THIRD IMAGES SECTION */
   /*************************/
   #third-image-section { z-index: 1; }
-  #third-image-section .parallax__layer--deep  { background-size: 100%; background-image: url(/images/BE-sky.svg); }
-  #third-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-clouds.svg); }
-  #third-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-city.svg); }
-  #third-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-books.svg); }
+  #third-image-section .parallax__layer--deep { background-size: 100%; background-image: url(/images/FE-space.svg); }
+  #third-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth-test.svg); }
+  #third-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-dboom.svg); }
+  #third-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-books.svg); }
   @media (orientation: landscape){
     #third-image-section .parallax__layer--fore {  }
     @media (min-width: 680px) and (max-width: 1024px){ 
@@ -144,11 +146,11 @@
       #third-image-section .parallax__layer--fore { margin-top: -5%; }
     }
     @media (min-width: 1024px) and (max-width: 2900px) {
-      #third-image-section { height: 250vh; }
+      #third-image-section { height: 160vh; }
       #third-image-section .parallax__layer--deep { margin-top: 0vh; }
-      #third-image-section .parallax__layer--back { margin-top: 60vh; }
-      #third-image-section .parallax__layer--base { margin-top: 80vh; }
-      #third-image-section .parallax__layer--fore { margin-top: 100vh; }
+      #third-image-section .parallax__layer--back { margin-top: -100vh; }
+      #third-image-section .parallax__layer--base { margin-top: -160vh; }
+      #third-image-section .parallax__layer--fore { margin-top: -20vh; }
     }
     @media (min-width: 2900px) { #third-image-section .parallax__layer--fore { margin-top: -10%; } }
     @media (min-width: 31500px) { #third-image-section .parallax__layer--fore { margin-top: -20%; } }
@@ -191,8 +193,16 @@
   /***********/
   /* CONTACT */
   /***********/
-  #contact-parallax-section { height: 320vh; z-index: 1; }
-  #contact-parallax-section .parallax__layer--base { }
+  #contact-parallax-section { z-index: 1; color: white; background: black;}
+  @media (orientation: landscape){
+    #contact-parallax-section { height: 110vh; }
+    #contact-parallax-section .parallax__layer--base { background-size: cover; background-repeat: no-repeat; background-image: url(/images/contact-space-ld.svg); }
+    @media (max-width: 800px) { #contact-parallax-section { } }
+    @media (max-width: 992px) { #contact-parallax-section .parallax__layer--fore { margin-top: 0vh; } }
+    @media (min-width: 1024px) { #contact-parallax-section .parallax__layer--fore { margin-top: 30vh; margin-bottom: 40vh;} }
+    @media (min-width: 2900px) { #contact-parallax-section .parallax__layer--fore { margin-top: 0vh; } }
+    @media (min-width: 31500px) { #contact-parallax-section .parallax__layer--fore { margin-top: 0vh; } } 
+  }
 
   /* PARALLAX TEXTS AND OBJECTS*/
   .parallax-text { position: absolute; top: 50%; color: white;  width: 50%; text-align: center; }
@@ -211,58 +221,57 @@
 
   #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 15%; width: 5%; -webkit-animation: move-from-left 6s infinite; -moz-animation: move-from-left 6s infinite; -o-animation: move-from-left 6s infinite; }
   #iss { background-image: url(/images/iss.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
-  #space-stone { background-image: url(/images/stone.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
-  #space-stones { background-image: url(/images/stones.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
-  #space-stones-1 { background-image: url(/images/stones-1.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
-  #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 2%; width: 2%; -webkit-animation: move-from-right 10s normal infinite; -moz-animation: move-from-right 10s normal infinite; -o-animation: move-from-right 10s normal infinite;}
-  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-left 10s normal infinite; -moz-animation: move-from-left 10s normal infinite; -o-animation: move-from-left 10s normal infinite;}
-  #comet-white { background-image: url(/images/comet-white.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 1.5%; width: 1.5%; -webkit-animation: move-from-left 12s normal infinite; -moz-animation: move-from-left 12s normal infinite; -o-animation: move-from-left 12s normal infinite;}
-  #orbit-one { position: absolute; left: 0%; top: 0%;  height: 20vh; width: 150vh; }
-  #orbit-two { position: absolute; left: 0%; top: 20%;  height: 20vh; width: 150vh; }
-  #orbit-three { position: absolute; left: 0%; top: 30%;  height: 20vh; width: 150vh; }
-  #orbit-four { margin-left: 50%; margin-top: -5%;  height: 20vh; width: 20vh; }
+  #rounded-stones { background-image: url(/images/rounded-stones.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #space-big-stones { background-image: url(/images/big-stones.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 1.5%; width: 1.5%; -webkit-animation: move-from-right 6s normal infinite; -moz-animation: move-from-right 6s normal infinite; -o-animation: move-from-right 6s normal infinite;}
+  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-left 9s normal infinite; -moz-animation: move-from-left 9s normal infinite; -o-animation: move-from-left 9s normal infinite;}
+  #comet-white { background-image: url(/images/comet-white.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 2%; width: 2%; -webkit-animation: move-from-left 12s normal infinite; -moz-animation: move-from-left 12s normal infinite; -o-animation: move-from-left 12s normal infinite;}
+  #orbit-one { left: 0%; top: 0%;  height: 20vh; width: 100%; }
+  #orbit-two { left: 0%; top: 20%;  height: 20vh; width: 100%; }
+  #orbit-three { left: 0%; top: 30%;  height: 20vh; width: 100%; }
+  #orbit-iss { margin-left: 70vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
   #orbit-five { margin-left: 30%; margin-top: 25%;  height: 25vh; width: 25vh; }
-  #orbit-six { margin-left: 10%; margin-top: 15%;  height: 25vh; width: 25vh; }
+  #orbit-six { margin-left: 1.5%; margin-top: 50%;  height: 25vh; width: 25vh; }
   #orbit-seven { margin-left: 10%; margin-top: 0%;  height: 25vh; width: 25vh; }
-  #BE-dboom{ background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 65%; width: 65%; position:absolute; bottom:20%; right:0; }
-  #boomerang { background-image: url(/images/dboom-icon.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 15%; width: 25%; margin-bottom: 20%;}
-  .spin-right { -webkit-animation-name: spin-right; -webkit-animation-duration: 100000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right; -moz-animation-duration: 100000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right; -ms-animation-duration: 100000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
-  .spin-right-fast { -webkit-animation-name: spin-right-fast; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-fast; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-fast; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
-  .spin-boomerang { -webkit-animation-name: spin-right-fast; -webkit-animation-duration: 1000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-fast; -moz-animation-duration: 1000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-fast; -ms-animation-duration: 1000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
-  .spin-left { -webkit-animation-name: spin-left; -webkit-animation-duration: 100000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left; -moz-animation-duration: 100000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left; -ms-animation-duration: 100000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  #BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 65%; width: 65%; position:absolute; top:140vh; left:10vh; }
+  #boomerang { background-image: url(/images/dboom-icon.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; left: 32vh; top: 32vh; height: 10%; width: 10%; }
+  .spin-right-half { -webkit-animation-name: spin-right-half; -webkit-animation-duration: 40000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-half; -moz-animation-duration: 40000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-half; -ms-animation-duration: 40000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-right-whole { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-left-half { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 12000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 12000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 12000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-left-half-faster { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-boomerang { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 3000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 3000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 3000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
 
-    
 /**************/
 /* ANIMATIONS */
 /**************/
-@keyframes spin-right-fast {
-  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
-  to { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -o-transform:rotate(360deg); /* Opera */-webkit-transform:rotate(360deg); }
+@keyframes spin-right-half {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(180deg); -ms-transform:rotateZ(180deg); /* IE 9 */ -moz-transform:rotateZ(180deg); /* Firefox */ -o-transform:rotateZ(180deg); /* Opera */-webkit-transform:rotateZ(180deg); }
 }
 
-@keyframes spin-right {
-  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
-  to { transform:rotate(50deg); -ms-transform:rotate(50deg); /* IE 9 */ -moz-transform:rotate(50deg); /* Firefox */ -o-transform:rotate(50deg); /* Opera */-webkit-transform:rotate(50deg); }
+@keyframes spin-right-whole {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(360deg); -ms-transform:rotateZ(360deg); /* IE 9 */ -moz-transform:rotateZ(360deg); /* Firefox */ -o-transform:rotateZ(360deg); /* Opera */-webkit-transform:rotateZ(360deg); }
 }
 
-@keyframes spin-left {
-  from { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -webkit-transform:rotate(360deg); /* Safari and Chrome */ -o-transform:rotate(360deg); /* Opera */ }
-  to { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -o-transform:rotate(0deg); /* Opera */-webkit-transform:rotate(0deg); }
+@keyframes spin-left-half {
+  from { transform:rotateZ(25deg); -ms-transform:rotateZ(25deg); /* IE 9 */ -moz-transform:rotateZ(25deg); /* Firefox */ -webkit-transform:rotateZ(25deg); /* Safari and Chrome */ -o-transform:rotateZ(25deg); /* Opera */ }
+  to { transform:rotateZ(-65deg); -ms-transform:rotateZ(-65deg); /* IE 9 */ -moz-transform:rotateZ(-65deg); /* Firefox */ -o-transform:rotateZ(-65deg); /* Opera */-webkit-transform:rotateZ(-65deg); }
 }
 
-@-webkit-keyframes spin-right-fast {
-  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
-  to { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -o-transform:rotate(360deg); /* Opera */-webkit-transform:rotate(360deg); }
+@-webkit-keyframes spin-right-half {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(180deg); -ms-transform:rotateZ(180deg); /* IE 9 */ -moz-transform:rotateZ(180deg); /* Firefox */ -o-transform:rotateZ(180deg); /* Opera */-webkit-transform:rotateZ(180deg); }
 }
 
-@-webkit-keyframes spin-right {
-  from { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -webkit-transform:rotate(0deg); /* Safari and Chrome */ -o-transform:rotate(0deg); /* Opera */ }
-  to { transform:rotate(50deg); -ms-transform:rotate(50deg); /* IE 9 */ -moz-transform:rotate(50deg); /* Firefox */ -o-transform:rotate(50deg); /* Opera */-webkit-transform:rotate(50deg); }
+@-webkit-keyframes spin-right-whole {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(360deg); -ms-transform:rotateZ(360deg); /* IE 9 */ -moz-transform:rotateZ(360deg); /* Firefox */ -o-transform:rotateZ(360deg); /* Opera */-webkit-transform:rotateZ(360deg); }
 }
 
-@-webkit-keyframes spin-left {
-  from { transform:rotate(360deg); -ms-transform:rotate(360deg); /* IE 9 */ -moz-transform:rotate(360deg); /* Firefox */ -webkit-transform:rotate(360deg); /* Safari and Chrome */ -o-transform:rotate(360deg); /* Opera */ }
-  to { transform:rotate(0deg); -ms-transform:rotate(0deg); /* IE 9 */ -moz-transform:rotate(0deg); /* Firefox */ -o-transform:rotate(0deg); /* Opera */-webkit-transform:rotate(0deg); }
+@-webkit-keyframes spin-left-half {
+  from { transform:rotateZ(25deg); -ms-transform:rotateZ(25deg); /* IE 9 */ -moz-transform:rotateZ(25deg); /* Firefox */ -webkit-transform:rotateZ(25deg); /* Safari and Chrome */ -o-transform:rotateZ(25deg); /* Opera */ }
+  to { transform:rotateZ(-65deg); -ms-transform:rotateZ(-65deg); /* IE 9 */ -moz-transform:rotateZ(-65deg); /* Firefox */ -o-transform:rotateZ(-65deg); /* Opera */-webkit-transform:rotateZ(-65deg); }
 }
 
 @-webkit-keyframes move-from-left {
