@@ -53,7 +53,7 @@
   /***********************/
   #cover-image-section { z-index: 2; }
   #cover-image-section .parallax__layer--deep { } 
-  #cover-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/earth-connectivity-test.svg); } 
+  #cover-image-section .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/earth-connectivity.svg); } 
   #cover-image-section .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); } 
   #cover-image-section .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books.svg); }
   @media (orientation: portrait){ 
@@ -110,14 +110,14 @@
       #second-image-section { height: 120vh; }
       #second-image-section .parallax__layer--back { margin-top: -10vh; }
       #second-image-section .parallax__layer--base { margin-top: -55vh; }
-      #second-image-section .parallax__layer--fore { margin-top: -5%; }
+      #second-image-section .parallax__layer--fore { margin-top: -10vh; }
     }
     @media (min-width: 1024px) and (max-width: 2900px) {
-      #second-image-section { height: 250vh; }
+      #second-image-section { height: 220vh; }
       #second-image-section .parallax__layer--deep { margin-top: 0vh; }
       #second-image-section .parallax__layer--back { margin-top: 40vh; }
       #second-image-section .parallax__layer--base { margin-top: 110vh; }
-      #second-image-section .parallax__layer--fore { margin-top: -20vh; }
+      #second-image-section .parallax__layer--fore { margin-top: 10vh; }
     }
     @media (min-width: 2900px) { #second-image-section .parallax__layer--fore { margin-top: -10%; } }
     @media (min-width: 31500px) { #second-image-section .parallax__layer--fore { margin-top: -20%; } }
@@ -134,8 +134,8 @@
   /*************************/
   #third-image-section { z-index: 1; }
   #third-image-section .parallax__layer--deep { background-size: 100%; background-image: url(/images/FE-space.svg); }
-  #third-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth-test.svg); }
-  #third-image-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-dboom.svg); }
+  #third-image-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth.svg); }
+  #third-image-section .parallax__layer--base { background-size: 80%; background-repeat:no-repeat; background-image: url); }
   #third-image-section .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-books.svg); }
   @media (orientation: landscape){
     #third-image-section .parallax__layer--fore {  }
@@ -193,13 +193,14 @@
   /***********/
   /* CONTACT */
   /***********/
-  #contact-parallax-section { z-index: 1; color: white; background: black;}
+  #contact-parallax-section { z-index: 1; color: white; }
   @media (orientation: landscape){
-    #contact-parallax-section { height: 110vh; }
-    #contact-parallax-section .parallax__layer--base { background-size: cover; background-repeat: no-repeat; background-image: url(/images/contact-space-ld.svg); }
+    #contact-parallax-section { height: 105vh; }
+    #contact-parallax-section .parallax__layer--base { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/contact-space.svg); }
+    #contact-parallax-section .parallax__layer--fore { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/contact-et-finger.svg); }
     @media (max-width: 800px) { #contact-parallax-section { } }
     @media (max-width: 992px) { #contact-parallax-section .parallax__layer--fore { margin-top: 0vh; } }
-    @media (min-width: 1024px) { #contact-parallax-section .parallax__layer--fore { margin-top: 30vh; margin-bottom: 40vh;} }
+    @media (min-width: 1024px) { #contact-parallax-section .parallax__layer--fore { margin-top: 0vh; } #contact-parallax-section .parallax__layer--base { margin-top: -10vh; } }
     @media (min-width: 2900px) { #contact-parallax-section .parallax__layer--fore { margin-top: 0vh; } }
     @media (min-width: 31500px) { #contact-parallax-section .parallax__layer--fore { margin-top: 0vh; } } 
   }
@@ -218,29 +219,31 @@
     #px-text-moon { margin-top: 20vh; }
     #px-text-books { margin-top: -5%; }
   }
-
-  #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 15%; width: 5%; -webkit-animation: move-from-left 6s infinite; -moz-animation: move-from-left 6s infinite; -o-animation: move-from-left 6s infinite; }
+  #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 55%; width: 55%; }
   #iss { background-image: url(/images/iss.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
   #rounded-stones { background-image: url(/images/rounded-stones.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
-  #space-big-stones { background-image: url(/images/big-stones.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #big-stone { background-image: url(/images/big-stone.svg); background-size: 100%; background-repeat:no-repeat; height: 80%; width: 80%; }
+  #stones-circle { background-image: url(/images/stones-circle.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; }
   #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 1.5%; width: 1.5%; -webkit-animation: move-from-right 6s normal infinite; -moz-animation: move-from-right 6s normal infinite; -o-animation: move-from-right 6s normal infinite;}
   #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  height: 2%; width: 2%; -webkit-animation: move-from-left 9s normal infinite; -moz-animation: move-from-left 9s normal infinite; -o-animation: move-from-left 9s normal infinite;}
   #comet-white { background-image: url(/images/comet-white.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 2%; width: 2%; -webkit-animation: move-from-left 12s normal infinite; -moz-animation: move-from-left 12s normal infinite; -o-animation: move-from-left 12s normal infinite;}
-  #orbit-one { left: 0%; top: 0%;  height: 20vh; width: 100%; }
-  #orbit-two { left: 0%; top: 20%;  height: 20vh; width: 100%; }
-  #orbit-three { left: 0%; top: 30%;  height: 20vh; width: 100%; }
+  #orbit-comet-blue { left: 0%; top: 0%;  height: 20vh; width: 100%; }
+  #orbit-comet-red { left: 0%; top: 20%;  height: 20vh; width: 100%; }
   #orbit-iss { margin-left: 70vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
-  #orbit-five { margin-left: 30%; margin-top: 25%;  height: 25vh; width: 25vh; }
-  #orbit-six { margin-left: 1.5%; margin-top: 50%;  height: 25vh; width: 25vh; }
-  #orbit-seven { margin-left: 10%; margin-top: 0%;  height: 25vh; width: 25vh; }
-  #BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 65%; width: 65%; position:absolute; top:140vh; left:10vh; }
-  #boomerang { background-image: url(/images/dboom-icon.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; left: 32vh; top: 32vh; height: 10%; width: 10%; }
+  #orbit-satellite { margin-top: 65%;  height: 20vh; width: 20vh; }
+  #orbit-big-stone { height: 17vh; width: 17vh;  margin-top: 25%; margin-left: 25%; position: absolute;}
+  #orbit-stones-circle { border-radius: 50%;margin-left: 19%; margin-top: 45%;  height: 35vh; width: 35vh; }
+  #BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 85%; width: 80%; position:absolute; top:120vh; left:20vh; }
+  #FE-dboom { background-image: url(/images/FE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 85%; width: 80%; position:absolute; top:-170vh; left:-10vh; }
+  #boomerang { background-image: url(/images/dboom-icon.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; left: 27vh; top: 18vh; height: 12%; width: 12%; }
   .spin-right-half { -webkit-animation-name: spin-right-half; -webkit-animation-duration: 40000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-half; -moz-animation-duration: 40000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-half; -ms-animation-duration: 40000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-right-whole-faster { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 20000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 20000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 20000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 12000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 12000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 12000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-left-whole { -webkit-animation-name: spin-left-whole; -webkit-animation-duration: 10000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-whole; -moz-animation-duration: 10000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-whole; -ms-animation-duration: 10000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half-faster { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-boomerang { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 3000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 3000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 3000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
-
+  .move-from-left { -webkit-animation: move-from-left 156s infinite; -moz-animation: move-from-left 156s infinite; -o-animation: move-from-left 156s infinite; }
 /**************/
 /* ANIMATIONS */
 /**************/
@@ -252,6 +255,11 @@
 @keyframes spin-right-whole {
   from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
   to { transform:rotateZ(360deg); -ms-transform:rotateZ(360deg); /* IE 9 */ -moz-transform:rotateZ(360deg); /* Firefox */ -o-transform:rotateZ(360deg); /* Opera */-webkit-transform:rotateZ(360deg); }
+}
+
+@keyframes spin-left-whole {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg); /* IE 9 */ -moz-transform:rotateZ(-360deg); /* Firefox */ -o-transform:rotateZ(-360deg); /* Opera */-webkit-transform:rotateZ(-360deg); }
 }
 
 @keyframes spin-left-half {
@@ -269,22 +277,27 @@
   to { transform:rotateZ(360deg); -ms-transform:rotateZ(360deg); /* IE 9 */ -moz-transform:rotateZ(360deg); /* Firefox */ -o-transform:rotateZ(360deg); /* Opera */-webkit-transform:rotateZ(360deg); }
 }
 
+@-webkit-keyframes spin-left-whole {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg); /* IE 9 */ -moz-transform:rotateZ(-360deg); /* Firefox */ -o-transform:rotateZ(-360deg); /* Opera */-webkit-transform:rotateZ(-360deg); }
+}
+
 @-webkit-keyframes spin-left-half {
   from { transform:rotateZ(25deg); -ms-transform:rotateZ(25deg); /* IE 9 */ -moz-transform:rotateZ(25deg); /* Firefox */ -webkit-transform:rotateZ(25deg); /* Safari and Chrome */ -o-transform:rotateZ(25deg); /* Opera */ }
   to { transform:rotateZ(-65deg); -ms-transform:rotateZ(-65deg); /* IE 9 */ -moz-transform:rotateZ(-65deg); /* Firefox */ -o-transform:rotateZ(-65deg); /* Opera */-webkit-transform:rotateZ(-65deg); }
 }
 
 @-webkit-keyframes move-from-left {
-  0% {margin-left: -300vh;}
-  100% {margin-left: 300vh;}
+  0% {margin-left: -250vh;}
+  100% {margin-left: 250vh;}
 }
 @-moz-keyframes move-from-left {
-  0% {margin-left: -300vh;}
-  100% {margin-left: 300vh;}
+  0% {margin-left: -250vh;}
+  100% {margin-left: 250vh;}
 }
 @-o-keyframes move-from-left {
-  0% {margin-left: -300vh;}
-  100% {margin-left: 300vh;}
+  0% {margin-left: -250vh;}
+  100% {margin-left: 250vh;}
 }
 
 @-webkit-keyframes move-from-right {

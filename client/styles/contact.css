@@ -2,30 +2,9 @@
 /* CONTACT */
 /***********/
 
-
-
-.circle{
-    border-radius: 50%;
-    margin: 0.15em;
-    font-size: 2em !important; 
-    border: solid white 2px; 
-    }
-    
-.fa-phone{
-    color: #FFFFFF;
-  padding: 0.25em 0.35em;
-    }
-.fa-linkedin{
-
-    color: #FFFFFF;
-  padding: 0.28em 0.35em;
-    }
-
-.fa-envelope-o{
-    color: #FFFFFF;
-  padding: 0.25em 0.25em;
-  
-    }
-
-    #social-links {margin: 4vh;}
+.circle{ border-radius: 50%; margin: 0.15em; font-size: 2em !important; border: solid white 2px; }    
+.fa-phone{ color: #FFFFFF; padding: 0.25em 0.35em; }
+.fa-linkedin { color: #FFFFFF; padding: 0.28em 0.35em; }
+.fa-envelope-o{ color: #FFFFFF; padding: 0.25em 0.25em; }
+#social-links {margin-top: 20vh; margin-bottom: 3vh;}
 .centered { display: block; margin-left: auto; margin-right: auto; }
