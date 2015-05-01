@@ -134,9 +134,9 @@
   /****************************/
   #FE-parallax-images { z-index: 1; }
   #FE-parallax-images .parallax__layer--deep { background-size: 100%; background-image: url(/images/FE-space.svg); }
-  #FE-parallax-images .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth-light.svg); }
+  #FE-parallax-images .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth.svg); }
   #FE-parallax-images .parallax__layer--base { background-size: 0%; background-repeat:no-repeat; background-image: url(); }
-  #FE-parallax-images .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-.svg); }
+  #FE-parallax-images .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
   @media (orientation: landscape){
     #FE-parallax-images .parallax__layer--fore {  }
     @media (min-width: 680px) and (max-width: 1024px){ 
@@ -190,9 +190,7 @@
     #px-text-moon { margin-top: 20vh; }
     #px-text-books { margin-top: -5%; }
   }
-  #satellite { background-image: url(/images/satellite.svg); background-size: 100%; background-repeat:no-repeat; height: 55%; width: 55%; }
   #iss { background-image: url(/images/iss.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
-  #rounded-stones { background-image: url(/images/rounded-stones.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
   #big-stone { background-image: url(/images/big-stone.svg); background-size: 100%; background-repeat:no-repeat; height: 80%; width: 80%; }
   #stones-circle { background-image: url(/images/stones-circle.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; }
   #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; height: 1.5%; width: 1.5%; -webkit-animation: move-from-right 6s normal infinite; -moz-animation: move-from-right 6s normal infinite; -o-animation: move-from-right 6s normal infinite;}
@@ -211,7 +209,6 @@
   #FE-books { background-image: url(/images/FE-books.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; position:absolute; top: 60vh; left: 10vh; }
   #FE-gaming { background-image: url(/images/FE-gaming.svg); background-size: 100%; background-repeat:no-repeat; height: 65%; width: 65%; position:absolute; margin-top: 20vh; left: 0vh; }
   #boomerang { background-image: url(/images/dboom-icon.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; left: 27vh; top: 18vh; height: 12%; width: 12%; }
-  #rocket { background-image: url(/images/rocket-1.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute;  top: -30vh; margin-left: 30%; height: 40%; width: 40%; }
   .spin-right-half { -webkit-animation-name: spin-right-half; -webkit-animation-duration: 40000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-half; -moz-animation-duration: 40000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-half; -ms-animation-duration: 40000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole-faster { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 20000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 20000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 20000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
