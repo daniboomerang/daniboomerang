@@ -97,7 +97,7 @@ daniboomerangDirectives.directive('foot', function($timeout) {
 
       var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButton, shareButton, ICON_SHARE, ICON_PROCESSING_SHARE;
 
-      scope.toggleFooters = function (){
+      scope.toogleFooters = function (){
         if (scope.displayMenu == SECTION_FOOTER){
           footer.removeClass('expand-small');
           scope.shareIconToDisplay = ICON_PROCESSING_SHARE;
@@ -138,6 +138,7 @@ daniboomerangDirectives.directive('foot', function($timeout) {
     }  
   };
 });
+
 
 /******************************************/
 /**************** TOPNAVBAR ***************/
