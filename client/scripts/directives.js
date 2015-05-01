@@ -8,14 +8,8 @@ var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 daniboomerangDirectives.directive('parallax', function($interval) {
   return {
     restrict: 'E',
-    templateUrl: 'views/parallax.html',
-    scope: {},
-    link: function (scope, element) {
-      init();
-      function init(){
-      }
-    }
-  };
+    templateUrl: 'views/parallax.html'
+  }
 });
 
 daniboomerangDirectives.directive('cover', function($timeout) {
@@ -67,11 +61,27 @@ daniboomerangDirectives.directive('work', function() {
   };
 });
 
-daniboomerangDirectives.directive('contact', function() {
+daniboomerangDirectives.directive('contact', function($interval) {
   return {
     restrict: 'E',
-    templateUrl: 'views/sections/contact.html'
-  };
+    templateUrl: 'views/sections/contact.html',
+    scope: {},
+    link: function (scope, element) {
+      var MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, activeButton, mailButtonId, phoneButtonId;
+      init();
+      function init(){ MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-button'); phoneButtonId = element.find('#phone-button'); }
+      scope.toggleSocialButton = function(button){
+        if (button == MAIL_BUTTON) {
+          if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; mailButtonId.addClass("social-active"); phoneButtonId.removeClass("social-active"); activeButton =  MAIL_BUTTON; }
+          else { scope.contactInfo = ""; mailButtonId.removeClass("social-active"); activeButton = undefined; }
+        }
+        else {
+          if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; phoneButtonId.addClass("social-active"); mailButtonId.removeClass("social-active"); activeButton =  PHONE_BUTTON;}
+          else { scope.contactInfo = ""; phoneButtonId.removeClass("social-active"); activeButton = undefined; }
+        }
+      }
+    }
+  }
 });
 
 /******************************************/
@@ -87,7 +97,7 @@ daniboomerangDirectives.directive('foot', function($timeout) {
 
       var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButton, shareButton, ICON_SHARE, ICON_PROCESSING_SHARE;
 
-      scope.toogleFooters = function (){
+      scope.toggleFooters = function (){
         if (scope.displayMenu == SECTION_FOOTER){
           footer.removeClass('expand-small');
           scope.shareIconToDisplay = ICON_PROCESSING_SHARE;
