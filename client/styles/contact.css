@@ -2,9 +2,9 @@
 /* CONTACT */
 /***********/
 
-#contact {  }
-.contact-row { margin-top: 3vh; width: 25%; margin-left:37%; }
-.circle{ padding: 0.21em 0.14em; border-radius: 50%; margin: 0.10em; font-size: 2em !important; border: solid white 2px;
+#contact { top: 50vh; left:0vh; padding-top: 3vh; }
+.contact-row { margin-top: 1vh; width: 25%; margin-left:37%; }
+.circle{ padding: 0.16em 0.13em; border-radius: 50%; margin: 0.10em; font-size: 2em !important; border: solid white 2px;
 -webkit-box-shadow: 0px 0px 4px 1px rgba(255,153,51,1), inset 0px 0px 4px 1px rgba(255,255,255,1);
 -moz-box-shadow: 0px 0px 4px 1px rgba(255,153,51,1), inset 0px 0px 4px 1px rgba(255,255,255,1);
 box-shadow: 0px 0px 4px 1px rgba(255,153,51,1),  inset 0px 0px 4px 1px rgba(255,255,255,1);
@@ -17,10 +17,9 @@ box-shadow: 0px 0px 4px 1px rgba(255,153,51,1),  inset 0px 0px 4px 1px rgba(255,
 -moz-box-shadow: 0px 0px 4px 1px rgba(255,153,51,1), inset 0px 0px 4px 1px rgba(255,255,255,1);
 box-shadow: 0px 0px 4px 1px rgba(255,153,51,1), inset 0px 0px 4px 1px rgba(255,255,255,1);
 }
-.social-active,a { color: black; }
-#et-sentence { text-align: center; color: rgba(255,153,51,0.5) !important; /*font-family: 'Droid serif', serif;  font-weight: 400; font-size: 1.5em; font-style: italic; line-height: 44px; margin: 0 0 12px; text-align: center;*/ }
+#et-sentence { margin-top: 2vh; text-align: center; color: rgba(255,153,51,0.5) !important; /*font-family: 'Droid serif', serif;  font-weight: 400; font-size: 1.5em; font-style: italic; line-height: 44px; margin: 0 0 12px; text-align: center;*/ }
 #contact-info {  text-align:center; color: rgba(255,255,255,0.5) }
 .centered { position:absolute; top:40%;}
-#et-contact-scene { background-image: url(/images/et-contact-scene.svg); background-size: 100%; background-repeat:no-repeat; height: 50%; width: 100%; position:absolute; top: 50vh; left:0vh; }
+
 
 
