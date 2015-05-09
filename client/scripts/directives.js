@@ -1,6 +1,8 @@
 var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 
 
+
+
 /*******************************************************/
 /****************** PARALLAX SECTIONS ******************/
 /*******************************************************/
@@ -8,9 +10,33 @@ var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 daniboomerangDirectives.directive('parallax', function($interval) {
   return {
     restrict: 'E',
-    templateUrl: 'views/parallax.html'
+    templateUrl: 'views/parallax.html',
+    scope: true,
+    link: function(scope){ 
+      scope.textSectionsHeight = {} /* This is a global scope variable updated by the children directives 
+                                       parallax text sections, in order to dynamically determine their height in pixels */
+    }
   }
 });
+
+daniboomerangDirectives.directive('textSection', function($window, $document) {
+  return {
+    restrict: 'E',
+    scope: false,
+    templateUrl: function (elem, attrs) {
+      return 'views/sections/' + attrs.name + '.html';
+    },
+    link: function (scope, element, attrs){
+      function defineCurrentHeight (name) {
+        var sectionId = element.find('#' + name);
+        scope.textSectionsHeight[name] = sectionId.prop('offsetHeight') + 'px';
+      }
+      var window = angular.element($window);
+      window.bind('resize', function () { defineCurrentHeight(attrs.name); });
+      defineCurrentHeight(attrs.name);
+    }
+  }
+})
 
 daniboomerangDirectives.directive('cover', function($timeout) {
   return {
@@ -38,27 +64,6 @@ daniboomerangDirectives.directive('cover', function($timeout) {
       }
     }
   }  
-});
-
-daniboomerangDirectives.directive('about', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/sections/about.html'
-  };
-});
-
-daniboomerangDirectives.directive('loving', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/sections/loving.html'
-  };
-});
-
-daniboomerangDirectives.directive('work', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/sections/work.html'
-  };
 });
 
 daniboomerangDirectives.directive('contact', function($interval) {
