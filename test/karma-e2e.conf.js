@@ -5,7 +5,7 @@ exports.config = {
     shardTestFiles: true,
     maxInstances: 2
   },*/
-	multiCapabilities: [
+  multiCapabilities: [
     
     { /* TINY DEVICES */  
        'browserName': 'chrome',
@@ -29,7 +29,11 @@ exports.config = {
        specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadDesktopSpec.js', 'e2e/footer/footerDesktopSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingDesktopSpec.js']
     }
   ],
+
+  jasmineNodeOpts: { showColors: true },
+
   chromeDriver: '../node_modules/protractor/selenium/chromedriver',
   baseUrl: 'http://localhost:8080/',
   framework: 'jasmine',
+
 };

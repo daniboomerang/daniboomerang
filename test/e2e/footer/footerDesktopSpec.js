@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Daniboomerang - footer scenario for movbiles and tablets', function() {
+describe('Daniboomerang - footer scenario for desktop devices', function() {
 
   /////////////////////////////////////
   /**** DANIBOOMERANG.COM - /#/cover */

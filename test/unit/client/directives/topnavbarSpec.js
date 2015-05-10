@@ -74,15 +74,15 @@ describe('navbar', function() {
       	expect(workIcon.length).toBe(1);
       	expect(workIcon.hasClass('faa-pulse')).toBe(true);
 
-      	/* If Contact, it must expand and set the section active */
+      	/* If Contact, it must NOT expand navbar */
 		area = 'Contact';
 		$rootScope.$broadcast('event:activeArea', area);
 		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
 		var contactLink = elm.find('#contact-link');
 		expect(contactLink.length).toBe(1);
-		expect(contactLink.hasClass('active')).toBe(true);
+		expect(contactLink.hasClass('active')).toBe(false);
         var contactIcon = elm.find('#contact-icon');
       	expect(contactIcon.length).toBe(1);
-      	expect(contactIcon.hasClass('faa-pulse')).toBe(true);
+      	expect(contactIcon.hasClass('faa-pulse')).toBe(false);
     });	
 });

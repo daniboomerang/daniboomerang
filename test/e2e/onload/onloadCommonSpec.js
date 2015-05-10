@@ -39,7 +39,6 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
         // Cover
         var cover = element(by.id('cover'));
         expect(cover.isPresent()).toBe(true);
-        expect(element(by.id('moon-and-boom')).isPresent()).toBe(true);
         expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
         expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
         var coverFooter = cover.element(by.id('cover-footer'));

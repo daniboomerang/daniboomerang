@@ -6,16 +6,16 @@ describe('Daniboomerang - scrolling scenario', function() {
 		browser.get('/');
 	});
 	
-	////////////////
-	// ON CONTENT //
-	////////////////
+	/////////////////
+	// ON SECTIONS //
+	/////////////////
 
 		it('should scroll from section to section when clicking at the topnavbar links ', function() {
 
 			// Go to the the last section
-        	var lastSection = element(by.id('contact'));
-	        browser.driver.executeScript("arguments[0].scrollIntoView(true);", lastSection.getWebElement());
-	        browser.sleep(1000);
+        	var workSection = element(by.id('work'));
+	        browser.driver.executeScript("arguments[0].scrollIntoView(true);", workSection.getWebElement());
+	        browser.sleep(4000);
 
 			// header is expanded 
 			var headerElement = element(by.tagName('header'));
@@ -24,10 +24,10 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(nav.isDisplayed()).toBe(true);
 			
 			// navbar section gets 'active'
-			var contactLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
-			expect(contactLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+			var workLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(2);
+			expect(workLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
-			///////////// CLICK TO About  ///////////
+			///////////// CLICK TO About ///////////
 			var aboutLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(0);
 			aboutLinkTopnavbar.click();
 			browser.sleep(4000);
@@ -36,7 +36,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			// navbar section gets 'active'
 			expect(aboutLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
-			///////////// CLICK TO Loving  ///////////
+			///////////// CLICK TO Loving ///////////
 			var lovingLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(1);
 			lovingLinkTopnavbar.click();
 			browser.sleep(4000);
@@ -45,16 +45,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			// navbar section gets 'active'
 			expect(lovingLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 
-			///////////// CLICK TO Work  ///////////
-			var workLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(2);
-			workLinkTopnavbar.click();
-			browser.sleep(4000);
-			// it scrolls to About section (check url)
-			expect(browser.getCurrentUrl()).toContain('/#/work');
-			// navbar section gets 'active'
-			expect(workLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
-
-			///////////// CLICK TO Contact  ///////////
+			///////////// CLICK TO Contact ///////////
 			var contactLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
 			contactLinkTopnavbar.click();
 			browser.sleep(4000);
@@ -62,6 +53,15 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(browser.getCurrentUrl()).toContain('/#/contact');
 			// navbar section gets 'active'
 			expect(contactLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+
+			///////////// CLICK TO Work ///////////
+			var workLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(2);
+			workLinkTopnavbar.click();
+			browser.sleep(4000);
+			// it scrolls to About section (check url)
+			expect(browser.getCurrentUrl()).toContain('/#/work');
+			// navbar section gets 'active'
+			expect(workLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
 		});
 
 });

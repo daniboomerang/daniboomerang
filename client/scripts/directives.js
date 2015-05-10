@@ -1,16 +1,13 @@
 var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 
 
-
-
 /*******************************************************/
 /****************** PARALLAX SECTIONS ******************/
 /*******************************************************/
 
 daniboomerangDirectives.directive('parallax', function($interval) {
   return {
-    restrict: 'E',
-    templateUrl: 'views/parallax.html',
+    restrict: 'A',
     scope: true,
     link: function(scope){ 
       scope.textSectionsHeight = {} /* This is a global scope variable updated by the children directives 
