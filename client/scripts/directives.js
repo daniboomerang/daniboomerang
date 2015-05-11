@@ -63,15 +63,23 @@ daniboomerangDirectives.directive('cover', function($timeout) {
   }  
 });
 
-daniboomerangDirectives.directive('contact', function($interval) {
+daniboomerangDirectives.directive('contact', function($timeout) {
   return {
     restrict: 'E',
     templateUrl: 'views/sections/contact.html',
     scope: {},
     link: function (scope, element) {
-      var MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, activeButton, mailButtonId, phoneButtonId;
+      var MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, activeButton, mailButtonId, phoneButtonId; 
       init();
-      function init(){ MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-button'); phoneButtonId = element.find('#phone-button'); }
+      function init(){ 
+        MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-button'); phoneButtonId = element.find('#phone-button'); scope.showScrollUpArrow = false;
+        scope.$on('event:activeArea', function($event, area){ 
+          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = true; }, 500); }
+        });
+        scope.$on('event:inactiveArea', function($event, area){ 
+          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = false; }, 500); }
+        });
+      }
       scope.toggleSocialButton = function(button){
         if (button == MAIL_BUTTON) {
           if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; mailButtonId.addClass("social-active"); phoneButtonId.removeClass("social-active"); activeButton =  MAIL_BUTTON; }

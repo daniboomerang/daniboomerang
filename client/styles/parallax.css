@@ -225,9 +225,10 @@
   /***********/
   /* CONTACT */
   /***********/
-  #contact-parallax-section { z-index: 3; color: white; height: 100vh;}
-  @media (orientation: landscape){ #contact-parallax-section { background-image: url(/images/contact-et-ld.svg); background-size: 100%; background-repeat:no-repeat; } }
-  @media (orientation: portrait){ #contact-parallax-section { background-image: url(/images/contact-et-pt.svg); background-size: 100%; background-repeat:no-repeat; } }  
+  #contact-parallax-section { z-index: 3; color: white; height: 100vh; }
+  #contact-parallax-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
+  /*@media (orientation: landscape){ #contact-parallax-section { background-image: url(/images/contact-et-ld.svg); background-size: 100%; background-repeat:no-repeat; } }
+  @media (orientation: portrait){ #contact-parallax-section { background-image: url(/images/contact-et-pt.svg); background-size: 100%; background-repeat:no-repeat; } }  */
   
 
   /******************************/
