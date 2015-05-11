@@ -1,10 +1,10 @@
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="501.12" width="524.49" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 524.48809 501.12005" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="504.2" width="530.97" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 530.97269 504.20495" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <defs>
-<radialGradient id="c" gradientUnits="userSpaceOnUse" cy="541.34" cx="1218.3" gradientTransform="matrix(1.8075 .034225 -.029579 1.8166 -1213 -883.82)" r="27.574">
+<radialGradient id="j" gradientUnits="userSpaceOnUse" cy="541.34" cx="1218.3" gradientTransform="matrix(1.8075 .034225 -.029579 1.8166 -1191.9 -1035.2)" r="27.574">
 <stop stop-color="#c70600" stop-opacity=".93725" offset="0"/>
 <stop stop-color="#ad0000" stop-opacity=".019608" offset="1"/>
 </radialGradient>
-<radialGradient id="d" gradientUnits="userSpaceOnUse" cy="1137" cx="1005.3" gradientTransform="matrix(-.19129 -.14752 .1474 -.18883 -336.9 1002.3)" r="300.01">
+<radialGradient id="i" gradientUnits="userSpaceOnUse" cy="1497.6" cx="1219.7" gradientTransform="matrix(-.19129 -.14752 .1474 -.18883 -336.9 1002.3)" r="300.01">
 <stop stop-color="#f65300" offset="0"/>
 <stop stop-color="#c37701" stop-opacity=".83529" offset=".47091"/>
 <stop stop-color="#72310f" offset=".69034"/>
@@ -41,11 +41,11 @@
     .fil3 {fill:#DEDEDD}
     .fil4 {fill:#582E3A;fill-rule:nonzero}
     .fil0 {fill:black;fill-rule:nonzero}</style>
-<radialGradient id="e" gradientUnits="userSpaceOnUse" cy="1970.1" cx="4211.6" gradientTransform="matrix(-.086013 -.49287 1.0849 -.25101 -117.34 3022.5)" r="804.55">
+<radialGradient id="h" gradientUnits="userSpaceOnUse" cy="1970.1" cx="4211.6" gradientTransform="matrix(-.086013 -.49287 1.0849 -.25101 -117.34 3022.5)" r="804.55">
 <stop stop-color="#5c2e74" stop-opacity=".59487" offset="0"/>
 <stop stop-color="#1b676a" stop-opacity="0" offset="1"/>
 </radialGradient>
-<radialGradient id="f" gradientUnits="userSpaceOnUse" cy="1905.3" cx="4869.6" gradientTransform="matrix(-.48587 -.70586 1.2664 -1.2152 912.45 5996.4)" r="804.55">
+<radialGradient id="g" gradientUnits="userSpaceOnUse" cy="1905.3" cx="4869.6" gradientTransform="matrix(-.48587 -.70586 1.2664 -1.2152 912.45 5996.4)" r="804.55">
 <stop stop-color="#224254" stop-opacity=".97949" offset="0"/>
 <stop stop-color="#210a27" stop-opacity="0" offset="1"/>
 </radialGradient>
@@ -3664,17 +3664,17 @@
 <path id="a" fill-rule="evenodd" d="m57.13 192.4a6.552 6.015 0 1 1 0.0069 -0.1176"/>
 <path id="b" fill-rule="evenodd" d="m57.13 192.4a6.552 6.015 0 1 1 0.0069 -0.1176"/>
 </defs>
-<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="456.62173" x="1211.593" line-height="125%"><tspan y="456.62173" x="1211.593"/></text>
-<g transform="translate(864.69 -741.22)">
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="456.61377" x="1211.593" line-height="125%"><tspan y="456.61377" x="1211.593"/></text>
+<g transform="translate(864.69 -741.23)">
 <g transform="matrix(.99999 0 0 .99999 -4.0495 536.7)">
-<rect height="504.21" width="530.98" y="204.53" x="-860.65" fill="url(#d)"/>
+<rect height="504.21" width="530.98" y="204.53" x="-860.65" fill="url(#i)"/>
 <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="955.93176" x="1988.6168" font-family="Sans" line-height="125%"><tspan y="955.93176" x="1988.6168"/></text>
 <text font-size="13px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1258.5824" x="1885.1147" font-family="&apos;Arial Hebrew&apos;" line-height="125%"><tspan y="1258.5824" x="1885.1147"/></text>
 <text font-size="6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1268.816" x="1883.8188" font-family="Krungthep" line-height="125%"><tspan y="1268.816" x="1883.8188"/></text>
-<g transform="translate(203.5 128.39)">
+<g transform="translate(203.5,128.39)">
 <g transform="matrix(.99999 0 0 .99999 33.357 73.109)">
 <g transform="matrix(.69554 0 0 .65451 -1274.6 346.42)">
-<ellipse opacity="0.99" rx="60.002" ry="79.314" cy="141.29" cx="973.05" fill="url(#c)"/>
+<ellipse opacity="0.99" rx="60.002" ry="79.314" cy="-10.073" cx="994.19" fill="url(#j)"/>
 </g>
 </g>
 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="725.58691" x="1336.0771" line-height="125%"><tspan y="725.58691" x="1336.0771"/></text>
@@ -3682,13 +3682,13 @@
 </g>
 <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1155.5096" x="1336.0771" line-height="125%"><tspan y="1155.5096" x="1336.0771"/></text>
 </g>
-<g transform="translate(-280.63 -298.52)">
+<g transform="translate(-280.63 -298.53)">
 <g transform="matrix(.2 0 0 .2 474.92 319.55)">
-<rect opacity="0.77" ry="0" height="2296.1" width="2025" y="-871.07" x="-334.44" fill="url(#e)"/>
-<rect opacity="0.77" transform="matrix(-.99999 -.0047846 -.0047846 .99999 0 0)" height="1706" width="1582.1" y="-222.07" x="72.212" fill="url(#f)"/>
+<rect opacity="0.77" ry="0" height="2296.1" width="2025" y="-871.07" x="-334.44" fill="url(#h)"/>
+<rect opacity="0.77" transform="matrix(-.99999 -.0047846 -.0047846 .99999 0 0)" height="1706" width="1582.1" y="-222.07" x="72.212" fill="url(#g)"/>
 </g>
 </g>
-<g transform="translate(-1125.8 -213.53)">
+<g transform="translate(-1125.8 -213.54)">
 <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="725.58691" x="1336.0771" line-height="125%"><tspan y="725.58691" x="1336.0771"/></text>
 <g transform="translate(1012,-590.85)">
 <g transform="matrix(.99999 0 0 .99999 -4.0495 536.7)">
@@ -3709,7 +3709,7 @@
 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6px" y="940.2428" x="1887.6217" font-family="Krungthep" line-height="125%"><tspan y="940.2428" x="1887.6217"/></text>
 <g transform="translate(210.12,-401.97)">
 <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="725.58691" x="1336.0771" line-height="125%"><tspan y="725.58691" x="1336.0771"/></text>
-<g transform="translate(545.78 824.98)">
+<g transform="translate(545.78,824.98)">
 <g transform="matrix(0 .6 -.6 0 -419.39 -260.23)">
 <g transform="translate(36.157,6.8601)">
 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" transform="rotate(-90)" y="-64.28968" x="980.93701" line-height="125%"><tspan y="-64.28968" x="980.93701"/></text>
@@ -4584,10 +4584,10 @@
 <path d="m1139.7 134.5a0.22 0.22 0 1 1 0.4 -0.17z" stroke="#fff" stroke-miterlimit="0" stroke-width=".038994" fill="#fff"/>
 </g>
 </g>
-<flowRoot style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" line-height="125%" font-family="sans-serif" fill="#000000"><flowRegion><rect y="896.86" width="501.49" x="290.19" height="445.14"/></flowRegion><flowPara/></flowRoot>
+<flowRoot style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" line-height="125%" font-family="sans-serif" fill="#000000"><flowRegion><rect y="896.86" width="501.49" height="445.14" x="290.19"/></flowRegion><flowPara/></flowRoot>
 </g>
 </g>
-<g fill-opacity=".70681" fill="#e93817" transform="matrix(.1388 .15721 -.15721 .1388 410.31 261.07)">
+<g fill-opacity=".70681" fill="#e93817" transform="matrix(.1388 .15721 -.15721 .1388 368.13 254.03)">
 <use xlink:href="#b" transform="matrix(.99205 0 0 1.0806 1.4242 -14.678)" height="100%" width="100%" y="0" x="0"/>
 <use xlink:href="#b" transform="matrix(.83943 0 0 .91437 110.99 46.017)" height="100%" width="100%" y="0" x="0"/>
 <use xlink:href="#b" transform="matrix(.99205 0 0 1.0806 136.27 206.85)" height="100%" width="100%" y="0" x="0"/>

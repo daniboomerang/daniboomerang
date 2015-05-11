@@ -161,11 +161,11 @@
   #FE-parallax-images .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
   #FE-parallax-images .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
   @media all { 
-    #FE-parallax-images { height: 280vh; }
-    #FE-parallax-images .parallax__layer--deep { margin-top: 80vh; }
-    #FE-parallax-images .parallax__layer--back { margin-top: -20vh; height: 250vh; }
-    #FE-parallax-images .parallax__layer--base { margin-top: 50vh; }
-    #FE-parallax-images .parallax__layer--fore { margin-top: 30vh; }
+    #FE-parallax-images { height: 240vh; }
+    #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
+    #FE-parallax-images .parallax__layer--back { margin-top: 0vh; }
+    #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+    #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   }
   @media (min-width: 1024px) and (max-width: 1279px) { 
     #FE-parallax-images { height: 240vh;  }
