@@ -11,15 +11,15 @@
 .cover-text .name { display: block; font-size: 1.2em; }
 .cover-text .skills { display: block; text-transform: uppercase; font-weight: lighter; font-size: 1.4em; }
 
-@media all and (orientation:portrait) { #cover{ padding-top: 15%; } .scroll-down { margin-top: 8%; }}
-@media all and (orientation:landscape) { #cover{ padding-top: 5%; } .scroll-down { margin-top: 3%; }}
-@media (min-width: 200px) and (orientation:landscape) { #cover{ height: 120%; } }
-@media (min-width: 200px) and (orientation:portrait) { #cover{ height: 120%; } }
-@media (min-width: 768px) { #cover{ height: 120%; } }
+@media all and (orientation:portrait) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; }}
+@media all and (orientation:landscape) { #cover { padding-top: 5%; } .scroll-down { margin-top: 3%; }}
+@media (min-width: 200px) and (orientation:landscape) { #cover { height: 120%; } }
+@media (min-width: 200px) and (orientation:portrait) { #cover { height: 120%; } }
+@media (min-width: 768px) { #cover { height: 120%; } }
 @media (min-width: 768px) and (orientation:portrait) { .scroll-down { margin-top: 8%; } }
-@media (min-width: 768px) and (orientation:landscape) { #cover{ padding-top: 8%; } .scroll-down { margin-top: 8%; } }
-@media (min-width: 992px) { #cover{ height: 200%; } .scroll-down { margin-top: 3%; } }
-@media (min-width: 1024px) { #cover{ height: 150%; } #cover{ padding-top: 15vh; } .scroll-down { margin-top: 2%; } }
+@media (min-width: 768px) and (orientation:landscape) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
+@media (min-width: 992px) { #cover { height: 200%; } .scroll-down { margin-top: 3%; } }
+@media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15vh; } .scroll-down { margin-top: 2%; } }
 
 /* Extra small Devices, (phones, 200px and up) */
 @media (min-width: 200px) { }
@@ -28,7 +28,7 @@
 @media (min-width: 320px) { }
 
 /* Small devices (tablets, 500px and up) */
-@media (min-width: 500px) { }
+@media (min-width: 500px) { #cover { padding-top: 15%; } }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
@@ -36,7 +36,7 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { } 
 
-/* Medium devices (desktops, 992px and up) */
+/* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1280px) { }
 
 /* Large devices (large desktops, 1600px and up) */

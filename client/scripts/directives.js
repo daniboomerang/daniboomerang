@@ -72,12 +72,12 @@ daniboomerangDirectives.directive('contact', function($timeout) {
       var MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, activeButton, mailButtonId, phoneButtonId; 
       init();
       function init(){ 
-        MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-button'); phoneButtonId = element.find('#phone-button'); scope.showScrollUpArrow = false;
+        MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-button'); phoneButtonId = element.find('#phone-button'); scope.showScrollUpArrow = false; scope.showEtSentence = false;
         scope.$on('event:activeArea', function($event, area){ 
-          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = true; }, 500); }
+          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = true; scope.showEtSentence = true; }, 500); }
         });
         scope.$on('event:inactiveArea', function($event, area){ 
-          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = false; }, 500); }
+          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = false; }, 1500); }
         });
       }
       scope.toggleSocialButton = function(button){
