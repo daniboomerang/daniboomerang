@@ -11,7 +11,7 @@
 .contact-row { text-align: center; position: absolute;}
 #contact a { color: white; transition: all .5px ease-in-out; }
 #contact a:hover { color: #FF9933; text-decoration:none; transition: all .5px ease-in-out; }
-#contact .btn { background-color: rgba(13, 27, 51, 0.8) !important; border-radius: 100%; padding: 20%; font-size: inherit !important; }
+#contact .btn { background-color: rgba(19, 65, 99, 0.7); !important; border-radius: 100%; padding: 20%; font-size: inherit !important; }
 .social-button { display: inline-block; margin-left: 0.5%; margin-right: 0.5%;}
 
 /*========== RESPONSIVENESS ==========*/
@@ -70,7 +70,7 @@
 
 /* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1024px) { #contact .btn { border: solid white 3px; }
-							 #et-scene-wrapper { height:40%; }
+							 #et-scene-wrapper { height:45%; }
 							 #social-links { top:25%; } 
 							 #scroll-up { top:10%; }
 							 #et-sentence { top:42%; }

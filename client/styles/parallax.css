@@ -72,10 +72,14 @@
 @media (min-width: 500px) and (max-width: 639px) {
   #cover-parallax-images { height: 100vh;  margin-top: -20vh; }
   #cover-parallax-images .parallax__layer--back { margin-top: 110vh; }
+  #orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }
 }  
 @media (min-width: 200px) and (max-width: 499px) {
   #cover-parallax-images { height: 70vh;  margin-top: -30vh; }
   #cover-parallax-images .parallax__layer--back { margin-top: 100vh; }
+  #orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }
 }  
 
 /*********/
@@ -107,9 +111,9 @@
   #boomerang { left: 24vh; top: 25vh;  }
 }  
 @media (min-width: 1024px) and (max-width: 1279px) {
-  #BE-parallax-images { height: 220vh; margin-top: 70vh; }
+  #BE-parallax-images { height: 230vh; margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
-  #BE-parallax-images .parallax__layer--back { margin-top: 30vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
 }
@@ -142,15 +146,25 @@
   #BE-dboom { right: -10vh; }
   #BE-books { top: -20vh; height: 120%; width: 120%; }
 }
-@media (min-width: 400px) and (max-width: 639px) {
-  #BE-parallax-images { height: 190vh; }
-  #BE-parallax-images .parallax__layer--deep { background: red; }
-  #BE-parallax-images .parallax__layer--back { background: blue; }
-  #BE-parallax-images .parallax__layer--base { background: yellow; }
-  #BE-parallax-images .parallax__layer--fore { background: orange; }
-  #BE-ruby { top: 30vh; right: -20vh; }
-  #BE-dboom { margin-top: -30vh; right: -5vh; }
-  #BE-books { height: 110%; width: 110%; }
+@media (min-width: 500px) and (max-width: 639px) {
+  #BE-parallax-images { height: 100vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 25vh; height: 120vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-ruby { top: 25vh; right: -12vh; }
+  #BE-dboom { top: 10vh; right: -12vh; }
+  #BE-books { top: -50vh; height: 110%; width: 110%; }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+  #BE-parallax-images { height: 75vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 45vh; height: 120vh;}
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-ruby { top: 15vh; right: -12vh; }
+  #BE-dboom { top: 0vh; right: -5vh; }
+  #BE-books { top: -55vh; height: 110%; width: 110%; }
 }
 
 /**********/
@@ -219,16 +233,27 @@
   #FE-gaming { top: 80vh; left: -5vh; }
   #FE-books { top:0; left:0vh; }
 }
-@media (min-width: 400px) and (max-width: 639px) {
-  #FE-parallax-images { height: 190vh; }
-  #FE-parallax-images .parallax__layer--deep { background: red; }
-  #FE-parallax-images .parallax__layer--back { background: blue; }
-  #FE-parallax-images .parallax__layer--base { background: yellow; }
-  #FE-parallax-images .parallax__layer--fore { background: orange; }
-  #FE-books { top: 30vh; left: 10vh; }
-  #FE-laptop-mobile { top: -20vh; left: 0vh; }
-  #FE-gaming { margin-top: 20vh; left: -12vh; }
-  #FE-books { height: 110%; width: 110%; left: -10vh; }
+
+@media (min-width: 500px) and (max-width: 639px) {
+  #FE-parallax-images { height: 140vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 50vh; }
+  #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #FE-laptop-mobile { top: 97vh; left: -10vh; }
+  #FE-gaming { top: 77vh; left: -5vh; }
+  #FE-books { top:0vh; left:0vh; }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+  #FE-parallax-images { height: 90vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 50vh; height: 100vh; }
+  #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #FE-laptop-mobile { top: 47vh; left: -10vh; }
+  #FE-gaming { top: 47vh; left: -5vh; }
+  #FE-books { top:-10vh; left:0vh; }
 }
 
 /********/
