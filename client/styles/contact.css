@@ -3,12 +3,13 @@
 /***********/
 
 #contact { height: 100vh; }
+.contact-row { text-align: center; position: absolute; width: 100%; left: 0; }
+
+/* ARROW */
 #scroll-up { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.8em;  }
-#social { display: inline; width: 100%; left: 0; }
-#et-sentence { color: rgba(255,153,51,0.5) !important; }
-#et-scene-wrapper { bottom:0%; }
-#et-scene { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/et-contact-scene.svg); display: table; margin: 0 auto; }
-.contact-row { text-align: center; position: absolute;}
+
+/* SOCIAL */
+#social { width: 100%; left: 0; }
 #contact a { color: white; transition: all .5px ease-in-out; }
 #contact a:hover { color: #FF9933 !important; color: white; text-decoration:none; transition: all .5px ease-in-out; }
 #contact .btn { background-color: rgba(19, 65, 99, 0.7) !important; border-radius: 100%; padding: 20%; font-size: inherit !important; }
@@ -16,9 +17,12 @@
 #contact .social-active { background-color: #FF9933 !important; }
 #contact .social-active:hover { color: rgba(19, 65, 99, 0.7) !important; }
 
-#mail { display: inline-block; }
-#phone { display: inline-block; }
+/* CONTACT-INFO */
+#contact-info { color: rgba(255,153,51,0.5) !important; }
 
+/* ET-SCENE */
+#et-scene-wrapper { bottom:0%; }
+#et-scene { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/et-contact-scene.svg); display: table; margin: 0 auto; }
 
 /*========== RESPONSIVENESS ==========*/
 
@@ -31,11 +35,8 @@
                             #et-scene-wrapper { height:35%; }
                             #scroll-up { top: 15%; }
                             #social { top:35%; }
-                            #et-sentence { top:50%; }
-                            #et-scene { height: 100%; width: 100%; }
-                            .contact-row { width: 100%; left: 0; }
-                            #mail { width: 25%; }
-                            #phone { width: 25%; } }
+                            #contact-info { top:50%; }
+                            #et-scene { height: 100%; width: 100%; } }
 
 /* Extra small Devices, (phones, 320px and up) */
 @media (min-width: 320px) { }
@@ -45,28 +46,22 @@
 							              #phone-btn-wrapper { width: 60px; height: 60px; }
                             #mail-btn-wrapper { width: 60px; height: 60px; }
                             #contact .btn { width: 60px; height: 60px; padding: 23%; }
-                            #et-scene-wrapper { height:40%; }
+                            #et-scene-wrapper { height:40%; width: 100%; left: 0; }
                             #scroll-up { top: 15%; }
                             #social { top:35%; }
-                            #et-sentence { top:50%; }
+                            #contact-info { top:50%; }
                             #et-scene { height: 85%; width: 80%; }
-                            .contact-row { width: 100%; left: 0; }
-                            #mail { width: 25%; }
-                            #phone { width: 25%; } }
 
 /* Extra small Devices, (phones, 640px and up) */
 @media (min-width: 640px) { #linkedin-btn-wrapper { width: 60px; height: 60px; }
 							              #phone-btn-wrapper { width: 60px; height: 60px; }
                             #mail-btn-wrapper { width: 60px; height: 60px; }
                             #contact .btn { width: 60px; height: 60px; padding: 23%; }
-                            #et-scene-wrapper { height:45%; }
+                            #et-scene-wrapper { height:45%; width: 90%; left: 5%; }
                             #scroll-up { top: 15%; }
                             #social { top:30%; }
-                            #et-sentence { top:45%; }
-                            #et-scene { height: 90%; width: 90%; }
-                            .contact-row { width: 90%; left:5%; }
-                            #mail { width: 30%; }
-                            #phone { width: 30%; } }
+                            #contact-info { top:45%; }
+                            #et-scene { height: 90%; width: 90%; }}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -74,25 +69,24 @@
                             #phone-btn-wrapper { width: 70px; height: 70px; }
                             #mail-btn-wrapper { width: 70px; height: 70px; }
                             #contact .btn { width: 70px; height: 70px; }
-                            #et-scene-wrapper { height:38%; }
+                            #et-scene-wrapper { height:38%; width: 50%; left: 25%; }
                             #scroll-up { top: 15%; }
                             #social { top:30%; }
-                            #et-sentence { top:45%; }
+                            #contact-info { top:48%; }
                             #et-scene { height: 110%; width: 110%; }
-                            .contact-row { width: 50%; left: 25%; } }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { #et-scene-wrapper { height:40%; }
 							#social { top:28%; } 
 							#scroll-up { top:12%; }
-							#et-sentence { top:44%; } }
+							#contact-info { top:44%; } }
 
 /* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1024px) { #contact .btn { border: solid white 3px; }
 							 #et-scene-wrapper { height:45%; }
 							 #social { top:25%; } 
 							 #scroll-up { top:10%; }
-							 #et-sentence { top:42%; }
+							 #contact-info { top:42%; }
 							 #et-scene { height: 100%; width: 100%; } }
 
 /* Large devices (large desktops, 1280px and up) */

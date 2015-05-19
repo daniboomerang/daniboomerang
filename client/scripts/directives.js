@@ -69,26 +69,25 @@ daniboomerangDirectives.directive('contact', function($timeout, $document) {
     templateUrl: 'views/sections/contact.html',
     scope: {},
     link: function (scope, element) {
-      var MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId; 
+      var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
       init();
       function init(){ 
-        MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.showScrollUpArrow = false; scope.showEtSentence = false; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0;
+        ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.showScrollUpArrow = false; scope.showContactInfo = false; scope.contactInfo = ET_SENTENCE; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0;
         scope.$on('event:activeArea', function($event, area){ 
-          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = true; scope.showEtSentence = true; }, 500); }
+          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = true; scope.showContactInfo = true; }, 500); }
         });
         scope.$on('event:inactiveArea', function($event, area){ 
           if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = false; }, 500); }
         });
       }
       scope.toggleSocialButton = function(button){
-/*        var linelength = element[0].querySelector('#mail-path').getTotalLength();*/ 
         if (button == MAIL_BUTTON) {
-          if (scope.activeMail == false) { scope.mailAddress = GMAIL; mailButtonId.addClass("social-active"); scope.activeMail = true; }
-          else { scope.mailAddress = ""; mailButtonId.removeClass("social-active"); scope.activeMail = false; }
+          if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; mailButtonId.addClass("social-active"); phoneButtonId.removeClass("social-active"); activeButton =  MAIL_BUTTON; }
+          else { scope.contactInfo = ET_SENTENCE; mailButtonId.removeClass("social-active"); activeButton = undefined; }
         }
         else {
-          if (scope.activePhone == false) { scope.phoneNumber = NUMBER; phoneButtonId.addClass("social-active"); scope.activePhone = true; }
-          else { scope.phoneNumber = ""; phoneButtonId.removeClass("social-active"); scope.activePhone = false; }
+          if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; phoneButtonId.addClass("social-active"); mailButtonId.removeClass("social-active"); activeButton =  PHONE_BUTTON;}
+          else { scope.contactInfo = ET_SENTENCE; phoneButtonId.removeClass("social-active"); activeButton = undefined; }
         }
       }
     }
