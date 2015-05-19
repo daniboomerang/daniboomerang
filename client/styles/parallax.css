@@ -40,7 +40,7 @@
 /***********************/
 #cover-parallax-images { z-index: 2; }
 #cover-parallax-images .parallax__layer--deep { } 
-#cover-parallax-images .parallax__layer--back { background-size:100%; background-repeat: no-repeat; background-image: url(/images/earth-connectivity.svg); } 
+#cover-parallax-images .parallax__layer--back { } 
 #cover-parallax-images .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); } 
 #cover-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books.svg); }
 
@@ -48,7 +48,8 @@
   #cover-parallax-images { height: 190vh; }
   #cover-parallax-images .parallax__layer--base { height: 180vh; }
   #cover-parallax-images .parallax__layer--back { height: 130vh; margin-top: 90vh; }
-  #iss { background-image: url(/images/iss.svg); background-size: 100%; background-repeat:no-repeat; height: 70%; width: 70%;  }
+  #iss { height: 90%; width: 90%;  }
+  #earth {  }
   #big-stone { background-image: url(/images/big-stone.svg); background-size: 100%; background-repeat:no-repeat; height: 80%; width: 80%; }
   #stones-circle { background-image: url(/images/stones-circle.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; }
   .orbit-comet {  height: 4%; width: 100%; }
@@ -63,24 +64,36 @@
   #orbit-stones-circle { height: 20vh; width: 20vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
-  #cover-parallax-images { height: 120vh; margin-top: -30vh; }
+  #cover-parallax-images { height: 115vh; margin-top: -30vh; }
   #cover-parallax-images .parallax__layer--back { margin-top: 80vh; }
   #cover-parallax-images .parallax__layer--base { height: 120vh; }
   #orbit-big-stone { height: 5vh; width: 5vh; }
   #orbit-stones-circle { height: 15vh; width: 15vh; }
+  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 20vh; width: 20vh; }
 }
 @media (min-width: 500px) and (max-width: 639px) {
   #cover-parallax-images { height: 100vh;  margin-top: -20vh; }
   #cover-parallax-images .parallax__layer--back { margin-top: 110vh; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
   #orbit-stones-circle { height: 10vh; width: 10vh; }
+  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }  
-@media (min-width: 200px) and (max-width: 499px) {
+@media (min-width: 400px) and (max-width: 499px) {
   #cover-parallax-images { height: 70vh;  margin-top: -30vh; }
   #cover-parallax-images .parallax__layer--back { margin-top: 100vh; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
   #orbit-stones-circle { height: 10vh; width: 10vh; }
-}  
+  #cover-parallax-images .parallax__layer--fore { background-size:110%; }
+  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
+} 
+@media (min-width: 200px) and (max-width: 399px) {
+  #cover-parallax-images { height: 50vh;  margin-top: -30vh; }
+  #cover-parallax-images .parallax__layer--back { margin-top: 100vh; }
+  #orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }
+  #cover-parallax-images .parallax__layer--fore { background-size:110%; }
+  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
+}   
 
 /*********/
 /* ABOUT */
@@ -98,17 +111,17 @@
 #BE-books { background-image: url(/images/BE-books.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; position:absolute; }
 #BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 90%; width: 90%; position:absolute; }
 #BE-ruby { background-image: url(/images/BE-ruby.svg); background-size: 100%; background-repeat:no-repeat; height: 60%; width: 60%; position:absolute; }
-#boomerang { background-image: url(/images/dboom-icon.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }
-@media all { 
-  #BE-parallax-images { height: 230vh; margin-top: 50vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #BE-parallax-images .parallax__layer--back { margin-top: 0vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+/*#boomerang { background-image: url(/images/boomerang.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }*/
+@media all {
+  #BE-parallax-images { height: 260vh; margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 70vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 70vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 50vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 50vh; }
   #BE-books { top:0vh; left: 0vh; }
   #BE-dboom { top: 80vh; right: -20vh; }
   #BE-ruby { top: 90vh; right: -30vh; }
-  #boomerang { left: 24vh; top: 25vh;  }
+  /*#boomerang { height: 10%; width: 10%; top:30vh; left:25vh;  }*/
 }  
 @media (min-width: 1024px) and (max-width: 1279px) {
   #BE-parallax-images { height: 230vh; margin-top: 70vh; }
@@ -125,9 +138,10 @@
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
   #BE-dboom { right: -10vh; }
+
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  #BE-parallax-images { height: 200vh; margin-top: 0vh; }
+  #BE-parallax-images { height: 200vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 60vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
@@ -135,36 +149,58 @@
   #BE-ruby { top: 90vh; right: -20vh; }
   #BE-dboom { right: -10vh; }
   #BE-books { height: 110%; width: 110%; }
+
 }
 @media (min-width: 640px) and (max-width: 767px) {
-  #BE-parallax-images { height: 160vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
-  #BE-parallax-images .parallax__layer--back { margin-top: 40vh; }
+  #BE-parallax-images { height: 170vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 50vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #BE-ruby { top: 70vh; right: -20vh; }
+  #BE-ruby { top: 90vh; right: -20vh; }
   #BE-dboom { right: -10vh; }
-  #BE-books { top: -20vh; height: 120%; width: 120%; }
+  #BE-books { top: -10vh; height: 120%; width: 120%; }
+
 }
-@media (min-width: 500px) and (max-width: 639px) {
-  #BE-parallax-images { height: 100vh; }
+@media (min-width: 550px) and (max-width: 639px) {
+  #BE-parallax-images { height: 118vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
-  #BE-parallax-images .parallax__layer--back { margin-top: 25vh; height: 120vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 35vh; height: 120vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #BE-ruby { top: 25vh; right: -12vh; }
-  #BE-dboom { top: 10vh; right: -12vh; }
-  #BE-books { top: -50vh; height: 110%; width: 110%; }
+  #BE-ruby { top: 50vh; right: -12vh; }
+  #BE-dboom { top: 35vh; right: -12vh; }
+  #BE-books { top: -5vh; height: 110%; width: 110%; }
+}
+@media (min-width: 500px) and (max-width: 549px) {
+  #BE-parallax-images { height: 98vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 35vh; height: 120vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-ruby { top: 50vh; right: -12vh; }
+  #BE-dboom { top: 35vh; right: -12vh; }
+  #BE-books { top: -5vh; height: 110%; width: 110%; }
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  #BE-parallax-images { height: 75vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
-  #BE-parallax-images .parallax__layer--back { margin-top: 45vh; height: 120vh;}
+  #BE-parallax-images { height: 90vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 35vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 60vh; height: 120vh;}
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #BE-ruby { top: 15vh; right: -12vh; }
-  #BE-dboom { top: 0vh; right: -5vh; }
-  #BE-books { top: -55vh; height: 110%; width: 110%; }
+  #BE-ruby { top: 43vh; right: -9vh; }
+  #BE-dboom { top: 28vh; right: -5vh; }
+  #BE-books { top: -10vh; height: 115%; width: 115%; }
+}
+@media (min-width: 200px) and (max-width: 399px) {
+  #BE-parallax-images { height: 80vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 80vh; height: 120vh;}
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-ruby { top: 43vh; right: -9vh; }
+  #BE-dboom { top: 28vh; right: -5vh; }
+  #BE-books { top: 0vh; height: 115%; width: 115%; }
 }
 
 /**********/
@@ -177,83 +213,94 @@
 /****************************/
 #FE-parallax-images { z-index: 1; }
 #FE-parallax-images .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/FE-space.svg); }
-#FE-parallax-images .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth-inverted.svg); }
+#FE-parallax-images .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth.svg); }
 #FE-parallax-images .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
 #FE-parallax-images .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
-#FE-laptop-mobile { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-laptop-mobile.svg); height: 90%; width: 90%; position:absolute; }
+#FE-mobile-tablet { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-mobile-tablet.svg); height: 95%; width: 95%; position:absolute; }
 #FE-books { background-size: 100%; background-repeat:no-repeat;  background-image: url(/images/FE-books.svg); height: 100%; width: 100%; position:absolute; }
-#FE-gaming { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-gaming.svg); height: 60%; width: 60%; position:absolute; }
+#FE-gaming { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-gaming-test.svg); height: 40%; width: 50%; position:absolute; }
 @media all { 
-  #FE-parallax-images { height: 240vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 20vh; }
-  #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-laptop-mobile { top: 160vh; left: -35vh;}
-  #FE-books { top: 40vh; right: -20vh;}
-  #FE-gaming { top: 110vh; left: -20vh; }
-}
-@media (min-width: 1024px) and (max-width: 1279px) { 
-  #FE-parallax-images { height: 240vh;  }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
+  #FE-parallax-images { height: 260vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 40vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-laptop-mobile { top: 170vh; left: -25vh; }
-  #FE-gaming { top: 110vh; left: -10vh; }
+  #FE-mobile-tablet { top: 180vh; left: -25vh;}
+  #FE-books { top: 10vh; right: -20vh;}
+  #FE-gaming { top: 130vh; left: 0vh; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) { 
+  #FE-parallax-images { height: 230vh;  }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 40vh; }
+  #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #FE-mobile-tablet { top: 160vh; left: -20vh; }
+  #FE-gaming { top: 120vh; left: 0vh; }
   #FE-books { top:0; right: -15vh; }
 }
 @media (min-width: 992px) and (max-width: 1023px) {
-  #FE-parallax-images { height: 240vh; }
+  #FE-parallax-images { height: 225vh; }
   #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 40vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-laptop-mobile { top: 170vh; left: -25vh; }
-  #FE-gaming { top: 110vh; left: -10vh; }
+  #FE-mobile-tablet { top: 170vh; left: -15vh; }
+  #FE-gaming { top: 120vh; left: 5vh; }
   #FE-books { top:0; right: -15vh; }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  #FE-parallax-images { height: 200vh; }
+  #FE-parallax-images { height: 205vh; }
   #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 50vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 60vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-laptop-mobile { top: 140vh; left: -20vh; }
-  #FE-gaming { top: 100vh; left: -10vh; }
+  #FE-mobile-tablet { top: 150vh; left: -20vh; }
+  #FE-gaming { top: 115vh; left: 0vh; }
   #FE-books { top:0; right: -10vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
-  #FE-parallax-images { height: 160vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 50vh; }
+  #FE-parallax-images { height: 180vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 60vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-laptop-mobile { top: 120vh; left: -10vh; }
-  #FE-gaming { top: 80vh; left: -5vh; }
+  #FE-mobile-tablet { top: 120vh; left: -15vh; }
+  #FE-gaming { top: 100vh; left: 0vh; }
   #FE-books { top:0; left:0vh; }
 }
 
-@media (min-width: 500px) and (max-width: 639px) {
-  #FE-parallax-images { height: 140vh; }
+@media (min-width: 550px) and (max-width: 639px) {
+  #FE-parallax-images { height: 130vh; }
   #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 50vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 40vh; height: 120vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-laptop-mobile { top: 97vh; left: -10vh; }
-  #FE-gaming { top: 77vh; left: -5vh; }
-  #FE-books { top:0vh; left:0vh; }
+  #FE-mobile-tablet { top: 93vh; left: -8vh; }
+  #FE-gaming { top: 73vh; left: 0vh; }
+  #FE-books { top:0vh; right:-2vh; height: 120%; width: 120%; }
 }
 
-@media (min-width: 400px) and (max-width: 499px) {
-  #FE-parallax-images { height: 90vh; }
+@media (min-width: 500px) and (max-width: 549px) {
+  #FE-parallax-images { height: 130vh; }
   #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 50vh; height: 100vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 65vh; height: 120vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-laptop-mobile { top: 47vh; left: -10vh; }
-  #FE-gaming { top: 47vh; left: -5vh; }
-  #FE-books { top:-10vh; left:0vh; }
+  #FE-mobile-tablet { top: 97vh; left: -8vh; }
+  #FE-gaming { top: 77vh; left: 0vh; }
+  #FE-books { top:0vh; right:-2vh; height: 120%; width: 120%; }
+}
+
+@media (min-width: 200px) and (max-width: 499px) {
+  #FE-parallax-images { height: 80vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 10vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 60vh; height: 100vh; }
+  #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #FE-mobile-tablet { top: 47vh; left: -10vh; }
+  #FE-gaming { top: 47vh; left: -2vh; }
+  #FE-books { top:-5vh; right:-5vh; height: 120%; width: 120%; }
 }
 
 /********/
@@ -293,6 +340,7 @@
   .spin-right-half-faster { -webkit-animation-name: spin-right-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole-faster { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 20000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 20000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 20000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-right-whole-slower { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 90000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 90000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 90000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 12000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 12000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 12000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-whole { -webkit-animation-name: spin-left-whole; -webkit-animation-duration: 10000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-whole; -moz-animation-duration: 10000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-whole; -ms-animation-duration: 10000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half-faster { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }

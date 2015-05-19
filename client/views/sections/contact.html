@@ -2,16 +2,18 @@
     <div id="scroll-up" class="contact-row" ng-style="showScrollUpArrow === true && {'visibility': 'visible'} || showScrollUpArrow === false && {'visibility': 'hidden'}">
     	<span><a href="#work" du-smooth-scroll du-scrollspy duration="1000"><i class="fa fa-fw fa-chevron-up fa-3x"></i></a></span>
     </div>    
-	<div id="social-links" class="contact-row">
-		<div id="mail" class="social-button">
-			<a class="btn" href="" ng-click="toggleSocialButton('mail')"><i class="fa fa-fw fa-lg fa-envelope-o"></i></a>
+	<div id="social" class="contact-row">
+		<div  id="mail" name="mail-address" ng-style="activeMail === true && {'visibility': 'visible'} || activeMail === false && {'visibility': 'hidden'}"></div>
+		<div id="mail-btn-wrapper" class="social-button">
+			<a id="mail-btn" class="btn" href="" ng-click="toggleSocialButton('mail')"><i class="fa fa-fw fa-lg fa-envelope-o"></i></a>
 		</div>
-        <div id="social-linkedin" class="social-button">
+        <div id="linkedin-btn-wrapper" class="social-button">
 			<a class="btn" href="https://es.linkedin.com/in/estevezdani" target="_blank_"><i class="fa fa-fw fa-lg fa-linkedin"></i></a>
 		</div>
-		<div id="phone" class="social-button">
-			<a class="btn" href="" ng-click="toggleSocialButton('phoneNumber')"><i class="fa fa-fw fa-lg fa-phone"></i></a>
+		<div id="phone-btn-wrapper" class="social-button">
+			<a id="phone-btn" class="btn" href="" ng-click="toggleSocialButton('phoneNumber')"><i class="fa fa-fw fa-lg fa-phone"></i></a>
 		</div>
+		<div  id="phone" name="phone-number" ng-style="activePhone === true && {'visibility': 'visible'} || activePhone === false && {'visibility': 'hidden'}"></div>
 	</div>
 	<div id="et-sentence" class="contact-row" ng-style="showEtSentence === true && {'visibility': 'visible'} || showEtSentence === false && {'visibility': 'hidden'}">
     	...I´ll be...right...here...

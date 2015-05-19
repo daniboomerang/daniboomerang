@@ -63,31 +63,32 @@ daniboomerangDirectives.directive('cover', function($timeout) {
   }  
 });
 
-daniboomerangDirectives.directive('contact', function($timeout) {
+daniboomerangDirectives.directive('contact', function($timeout, $document) {
   return {
     restrict: 'E',
     templateUrl: 'views/sections/contact.html',
     scope: {},
     link: function (scope, element) {
-      var MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, activeButton, mailButtonId, phoneButtonId; 
+      var MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId; 
       init();
       function init(){ 
-        MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-button'); phoneButtonId = element.find('#phone-button'); scope.showScrollUpArrow = false; scope.showEtSentence = false;
+        MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.showScrollUpArrow = false; scope.showEtSentence = false; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0;
         scope.$on('event:activeArea', function($event, area){ 
           if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = true; scope.showEtSentence = true; }, 500); }
         });
         scope.$on('event:inactiveArea', function($event, area){ 
-          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = false; }, 1500); }
+          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = false; }, 500); }
         });
       }
       scope.toggleSocialButton = function(button){
+/*        var linelength = element[0].querySelector('#mail-path').getTotalLength();*/ 
         if (button == MAIL_BUTTON) {
-          if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; mailButtonId.addClass("social-active"); phoneButtonId.removeClass("social-active"); activeButton =  MAIL_BUTTON; }
-          else { scope.contactInfo = ""; mailButtonId.removeClass("social-active"); activeButton = undefined; }
+          if (scope.activeMail == false) { scope.mailAddress = GMAIL; mailButtonId.addClass("social-active"); scope.activeMail = true; }
+          else { scope.mailAddress = ""; mailButtonId.removeClass("social-active"); scope.activeMail = false; }
         }
         else {
-          if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; phoneButtonId.addClass("social-active"); mailButtonId.removeClass("social-active"); activeButton =  PHONE_BUTTON;}
-          else { scope.contactInfo = ""; phoneButtonId.removeClass("social-active"); activeButton = undefined; }
+          if (scope.activePhone == false) { scope.phoneNumber = NUMBER; phoneButtonId.addClass("social-active"); scope.activePhone = true; }
+          else { scope.phoneNumber = ""; phoneButtonId.removeClass("social-active"); scope.activePhone = false; }
         }
       }
     }
@@ -196,3 +197,29 @@ daniboomerangDirectives.directive('topnavbar', function() {
     }
   };
 });
+
+/**************************/
+/** SVG IMAGES DIRECTIVE **/
+/**************************/
+daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
+  return {
+    restrict: 'EA',
+    scope: {},
+    templateUrl: function (elem, attrs) { return '/images/' + attrs.name + '.svg'; },
+    link: function (scope, element, attrs) {
+        // ISS LIGHTS 
+        $interval(function() { scope.issLight = '#' + Math.floor(Math.random()*16777215).toString(16); }, 1000);
+        // NODES ON/OFF
+        function processChanges(){
+          timeToPorcess  = Math.floor((Math.random() * 2) + 1);
+          nodeToProcess = Math.floor((Math.random() * 6));
+          scope.aliveNodes[nodeToProcess] = !scope.aliveNodes[nodeToProcess];
+          $timeout(function() { processChanges() }, timeToPorcess * 1000);
+        }
+        scope.aliveNodes = [true, true, true, true, true, true, true, true];
+        var timeToPorcess; var nodeToProcess;
+        processChanges();
+        
+    }
+  };
+});  
