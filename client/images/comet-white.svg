@@ -1,0 +1,60 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="948.83" width="1027.1" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1027.051 948.82094" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<defs>
+<filter id="f" style="color-interpolation-filters:sRGB">
+<feGaussianBlur stdDeviation="5.7209681"/>
+</filter>
+<linearGradient id="e" x1="188.09" gradientUnits="userSpaceOnUse" y1="633.76" gradientTransform="translate(339.38,513.02)" x2="416.34" y2="396.08">
+<stop stop-color="#ddfeff" stop-opacity=".4" offset="0"/>
+<stop stop-opacity=".26275" stop-color="#f1faec" offset=".33398"/>
+<stop stop-opacity=".17255" stop-color="#e9fbf7" offset=".56783"/>
+<stop stop-color="#fffbf7" stop-opacity="0" offset="1"/>
+</linearGradient>
+<radialGradient id="c" gradientUnits="userSpaceOnUse" cy="675.73" cx="562.35" gradientTransform="matrix(2.176,0,0,2.176,-661.53,-860.83)" r="27.574">
+<stop stop-color="#fff" offset="0"/>
+<stop stop-color="#fff" stop-opacity=".27059" offset="1"/>
+</radialGradient>
+<linearGradient id="d" y2="-747.25" gradientUnits="userSpaceOnUse" x2="-193.49" gradientTransform="matrix(.72339 0 0 .57861 -85.275 -308.9)" y1="-744.3" x1="-454.15">
+<stop stop-opacity=".32157" stop-color="#c53e00" offset="0"/>
+<stop stop-color="#c84d4d" stop-opacity=".22745" offset=".32042"/>
+<stop stop-color="#cfc1c5" stop-opacity=".052381" offset=".77306"/>
+<stop stop-opacity=".019608" stop-color="#d3e8ff" offset="1"/>
+</linearGradient>
+<radialGradient id="g" gradientUnits="userSpaceOnUse" cy="609.56" cx="562.13" r="60.001">
+<stop stop-color="#fff" offset="0"/>
+<stop stop-color="#fff" stop-opacity=".27059" offset="1"/>
+</radialGradient>
+<linearGradient id="a" y2="-741.27" gradientUnits="userSpaceOnUse" x2="-225.24" y1="-739.56" x1="-416.45">
+<stop stop-color="#8a1c00" offset="0"/>
+<stop stop-color="#8a1c00" stop-opacity="0" offset="1"/>
+</linearGradient>
+</defs>
+<g transform="translate(-440.53 116.87)">
+<g transform="matrix(.74144 .67102 -.67102 .74144 484.38 -80.083)">
+<path d="m515.23 1110.2c-9.4552 18.144 3.6863 45.068 25.062 45.031 15.193 1.0504 26.959-10.125 36.72-20.228 345.69-326.44 239.73-408.42-61.782-24.803z" stroke-opacity=".67692" transform="matrix(-.099367 2.0136 1.9967 -.055021 -1300.1 -1249.2)" filter="url(#f)" stroke="#8a3e00" stroke-width=".95120" fill="url(#e)"/>
+<g transform="matrix(-.74146 .67104 .67104 .74146 1351.8 -822.44)">
+<g transform="matrix(.99999 0 0 .99999 9.1025 -84.134)">
+<g transform="translate(327.27,147.49)">
+<g transform="translate(-182.93,-467.65)">
+<text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="991.03918" x="1418.9371" font-family="Sans" line-height="125%"><tspan y="991.03918" x="1418.9371"/></text>
+<text font-size="13px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1293.6891" x="1315.4353" font-family="&apos;Arial Hebrew&apos;" line-height="125%"><tspan y="1293.6891" x="1315.4353"/></text>
+<text font-size="6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1303.9227" x="1314.1394" font-family="Krungthep" line-height="125%"><tspan y="1303.9227" x="1314.1394"/></text>
+<g transform="translate(40.8,-67.496)">
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="915.52228" x="440.44522" font-family="Sans" line-height="125%"><tspan y="915.52228" x="440.44522"/></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="13px" y="1218.1722" x="336.94339" font-family="&apos;Arial Hebrew&apos;" line-height="125%"><tspan y="1218.1722" x="336.94339"/></text>
+<text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6px" y="1228.4059" x="335.64749" font-family="Krungthep" line-height="125%"><tspan y="1228.4059" x="335.64749"/></text>
+<g transform="translate(907.13,1347.6)">
+<ellipse stroke-opacity=".67692" rx="125" ry="100" stroke="url(#a)" cy="-739.56" cx="-288.8" stroke-width="5.2998" fill="url(#d)"/>
+</g>
+<circle cy="609.56" stroke="url(#g)" cx="562.13" r="60.001" fill="url(#c)"/>
+</g>
+</g>
+</g>
+<text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="867.31873" x="1988.6168" font-family="Sans" line-height="125%"><tspan y="867.31873" x="1988.6168"/></text>
+<text font-size="13px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1169.9694" x="1885.1147" font-family="&apos;Arial Hebrew&apos;" line-height="125%"><tspan y="1169.9694" x="1885.1147"/></text>
+<text font-size="6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1180.203" x="1883.8188" font-family="Krungthep" line-height="125%"><tspan y="1180.203" x="1883.8188"/></text>
+</g>
+<text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="534.67395" x="1349.2291" line-height="125%"><tspan y="534.67395" x="1349.2291"/></text>
+</g>
+</g>
+</g>
+</svg>

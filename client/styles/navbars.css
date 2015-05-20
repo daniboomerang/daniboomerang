@@ -7,7 +7,7 @@
 	/****************************************/
 	/**************  TOP NAVBAR *************/
 	/****************************************/
-	.navbar-custom { font-size: 0.9em; background: rgba(0, 0, 0, 0.1); ; border: none !important;} /*rgba(13, 27, 51, 0.8)*/
+	.navbar-custom { font-size: 0.9em; /*background: rgba(0, 0, 0, 0.1);*/ border: none !important;} /*rgba(13, 27, 51, 0.8)*/
 	.navbar-width { width: 100% !important; }
 	.navbar-custom .navbar-nav>li>a:hover { color: white !important; background-color: rgba(118, 129, 149, 0.1); transition: all .7s ease-in-out; }
 	.navbar-custom .navbar-nav>li>a:focus { background-color: transparent !important; transition: all .7s ease-in-out; color: #FF9933 !important;}
@@ -182,7 +182,7 @@
 /* HEADER */
 /**********/
 
-	header { height: 0px; width: 100%; overflow: hidden; z-index: 1; background: rgba(13, 27, 51, 0.85); -webkit-transition: height 0.7s; -moz-transition: height 0.7s; -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s;}
+	header { height: 0px; width: 100%; overflow: hidden; z-index: 1; background: rgba(19, 65, 99, 0.7); -webkit-transition: height 0.7s; -moz-transition: height 0.7s; -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s;}
 
 	/*==========  RESPONSIVENESS FOR HEADER  ==========*/
 

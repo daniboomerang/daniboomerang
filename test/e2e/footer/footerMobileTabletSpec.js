@@ -1,19 +1,20 @@
 'use strict';
 
-describe('Daniboomerang - footer scenario for movbiles and tablets', function() {
+describe('Daniboomerang - footer scenario for mobiles and tablets', function() {
 
   /////////////////////////////////////
   /**** DANIBOOMERANG.COM - /#/cover */
   /////////////////////////////////////
 
   beforeEach(function() {
-     browser.get('/');
+    browser.get('/');
+    browser.ignoreSynchronization = true;
+    browser.sleep(5000);
   });
   
   it('should scroll to cover section', function() {
-    browser.waitForAngular();
     expect(browser.getCurrentUrl()).toContain('/#/cover');
-  }, 200000);
+  });
 
   ////////////////  
   // The Footer //

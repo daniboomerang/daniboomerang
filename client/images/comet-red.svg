@@ -1,0 +1,48 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="936.89" width="1023.3" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1023.2911 936.88196" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <filter id="e" style="color-interpolation-filters:sRGB">
+   <feGaussianBlur stdDeviation="5.7209681"/>
+  </filter>
+  <linearGradient id="d" x1="188.09" gradientUnits="userSpaceOnUse" y1="633.76" gradientTransform="translate(339.38,513.02)" x2="445.04" y2="333.04">
+   <stop stop-color="#a75800" stop-opacity=".93725" offset="0"/>
+   <stop stop-color="#cc3bff" stop-opacity=".061538" offset="1"/>
+  </linearGradient>
+  <radialGradient id="a" gradientUnits="userSpaceOnUse" cy="675.73" cx="562.35" gradientTransform="matrix(2.176 0 0 2.176 -661.53 -860.83)" r="27.574">
+   <stop stop-color="#761200" offset="0"/>
+   <stop stop-color="#a40" stop-opacity=".53725" offset="1"/>
+  </radialGradient>
+  <linearGradient id="c" y2="-744.3" gradientUnits="userSpaceOnUse" x2="-108.55" gradientTransform="matrix(.72339 0 0 .57861 -85.275 -308.9)" y1="-744.3" x1="-454.15">
+   <stop stop-color="#c95100" offset="0"/>
+   <stop stop-opacity=".019608" stop-color="#94c8ff" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(-430.28 110.85)">
+  <g transform="matrix(.74144 .67102 -.67102 .74144 484.38 -80.083)">
+   <path d="m515.23 1110.2c-9.4552 18.144 3.6863 45.068 25.062 45.031 15.193 1.0504 26.959-10.125 36.72-20.228 345.69-326.44 239.73-408.42-61.782-24.803z" transform="matrix(1.9976 .09164 -.26017 1.9655 -408.96 -2017.8)" filter="url(#e)" fill="url(#d)"/>
+   <g transform="matrix(.74146 -.67104 .67104 .74146 -278.8 653.3)">
+    <g transform="matrix(.99999 0 0 .99999 9.1025 -84.134)">
+     <g transform="translate(327.27 147.49)">
+      <g transform="translate(-182.93,-467.65)">
+       <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="991.03918" x="1418.9371" font-family="Sans"><tspan y="991.03918" x="1418.9371"/></text>
+       <text font-size="13px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="1293.6891" x="1315.4353" font-family="&apos;Arial Hebrew&apos;"><tspan y="1293.6891" x="1315.4353"/></text>
+       <text font-size="6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="1303.9227" x="1314.1394" font-family="Krungthep"><tspan y="1303.9227" x="1314.1394"/></text>
+       <g transform="translate(40.8,-67.496)">
+        <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" line-height="125%" y="915.52228" x="440.44522" font-family="Sans"><tspan y="915.52228" x="440.44522"/></text>
+        <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="13px" line-height="125%" y="1218.1722" x="336.94339" font-family="&apos;Arial Hebrew&apos;"><tspan y="1218.1722" x="336.94339"/></text>
+        <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6px" line-height="125%" y="1228.4059" x="335.64749" font-family="Krungthep"><tspan y="1228.4059" x="335.64749"/></text>
+        <g transform="translate(907.13 1347.6)">
+         <ellipse rx="125" ry="100" cy="-739.56" cx="-288.8" fill="url(#c)"/>
+        </g>
+        <circle cx="562.13" cy="609.56" r="60.001" fill="url(#a)"/>
+       </g>
+      </g>
+     </g>
+     <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="867.31873" x="1988.6168" font-family="Sans"><tspan y="867.31873" x="1988.6168"/></text>
+     <text font-size="13px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="1169.9694" x="1885.1147" font-family="&apos;Arial Hebrew&apos;"><tspan y="1169.9694" x="1885.1147"/></text>
+     <text font-size="6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="1180.203" x="1883.8188" font-family="Krungthep"><tspan y="1180.203" x="1883.8188"/></text>
+    </g>
+    <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" line-height="125%" y="534.67395" x="1349.2291"><tspan y="534.67395" x="1349.2291"/></text>
+   </g>
+  </g>
+ </g>
+</svg>
