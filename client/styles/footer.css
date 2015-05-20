@@ -65,7 +65,7 @@ footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background
 @media (min-width: 2000px) {  .footer { font-size: 2.6em !important; }
                               #to-top-button.reveal { bottom: 3%; right: 3%; width: 95px; height: 95px; }
                               #share-button.reveal { bottom: 3%; left: 3%; width: 95px; height: 95px; }
-                              #footer-wrapper .btn { width: 95px; height: 95px; border: solid white 4px; } }
+                              #footer-wrapper .btn { width: 95px; height: 95px; border: solid white 4px; padding: 15%;} }
 
 /* Extra large devices (extra large desktops, 2000 and up) */
 @media (min-width: 2500px) {  .footer { font-size: 2.8em !important; }
