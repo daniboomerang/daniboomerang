@@ -1,0 +1,130 @@
+/***********/
+/* CONTACT */
+/***********/
+
+#contact { height: 100vh; }
+.contact-row { text-align: center; position: absolute; width: 100%; left: 0; }
+
+/* ARROW */
+#scroll-up { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.8em;  }
+
+/* SOCIAL */
+#social { width: 100%; left: 0; }
+#contact a { color: white; transition: all .5px ease-in-out; }
+#contact a:hover { color: #FF9933 !important; color: white; text-decoration:none; transition: all .5px ease-in-out; }
+#contact .btn { background-color: rgba(19, 65, 99, 0.7) !important; border-radius: 100%; padding: 20%; font-size: inherit !important; }
+.social-button { display: inline-block; margin-left: 0.5%; margin-right: 0.5%;}
+#contact .social-active { background-color: #FF9933 !important; }
+#contact .social-active:hover { color: rgba(19, 65, 99, 0.7) !important; }
+
+/* CONTACT-INFO */
+#contact-info { color: rgba(255,153,51,0.5) !important; }
+
+/* ET-SCENE */
+#et-scene-wrapper { bottom:0%; }
+#et-scene { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/et-contact-scene.svg); display: table; margin: 0 auto; }
+
+/*========== RESPONSIVENESS ==========*/
+
+/* Extra small Devices, (phones, 200px and up) */
+@media (min-width: 200px) {
+                            #linkedin-btn-wrapper { width: 50px; height: 50px; }
+                            #phone-btn-wrapper { width: 50px; height: 50px; }
+                            #mail-btn-wrapper { width: 50px; height: 50px; }
+                            #contact .btn { width: 50px; height: 50px; border: solid white 2px; }
+                            #et-scene-wrapper { height:35%; }
+                            #scroll-up { top: 15%; }
+                            #social { top:35%; }
+                            #contact-info { top:50%; }
+                            #et-scene { height: 100%; width: 100%; } }
+
+/* Extra small Devices, (phones, 320px and up) */
+@media (min-width: 320px) { }
+
+/* Extra small Devices, (phones, 200px and up) */
+@media (min-width: 500px) { #linkedin-btn-wrapper { width: 60px; height: 60px; }
+							              #phone-btn-wrapper { width: 60px; height: 60px; }
+                            #mail-btn-wrapper { width: 60px; height: 60px; }
+                            #contact .btn { width: 60px; height: 60px; padding: 23%; }
+                            #et-scene-wrapper { height:40%; width: 100%; left: 0; }
+                            #scroll-up { top: 15%; }
+                            #social { top:35%; }
+                            #contact-info { top:50%; }
+                            #et-scene { height: 85%; width: 80%; }
+
+/* Extra small Devices, (phones, 640px and up) */
+@media (min-width: 640px) { #linkedin-btn-wrapper { width: 60px; height: 60px; }
+							              #phone-btn-wrapper { width: 60px; height: 60px; }
+                            #mail-btn-wrapper { width: 60px; height: 60px; }
+                            #contact .btn { width: 60px; height: 60px; }
+                            #et-scene-wrapper { height:45%; width: 90%; left: 5%; }
+                            #scroll-up { top: 15%; }
+                            #social { top:30%; }
+                            #contact-info { top:45%; }
+                            #et-scene { height: 90%; width: 90%; }}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+                            #linkedin-btn-wrapper { width: 70px; height: 70px; }
+                            #phone-btn-wrapper { width: 70px; height: 70px; }
+                            #mail-btn-wrapper { width: 70px; height: 70px; }
+                            #contact .btn { width: 70px; height: 70px; }
+                            #et-scene-wrapper { height:38%; width: 50%; left: 25%; }
+                            #scroll-up { top: 15%; }
+                            #social { top:30%; }
+                            #contact-info { top:48%; }
+                            #et-scene { height: 110%; width: 110%; }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { #et-scene-wrapper { height:40%; }
+							#social { top:28%; } 
+							#scroll-up { top:12%; }
+							#contact-info { top:44%; } }
+
+/* Medium devices (desktops, 1024px and up) */
+@media (min-width: 1024px) { #contact .btn { border: solid white 3px; }
+							 #et-scene-wrapper { height:45%; }
+							 #social { top:25%; } 
+							 #scroll-up { top:10%; }
+							 #contact-info { top:42%; }
+							 #et-scene { height: 100%; width: 100%; } }
+
+/* Large devices (large desktops, 1280px and up) */
+@media (min-width: 1280px) { #et-scene-wrapper { height:47%; } }
+
+/* Large devices (large desktops, 1600px and up) */
+@media (min-width: 1600px) {
+                             #linkedin-btn-wrapper { width: 85px; height: 85px; }
+                             #phone-btn-wrapper { width: 85px; height: 85px; }
+                             #mail-btn-wrapper { width: 85px; height: 85px; }
+                             #contact .btn { width: 85px; height: 85px; }
+                             #et-scene-wrapper { height:50%; } }
+
+/* Extra large devices (extra large desktops, 2000 and up) */
+@media (min-width: 2000px) { 
+                              #linkedin-btn-wrapper { width: 95px; height: 95px; }
+                              #phone-btn-wrapper { width: 95px; height: 95px; }
+                              #mail-btn-wrapper { width: 95px; height: 95px; }
+                              #contact .btn { width: 95px; height: 95px; border: solid white 4px; padding: 15%;} }
+
+/* Extra large devices (extra large desktops, 2500 and up) */
+@media (min-width: 2500px) { 
+                              #linkedin-btn-wrapper { width: 115px; height: 115px; }
+                              #phone-btn-wrapper { width: 115px; height: 115px; }
+                              #mail-btn-wrapper { width: 115px; height: 115px; }
+                              #contact .btn { width: 115px; height: 115px; } }
+
+
+/* Extra large devices (extra large desktops, 3000 and up) */
+@media (min-width: 3000px) { 
+                              #linkedin-btn-wrapper { width: 135px; height: 135px; }
+                              #phone-btn-wrapper { width: 135px; height: 135px; }
+                              #mail-btn-wrapper { width: 135px; height: 135px; }
+                              #contact .btn { width: 135px; height: 135px; } }
+
+/* Extra large devices (extra large desktops, 3500 and up) */
+@media (min-width: 3500px) { 
+                              #linkedin-btn-wrapper { width: 170px; height: 170px; }
+                              #phone-btn-wrapper { width: 170px; height: 170px; }
+                              #mail-btn-wrapper { width: 170px; height: 170px; }
+                              #contact .btn { width: 170px; height: 170px; border: solid white 6px; padding: 21%; } }

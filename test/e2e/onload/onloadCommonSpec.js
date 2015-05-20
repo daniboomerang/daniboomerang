@@ -7,13 +7,14 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
   /////////////////////////////
 
   beforeEach(function() {
-     browser.get('/');
+    browser.get('/');
+    browser.ignoreSynchronization = true;
+    browser.sleep(5000);
   });
   
   it('should scroll to cover section', function() {
-    browser.waitForAngular();
     expect(browser.getCurrentUrl()).toContain('/#/cover');
-  }, 200000);
+  });
 
   ////////////  
   // Header //
@@ -39,17 +40,22 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
         // Cover
         var cover = element(by.id('cover'));
         expect(cover.isPresent()).toBe(true);
-        expect(element(by.id('moon-and-boom')).isPresent()).toBe(true);
         expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
         expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
         var coverFooter = cover.element(by.id('cover-footer'));
         expect(coverFooter.element(by.id('scroll-down')).isPresent()).toBe(true);
+      // COVER-PARALLAX-IMAGES
+      expect(element(by.id('cover-parallax-images')).isPresent()).toBe(true);
       // ABOUT-PARALLAX-SECTION
       expect(element(by.id('about-parallax-section')).isPresent()).toBe(true);
       expect(element(by.id('about')).isPresent()).toBe(true);
+      // BE-PARALLAX-IMAGES
+      expect(element(by.id('BE-parallax-images')).isPresent()).toBe(true);
       // LOVING-PARALLAX-SECTION
       expect(element(by.id('loving-parallax-section')).isPresent()).toBe(true);
       expect(element(by.id('loving')).isPresent()).toBe(true);
+      // FE-PARALLAX-IMAGES
+      expect(element(by.id('FE-parallax-images')).isPresent()).toBe(true);
       // WORK-PARALLAX-SECTION
       expect(element(by.id('work-parallax-section')).isPresent()).toBe(true);      
       expect(element(by.id('work')).isPresent()).toBe(true);

@@ -20,7 +20,7 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 			});
 			$rootScope.$on('duScrollspy:becameInactive', function($event, $element){  
 		        var hash = $element.prop('hash');
-		        if (('cover' == hash.substr(1))){ $rootScope.$broadcast('event:inactiveArea', 'Cover'); }
+		        if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Cover'); }
 		        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'About'); }
 		        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Loving'); }
 		        if ('work' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Work'); }

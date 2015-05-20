@@ -14,7 +14,7 @@ describe('Scroll Observer', function() {
 		inject(function($injector, _scrollObserverService_) {
 	 		$rootScope = $injector.get('$rootScope');	   
 			scrollObserverService = _scrollObserverService_;
-			spyOn($rootScope, '$broadcast').andCallThrough();
+			spyOn($rootScope, '$broadcast').and.callThrough();
 		});
 	
 	});

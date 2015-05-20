@@ -4,12 +4,11 @@
 
 #sections{ height: 100%; }
 
-.section{ /*-webkit-box-shadow: 0 0 2px 2px #000000; box-shadow: 0 0 2px 2px #000000; */}
+.section{ padding-bottom:5%; /*-webkit-box-shadow: 0 0 2px 2px #000000; box-shadow: 0 0 2px 2px #000000; */ background-color: rgba(0,0,0,0.9); border: solid black 6px; color: white;}
 
 /************/
 /* SECTIONS */
 /************/
-
 #about { }
 #loving { }
 #work { }
@@ -24,13 +23,12 @@
 @media (min-width: 320px) {.section{ padding-top:32%; }
 
 /* Extra small Devices, (phones, 480px and up) */
-@media (min-width: 500px) {.section{ padding-top:22%; }
+@media (min-width: 500px) {.section{ padding-top:15%; }
 
 /*////////////////////////////////////*/
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {.section{ padding-top:5%;
-padding-bottom:5%; }
+@media (min-width: 768px) {.section{ padding-top:5%; padding-bottom:5%; }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {.section{  }
