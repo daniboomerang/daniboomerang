@@ -7,13 +7,14 @@ describe('Daniboomerang - Scenario for desktop devices when on load', function()
   /////////////////////////////////////
 
   beforeEach(function() {
-     browser.get('/');
+    browser.get('/');
+    browser.ignoreSynchronization = true;
+    browser.sleep(5000);
   });
   
   it('should scroll to cover section', function() {
-    browser.waitForAngular();
     expect(browser.getCurrentUrl()).toContain('/#/cover');
-  }, 200000);
+  });
 
   ///////////////  
   // The Cover //

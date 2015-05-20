@@ -3,13 +3,14 @@
 describe('Daniboomerang - scrolling scenario', function() {
 
 	beforeEach(function() {
+		browser.ignoreSynchronization = true;
+		browser.sleep(5000);
 		browser.get('/');
 	});
 
 	it('should scroll to cover section', function() {
-		browser.waitForAngular();
 		expect(browser.getCurrentUrl()).toContain('/#/cover');
-	}, 200000);
+	});
 
 	////////////////
 	/// ON COVER ///

@@ -7,13 +7,14 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
   /////////////////////////////
 
   beforeEach(function() {
-     browser.get('/');
+    browser.get('/');
+    browser.ignoreSynchronization = true;
+    browser.sleep(5000);
   });
   
   it('should scroll to cover section', function() {
-    browser.waitForAngular();
     expect(browser.getCurrentUrl()).toContain('/#/cover');
-  }, 200000);
+  });
 
   ////////////  
   // Header //

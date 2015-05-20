@@ -3,6 +3,8 @@
 describe('Daniboomerang - scrolling scenario', function() {
 
 	beforeEach(function() {
+		browser.ignoreSynchronization = true;
+		browser.sleep(5000);
 		browser.get('/');
 	});
 	
