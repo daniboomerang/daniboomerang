@@ -16,7 +16,7 @@ daniboomerangDirectives.directive('parallax', function($interval) {
   }
 });
 
-daniboomerangDirectives.directive('textSection', function($window, $document) {
+daniboomerangDirectives.directive('textSection', function($window) {
   return {
     restrict: 'E',
     scope: false,
