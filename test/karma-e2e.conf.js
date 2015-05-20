@@ -12,21 +12,21 @@ exports.config = {
        'chromeOptions' : {
         args: ['--window-size=320,800']
        },
-       specs: [/*'e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadMobileTabletSpec.js', 'e2e/footer/footerMobileTabletSpec.js',*/ 'e2e/scrolling/scrollingCommonSpec.js'/*, 'e2e/scrolling/scrollingMobileTabletSpec.js'*/]
+       specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadMobileTabletSpec.js', 'e2e/footer/footerMobileTabletSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingMobileTabletSpec.js']
     },
     { 
        'browserName': 'chrome',
        'chromeOptions' : {
         args: ['--window-size=680,800']
        },
-       specs: [/*'e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadMobileTabletSpec.js', 'e2e/footer/footerMobileTabletSpec.js',*/'e2e/scrolling/scrollingCommonSpec.js'/*, 'e2e/scrolling/scrollingMobileTabletSpec.js'*/]
+       specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadMobileTabletSpec.js', 'e2e/footer/footerMobileTabletSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingMobileTabletSpec.js']
     },
     { 
        'browserName': 'chrome',
        'chromeOptions' : {
         args: ['--window-size=1280,800']
        },
-       specs: [/*'e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadDesktopSpec.js', 'e2e/footer/footerDesktopSpec.js', */'e2e/scrolling/scrollingCommonSpec.js'/*, 'e2e/scrolling/scrollingDesktopSpec.js'*/]
+       specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadDesktopSpec.js', 'e2e/footer/footerDesktopSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingDesktopSpec.js']
     }
   ],
   chromeDriver: '../node_modules/protractor/selenium/chromedriver',
