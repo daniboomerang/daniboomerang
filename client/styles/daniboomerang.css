@@ -3,13 +3,17 @@
 /*****************/
 
 html,body{ height:100%; }
-body { margin:0; padding:0; font-size: 3px;  font-weight: 200;  -webkit-font-smoothing: antialiased; color: black; line-height: 2.5; }
+body { margin:0; padding:0; font-size: 3px;  font-weight: 200;  -webkit-font-smoothing: antialiased; color: black; line-height: 2; }
 a { color: white; transition: all .5s ease-in-out; }
 a:hover { color: #FF9933; text-decoration:none; transition: all .5s ease-in-out; }
-h1{ font-size: 2.5em; font-weight: 100;  -webkit-font-smoothing: antialiased; }
+h1{ font-size: 2.5em; font-weight: 200;  -webkit-font-smoothing: antialiased; }
+p { margin: 1.5em 0; } }
+ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
+li { position: relative; padding-left: 2em; /* text distance to icon */ }
+.list-text li:before { content: '\2022'; color: #FF9933; position: absolute; left: 0.5em; /* same as ul padding-left */ }
 .box-shadow-up{ -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); }
 .box-shadow-down{ -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); }
-
+hr { border-color: #292828 !important; }
 #plain-layout-wrapper.hidden { display: none; }
 #parallax-layout-wrapper.hidden { display: none; }
 
