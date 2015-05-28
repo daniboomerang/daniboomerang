@@ -159,7 +159,7 @@
 		.navbar-custom-cover .navbar-nav>li>a { line-height: 205px; height: 205px !important;}	
 	}
 
-	/* Extra large devices (extra large desktops, 2500px and up) */
+	/* Extra large devices (extra large desktops, 300px and up) */
 	@media (min-width: 3000px) {
 		/*ul.nav li a { font-size: 7.5em; }*/
 		/* TOP NAVABAR */
@@ -169,7 +169,7 @@
 		.navbar-custom-cover .navbar-nav>li>a { line-height: 265px; height: 265px !important;}	
 	}
 
-	/* Extra large devices (extra large desktops, 2500px and up) */
+	/* Extra large devices (extra large desktops, 3500px and up) */
 	@media (min-width: 3500px) {
 		/*ul.nav li a { font-size: 12em;}*/
 		/* TOP NAVABAR */
@@ -183,16 +183,17 @@
 /**********/
 
 	header { height: 0px; width: 100%; overflow: hidden; z-index: 1; background: rgba(19, 65, 99, 0.7); -webkit-transition: height 0.7s; -moz-transition: height 0.7s; -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s;}
-
+	.box-shadow-down{ -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); }
+	
 	/*==========  RESPONSIVENESS FOR HEADER  ==========*/
 
-	/* Small devices (tablets, 767px and down)*/
+	/* Small devices (tablets, 200px and down)*/
 	@media (min-width: 200px) {header.expand {height: 50px;}}
 
-	/* Extra small Devices, (phones, 320 and up) */
+	/* Extra small Devices, (phones, 320px and up) */
 	@media (min-width: 320px) {header.expand {height: 80px;}}
 
-	/* Extra small Devices, (phones, 480px and up) */
+	/* Extra small Devices, (phones, 500px and up) */
 	@media (min-width: 500px) {header.expand {height: 100px;}}
 
 	/*////////////////////////////////////*/

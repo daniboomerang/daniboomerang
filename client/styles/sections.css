@@ -1,79 +1,75 @@
-/***********/
-/* CONTENT */
-/***********/
-
-#sections{ }
-.section { padding-bottom:5%; background-color: #131212; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
-/*.section p { padding: 3%; margin: 1em 0; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 1px solid #292828; background: rgba(5,5,5,0.6);}
-.section ul { padding: 3%; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 1px solid #292828; background: rgba(5,5,5,0.6);} */
-.section a { color: rgba(124, 210, 247, 0.7); transition: all .5s ease-in-out; }
-.section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
-blockquote {
-  background-color: rgba(19, 65, 99, 0.3);
-  border-left: 10px solid rgba(19, 65, 99, 0.7);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  font-size: 1em;
-}
-blockquote:before {
-  color: rgba(19, 65, 99, 0.7);
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
-
 /************/
 /* SECTIONS */
 /************/
+
+#sections{ }
+h1 { font-size: 2.5em; font-weight: 200; margin-bottom: 0.7em; }
+h2 { font-size: 2em; font-weight: 200; color: #FF9933 }
+p { margin: 1.5em 0; } }
+ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
+.list-text li { position: relative; padding-left: 2em;}
+.list-text li:before { content: '\2022'; color: #FF9933; position: absolute; left: 0.5em; /* same as ul padding-left */ }
+hr { border-color: rgba(255, 255, 255, 0.1) !important; }
+.section { padding-bottom:5%; background-color: #131212; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
+.section a { color: rgba(124, 210, 247, 0.7); transition: all .5s ease-in-out; }
+.section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
+
+blockquote { background-color: rgba(19, 65, 99, 0.3); border-left: 10px solid rgba(19, 65, 99, 0.7); margin: 1.5em 10px; padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019"; font-size: 1em; }
+blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
+blockquote p { display: inline; }
+
 #about { }
 #loving { }
 #work { }
 #contact { }
 
+#cv-wrapper { position: relative; height: 4em; }
+
+img.ri { position: absolute; top: 10%; left: 10%; border-radius: 3px; box-shadow: 0 3px 6px rgba(0,0,0,0.9); }
+img.ri:hover { transition: all .5s ease-in-out;  }
+img.ri:empty { top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
 /*==========  RESPONSIVENESS  ==========*/
 
-/* Small devices (tablets, 767px and down)*/
-@media (min-width: 200px) { .section{ padding-top:35%; }
+@media screen and (orientation: portrait) { img.ri { max-width: 10%; } }
+@media screen and (orientation: landscape) { img.ri { max-height: 90%; } }
+
+/* Small devices (tablets, 200px and down)*/
+@media (min-width: 200px) { .section { padding-top:35%; } }
 
 /* Extra small Devices, (phones, 320 and up) */
-@media (min-width: 320px) { .section{ padding-top:5%; }
+@media (min-width: 320px) { .section { padding-top:5%; } }
 
 /* Extra small Devices, (phones, 480px and up) */
-@media (min-width: 500px) { .section{ padding-top:15%; }
+@media (min-width: 500px) { .section { padding-top:15%; } }
 
 /*////////////////////////////////////*/
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { .section{ padding-top:5%; padding-bottom:5%; }
+@media (min-width: 768px) { .section { padding-top:5%; padding-bottom:5%; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { .section{  }
+@media (min-width: 992px) { .section {  } }
 
 /* Large devices (large desktops, 1280px and up) */
-@media (min-width: 1280px) { .section{  }
+@media (min-width: 1280px) { .section {  } }
 
 /* Large devices (large desktops, 1400px and up) */
-@media (min-width: 1400px) { .section{  }
+@media (min-width: 1400px) { .section {  } }
 
 /*////////////////////////////////////*/
 
 /* Extra large devices (extra large desktops, 1600px and up) */
-@media (min-width: 1600px) { .section{ padding-top:10%; }
+@media (min-width: 1600px) { .section { padding-top:10%; } }
 
 /* Extra large devices (extra large desktops, 2000px and up) */
-@media (min-width: 2000px) { .section{ padding-top:10%; }
+@media (min-width: 2000px) { .section { padding-top:10%; } }
 
-/* Extra large devices (extra large desktops, 2000px and up) */
-@media (min-width: 2500px) { .section{ padding-top:10%; }
+/* Extra large devices (extra large desktops, 2500px and up) */
+@media (min-width: 2500px) { .section { padding-top:10%; } }
 
-/* Extra large devices (extra large desktops, 2000px and up) */
-@media (min-width: 3000px) { .section{ padding-top:10%; }
+/* Extra large devices (extra large desktops, 3000px and up) */
+@media (min-width: 3000px) { .section { padding-top:10%; } }
 
-/* Extra large devices (extra large desktops, 2000px and up) */
-@media (min-width: 3500px) { .section{ padding-top:10%; }
+/* Extra large devices (extra large desktops, 3500px and up) */
+@media (min-width: 3500px) { .section { padding-top:10%; } }
