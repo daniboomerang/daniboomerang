@@ -3,13 +3,16 @@
 /************/
 
 #sections{ }
-h1 { font-size: 2.5em; font-weight: 200; margin-bottom: 0.7em; }
+h1 { font-size: 2.5em; font-weight: 200;  }
 h2 { font-size: 2em; font-weight: 200; color: #FF9933 }
 p { margin: 1.5em 0; } }
 ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
 .list-text li { position: relative; padding-left: 2em;}
 .list-text li:before { content: '\2022'; color: #FF9933; position: absolute; left: 0.5em; /* same as ul padding-left */ }
-hr { border-color: rgba(255, 255, 255, 0.1) !important; }
+.sublist-text ul:before { content: '\2022'; }
+.sublist-text li { position: relative; padding-left: 4em;}
+.sublist-text li:before { content: '\00B0'; color: #FF9933; position: absolute; left: 2em; /* same as ul padding-left */ }
+hr { border-color: rgba(255, 255, 255, 0.1) !important; margin-bottom: 2em; margin-top: 2em;}
 .section { padding-bottom:5%; background-color: #131212; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
 .section a { color: rgba(124, 210, 247, 0.7); transition: all .5s ease-in-out; }
 .section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
@@ -23,16 +26,20 @@ blockquote p { display: inline; }
 #work { }
 #contact { }
 
-#cv-wrapper { position: relative; height: 4em; }
-
-#cv img.ri { position: absolute; top: 10%; left: 10%; border-radius: 3px; box-shadow: 0 3px 6px rgba(0,0,0,0.9);   -webkit-transition: opacity 1s ease-in-out; -moz-transition: opacity 1s ease-in-out; -o-transition: opacity 1s ease-in-out; transition: opacity 1s ease-in-out; }
+#cv-wrapper { position: relative; height: 4em; margin: 2%; }
+#cv img.ri { position: absolute; top: 10%; left: 10%; -webkit-transition: opacity 1s ease-in-out; -moz-transition: opacity 1s ease-in-out; -o-transition: opacity 1s ease-in-out; transition: opacity 1s ease-in-out; }
 #cv img.ri:empty { top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 #cv img.top:hover { opacity:0; }
 
+#github-wrapper { position: relative; height: 4em; margin-left: 2%; }
+#github img.ri { position: absolute; top: 10%; left: 10%; -webkit-transition: opacity 1s ease-in-out; -moz-transition: opacity 1s ease-in-out; -o-transition: opacity 1s ease-in-out; transition: opacity 1s ease-in-out; }
+#github img.ri:empty { top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+#github img.top:hover { opacity:0; }
+
 /*==========  RESPONSIVENESS  ==========*/
 
-@media screen and (orientation: portrait) { img.ri { max-width: 10%; } }
-@media screen and (orientation: landscape) { img.ri { max-height: 90%; } }
+@media screen and (orientation: portrait) { #cv img.ri { max-width: 10%; } #github img.ri { max-width: 20%; } }
+@media screen and (orientation: landscape) { #cv img.ri { max-height: 90%; } #github img.ri { max-height: 100%; } }
 
 /* Small devices (tablets, 200px and down)*/
 @media (min-width: 200px) { .section { padding-top:35%; } }
