@@ -25,9 +25,9 @@ blockquote p { display: inline; }
 
 #cv-wrapper { position: relative; height: 4em; }
 
-img.ri { position: absolute; top: 10%; left: 10%; border-radius: 3px; box-shadow: 0 3px 6px rgba(0,0,0,0.9); }
-img.ri:hover { transition: all .5s ease-in-out;  }
-img.ri:empty { top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+#cv img.ri { position: absolute; top: 10%; left: 10%; border-radius: 3px; box-shadow: 0 3px 6px rgba(0,0,0,0.9);   -webkit-transition: opacity 1s ease-in-out; -moz-transition: opacity 1s ease-in-out; -o-transition: opacity 1s ease-in-out; transition: opacity 1s ease-in-out; }
+#cv img.ri:empty { top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+#cv img.top:hover { opacity:0; }
 
 /*==========  RESPONSIVENESS  ==========*/
 
