@@ -15,6 +15,8 @@
         <!-- CSS BOOTSTRAP PATCHED FOR TN & XXS desvices -->
         <link rel="stylesheet" href="styles/vendor/bootstrap-patched.min.css">
         <link rel="stylesheet" href="styles/vendor/bootstrap-xxs-tn.css">
+        <!-- CSS ANIMATED -->
+        <link rel="stylesheet" href="styles/vendor/animate.css">
 
         <!-- CSS DANIBOOMERANG -->
         <link rel="stylesheet" href="styles/daniboomerang.css">
@@ -47,6 +49,11 @@
           </div>
           <div class="parallax__layer parallax__layer--base"><cover></cover></div>
         </div>
+        <div id="creativity-parallax-animated-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.creativity}">
+          <div class="parallax__layer parallax__layer--base">
+              <dynamic-section name="creativity" animated="true"></dynamic-section>
+          </div>
+        </div>
         <div id="cover-parallax-images" class="parallax__section">
           <div class="parallax__layer parallax__layer--back">
             <div id="orbit-iss" class="spin-right-whole"><svg-alive id="iss" name="iss"></svg-alive></div>
@@ -59,9 +66,14 @@
           </div>
           <div class="parallax__layer parallax__layer--fore"></div>
         </div>
-        <div id="about-parallax-section" class="parallax__section" ng-style="{'height': textSectionsHeight.about}">
+        <div id="about-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.about}">
           <div class="parallax__layer parallax__layer--base">
-            <text-section name="about"></text-section>
+            <dynamic-section name="about"></dynamic-section>
+          </div>
+        </div>
+        <div id="BE-parallax-animated-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.BESide}">
+          <div class="parallax__layer parallax__layer--base">
+            <dynamic-section name="BESide" animated="true"></dynamic-section>
           </div>
         </div>
         <div id="BE-parallax-images" class="parallax__section">
@@ -72,9 +84,14 @@
           <div class="parallax__layer parallax__layer--base"><div id="BE-ruby"></div></div>
           <div class="parallax__layer parallax__layer--fore"><div id="BE-books"></div><div id="BE-dboom"></div></div>
         </div>
-        <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': textSectionsHeight.loving}">
+        <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.loving}">
           <div class="parallax__layer parallax__layer--base">
-          <text-section name="loving"></text-section>
+          <dynamic-section name="loving"></dynamic-section>
+          </div>
+        </div>
+        <div id="FE-parallax-animated-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.FESide}">
+          <div class="parallax__layer parallax__layer--base">
+            <dynamic-section name="FESide" animated="true"></dynamic-section>
           </div>
         </div>
         <div id="FE-parallax-images" class="parallax__section">
@@ -85,10 +102,9 @@
           <div class="parallax__layer parallax__layer--base"><div id="FE-gaming"></div></div>
           <div class="parallax__layer parallax__layer--fore"><div id="FE-books"></div><div id="FE-mobile-tablet"></div></div>
         </div>
-        <div id="work-parallax-section" class="parallax__section" ng-style="{'height': textSectionsHeight.work}">
+        <div id="work-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.work}">
           <div class="parallax__layer parallax__layer--base">
-          
-            <text-section name="work"></text-section>
+            <dynamic-section name="work"></dynamic-section>
           </div>
         </div>
         <div id="contact-parallax-section" class="parallax__section">

@@ -10,13 +10,13 @@ daniboomerangDirectives.directive('parallax', function($interval) {
     restrict: 'A',
     scope: true,
     link: function(scope){ 
-      scope.textSectionsHeight = {} /* This is a global scope variable updated by the children directives 
+      scope.dynamicSectionsHeight = {} /* This is a global scope variable updated by the children directives 
                                        parallax text sections, in order to dynamically determine their height in pixels */
     }
   }
 });
 
-daniboomerangDirectives.directive('textSection', function($window) {
+daniboomerangDirectives.directive('dynamicSection', function($window) {
   return {
     restrict: 'E',
     scope: false,
@@ -26,11 +26,28 @@ daniboomerangDirectives.directive('textSection', function($window) {
     link: function (scope, element, attrs){
       function defineCurrentHeight (name) {
         var sectionId = element.find('#' + name);
-        scope.textSectionsHeight[name] = sectionId.prop('offsetHeight') + 'px';
+        scope.dynamicSectionsHeight[name] = sectionId.prop('offsetHeight');
       }
       var window = angular.element($window);
       window.bind('resize', function () { defineCurrentHeight(attrs.name); });
       defineCurrentHeight(attrs.name);
+      if (attrs.animated == 'true') {
+        var animatedSection = element.find('.animated-section');
+        scope.$on('event:activeArea', function($event, area){ 
+          if (area == attrs.name){
+            animatedSection.removeClass('zoomOut');
+            animatedSection.addClass('zoomIn');
+            animatedSection.addClass('visibility-visible');
+          }
+        });
+        scope.$on('event:inactiveArea', function($event, area){ 
+          if (area == attrs.name){
+            animatedSection.removeClass('zoomIn');
+            animatedSection.addClass('zoomOut');
+            animatedSection.removeClass('visibility-visible');  
+          }
+        });
+      }
     }
   }
 })
@@ -183,7 +200,10 @@ daniboomerangDirectives.directive('topnavbar', function() {
           else if (area == 'Loving'){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); }
           else if (area == 'Work'){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); }
           else if (area == 'Contact'){ header.removeClass('expand'); }
-        });  
+          else if (area == 'BESide'){ header.removeClass('expand'); }
+          else if (area == 'FESide'){ header.removeClass('expand'); }
+          else if (area == 'creativity'){ header.removeClass('expand'); }
+        });
 
         scope.$on('event:inactiveArea', function($event, area){
           header.removeClass('expand'); 
