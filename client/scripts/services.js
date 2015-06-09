@@ -12,25 +12,27 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					$location.path('/' + section);
 					$rootScope.$apply();
 					if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Cover'); }
+					if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'connectivity'); }
 					if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'creativity'); }
 			        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'About'); }
+					if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'BESide'); }
 			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Loving'); }
+					if ('FESide' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'FESide'); }
 			        if ('work' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Work'); }
-			        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Contact'); }
-			        if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'BESide'); }
-			        if ('FESide' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'FESide'); }
+			        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Contact'); }			        
 				}
 			});
 			$rootScope.$on('duScrollspy:becameInactive', function($event, $element){  
 		        var hash = $element.prop('hash');
 		        if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Cover'); }
+		        if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'connectivity'); }
 		        if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'creativity'); }
 		        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'About'); }
+		        if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'BESide'); }
 		        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Loving'); }
+		        if ('FESide' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'FESide'); }
 		        if ('work' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Work'); }
 		        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Contact'); }
-		        if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'BESide'); }
-		        if ('FESide' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'FESide'); }
 		    });
 		}
 	}

@@ -11,46 +11,77 @@ daniboomerangDirectives.directive('parallax', function($interval) {
     scope: true,
     link: function(scope){ 
       scope.dynamicSectionsHeight = {} /* This is a global scope variable updated by the children directives 
-                                       parallax text sections, in order to dynamically determine their height in pixels */
+                                       parallax dynamic sections, in order to dynamically determine their height in pixels */
     }
   }
 });
 
-daniboomerangDirectives.directive('dynamicSection', function($window) {
+daniboomerangDirectives.directive('parallaxSubsection', function($window) {
   return {
     restrict: 'E',
-    scope: false,
     templateUrl: function (elem, attrs) {
       return 'views/sections/' + attrs.name + '.html';
     },
     link: function (scope, element, attrs){
-      function defineCurrentHeight (name) {
-        var sectionId = element.find('#' + name);
-        scope.dynamicSectionsHeight[name] = sectionId.prop('offsetHeight');
+      function isImageLoaded(img) {
+        if (!img.complete) {return false;}
+        if (typeof img.naturalWidth !== "undefined" && img.naturalWidth === 0) { return false; }
+        return true;
+      }
+      function setCurrentHeight (section) {
+          var sectionId = element.find('#' + section);
+          if ((typeof scope.dynamicSectionsHeight[section] == 0)) { scope.dynamicSectionsHeight[section] = sectionId.prop('offsetHeight'); } 
+          else { scope.dynamicSectionsHeight[section] += sectionId.prop('offsetHeight'); }
+        }
+      function calculateHeight (section, type) {  
+        /* For those sections that contain images, we wait the image to be loaded before calculate the height */
+        if (type == 'text-image') {
+          var img = new Image();
+          img.src = element.find('img').attr('src');
+          if (!isImageLoaded(img)) {
+            img.onload = function () { 
+              setCurrentHeight(section);
+            }
+          }
+        }
+        else if ( type == 'text-only') { setCurrentHeight(section); }   
       }
       var window = angular.element($window);
-      window.bind('resize', function () { defineCurrentHeight(attrs.name); });
-      defineCurrentHeight(attrs.name);
+      window.bind('resize', function () {
+        scope.dynamicSectionsHeight[attrs.name] = 0;
+        setCurrentHeight(attrs.name);
+      });
+      scope.dynamicSectionsHeight[attrs.name] = 0;
+      calculateHeight(attrs.name, attrs.type);
+    }
+  }
+})
+
+
+daniboomerangDirectives.directive('animatedSection', function() {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs){
       if (attrs.animated == 'true') {
         var animatedSection = element.find('.animated-section');
         scope.$on('event:activeArea', function($event, area){ 
-          if (area == attrs.name){
-            animatedSection.removeClass('zoomOut');
-            animatedSection.addClass('zoomIn');
+          if (area == attrs.triggeredby){
+            animatedSection.removeClass(attrs.animatedout);
+            animatedSection.addClass(attrs.animatedin);
             animatedSection.addClass('visibility-visible');
           }
         });
         scope.$on('event:inactiveArea', function($event, area){ 
-          if (area == attrs.name){
-            animatedSection.removeClass('zoomIn');
-            animatedSection.addClass('zoomOut');
+          if (area == attrs.triggeredby){
+            animatedSection.removeClass(attrs.animatedin);
+            animatedSection.addClass(attrs.animatedout);
             animatedSection.removeClass('visibility-visible');  
           }
         });
       }
     }
   }
-})
+});
 
 daniboomerangDirectives.directive('cover', function($timeout) {
   return {
@@ -203,6 +234,7 @@ daniboomerangDirectives.directive('topnavbar', function() {
           else if (area == 'BESide'){ header.removeClass('expand'); }
           else if (area == 'FESide'){ header.removeClass('expand'); }
           else if (area == 'creativity'){ header.removeClass('expand'); }
+          else if (area == 'connectivity'){ header.removeClass('expand'); }
         });
 
         scope.$on('event:inactiveArea', function($event, area){
@@ -237,8 +269,16 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
         }
         scope.aliveNodes = [true, true, true, true, true, true, true, true];
         var timeToPorcess; var nodeToProcess;
-        processChanges();
-        
+        processChanges(); 
+        // LIGHT BULB
+        scope.turnOnLightBulb = false;
+        scope.$on('event:activeArea', function($event, area){ 
+          if (area == 'creativity'){ scope.turnOnLightBulb = 'true'; scope.$apply(); }
+        });
+
+        scope.$on('event:inactiveArea', function($event, area){
+          if (area == 'creativity'){ scope.turnOnLightBulb = 'false'; scope.$apply(); } 
+        });
     }
   };
 });  

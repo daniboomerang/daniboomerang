@@ -26,26 +26,33 @@ blockquote p { display: inline; }
 #loving { }
 #work { }
 #contact { }
-#BESide { padding-top: 20vh; }
-#FESide { padding-top: 20vh; }
-#creativity { padding-top: 0vh; }
+#connectivity { padding-top: 10vh; }
+#CSDiagram {  }
+#creativity { padding-top: 10vh; }
+#lightbulb { }
+#BESide { padding-top: 10vh; }
+#BEDiagram { }
+#FEDiagram { }
+#FESide { padding-top: 10vh; }
 
 /*********************/
 /* Animated Sections */
 /*********************/
-.visibility-hidden { opacity:0; transition: opacity 1s linear; }
-.visibility-visible { opacity:1; transition: opacity 1s linear; }
+.visibility-hidden { opacity:0; }
+.visibility-visible { opacity:1; }
 
-.animated-section { color: white; padding: 5vh; width: 100%; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
-.animated-section-img { margin-top: 2vh; width: 100%; height: 100%; }
+.animated-section { color: white; width: 100%; /* -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; */}
 
+/* Extra small devices (tablets, 200px and up)*/
+@media (min-width: 200px) { .diagram {  width: 100vw; } #lightbulb { margin-left: 50vw; width: 25vw; } }
+/* Extra small devices (tablets, 400px and up)*/
+@media (min-width: 400px) { #lightbulb { margin-left: 64vw; width: 25vw; } }
+/* Extra small devices (tablets, 500px and up)*/
+@media (min-width: 500px) { .diagram {  margin-left: 10vw; width: 80vw; } #lightbulb { margin-left: 49vw; width: 25vw; } }
 /* Small devices (tablets, 680px and up)*/
-@media (min-width: 680px) { .animated-section-img { width: 80%; height: 80%;  } }
-/* Extra small Devices, (phones, 1024px and up) */
-@media (min-width: 1024px) { .animated-section-img { width: 70%; height: 70%; margin-left:25%; } }
-/* Extra small Devices, (phones, 1900px and up) */
-@media (min-width: 1900px) { .animated-section-img { width: 60%; height: 60%; margin-left:35%; } }
-/* ***************** */
+@media (min-width: 680px) { .diagram {  margin-left: 10vw; width: 80vw; } }
+/* Medium small Devices, (phones, 1024px and up) */
+@media (min-width: 1280px) { .diagram {  margin-left: 15vw; width: 70vw; } }
 
 #cv-wrapper { position: relative; height: 4em; margin: 2%; }
 #cv img.ri { position: absolute; top: 10%; left: 10%; -webkit-transition: opacity 1s ease-in-out; -moz-transition: opacity 1s ease-in-out; -o-transition: opacity 1s ease-in-out; transition: opacity 1s ease-in-out; }
@@ -63,16 +70,16 @@ blockquote p { display: inline; }
 
 /*==========  RESPONSIVENESS  ==========*/
 
-@media screen and (orientation: portrait) { #cv img.ri { max-width: 10%; } #github img.ri { max-width: 20%; } }
+@media screen and (orientation: portrait) { #cv img.ri { max-width: 14%; } #github img.ri { max-width: 20%; } }
 @media screen and (orientation: landscape) { #cv img.ri { max-height: 90%; } #github img.ri { max-height: 100%; } }
 
 /* Small devices (tablets, 200px and down)*/
 @media (min-width: 200px) { .section { padding-top:35%; } }
 
 /* Extra small Devices, (phones, 320 and up) */
-@media (min-width: 320px) { .section { padding-top:5%; } }
+@media (min-width: 320px) { .section { padding-top:5%; } }
 
-/* Extra small Devices, (phones, 480px and up) */
+/* Extra small Devices, (phones, 500px and up) */
 @media (min-width: 500px) { .section { padding-top:15%; } }
 
 /*////////////////////////////////////*/
