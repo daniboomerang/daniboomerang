@@ -44,16 +44,22 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
         expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
         var coverFooter = cover.element(by.id('cover-footer'));
         expect(coverFooter.element(by.id('scroll-down')).isPresent()).toBe(true);
-      // COVER-PARALLAX-IMAGES
-      expect(element(by.id('cover-parallax-images')).isPresent()).toBe(true);
+      // CREATIVITY-PARALLAX-IMAGES
+      expect(element(by.id('connectivity-parallax-section')).isPresent()).toBe(true);
+      // CREATIVITY-PARALLAX-IMAGES
+      expect(element(by.id('creativity-parallax-section')).isPresent()).toBe(true);
       // ABOUT-PARALLAX-SECTION
       expect(element(by.id('about-parallax-section')).isPresent()).toBe(true);
       expect(element(by.id('about')).isPresent()).toBe(true);
+      // BE-PARALLAX-SECTION
+      expect(element(by.id('BE-parallax-section')).isPresent()).toBe(true);
       // BE-PARALLAX-IMAGES
       expect(element(by.id('BE-parallax-images')).isPresent()).toBe(true);
       // LOVING-PARALLAX-SECTION
       expect(element(by.id('loving-parallax-section')).isPresent()).toBe(true);
       expect(element(by.id('loving')).isPresent()).toBe(true);
+      // FE-PARALLAX-SECTION
+      expect(element(by.id('FE-parallax-section')).isPresent()).toBe(true);
       // FE-PARALLAX-IMAGES
       expect(element(by.id('FE-parallax-images')).isPresent()).toBe(true);
       // WORK-PARALLAX-SECTION
