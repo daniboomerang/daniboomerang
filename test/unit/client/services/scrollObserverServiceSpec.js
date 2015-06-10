@@ -19,8 +19,8 @@ describe('Scroll Observer', function() {
 	
 	});
     
-    // Triggering the scroll active and inactive sections
-    it('should be listening when about becomes active to broadcast ', function (){
+    // Triggering the scroll active sections
+    it('should be listening when a section becomes active to broadcast ', function (){
     	scrollObserverService.init();
 
     	// COVER
@@ -29,21 +29,45 @@ describe('Scroll Observer', function() {
 		// expected to broadcast section 'Cover' as active
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'Cover');
 
+      	// CONNECTIVITY
+		var mockedElement = angular.element('<a href="#connectivity" du-scrollspy></a>');
+		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
+		// expected to broadcast section 'Cover' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'connectivity');
+
+      	// CREATIVITY
+		var mockedElement = angular.element('<a href="#creativity" du-scrollspy></a>');
+		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
+		// expected to broadcast section 'Cover' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'connectivity');
+
     	// ABOUT
 		var mockedElement = angular.element('<a id="about-link" href="#about" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="about-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
    		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
       	// expected to broadcast section 'About' as active
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'About');
 
+		// BESIDE
+		var mockedElement = angular.element('<a href="#BESide" du-scrollspy></a>');
+		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
+		// expected to broadcast section 'Cover' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'connectivity');
+
       	// LOVING
       	mockedElement = angular.element('<a id="loving-link" href="#loving" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="loving-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
 		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
 		// expected to broadcast section 'Loving' as inactive
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'Loving');      
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'Loving');  
+
+      	// FESIDE
+		var mockedElement = angular.element('<a href="#BESide" du-scrollspy></a>');
+		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
+		// expected to broadcast section 'Cover' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'connectivity');    
     });
 
 	// Triggering the scroll inactive sections
-    it('should be listening when about becomes inactive to broadcast ', function (){ 	
+    it('should be listening when a section becomes inactive to broadcast ', function (){ 	
     	scrollObserverService.init();
 
     	// COVER
