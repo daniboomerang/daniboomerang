@@ -62,23 +62,32 @@ daniboomerangDirectives.directive('animatedSection', function() {
   return {
     restrict: 'A',
     link: function (scope, element, attrs){
-      if (attrs.animated == 'true') {
-        var animatedSection = element.find('.animated-section');
-        scope.$on('event:activeArea', function($event, area){ 
-          if (area == attrs.triggeredby){
-            animatedSection.removeClass(attrs.animatedout);
-            animatedSection.addClass(attrs.animatedin);
-            animatedSection.addClass('visibility-visible');
-          }
-        });
-        scope.$on('event:inactiveArea', function($event, area){ 
-          if (area == attrs.triggeredby){
-            animatedSection.removeClass(attrs.animatedin);
-            animatedSection.addClass(attrs.animatedout);
-            animatedSection.removeClass('visibility-visible');  
-          }
-        });
+
+      function animateSectionIn() {
+        animatedSection.removeClass(attrs.animatedout);
+        animatedSection.addClass(attrs.animatedin);
+        animatedSection.addClass('visibility-visible');
       }
+
+      function animateSectionOut() {
+        animatedSection.removeClass(attrs.animatedin);
+        animatedSection.addClass(attrs.animatedout);
+        animatedSection.removeClass('visibility-visible');  
+      }
+
+      var animatedSection = element.find('.animated-section');
+      scope.$on('event:activeArea', function($event, area){ 
+        if (area == attrs.triggeredby){
+          if ('active' == attrs.triggeredon){ animateSectionIn(); }
+          else { animateSectionOut(); }
+        }
+      });
+      scope.$on('event:inactiveArea', function($event, area){ 
+        if (area == attrs.triggeredby){
+          if ('inactive' == attrs.triggeredon){ animateSectionIn(); }
+          else { animateSectionOut(); }
+        }
+      });
     }
   }
 });
@@ -100,7 +109,7 @@ daniboomerangDirectives.directive('cover', function($timeout) {
         $timeout(function() {  scope.sections = [
             {linkId: 'about', hash: '#about', text:'About', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
             {linkId: 'loving', hash: '#loving', text:'Loving', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
-            {linkId: 'work', hash: '#work', text:'Work', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
+            {linkId: 'work', hash: '#work', text:'Work', awesomeIcon: 'fa-suitcase', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
             {linkId: 'contact', hash: '#contact', text:'Contact', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
           ]; }, 1500); 
         $timeout(function() { scope.showResponsiveNavbar = true; }, 1700);
@@ -235,6 +244,7 @@ daniboomerangDirectives.directive('topnavbar', function() {
           else if (area == 'FESide'){ header.removeClass('expand'); }
           else if (area == 'creativity'){ header.removeClass('expand'); }
           else if (area == 'connectivity'){ header.removeClass('expand'); }
+          else if (area == 'remoteWorking'){ header.removeClass('expand'); }
         });
 
         scope.$on('event:inactiveArea', function($event, area){

@@ -14,6 +14,7 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Cover'); }
 					if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'connectivity'); }
 					if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'creativity'); }
+					if ('remoteWorking' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'remoteWorking'); }
 			        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'About'); }
 					if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'BESide'); }
 			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Loving'); }
@@ -27,6 +28,7 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 		        if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Cover'); }
 		        if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'connectivity'); }
 		        if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'creativity'); }
+		        if ('remoteWorking' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'remoteWorking'); }
 		        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'About'); }
 		        if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'BESide'); }
 		        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Loving'); }

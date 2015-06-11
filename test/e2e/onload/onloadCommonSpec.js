@@ -44,10 +44,14 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
         expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
         var coverFooter = cover.element(by.id('cover-footer'));
         expect(coverFooter.element(by.id('scroll-down')).isPresent()).toBe(true);
-      // CREATIVITY-PARALLAX-IMAGES
+      // CONNECTIVITY-PARALLAX-IMAGES
       expect(element(by.id('connectivity-parallax-section')).isPresent()).toBe(true);
       // CREATIVITY-PARALLAX-IMAGES
       expect(element(by.id('creativity-parallax-section')).isPresent()).toBe(true);
+      // REMOTE-WORKING-PARALLAX-SECTION
+      expect(element(by.id('remote-working-parallax-section')).isPresent()).toBe(true);
+      // REMOTE-WORKING-PARALLAX-IMAGES
+      expect(element(by.id('remote-working-parallax-images')).isPresent()).toBe(true);
       // ABOUT-PARALLAX-SECTION
       expect(element(by.id('about-parallax-section')).isPresent()).toBe(true);
       expect(element(by.id('about')).isPresent()).toBe(true);

@@ -44,29 +44,36 @@
         <div id="cover-parallax-section" class="parallax__section">
           <div class="parallax__layer parallax__layer--deep"></div>
           <div class="parallax__layer parallax__layer--back">
-            <div class="spin-right-half orbit-comet" style=""><div id="comet-blue" style="height: 15%; width: 3%; " class="comet"></div></div>
+            <div class="spin-right-half orbit-comet" style=""><div id="comet-blue" style="height: 15%; width: 3%; " class="comet-from-left"></div></div>
             <div class="px-text-right parallax-text"></div>
           </div>
-          <div class="parallax__layer parallax__layer--base"><cover></cover></div>
-        </div>
-        <div id="connectivity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.connectivity + dynamicSectionsHeight.CSDiagram}">
           <div class="parallax__layer parallax__layer--base">
-            <parallax-subsection name="connectivity" type="text-only"></parallax-subsection>
-            <parallax-subsection name="CSDiagram" type="text-image"></parallax-subsection>
+            <cover></cover>
           </div>
         </div>
-        <div id="creativity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.creativity + dynamicSectionsHeight.lightbulb}">
-          <div class="parallax__layer parallax__layer--back"></div>
+        <div id="connectivity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.connectivity}">
+          <div class="parallax__layer parallax__layer--base">
+            <parallax-subsection name="connectivity" type="text-image"></parallax-subsection>
+          </div>
+        </div>
+        <div id="creativity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.creativity}">
           <div class="parallax__layer parallax__layer--base">
             <parallax-subsection name="creativity" type="text-only"></parallax-subsection>
-            <parallax-subsection name="lightbulb" type="text-image"></parallax-subsection>
           </div>
         </div>   
-        <div id="creativity-parallax-images" class="parallax__section">
+        <div id="remote-working-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.remoteWorking}">
           <div class="parallax__layer parallax__layer--deep"></div>
           <div class="parallax__layer parallax__layer--base">
-            <div id="cliff">
-            </div>
+            <parallax-subsection name="remoteWorking" type="text-image"></parallax-subsection>
+          </div>
+          <div class="parallax__layer parallax__layer--back">
+            <div class="spin-right-half orbit-comet" style="margin-left:0vw; margin-top:0vw;"><div id="comet-red" style="height: 12%; width: 5%;" class="comet-from-left"></div></div>
+          </div>
+        </div>   
+        <div id="remote-working-parallax-images" class="parallax__section">
+          <div class="parallax__layer parallax__layer--deep"></div>
+          <div class="parallax__layer parallax__layer--base">
+            <div id="cliff"></div>
             <!--<div id="orbit-stones-circle" class="spin-right-whole-faster">
               <div id="stones-circle"><div id="orbit-big-stone" class="spin-left-whole"><div id="big-stone"></div></div></div>
             </div>-->
@@ -85,13 +92,12 @@
         <div id="BE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.BESide + dynamicSectionsHeight.BEDiagram}">
           <div class="parallax__layer parallax__layer--deep"></div>
           <div class="parallax__layer parallax__layer--base">
-              <parallax-subsection name="BESide" type="text-only"></parallax-subsection>
-              <parallax-subsection name="BEDiagram" type="text-image"></parallax-subsection>
+              <parallax-subsection name="BESide" type="text-image"></parallax-subsection>
           </div>
         </div>
         <div id="BE-parallax-images" class="parallax__section">
           <div class="parallax__layer parallax__layer--deep">
-            <div class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="comet-white" style="height: 10%; width: 5%;" class="comet"></div></div>
+            <div class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="comet-white" style="height: 10%; width: 5%;" class="comet-from-left"></div></div>
           </div>
           <div class="parallax__layer parallax__layer--back"></div>
           <div class="parallax__layer parallax__layer--base"><div id="BE-ruby"></div></div>
@@ -105,13 +111,12 @@
         <div id="FE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.FESide}">
           <div class="parallax__layer parallax__layer--deep"></div>
           <div class="parallax__layer parallax__layer--base">
-            <parallax-subsection name="FESide" type="text-only"></parallax-subsection>
-            <parallax-subsection name="FEDiagram" type="text-image"></parallax-subsection>
+            <parallax-subsection name="FESide" type="text-image"></parallax-subsection>
           </div>
         </div>
         <div id="FE-parallax-images" class="parallax__section">
           <div class="parallax__layer parallax__layer--deep">
-            <div class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="comet-blue" style="height: 6%; width: 4%;" class="comet"></div></div>
+            <div class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="comet-blue" style="height: 6%; width: 4%;" class="comet-from-left"></div></div>
           </div>
           <div class="parallax__layer parallax__layer--back"></div>
           <div class="parallax__layer parallax__layer--base"><div id="FE-gaming"></div></div>
