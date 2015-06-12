@@ -18,9 +18,10 @@ daniboomerangDirectives.directive('parallax', function($interval) {
 
 daniboomerangDirectives.directive('parallaxSubsection', function($window) {
   return {
-    restrict: 'E',
+    restrict: 'EA',
     templateUrl: function (elem, attrs) {
-      return 'views/sections/' + attrs.name + '.html';
+      var hyphenName =  attrs.name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+      return 'views/sections/' + hyphenName + '.html';
     },
     link: function (scope, element, attrs){
       function isImageLoaded(img) {
@@ -29,9 +30,8 @@ daniboomerangDirectives.directive('parallaxSubsection', function($window) {
         return true;
       }
       function setCurrentHeight (section) {
-          var sectionId = element.find('#' + section);
-          if ((typeof scope.dynamicSectionsHeight[section] == 0)) { scope.dynamicSectionsHeight[section] = sectionId.prop('offsetHeight'); } 
-          else { scope.dynamicSectionsHeight[section] += sectionId.prop('offsetHeight'); }
+          if ((typeof scope.dynamicSectionsHeight[section] == 0)) { scope.dynamicSectionsHeight[section] = element.prop('offsetHeight'); } 
+          else { scope.dynamicSectionsHeight[section] += element.prop('offsetHeight'); }
         }
       function calculateHeight (section, type) {  
         /* For those sections that contain images, we wait the image to be loaded before calculate the height */
@@ -240,11 +240,11 @@ daniboomerangDirectives.directive('topnavbar', function() {
           else if (area == 'Loving'){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); }
           else if (area == 'Work'){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); }
           else if (area == 'Contact'){ header.removeClass('expand'); }
-          else if (area == 'BESide'){ header.removeClass('expand'); }
-          else if (area == 'FESide'){ header.removeClass('expand'); }
+          else if (area == 'back-end'){ header.removeClass('expand'); }
+          else if (area == 'front-end'){ header.removeClass('expand'); }
           else if (area == 'creativity'){ header.removeClass('expand'); }
           else if (area == 'connectivity'){ header.removeClass('expand'); }
-          else if (area == 'remoteWorking'){ header.removeClass('expand'); }
+          else if (area == 'remote-working'){ header.removeClass('expand'); }
         });
 
         scope.$on('event:inactiveArea', function($event, area){

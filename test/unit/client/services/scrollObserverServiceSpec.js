@@ -42,10 +42,10 @@ describe('Scroll Observer', function() {
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'creativity');
 
       	// REMOTE-WORKING
-		var mockedElement = angular.element('<a href="#remoteWorking" du-scrollspy></a>');
+		var mockedElement = angular.element('<a href="#remote-working" du-scrollspy></a>');
 		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
-		// expected to broadcast section 'remoteWorking' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'remoteWorking');
+		// expected to broadcast section 'remote-working' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'remote-working');
 
     	// ABOUT
 		var mockedElement = angular.element('<a id="about-link" href="#about" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="about-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
@@ -53,11 +53,11 @@ describe('Scroll Observer', function() {
       	// expected to broadcast section 'About' as active
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'About');
 
-		// BESIDE
-		var mockedElement = angular.element('<a href="#BESide" du-scrollspy></a>');
+		// BACK-END
+		var mockedElement = angular.element('<a href="#back-end" du-scrollspy></a>');
 		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
-		// expected to broadcast section 'BESide' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'BESide');
+		// expected to broadcast section 'back-end' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'back-end');
 
       	// LOVING
       	mockedElement = angular.element('<a id="loving-link" href="#loving" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="loving-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
@@ -65,11 +65,11 @@ describe('Scroll Observer', function() {
 		// expected to broadcast section 'Loving' as inactive
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'Loving');  
 
-      	// FESIDE
-		var mockedElement = angular.element('<a href="#FESide" du-scrollspy></a>');
+      	// FRONT-END
+		var mockedElement = angular.element('<a href="#front-end" du-scrollspy></a>');
 		$rootScope.$broadcast('duScrollspy:becameActive', mockedElement);
-		// expected to broadcast section 'FESide' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'FESide');    
+		// expected to broadcast section 'front-end' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'front-end');    
     });
 
 	// Triggering the scroll inactive sections
@@ -95,10 +95,10 @@ describe('Scroll Observer', function() {
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'creativity');
 
       	// REMOTE-WORKING
-		var mockedElement = angular.element('<a href="#remoteWorking" du-scrollspy></a>');
+		var mockedElement = angular.element('<a href="#remote-working" du-scrollspy></a>');
 		$rootScope.$broadcast('duScrollspy:becameInactive', mockedElement);
-		// expected to broadcast section 'remoteWorking' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'remoteWorking');
+		// expected to broadcast section 'remote-working' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'remote-working');
 
     	// ABOUT
 		var mockedElement = angular.element('<a id="about-link" href="#about" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="about-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
@@ -106,11 +106,11 @@ describe('Scroll Observer', function() {
 		// expected to broadcast section 'About' as inactive
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'About');
 
-		// BESIDE
-		var mockedElement = angular.element('<a href="#BESide" du-scrollspy></a>');
+		// BACK-END
+		var mockedElement = angular.element('<a href="#back-end" du-scrollspy></a>');
 		$rootScope.$broadcast('duScrollspy:becameInactive', mockedElement);
-		// expected to broadcast section 'BESide' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'BESide');
+		// expected to broadcast section 'back-end' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'back-end');
 
       	// LOVING
       	mockedElement = angular.element('<a id="loving-link" href="#loving" du-smooth-scroll="" du-scrollspy="" duration="2500" class="active"><span class="hidden-sm hidden-xs hidden-xxs hidden-tn">About&nbsp;&nbsp;</span><i id="loving-icon" class="fa fa-fw fa-2x icon-dboom"></i></a>');
@@ -118,11 +118,11 @@ describe('Scroll Observer', function() {
 		// expected to broadcast section 'Loving' as inactive
       	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'Loving');
 
-      	// FESIDE
-		var mockedElement = angular.element('<a href="#FESide" du-scrollspy></a>');
+      	// FRONT-END
+		var mockedElement = angular.element('<a href="#front-end" du-scrollspy></a>');
 		$rootScope.$broadcast('duScrollspy:becameInactive', mockedElement);
-		// expected to broadcast section 'FESide' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'FESide');    
+		// expected to broadcast section 'front-end' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'front-end');    
     });
 });   
 

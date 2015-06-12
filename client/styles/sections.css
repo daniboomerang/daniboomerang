@@ -29,10 +29,10 @@ blockquote p { display: inline; }
 #connectivity { padding-top: 10vh; }
 #client-server-diagram { padding-top: 5vh; }
 #creativity { padding-top: 10vh; }
-#remoteWorking { padding-top: 10vh; }
-#BESide { padding-top: 10vh; }
+#remote-working { padding-top: 10vh; }
+#back-end { padding-top: 10vh; }
 #back-end-diagram { padding-top: 5vh; }
-#FESide { padding-top: 10vh; }
+#front-end { padding-top: 10vh; }
 #front-end-diagram { padding-top: 5vh;}
 
 /*********************/

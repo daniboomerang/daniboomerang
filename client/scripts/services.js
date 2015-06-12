@@ -14,11 +14,11 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Cover'); }
 					if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'connectivity'); }
 					if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'creativity'); }
-					if ('remoteWorking' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'remoteWorking'); }
+					if ('remote-working' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'remote-working'); }
 			        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'About'); }
-					if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'BESide'); }
+					if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'back-end'); }
 			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Loving'); }
-					if ('FESide' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'FESide'); }
+					if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'front-end'); }
 			        if ('work' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Work'); }
 			        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Contact'); }			        
 				}
@@ -28,11 +28,11 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 		        if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Cover'); }
 		        if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'connectivity'); }
 		        if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'creativity'); }
-		        if ('remoteWorking' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'remoteWorking'); }
+		        if ('remote-working' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'remote-working'); }
 		        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'About'); }
-		        if ('BESide' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'BESide'); }
+		        if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'back-end'); }
 		        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Loving'); }
-		        if ('FESide' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'FESide'); }
+		        if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'front-end'); }
 		        if ('work' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Work'); }
 		        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Contact'); }
 		    });
