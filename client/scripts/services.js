@@ -11,30 +11,30 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					//Automaticly update location
 					$location.path('/' + section);
 					$rootScope.$apply();
-					if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Cover'); }
-					if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'connectivity'); }
-					if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'creativity'); }
-					if ('remote-working' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'remote-working'); }
-			        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'About'); }
-					if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'back-end'); }
-			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Loving'); }
-					if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'front-end'); }
-			        if ('work' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Work'); }
-			        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('event:activeArea', 'Contact'); }			        
+					if ('cover' == hash.substr(1)){ $rootScope.$broadcast('active-section:cover'); }
+					if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('active-section:connectivity'); }
+					if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('active-section:creativity'); }
+					if ('remote-working' == hash.substr(1)){ $rootScope.$broadcast('active-section:remote-working'); }
+			        if ('about' == hash.substr(1)){ $rootScope.$broadcast('active-section:about'); }
+					if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:back-end'); }
+			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('active-section:loving'); }
+					if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:front-end'); }
+			        if ('work' == hash.substr(1)){ $rootScope.$broadcast('active-section:work'); }
+			        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('active-section:contact'); }			        
 				}
 			});
 			$rootScope.$on('duScrollspy:becameInactive', function($event, $element){  
 		        var hash = $element.prop('hash');
-		        if ('cover' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Cover'); }
-		        if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'connectivity'); }
-		        if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'creativity'); }
-		        if ('remote-working' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'remote-working'); }
-		        if ('about' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'About'); }
-		        if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'back-end'); }
-		        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Loving'); }
-		        if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'front-end'); }
-		        if ('work' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Work'); }
-		        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('event:inactiveArea', 'Contact'); }
+		        if ('cover' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:cover'); }
+		        if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:connectivity'); }
+		        if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:creativity'); }
+		        if ('remote-working' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:remote-working'); }
+		        if ('about' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:about'); }
+		        if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:back-end'); }
+		        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:loving'); }
+		        if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:front-end'); }
+		        if ('work' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:work'); }
+		        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:contact'); }
 		    });
 		}
 	}
