@@ -22,7 +22,7 @@
 
 /* ET-SCENE */
 #et-scene-wrapper { bottom:0%; }
-#et-scene { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/et-contact-scene.svg); display: table; margin: 0 auto; }
+#et-scene { display: table; margin: 0 auto; }
 
 /*========== RESPONSIVENESS ==========*/
 

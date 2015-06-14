@@ -64,15 +64,19 @@ daniboomerangDirectives.directive('animatedSection', function() {
     link: function (scope, element, attrs){
 
       function animateSectionIn() {
-        animatedSection.removeClass(attrs.animatedout);
-        animatedSection.addClass(attrs.animatedin);
-        animatedSection.addClass('visibility-visible');
+        if (attrs.animatedin != ""){
+          animatedSection.removeClass(attrs.animatedout);
+          animatedSection.addClass(attrs.animatedin);
+          animatedSection.addClass('visibility-visible');
+        }
       }
 
       function animateSectionOut() {
-        animatedSection.removeClass(attrs.animatedin);
-        animatedSection.addClass(attrs.animatedout);
-        animatedSection.removeClass('visibility-visible');  
+        if (attrs.animatedout != ""){
+          animatedSection.removeClass(attrs.animatedin);
+          animatedSection.addClass(attrs.animatedout);
+          animatedSection.removeClass('visibility-visible');
+        }
       }
       var animatedSection = element.find('.animated-section');
       /*On active section*/
@@ -86,31 +90,10 @@ daniboomerangDirectives.directive('animatedSection', function() {
   }
 });
 
-daniboomerangDirectives.directive('cover', function($timeout) {
+daniboomerangDirectives.directive('cover', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/sections/cover.html',
-    scope: {},
-    link: function (scope, element) {
-
-      init();
-
-      function init(){
-       
-        scope.position = {};
-        $timeout(function() { scope.showMoon = true; }, 500);
-        $timeout(function() { scope.showScrollRightArrow = true; }, 1000);
-        $timeout(function() {  scope.sections = [
-            {linkId: 'about', hash: '#about', text:'About', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
-            {linkId: 'loving', hash: '#loving', text:'Loving', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
-            {linkId: 'work', hash: '#work', text:'Work', awesomeIcon: 'fa-suitcase', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
-            {linkId: 'contact', hash: '#contact', text:'Contact', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
-          ]; }, 1500); 
-        $timeout(function() { scope.showResponsiveNavbar = true; }, 1700);
-        $timeout(function() { scope.name = "Daniel Estévez"; scope.position.engineer = "Software Engineer"; scope.position.fullStack = "Full Stack Web Developer"; }, 1900);
-        $timeout(function() { scope.showScrollDownArrow = true; }, 2100);
-      }
-    }
+    templateUrl: 'views/sections/cover.html'
   }  
 });
 
@@ -122,11 +105,7 @@ daniboomerangDirectives.directive('contact', function($timeout, $document) {
     link: function (scope, element) {
       var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
       init();
-      function init(){ 
-        ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.showScrollUpArrow = false; scope.showContactInfo = false; scope.contactInfo = ET_SENTENCE; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0;
-        scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showScrollUpArrow = true; scope.showContactInfo = true; }, 500); });
-        scope.$on('inactive-section:contact', function($event){ $timeout(function() { scope.showScrollUpArrow = false; }, 500); });
-      }
+      function init(){ ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.contactInfo = ET_SENTENCE; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0; }
       scope.toggleSocialButton = function(button){
         if (button == MAIL_BUTTON) {
           if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; mailButtonId.addClass("social-active"); phoneButtonId.removeClass("social-active"); activeButton =  MAIL_BUTTON; }
@@ -178,13 +157,13 @@ daniboomerangDirectives.directive('foot', function($timeout) {
         /* INIT DOM ELEMENTS */
         footer = element.find('footer'); toTopButton = element.find('#to-top-button'); shareButton = element.find('#share-button');
 
-        scope.$on('active-section:cover', function($event){  ;
+        scope.$on('active-section:cover', function($event){ 
             footer.removeClass('expand-small'); footer.removeClass('expand-big');
             toTopButton.removeClass('reveal'); shareButton.removeClass('reveal');
             scope.$apply();
         })  
             
-        scope.$on('inactive-section:cover', function($event){  ;
+        scope.$on('inactive-section:cover', function($event){
             if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
             else { footer.addClass('expand-big'); }
             toTopButton.addClass('reveal'); shareButton.addClass('reveal');
@@ -193,7 +172,7 @@ daniboomerangDirectives.directive('foot', function($timeout) {
 
         scope.$on('active-section:connectivity', function($event){ scope.currentSection = 'connectivity'; scope.$apply();});
         scope.$on('active-section:creativity', function($event){ scope.currentSection = 'creativity'; scope.$apply();});
-        scope.$on('active-section:remote-work', function($event){ scope.currentSection = 'remote-work'; scope.$apply();});
+        scope.$on('active-section:remote-working', function($event){ scope.currentSection = 'remote-working'; scope.$apply();});
         scope.$on('active-section:about', function($event){ scope.currentSection = 'about'; scope.$apply();});
         scope.$on('active-section:back-end', function($event){ scope.currentSection = 'back-end'; scope.$apply();});
         scope.$on('active-section:loving', function($event){ scope.currentSection = 'loving'; scope.$apply();});
@@ -267,6 +246,9 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
         scope.aliveNodes = [true, true, true, true, true, true, true, true];
         var timeToPorcess; var nodeToProcess;
         processChanges(); 
+        // ET SCENE
+        scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showEtFingerLight = true; }, 2500); })
+        scope.$on('inactive-section:contact', function($event) { $timeout(function() { scope.showEtFingerLight = false; }, 2000); })
     }
   };
 });  

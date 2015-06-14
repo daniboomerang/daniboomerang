@@ -92,10 +92,10 @@
 /* ipad & ipad mini */
 
 @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
-  #remote-working-parallax-images { height: 145vh  !important;border: solid yellow;}
+  #remote-working-parallax-images { height: 145vh  !important;}
 }
 @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
-  #remote-working-parallax-images { height: 87vh !important;border: solid red;}
+  #remote-working-parallax-images { height: 87vh !important;}
 }
 /************/
 
@@ -170,12 +170,12 @@
 /* ipad & ipad mini */
 
 @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
-  #BE-parallax-images { height: 185vh !important; border: solid yellow;}
+  #BE-parallax-images { height: 185vh !important; }
   #BE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
 }
 @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
-  #BE-parallax-images { height: 142vh !important; border: solid green;}
+  #BE-parallax-images { height: 142vh !important; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh !important; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
   #BE-parallax-images .parallax__layer--back { height: 120vh !important; }
@@ -319,7 +319,7 @@
 /* ipad & ipad mini */
 
 @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
-  #FE-parallax-images { height: 175vh !important; border: solid yellow;}
+  #FE-parallax-images { height: 175vh !important; }
   #FE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
   #FE-mobile-tablet { top: 100vh !important; left: -20vh !important; }
@@ -327,7 +327,7 @@
   #FE-books { top:10vh !important; right: -0vh !important; }
 }
 @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
-  #FE-parallax-images { height: 110vh !important; border: solid green;}
+  #FE-parallax-images { height: 110vh !important; }
   #FE-parallax-images .parallax__layer--base { margin-top: 20vh !important; }
   #FE-parallax-images .parallax__layer--back { margin-top: 50vh !important; height: 120vh !important; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 10vh !important; }
