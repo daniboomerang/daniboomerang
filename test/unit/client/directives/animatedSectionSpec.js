@@ -14,7 +14,7 @@ describe('Animated Section', function() {
 		inject(function($injector, $compile) {
 	 		$rootScope = $injector.get('$rootScope');	   
 			spyOn($rootScope, '$broadcast').and.callThrough();
-			elm = angular.element('<div animated-section id="BESide" animated="true" triggeredby="BESide" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut"> <div class="animated-section animated visibility-hidden"></div><div animated-section id="FESide" animated="true" triggeredby="FESide" triggeredon="inactive" animatedin="zoomIn" animatedout="zoomOut"> <div class="animated-section animated visibility-hidden"></div>');
+			elm = angular.element('<div animated-section id="back-end" animated="true" triggeredby="back-end" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut"> <div class="animated-section animated visibility-hidden"></div><div animated-section id="front-end" animated="true" triggeredby="front-end" triggeredon="inactive" animatedin="zoomIn" animatedout="zoomOut"> <div class="animated-section animated visibility-hidden"></div>');
 			scope = $rootScope;
 			$compile(elm)(scope);
 			scope.$digest();
@@ -22,15 +22,15 @@ describe('Animated Section', function() {
 	
 	});
     
-    //  BESide Active triggeredon active
+    //  back-end Active triggeredon active
     it('should be animated when the section becomes active', function (){
 
 		// Check that there is a section to animate
     	var animatedSection = elm.find('.animated-section');
 		
-		$rootScope.$broadcast('event:activeArea', 'BESide');
-		// expected to broadcast section 'BESide' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'BESide');
+		$rootScope.$broadcast('active-section:back-end');
+		// expected to broadcast section 'back-end' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:back-end');
 
 		// The section to animate becomes visible
 		expect(animatedSection.hasClass('visibility-visible')).toBe(true);
@@ -38,15 +38,15 @@ describe('Animated Section', function() {
       	expect(animatedSection.hasClass('zoomIn')).toBe(true);
     });
 
-	// BESide inactive triggeredon active
+	// back-end inactive triggeredon active
     it('should be listening when a section becomes inactive', function (){ 	
 
     	// Check that there is a section to animate
     	var animatedSection = elm.find('.animated-section');
 		
-		$rootScope.$broadcast('event:inactiveArea', 'BESide');
-		// expected to broadcast section 'BESide' as inactive
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'BESide');
+		$rootScope.$broadcast('inactive-section:back-end');
+		// expected to broadcast section 'back-end' as inactive
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('inactive-section:back-end');
 
       	// The section to animate becomes invisible
 		expect(animatedSection.hasClass('visibility-visible')).toBe(false);
@@ -54,15 +54,15 @@ describe('Animated Section', function() {
       	expect(animatedSection.hasClass('zoomOut')).toBe(true);
     });
 
-    // FESide active triggeredon inactive
+    // front-end active triggeredon inactive
     it('should be animated when the section becomes inactive', function (){
 
 		// Check that there is a section to animate
     	var animatedSection = elm.find('.animated-section');
 		
-		$rootScope.$broadcast('event:inactiveArea', 'FESide');
-		// expected to broadcast section 'FESide' as active
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:inactiveArea', 'FESide');
+		$rootScope.$broadcast('inactive-section:front-end');
+		// expected to broadcast section 'front-end' as active
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('inactive-section:front-end');
 
 		// The section to animate becomes visible
 		expect(animatedSection.hasClass('visibility-visible')).toBe(true);
@@ -70,16 +70,16 @@ describe('Animated Section', function() {
       	expect(animatedSection.hasClass('zoomIn')).toBe(true);
     });
 
-	// FESide inactive triggeredon inactive
+	// front-end inactive triggeredon inactive
     it('should be listening when a section becomes inactive', function (){ 	
 
     	// Check that there is a section to animate
 		var animatedSection = elm.find('.animated-section');
 		
-      	// FESide
-		$rootScope.$broadcast('event:activeArea', 'FESide');
-		// expected to broadcast section 'FESide' as inactive
-      	expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', 'FESide');
+      	// front-end
+		$rootScope.$broadcast('active-section:front-end');
+		// expected to broadcast section 'front-end' as inactive
+      	expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:front-end');
 
       	// The section to animate becomes invisible
 		expect(animatedSection.hasClass('visibility-visible')).toBe(false);
