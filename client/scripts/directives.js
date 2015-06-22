@@ -37,12 +37,12 @@ daniboomerangDirectives.directive('parallaxSubsection', function($window) {
         /* For those sections that contain images, we wait the image to be loaded before calculate the height */
         if (type == 'text-image') {
           var img = new Image();
-          img.src = element.find('img').attr('src');
           if (!isImageLoaded(img)) {
             img.onload = function () { 
               setCurrentHeight(section);
             }
           }
+          img.src = element.find('img').attr('src');
         }
         else if ( type == 'text-only') { setCurrentHeight(section); }   
       }
