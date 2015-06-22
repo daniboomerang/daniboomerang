@@ -157,29 +157,29 @@ daniboomerangDirectives.directive('foot', function($timeout) {
         /* INIT DOM ELEMENTS */
         footer = element.find('footer'); toTopButton = element.find('#to-top-button'); shareButton = element.find('#share-button');
 
-        scope.$on('active-section:cover', function($event){ 
+        function contractFooter(){
             footer.removeClass('expand-small'); footer.removeClass('expand-big');
             toTopButton.removeClass('reveal'); shareButton.removeClass('reveal');
-            scope.$apply();
-        })  
+        }
             
-        scope.$on('inactive-section:cover', function($event){
+        function expandFooter(){
             if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
             else { footer.addClass('expand-big'); }
             toTopButton.addClass('reveal'); shareButton.addClass('reveal');
-            scope.$apply();
-        })
+        }
 
-        scope.$on('active-section:connectivity', function($event){ scope.currentSection = 'connectivity'; scope.$apply();});
-        scope.$on('active-section:creativity', function($event){ scope.currentSection = 'creativity'; scope.$apply();});
-        scope.$on('active-section:remote-working', function($event){ scope.currentSection = 'remote-working'; scope.$apply();});
-        scope.$on('active-section:about', function($event){ scope.currentSection = 'about'; scope.$apply();});
-        scope.$on('active-section:back-end', function($event){ scope.currentSection = 'back-end'; scope.$apply();});
-        scope.$on('active-section:loving', function($event){ scope.currentSection = 'loving'; scope.$apply();});
-        scope.$on('active-section:front-end', function($event){ scope.currentSection = 'front-end'; scope.$apply();});
-        scope.$on('active-section:work', function($event){ scope.currentSection = 'work'; scope.$apply();});
-        scope.$on('active-section:contact', function($event){ scope.currentSection = 'contact'; scope.$apply();});
-         
+        scope.$on('active-section:cover', function($event){ contractFooter(); });
+        scope.$on('active-section:connectivity', function($event){ scope.currentSection = 'connectivity'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:creativity', function($event){ scope.currentSection = 'creativity'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:remote-working', function($event){ scope.currentSection = 'remote-working'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:about', function($event){ scope.currentSection = 'about'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:back-end', function($event){ scope.currentSection = 'back-end'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:loving', function($event){ scope.currentSection = 'loving'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:front-end', function($event){ scope.currentSection = 'front-end'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:work', function($event){ scope.currentSection = 'work'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:contact', function($event){ scope.currentSection = 'contact'; expandFooter(); scope.$apply(); });
+
+      
       }
     }  
   };
@@ -237,7 +237,7 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
         // ISS LIGHTS 
         $interval(function() { scope.issLight = '#' + Math.floor(Math.random()*16777215).toString(16); }, 1000);
         // NODES ON/OFF
-        function processChanges(){
+        /*function processChanges(){
           timeToPorcess  = Math.floor((Math.random() * 2) + 1);
           nodeToProcess = Math.floor((Math.random() * 6));
           scope.aliveNodes[nodeToProcess] = !scope.aliveNodes[nodeToProcess];
@@ -245,7 +245,7 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
         }
         scope.aliveNodes = [true, true, true, true, true, true, true, true];
         var timeToPorcess; var nodeToProcess;
-        processChanges(); 
+        processChanges();*/
         // ET SCENE
         scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showEtFingerLight = true; }, 2500); })
         scope.$on('inactive-section:contact', function($event) { $timeout(function() { scope.showEtFingerLight = false; }, 2000); })

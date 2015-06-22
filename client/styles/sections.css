@@ -26,13 +26,13 @@ blockquote p { display: inline; }
 #loving { }
 #work { }
 #contact { }
-#connectivity { padding-top: 20vh; }
+#connectivity { padding-top: 30vh; }
 #client-server-diagram { padding-top: 5vh; }
-#creativity { padding-top: 20vh; }
-#remote-working { padding-top: 20vh; }
-#back-end { padding-top: 20vh; }
+#creativity { padding-top: 40vh; }
+#remote-working { padding-top: 30vh; }
+#back-end { padding-top: 30vh; }
 #back-end-diagram { padding-top: 5vh; }
-#front-end { padding-top: 20vh; }
+#front-end { padding-top: 30vh; }
 #front-end-diagram { padding-top: 5vh;}
 
 /*********************/

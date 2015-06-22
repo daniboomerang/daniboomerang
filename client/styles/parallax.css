@@ -13,35 +13,38 @@
 /*****************/
 /* COVER SECTION */
 /*****************/
-#cover-parallax-section { z-index: 1; }
+#cover-parallax-section { z-index: 3; }
 #cover-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/cover-space.svg); }
-#cover-parallax-section .parallax__layer--back {  }
+#cover-parallax-section .parallax__layer--back { }
 
 @media all { 
-  #cover-parallax-section { height: 120vh; }
-  #cover-parallax-section .parallax__layer--deep { height: 150vh; }
+  #cover-parallax-section { height: 125vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 125vh; }
   #cover-parallax-section .parallax__layer--back { height: 100vh; margin-top: 140vh; }
+  #cover-parallax-section .parallax__layer--base { }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  #cover-parallax-section { height: 120vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 120vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 140vh; }
-  #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #cover-parallax-section { height: 100vh; }
   #cover-parallax-section .parallax__layer--deep { height: 100vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 140vh; }
-  #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
 }
 @media (min-width: 500px) and (max-width: 639px) {
   #cover-parallax-section { height: 100vh; }
-  #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
-  #cover-parallax-section .parallax__layer--deep { margin-top: 120vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 100vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 180vh; }
 }
 @media (min-width: 200px) and (max-width: 500px) {
   #cover-parallax-section { height: 100vh; }
-  #cover-parallax-section .parallax__layer--base { margin-top: 10vh; }
-  #cover-parallax-section .parallax__layer--deep { margin-top: 120vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 120vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 180vh; }
 }
 
@@ -49,31 +52,36 @@
 /* CONNECTIVITY ANIMATED SECTION */
 /*********************************/
 #connectivity-parallax-section { z-index: 4; }
-#connectivity-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/some-space.svg); }
+#connectivity-parallax-section .parallax__layer--deep {}
 #connectivity-parallax-section .parallax__layer--base { }
 
 /*******************************/
 /* CREATIVITY ANIMATED SECTION */
 /*******************************/
 #creativity-parallax-section { z-index: 3; }
-#creativity-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/some-space.svg); }
+#creativity-parallax-section .parallax__layer--deep { height: 50%; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/some-space.svg); }
 #creativity-parallax-section .parallax__layer--base { }
 
-/********************************/
-/* FREELANCING ANIMATED SECTION */
-/********************************/
+/***********************************/
+/* REMOTE WORKING ANIMATED SECTION */
+/***********************************/
 #remote-working-parallax-section { z-index: 2; }
 #remote-working-parallax-section .parallax__layer--base { }
-#remote-working-parallax-section .parallax__layer--deep { margin-top: 30vh; background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon.svg); }
+#remote-working-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon.svg); }
+@media all { #remote-working-parallax-section .parallax__layer--deep { height: 100vh; margin-top: 50vh; } }
+@media (min-width: 768px) and (max-width: 1024px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 50vh; } }
+@media (min-width: 640px) and (max-width: 767px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 120vh; } }
+@media (min-width: 500px) and (max-width: 639px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 120vh; } }
+@media (min-width: 200px) and (max-width: 500px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 120vh; } }
 
-/******************************/
-/* FREELANCING IMAGES SECTION */
-/******************************/
-#remote-working-parallax-images { z-index: 2; }
-#remote-working-parallax-images .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/some-space.svg); } 
+/*********************************/
+/* REMOTE WORKING IMAGES SECTION */
+/*********************************/
+#remote-working-parallax-images { z-index: 3; }
+#remote-working-parallax-images .parallax__layer--deep {  } 
 #remote-working-parallax-images .parallax__layer--back { } 
 #remote-working-parallax-images .parallax__layer--base { } 
-#remote-working-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books.svg); }
+#remote-working-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cloud-books.svg); }
 
 @media all { 
   #remote-working-parallax-images { height: 180vh; }
@@ -81,13 +89,14 @@
   #remote-working-parallax-images .parallax__layer--base { height: 180vh; }
   #remote-working-parallax-images .parallax__layer--back { height: 140vh; margin-top: 60vh; }
   #cliff { height: 110%; width: 110%; background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); }
-  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
+  #orbit-iss { margin-left: 15vh; margin-top: -10vh;  height: 25vh; width: 25vh; }
   #iss { height: 90%; width: 90%; }
-  #earth {  }
+  #orbit-earth { height: 100%; width: 100%; }
+  #earth { background-image: url(/images/earth-connectivity.svg); background-size:100%; background-repeat: no-repeat; height:100%; width:100% }
   #big-stone { background-image: url(/images/big-stone.svg); background-size: 100%; background-repeat:no-repeat; height: 80%; width: 80%; }
   #stones-circle { background-image: url(/images/stones-circle.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; }
   #orbit-big-stone { height: 17vh; width: 17vh;  margin-top: 25%; margin-left: 25%; position: absolute;}
-  #orbit-stones-circle { border-radius: 50%; margin-left: 19%; margin-top: 45%;  height: 35vh; width: 35vh; }
+  #orbit-stones-circle { margin-left: 19%; margin-top: 45%;  height: 35vh; width: 35vh; }
 }
 /* ipad & ipad mini */
 
@@ -164,7 +173,7 @@
 /* BACK END ANIMATED SECTION */
 /*****************************/
 #BE-parallax-section { z-index: 2; }
-#BE-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/some-space.svg); }
+#BE-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/BE-space-moon.svg); }
 #BE-parallax-section .parallax__layer--base { }
 
 /* ipad & ipad mini */
@@ -193,24 +202,27 @@
 #BE-books { background-image: url(/images/BE-books.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; position:absolute; }
 #BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 90%; width: 90%; position:absolute; }
 #BE-ruby { background-image: url(/images/BE-ruby.svg); background-size: 100%; background-repeat:no-repeat; height: 60%; width: 60%; position:absolute; }
-/*#boomerang { background-image: url(/images/boomerang.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }*/
+/*#boomerang { border: solid red; background-image: url(/images/boomerang-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }*/
 @media all {
   #BE-parallax-images { height: 300vh; margin-top: 0vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 70vh; }
+  #BE-parallax-images .parallax__layer--deep { height: 200vh; margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 70vh; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 65vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 25vh; }
   #BE-books { top:0vh; left: 0vh; }
-  #BE-dboom { top: 85vh; right: -20vh; }
-  #BE-ruby { top: 100vh; right: -30vh; }
-  /*#boomerang { height: 10%; width: 10%; top:30vh; left:25vh;  }*/
+  #BE-dboom { top: 135vh; right: -20vh; }
+  #BE-ruby { top: 110vh; right: -20vh; }
+  /*#boomerang { height: 7%; width: 7%; top:40vh; left:30vh; }*/
 }  
 @media (min-width: 1024px) and (max-width: 1279px) {
   #BE-parallax-images { height: 250vh; margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 50vh; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 30vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-ruby { top: 83vh; right: -17vh; }
+  #BE-dboom { top: 110vh; right: -20vh; }
+  /* #boomerang { height: 5%; width: 5%; top:37vh; left:27vh; }*/
 }
 @media (min-width: 992px) and (max-width: 1023px) { 
   #BE-parallax-images { height: 200vh; }
@@ -219,7 +231,8 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 30vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { right: -10vh; }
+  #BE-dboom { top: 100vh; right: -10vh; }
+  /*#boomerang { height: 5%; width: 5%; top:37vh; left:25vh;}*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #BE-parallax-images { height: 200vh; }
@@ -228,8 +241,9 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { right: -10vh; }
+  #BE-dboom { top: 100vh; right: -10vh; }
   #BE-books { height: 110%; width: 110%; }
+  /*#boomerang { height: 5%; width: 5%; top:37vh; left:25vh; }*/
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #BE-parallax-images { height: 170vh; }
@@ -238,7 +252,7 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 20vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { right: -10vh; }
+  #BE-dboom { top: 100vh; right: -10vh; }
   #BE-books { top: -10vh; height: 120%; width: 120%; }
 }
 @media (min-width: 550px) and (max-width: 639px) {
@@ -353,7 +367,7 @@
   #FE-parallax-images .parallax__layer--back { margin-top: 40vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 25vh; }
-  #FE-mobile-tablet { top: 160vh; left: -20vh; }
+  #FE-mobile-tablet { top: 120vh; left: -20vh; }
   #FE-gaming { top: 120vh; left: 0vh; }
   #FE-books { top:0; right: -15vh; }
 }
@@ -446,16 +460,12 @@
 /***********/
 /* CONTACT */
 /***********/
-#contact-parallax-section { z-index: 4; color: white; height: 100vh; }
+#contact-parallax-section { z-index: 2; color: white; height: 100vh; }
 #contact-parallax-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
 
 /************************************************/
-/* PARALLAX TEXTS, ANIMATION CLASSES AND COMETS */
+/* ANIMATION CLASSES AND COMETS */
 /************************************************/
-.parallax-text { position: absolute; top: 50%; color: white;  width: 50%; text-align: center; }
-.px-text-center { left: 50%;  -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-.px-text-right { right: 0; }
-.px-text-left { left: 0; }
 
 @media all { 
   .orbit-comet {  height: 4%; width: 100%; }
@@ -468,11 +478,12 @@
   .spin-right-half-faster { -webkit-animation-name: spin-right-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole-faster { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 20000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 20000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 20000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-right-whole-fastest { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 5000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 5000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 5000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole-slower { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 90000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 90000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 90000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 12000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 12000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 12000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-whole { -webkit-animation-name: spin-left-whole; -webkit-animation-duration: 10000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-whole; -moz-animation-duration: 10000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-whole; -ms-animation-duration: 10000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half-faster { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
-  .spin-boomerang { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 3000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 3000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 3000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  /*.spin-boomerang { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 1000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 1000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 1000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }*/
   .move-from-left { -webkit-animation: move-from-left 156s infinite; -moz-animation: move-from-left 156s infinite; -o-animation: move-from-left 156s infinite; }
 }
 
