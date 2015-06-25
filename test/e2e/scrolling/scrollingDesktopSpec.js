@@ -31,7 +31,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 		        expect(navbarList[1].element(by.css('.fa-heart')).isPresent()).toBe(true);
 
 		        // Work <li> contains github icon
-				expect(navbarList[2].element(by.css('.fa-github')).isPresent()).toBe(true);
+				expect(navbarList[2].element(by.css('.fa-suitcase')).isPresent()).toBe(true);
 
 		        // Contact <li> contains chat icon
 		        expect(navbarList[3].element(by.css('.fa-wechat')).isPresent()).toBe(true);

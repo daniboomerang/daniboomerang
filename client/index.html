@@ -15,6 +15,8 @@
         <!-- CSS BOOTSTRAP PATCHED FOR TN & XXS desvices -->
         <link rel="stylesheet" href="styles/vendor/bootstrap-patched.min.css">
         <link rel="stylesheet" href="styles/vendor/bootstrap-xxs-tn.css">
+        <!-- CSS ANIMATED -->
+        <link rel="stylesheet" href="styles/vendor/animate.css">
 
         <!-- CSS DANIBOOMERANG -->
         <link rel="stylesheet" href="styles/daniboomerang.css">
@@ -42,53 +44,91 @@
         <div id="cover-parallax-section" class="parallax__section">
           <div class="parallax__layer parallax__layer--deep"></div>
           <div class="parallax__layer parallax__layer--back">
-            <div class="spin-right-half orbit-comet" style=""><div id="comet-blue" style="height: 15%; width: 3%; " class="comet"></div></div>
+            <div class="spin-right-half orbit-comet" style=""><div id="comet-blue" style="height: 15%; width: 3%; " class="comet-from-left"></div></div>
             <div class="px-text-right parallax-text"></div>
           </div>
-          <div class="parallax__layer parallax__layer--base"><cover></cover></div>
+          <div class="parallax__layer parallax__layer--base">
+            <cover></cover>
+          </div>
         </div>
-        <div id="cover-parallax-images" class="parallax__section">
+        <div id="connectivity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.connectivity}">
+          <div class="parallax__layer parallax__layer--base">
+            <div parallax-subsection name="connectivity" type="text-image"></div>
+          </div>
+        </div>
+        <div id="creativity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.creativity}">
+          <div class="parallax__layer parallax__layer--deep"></div>
+          <div class="parallax__layer parallax__layer--base">
+            <div parallax-subsection name="creativity" type="text-only"></div>
+          </div>
+        </div>   
+        <div id="remote-working-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.remoteWorking}">
+          <div class="parallax__layer parallax__layer--deep"></div>
+          <div class="parallax__layer parallax__layer--base">
+            <div parallax-subsection name="remoteWorking" type="text-image"></div>
+          </div>
+          <div class="parallax__layer parallax__layer--back">
+            <div class="spin-right-half orbit-comet" style="margin-left:0vw; margin-top:0vw;"><div id="comet-red" style="height: 12%; width: 5%;" class="comet-from-left"></div></div>
+          </div>
+        </div>   
+        <div id="remote-working-parallax-images" class="parallax__section">
+          <div class="parallax__layer parallax__layer--deep"></div>
+          <div class="parallax__layer parallax__layer--base">
+            <div id="cliff"></div>
+            <!--<div id="orbit-stones-circle" class="spin-right-whole-faster">
+              <div id="stones-circle"><div id="orbit-big-stone" class="spin-left-whole"><div id="big-stone"></div></div></div>
+            </div>-->
+          </div>
           <div class="parallax__layer parallax__layer--back">
             <div id="orbit-iss" class="spin-right-whole"><svg-alive id="iss" name="iss"></svg-alive></div>
-            <div id="orbit-earth"><svg-alive id="earth" name="earth-connectivity"></svg-alive></div>
-          </div>
-          <div class="parallax__layer parallax__layer--base">
-            <div id="orbit-stones-circle" class="spin-right-whole-faster">
-              <div id="stones-circle"><div id="orbit-big-stone" class="spin-left-whole"><div id="big-stone"></div></div></div>
-            </div>
-          </div>
+            <div id="orbit-earth"><div id="earth"></div></div>
+          </div>  
           <div class="parallax__layer parallax__layer--fore"></div>
         </div>
-        <div id="about-parallax-section" class="parallax__section" ng-style="{'height': textSectionsHeight.about}">
+         <div id="about-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.about}">
           <div class="parallax__layer parallax__layer--base">
-            <text-section name="about"></text-section>
+            <div parallax-subsection name="about" type="text-only"></div>
+          </div>
+        </div>
+        <div id="BE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.backEnd}">
+          <div class="parallax__layer parallax__layer--deep"></div>
+          <div class="parallax__layer parallax__layer--base">
+              <div parallax-subsection name="backEnd" type="text-image"></div>
           </div>
         </div>
         <div id="BE-parallax-images" class="parallax__section">
           <div class="parallax__layer parallax__layer--deep">
-            <div class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="comet-white" style="height: 10%; width: 5%;" class="comet"></div></div>
+            <div class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="comet-white" style="height: 10%; width: 5%;" class="comet-from-left"></div></div>
           </div>
           <div class="parallax__layer parallax__layer--back"></div>
           <div class="parallax__layer parallax__layer--base"><div id="BE-ruby"></div></div>
-          <div class="parallax__layer parallax__layer--fore"><div id="BE-books"></div><div id="BE-dboom"></div></div>
+          <div class="parallax__layer parallax__layer--fore">
+            <div id="BE-books"></div>
+            <div id="BE-dboom"><!--<div id="boomerang" class="spin-boomerang"></div>--></div>
+          </div>
         </div>
-        <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': textSectionsHeight.loving}">
+        <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.loving}">
           <div class="parallax__layer parallax__layer--base">
-          <text-section name="loving"></text-section>
+          <div parallax-subsection name="loving" type="text-only"></div>
+          </div>
+        </div>
+        <div id="FE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.frontEnd}">
+          <div class="parallax__layer parallax__layer--deep"></div>
+          <div class="parallax__layer parallax__layer--base">
+            <div parallax-subsection name="frontEnd" type="text-image"></div>
           </div>
         </div>
         <div id="FE-parallax-images" class="parallax__section">
           <div class="parallax__layer parallax__layer--deep">
-            <div class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="comet-blue" style="height: 6%; width: 4%;" class="comet"></div></div>
+            <div class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="comet-blue" style="height: 6%; width: 4%;" class="comet-from-left"></div></div>
           </div>
           <div class="parallax__layer parallax__layer--back"></div>
           <div class="parallax__layer parallax__layer--base"><div id="FE-gaming"></div></div>
           <div class="parallax__layer parallax__layer--fore"><div id="FE-books"></div><div id="FE-mobile-tablet"></div></div>
         </div>
-        <div id="work-parallax-section" class="parallax__section" ng-style="{'height': textSectionsHeight.work}">
+        <div id="work-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.work}">
           <div class="parallax__layer parallax__layer--base">
-          
-            <text-section name="work"></text-section>
+            <div parallax-subsection name="work" type="text-image"></div>
           </div>
         </div>
         <div id="contact-parallax-section" class="parallax__section">
@@ -104,7 +144,6 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="bower_components/angular-scroll/angular-scroll.js"></script>
-      <script src="bower_components/ngFx/dist/ngFxBundle.js"></script>
       <script src="scripts/vendor/bootstrap.js"></script>
 
         <!-- DANIBOOMERANG SCRIPTS-->

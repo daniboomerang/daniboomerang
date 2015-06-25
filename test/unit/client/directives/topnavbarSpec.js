@@ -22,18 +22,25 @@ describe('navbar', function() {
   
     it('should be listening "event:activeArea" and act accordingly', function (){ 
 		
-    	/* If Cover, it must contract */
-    	var area = 'Cover'; 
-		$rootScope.$broadcast('event:activeArea', area);
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+    	/* If cover, it must contract */
+		$rootScope.$broadcast('active-section:cover');
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:cover');
 		var header = elm.find('header');
 		expect(header.length).toBe(1);
 		expect(header.hasClass('expand')).toBe(false);
 
-    	/* If something different to cover, cover it must expand */
-		area = 'SomethingElse'; 
-		$rootScope.$broadcast('event:activeArea', area);
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+		/* If contact, it must contract */
+		$rootScope.$broadcast('active-section:contact');
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:contact');
+		var header = elm.find('header');
+		expect(header.length).toBe(1);
+		expect(header.hasClass('expand')).toBe(false);
+
+    	/* about, loving, or work it must expand */
+		var sectionEvents = ['active-section:about','active-section:loving','active-section:work'];
+		var randomSection = sectionEvents[Math.floor((Math.random() * 3))];
+		$rootScope.$broadcast(randomSection);
+		expect($rootScope.$broadcast).toHaveBeenCalledWith(randomSection);
 		header = elm.find('header.expand.navbar-fixed-top');
 		expect(header.length).toBe(1);
     });	
@@ -41,9 +48,8 @@ describe('navbar', function() {
     it('should be listening "event:inactiveArea" and expand', function (){
 
 		/* If About, it must expand and set the section active */
-		area = 'About';
-		$rootScope.$broadcast('event:activeArea', area);
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+		$rootScope.$broadcast('active-section:about');
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:about');
 		var aboutLink = elm.find('#about-link');
 		expect(aboutLink.length).toBe(1);
 		expect(aboutLink.hasClass('active')).toBe(true);
@@ -52,9 +58,8 @@ describe('navbar', function() {
       	expect(aboutIcon.hasClass('faa-spin')).toBe(true);
 
       	/* If Loving, it must expand and set the section active */
-		area = 'Loving';
-		$rootScope.$broadcast('event:activeArea', area);
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+		$rootScope.$broadcast('active-section:loving');
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:loving');
 		var lovingLink = elm.find('#loving-link');
 		expect(lovingLink.length).toBe(1);
 		expect(lovingLink.hasClass('active')).toBe(true);
@@ -64,9 +69,8 @@ describe('navbar', function() {
 
 
 		/* If Work, it must expand and set the section active */
-		area = 'Work';
-		$rootScope.$broadcast('event:activeArea', area);
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+		$rootScope.$broadcast('active-section:work');
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:work');
 		var workLink = elm.find('#work-link');
 		expect(workLink.length).toBe(1);
 		expect(workLink.hasClass('active')).toBe(true);
@@ -75,9 +79,8 @@ describe('navbar', function() {
       	expect(workIcon.hasClass('faa-pulse')).toBe(true);
 
       	/* If Contact, it must NOT expand navbar */
-		area = 'Contact';
-		$rootScope.$broadcast('event:activeArea', area);
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('event:activeArea', area);
+		$rootScope.$broadcast('active-section:contact');
+		expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:contact');
 		var contactLink = elm.find('#contact-link');
 		expect(contactLink.length).toBe(1);
 		expect(contactLink.hasClass('active')).toBe(false);

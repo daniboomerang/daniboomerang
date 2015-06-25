@@ -44,7 +44,7 @@ describe('Daniboomerang - Scenario for mobile and tablet devices when on load', 
 
         // Work <li> contains github icon
         var work = navbarResponsiveList.get(2);
-        expect(work.element(by.css('.fa-github')).isPresent()).toBe(true);
+        expect(work.element(by.css('.fa-suitcase')).isPresent()).toBe(true);
 
         // Contact <li> contains chat icon
         var contact = navbarResponsiveList.get(3);

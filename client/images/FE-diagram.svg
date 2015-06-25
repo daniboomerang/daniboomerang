@@ -1,0 +1,85 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 645.79291 278.27699" width="100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" preserveAspectRatio="xMinYMin slice">
+<g stroke-width="2" transform="translate(45.166,-385.31)" stroke="#fff">
+<g stroke-width="2" transform="translate(-118.49,-149.61)" stroke="#fff">
+<g stroke-width="2" transform="translate(0,11.373)" stroke="#fff">
+<g stroke-width="2" stroke="#fff" fill="none">
+<circle opacity="0.87" stroke-linejoin="bevel" stroke-width="2" stroke-linecap="round" transform="scale(-1,1)" stroke="#fff" cy="665.09" cx="-148.1" r="128.62"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="matrix(-1 0 0 1 486.12 -22.995)">
+<g transform="translate(-118.49,-149.61)">
+<g stroke="#fff" transform="translate(0,11.373)">
+<g transform="matrix(-1,0,0,1,628.13,-13.935)" fill="none">
+<g stroke="#fff">
+<path d="m301.28 327.69h144.32v95.069h162.89"/>
+<path d="m304.77 319.59h301.72"/>
+</g>
+</g>
+<g stroke="#fff" transform="matrix(-1,0,0,-1,628.13,624.41)" fill="none">
+<g stroke="#fff">
+<path stroke="#fff" d="m301.28 327.69h144.32v95.069h162.89"/>
+</g>
+</g>
+<g stroke-width=".75131" transform="matrix(-1.331 0 0 1.331 849.61 -230.11)">
+<path d="m300.16 375.73c-32.514-11.194-42.142 21.476-18.009 33.182-19.199 30.651 38.563 44.744 52.566 23.649 28.722 19.496 50.444 7.6312 48.216-6.5993 56.013-3.1332 32.315-85.758-19.286-55.649-11.382-23.962-59.109-23.076-63.487 5.418z"/>
+<text style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" xml:space="preserve" font-size="24.042px" stroke="#ffffff" y="408.38052" x="287.00211" stroke-width="0.8px" line-height="125%" fill="#000000"><tspan y="408.38052" x="287.00211" stroke-width="0.8px">The Cloud</tspan></text>
+</g>
+<g font-size="24px" font-family="&apos;DejaVu Sans&apos;" transform="translate(-403.73,-11.382)" fill="#fff">
+<g transform="matrix(-.96323 0 0 .95999 958.51 -189.96)">
+<text font-size="25.6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="415.34616" x="488.50595" font-family="sans-serif" line-height="125%" fill="#ffffff"><tspan y="415.34616" x="488.50595" font-size="15.599px" fill="#ffffff">Client 1</tspan></text>
+</g>
+<g transform="matrix(-.96323 0 0 .95999 975.5 -85.756)">
+<text font-size="25.6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="415.34616" x="507.19312" font-family="sans-serif" line-height="125%" fill="#ffffff"><tspan y="415.34616" x="507.19312" font-size="15.599px" fill="#ffffff">Client 2</tspan></text>
+</g>
+<g transform="matrix(-.96323 0 0 .95999 976.64 17.054)">
+<text font-size="25.6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="415.34616" x="507.19312" font-family="sans-serif" line-height="125%" fill="#ffffff"><tspan y="415.34616" x="507.19312" font-size="15.599px" fill="#ffffff">Client N</tspan></text>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g transform="matrix(.9751 0 0 .9751 230.43 292.68)">
+<g stroke-width="1.204" transform="matrix(.85180 0 0 .85180 -214.05 -147.57)">
+<g stroke="#fff" stroke-width="1.204" transform="translate(0,11.373)">
+<g font-size="24px" stroke-width=".99501" transform="matrix(1.21,0,0,1.21,2.0249,-702.14)" fill="#fff">
+<g stroke-width=".61783" transform="matrix(1.6105,0,0,1.6105,-161.5,213.05)">
+<g stroke="#fff" stroke-width="2.946" transform="matrix(.20972 0 0 .20972 303.6 -84.254)">
+<g stroke-width=".56038" transform="matrix(5.2571,0,0,5.2571,693.23,1673.6)">
+<g fill="none">
+<rect rx="5" height="32" width="32" y="0" x="0"/>
+<path opacity=".26" d="m28.455 26.303a3.061 2.4838 0 0 1 -6.1219 0 3.061 2.4838 0 1 1 6.1219 0z"/>
+<path d="m28.455 25.347a3.061 2.4838 0 0 1 -6.1219 0 3.061 2.4838 0 1 1 6.1219 0z"/>
+</g>
+<g fill="#141718">
+<path d="m28.455 24.52a3.061 2.4838 0 0 1 -6.1219 0 3.061 2.4838 0 1 1 6.1219 0z" fill="#000"/>
+<path opacity=".15" d="m22.02 18.502a6.0205 4.7911 0 0 1 -12.041 0 6.0205 4.7911 0 1 1 12.041 0z"/>
+<path d="m22.02 17.489a6.0205 4.7911 0 0 1 -12.041 0 6.0205 4.7911 0 1 1 12.041 0z"/>
+<path d="m18.919 16.805a2.9186 2.3226 0 1 1 -5.8372 0 2.9186 2.3226 0 1 1 5.8372 0z"/>
+<rect y="15.808" width="2.3502" x="14.784" height="1.7739"/>
+</g>
+<path d="m16 5.0701c-2.375 0-4.3003 1.9126-4.3003 4.2719 0 0.22232 0.07455 0.42762 0.10751 0.64078 0.01077 0.069593-0.0141 0.14514 0 0.21359 0.03727 0.21779 0.13263 0.4459 0.21502 0.69418 0.02148 0.05408 0.03015 0.10722 0.05375 0.1602 0.19408 0.53898 0.41504 1.1322 0.80631 1.8156 2.2016 3.845 3.9305 3.8699 6.1817 0.05339 0.42796-0.72552 0.71381-1.3587 0.91382-1.9223 0.15548-0.43816 0.25466-0.82814 0.26877-1.1748 0.01049-0.090185 0.04909-0.1752 0.05375-0.26699-0.0012-0.018134 0.0017-0.035539 0-0.053395 0.0021-0.054574 0-0.10511 0-0.1602 0-2.3593-1.9253-4.2719-4.3003-4.2719z" fill="#000"/>
+<path opacity=".26" d="m9.8788 26.303a3.061 2.4838 0 0 1 -6.1219 0 3.061 2.4838 0 1 1 6.1219 0z" fill="none"/>
+<path d="m9.8788 25.347a3.061 2.4838 0 0 1 -6.1219 0 3.061 2.4838 0 1 1 6.1219 0z" fill="none"/>
+<path d="m9.8788 24.52a3.061 2.4838 0 0 1 -6.1219 0 3.061 2.4838 0 1 1 6.1219 0z" fill="#000"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g stroke="#fff" stroke-width="1.0255" transform="translate(82.849,-213.49)" fill="none">
+<g stroke-width="1.5198" transform="matrix(.67477 0 0 .67477 248.77 89.372)">
+<rect transform="translate(0,-297.44)" height="50.003" width="70.458" y="42.653" x="52.528"/>
+<path d="m43.675-182.51 6.2581-12.498h74.968l6.258 12.498 6.258 12.498h-100l6.2581-12.498zm6.2488-46.866v-28.12h74.986v56.24h-74.986v-28.12zm68.737 0v-21.871h-62.488v43.742h62.488v-21.871z"/>
+</g>
+<g transform="matrix(.65584 0 0 .65584 247.59 116.5)">
+<rect ry="0" height="83.834" width="46.429" y="-134.64" x="55.189" stroke-width="1.5637"/>
+<g stroke-width="110.34" transform="matrix(.014172 0 0 -.014172 50.572 -38.689)">
+<path stroke="#fff" stroke-width="110.34" d="m456 7054c-148-36-309-163-373-295-68-142-63 132-63-3212 0-2145 3-3041 11-3079 40-193 197-366 391-429l73-24h2930l72 23c86 27 207 105 263 170 52 61 105 162 127 243 17 60 18 232 18 3099v3035l-27 80c-67 197-226 344-420 390-92 22-2912 21-3002-1zm1912-226c16-16 15-23-4-42-13-14-64-16-399-16-211 0-390 3-399 6-16 6-22 45-9 57 3 4 185 7 403 7 295 0 399-3 408-12zm1067-303 25-24v-2768c-1-2160-3-2771-13-2784-7-9-22-21-34-27-16-9-385-12-1458-12h-1437l-29 29-29 29v2757c0 2076 3 2762 12 2778 6 12 18 27 27 34 12 10 342 12 1464 13h1448l24-25zm-1385-5875c22-11 52-39 67-62 39-59 40-147 1-205-76-115-252-108-320 12-28 50-29 125-3 179 41 86 164 122 255 76z" fill="none"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

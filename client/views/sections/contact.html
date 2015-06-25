@@ -1,20 +1,20 @@
 <div id="contact">    	
-    <div id="scroll-up" class="contact-row" ng-style="showScrollUpArrow === true && {'visibility': 'visible'} || showScrollUpArrow === false && {'visibility': 'hidden'}">
-    	<a class="arrow" href="#work" du-smooth-scroll du-scrollspy duration="1000"><i class="fa fa-fw fa-chevron-up fa-3x"></i></a>
+    <div id="scroll-up" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut">
+    	<a class="arrow animated animated-section visibility-hidden" href="#work" du-smooth-scroll du-scrollspy duration="1000" style="-moz-animation-delay: 0.5s; -webkit-animation-delay: 0.5s; -ms-animation-delay: 0.5s;"><i class="fa fa-fw fa-chevron-up fa-3x"></i></a>
     </div>    
-	<div id="social" class="contact-row">
-		<div id="mail-btn-wrapper" class="social-button">
+	<div id="social" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut">
+		<div id="mail-btn-wrapper" class="social-button animated animated-section visibility-hidden" style="-moz-animation-delay: 0.8s; -webkit-animation-delay: 0.8s; -ms-animation-delay: 0.8s;">
 			<a id="mail-btn" class="btn" href="" ng-click="toggleSocialButton('mail')"><i class="fa fa-fw fa-lg fa-envelope-o"></i></a>
 		</div>
-        <div id="linkedin-btn-wrapper" class="social-button">
+        <div id="linkedin-btn-wrapper" class="social-button animated animated-section visibility-hidden" style="-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;">
 			<a class="btn" href="https://es.linkedin.com/in/estevezdani" target="_blank_"><i class="fa fa-fw fa-lg fa-linkedin"></i></a>
 		</div>
-		<div id="phone-btn-wrapper" class="social-button">
+		<div id="phone-btn-wrapper" class="social-button animated animated-section visibility-hidden" style="-moz-animation-delay: 1.2s; -webkit-animation-delay: 1.2s; -ms-animation-delay: 1.2s;">
 			<a id="phone-btn" class="btn" href="" ng-click="toggleSocialButton('phoneNumber')"><i class="fa fa-fw fa-lg fa-phone"></i></a>
 		</div>
 	</div>
-	<div id="contact-info" class="contact-row" ng-style="showContactInfo === true && {'visibility': 'visible'} || showContactInfo === false && {'visibility': 'hidden'}">
-    	{{contactInfo}}
-    </div> 
-	<div id="et-scene-wrapper" class="contact-row"><div id="et-scene"></div></div>
+	<div id="contact-info" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut">
+    	<span class="animated animated-section visibility-hidden" style="-moz-animation-delay: 2s; -webkit-animation-delay: 2s; -ms-animation-delay: 2s;">{{contactInfo}}</span>
+    </div>
+	<div id="et-scene-wrapper" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="fadeIn" animatedout="fadeOut"><svg-alive id="et-scene"name="et-contact-scene" class="animated animated-section visibility-hidden" style="-moz-animation-delay: 1.4s; -webkit-animation-delay: 1.4s; -ms-animation-delay: 1.4s; -moz-animation-duration: 1s; -webkit-animation-duration: 1s; -ms-animation-duration: 1s;"></svg-alive></div>
 </div>
