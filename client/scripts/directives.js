@@ -57,7 +57,6 @@ daniboomerangDirectives.directive('parallaxSubsection', function($window) {
   }
 })
 
-
 daniboomerangDirectives.directive('animatedSection', function() {
   return {
     restrict: 'A',
@@ -94,6 +93,13 @@ daniboomerangDirectives.directive('cover', function() {
   return {
     restrict: 'E',
     templateUrl: 'views/sections/cover.html'
+  }  
+});
+
+daniboomerangDirectives.directive('creativity', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/sections/creativity.html'
   }  
 });
 

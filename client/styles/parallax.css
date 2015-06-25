@@ -59,7 +59,7 @@
 /* CREATIVITY ANIMATED SECTION */
 /*******************************/
 #creativity-parallax-section { z-index: 3; }
-#creativity-parallax-section .parallax__layer--deep { height: 50%; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/some-space.svg); }
+#creativity-parallax-section .parallax__layer--deep { height: 50%; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/creativity-space.svg); }
 #creativity-parallax-section .parallax__layer--base { }
 
 /***********************************/
@@ -67,7 +67,7 @@
 /***********************************/
 #remote-working-parallax-section { z-index: 2; }
 #remote-working-parallax-section .parallax__layer--base { }
-#remote-working-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon.svg); }
+#remote-working-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon-&-sun.svg); }
 @media all { #remote-working-parallax-section .parallax__layer--deep { height: 100vh; margin-top: 50vh; } }
 @media (min-width: 768px) and (max-width: 1024px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 50vh; } }
 @media (min-width: 640px) and (max-width: 767px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 120vh; } }
@@ -315,7 +315,7 @@
 /* FRONT END ANIMATED SECTION */
 /******************************/
 #FE-parallax-section { z-index: 3; }
-#FE-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/some-space.svg); }
+#FE-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/FE-diagram-space.svg); }
 #FE-parallax-section .parallax__layer--base { }
 
 /****************************/
