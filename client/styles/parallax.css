@@ -6,92 +6,161 @@
 .parallax__section { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
 .parallax__layer { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
 .parallax__layer--fore { -webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 4; }
-.parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 1; }
+.parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 3; }
 .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
-.parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 2; height: 120vh;}
+.parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; height: 120vh;}
 
 /*****************/
 /* COVER SECTION */
 /*****************/
-#cover-parallax-section { z-index: 1; }
+#cover-parallax-section { z-index: 3; }
 #cover-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/cover-space.svg); }
-#cover-parallax-section .parallax__layer--back { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon.svg); }
+#cover-parallax-section .parallax__layer--back { }
 
 @media all { 
-  #cover-parallax-section { height: 150vh; }
-  #cover-parallax-section .parallax__layer--deep { height: 150vh; }
-  #cover-parallax-section .parallax__layer--back { height: 100vh; margin-top: 80vh; }
+  #cover-parallax-section { height: 125vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 125vh; }
+  #cover-parallax-section .parallax__layer--back { height: 100vh; margin-top: 140vh; }
+  #cover-parallax-section .parallax__layer--base { }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
- #cover-parallax-section .parallax__layer--back { margin-top: 140vh; }
+  #cover-parallax-section { height: 120vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 120vh; }
+  #cover-parallax-section .parallax__layer--back { margin-top: 140vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
+  #cover-parallax-section { height: 100vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 100vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 140vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
 }
 @media (min-width: 500px) and (max-width: 639px) {
   #cover-parallax-section { height: 100vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 100vh; }
+  #cover-parallax-section .parallax__layer--back { margin-top: 180vh; }
 }
 @media (min-width: 200px) and (max-width: 500px) {
   #cover-parallax-section { height: 100vh; }
+  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
+  #cover-parallax-section .parallax__layer--deep { height: 120vh; }
+  #cover-parallax-section .parallax__layer--back { margin-top: 180vh; }
 }
 
-/***********************/
-/* COVER IMAGE SECTION */
-/***********************/
-#cover-parallax-images { z-index: 2; }
-#cover-parallax-images .parallax__layer--deep { } 
-#cover-parallax-images .parallax__layer--back { } 
-#cover-parallax-images .parallax__layer--base { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); } 
-#cover-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/first-books.svg); }
+/*********************************/
+/* CONNECTIVITY ANIMATED SECTION */
+/*********************************/
+#connectivity-parallax-section { z-index: 4; }
+#connectivity-parallax-section .parallax__layer--deep {}
+#connectivity-parallax-section .parallax__layer--base { }
+
+/*******************************/
+/* CREATIVITY ANIMATED SECTION */
+/*******************************/
+#creativity-parallax-section { z-index: 3; }
+#creativity-parallax-section .parallax__layer--deep { height: 50%; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/creativity-space.svg); }
+#creativity-parallax-section .parallax__layer--base { }
+
+/***********************************/
+/* REMOTE WORKING ANIMATED SECTION */
+/***********************************/
+#remote-working-parallax-section { z-index: 2; }
+#remote-working-parallax-section .parallax__layer--base { }
+#remote-working-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/moon-&-sun.svg); }
+@media all { #remote-working-parallax-section .parallax__layer--deep { height: 100vh; margin-top: 50vh; } }
+@media (min-width: 768px) and (max-width: 1024px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 50vh; } }
+@media (min-width: 640px) and (max-width: 767px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 120vh; } }
+@media (min-width: 500px) and (max-width: 639px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 120vh; } }
+@media (min-width: 200px) and (max-width: 500px) { #remote-working-parallax-section .parallax__layer--deep { margin-top: 120vh; } }
+
+/*********************************/
+/* REMOTE WORKING IMAGES SECTION */
+/*********************************/
+#remote-working-parallax-images { z-index: 3; }
+#remote-working-parallax-images .parallax__layer--deep {  } 
+#remote-working-parallax-images .parallax__layer--back { } 
+#remote-working-parallax-images .parallax__layer--base { } 
+#remote-working-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cloud-books.svg); }
 
 @media all { 
-  #cover-parallax-images { height: 190vh; }
-  #cover-parallax-images .parallax__layer--base { height: 180vh; }
-  #cover-parallax-images .parallax__layer--back { height: 130vh; margin-top: 90vh; }
-  #iss { height: 90%; width: 90%;  }
-  #earth {  }
+  #remote-working-parallax-images { height: 180vh; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 60vh; }
+  #remote-working-parallax-images .parallax__layer--base { height: 180vh; }
+  #remote-working-parallax-images .parallax__layer--back { height: 140vh; margin-top: 60vh; }
+  #cliff { height: 110%; width: 110%; background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); }
+  #orbit-iss { margin-left: 15vh; margin-top: -10vh;  height: 25vh; width: 25vh; }
+  #iss { height: 90%; width: 90%; }
+  #orbit-earth { height: 100%; width: 100%; }
+  #earth { background-image: url(/images/earth-connectivity.svg); background-size:100%; background-repeat: no-repeat; height:100%; width:100% }
   #big-stone { background-image: url(/images/big-stone.svg); background-size: 100%; background-repeat:no-repeat; height: 80%; width: 80%; }
   #stones-circle { background-image: url(/images/stones-circle.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; }
-  .orbit-comet {  height: 4%; width: 100%; }
-  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
   #orbit-big-stone { height: 17vh; width: 17vh;  margin-top: 25%; margin-left: 25%; position: absolute;}
-  #orbit-stones-circle { border-radius: 50%;margin-left: 19%; margin-top: 45%;  height: 35vh; width: 35vh; }
+  #orbit-stones-circle { margin-left: 19%; margin-top: 45%;  height: 35vh; width: 35vh; }
 }
+/* ipad & ipad mini */
+
+@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
+  #remote-working-parallax-images { height: 145vh  !important;}
+}
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
+  #remote-working-parallax-images { height: 87vh !important;}
+}
+/************/
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #orbit-iss { margin-left: 15vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
-  #cover-parallax-images { height: 140vh; }
-  #cover-parallax-images .parallax__layer--base { height: 160vh; }
+  #remote-working-parallax-images { height: 140vh; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 40vh; }
+  #remote-working-parallax-images .parallax__layer--base { height: 160vh; }
+  #remote-working-parallax-images .parallax__layer--back { margin-top: 80vh; }
   #orbit-big-stone { height: 8vh; width: 8vh; }
   #orbit-stones-circle { height: 20vh; width: 20vh; }
+  #orbit-iss { margin-left: 10vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
-  #cover-parallax-images { height: 115vh; margin-top: -30vh; }
-  #cover-parallax-images .parallax__layer--back { margin-top: 80vh; }
-  #cover-parallax-images .parallax__layer--base { height: 120vh; }
+  #remote-working-parallax-images { height: 105vh; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 30vh; }
+  #remote-working-parallax-images .parallax__layer--back { margin-top: 80vh; }
+  #remote-working-parallax-images .parallax__layer--base { }
   #orbit-big-stone { height: 5vh; width: 5vh; }
   #orbit-stones-circle { height: 15vh; width: 15vh; }
-  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 20vh; width: 20vh; }
+  #orbit-iss { margin-left: 10vh; margin-top: -15vh;  height: 20vh; width: 20vh; }
 }
 @media (min-width: 500px) and (max-width: 639px) {
-  #cover-parallax-images { height: 100vh;  margin-top: -20vh; }
-  #cover-parallax-images .parallax__layer--back { margin-top: 110vh; }
+  #remote-working-parallax-images { height: 90vh; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
   #orbit-stones-circle { height: 10vh; width: 10vh; }
-  #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
+  #orbit-iss { margin-left: 20vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }  
 @media (min-width: 400px) and (max-width: 499px) {
-  #cover-parallax-images { height: 70vh;  margin-top: -30vh; }
-  #cover-parallax-images .parallax__layer--back { margin-top: 100vh; }
+  #remote-working-parallax-images { height: 75vh; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 20vh; background-size:contain; }
+  #remote-working-parallax-images .parallax__layer--back { margin-top: 175vh; }
+  #cliff { height: 140%; width: 140%; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
   #orbit-stones-circle { height: 10vh; width: 10vh; }
-  #cover-parallax-images .parallax__layer--fore { background-size:110%; }
+  #orbit-iss { margin-left: 30vh; margin-top: -45vh;  height: 12vh; width: 12vh; }
+}
+@media (min-width: 320px) and (max-width: 399px) {
+  #remote-working-parallax-images { height: 60vh; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; background-size:contain; }
+  #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
+  #orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }
   #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
-} 
-@media (min-width: 200px) and (max-width: 399px) {
-  #cover-parallax-images { height: 50vh;  margin-top: -30vh; }
-  #cover-parallax-images .parallax__layer--back { margin-top: 100vh; }
+}   
+@media (min-width: 200px) and (max-width: 319px) {
+  #remote-working-parallax-images { height: 45vh; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; background-size:contain; }
+  #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
   #orbit-stones-circle { height: 10vh; width: 10vh; }
-  #cover-parallax-images .parallax__layer--fore { background-size:110%; }
   #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }   
 
@@ -99,6 +168,28 @@
 /* ABOUT */
 /*********/
 #about-parallax-section { z-index: 3; }
+
+/*****************************/
+/* BACK END ANIMATED SECTION */
+/*****************************/
+#BE-parallax-section { z-index: 2; }
+#BE-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/BE-space-moon.svg); }
+#BE-parallax-section .parallax__layer--base { }
+
+/* ipad & ipad mini */
+
+@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
+  #BE-parallax-images { height: 185vh !important; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
+}
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
+  #BE-parallax-images { height: 142vh !important; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh !important; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
+  #BE-parallax-images .parallax__layer--back { height: 120vh !important; }
+}
+/************/
 
 /***************************/
 /* BACK END IMAGES SECTION */
@@ -111,63 +202,65 @@
 #BE-books { background-image: url(/images/BE-books.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; position:absolute; }
 #BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 90%; width: 90%; position:absolute; }
 #BE-ruby { background-image: url(/images/BE-ruby.svg); background-size: 100%; background-repeat:no-repeat; height: 60%; width: 60%; position:absolute; }
-/*#boomerang { background-image: url(/images/boomerang.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }*/
+/*#boomerang { border: solid red; background-image: url(/images/boomerang-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }*/
 @media all {
-  #BE-parallax-images { height: 260vh; margin-top: 0vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 70vh; }
+  #BE-parallax-images { height: 300vh; margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--deep { height: 200vh; margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 70vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 50vh; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 50vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 70vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 25vh; }
   #BE-books { top:0vh; left: 0vh; }
-  #BE-dboom { top: 80vh; right: -20vh; }
-  #BE-ruby { top: 90vh; right: -30vh; }
-  /*#boomerang { height: 10%; width: 10%; top:30vh; left:25vh;  }*/
+  #BE-dboom { top: 135vh; right: -20vh; }
+  #BE-ruby { top: 110vh; right: -20vh; }
+  /*#boomerang { height: 7%; width: 7%; top:40vh; left:30vh; }*/
 }  
 @media (min-width: 1024px) and (max-width: 1279px) {
-  #BE-parallax-images { height: 230vh; margin-top: 70vh; }
+  #BE-parallax-images { height: 250vh; margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 40vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 50vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-ruby { top: 83vh; right: -17vh; }
+  #BE-dboom { top: 110vh; right: -20vh; }
+  /* #boomerang { height: 5%; width: 5%; top:37vh; left:27vh; }*/
 }
 @media (min-width: 992px) and (max-width: 1023px) { 
   #BE-parallax-images { height: 200vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 30vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 30vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { right: -10vh; }
-
+  #BE-dboom { top: 100vh; right: -10vh; }
+  /*#boomerang { height: 5%; width: 5%; top:37vh; left:25vh;}*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #BE-parallax-images { height: 200vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 60vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { right: -10vh; }
+  #BE-dboom { top: 100vh; right: -10vh; }
   #BE-books { height: 110%; width: 110%; }
-
+  /*#boomerang { height: 5%; width: 5%; top:37vh; left:25vh; }*/
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #BE-parallax-images { height: 170vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 50vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { right: -10vh; }
+  #BE-dboom { top: 100vh; right: -10vh; }
   #BE-books { top: -10vh; height: 120%; width: 120%; }
-
 }
 @media (min-width: 550px) and (max-width: 639px) {
   #BE-parallax-images { height: 118vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 35vh; height: 120vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 10vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #BE-ruby { top: 50vh; right: -12vh; }
   #BE-dboom { top: 35vh; right: -12vh; }
   #BE-books { top: -5vh; height: 110%; width: 110%; }
@@ -183,20 +276,30 @@
   #BE-books { top: -5vh; height: 110%; width: 110%; }
 }
 @media (min-width: 400px) and (max-width: 499px) {
-  #BE-parallax-images { height: 90vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 35vh; }
-  #BE-parallax-images .parallax__layer--back { margin-top: 60vh; height: 120vh;}
+  #BE-parallax-images { height: 110vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 85vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 70vh; height: 120vh;}
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #BE-ruby { top: 43vh; right: -9vh; }
-  #BE-dboom { top: 28vh; right: -5vh; }
+  #BE-ruby { top: 65vh; right: -9vh; }
+  #BE-dboom { top: 50vh; right: -5vh; }
   #BE-books { top: -10vh; height: 115%; width: 115%; }
 }
-@media (min-width: 200px) and (max-width: 399px) {
-  #BE-parallax-images { height: 80vh; }
+@media (min-width: 320px) and (max-width: 399px) {
+  #BE-parallax-images { height: 100vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 80vh; height: 120vh;}
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; background-size: 180%; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #BE-ruby { top: 63vh; right: -9vh; }
+  #BE-dboom { top: 52vh; right: -5vh; }
+  #BE-books { top: 0vh; height: 115%; width: 115%; }
+}
+@media (min-width: 200px) and (max-width: 319px) {
+  #BE-parallax-images { height: 70vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #BE-parallax-images .parallax__layer--back { margin-top: 90vh; height: 120vh;}
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; background-size: 180%; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 43vh; right: -9vh; }
   #BE-dboom { top: 28vh; right: -5vh; }
@@ -206,36 +309,65 @@
 /**********/
 /* LOVING */
 /**********/
-#loving-parallax-section { z-index: 2; }
+#loving-parallax-section { z-index: 4; }
+
+/******************************/
+/* FRONT END ANIMATED SECTION */
+/******************************/
+#FE-parallax-section { z-index: 3; }
+#FE-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/FE-diagram-space.svg); }
+#FE-parallax-section .parallax__layer--base { }
 
 /****************************/
 /* FRONT END IMAGES SECTION */
 /****************************/
-#FE-parallax-images { z-index: 1; }
+#FE-parallax-images { z-index: 2; }
 #FE-parallax-images .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/FE-space.svg); }
 #FE-parallax-images .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-earth.svg); }
-#FE-parallax-images .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
-#FE-parallax-images .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
+#FE-parallax-images .parallax__layer--base { }
+#FE-parallax-images .parallax__layer--fore { }
 #FE-mobile-tablet { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-mobile-tablet.svg); height: 95%; width: 95%; position:absolute; }
 #FE-books { background-size: 100%; background-repeat:no-repeat;  background-image: url(/images/FE-books.svg); height: 100%; width: 100%; position:absolute; }
 #FE-gaming { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-gaming.svg); height: 40%; width: 50%; position:absolute; }
+
+/* ipad & ipad mini */
+
+@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
+  #FE-parallax-images { height: 175vh !important; }
+  #FE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
+  #FE-mobile-tablet { top: 100vh !important; left: -20vh !important; }
+  #FE-gaming { top: 85vh !important; left: 0vh !important; }
+  #FE-books { top:10vh !important; right: -0vh !important; }
+}
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
+  #FE-parallax-images { height: 110vh !important; }
+  #FE-parallax-images .parallax__layer--base { margin-top: 20vh !important; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 50vh !important; height: 120vh !important; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 10vh !important; }
+  #FE-mobile-tablet { top: 60vh !important; left: -20vh !important; }
+  #FE-gaming { top: 40vh !important; left: 0vh !important; }
+  #FE-books { top:0vh !important; right: -0vh !important; }
+}
+/************/
+
 @media all { 
   #FE-parallax-images { height: 260vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 80vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 40vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #FE-mobile-tablet { top: 180vh; left: -25vh;}
   #FE-books { top: 10vh; right: -20vh;}
   #FE-gaming { top: 130vh; left: 0vh; }
 }
 @media (min-width: 1024px) and (max-width: 1279px) { 
-  #FE-parallax-images { height: 230vh;  }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
+  #FE-parallax-images { height: 240vh;  }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 40vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-mobile-tablet { top: 160vh; left: -20vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 25vh; }
+  #FE-mobile-tablet { top: 120vh; left: -20vh; }
   #FE-gaming { top: 120vh; left: 0vh; }
   #FE-books { top:0; right: -15vh; }
 }
@@ -247,104 +379,111 @@
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #FE-mobile-tablet { top: 170vh; left: -15vh; }
   #FE-gaming { top: 120vh; left: 5vh; }
-  #FE-books { top:0; right: -15vh; }
+  #FE-books { top:30vh; right: -15vh; }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #FE-parallax-images { height: 205vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 60vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 60vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #FE-mobile-tablet { top: 150vh; left: -20vh; }
   #FE-gaming { top: 115vh; left: 0vh; }
-  #FE-books { top:0; right: -10vh; }
+  #FE-books { top:30vh; right: -10vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #FE-parallax-images { height: 180vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 60vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 70vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #FE-mobile-tablet { top: 120vh; left: -15vh; }
   #FE-gaming { top: 100vh; left: 0vh; }
-  #FE-books { top:0; left:0vh; }
+  #FE-books { top:40vh; left:0vh; }
 }
-
 @media (min-width: 550px) and (max-width: 639px) {
   #FE-parallax-images { height: 130vh; }
   #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 40vh; height: 120vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 85vh; height: 200vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #FE-mobile-tablet { top: 93vh; left: -8vh; }
   #FE-gaming { top: 73vh; left: 0vh; }
-  #FE-books { top:0vh; right:-2vh; height: 120%; width: 120%; }
+  #FE-books { top:20vh; right:-2vh; height: 120%; width: 120%; }
 }
-
 @media (min-width: 500px) and (max-width: 549px) {
-  #FE-parallax-images { height: 130vh; }
+  #FE-parallax-images { height: 135vh; }
   #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 65vh; height: 120vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 70vh; height: 120vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #FE-mobile-tablet { top: 97vh; left: -8vh; }
   #FE-gaming { top: 77vh; left: 0vh; }
-  #FE-books { top:0vh; right:-2vh; height: 120%; width: 120%; }
+  #FE-books { top:20vh; right:-2vh; height: 120%; width: 120%; }
 }
-
-@media (min-width: 200px) and (max-width: 499px) {
-  #FE-parallax-images { height: 80vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 10vh; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 60vh; height: 100vh; }
+@media (min-width: 400px) and (max-width: 499px) {
+  #FE-parallax-images { height: 113vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--back { margin-top: 87vh; height: 120vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #FE-mobile-tablet { top: 47vh; left: -10vh; }
-  #FE-gaming { top: 47vh; left: -2vh; }
-  #FE-books { top:-5vh; right:-5vh; height: 120%; width: 120%; }
+  #FE-mobile-tablet { top: 87vh; left: -10vw; }
+  #FE-gaming { top: 70vh; left: 0vw; }
+  #FE-books { top: 20vh; right: -5vh; height: 120%; width: 120%; }
+}
+@media (min-width: 320px) and (max-width: 399px) {
+  #FE-parallax-images { height: 112vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #FE-parallax-images .parallax__layer--back { background-size: 120%; margin-top: 83vh; height: 120vh;}
+  #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #FE-mobile-tablet { top: 75vh; left: -10vw; }
+  #FE-gaming { top: 67vh; left: 0vw; }
+  #FE-books { top: 15vh; right: -5vh; height: 120%; width: 120%; }
+}
+@media (min-width: 200px) and (max-width: 319px) {
+  #FE-parallax-images { height: 85vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #FE-parallax-images .parallax__layer--back { background-size: 120%; margin-top: 95vh; height: 120vh;}
+  #FE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
+  #FE-mobile-tablet { top: 55vh; left: -10vw; }
+  #FE-gaming { top: 52vh; left: 0vw; }
+  #FE-books { top: 15vh; right: -5vh; height: 120%; width: 120%; }
 }
 
 /********/
 /* WORK */
 /********/
-#work-parallax-section {  z-index: 2; }
+#work-parallax-section {  z-index: 3; }
 
 /***********/
 /* CONTACT */
 /***********/
-#contact-parallax-section { z-index: 3; color: white; height: 100vh; }
+#contact-parallax-section { z-index: 2; color: white; height: 100vh; }
 #contact-parallax-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
 
 /************************************************/
-/* PARALLAX TEXTS, ANIMATION CLASSES AND COMETS */
+/* ANIMATION CLASSES AND COMETS */
 /************************************************/
-.parallax-text { position: absolute; top: 50%; color: white;  width: 50%; text-align: center; }
-.px-text-center { left: 50%;  -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
-.px-text-right { right: 0; }
-.px-text-left { left: 0; }
-
-@media all and (orientation: portrait){ 
-  #px-text-moon { margin-top: 20%; }
-  #px-text-books { margin-top: -5%; }
-}
-@media all and (orientation: landscape){ 
-  #px-text-moon { margin-top: 20vh; }
-  #px-text-books { margin-top: -5%; }
-}
 
 @media all { 
-  #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  -webkit-animation: move-from-right 8s normal infinite; -moz-animation: move-from-right 8s normal infinite; -o-animation: move-from-right 8s normal infinite;}
-  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; -webkit-animation: move-from-left 9s normal infinite; -moz-animation: move-from-left 9s normal infinite; -o-animation: move-from-left 9s normal infinite;}
-  #comet-white { background-image: url(/images/comet-white.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; -webkit-animation: move-from-left 12s normal infinite; -moz-animation: move-from-left 12s normal infinite; -o-animation: move-from-left 12s normal infinite;}
-  .comet { bottom: 0; position: fixed; }
+  .orbit-comet {  height: 4%; width: 100%; }
+  #comet-red { background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  -webkit-animation: move-from-right 15s normal infinite; -moz-animation: move-from-right 15s normal infinite; -o-animation: move-from-right 15s normal infinite;}
+  #comet-blue { background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; -webkit-animation: move-from-left 19s normal infinite; -moz-animation: move-from-left 19s normal infinite; -o-animation: move-from-left 19s normal infinite;}
+  #comet-white { background-image: url(/images/comet-white.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; -webkit-animation: move-from-left 15s normal infinite; -moz-animation: move-from-left 15s normal infinite; -o-animation: move-from-left 15s normal infinite;}
+  .comet-from-left { bottom: 0; position: fixed; }
+  .comet-from-right { right: 0; }
   .spin-right-half { -webkit-animation-name: spin-right-half; -webkit-animation-duration: 40000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-half; -moz-animation-duration: 40000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-half; -ms-animation-duration: 40000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-half-faster { -webkit-animation-name: spin-right-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 60000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 60000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 60000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole-faster { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 20000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 20000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 20000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  .spin-right-whole-fastest { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 5000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 5000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 5000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-right-whole-slower { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 90000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 90000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 90000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 12000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 12000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 12000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-whole { -webkit-animation-name: spin-left-whole; -webkit-animation-duration: 10000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-whole; -moz-animation-duration: 10000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-whole; -ms-animation-duration: 10000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
   .spin-left-half-faster { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
-  .spin-boomerang { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 3000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 3000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 3000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
+  /*.spin-boomerang { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 1000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 1000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 1000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }*/
   .move-from-left { -webkit-animation: move-from-left 156s infinite; -moz-animation: move-from-left 156s infinite; -o-animation: move-from-left 156s infinite; }
 }
 
@@ -392,27 +531,27 @@
 }
 
 @-webkit-keyframes move-from-left {
-  0% {margin-left: -250vh;}
-  100% {margin-left: 250vh;}
+  0% {margin-left: -550vh;}
+  100% {margin-left: 550vh;}
 }
 @-moz-keyframes move-from-left {
-  0% {margin-left: -250vh;}
-  100% {margin-left: 250vh;}
+  0% {margin-left: -550vh;}
+  100% {margin-left: 550vh;}
 }
 @-o-keyframes move-from-left {
-  0% {margin-left: -250vh;}
-  100% {margin-left: 250vh;}
+  0% {margin-left: -550vh;}
+  100% {margin-left: 550vh;}
 }
 
 @-webkit-keyframes move-from-right {
-  0% {margin-right: 0vh;}
-  100% {margin-right: 250vh;}
+  0% {margin-left: 550vh;}
+  100% {margin-left: -550vh;}
 }
 @-moz-keyframes move-from-right {
-  0% {margin-right: 0vh;}
-  100% {margin-right: 250vh;}
+  0% {margin-left: 550vh;}
+  100% {margin-left: -550vh;}
 }
 @-o-keyframes move-from-right {
-  0% {margin-right: 0vh;}
-  100% {margin-right: 250vh;}
+  0% {margin-left: 550vh;}
+  100% {margin-left: -550vh;}
 }

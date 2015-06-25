@@ -10,56 +10,96 @@ daniboomerangDirectives.directive('parallax', function($interval) {
     restrict: 'A',
     scope: true,
     link: function(scope){ 
-      scope.textSectionsHeight = {} /* This is a global scope variable updated by the children directives 
-                                       parallax text sections, in order to dynamically determine their height in pixels */
+      scope.dynamicSectionsHeight = {} /* This is a global scope variable updated by the children directives 
+                                       parallax dynamic sections, in order to dynamically determine their height in pixels */
     }
   }
 });
 
-daniboomerangDirectives.directive('textSection', function($window) {
+daniboomerangDirectives.directive('parallaxSubsection', function($window) {
   return {
-    restrict: 'E',
-    scope: false,
+    restrict: 'EA',
     templateUrl: function (elem, attrs) {
-      return 'views/sections/' + attrs.name + '.html';
+      var hyphenName =  attrs.name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+      return 'views/sections/' + hyphenName + '.html';
     },
     link: function (scope, element, attrs){
-      function defineCurrentHeight (name) {
-        var sectionId = element.find('#' + name);
-        scope.textSectionsHeight[name] = sectionId.prop('offsetHeight') + 'px';
+      function isImageLoaded(img) {
+        if (!img.complete) {return false;}
+        if (typeof img.naturalWidth !== "undefined" && img.naturalWidth === 0) { return false; }
+        return true;
+      }
+      function setCurrentHeight (section) {
+          if ((typeof scope.dynamicSectionsHeight[section] == 0)) { scope.dynamicSectionsHeight[section] = element.prop('offsetHeight'); } 
+          else { scope.dynamicSectionsHeight[section] += element.prop('offsetHeight'); }
+        }
+      function calculateHeight (section, type) {  
+        /* For those sections that contain images, we wait the image to be loaded before calculate the height */
+        if (type == 'text-image') {
+          var img = new Image();
+          if (!isImageLoaded(img)) {
+            img.onload = function () { 
+              setCurrentHeight(section);
+            }
+          }
+          img.src = element.find('img').attr('src');
+        }
+        else if ( type == 'text-only') { setCurrentHeight(section); }   
       }
       var window = angular.element($window);
-      window.bind('resize', function () { defineCurrentHeight(attrs.name); });
-      defineCurrentHeight(attrs.name);
+      window.bind('resize', function () {
+        scope.dynamicSectionsHeight[attrs.name] = 0;
+        setCurrentHeight(attrs.name);
+      });
+      scope.dynamicSectionsHeight[attrs.name] = 0;
+      calculateHeight(attrs.name, attrs.type);
     }
   }
 })
 
-daniboomerangDirectives.directive('cover', function($timeout) {
+daniboomerangDirectives.directive('animatedSection', function() {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs){
+
+      function animateSectionIn() {
+        if (attrs.animatedin != ""){
+          animatedSection.removeClass(attrs.animatedout);
+          animatedSection.addClass(attrs.animatedin);
+          animatedSection.addClass('visibility-visible');
+        }
+      }
+
+      function animateSectionOut() {
+        if (attrs.animatedout != ""){
+          animatedSection.removeClass(attrs.animatedin);
+          animatedSection.addClass(attrs.animatedout);
+          animatedSection.removeClass('visibility-visible');
+        }
+      }
+      var animatedSection = element.find('.animated-section');
+      /*On active section*/
+      var activeSectionEvent = 'active-section:' + attrs.triggeredby;
+      scope.$on(activeSectionEvent, function($event){ if ('active' == attrs.triggeredon){ animateSectionIn(); } else { animateSectionOut(); } }); 
+      /*On inactive section*/
+      var inactiveSectionEvent = 'inactive-section:' + attrs.triggeredby;
+      scope.$on(inactiveSectionEvent, function($event){ if ('inactive' == attrs.triggeredon){ animateSectionIn(); } else { animateSectionOut(); } }); 
+      
+    }
+  }
+});
+
+daniboomerangDirectives.directive('cover', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/sections/cover.html',
-    scope: {},
-    link: function (scope, element) {
+    templateUrl: 'views/sections/cover.html'
+  }  
+});
 
-      init();
-
-      function init(){
-       
-        scope.position = {};
-        $timeout(function() { scope.showMoon = true; }, 500);
-        $timeout(function() { scope.showScrollRightArrow = true; }, 1000);
-        $timeout(function() {  scope.sections = [
-            {linkId: 'about', hash: '#about', text:'About', awesomeIcon: 'icon-dboom', animation:'fx-bounce-normal fx-speed-1000', duration: '1000'},
-            {linkId: 'loving', hash: '#loving', text:'Loving', awesomeIcon: 'fa-heart', animation:'fx-bounce-normal fx-speed-1000', duration: '1500'},
-            {linkId: 'work', hash: '#work', text:'Work', awesomeIcon: 'fa-github', animation:'fx-bounce-normal fx-speed-1000', duration: '2000'},
-            {linkId: 'contact', hash: '#contact', text:'Contact', awesomeIcon: 'fa-wechat', animation:'fx-bounce-normal fx-speed-1000', duration: '2500'}
-          ]; }, 1500); 
-        $timeout(function() { scope.showResponsiveNavbar = true; }, 1700);
-        $timeout(function() { scope.name = "Daniel Estévez"; scope.position.engineer = "Software Engineer"; scope.position.fullStack = "Full Stack Web Developer"; }, 1900);
-        $timeout(function() { scope.showScrollDownArrow = true; }, 2100);
-      }
-    }
+daniboomerangDirectives.directive('creativity', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/sections/creativity.html'
   }  
 });
 
@@ -71,15 +111,7 @@ daniboomerangDirectives.directive('contact', function($timeout, $document) {
     link: function (scope, element) {
       var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
       init();
-      function init(){ 
-        ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.showScrollUpArrow = false; scope.showContactInfo = false; scope.contactInfo = ET_SENTENCE; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0;
-        scope.$on('event:activeArea', function($event, area){ 
-          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = true; scope.showContactInfo = true; }, 500); }
-        });
-        scope.$on('event:inactiveArea', function($event, area){ 
-          if (area == 'Contact'){ $timeout(function() { scope.showScrollUpArrow = false; }, 500); }
-        });
-      }
+      function init(){ ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.contactInfo = ET_SENTENCE; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0; }
       scope.toggleSocialButton = function(button){
         if (button == MAIL_BUTTON) {
           if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; mailButtonId.addClass("social-active"); phoneButtonId.removeClass("social-active"); activeButton =  MAIL_BUTTON; }
@@ -131,19 +163,29 @@ daniboomerangDirectives.directive('foot', function($timeout) {
         /* INIT DOM ELEMENTS */
         footer = element.find('footer'); toTopButton = element.find('#to-top-button'); shareButton = element.find('#share-button');
 
-        scope.$on('event:activeArea', function($event, area){ 
-          if (area == 'Cover'){
+        function contractFooter(){
             footer.removeClass('expand-small'); footer.removeClass('expand-big');
             toTopButton.removeClass('reveal'); shareButton.removeClass('reveal');
-          }
-          else{
-            scope.currentSection = area;
+        }
+            
+        function expandFooter(){
             if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
             else { footer.addClass('expand-big'); }
             toTopButton.addClass('reveal'); shareButton.addClass('reveal');
-          }
-          scope.$apply();
-        })  
+        }
+
+        scope.$on('active-section:cover', function($event){ contractFooter(); });
+        scope.$on('active-section:connectivity', function($event){ scope.currentSection = 'connectivity'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:creativity', function($event){ scope.currentSection = 'creativity'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:remote-working', function($event){ scope.currentSection = 'remote-working'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:about', function($event){ scope.currentSection = 'about'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:back-end', function($event){ scope.currentSection = 'back-end'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:loving', function($event){ scope.currentSection = 'loving'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:front-end', function($event){ scope.currentSection = 'front-end'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:work', function($event){ scope.currentSection = 'work'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:contact', function($event){ scope.currentSection = 'contact'; expandFooter(); scope.$apply(); });
+
+      
       }
     }  
   };
@@ -174,24 +216,16 @@ daniboomerangDirectives.directive('topnavbar', function() {
         var contactLink = element.find('#contact-link');
         var contactIcon = element.find('#contact-icon');
 
-        scope.$on('event:activeArea', function($event, area){ 
-          // Dealing with Navbar
-          if (area == 'Cover'){ header.removeClass('expand'); }
-          else{ header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); }
-          // Dealing with sections
-          if (area == 'About'){ aboutLink.addClass('active'); aboutIcon.addClass('faa-spin animated '); }
-          else if (area == 'Loving'){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); }
-          else if (area == 'Work'){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); }
-          else if (area == 'Contact'){ header.removeClass('expand'); }
-        });  
 
-        scope.$on('event:inactiveArea', function($event, area){
-          header.removeClass('expand'); 
-          // Dealing with sections
-          if (area == 'About'){ aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); } 
-          else if (area == 'Loving'){ lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); }
-          else if (area == 'Work'){ workLink.removeClass('active'); workIcon.removeClass('faa-pulse animated'); }
-        });
+        /*On active section*/
+        scope.$on('active-section:about', function($event){ aboutLink.addClass('active'); aboutIcon.addClass('faa-spin animated '); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:loving', function($event){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:work', function($event){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
+        
+        /*On inactive section*/
+        scope.$on('inactive-section:about', function($event){ header.removeClass('expand'); aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); });
+        scope.$on('inactive-section:loving', function($event){ header.removeClass('expand'); lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); });
+        scope.$on('inactive-section:work', function($event){ header.removeClass('expand'); workLink.removeClass('active'); workIcon.removeClass('faa-pulse animated'); });
       }
     }
   };
@@ -209,7 +243,7 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
         // ISS LIGHTS 
         $interval(function() { scope.issLight = '#' + Math.floor(Math.random()*16777215).toString(16); }, 1000);
         // NODES ON/OFF
-        function processChanges(){
+        /*function processChanges(){
           timeToPorcess  = Math.floor((Math.random() * 2) + 1);
           nodeToProcess = Math.floor((Math.random() * 6));
           scope.aliveNodes[nodeToProcess] = !scope.aliveNodes[nodeToProcess];
@@ -217,8 +251,10 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
         }
         scope.aliveNodes = [true, true, true, true, true, true, true, true];
         var timeToPorcess; var nodeToProcess;
-        processChanges();
-        
+        processChanges();*/
+        // ET SCENE
+        scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showEtFingerLight = true; }, 2500); })
+        scope.$on('inactive-section:contact', function($event) { $timeout(function() { scope.showEtFingerLight = false; }, 2000); })
     }
   };
 });  
