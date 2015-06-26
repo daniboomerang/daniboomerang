@@ -4,6 +4,7 @@ angular.module('daniboomerangApp', [
 	'ngRoute',
 	// VENDOR
 	'duScroll',
+	'socialLinks',
 	// DANIBOOMERANG
 	'daniboomerangDirectives',
 	'daniboomerangServices'
