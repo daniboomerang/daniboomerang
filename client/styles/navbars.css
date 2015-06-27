@@ -2,12 +2,12 @@
 /* NAVBARS */
 /***********/
 
-	.navbar{ margin-bottom: 0 !important; }
+	.navbar { margin-bottom: 0 !important; }
 
 	/****************************************/
 	/**************  TOP NAVBAR *************/
 	/****************************************/
-	.navbar-custom { font-size: 0.9em; /*background: rgba(0, 0, 0, 0.1);*/ border: none !important;} /*rgba(13, 27, 51, 0.8)*/
+	.navbar-custom { font-size: 1em; /*background: rgba(0, 0, 0, 0.1);*/ border: none !important;} /*rgba(13, 27, 51, 0.8)*/
 	.navbar-width { width: 100% !important; }
 	.navbar-custom .navbar-nav>li>a:hover { color: white !important; background-color: rgba(118, 129, 149, 0.1); transition: all .7s ease-in-out; }
 	.navbar-custom .navbar-nav>li>a:focus { background-color: transparent !important; transition: all .7s ease-in-out; color: #FF9933 !important;}
@@ -65,7 +65,7 @@
 	@media (min-width: 320px) {
 		/*ul.nav li a { font-size: 2.5em; }*/
 		/* TOP NAVBAR */
-		.navbar-custom .navbar-nav>li>a { line-height: 80px; height: 80px !important;}
+		.navbar-custom .navbar-nav>li>a { line-height: 70px; height: 60px !important;}
 		.navbar-custom .navbar-nav>li>a.active { box-shadow:inset 0px 2px 0px 0px #FF9933;}
 		.navbar-custom .navbar-nav>li>a:hover { box-shadow: inset 0 -0.2em 0 0 #FFFFFF;}	
 		/* COVER NAVBAR */
@@ -80,7 +80,7 @@
 	@media (min-width: 500px) {
 		/*ul.nav li a { font-size: 3em; }*/
 		/* TOP NAVBAR */
-		.navbar-custom .navbar-nav>li>a { line-height: 100px; height: 100px !important;}
+		.navbar-custom .navbar-nav>li>a { line-height: 80px; height: 70px !important;}
 		.navbar-custom .navbar-nav>li>a.active { box-shadow:inset 0px 3px 0px 0px #FF9933;}
 		.navbar-custom .navbar-nav>li>a:hover { box-shadow: inset 0 -0.2em 0 0 #FFFFFF;}
 		/* COVER NAVBAR */
@@ -96,7 +96,7 @@
 	@media (min-width: 768px) {
 		/*ul.nav li a { font-size: 3.5em; }*/
 		/* TOP NAVABAR */
-		.navbar-custom .navbar-nav>li>a { line-height: 120px; height: 120px !important;}
+		.navbar-custom .navbar-nav>li>a { line-height: 90px; height: 80px !important;}
 		.navbar-custom .navbar-nav>li>a.active { box-shadow:inset 0px 3px 0px 0px #FF9933;}
 		/* COVER NAVBAR */
 		.navbar-custom-cover .navbar-nav>li>a { line-height: 75px; height: 75px !important;}
@@ -107,7 +107,7 @@
 	@media (min-width: 992px) {
 		/*ul.nav li a { font-size: 3.5em;}*/
 		/* TOP NAVABAR */
-		.navbar-custom .navbar-nav>li>a { line-height: 120px; height: 120px !important;}
+		.navbar-custom .navbar-nav>li>a { line-height: 80px; height: 80px !important;}
 		/* COVER NAVBAR */
 		.navbar-custom-cover .navbar-nav>li>a { line-height: 95px; height: 95px !important;}
 	}
@@ -117,7 +117,7 @@
 		/*ul.nav li a { font-size: 4em;}*/
 		/* TOP NAVABAR */
 		.navbar-custom .navbar-nav>li>a.active { box-shadow:inset 0px 3px 0px 0px #FF9933;}
-		.navbar-custom .navbar-nav>li>a { line-height: 120px; height: 120px !important;}
+		.navbar-custom .navbar-nav>li>a { line-height: 90px; height: 90px !important;}
 		/* COVER NAVBAR */
 		.navbar-custom-cover .navbar-nav>li>a { line-height: 105px; height: 105px !important;}	
 	}
@@ -182,7 +182,7 @@
 /* HEADER */
 /**********/
 
-	header { height: 0px; width: 100%; overflow: hidden; z-index: 1; background: rgba(19, 65, 99, 0.7); -webkit-transition: height 0.7s; -moz-transition: height 0.7s; -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s;}
+	header { border-bottom: solid black 2px; height: 0px; width: 100%; overflow: hidden; z-index: 1; background: rgba(19, 65, 99, 0.7); -webkit-transition: height 0.7s; -moz-transition: height 0.7s; -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s;}
 	.box-shadow-down{ -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); }
 	
 	/*==========  RESPONSIVENESS FOR HEADER  ==========*/
@@ -191,21 +191,21 @@
 	@media (min-width: 200px) {header.expand {height: 50px;}}
 
 	/* Extra small Devices, (phones, 320px and up) */
-	@media (min-width: 320px) {header.expand {height: 80px;}}
+	@media (min-width: 320px) {header.expand {height: 60px;}}
 
 	/* Extra small Devices, (phones, 500px and up) */
-	@media (min-width: 500px) {header.expand {height: 100px;}}
+	@media (min-width: 500px) {header.expand {height: 70px;}}
 
 	/*////////////////////////////////////*/
 
 	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) {header.expand {height: 120px;}}
+	@media (min-width: 768px) {header.expand {height: 80px;}}
 
 	/* Medium devices (desktops, 992px and up) */
-	@media (min-width: 992px) {header.expand {height: 120px;}}
+	@media (min-width: 992px) {header.expand {height: 80px;}}
 
 	/* Large devices (large desktops, 1280px and up) */
-	@media (min-width: 1280px) {header.expand {height: 120px;}}
+	@media (min-width: 1280px) {header.expand {height: 90px;}}
 
 	/* Large devices (large desktops, 1400px and up) */
 	@media (min-width: 1400px) {header.expand {height: 120px;}}

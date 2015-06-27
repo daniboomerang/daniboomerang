@@ -208,13 +208,13 @@ daniboomerangDirectives.directive('topnavbar', function() {
 
         var header = element.find('header');
         var aboutLink = element.find('#about-link');
-        var aboutIcon = element.find('#about-icon');
+        var aboutIcon = element.find('.about-icon');
         var lovingLink = element.find('#loving-link');
-        var lovingIcon = element.find('#loving-icon');
+        var lovingIcon = element.find('.loving-icon');
         var workLink = element.find('#work-link');
-        var workIcon = element.find('#work-icon');
+        var workIcon = element.find('.work-icon');
         var contactLink = element.find('#contact-link');
-        var contactIcon = element.find('#contact-icon');
+        var contactIcon = element.find('.contact-icon');
 
 
         /*On active section*/
