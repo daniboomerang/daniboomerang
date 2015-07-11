@@ -218,14 +218,14 @@ daniboomerangDirectives.directive('topnavbar', function() {
 
 
         /*On active section*/
-        scope.$on('active-section:about', function($event){ aboutLink.addClass('active'); aboutIcon.addClass('faa-spin animated '); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:loving', function($event){ lovingLink.addClass('active'); lovingIcon.addClass('faa-pulse animated'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:work', function($event){ workLink.addClass('active'); workIcon.addClass('faa-pulse animated'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:about', function($event){ aboutLink.addClass('active'); aboutIcon.addClass('spin-right-whole-fastest'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:loving', function($event){ lovingLink.addClass('active'); lovingIcon.addClass('pulsing'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:work', function($event){ workLink.addClass('active'); workIcon.addClass('pulsing'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
         
         /*On inactive section*/
-        scope.$on('inactive-section:about', function($event){ header.removeClass('expand'); aboutLink.removeClass('active'); aboutIcon.removeClass('faa-spin animated '); });
-        scope.$on('inactive-section:loving', function($event){ header.removeClass('expand'); lovingLink.removeClass('active'); lovingIcon.removeClass('faa-pulse animated'); });
-        scope.$on('inactive-section:work', function($event){ header.removeClass('expand'); workLink.removeClass('active'); workIcon.removeClass('faa-pulse animated'); });
+        scope.$on('inactive-section:about', function($event){ header.removeClass('expand'); aboutLink.removeClass('active'); aboutIcon.removeClass('spin-right-whole-fastest'); });
+        scope.$on('inactive-section:loving', function($event){ header.removeClass('expand'); lovingLink.removeClass('active'); lovingIcon.removeClass('pulsing'); });
+        scope.$on('inactive-section:work', function($event){ header.removeClass('expand'); workLink.removeClass('active'); workIcon.removeClass('pulsing'); });
       }
     }
   };

@@ -140,7 +140,7 @@
 }  
 @media (min-width: 400px) and (max-width: 499px) {
   #remote-working-parallax-images { height: 75vh; }
-  #remote-working-parallax-images .parallax__layer--fore { margin-top: 20vh; background-size:contain; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 175vh; }
   #cliff { height: 140%; width: 140%; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
@@ -149,7 +149,7 @@
 }
 @media (min-width: 320px) and (max-width: 399px) {
   #remote-working-parallax-images { height: 60vh; }
-  #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; background-size:contain; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
   #orbit-stones-circle { height: 10vh; width: 10vh; }
@@ -157,7 +157,7 @@
 }   
 @media (min-width: 200px) and (max-width: 319px) {
   #remote-working-parallax-images { height: 45vh; }
-  #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; background-size:contain; }
+  #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
   #orbit-big-stone { height: 3vh; width: 3vh; }
   #orbit-stones-circle { height: 10vh; width: 10vh; }
