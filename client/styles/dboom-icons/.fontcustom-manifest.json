@@ -1,0 +1,54 @@
+{
+  "checksum": {
+    "previous": "fbace3e1d8e01021daf3d37f2ad21f33d74bf25d48a557ea9af0a9621d2dabdd",
+    "current": "fbace3e1d8e01021daf3d37f2ad21f33d74bf25d48a557ea9af0a9621d2dabdd"
+  },
+  "fonts": [
+    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.ttf",
+    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.svg",
+    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.woff",
+    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.eot"
+  ],
+  "glyphs": {
+    "boomerang-gap": {
+      "codepoint": 61700,
+      "source": "svgs/boomerang-gap.svg"
+    },
+    "boomerang-solid": {
+      "codepoint": 61699,
+      "source": "svgs/boomerang-solid.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "svgs",
+      "vectors": "svgs"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "./",
+      "fonts": "./",
+      "preview": "./"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "./fontcustom.css",
+    "./fontcustom-preview.html"
+  ]
+}

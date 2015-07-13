@@ -1,0 +1,43 @@
+/*
+  Icon Font: fontcustom
+*/
+
+@font-face {
+  font-family: "fontcustom";
+  src: url("./fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.eot");
+  src: url("./fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.eot?#iefix") format("embedded-opentype"),
+       url("./fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.woff") format("woff"),
+       url("./fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.ttf") format("truetype"),
+       url("./fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "fontcustom";
+    src: url("./fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.svg#fontcustom") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-boomerang-gap:before,
+.icon-boomerang-solid:before {
+  display: inline-block;
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-boomerang-gap:before { content: "\f104"; }
+.icon-boomerang-solid:before { content: "\f103"; }
