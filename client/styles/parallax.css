@@ -14,8 +14,9 @@
 /* COVER SECTION */
 /*****************/
 #cover-parallax-section { z-index: 3; }
-#cover-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat: no-repeat; background-image: url(/images/cover-space.svg); }
+#cover-parallax-section .parallax__layer--deep { }
 #cover-parallax-section .parallax__layer--back { }
+#cover-deep-space { height: 100%; width: 100%; background-size: 100%; background-repeat: no-repeat; background-image: url(/images/cover-space.svg); }
 
 @media all { 
   #cover-parallax-section { height: 125vh; }
@@ -59,8 +60,9 @@
 /* CREATIVITY ANIMATED SECTION */
 /*******************************/
 #creativity-parallax-section { z-index: 3; }
-#creativity-parallax-section .parallax__layer--deep { height: 50%; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/creativity-space.svg); }
+#creativity-parallax-section .parallax__layer--deep { }
 #creativity-parallax-section .parallax__layer--base { }
+#creativity-deep-space { height: 50%; width: 50%; background-size: 100%; background-repeat: no-repeat; background-image: url(/images/creativity-space.svg); }
 
 /***********************************/
 /* REMOTE WORKING ANIMATED SECTION */
