@@ -16,4 +16,16 @@ angular.module('daniboomerangApp', [
 	urlObserverService.init();
 	scrollObserverService.init();
 })
-.value('duScrollEasing', function easingFunction(t) { return t*(2-t) });
+.value('duScrollEasing', function easingFunction(t) { return t*(2-t) })
+.directive('daniboomerangContent', function($timeout) {
+	return {
+	    restrict: 'E',
+	    template: '<ng-include src="currentTemplate"></ng-include>',
+	    link: function (scope, element, attrs) {
+	    	scope.currentTemplate = 'views/intro.html';
+            $timeout(function() { 
+	    		scope.currentTemplate = 'views/daniboomerang.html'; scope.$apply();
+	    	}, 2500);
+	    } 
+  	}  
+})
