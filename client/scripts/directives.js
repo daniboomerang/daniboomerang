@@ -100,7 +100,6 @@ daniboomerangDirectives.directive('revealBackground', function() {
     link: function (scope, element, attrs){
       function revealBackground(img, delay, height, el) {
         scope.imgUrl = '/images/'+ img +'.svg';
-        scope.img = img;
         scope.delay = delay;
         scope.height = height;
         el.addClass(attrs.animatedin);

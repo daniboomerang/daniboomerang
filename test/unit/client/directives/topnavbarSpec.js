@@ -1,4 +1,4 @@
-describe('navbar', function() {
+describe('Top navbar', function() {
   
 	var elm, scope;
 
