@@ -1,18 +1,12 @@
-<!-- DANIBOOMERANG APP --> 
+<!-- DANIBOOMERANG APP -->
 <topnavbar></topnavbar>
 <div id="parallax-wrapper" class="parallax" du-scroll-container parallax>
   <div id="cover-parallax-section" class="parallax__section">
     <div class="parallax__layer parallax__layer--deep">
-      <div class="animated-stars" animated-section triggeredby="cover" triggeredon="active" animatedin="fadeIn" animatedout="">
-        <div class="animated-section animated visibility-hidden"
-          style="-moz-animation-delay: 0.6s; -webkit-animation-delay: 0.6s; -ms-animation-delay: 0.6s;">
-          <div id="cover-deep-space"></div>
-        </div>
-      </div>
+      <reveal-background triggeredby="app-starts" delay="1" height="150%" img="cover-space"></reveal-background>
     </div>
     <div class="parallax__layer parallax__layer--back">
       <div class="spin-right-half orbit-comet" style=""><div id="comet-blue" style="height: 15%; width: 3%; " class="comet-from-left"></div></div>
-      <div class="px-text-right parallax-text"></div>
     </div>
     <div class="parallax__layer parallax__layer--base">
       <cover></cover>
@@ -24,20 +18,14 @@
     </div>
   </div>
   <div id="creativity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.creativity}">
-    <div class="parallax__layer parallax__layer--deep">
-      <div class="animated-stars" animated-section triggeredby="creativity" triggeredon="active" animatedin="fadeIn" animatedout="">
-        <div class="animated-section animated visibility-hidden"
-          style="-moz-animation-delay: 0.6s; -webkit-animation-delay: 0.6s; -ms-animation-delay: 0.6s;">
-          <div id="creativity-deep-space"></div>
-        </div>
-      </div>
-    </div>
     <div class="parallax__layer parallax__layer--base">
       <div parallax-subsection name="creativity" type="text-only"></div>
     </div>
   </div>   
   <div id="remote-working-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.remoteWorking}">
-    <div class="parallax__layer parallax__layer--deep"></div>
+    <div class="parallax__layer parallax__layer--deep">
+      <reveal-background triggeredby="app-starts" delay="1" height="100%" img="moon-&-sun"></reveal-background>
+    </div>
     <div class="parallax__layer parallax__layer--base">
       <div parallax-subsection name="remoteWorking" type="text-image"></div>
     </div>
@@ -46,7 +34,6 @@
     </div>
   </div>   
   <div id="remote-working-parallax-images" class="parallax__section">
-    <div class="parallax__layer parallax__layer--deep"></div>
     <div class="parallax__layer parallax__layer--base">
       <div id="cliff"></div>
       <!--<div id="orbit-stones-circle" class="spin-right-whole-faster">

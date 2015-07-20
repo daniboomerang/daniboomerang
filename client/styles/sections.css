@@ -42,16 +42,14 @@ blockquote p { display: inline; }
 /*********************/
 .visibility-hidden { opacity:0; }
 .visibility-visible { opacity:1; }
-
 .animated-section { color: white; width: 100%; height:100%; /* -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; */}
-.animated-stars { width: 100%; height:100%; }
 
 /* Extra small devices (tablets, 200px and up)*/
-@media (min-width: 200px) { .diagram {  width: 100vw; } #lightbulb-remote { margin-left: 36vw; width: 35vw; } div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
+@media (min-width: 200px) { .diagram {  width: 100vw; } #lightbulb { margin-left: 36vw; width: 35vw; } div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
 /* Extra small devices (tablets, 400px and up)*/
-@media (min-width: 400px) { #lightbulb-remote { margin-left: 50vw; width: 35vw; } }
+@media (min-width: 400px) { #lightbulb { margin-left: 50vw; width: 35vw; } }
 /* Extra small devices (tablets, 500px and up)*/
-@media (min-width: 500px) { .diagram {  margin-left: 10vw; width: 80vw; } #lightbulb-remote { margin-left: 33vw; width: 35vw; } }
+@media (min-width: 500px) { .diagram {  margin-left: 10vw; width: 80vw; } #lightbulb { margin-left: 33vw; width: 35vw; } }
 /* Small devices (tablets, 680px and up)*/
 @media (min-width: 680px) { .diagram {  margin-left: 15vw; width: 70vw; } div#multiColumn { -moz-column-count: 2; -moz-column-gap: normal; -webkit-column-count: 2; -webkit-column-gap: normal; column-count: 2; column-gap: normal; } }
 /* Medium small Devices, (phones, 1024px and up) */

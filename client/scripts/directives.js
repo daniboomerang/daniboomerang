@@ -1,6 +1,5 @@
 var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 
-
 /*******************************************************/
 /****************** PARALLAX SECTIONS ******************/
 /*******************************************************/
@@ -57,6 +56,10 @@ daniboomerangDirectives.directive('parallaxSubsection', function($window) {
   }
 })
 
+/*******************************************************/
+/****************** ANIMATED SECTIONS ******************/
+/*******************************************************/
+
 daniboomerangDirectives.directive('animatedSection', function() {
   return {
     restrict: 'A',
@@ -89,19 +92,56 @@ daniboomerangDirectives.directive('animatedSection', function() {
   }
 });
 
-daniboomerangDirectives.directive('cover', function() {
+daniboomerangDirectives.directive('revealBackground', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/sections/cover.html'
+    scope: {},
+    template: ' <div class="animated visibility-hidden" style="height:{{height}}; width: 100%; background-size: 100%; background-repeat: no-repeat; background-image: url({{imgUrl}}); -moz-animation-delay: {{delay}}s; -webkit-animation-delay: {{delay}}s; -ms-animation-delay: {{delay}}s;"></div>',
+    link: function (scope, element, attrs){
+      function revealBackground(img, delay, height, el) {
+        scope.imgUrl = '/images/'+ img +'.svg';
+        scope.img = img;
+        scope.delay = delay;
+        scope.height = height;
+        el.addClass(attrs.animatedin);
+        el.addClass('visibility-visible');
+        el.addClass('fadeIn');
+      }
+      scope.$on(attrs.triggeredby, function($event){
+        revealBackground(attrs.img, attrs.delay, attrs.height, element.find('.animated'));
+      })
+    }
+  }
+});
+
+/****************************************/
+/***************** COVER ****************/
+/****************************************/
+
+daniboomerangDirectives.directive('cover', function($timeout) {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/sections/cover.html',
+    link: function (scope, element, attrs) {
+      var liElements = element.find('li.animated');
+      var name = element.find('#name');
+      var skills1 = element.find('#skills-1');
+      var skills2 = element.find('#skills-2');
+      var scrolDownArrowId = element.find('#scroll-down');      
+      scope.$on('app-starts', function($event){
+        liElements.addClass("zoomIn visibility-visible");
+        name.addClass("fadeIn visibility-visible");
+        skills1.addClass("fadeIn visibility-visible");
+        skills2.addClass("bounceIn visibility-visible");
+        scrolDownArrowId.addClass("zoomInDown visibility-visible");
+      }); 
+    }
   }  
 });
 
-daniboomerangDirectives.directive('creativity', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/sections/creativity.html'
-  }  
-});
+/******************************************/
+/***************** CONTACT ****************/
+/******************************************/
 
 daniboomerangDirectives.directive('contact', function($timeout, $document) {
   return {
@@ -126,9 +166,9 @@ daniboomerangDirectives.directive('contact', function($timeout, $document) {
   }
 });
 
-/******************************************/
-/****************** FOOT ******************/
-/******************************************/
+/***************************************/
+/***************** FOOT ****************/
+/***************************************/
 
 daniboomerangDirectives.directive('foot', function($timeout) {
   return {
@@ -216,7 +256,6 @@ daniboomerangDirectives.directive('topnavbar', function() {
         var contactLink = element.find('#contact-link');
         var contactIcon = element.find('.contact-icon');
 
-
         /*On active section*/
         scope.$on('active-section:about', function($event){ aboutLink.addClass('active'); aboutIcon.addClass('spin-right-whole-fastest'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
         scope.$on('active-section:loving', function($event){ lovingLink.addClass('active'); lovingIcon.addClass('pulsing'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
@@ -231,9 +270,10 @@ daniboomerangDirectives.directive('topnavbar', function() {
   };
 });
 
-/**************************/
-/** SVG IMAGES DIRECTIVE **/
-/**************************/
+/********************************/
+/** SVG ALIVE IMAGES DIRECTIVE **/
+/********************************/
+
 daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
   return {
     restrict: 'EA',
@@ -242,16 +282,6 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
     link: function (scope, element, attrs) {
         // ISS LIGHTS 
         $interval(function() { scope.issLight = '#' + Math.floor(Math.random()*16777215).toString(16); }, 1000);
-        // NODES ON/OFF
-        /*function processChanges(){
-          timeToPorcess  = Math.floor((Math.random() * 2) + 1);
-          nodeToProcess = Math.floor((Math.random() * 6));
-          scope.aliveNodes[nodeToProcess] = !scope.aliveNodes[nodeToProcess];
-          $timeout(function() { processChanges() }, timeToPorcess * 1000);
-        }
-        scope.aliveNodes = [true, true, true, true, true, true, true, true];
-        var timeToPorcess; var nodeToProcess;
-        processChanges();*/
         // ET SCENE
         scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showEtFingerLight = true; }, 2500); })
         scope.$on('inactive-section:contact', function($event) { $timeout(function() { scope.showEtFingerLight = false; }, 2000); })
