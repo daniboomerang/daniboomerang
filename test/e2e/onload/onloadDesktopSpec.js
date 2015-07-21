@@ -36,7 +36,7 @@ describe('Daniboomerang - Scenario for desktop devices when on load', function()
         
         // About <li> contains boomerang icon
         var about = navbarList.get(0);
-        expect(about.element(by.css('.icon-dboom')).isPresent()).toBe(true);
+        expect(about.element(by.css('.icon-boomerang-solid')).isPresent()).toBe(true);
 
         // Loving to do <li> contains heart icon
         var loving = navbarList.get(1);
@@ -44,7 +44,7 @@ describe('Daniboomerang - Scenario for desktop devices when on load', function()
 
         // Work <li> contains github icon
         var work = navbarList.get(2);
-        expect(work.element(by.css('.fa-github')).isPresent()).toBe(true);
+        expect(work.element(by.css('.fa-suitcase')).isPresent()).toBe(true);
 
         // Contact <li> contains chat icon
         var contact = navbarList.get(3);

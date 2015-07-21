@@ -39,7 +39,7 @@ angular.module('daniboomerangApp', [
 			$timeout(function() {
 				element.remove();
 				$rootScope.$broadcast('app-starts');
-			}, 20000);
+			}, 1000);
 		}
   }  
 })

@@ -21,29 +21,24 @@
   #cover-parallax-section { height: 125vh; }
   #cover-parallax-section .parallax__layer--deep { height: 125vh; }
   #cover-parallax-section .parallax__layer--back { height: 100vh; margin-top: 140vh; }
-  #cover-parallax-section .parallax__layer--base { }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #cover-parallax-section { height: 120vh; }
   #cover-parallax-section .parallax__layer--deep { height: 120vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 140vh; }
-  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #cover-parallax-section { height: 100vh; }
   #cover-parallax-section .parallax__layer--deep { height: 100vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 140vh; }
-  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
 }
 @media (min-width: 500px) and (max-width: 639px) {
   #cover-parallax-section { height: 100vh; }
-  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
   #cover-parallax-section .parallax__layer--deep { height: 100vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 180vh; }
 }
 @media (min-width: 200px) and (max-width: 500px) {
   #cover-parallax-section { height: 100vh; }
-  #cover-parallax-section .parallax__layer--base { padding-top: 10vh; }
   #cover-parallax-section .parallax__layer--deep { height: 120vh; }
   #cover-parallax-section .parallax__layer--back { margin-top: 180vh; }
 }

@@ -27,20 +27,20 @@ describe('Daniboomerang - footer scenario for mobiles and tablets', function() {
       expect(footerWrapper.isPresent()).toBe(true);
 
       // It is not revealed (cover section)
-        expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(false);
+      expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(false);
         
       // It is revealed when whe scroll down to any section
-        // Go to the last section
-        var lastSection = element(by.id('contact'));
-        browser.driver.executeScript("arguments[0].scrollIntoView(true);", lastSection.getWebElement());
-        browser.sleep(1000);
-        expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(true);
+      // Go to the last section
+      var lastSection = element(by.id('contact'));
+      browser.driver.executeScript("arguments[0].scrollIntoView(true);", lastSection.getWebElement());
+      browser.sleep(1000);
+      expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(true);
 
-        // Footer Menus are correctly displayed
-        var footer = footerWrapper.element(by.tagName('footer'));
-        var currentSectionMenu = footer.element(by.id('current-section-menu'));
-        expect(currentSectionMenu.isDisplayed()).toBe(true);
-        expect(footer.element(by.id('share-menu')).isDisplayed()).toBe(false);
+      // Footer Menus are correctly displayed
+      var footer = footerWrapper.element(by.tagName('footer'));
+      var currentSectionMenu = footer.element(by.id('current-section-menu'));
+      expect(currentSectionMenu.isDisplayed()).toBe(true);
+      expect(footer.element(by.id('share-menu')).isDisplayed()).toBe(false);
 
   });
 

@@ -1,12 +1,6 @@
 exports.config = {
-  /*specs: ['e2e/footer/*.js'],
-  capabilities: {
-    browserName: 'chrome',
-    shardTestFiles: true,
-    maxInstances: 2
-  },*/
-  multiCapabilities: [
-    
+  /*specs: [], capabilities: { browserName: 'chrome', shardTestFiles: true, maxInstances: 2 },*/
+  multiCapabilities: [  
     { 
        'browserName': 'chrome',
        'chromeOptions' : {
@@ -27,10 +21,10 @@ exports.config = {
         args: ['--window-size=1280,800']
        },
        specs: ['e2e/onload/onloadCommonSpec.js', 'e2e/onload/onloadDesktopSpec.js', 'e2e/footer/footerDesktopSpec.js', 'e2e/scrolling/scrollingCommonSpec.js', 'e2e/scrolling/scrollingDesktopSpec.js']
-    }
+    }  
   ],
   chromeDriver: '../node_modules/protractor/selenium/chromedriver',
   baseUrl: 'http://localhost:8080/',
-  framework: 'jasmine2',
+  framework: 'jasmine2'
 
 };

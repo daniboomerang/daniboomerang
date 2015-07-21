@@ -21,9 +21,8 @@ describe('Daniboomerang - scrolling scenario', function() {
 
 			// header is not expanded 
 			var headerElement = element(by.tagName('header'));
-			expect(headerElement.isDisplayed()).toBe(false);
-			var nav = headerElement.element(by.id('navbar'));
-			expect(nav.isDisplayed()).toBe(false);
+    		expect(headerElement.isPresent()).toBe(true);
+    		expect(headerElement.element(by.css('.expand')).isPresent()).toBe(false);
 			
 			///////////// CLICK ARROW TO PREVIOUS SECTION (WORK) ///////////			   
 			var scrollUpButton = element(by.id('scroll-up'));
@@ -32,13 +31,11 @@ describe('Daniboomerang - scrolling scenario', function() {
       		expect(scrollUpButtonLink.isPresent()).toBe(true);
       		scrollUpButtonLink.click();
       		browser.sleep(4000);
-
-			// header expanded 
-			var headerElement = element(by.tagName('header'));
-			expect(headerElement.isDisplayed()).toBe(true);
-			var nav = headerElement.element(by.id('navbar'));
-			expect(nav.isDisplayed()).toBe(true);
-
+      		/* header expanded	
+    		var headerElement = element(by.tagName('header'));
+    		expect(headerElement.isPresent()).toBe(true);
+    		expect(headerElement.element(by.css('expand navbar-fixed-top box-shadow-down')).isPresent()).toBe(true);*/
+			
 			///////////// CLICK TO Loving ///////////
 			var lovingLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(1);
 			lovingLinkTopnavbar.click();
@@ -65,7 +62,7 @@ describe('Daniboomerang - scrolling scenario', function() {
 			expect(browser.getCurrentUrl()).toContain('/#/work');
 			// navbar section gets 'active'
 			expect(workLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
-
+			
 			///////////// CLICK TO Contact ///////////
 			var contactLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
 			contactLinkTopnavbar.click();

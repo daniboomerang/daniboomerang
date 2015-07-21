@@ -21,11 +21,10 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
   ////////////  
   
   // The heading must be hidden
-  it("should not show the header, nor the navbar", function() {
-      var headerElement = element(by.tagName('header'));
-      expect(headerElement.isDisplayed()).toBe(false);
-      var nav = headerElement.element(by.id('navbar'));
-      expect(nav.isDisplayed()).toBe(false);
+  it("should not expand the header", function() {
+    var headerElement = element(by.tagName('header'));
+    expect(headerElement.isPresent()).toBe(true);
+    expect(headerElement.element(by.css('.expand')).isPresent()).toBe(false);
   });
 
   ///////////////////////
