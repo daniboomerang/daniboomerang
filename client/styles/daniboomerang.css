@@ -2,41 +2,61 @@
 /* DANIBOOMERANG */
 /*****************/
 
-html,body{ height:100%; background-color: black; }
+html,body { height:100%; background-color: black; }
 body { margin:0; padding:0; font-size: 3px;  font-weight: 200;  -webkit-font-smoothing: antialiased; color: black; line-height: 2; /*background-image: url(/images/cover-space-bkack.svg); background-repeat: repeat;*/ }
 a { color: white; transition: all .5s ease-in-out; }
 a:hover { color: #FF9933; text-decoration:none; transition: all .5s ease-in-out; }
 .hidden { visibility: hidden; }
 
+/* TEXT */
+h1 { font-size: 2.5em; font-weight: 200; }
+h2 { font-size: 2em; font-weight: 200; color: #FF9933 }
+h3 { font-size: 1.7em; font-weight: normal; color: rgba(56, 116, 167, 0.9); }
+p { margin: 1.5em 0; } }
+ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
+.list-text li { position: relative; padding-left: 2em; }
+.list-text li:before { content: '\2022'; color: #FF9933; position: absolute; left: 0.5em; /* same as ul padding-left */ }
+.sublist-text ul:before { content: '\2022'; }
+.sublist-text li { position: relative; padding-left: 4em; }
+.sublist-text li:before { content: '\00B0'; color: #FF9933; position: absolute; left: 2em; /* same as ul padding-left */ }
+hr { border-color: rgba(255, 255, 255, 0.1) !important; margin-bottom: 1em; margin-top: 1em; }
+.section { padding-bottom:5%; background-color: #131212; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
+.section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
+.section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
+blockquote { color: white; background-color: rgba(19, 65, 99, 0.3); border-left: 10px solid rgba(19, 65, 99, 0.7); margin: 1.5em 10px; padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019"; font-size: 1em; }
+blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
+blockquote p { display: inline; }
+
+/* RESPONSIVENESS */
 /* Extra small devices (desktops, 200px and up) */
-@media (min-width: 200px) { body{ font-size: 1.4em; line-height: 2; } .custom-fluid-container { width: 95%; } }
+@media (min-width: 200px) { body { font-size: 1.4em; line-height: 2; } .custom-fluid-container { width: 95%; } div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
 
 /* Medium devices (desktops, 320px and up) */
-@media (min-width: 320px) { body{ font-size: 1.6em; } }
+@media (min-width: 320px) { body { font-size: 1.6em; } }
 
 /* Medium devices (desktops, 500px and up) */
-@media (min-width: 500px) { body{ font-size: 1.6em; } }
+@media (min-width: 500px) { body { font-size: 1.6em; } }
 
 /* Medium devices (desktops, 640px and up) */
-@media (min-width: 640px) { .custom-fluid-container { width: 90%;} }
+@media (min-width: 640px) { .custom-fluid-container { width: 90%;} div#multiColumn { -moz-column-count: 2; -moz-column-gap: normal; -webkit-column-count: 2; -webkit-column-gap: normal; column-count: 2; column-gap: normal; } }
 
 /* Medium devices (desktops, 768px and up) */
-@media (min-width: 768px) { body{ font-size: 1.8em; } }
+@media (min-width: 768px) { body { font-size: 1.8em; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { body{ font-size: 2em; } .custom-fluid-container { width: 80%; } }
+@media (min-width: 992px) { body { font-size: 2em; } .custom-fluid-container { width: 80%; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 1280px) { body{ font-size: 2em; } }
+@media (min-width: 1280px) { body { font-size: 2em; } }
 
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { body{ font-size: 2.4em; } }
+@media (min-width: 1600px) { body { font-size: 2.4em; } }
 
 /* Extra large devices (extra large desktops, 2000 and up) */
-@media (min-width: 2000px) { body{ font-size: 3.5em; } }
+@media (min-width: 2000px) { body { font-size: 3.5em; } }
 
 /* Extra large devices (extra large desktops, 3000 and up) */
-@media (min-width: 3000px) { body{ font-size: 4.5em; } }
+@media (min-width: 3000px) { body { font-size: 4.5em; } }
 
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) { body{ font-size: 5.5em; } }
+@media (min-width: 3500px) { body { font-size: 5.5em; } }

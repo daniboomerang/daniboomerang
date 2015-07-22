@@ -35,11 +35,28 @@ angular.module('daniboomerangApp', [
 		restrict: 'A',
 		templateUrl: 'views/intro.html',
 		link: function (scope, element, attrs) {
-			var spinningCircles = element.find('#spinning-circles');
+			var intro = element.find('#intro');
+			var introElements = element.find('.intro-element');
+			var introCircleWrapper = element.find('#intro-circles-wrapper');
+			var center = element.find('#center');
+			scope.$on('active-section:cover', function($event){ 
+				intro.addClass('visibility-visible');
+        		intro.addClass('fadeIn');
+        		introElements.addClass('visibility-visible');
+        		introElements.addClass('fadeIn');
+        		introCircleWrapper.addClass('visibility-visible');
+        		introCircleWrapper.addClass('rotateIn');
+
+			});
 			$timeout(function() {
+				introCircleWrapper.addClass('rotateOut');
+				$timeout(function() { introCircleWrapper.remove();}, 2000);
+			}, 10000);
+
+			scope.startApp = function(){
 				element.remove();
 				$rootScope.$broadcast('app-starts');
-			}, 1000);
+			}
 		}
   }  
 })
