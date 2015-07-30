@@ -30,33 +30,42 @@ angular.module('daniboomerangApp', [
 		link: function (scope, element, attrs) { scope.$on('app-starts', function($event){ element.removeClass('visibility-hidden'); }); }
 	}  
 })
-.directive('daniboomerangIntro', function($timeout, $rootScope) {
+.directive('daniboomerangIntro', function($timeout, $rootScope, $compile) {
 	return {
 		restrict: 'A',
 		templateUrl: 'views/intro.html',
 		link: function (scope, element, attrs) {
 			var intro = element.find('#intro');
 			var introElements = element.find('.intro-element');
-			var introCircleWrapper = element.find('#intro-circles-wrapper');
-			var center = element.find('#center');
+			var introCenter = element.find('#intro-center');
+			var introBoomerangWrapper = element.find('#intro-boomerang-wrapper');
+			var introBoomerang = element.find('#intro-boomerang');
 			scope.$on('active-section:cover', function($event){ 
 				intro.addClass('visibility-visible');
         		intro.addClass('fadeIn');
         		introElements.addClass('visibility-visible');
         		introElements.addClass('fadeIn');
-        		introCircleWrapper.addClass('visibility-visible');
-        		introCircleWrapper.addClass('rotateIn');
-
+        		introBoomerangWrapper.addClass('visibility-visible');
+        		introBoomerangWrapper.addClass('pulse');
 			});
 			$timeout(function() {
-				introCircleWrapper.addClass('rotateOut');
-				$timeout(function() { introCircleWrapper.remove();}, 2000);
+				introBoomerangWrapper.addClass('rotateOut');
+				$timeout(function() { 
+					introBoomerangWrapper.remove();
+					var introButtonStartAppHtml = '<div button id="start-button" size="md" content-type="text" text="START" ng-click-function="startApp()"></div>';
+					introCenter.append(introButtonStartAppHtml);
+					var introButtonStartApp = element.find('#start-button');
+					introButtonStartApp.addClass('animated pulse');
+					$compile(introCenter)(scope);
+				}, 500);
 			}, 10000);
-
 			scope.startApp = function(){
-				element.remove();
-				$rootScope.$broadcast('app-starts');
+				intro.addClass('fadeOut');
+				$timeout(function() { 
+					element.remove();
+					$rootScope.$broadcast('app-starts');
+				}, 1000);	
 			}
 		}
-  }  
+	}  
 })

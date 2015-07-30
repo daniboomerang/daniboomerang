@@ -150,15 +150,15 @@ daniboomerangDirectives.directive('contact', function($timeout, $document) {
     link: function (scope, element) {
       var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
       init();
-      function init(){ ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; mailButtonId = element.find('#mail-btn'); phoneButtonId = element.find('#phone-btn'); scope.contactInfo = ET_SENTENCE; scope.activePhone = false; scope.activeMail = false; scope.repeatCount = 0; }
+      function init(){ ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; scope.contactInfo = ET_SENTENCE; scope.isPhoneButtonActive = false; scope.isMailButtonActive = false; }
       scope.toggleSocialButton = function(button){
         if (button == MAIL_BUTTON) {
-          if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; mailButtonId.addClass("social-active"); phoneButtonId.removeClass("social-active"); activeButton =  MAIL_BUTTON; }
-          else { scope.contactInfo = ET_SENTENCE; mailButtonId.removeClass("social-active"); activeButton = undefined; }
+          if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; activeButton =  MAIL_BUTTON; scope.isPhoneButtonActive = false; scope.isMailButtonActive = true; }
+          else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.mailButtonIsToogled = false; }
         }
         else {
-          if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; phoneButtonId.addClass("social-active"); mailButtonId.removeClass("social-active"); activeButton =  PHONE_BUTTON;}
-          else { scope.contactInfo = ET_SENTENCE; phoneButtonId.removeClass("social-active"); activeButton = undefined; }
+          if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; activeButton =  PHONE_BUTTON; scope.isMailButtonActive = false; scope.isPhoneButtonActive = true; }
+          else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.phoneButtonIsToogled = true; }
         }
       }
     }
@@ -176,17 +176,15 @@ daniboomerangDirectives.directive('foot', function($timeout) {
     scope: {},
     link: function (scope, element) {
 
-      var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButton, shareButton, ICON_SHARE, ICON_PROCESSING_SHARE;
+      var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButtonWrapper, shareButtonWrapper;
 
       scope.toogleFooters = function (){
         if (scope.displayMenu == SECTION_FOOTER){
           footer.removeClass('expand-small');
-          scope.shareIconToDisplay = ICON_PROCESSING_SHARE;
           $timeout(function() { footer.addClass('expand-big'); scope.displayMenu = SHARING_FOOTER; }, 500);
         }
         else {
           footer.removeClass('expand-big');
-          scope.shareIconToDisplay = ICON_SHARE;
           $timeout(function() { footer.addClass('expand-small'); scope.displayMenu = SECTION_FOOTER; }, 500);
         }      
       }
@@ -196,21 +194,25 @@ daniboomerangDirectives.directive('foot', function($timeout) {
       function init(){
         
         /* INIT CONSTANTS */
-        SECTION_FOOTER = 'sectionFooter'; SHARING_FOOTER = 'sharingFooter'; ICON_SHARE = 'fa-share-alt'; ICON_PROCESSING_SHARE = 'fa-close faa faa-shake animated';
+        SECTION_FOOTER = 'sectionFooter'; SHARING_FOOTER = 'sharingFooter';
         /* INIT SCOPE */
-        scope.displayMenu = SECTION_FOOTER; scope.shareIconToDisplay = ICON_SHARE;
+        scope.displayMenu = SECTION_FOOTER;
         /* INIT DOM ELEMENTS */
-        footer = element.find('footer'); toTopButton = element.find('#to-top-button'); shareButton = element.find('#share-button');
+        footer = element.find('footer'); toTopButtonWrapper = element.find('#to-top-button-wrapper'); shareButtonWrapper = element.find('#share-button-wrapper');
 
         function contractFooter(){
             footer.removeClass('expand-small'); footer.removeClass('expand-big');
-            toTopButton.removeClass('reveal'); shareButton.removeClass('reveal');
+            toTopButtonWrapper.removeClass('rotateIn'); shareButtonWrapper.removeClass('rotateIn');
+            toTopButtonWrapper.addClass('rotateOut'); shareButtonWrapper.addClass('rotateOut');
+            toTopButtonWrapper.removeClass('visibility-visible'); shareButtonWrapper.removeClass('visibility-visible');
         }
             
         function expandFooter(){
             if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
             else { footer.addClass('expand-big'); }
-            toTopButton.addClass('reveal'); shareButton.addClass('reveal');
+            toTopButtonWrapper.addClass('visibility-visible'); shareButtonWrapper.addClass('visibility-visible');
+            toTopButtonWrapper.addClass('rotateIn'); shareButtonWrapper.addClass('rotateIn');
+            toTopButtonWrapper.removeClass('rotateOut'); shareButtonWrapper.removeClass('rotateOut');
         }
 
         scope.$on('active-section:cover', function($event){ contractFooter(); });
@@ -227,7 +229,6 @@ daniboomerangDirectives.directive('foot', function($timeout) {
     }  
   };
 });
-
 
 /******************************************/
 /**************** TOPNAVBAR ***************/
@@ -266,6 +267,56 @@ daniboomerangDirectives.directive('topnavbar', function() {
     }
   };
 });
+
+/**********/
+/* BUTTON */
+/**********/
+
+daniboomerangDirectives.directive('button', function() {
+  return {
+    restrict: 'EA',
+    scope: {
+      ngClickFunction: '&',
+      isActive: '='
+    },
+    template: function (elem, attrs) {
+      function getLinkInfo(attrs){
+        var linkInfo = {}
+        linkInfo.href = '';
+        linkInfo.target = '';
+        if (attrs.href != undefined) { 
+          linkInfo.href = attrs.href; linkInfo.target = "target='_blank_'"; }
+        if (attrs.scrollSection != undefined) { linkInfo.href = '#' + attrs.scrollSection; }
+        if (attrs.scrollDuration == undefined) { linkInfo.scrollDuration = ''; } else { linkInfo.scrollDuration = attrs.scrollDuration; }
+        return linkInfo;
+      }
+      var linkContent;
+      if (attrs.contentType == 'text') { linkContent = attrs.text; }
+      else if (attrs.contentType == 'icon') { linkContent = '<i class="' + attrs.iconClass + '"></i>'; }
+      var link;
+      var linkInfo = getLinkInfo(attrs);
+      link = '<a class="dboom-button-link ' + attrs.size + '" href="' + linkInfo.href + '"' + linkInfo.target + 'du-smooth-scroll duration="' + linkInfo.scrollDuration + '" ng-click="onClick()">' + linkContent + '</a>';
+      return '<div class="dboom-button-wrapper"><div class="dboom-button ' + attrs.size + '">' + link + '</div></div>';
+    },
+    link: function(scope, elem, attrs) {
+      var button = elem.find('.dboom-button');
+      var buttonLink = elem.find('.dboom-button-link');
+      var buttonToogled = false;
+      scope.onClick = function(){ 
+        scope.ngClickFunction();
+        if ((scope.isActive == undefined) && (attrs.isToogledButton == 'true')) {
+          if (buttonToogled == false) { button.addClass('active'); buttonLink.addClass('active'); }
+          else { button.removeClass('active'); buttonLink.removeClass('active');}
+          buttonToogled = !buttonToogled;
+        };      
+      }
+      scope.$watch("isActive", function() {
+        if (scope.isActive == true) { button.addClass('active'); buttonLink.addClass('active'); }
+        else { button.removeClass('active'); buttonLink.removeClass('active');}
+      })
+    }
+  };
+});  
 
 /********************************/
 /** SVG ALIVE IMAGES DIRECTIVE **/

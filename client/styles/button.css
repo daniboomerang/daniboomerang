@@ -1,0 +1,124 @@
+.dboom-button,.dboom-button::before,.dboom-button::after { 
+  position: absolute; top: 50%; left: 50%; transition: all .3s ease-in-out;
+}
+.dboom-button,.dboom-button::before { 
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+.dboom-button-link {
+  z-index: 1;
+  position: absolute;
+  border-radius: 100%;
+  transition: all .3s ease-in-out;
+}
+
+/*************/
+/* BUTTON MD */
+/*************/
+
+.dboom-button-link.md {
+  width: 60%;
+  height: 60%;
+  margin-left: -29.5%;
+  margin-top: 20%;
+  padding-top: 15%;
+  border: 0.1em solid rgba(226, 227, 225, 0.1);
+}
+.dboom-button-link.md.active {
+  border: solid #FF9933 0.1em;
+  color: #FF9933 !important;
+}
+.dboom-button-link.md.active:hover {
+  border: solid #FF9933 0.1em;
+  color: white !important;
+}
+.dboom-button.md {
+  text-align: center; 
+  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
+  border: 0.1em solid rgba(226, 227, 225, 0.1);
+  content: "";
+  border-left-color: #1AA346;
+  border-right-color: rgba(19, 65, 99, 1);
+  margin: -3.5em 0 0 -3.5em;
+  height: 7em;
+  width: 7em;
+}
+.dboom-button.md::before {
+  -webkit-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; 
+  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
+  border: 0.4em solid rgba(226, 227, 225, 0.1);
+  content: "";
+  border-top-color: rgba(19, 65, 99, 1);
+  border-bottom-color: #1AA346; 
+  margin: -3em 0 0 -3em;
+  height: 6em;
+  width: 6em;
+}
+.dboom-button.md::after {
+  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
+  border: 0.2em solid rgba(226, 227, 225, 0.1);
+  content: "";
+  border-right-color: rgba(19, 65, 99, 1);
+  border-left-color: #1AA346;
+  margin: -2.5em 0 0 -2.5em;
+  height: 5em;
+  width: 5em;
+}
+.dboom-button.md:hover:after {
+  transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);
+  border-left: solid #FF9933 0.2em;
+  border-right: solid #FF9933 0.2em;
+}
+.dboom-button.md.active:after {
+  border-left: solid #FF9933 0.2em;
+  border-right: solid #FF9933 0.2em;
+  -webkit-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; 
+}
+
+/*************/
+/* BUTTON SM */
+/*************/
+
+.dboom-button-link.sm {
+  width: 50%;
+  height: 50%;
+  margin-left: -25%;
+  margin-top: 25%;
+  padding-top: 4%;
+}
+.dboom-button-link.sm.active {
+  color: #FF9933 !important;
+}
+.dboom-button-link.sm.active:hover {
+  color: white !important;
+}
+.dboom-button.sm {
+  text-align: center; 
+  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
+  border: 0.2em solid rgba(19, 65, 99, 1);
+  content: "";
+  margin: -2.5em 0 0 -2.5em;
+  height: 5em;
+  width: 5em;
+}
+.dboom-button.sm::before {
+  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
+  border: 0.3em solid rgba(226, 227, 225, 0.1);
+  content: "";
+  border-right-color: rgba(19, 65, 99, 1);
+  border-left-color: #1AA346;;
+  margin: -2em 0 0 -2em;
+  height: 4em;
+  width: 4em;
+}
+.dboom-button.sm:hover:before {
+  transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);
+  border-left: solid #FF9933 0.3em;
+  border-right: solid #FF9933 0.3em;
+}
+.dboom-button.sm.active:before {
+  border-left: solid #FF9933 0.3em;
+  border-right: solid #FF9933 0.3em;
+  -webkit-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; 
+}
