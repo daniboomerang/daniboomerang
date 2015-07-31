@@ -1,14 +1,17 @@
 
 #intro { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cover-space.svg); overflow: hidden; position: absolute; background-color: black; width: 100%; height: 100%; z-index: 10; color: white; }
+#esc { position: absolute; top: 5%; left: 5%; color:gray; font-size: 0.7em; }
 #intro-title { margin: 8.5% 0% 1% 0%; }
 #intro-subtitle { font-size: 0.8em; text-align: center; }
 #intro-list { margin: 5% 0% 10% 0%; }
 .intro-element { padding-left: 17vw; line-height: 3em; }
 .intro-element::before { content: '\2022'; color: #FF9933; }
 #intro-center { color: white; position: absolute; left: 50vw; bottom: 40vh; }
-#intro-app-license { font-size: 0.6em; text-align: center; position: absolute; bottom:5; width: 100%; }
-#esc { position: absolute; top: 5%; left: 5%; color:gray; font-size: 0.7em; }
-
+#intro-bottom-row { font-size: 0.6em !important; position: absolute; bottom:5%; width: 100%; }
+#intro-app-license { position: absolute; bottom:0; left:20%; width: 60%; text-align: center;  }
+#dboom-techs { text-transform: uppercase; position: absolute; bottom:0; left:0; width: 20%; text-align: center; }
+#node { color: #80bd01; }
+#dboom-share { position: absolute; bottom:0; right:0; width: 20%; text-align: center;}
 /*******************/
 /* INTRO BOOMERANG */
 /*******************/

@@ -1,13 +1,13 @@
 {
   "checksum": {
-    "previous": "fbace3e1d8e01021daf3d37f2ad21f33d74bf25d48a557ea9af0a9621d2dabdd",
-    "current": "fbace3e1d8e01021daf3d37f2ad21f33d74bf25d48a557ea9af0a9621d2dabdd"
+    "previous": "bcc71def9d77b16197807a1b6fea89a94e468fee2b846e75ebeb86527330bb01",
+    "current": "bcc71def9d77b16197807a1b6fea89a94e468fee2b846e75ebeb86527330bb01"
   },
   "fonts": [
-    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.ttf",
-    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.svg",
-    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.woff",
-    ".//fontcustom_fbace3e1d8e01021daf3d37f2ad21f33.eot"
+    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.ttf",
+    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.svg",
+    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.woff",
+    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.eot"
   ],
   "glyphs": {
     "boomerang-gap": {
@@ -17,6 +17,30 @@
     "boomerang-solid": {
       "codepoint": 61699,
       "source": "svgs/boomerang-solid.svg"
+    },
+    "chrome": {
+      "codepoint": 61701,
+      "source": "svgs/chrome.svg"
+    },
+    "facebook-circle": {
+      "codepoint": 61703,
+      "source": "svgs/facebook-circle.svg"
+    },
+    "google-plus-circle": {
+      "codepoint": 61707,
+      "source": "svgs/google-plus-circle.svg"
+    },
+    "linkedin-circle": {
+      "codepoint": 61705,
+      "source": "svgs/linkedin-circle.svg"
+    },
+    "safari": {
+      "codepoint": 61702,
+      "source": "svgs/safari.svg"
+    },
+    "twitter-circle": {
+      "codepoint": 61706,
+      "source": "svgs/twitter-circle.svg"
     }
   },
   "options": {
@@ -36,19 +60,20 @@
     },
     "no_hash": false,
     "output": {
-      "css": "./",
-      "fonts": "./",
-      "preview": "./"
+      "css": "fontcustom",
+      "fonts": "fontcustom",
+      "preview": "fontcustom"
     },
     "preprocessor_path": null,
     "quiet": false,
+    "skip_first": false,
     "templates": [
       "css",
       "preview"
     ]
   },
   "templates": [
-    "./fontcustom.css",
-    "./fontcustom-preview.html"
+    "fontcustom/fontcustom.css",
+    "fontcustom/fontcustom-preview.html"
   ]
 }
