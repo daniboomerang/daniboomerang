@@ -35,7 +35,7 @@ footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background
 @media (min-width: 500px) { }
                             
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 12%; right: 6%; } #share-button-wrapper { bottom: 12%; left: 6%; } }
+@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 10%; right: 5%; } #share-button-wrapper { bottom: 10%; left: 5%; } }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { .footer { font-size: 1.1em !important; } }

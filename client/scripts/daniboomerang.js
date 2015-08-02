@@ -64,7 +64,7 @@ angular.module('daniboomerangApp', [
 				$timeout(function() { 
 					introBoomerangWrapper.remove();
 					esc.remove();
-					var introButtonStartAppHtml = '<div button id="start-button" size="md" content-type="text" text="START" ng-click-function="startApp()"></div>';
+					var introButtonStartAppHtml = '<div button id="start-button" size="md" content-type="text" text="GO" ng-click-function="startApp()" spin-direction="right"></div>';
 					introCenter.append(introButtonStartAppHtml);
 					var introButtonStartApp = element.find('#start-button');
 					introButtonStartApp.addClass('animated pulse');

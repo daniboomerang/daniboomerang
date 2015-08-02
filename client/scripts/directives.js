@@ -296,7 +296,10 @@ daniboomerangDirectives.directive('button', function() {
       var link;
       var linkInfo = getLinkInfo(attrs);
       link = '<a class="dboom-button-link ' + attrs.size + '" href="' + linkInfo.href + '"' + linkInfo.target + 'du-smooth-scroll duration="' + linkInfo.scrollDuration + '" ng-click="onClick()">' + linkContent + '</a>';
-      return '<div class="dboom-button-wrapper"><div class="dboom-button ' + attrs.size + '">' + link + '</div></div>';
+      var spinClass = '';
+      if (attrs.spinDirection == 'left') { spinClass = 'spin-left'; }
+      else if (attrs.spinDirection == 'right') { spinClass = 'spin-right'; }
+      return '<div class="dboom-button-wrapper"><div class="dboom-button ' + attrs.size + ' ' + spinClass + '">' + link + '</div></div>';
     },
     link: function(scope, elem, attrs) {
       var button = elem.find('.dboom-button');

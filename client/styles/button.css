@@ -18,11 +18,11 @@
 /*************/
 
 .dboom-button-link.md {
-  width: 60%;
-  height: 60%;
-  margin-left: -29.5%;
-  margin-top: 20%;
-  padding-top: 15%;
+  width: 50%;
+  height: 50%;
+  margin-left: -25%;
+  margin-top: 25%;
+  padding-top: 7%;
   border: 0.1em solid rgba(226, 227, 225, 0.1);
 }
 .dboom-button-link.md.active {
@@ -40,41 +40,40 @@
   content: "";
   border-left-color: #1AA346;
   border-right-color: rgba(19, 65, 99, 1);
-  margin: -3.5em 0 0 -3.5em;
-  height: 7em;
-  width: 7em;
+  margin: -3em 0 0 -3em;
+  height: 6em;
+  width: 6em;
 }
 .dboom-button.md::before {
-  -webkit-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; 
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
   border: 0.4em solid rgba(226, 227, 225, 0.1);
   content: "";
   border-top-color: rgba(19, 65, 99, 1);
   border-bottom-color: #1AA346; 
-  margin: -3em 0 0 -3em;
-  height: 6em;
-  width: 6em;
+  margin: -2.5em 0 0 -2.5em;
+  height: 5em;
+  width: 5em;
 }
+.dboom-button.md.spin-right:before { -webkit-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite;  }
+.dboom-button.md.spin-left:before { -webkit-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite;  }
+
 .dboom-button.md::after {
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
   border: 0.2em solid rgba(226, 227, 225, 0.1);
   content: "";
   border-right-color: rgba(19, 65, 99, 1);
   border-left-color: #1AA346;
-  margin: -2.5em 0 0 -2.5em;
-  height: 5em;
-  width: 5em;
+  margin: -2em 0 0 -2em;
+  height: 4em;
+  width: 4em;
 }
-.dboom-button.md:hover:after {
-  transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);
-  border-left: solid #FF9933 0.2em;
-  border-right: solid #FF9933 0.2em;
-}
-.dboom-button.md.active:after {
-  border-left: solid #FF9933 0.2em;
-  border-right: solid #FF9933 0.2em;
-  -webkit-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; 
-}
+
+.dboom-button.md:hover:after { border-left: solid #FF9933 0.2em; border-right: solid #FF9933 0.2em; }
+.dboom-button.md.spin-right:hover:after { transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg); }
+.dboom-button.md.spin-left:hover:after { transform:rotate(-360deg);-ms-transform:rotate(-360deg);-webkit-transform:rotate(-360deg); }
+.dboom-button.md.active:after { border-left: solid #FF9933 0.2em; border-right: solid #FF9933 0.2em; }
+.dboom-button.md.active.spin-right:after { -webkit-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; }
+.dboom-button.md.active.spin-left:after { -webkit-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; }
 
 /*************/
 /* BUTTON SM */
@@ -113,7 +112,6 @@
   width: 4em;
 }
 .dboom-button.sm:hover:before {
-  transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);
   border-left: solid #FF9933 0.3em;
   border-right: solid #FF9933 0.3em;
 }
@@ -121,4 +119,20 @@
   border-left: solid #FF9933 0.3em;
   border-right: solid #FF9933 0.3em;
   -webkit-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; 
+}
+.dboom-button.sm.spin-right:hover:before { transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg); }
+.dboom-button.sm.spin-right.active:before { -webkit-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; }
+.dboom-button.sm.spin-left:hover:before { transform:rotate(-360deg);-ms-transform:rotate(-360deg);-webkit-transform:rotate(-360deg); }
+.dboom-button.sm.spin-left.active:before { -webkit-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; }
+
+/* AMIMATIONS */
+
+@keyframes spin-left {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(-360deg); -ms-transform:rotateZ(-360deg); /* IE 9 */ -moz-transform:rotateZ(-360deg); /* Firefox */ -o-transform:rotateZ(-360deg); /* Opera */-webkit-transform:rotateZ(-360deg); }
+}
+
+@keyframes spin-right {
+  from { transform:rotateZ(0deg); -ms-transform:rotateZ(0deg); /* IE 9 */ -moz-transform:rotateZ(0deg); /* Firefox */ -webkit-transform:rotateZ(0deg); /* Safari and Chrome */ -o-transform:rotateZ(0deg); /* Opera */ }
+  to { transform:rotateZ(360deg); -ms-transform:rotateZ(360deg); /* IE 9 */ -moz-transform:rotateZ(360deg); /* Firefox */ -o-transform:rotateZ(360deg); /* Opera */-webkit-transform:rotateZ(360deg); }
 }

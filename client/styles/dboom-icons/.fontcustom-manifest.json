@@ -1,13 +1,13 @@
 {
   "checksum": {
-    "previous": "bcc71def9d77b16197807a1b6fea89a94e468fee2b846e75ebeb86527330bb01",
-    "current": "bcc71def9d77b16197807a1b6fea89a94e468fee2b846e75ebeb86527330bb01"
+    "previous": "cb6cc462ce77d1e7a973201c50564dd3893592eca12a6b623ddb05e83f333eaf",
+    "current": "cb6cc462ce77d1e7a973201c50564dd3893592eca12a6b623ddb05e83f333eaf"
   },
   "fonts": [
-    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.ttf",
-    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.svg",
-    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.woff",
-    "fontcustom/fontcustom_bcc71def9d77b16197807a1b6fea89a9.eot"
+    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.ttf",
+    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.svg",
+    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.woff",
+    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.eot"
   ],
   "glyphs": {
     "boomerang-gap": {
@@ -25,6 +25,10 @@
     "facebook-circle": {
       "codepoint": 61703,
       "source": "svgs/facebook-circle.svg"
+    },
+    "firefox": {
+      "codepoint": 61708,
+      "source": "svgs/firefox.svg"
     },
     "google-plus-circle": {
       "codepoint": 61707,
