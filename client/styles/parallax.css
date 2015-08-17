@@ -112,8 +112,8 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 40vh; }
   #remote-working-parallax-images .parallax__layer--base { height: 160vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 80vh; }
-  #orbit-big-stone { height: 8vh; width: 8vh; }
-  #orbit-stones-circle { height: 20vh; width: 20vh; }
+  /*#orbit-big-stone { height: 8vh; width: 8vh; }
+  #orbit-stones-circle { height: 20vh; width: 20vh; }*/
   #orbit-iss { margin-left: 10vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
@@ -121,16 +121,16 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 30vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 80vh; }
   #remote-working-parallax-images .parallax__layer--base { }
-  #orbit-big-stone { height: 5vh; width: 5vh; }
-  #orbit-stones-circle { height: 15vh; width: 15vh; }
+  /*#orbit-big-stone { height: 5vh; width: 5vh; }
+  #orbit-stones-circle { height: 15vh; width: 15vh; }*/
   #orbit-iss { margin-left: 10vh; margin-top: -15vh;  height: 20vh; width: 20vh; }
 }
 @media (min-width: 500px) and (max-width: 639px) {
   #remote-working-parallax-images { height: 90vh; }
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
-  #orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }
+  /*#orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 20vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }  
 @media (min-width: 400px) and (max-width: 499px) {
@@ -138,24 +138,24 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 175vh; }
   #cliff { height: 140%; width: 140%; }
-  #orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }
+  /*#orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 30vh; margin-top: -45vh;  height: 12vh; width: 12vh; }
 }
 @media (min-width: 320px) and (max-width: 399px) {
   #remote-working-parallax-images { height: 60vh; }
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
-  #orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }
+  /*#orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }   
 @media (min-width: 200px) and (max-width: 319px) {
   #remote-working-parallax-images { height: 45vh; }
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
-  #orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }
+  /*#orbit-big-stone { height: 3vh; width: 3vh; }
+  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }   
 

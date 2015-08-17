@@ -4,7 +4,7 @@ var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
 /****************** PARALLAX SECTIONS ******************/
 /*******************************************************/
 
-daniboomerangDirectives.directive('parallax', function($interval) {
+daniboomerangDirectives.directive('parallax', function() {
   return {
     restrict: 'A',
     scope: true,
@@ -142,7 +142,7 @@ daniboomerangDirectives.directive('cover', function($timeout) {
 /***************** CONTACT ****************/
 /******************************************/
 
-daniboomerangDirectives.directive('contact', function($timeout, $document) {
+daniboomerangDirectives.directive('contact', function($document) {
   return {
     restrict: 'E',
     templateUrl: 'views/sections/contact.html',

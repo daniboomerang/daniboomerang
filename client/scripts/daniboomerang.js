@@ -35,43 +35,57 @@ angular.module('daniboomerangApp', [
 		restrict: 'A',
 		templateUrl: 'views/intro.html',
 		link: function (scope, element, attrs) {
-			function startApp(){
-				intro.addClass('fadeOut');
-				$timeout(function() { element.remove();
-				$rootScope.$broadcast('app-starts'); }, 1000);	
-			}
+		
 			var intro = element.find('#intro');
-			var introElements = element.find('.intro-element');
-			var introCenter = element.find('#intro-center');
-			var introBoomerangWrapper = element.find('#intro-boomerang-wrapper');
-			var introBoomerang = element.find('#intro-boomerang');
+			var goButton = element.find('#go-button');
 			var esc = element.find('#esc');
+			var isSkipActive = true;
 
 			$document.bind("keyup", function(event) {
-        		if (event.keyCode === 27) { startApp(); }
+        		if ((event.keyCode === 27) && (isSkipActive)) { startApp(); }
     		});
+    	
+    		function startApp(){
+				intro.attr('class', 'animated fadeOut');
+				$timeout(function() { 
+					element.remove();
+					$rootScope.$broadcast('app-starts');
+				}, 1000);
+			}
+
 			scope.$on('active-section:cover', function($event){
-				intro.addClass('visibility-visible');
-        		intro.addClass('fadeIn');
-        		introElements.addClass('visibility-visible');
-        		introElements.addClass('fadeIn');
-        		introBoomerangWrapper.addClass('visibility-visible');
-        		introBoomerangWrapper.addClass('pulse');
+				intro.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;');
+				intro.attr('class', 'animated fadeIn');
+				intro.append('<div svg-alive-rocket></div>');
+				$compile(intro)(scope);
+				
 			});
-			$timeout(function() {
-				introBoomerangWrapper.addClass('rotateOut');
+
+			/**********************************************************/
+			// When the rocket finishes the projection we display button
+			/**********************************************************/
+			scope.$on('event:rocket-firstProjection', function($event){
 				esc.addClass('rubberBand');
 				$timeout(function() { 
-					introBoomerangWrapper.remove();
 					esc.remove();
-					var introButtonStartAppHtml = '<div button id="start-button" size="md" content-type="text" text="GO" ng-click-function="startApp()" spin-direction="right"></div>';
-					introCenter.append(introButtonStartAppHtml);
+					isSkipActive = false;
+					var introButtonStartAppHtml = '<div button id="start-button" class="animated fadeIn" size="md" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
+					goButton.append(introButtonStartAppHtml);
 					var introButtonStartApp = element.find('#start-button');
-					introButtonStartApp.addClass('animated pulse');
-					$compile(introCenter)(scope);
+					$compile(goButton)(scope);
 				}, 500);
-			}, 10000);
-			scope.startApp = function(){ startApp(); }
+			});
+
+			/***********************************************************************/
+			// When the user clicks on the button we finish the projection the rocket
+			/***********************************************************************/
+			scope.rocketTakeOff = function() { $rootScope.$broadcast('event:rocket-takeoff'); }
+
+			/**************************************/
+			// When the rocket ends, westart the app
+			/**************************************/
+			scope.$on('event:rocket-tookoff', function($event){ startApp(); });
+			
 		}
 	}
 })
