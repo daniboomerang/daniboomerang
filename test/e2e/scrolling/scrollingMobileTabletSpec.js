@@ -5,7 +5,9 @@ describe('Daniboomerang - scrolling scenario', function() {
 	beforeEach(function() {
 		browser.get('/');
 		browser.ignoreSynchronization = true;
-		browser.sleep(5000);
+		browser.sleep(3000);
+		browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+		browser.sleep(2000);
 	});
 
 	it('should scroll to cover section', function() {
