@@ -12,7 +12,13 @@ a:hover { color: #FF9933; text-decoration:none; transition: all .5s ease-in-out;
 h1 { font-size: 2.5em; font-weight: 200; }
 h2 { font-size: 2em; font-weight: 200; color: #FF9933 }
 h3 { font-size: 1.7em; font-weight: normal; color: rgba(56, 116, 167, 0.9); }
-p { margin: 1.5em 0; } }
+p { margin: 1.5em 0; }
+
+/* COMET CLASSES */
+.orbit-comet { width: 100%; height: 5%; }
+.comet-red { height: 12%; width: 5%; background-image: url(/images/comet-red.svg); background-size: 100%; background-repeat:no-repeat; background-position: center;  -webkit-animation: move-from-right 15s normal infinite; -moz-animation: move-from-right 15s normal infinite; -o-animation: move-from-right 15s normal infinite; }
+.comet-blue { height: 9%; width: 5%; background-image: url(/images/comet-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; -webkit-animation: move-from-left 19s normal infinite; -moz-animation: move-from-left 19s normal infinite; -o-animation: move-from-left 19s normal infinite; }
+.comet-white { height: 10%; width: 5%; background-image: url(/images/comet-white.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; -webkit-animation: move-from-left 15s normal infinite; -moz-animation: move-from-left 15s normal infinite; -o-animation: move-from-left 15s normal infinite; }
 
 /* RESPONSIVENESS */
 /* Extra small devices (desktops, 200px and up) */

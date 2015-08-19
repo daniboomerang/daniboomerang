@@ -4,10 +4,14 @@
 
 #intro { background-size:100%; background-repeat: no-repeat; background-image: url(/images/intro-space.svg); overflow: hidden; position: absolute; background-color: black; width: 100%; height: 100%; z-index: 10; color: white; }
 #esc { position: absolute; top: 5%; left: 5%; color:gray; font-size: 0.6em; border: solid gray 2px; padding: 0.3em; }
-#intro-title { margin: 1% 0% 1% 0%; font-family: Impact, Charcoal, sans-serif; font-size: 1em; }
-#go-button { position: absolute; top: 15%; right: 10%; }
+#intro-title { margin: 2% 0% 2% 0%; font-family: Impact, Charcoal, sans-serif; font-size: 1em; }
+#go-button { position: absolute; top: 57%; right: 50%; }
 #intro-bottom-row { font-size: 0.6em !important; position: absolute; bottom:4%; width: 100%; }
 #intro-app-license { position: absolute; bottom:0; left:20%; width: 60%; text-align: center; }
 #dboom-techs { position: absolute; bottom:0; left:0; width: 20%; text-align: center; font-weight: bold; color:gray; }
 #dboom-github { position: absolute; bottom:0; left:0; width: 20%; text-align: center; }
 #dboom-share { position: absolute; bottom:0; right:0; width: 20%; text-align: center; }
+#intro-orbit-comet-blue { z-index:-10; position: absolute; margin-top: 40vh; margin-left: 10vh; }
+#intro-comet-blue { height: 9%; width: 5%; }
+#intro-orbit-comet-red { z-index:-10; position: absolute; margin-left: 0vw; margin-top: 30vw; }
+#intro-comet-red { height: 10%; width: 5%; }

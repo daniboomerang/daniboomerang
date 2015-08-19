@@ -125,6 +125,58 @@
 .dboom-button.sm.spin-left:hover:before { transform:rotate(-360deg);-ms-transform:rotate(-360deg);-webkit-transform:rotate(-360deg); }
 .dboom-button.sm.spin-left.active:before { -webkit-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; }
 
+
+/*************/
+/* BUTTON XS */
+/*************/
+
+.dboom-button-link.xs {
+  width: 50%;
+  height: 50%;
+  margin-left: -25%;
+  margin-top: 15%;
+  padding-top: 4%;
+}
+.dboom-button-link.xs.active {
+  color: #FF9933 !important;
+}
+.dboom-button-link.xs.active:hover {
+  color: white !important;
+}
+.dboom-button.xs {
+  text-align: center; 
+  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
+  border: 0.2em solid rgba(19, 65, 99, 1);
+  content: "";
+  margin: -1.75em 0 0 -1.75em;
+  height: 3.5em;
+  width: 3.5em;
+}
+.dboom-button.xs::before {
+  -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
+  border: 0.2em solid rgba(226, 227, 225, 0.1);
+  content: "";
+  border-right-color: rgba(19, 65, 99, 1);
+  border-left-color: #1AA346;;
+  margin: -1.25em 0 0 -1.25em;
+  height: 2.5em;
+  width: 2.5em;
+}
+.dboom-button.xs:hover:before {
+  border-left: solid #FF9933 0.2em;
+  border-right: solid #FF9933 0.2em;
+}
+.dboom-button.xs.active:before {
+  border-left: solid #FF9933 0.2em;
+  border-right: solid #FF9933 0.2em;
+  -webkit-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; animation: rotate 2s cubic-bezier(1, .06, .39, .77) infinite; 
+}
+.dboom-button.xs.spin-right:hover:before { transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg); }
+.dboom-button.xs.spin-right.active:before { -webkit-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-right 2s cubic-bezier(1, .06, .39, .77) infinite; }
+.dboom-button.xs.spin-left:hover:before { transform:rotate(-360deg);-ms-transform:rotate(-360deg);-webkit-transform:rotate(-360deg); }
+.dboom-button.xs.spin-left.active:before { -webkit-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -moz-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; -o-animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; animation: spin-left 2s cubic-bezier(1, .06, .39, .77) infinite; }
+
+
 /* AMIMATIONS */
 
 @keyframes spin-left {

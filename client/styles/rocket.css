@@ -2,7 +2,7 @@
 /* ROCKET */
 /**********/
 
-#orbit-rocket { z-index: -1; position: absolute; width: 70vw; height:70vh; margin-left: 15vw; bottom: 15%; }
+#orbit-rocket { z-index: -1; position: absolute; width: 80vw; height:80vh; margin-left: 10vw; bottom: 10%; }
 #rocket { position: relative; width: 100%; }
 .arrival {  -webkit-animation: arrival 4s ease-in-out forwards 1;
             -moz-animation: arrival 4s ease-in-out forwards 1; }

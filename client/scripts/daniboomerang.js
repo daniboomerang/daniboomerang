@@ -57,6 +57,8 @@ angular.module('daniboomerangApp', [
 				intro.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;');
 				intro.attr('class', 'animated fadeIn');
 				intro.append('<div svg-alive-rocket></div>');
+				intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
+				intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
 				$compile(intro)(scope);
 				
 			});
@@ -69,7 +71,7 @@ angular.module('daniboomerangApp', [
 				$timeout(function() { 
 					esc.remove();
 					isSkipActive = false;
-					var introButtonStartAppHtml = '<div button id="start-button" class="animated fadeIn" size="md" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
+					var introButtonStartAppHtml = '<div button id="start-button" class="animated fadeIn" size="md" is-toogled-button="true" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
 					goButton.append(introButtonStartAppHtml);
 					var introButtonStartApp = element.find('#start-button');
 					$compile(goButton)(scope);
