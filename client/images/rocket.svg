@@ -20,6 +20,33 @@
    preserveAspectRatio="xMinYMin slice">
   <defs
      id="defs4770">
+    <radialGradient
+       r="51.448002"
+       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,1019.1,-85.04)"
+       cx="482.04999"
+       cy="719.82001"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient5188">
+      <stop
+         id="stop5190"
+         offset="0"
+         stop-color="#8e3000" />
+      <stop
+         id="stop5192"
+         offset="0.22967994"
+         stop-opacity=".3198"
+         stop-color="#e46800"
+         style="stop-color:#e40000;stop-opacity:0.32156864" />
+      <stop
+         id="stop5194"
+         offset=".70895"
+         stop-opacity=".47451"
+         stop-color="#60cff6" />
+      <stop
+         id="stop5196"
+         offset="1"
+         stop-opacity="0" />
+    </radialGradient>
     <linearGradient
        id="linearGradient5109">
       <stop
@@ -701,7 +728,7 @@
        gradientUnits="userSpaceOnUse"
        cy="719.82001"
        cx="482.04999"
-       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,666.96,-87.123)"
+       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,666.43458,-95.244278)"
        r="51.448002" />
     <linearGradient
        id="ab"
@@ -778,7 +805,7 @@
        gradientUnits="userSpaceOnUse"
        cy="719.82001"
        cx="482.04999"
-       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,1015.2,-109.18)"
+       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,1015.7254,-101.05872)"
        r="51.448002" />
     <style
        type="text/css"
@@ -914,7 +941,7 @@
        r="51.448002"
        cy="719.82001"
        cx="482.04999"
-       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,849.34716,-21.546688)"
+       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,851.79948,-25.36201)"
        gradientUnits="userSpaceOnUse"
        id="radialGradient9175"
        xlink:href="#a"
@@ -943,7 +970,7 @@
        r="51.448002"
        cy="719.82001"
        cx="482.04999"
-       gradientTransform="matrix(0.17131889,2.4347907,-1.3664699,0.18775399,970.14232,-569.42694)"
+       gradientTransform="matrix(0.17131889,2.4347907,-1.3664699,0.18775399,969.30431,-568.473)"
        gradientUnits="userSpaceOnUse"
        id="radialGradient4455"
        xlink:href="#radialGradient5031"
@@ -965,7 +992,7 @@
        fx="482.04999"
        cy="719.82001"
        cx="482.04999"
-       gradientTransform="matrix(0.20554769,2.976104,-1.2862707,0.20464308,1079.4348,-759.38977)"
+       gradientTransform="matrix(0.20554769,2.976104,-1.2862707,0.20464308,1078.1331,-765.6036)"
        gradientUnits="userSpaceOnUse"
        id="radialGradient4995"
        xlink:href="#radialGradient4997"
@@ -3819,6 +3846,35 @@
        fx="300"
        fy="300"
        r="292.31146" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#a"
+       id="radialGradient5182"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,1014.6746,-117.30128)"
+       cx="482.04999"
+       cy="719.82001"
+       r="51.448002" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#a"
+       id="radialGradient5184"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.17387,1.4882,-0.95375,0.1382,667.74813,-74.941088)"
+       cx="482.04999"
+       cy="719.82001"
+       r="51.448002" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#radialGradient5188"
+       id="radialGradient5186"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.11348059,1.5008508,-0.95858792,0.09926701,885.70618,16.867615)"
+       cx="482.04999"
+       cy="719.82001"
+       r="51.448002"
+       fx="482.04999"
+       fy="719.82001" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -3827,11 +3883,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6023437"
-     inkscape:cx="424.92649"
-     inkscape:cy="55.745091"
+     inkscape:zoom="2.2660562"
+     inkscape:cx="467.28192"
+     inkscape:cy="67.379842"
      inkscape:document-units="px"
-     inkscape:current-layer="g4766"
+     inkscape:current-layer="g8594"
      showgrid="false"
      inkscape:window-width="1280"
      inkscape:window-height="752"
@@ -4304,15 +4360,6 @@
                                    transform="matrix(1.1011,-0.47698,-0.47698,-1.1011,-117.17,576.94)"
                                    id="g4916">
                                 <path
-                                   style="fill:url(#p);fill-rule:evenodd;stroke-opacity:0;enable-background:new"
-                                   d="m 454.58,692.87 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915,28.167 -58.308,25.931 -78.841,-0.38498 -11.836,-15.169 -25.618,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.914,-10.345 z"
-                                   id="ng-right-engine"
-                                   inkscape:connector-curvature="0">
-                                <title
-                                   fill="url(#a)"
-                                   id="title4920">Right Engine Fire</title>
-                                </path>
-                                <path
                                    style="fill:url(#radialGradient4471);fill-rule:evenodd;stroke-opacity:0;enable-background:new"
                                    d="m 462.23618,791.85947 c -25.60488,45.73833 -52.64339,49.41934 -82.68834,6.24256 -17.31903,-24.88783 -14.00697,-95.25866 2.50282,-106.39362 26.94165,-18.17067 26.78073,-17.76962 62.67405,-4.27857 15.80522,8.12823 32.07615,77.64492 17.51147,104.42963 z"
                                    id="ng-right-engine-full"
@@ -4321,6 +4368,24 @@
                                 <title
                                    fill="url(#a)"
                                    id="title4469">Left Engine Fire Full</title>
+                                </path>
+                                <path
+                                   style="fill:url(#p);fill-rule:evenodd;stroke-opacity:0;enable-background:new"
+                                   d="m 455.10542,700.99128 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915,28.167 -58.308,25.931 -78.841,-0.38498 -11.836,-15.169 -25.618,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.914,-10.345 z"
+                                   id="ng-right-engine"
+                                   inkscape:connector-curvature="0">
+                                <title
+                                   fill="url(#a)"
+                                   id="title4920">Right Engine Fire</title>
+                                </path>
+                                <path
+                                   inkscape:connector-curvature="0"
+                                   id="path5170"
+                                   d="m 454.05458,684.74872 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915,28.167 -58.308,25.931 -78.841,-0.38498 -11.836,-15.169 -25.618,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.914,-10.345 z"
+                                   style="fill:url(#radialGradient5182);fill-rule:evenodd;stroke-opacity:0;enable-background:new">
+                                <title
+                                   id="title5172"
+                                   fill="url(#a)">Right Engine Fire</title>
                                 </path>
                                 <g
                                    transform="matrix(0.97783,-0.20942,0.20942,0.97783,-121.58,101.34)"
@@ -4392,8 +4457,27 @@
                                 </g>
                                 </g>
                                 <path
-                                   style="fill:url(#q);fill-rule:evenodd;stroke-opacity:0;enable-background:new"
-                                   d="m 106.37,714.93 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915,28.167 -58.308,25.931 -78.841,-0.38498 -11.836,-15.169 -25.618,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.914,-10.345 z"
+                                   sodipodi:nodetypes="ccscc"
+                                   inkscape:connector-curvature="0"
+                                   id="ng-left-engine-full"
+                                   d="m 113.86361,816.60138 c -25.730861,45.71286 -52.772889,49.36187 -82.684497,6.14418 -17.24218,-24.91132 -13.72671,-95.28589 2.811057,-106.4023 26.987261,-18.14039 26.825219,-17.73949 62.669798,-4.20397 15.777482,8.14807 31.842262,77.69187 17.203642,104.46209 z"
+                                   style="fill:url(#radialGradient4455);fill-rule:evenodd;stroke-opacity:0;enable-background:new">
+                                <title
+                                   id="title4451"
+                                   fill="url(#a)">Left Engine Fire Full</title>
+                                </path>
+                                <path
+                                   inkscape:connector-curvature="0"
+                                   id="path5174"
+                                   d="m 105.84458,706.80872 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.914992,28.167 -58.307992,25.931 -78.840992,-0.38498 -11.836,-15.169 -25.617999,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.913992,-10.345 z"
+                                   style="fill:url(#q);fill-rule:evenodd;stroke-opacity:0;enable-background:new">
+                                <title
+                                   id="title5176"
+                                   fill="url(#a)">Left Engine Fire</title>
+                                </path>
+                                <path
+                                   style="fill:url(#radialGradient5184);fill-rule:evenodd;stroke-opacity:0;enable-background:new"
+                                   d="m 107.15813,727.11191 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915007,28.167 -58.308011,25.931 -78.841012,-0.38498 -11.836,-15.169 -25.6180006,-45.768 -12.124,-56.097 21.470001,-16.434 62.191998,-18.434 86.914012,-10.345 z"
                                    id="ng-left-engine"
                                    inkscape:connector-curvature="0">
                                 <title
@@ -4401,32 +4485,30 @@
                                    id="title4956">Left Engine Fire</title>
                                 </path>
                                 <path
-                                   inkscape:connector-curvature="0"
-                                   id="ng-center-engine"
-                                   d="m 288.75716,780.50631 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915,28.167 -58.308,25.931 -78.841,-0.38498 -11.836,-15.169 -25.618,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.914,-10.345 z"
-                                   style="fill:url(#radialGradient9175);fill-opacity:1;fill-rule:evenodd;stroke-opacity:0;enable-background:new">
-                                <title
-                                   id="title9173">Center Engine Fire</title>
-                                </path>
-                                <path
-                                   sodipodi:nodetypes="ccscc"
-                                   inkscape:connector-curvature="0"
-                                   id="ng-left-engine-full"
-                                   d="m 114.70162,815.64744 c -25.730866,45.71286 -52.772894,49.36187 -82.684502,6.14418 -17.24218,-24.91132 -13.72671,-95.28589 2.811057,-106.4023 26.987261,-18.14039 26.825219,-17.73949 62.669798,-4.20397 15.777487,8.14807 31.842267,77.69187 17.203647,104.46209 z"
-                                   style="fill:url(#radialGradient4455);fill-rule:evenodd;stroke-opacity:0;enable-background:new">
-                                <title
-                                   id="title4451"
-                                   fill="url(#a)">Left Engine Fire Full</title>
-                                </path>
-                                <path
                                    style="fill:url(#radialGradient4995);fill-rule:evenodd;stroke-opacity:0;enable-background:new"
-                                   d="m 297.03368,916.45552 c -23.46095,55.35407 -48.91708,59.32258 -77.9257,6.01287 -16.72164,-30.7287 -14.6715,-116.59674 0.73634,-129.8726 25.14337,-21.6643 24.99765,-21.1777 59.0711,-4.00436 15.0373,10.23346 31.4517,95.43978 18.11826,127.86409 z"
+                                   d="m 295.73195,910.24169 c -23.46095,55.35407 -48.91708,59.32258 -77.9257,6.01287 -16.72164,-30.7287 -14.6715,-116.59674 0.73634,-129.8726 25.14337,-21.6643 24.99765,-21.1777 59.0711,-4.00436 15.0373,10.23346 31.4517,95.43978 18.11826,127.86409 z"
                                    id="ng-center-engine-full"
                                    inkscape:connector-curvature="0"
                                    sodipodi:nodetypes="ccscc">
                                 <title
                                    fill="url(#a)"
                                    id="title4993">Center Engine Fire Full</title>
+                                </path>
+                                <path
+                                   style="fill:url(#radialGradient9175);fill-opacity:1;fill-rule:evenodd;stroke-opacity:0;enable-background:new"
+                                   d="m 291.20948,776.69099 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915,28.167 -58.308,25.931 -78.841,-0.38498 -11.836,-15.169 -25.618,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.914,-10.345 z"
+                                   id="path5178"
+                                   inkscape:connector-curvature="0">
+                                <title
+                                   id="title5180">Center Engine Fire</title>
+                                </path>
+                                <path
+                                   inkscape:connector-curvature="0"
+                                   id="ng-center-engine"
+                                   d="m 292.52303,796.99419 c 16.619,5.4383 14.585,50.263 4.0496,66.826 -17.915,28.167 -58.308,25.931 -78.841,-0.38498 -11.836,-15.169 -25.618,-45.768 -12.124,-56.097 21.47,-16.434 62.192,-18.434 86.914,-10.345 z"
+                                   style="fill:url(#radialGradient5186);fill-opacity:1;fill-rule:evenodd;stroke-opacity:0;enable-background:new">
+                                <title
+                                   id="title9173">Center Engine Fire</title>
                                 </path>
                                 </g>
                                 <g
@@ -4716,24 +4798,7 @@
                                style="fill:none;stroke:#000000;stroke-width:11.39700031">
                               <g
                                  transform="matrix(1.0006,-8.0952e-4,-8.0816e-4,1.001,2.3617,-5.3318)"
-                                 id="g5076">
-                                <ellipse
-                                   ry="274.75095"
-                                   rx="262.96042"
-                                   transform="matrix(0.50823087,-0.86122087,0.85468754,0.51914277,0,0)"
-                                   cy="-391.30951"
-                                   cx="-517.00323"
-                                   id="circle5078"
-                                   style="fill:#ae5026;fill-opacity:1;stroke:#814100;stroke-width:19.20004654;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:0.76142004" />
-                                <path
-                                   d="m -821.1731,254.86848 c -2.5908,3.32122 -6.15958,9.48702 -7.54913,13.46502 -1.17595,3.3659 -2.37762,6.97925 -1.98696,10.52334 0.54835,4.97403 2.64558,10.0014 5.91009,13.79346 3.52828,4.09938 8.60972,7.0737 13.81284,8.55382 4.21301,1.1983 8.83034,0.76846 13.13964,-0.0213 6.68232,-1.22512 13.1274,-3.87335 19.03932,-7.21833 8.00873,-4.53227 14.81652,-10.96806 21.6954,-17.07888 11.11596,-9.87503 21.40164,-20.66724 31.54554,-31.53738 10.69674,-11.4648 20.38062,-24.60138 29.64732,-36.48642 14.18514,-18.19374 23.13564,-30.1512 36.10698,-46.80474 7.72313,-9.91634 22.48998,-30.17568 31.50576,-38.93544 4.91018,-4.76973 9.67511,-9.98417 15.74268,-13.14576 4.42996,-2.30959 9.49875,-3.4627 14.46768,-3.93343 2.84009,-0.26644 5.72271,0.10883 8.52638,0.65379 4.96842,0.96098 9.83086,2.61457 14.48094,4.59418 15.33774,7.04861 32.26566,23.09382 57.16488,48.62442 15.32754,12.67656 38.71716,37.76142 60.44724,64.41198 5.88714,5.9414 19.90734,24.0822 25.6224,30.19608 4.044,4.32215 8.67622,8.56107 12.71226,12.8928 3.05888,3.28991 9.7258,7.8082 13.58742,10.12901 4.55981,2.76287 9.81597,4.48657 15.0909,5.24433 4.55757,0.65905 9.40002,0.64574 13.82406,-0.65677 4.60122,-1.36098 8.4912,-4.51319 12.46338,-7.22517 2.30938,-1.58426 5.02493,-4.55226 6.5686,-6.89744 2.26287,-3.41292 2.75573,-6.12735 3.30816,-10.1796 0.41627,-3.04134 0.59815,-6.19507 -0.0112,-9.19581 -1.0175,-4.90467 -3.10712,-9.65094 -5.91294,-13.79448 -3.99768,-5.90407 -9.70581,-10.5009 -15.12762,-15.1317 -11.10576,-9.45652 -23.27538,-15.55602 -35.01048,-24.2148 -13.46502,-9.93725 -27.48492,-24.4494 -40.5501,-34.91868 -20.36532,-20.12664 -40.13088,-39.32814 -66.36018,-65.064782 -5.88805,-6.782796 -12.16452,-13.22736 -18.40998,-19.6911 -9.04107,-9.35493 -17.66742,-19.19844 -27.59508,-27.60732 -4.31327,-3.653028 -7.09818,-5.537274 -12.39198,-7.525254 -7.58767,-2.72646 -19.00158,-3.167916 -27.03102,-0.989635 -5.95323,1.993182 -11.8269,4.253298 -17.06052,7.717116 -7.1659,4.746876 -12.10536,8.449476 -18.44364,14.24328 -19.2066,18.10806 -34.21998,40.350185 -49.91982,59.490485 -16.10376,19.57992 -30.21138,39.51684 -47.0373,58.48068 -11.2098,12.6327 -23.89962,25.4388 -36.40482,36.78732 -9.24609,8.39174 -19.99302,15.67026 -31.5384,23.0265 -7.45507,4.75075 -12.63168,8.45692 -18.07032,15.4275 z"
-                                   id="ng-boomerang"
-                                   inkscape:connector-curvature="0"
-                                   style="fill:#000000;stroke:#000000;stroke-width:19.19945908">
-                                <title
-                                   id="title9955">Boomerang</title>
-                                </path>
-                              </g>
+                                 id="g5076" />
                             </g>
                           </g>
                         </g>

@@ -56,10 +56,20 @@ angular.module('daniboomerangApp', [
 			scope.$on('active-section:cover', function($event){
 				intro.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;');
 				intro.attr('class', 'animated fadeIn');
-				intro.append('<div svg-alive-rocket></div>');
-				intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
-				intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
-				$compile(intro)(scope);
+				var introTitleHtml = '<div id="intro-title" class="animated flipInX text-center">"A creative portfolio"</div>'
+				$timeout(function() { 
+					intro.append(introTitleHtml);
+					//$compile(intro)(scope);
+					$timeout(function() { 
+						var introTitleId = element.find('#intro-title');
+						introTitleId.attr('class', 'animated flipOutX text-center');
+						//introTitleId.remove();
+						intro.append('<div svg-alive-rocket></div>');
+						intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
+						intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
+						$compile(intro)(scope);
+					}, 2000);
+				}, 1500);
 				
 			});
 
@@ -75,13 +85,16 @@ angular.module('daniboomerangApp', [
 					goButton.append(introButtonStartAppHtml);
 					var introButtonStartApp = element.find('#start-button');
 					$compile(goButton)(scope);
-				}, 500);
+				}, 1000);
 			});
 
 			/***********************************************************************/
 			// When the user clicks on the button we finish the projection the rocket
 			/***********************************************************************/
-			scope.rocketTakeOff = function() { $rootScope.$broadcast('event:rocket-takeoff'); }
+			scope.rocketTakeOff = function() {
+				goButton.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;'); 
+				goButton.attr('class', 'animated rotateOut');
+				$rootScope.$broadcast('event:rocket-takeoff'); }
 
 			/**************************************/
 			// When the rocket ends, westart the app

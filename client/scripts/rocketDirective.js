@@ -124,12 +124,12 @@ daniboomerangDirectives.directive('svgAliveRocket', function($interval, $timeout
             leftEngineFull.attr('class', 'animated fadeIn');
             centerEngineFull.attr('class', 'animated fadeIn');
             rightEngineFull.attr('class', 'animated fadeIn'); 
-          }, 1000);
+          }, 500);
           $timeout(function() {
             $rootScope.$broadcast('event:rocket-tookoff');
-          }, 3000);
+          }, 1500);
           
-        }, 1000);
+        }, 500);
         
       }
 
@@ -143,7 +143,7 @@ daniboomerangDirectives.directive('svgAliveRocket', function($interval, $timeout
         init();
         turnOnEngines();
         turnOnLights();
-        parkRocket(3)
+        parkRocket(1.5)
         .then(executeProjection)
         .then(function(){ });    
       });
@@ -195,7 +195,7 @@ daniboomerangDirectives.directive('svgAliveRocket', function($interval, $timeout
               if (angular.isDefined(intervalPromise)) {
                 return projectElement(nodeProjection);
               }
-            })
+            })/*
             .then(function(){
               if (angular.isDefined(intervalPromise)) {
                 return projectElement(protractorProjection);
@@ -222,7 +222,7 @@ daniboomerangDirectives.directive('svgAliveRocket', function($interval, $timeout
               if (angular.isDefined(intervalPromise)) {
                 return projectElement(parallaxProjection);
               }
-            })
+            })*/
             .then(function(){
               onGoingProjection = true;
               if (firstIteration){

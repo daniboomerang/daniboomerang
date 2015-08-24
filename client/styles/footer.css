@@ -26,14 +26,17 @@ footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background
 /*========== RESPONSIVENESS ==========*/
 
 /* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { .footer { font-size: 1em !important; } #to-top-button-wrapper { bottom: 0.5%; right: 0.5%; } #share-button-wrapper { bottom: 0.5%; left: 0.5%; } }
+@media (min-width: 200px) { .footer { font-size: 1em !important; } #to-top-button-wrapper { bottom: 8%; right: 10%; } #share-button-wrapper { bottom: 8%; left: 10%; } }
                             
 /* Extra small Devices, (phones, 320px and up) */
 @media (min-width: 320px) { .footer { font-size: 1em !important; } }
 
 /* Extra small Devices, (phones, 500px and up) */
 @media (min-width: 500px) { }
-                            
+
+/* Extra small Devices, (phones, 640px and up) */
+@media (min-width: 640px) { #to-top-button-wrapper { bottom: 8%; right: 8%; } #share-button-wrapper { bottom: 8%; left: 8%; } }
+       
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 10%; right: 5%; } #share-button-wrapper { bottom: 10%; left: 5%; } }
 

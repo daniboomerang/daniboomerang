@@ -2,7 +2,7 @@
 /* DANIBOOMERANG */
 /*****************/
 
-html,body { height:100%; background-color: black; }
+html,body { height:100%; background-color: black; overflow: hidden; }
 body { margin:0; padding:0; font-size: 3px;  font-weight: 200;  -webkit-font-smoothing: antialiased; color: black; line-height: 2; /*background-image: url(/images/cover-space-bkack.svg); background-repeat: repeat;*/ }
 a { color: white; transition: all .5s ease-in-out; }
 a:hover { color: #FF9933; text-decoration:none; transition: all .5s ease-in-out; }
@@ -39,7 +39,7 @@ p { margin: 1.5em 0; }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { body { font-size: 2em; } .custom-fluid-container { width: 80%; } }
 
-/* Medium devices (desktops, 992px and up) */
+/* Medium devices (desktops, 1280px and up) */
 @media (min-width: 1280px) { body { font-size: 2em; } }
 
 /* Large devices (large desktops, 1600px and up) */

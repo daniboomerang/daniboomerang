@@ -30,6 +30,7 @@
 @media (min-width: 200px) { #et-scene-wrapper { height:35%; }
                             #scroll-up { top: 15%; }
                             #social { top:35%; }
+                            .social-button { margin-left: 4.25%; margin-right: 4.25%;}
                             #contact-info { top:50%; }
                             #et-scene { height: 100%; width: 100%; } }
 
@@ -40,6 +41,7 @@
 @media (min-width: 500px) { #et-scene-wrapper { height:40%; width: 100%; left: 0; }
                             #scroll-up { top: 15%; }
                             #social { top:35%; }
+                            .social-button { margin-left: 3.25%; margin-right: 3.25%;}
                             #contact-info { top:50%; }
                             #et-scene { height: 85%; width: 80%; } }
 
