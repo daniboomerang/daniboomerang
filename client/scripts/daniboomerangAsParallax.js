@@ -3,7 +3,6 @@
 angular.module('daniboomerangAsParallax', [
 	// VENDOR
 	'duScroll',
-	'socialLinks',
 	// DANIBOOMERANG
 	'daniboomerangDirectives',
 	'daniboomerangServices'

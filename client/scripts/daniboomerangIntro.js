@@ -1,9 +1,6 @@
 'use strict';
 
-angular.module('daniboomerangIntro', [
-	// VENDOR
-	'socialLinks'
-])
+angular.module('daniboomerangIntro', [ ])
 .directive('daniboomerangIntroDirective', function($timeout, $rootScope, $compile, $document) {
 	return {
 		restrict: 'A',
@@ -11,7 +8,8 @@ angular.module('daniboomerangIntro', [
 		link: function (scope, element, attrs) {
 		
 			var intro = element.find('#intro');
-			var goButton = element.find('#go-button');
+			var goButtonWrapper = element.find('#go-button-wrapper');
+			var blurButtonBg = element.find('#blur-button-bg');
 			var esc = element.find('#esc');
 			var isSkipActive = true;
 
@@ -55,10 +53,11 @@ angular.module('daniboomerangIntro', [
 				$timeout(function() { 
 					esc.remove();
 					isSkipActive = false;
-					var introButtonStartAppHtml = '<div button id="start-button" class="animated fadeIn" size="md" is-toogled-button="true" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
-					goButton.append(introButtonStartAppHtml);
+					blurButtonBg.attr('class', 'animated fadeIn blurred');
+					var introButtonStartAppHtml = '<div button id="go-button" class="animated fadeIn" size="md" is-toogled-button="true" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
+					goButtonWrapper.append(introButtonStartAppHtml);
 					var introButtonStartApp = element.find('#start-button');
-					$compile(goButton)(scope);
+					$compile(goButtonWrapper)(scope);
 				}, 1000);
 			});
 
@@ -66,8 +65,8 @@ angular.module('daniboomerangIntro', [
 			// When the user clicks on the button we finish the projection the rocket
 			/***********************************************************************/
 			scope.rocketTakeOff = function() {
-				goButton.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;'); 
-				goButton.attr('class', 'animated rotateOut');
+				goButtonWrapper.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;'); 
+				goButtonWrapper.attr('class', 'animated rotateOut');
 				$rootScope.$broadcast('event:rocket-takeoff'); }
 
 			/**************************************/
@@ -148,9 +147,11 @@ angular.module('daniboomerangIntro', [
 	      	function turnOnLights() {
 		        $interval(function() {
 		          (leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
-		          (centerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? centerLight.attr('class', 'animated fadeIn') : centerLight.attr('class', 'animated fadeOut');
 		          (rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
-		        }, 2500);        
+		        }, 2500);
+		        $interval(function() {
+		          (centerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? centerLight.attr('class', 'animated fadeIn') : centerLight.attr('class', 'animated fadeOut');
+		        }, 700);        
 		    }
 	    
 	      	function parkRocket(time){
@@ -193,7 +194,7 @@ angular.module('daniboomerangIntro', [
 		    function turnRocket(){
 
 		        var deferred = $q.defer();
-		        
+
 		        $timeout(function() {
 		          rocket.attr('class', 'turn');    
 		          deferred.resolve(0);
@@ -211,7 +212,7 @@ angular.module('daniboomerangIntro', [
 		            leftEngineFull.attr('class', 'animated fadeIn');
 		            centerEngineFull.attr('class', 'animated fadeIn');
 		            rightEngineFull.attr('class', 'animated fadeIn'); 
-		          }, 500);
+		          }, 1000);
 		          $timeout(function() {
 		            $rootScope.$broadcast('event:rocket-tookoff');
 		          }, 1500);
@@ -277,7 +278,7 @@ angular.module('daniboomerangIntro', [
 		          
 		          if (onGoingProjection) {
 		            onGoingProjection = false;
-		            projectElement(angularProjection)
+		            projectElement(angularProjection)/*
 		            .then(function(){
 		              if (angular.isDefined(intervalPromise)) {
 		                return projectElement(nodeProjection);
@@ -309,7 +310,7 @@ angular.module('daniboomerangIntro', [
 		              if (angular.isDefined(intervalPromise)) {
 		                return projectElement(parallaxProjection);
 		              }
-		            })
+		            })*/
 		            .then(function(){
 		              onGoingProjection = true;
 		              if (firstIteration){

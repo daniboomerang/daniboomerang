@@ -2,6 +2,8 @@
 
 angular.module('daniboomerangApp', [
 	'ngRoute',
+	// VENDOR
+	'socialLinks',
 	// DANIBOOMERANG
 	'daniboomerangIntro',
 	'daniboomerangAsParallax'
