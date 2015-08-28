@@ -36,7 +36,7 @@ angular.module('daniboomerangIntro', [ ])
 						var introTitleId = element.find('#intro-title');
 						introTitleId.attr('class', 'animated flipOutX text-center');
 						//introTitleId.remove();
-						intro.append('<div svg-alive-rocket></div>');
+						intro.append('<div id="svg-alive-rocket" svg-alive-rocket></div>');
 						intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
 						intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
 						$compile(intro)(scope);
@@ -56,7 +56,6 @@ angular.module('daniboomerangIntro', [ ])
 					blurButtonBg.attr('class', 'animated fadeIn blurred');
 					var introButtonStartAppHtml = '<div button id="go-button" class="animated fadeIn" size="md" is-toogled-button="true" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
 					goButtonWrapper.append(introButtonStartAppHtml);
-					var introButtonStartApp = element.find('#start-button');
 					$compile(goButtonWrapper)(scope);
 				}, 1000);
 			});
@@ -278,7 +277,7 @@ angular.module('daniboomerangIntro', [ ])
 		          
 		          if (onGoingProjection) {
 		            onGoingProjection = false;
-		            projectElement(angularProjection)/*
+		            projectElement(angularProjection)
 		            .then(function(){
 		              if (angular.isDefined(intervalPromise)) {
 		                return projectElement(nodeProjection);
@@ -310,7 +309,7 @@ angular.module('daniboomerangIntro', [ ])
 		              if (angular.isDefined(intervalPromise)) {
 		                return projectElement(parallaxProjection);
 		              }
-		            })*/
+		            })
 		            .then(function(){
 		              onGoingProjection = true;
 		              if (firstIteration){

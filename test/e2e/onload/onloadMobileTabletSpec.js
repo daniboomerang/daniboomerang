@@ -12,7 +12,7 @@ describe('Daniboomerang - Scenario for mobile and tablet devices when on load', 
     browser.sleep(5000);
   });
   
-  it('should scroll to cover section', function() {
+  it('should scroll detect cover section on top', function() {
     expect(browser.getCurrentUrl()).toContain('/#/cover');
   });
 
