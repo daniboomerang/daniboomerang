@@ -1,12 +1,6 @@
 exports.config = {
-  /*specs: ['e2e/footer/*.js'],
-  capabilities: {
-    browserName: 'chrome',
-    shardTestFiles: true,
-    maxInstances: 2
-  },*/
-  multiCapabilities: [
-    
+  /*specs: [], capabilities: { browserName: 'chrome', shardTestFiles: true, maxInstances: 2 },*/
+  multiCapabilities: [  
     { 
        'browserName': 'chrome',
        'chromeOptions' : {
@@ -31,6 +25,5 @@ exports.config = {
   ],
   chromeDriver: '../node_modules/protractor/selenium/chromedriver',
   baseUrl: 'http://localhost:8080/',
-  framework: 'jasmine2',
-
+  framework: 'jasmine2'
 };

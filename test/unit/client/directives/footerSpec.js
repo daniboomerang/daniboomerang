@@ -21,11 +21,12 @@ describe('foot', function() {
     expect(footerWrapper.length).toBe(1);
     var shareButton = elm.find('#share-button');
     expect(shareButton.length).toBe(1);
-    expect(shareButton.hasClass('floating-button')).toBe(true);
+      expect(shareButton.attr('size')).toEqual('md');
+      expect(shareButton.attr('icon-class')).toEqual('fa fa-fw fa-share-alt fa-2x');
     var toTopButton = elm.find('#to-top-button');
     expect(toTopButton.length).toBe(1);
-    expect(toTopButton.hasClass('floating-button')).toBe(true);
-
+      expect(toTopButton.attr('size')).toEqual('md');
+      expect(toTopButton.attr('icon-class')).toEqual('fa fa-fw fa-chevron-up fa-2x');
     // The footer 
     var footer = elm.find('footer');
     expect(footer.length).toBe(1);

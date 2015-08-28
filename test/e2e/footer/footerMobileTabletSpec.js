@@ -9,7 +9,9 @@ describe('Daniboomerang - footer scenario for mobiles and tablets', function() {
   beforeEach(function() {
     browser.get('/');
     browser.ignoreSynchronization = true;
-    browser.sleep(5000);
+    browser.sleep(3000);
+    browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+    browser.sleep(2000);
   });
   
   it('should scroll to cover section', function() {
@@ -23,24 +25,25 @@ describe('Daniboomerang - footer scenario for mobiles and tablets', function() {
   it("should not be revealed until we are in a setion that is not the Cover", function() {
 
       // There is the footer directive correctly rendered
+      var footer = element(by.tagName('footer'));
+      expect(footer.isPresent()).toBe(true);
       var footerWrapper = element(by.id('footer-wrapper'));
       expect(footerWrapper.isPresent()).toBe(true);
 
-      // It is not revealed (cover section)
-        expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(false);
+      // It is not expanded (cover section)
+      expect(footer.element(by.css('.expand-small')).isPresent()).toBe(false);
         
-      // It is revealed when whe scroll down to any section
-        // Go to the last section
-        var lastSection = element(by.id('contact'));
-        browser.driver.executeScript("arguments[0].scrollIntoView(true);", lastSection.getWebElement());
-        browser.sleep(1000);
-        expect(footerWrapper.element(by.css('.reveal')).isPresent()).toBe(true);
+      // It is expanded when whe scroll down to any section
+      // Go to the last section
+      var lastSection = element(by.id('contact'));
+      browser.driver.executeScript("arguments[0].scrollIntoView(true);", lastSection.getWebElement());
+      browser.sleep(1000);
+      expect(footer.element(by.css('.expand-big')).isPresent()).toBe(false);
 
-        // Footer Menus are correctly displayed
-        var footer = footerWrapper.element(by.tagName('footer'));
-        var currentSectionMenu = footer.element(by.id('current-section-menu'));
-        expect(currentSectionMenu.isDisplayed()).toBe(true);
-        expect(footer.element(by.id('share-menu')).isDisplayed()).toBe(false);
+      // Footer Menus are correctly displayed
+      var currentSectionMenu = footer.element(by.id('current-section-menu'));
+      expect(currentSectionMenu.isDisplayed()).toBe(true);
+      expect(footer.element(by.id('share-menu')).isDisplayed()).toBe(false);
 
   });
 
@@ -62,7 +65,7 @@ describe('Daniboomerang - footer scenario for mobiles and tablets', function() {
       // Lets click on share button
       var shareButton = footerWrapper.element(by.id('share-button'));
       expect(shareButton.isPresent()).toBe(true);
-      var shareButtonLink = shareButton.element(by.css('.btn'));
+      var shareButtonLink = shareButton.element(by.css('.dboom-button-link'));
       expect(shareButtonLink.isPresent()).toBe(true);
       shareButtonLink.click();
       browser.sleep(1000);
@@ -76,7 +79,7 @@ describe('Daniboomerang - footer scenario for mobiles and tablets', function() {
       // Lets click on 'to top button'
       var toTopButton = footerWrapper.element(by.id('to-top-button'));
       expect(toTopButton.isPresent()).toBe(true);
-      var toTopButtonLink = toTopButton.element(by.css('.btn'));
+      var toTopButtonLink = toTopButton.element(by.css('.dboom-button-link'));
       expect(toTopButtonLink.isPresent()).toBe(true);
       toTopButtonLink.click();
       browser.sleep(4000);

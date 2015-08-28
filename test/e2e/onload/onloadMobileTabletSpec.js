@@ -12,7 +12,7 @@ describe('Daniboomerang - Scenario for mobile and tablet devices when on load', 
     browser.sleep(5000);
   });
   
-  it('should scroll to cover section', function() {
+  it('should scroll detect cover section on top', function() {
     expect(browser.getCurrentUrl()).toContain('/#/cover');
   });
 
@@ -36,7 +36,7 @@ describe('Daniboomerang - Scenario for mobile and tablet devices when on load', 
         var navbarResponsiveList = element.all(by.css('.nav-cover-responsive li'));
         // About <li> contains boomerang icon
         var about = navbarResponsiveList.get(0);
-        expect(about.element(by.css('.icon-dboom')).isPresent()).toBe(true);
+        expect(about.element(by.css('.icon-boomerang-solid')).isPresent()).toBe(true);
 
         // Loving to do <li> contains heart icon
         var loving = navbarResponsiveList.get(1);
