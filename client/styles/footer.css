@@ -38,7 +38,7 @@ footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background
 @media (min-width: 640px) { #to-top-button-wrapper { bottom: 8%; right: 8%; } #share-button-wrapper { bottom: 8%; left: 8%; } }
        
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 10%; right: 5%; } #share-button-wrapper { bottom: 10%; left: 5%; } }
+@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 10%; right: 5.5%; } #share-button-wrapper { bottom: 10%; left: 5.5%; } }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { .footer { font-size: 1.1em !important; } }
