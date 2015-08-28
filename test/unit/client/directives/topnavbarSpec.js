@@ -1,4 +1,4 @@
-describe('navbar', function() {
+describe('Top navbar', function() {
   
 	var elm, scope;
 
@@ -53,9 +53,9 @@ describe('navbar', function() {
 		var aboutLink = elm.find('#about-link');
 		expect(aboutLink.length).toBe(1);
 		expect(aboutLink.hasClass('active')).toBe(true);
-        var aboutIcon = elm.find('#about-icon');
-      	expect(aboutIcon.length).toBe(1);
-      	expect(aboutIcon.hasClass('faa-spin')).toBe(true);
+        var aboutIcon = elm.find('.about-icon');
+      	expect(aboutIcon.length).toBe(2);
+      	expect(aboutIcon.hasClass('spin-right-whole-fastest')).toBe(true);
 
       	/* If Loving, it must expand and set the section active */
 		$rootScope.$broadcast('active-section:loving');
@@ -63,9 +63,9 @@ describe('navbar', function() {
 		var lovingLink = elm.find('#loving-link');
 		expect(lovingLink.length).toBe(1);
 		expect(lovingLink.hasClass('active')).toBe(true);
-        var lovingIcon = elm.find('#loving-icon');
-      	expect(lovingIcon.length).toBe(1);
-      	expect(lovingIcon.hasClass('faa-pulse')).toBe(true);
+        var lovingIcon = elm.find('.loving-icon');
+      	expect(lovingIcon.length).toBe(2);
+      	expect(lovingIcon.hasClass('pulsing')).toBe(true);
 
 
 		/* If Work, it must expand and set the section active */
@@ -74,9 +74,9 @@ describe('navbar', function() {
 		var workLink = elm.find('#work-link');
 		expect(workLink.length).toBe(1);
 		expect(workLink.hasClass('active')).toBe(true);
-        var workIcon = elm.find('#work-icon');
-      	expect(workIcon.length).toBe(1);
-      	expect(workIcon.hasClass('faa-pulse')).toBe(true);
+        var workIcon = elm.find('.work-icon');
+      	expect(workIcon.length).toBe(2);
+      	expect(workIcon.hasClass('pulsing')).toBe(true);
 
       	/* If Contact, it must NOT expand navbar */
 		$rootScope.$broadcast('active-section:contact');
@@ -84,8 +84,8 @@ describe('navbar', function() {
 		var contactLink = elm.find('#contact-link');
 		expect(contactLink.length).toBe(1);
 		expect(contactLink.hasClass('active')).toBe(false);
-        var contactIcon = elm.find('#contact-icon');
-      	expect(contactIcon.length).toBe(1);
-      	expect(contactIcon.hasClass('faa-pulse')).toBe(false);
+        var contactIcon = elm.find('.contact-icon');
+      	expect(contactIcon.length).toBe(2);
+      	expect(contactIcon.hasClass('pulsing')).toBe(false);
     });	
 });

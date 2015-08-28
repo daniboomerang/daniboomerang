@@ -3,26 +3,23 @@
 /************/
 
 #sections { }
-h1 { font-size: 2.5em; font-weight: 200; }
-h2 { font-size: 2em; font-weight: 200; color: #FF9933 }
-h3 { font-size: 1.7em; font-weight: normal; color: rgba(56, 116, 167, 0.9); }
-p { margin: 1.5em 0; } }
-ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
-.list-text li { position: relative; padding-left: 2em; }
-.list-text li { position: relative; padding-left: 2em; }
-.list-text li:before { content: '\2022'; color: #FF9933; position: absolute; left: 0.5em; /* same as ul padding-left */ }
-.sublist-text ul:before { content: '\2022'; }
-.sublist-text li { position: relative; padding-left: 4em; }
-.sublist-text li:before { content: '\00B0'; color: #FF9933; position: absolute; left: 2em; /* same as ul padding-left */ }
-
-hr { border-color: rgba(255, 255, 255, 0.1) !important; margin-bottom: 2em; margin-top: 2em; }
 .section { padding-bottom:5%; background-color: #131212; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
 .section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
 .section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
 
+ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
+.list-text li { position: relative; padding-left: 2em; }
+.list-text li:before { content: '\2022'; color: #FF9933; position: absolute; left: 0.5em; /* same as ul padding-left */ }
+.sublist-text li { position: relative; padding-left: 4em; }
+.sublist-text li:before { content: '\00B0'; color: #FF9933; position: absolute; left: 2em; /* same as ul padding-left */ }
+hr { border-color: rgba(255, 255, 255, 0.1) !important; margin-bottom: 1em; margin-top: 1em; }
+.section { padding-bottom:5%; background-color: #131212; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
+.section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
+.section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
 blockquote { color: white; background-color: rgba(19, 65, 99, 0.3); border-left: 10px solid rgba(19, 65, 99, 0.7); margin: 1.5em 10px; padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019"; font-size: 1em; }
 blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
 blockquote p { display: inline; }
+
 
 #about { }
 #loving { }
@@ -42,17 +39,16 @@ blockquote p { display: inline; }
 /*********************/
 .visibility-hidden { opacity:0; }
 .visibility-visible { opacity:1; }
-
-.animated-section { color: white; width: 100%; /* -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; */}
+.animated-section { color: white; width: 100%; height:100%; /* -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; */}
 
 /* Extra small devices (tablets, 200px and up)*/
-@media (min-width: 200px) { .diagram {  width: 100vw; } #lightbulb-remote { margin-left: 36vw; width: 35vw; } div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
+@media (min-width: 200px) { .diagram {  width: 100vw; } #lightbulb { margin-left: 36vw; width: 35vw; } }
 /* Extra small devices (tablets, 400px and up)*/
-@media (min-width: 400px) { #lightbulb-remote { margin-left: 50vw; width: 35vw; } }
+@media (min-width: 400px) { #lightbulb { margin-left: 50vw; width: 35vw; } }
 /* Extra small devices (tablets, 500px and up)*/
-@media (min-width: 500px) { .diagram {  margin-left: 10vw; width: 80vw; } #lightbulb-remote { margin-left: 33vw; width: 35vw; } }
+@media (min-width: 500px) { .diagram {  margin-left: 10vw; width: 80vw; } #lightbulb { margin-left: 33vw; width: 35vw; } }
 /* Small devices (tablets, 680px and up)*/
-@media (min-width: 680px) { .diagram {  margin-left: 15vw; width: 70vw; } div#multiColumn { -moz-column-count: 2; -moz-column-gap: normal; -webkit-column-count: 2; -webkit-column-gap: normal; column-count: 2; column-gap: normal; } }
+@media (min-width: 680px) { .diagram {  margin-left: 15vw; width: 70vw; } }
 /* Medium small Devices, (phones, 1024px and up) */
 @media (min-width: 1280px) { .diagram {  margin-left: 20vw; width: 60vw; } }
 
@@ -79,15 +75,18 @@ blockquote p { display: inline; }
 @media (min-width: 200px) { .section { padding-top:35%; } }
 
 /* Extra small Devices, (phones, 320 and up) */
-@media (min-width: 320px) { .section { padding-top:5%; } }
+@media (min-width: 320px) { .section { padding-top:17%; } }
 
 /* Extra small Devices, (phones, 500px and up) */
 @media (min-width: 500px) { .section { padding-top:15%; } }
 
 /*////////////////////////////////////*/
 
+/* Small Devices, (phones, 640 and up) */
+@media (min-width: 640px) { .section { padding-top:12%; } }
+
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { .section { padding-top:5%; padding-bottom:5%; } }
+@media (min-width: 768px) { .section { padding-top:12%; padding-bottom:5%; } }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { .section {  } }

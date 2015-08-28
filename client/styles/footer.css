@@ -12,77 +12,52 @@ footer { position: fixed; bottom: 0; text-align: center; color: white; max-heigh
   background: rgba(0, 0, 0, 0.7);
   bottom: -5px;
   width: 0px;
+  -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6);
 }
-
 footer.expand-small { font-size: 1.3em; width: 40%; margin-left: 30%; background-color: rgba(255,255,255,0.8); max-height: 15%; transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
 footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background-color: rgba(19, 65, 99, 0.7); max-height: 25%;  transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
 .footer-container { width: auto; text-align: center; color: rgba(19, 65, 99, 0.7); }
-.floating-button { z-index: 1; position: fixed; right: 0;  width: 0px; height: 0px;  webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
-
+.floating-button { z-index: 1; }
 #footer-wrapper a { color: white; transition: all .5px ease-in-out; }
 #footer-wrapper a:hover { color: #FF9933; text-decoration:none; transition: all .5px ease-in-out; }
-#footer-wrapper .btn { background-color: rgba(19, 65, 99, 0.7); !important; border-radius: 100%; padding: 20%; font-size: inherit !important; }
-#footer-wrapper .reveal { -webkit-transition: height 0.5s; -moz-transition: height 0.5s; -ms-transition: height 0.5s; -o-transition: height 0.5s; transition: height 0.5s; }
-.box-shadow-up{ -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); }
+#to-top-button-wrapper { position: absolute; } 
+#share-button-wrapper { position: absolute; } 
 
 /*========== RESPONSIVENESS ==========*/
 
 /* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { .footer { font-size: 1em !important; }
-                            #to-top-button.reveal { width: 50px; height: 50px; bottom: 0.5%; right: 0.5%; }
-                            #share-button.reveal { width: 50px; height: 50px; bottom: 0.5%; left: 0.5%; }
-                            #footer-wrapper .btn { width: 50px; height: 50px; border: solid white 2px; } }
-
+@media (min-width: 200px) { .footer { font-size: 1em !important; } #to-top-button-wrapper { bottom: 8%; right: 10%; } #share-button-wrapper { bottom: 8%; left: 10%; } }
+                            
 /* Extra small Devices, (phones, 320px and up) */
 @media (min-width: 320px) { .footer { font-size: 1em !important; } }
 
 /* Extra small Devices, (phones, 500px and up) */
-@media (min-width: 500px) { #to-top-button.reveal { width: 60px; height: 60px; }
-                            #share-button.reveal { width: 60px; height: 60px; }
-                            #footer-wrapper .btn { width: 60px; height: 60px; padding: 23%; } }
+@media (min-width: 500px) { }
 
-
+/* Extra small Devices, (phones, 640px and up) */
+@media (min-width: 640px) { #to-top-button-wrapper { bottom: 8%; right: 8%; } #share-button-wrapper { bottom: 8%; left: 8%; } }
+       
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { .footer { font-size: 1.1em !important; }
-                            #to-top-button.reveal { bottom: 2%; right: 3%; width: 70px; height: 70px; }
-                            #share-button.reveal { bottom: 2%; left: 3%; width: 70px; height: 70px; }
-                            #footer-wrapper .btn { width: 70px; height: 70px; } }
-                            footer.expand-big { font-size: 1.2em; } }
+@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 10%; right: 5.5%; } #share-button-wrapper { bottom: 10%; left: 5.5%; } }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { .footer { font-size: 1.1em !important; } }
 
 /* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1024px) { .footer { font-size: 1.2em !important; }
-                             #footer-wrapper .btn { border: solid white 3px; } } 
-
+                             
 /* Large devices (large desktops, 1600px and up) */
 @media (min-width: 1600px) { .footer { font-size: 2.3em !important; }
-                             #to-top-button.reveal { right: 3%; width: 85px; height: 85px; }
-                             #share-button.reveal { left: 3%; width: 85px; height: 85px; }
-                             #footer-wrapper .btn { width: 85px; height: 85px; } }
-
+                             
 /* Extra large devices (extra large desktops, 2000 and up) */
-@media (min-width: 2000px) {  .footer { font-size: 2.6em !important; }
-                              #to-top-button.reveal { bottom: 3%; right: 3%; width: 95px; height: 95px; }
-                              #share-button.reveal { bottom: 3%; left: 3%; width: 95px; height: 95px; }
-                              #footer-wrapper .btn { width: 95px; height: 95px; border: solid white 4px; padding: 15%;} }
-
+@media (min-width: 2000px) {  .footer { font-size: 2.6em !important; #to-top-button-wrapper { bottom: 5%; right: 5%; } #share-button-wrapper { bottom: 5%; left: 5%; } }
+                              
 /* Extra large devices (extra large desktops, 2500 and up) */
 @media (min-width: 2500px) {  .footer { font-size: 2.8em !important; }
-                              #to-top-button.reveal { width: 115px; height: 115px; }
-                              #share-button.reveal { width: 115px; height: 115px; }
-                              #footer-wrapper .btn { width: 115px; height: 115px; } }
-
-
+                              
 /* Extra large devices (extra large desktops, 3000 and up) */
 @media (min-width: 3000px) {  .footer { font-size: 3em !important; } 
-                              #to-top-button.reveal { width: 135px; height: 135px; }
-                              #share-button.reveal { width: 135px; height: 135px; }
-                              #footer-wrapper .btn { width: 135px; height: 135px; } }
-
+                              
 /* Extra large devices (extra large desktops, 3500 and up) */
 @media (min-width: 3500px) {  .footer { font-size: 6em !important; }
-                              #to-top-button.reveal { width: 170px; height: 170px; }
-                              #share-button.reveal { width: 170px; height: 170px; }
-                              #footer-wrapper .btn { width: 170px; height: 170px; border: solid white 6px; padding: 21%; } }
+                              

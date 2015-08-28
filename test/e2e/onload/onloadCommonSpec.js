@@ -9,11 +9,54 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
   beforeEach(function() {
     browser.get('/');
     browser.ignoreSynchronization = true;
-    browser.sleep(5000);
+    browser.sleep(1000);
   });
   
-  it('should scroll to cover section', function() {
+  it('should scroll detect cover section on top', function() {
     expect(browser.getCurrentUrl()).toContain('/#/cover');
+  });
+
+  //////////////////
+  // INTRODUCTION //
+  //////////////////
+
+  // scope.$on('active-section:cover') 
+  it("should append the title and the rocket $on(active-section:cover)", function() {
+    console.log("should append the title and the rocket $on(active-section:cover)")
+    browser.sleep(1500);
+    var title = element(by.id('intro-title'));
+    expect(title.isPresent()).toBe(true);
+    expect(title.getAttribute('class')).toMatch('animated flipInX text-center');
+    browser.sleep(2001);
+    expect(title.getAttribute('class')).toMatch('animated flipOutX text-center');
+    var rocket = element(by.id('svg-alive-rocket'));
+    expect(rocket.isPresent()).toBe(true);
+  });
+
+  // scope.$on('event:rocket-firstProjection')
+  it("should display the button $on(event:rocket-firstProjection)", function() {
+    console.log("2er test Slleeping 24001")
+    browser.sleep(26001);
+    console.log("Awake!!")
+    var goButton = element(by.id('go-button'));
+    expect(goButton.isPresent()).toBe(true);
+    expect(goButton.getAttribute('class')).toMatch('animated fadeIn');
+  });
+
+  // scope.$on('event:rocket-tookoff')
+  it("should start the app $on(event:rocket-tookoff)", function() {
+    console.log("3er test Slleeping 22001")
+    browser.sleep(22001);
+    console.log("Awake!!")
+    var goButton = element(by.id('go-button'));
+    expect(goButton.isPresent()).toBe(true);
+    expect(goButton.getAttribute('class')).toMatch('animated fadeIn');
+    var dboomButtonLink = element.all(by.css('.dboom-button-link')).get(0);
+    dboomButtonLink.click();
+    // Waiting that a
+    browser.sleep(5100);
+    var intro = element(by.id('intro'));
+    expect(goButton.isPresent()).toBe(false);
   });
 
   ////////////  
@@ -21,11 +64,10 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
   ////////////  
   
   // The heading must be hidden
-  it("should not show the header, nor the navbar", function() {
-      var headerElement = element(by.tagName('header'));
-      expect(headerElement.isDisplayed()).toBe(false);
-      var nav = headerElement.element(by.id('navbar'));
-      expect(nav.isDisplayed()).toBe(false);
+  it("should not expand the header", function() {
+    var headerElement = element(by.tagName('header'));
+    expect(headerElement.isPresent()).toBe(true);
+    expect(headerElement.element(by.css('.expand')).isPresent()).toBe(false);
   });
 
   ///////////////////////

@@ -3,17 +3,17 @@
 angular.module('daniboomerangApp', [
 	'ngRoute',
 	// VENDOR
-	'duScroll',
 	'socialLinks',
 	// DANIBOOMERANG
-	'daniboomerangDirectives',
-	'daniboomerangServices'
+	'daniboomerangIntro',
+	'daniboomerangAsParallax'
 ])
 .config(function($locationProvider) {
     $locationProvider.html5Mode(false);
 })
-.run(function (scrollObserverService, urlObserverService) {
-	urlObserverService.init();
-	scrollObserverService.init();
+.directive('daniboomerangContent', function() {
+	return {
+	    restrict: 'E',
+	    template: '<div id="intro-wrapper" daniboomerang-intro-directive></div><div id="app-wrapper" class="visibility-hidden" daniboomerang-as-parallax-directive></div>'
+  	}  
 })
-.value('duScrollEasing', function easingFunction(t) { return t*(2-t) });

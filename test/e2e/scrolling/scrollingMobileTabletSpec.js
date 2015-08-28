@@ -5,7 +5,9 @@ describe('Daniboomerang - scrolling scenario', function() {
 	beforeEach(function() {
 		browser.get('/');
 		browser.ignoreSynchronization = true;
-		browser.sleep(5000);
+		browser.sleep(3000);
+		browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
+		browser.sleep(2000);
 	});
 
 	it('should scroll to cover section', function() {
@@ -25,13 +27,13 @@ describe('Daniboomerang - scrolling scenario', function() {
 				expect(navbarList.length).toBe(4);
 
 				// About <li> contains boomerang icon
-				expect(navbarList[0].element(by.css('.icon-dboom')).isPresent()).toBe(true);
+				expect(navbarList[0].element(by.css('.icon-boomerang-solid')).isPresent()).toBe(true);
 
 		        // Loving to do <li> contains heart icon
 		        expect(navbarList[1].element(by.css('.fa-heart')).isPresent()).toBe(true);
 
 		        // Work <li> contains github icon
-				expect(navbarList[2].element(by.css('.fa-github')).isPresent()).toBe(true);
+				expect(navbarList[2].element(by.css('.fa-suitcase')).isPresent()).toBe(true);
 
 		        // Contact <li> contains chat icon
 		        expect(navbarList[3].element(by.css('.fa-wechat')).isPresent()).toBe(true);
