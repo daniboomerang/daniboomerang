@@ -36,7 +36,7 @@ angular.module('daniboomerangIntro', [ ])
 						var introTitleId = element.find('#intro-title');
 						introTitleId.attr('class', 'animated flipOutX text-center');
 						//introTitleId.remove();
-						intro.append('<div id="svg-alive-rocket" svg-alive-rocket></div>');
+						intro.append('<div id="alive-svg-rocket" alive-svg-rocket></div>');
 						intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
 						intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
 						$compile(intro)(scope);
@@ -76,7 +76,7 @@ angular.module('daniboomerangIntro', [ ])
 		}
 	}
 })
-.directive('svgAliveRocket', function($interval, $timeout, $q, $rootScope) {
+.directive('aliveSvgRocket', function($interval, $timeout, $q, $rootScope) {
   	return {
 	    restrict: 'EA',
 	    scope: {},

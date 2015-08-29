@@ -325,7 +325,7 @@ daniboomerangDirectives.directive('button', function() {
 /** SVG ALIVE IMAGES DIRECTIVE **/
 /********************************/
 
-daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
+daniboomerangDirectives.directive('aliveSvg', function($interval, $timeout) {
   return {
     restrict: 'EA',
     scope: {},
@@ -340,7 +340,7 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
   };
 });  
 
-daniboomerangDirectives.directive('svgAliveBebooks', function($interval, $timeout) {
+daniboomerangDirectives.directive('aliveSvgBebooks', function($interval, $timeout) {
   return {
     restrict: 'EA',
     scope: {},
