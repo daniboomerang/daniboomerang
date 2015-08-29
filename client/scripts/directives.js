@@ -339,3 +339,59 @@ daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
     }
   };
 });  
+
+daniboomerangDirectives.directive('svgAliveBebooks', function($interval, $timeout) {
+  return {
+    restrict: 'EA',
+    scope: {},
+    template: function (elem, attrs) { return '<div id="book-case" ng-include="\'/images/BE-books-test.svg\'"></div>';  },
+    link: function (scope, element, attrs) {
+
+      var bookCase, rightEngine, centerEngine, leftEngine, leftLight, centerLight, rightLight;
+
+      /****************************************/
+      /* Waits the bookCase SVG to be loaded  */
+      /****************************************/
+
+      scope.$on('$includeContentLoaded', function () { init(); });
+
+      function init() {
+
+          bookCase = element.find('#book-case');
+          
+          /* Engines */
+          rightEngine = element.find('#ng-right-engine'); 
+          leftEngine = element.find('#ng-left-engine'); 
+          turnOnEngines();
+
+          /* Lights */
+          leftLight = element.find('#ng-left-light'); 
+          centerLight = element.find('#ng-center-light'); 
+          rightLight = element.find('#ng-right-light');
+          turnOnLights();
+      }
+
+      function turnOnEngines() {
+        $interval(function() {
+          (rightEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? rightEngine.attr('class', 'animated fadeIn') : rightEngine.attr('class', 'animated fadeOut');
+          (leftEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? leftEngine.attr('class', 'animated fadeIn') : leftEngine.attr('class', 'animated fadeOut');
+        }, 1750);  
+
+        $timeout(function() {
+          bookCase.attr('class', 'remarkable-suspension');
+        }, 3600);
+      }
+
+      function turnOnLights() {
+        $interval(function() {
+          (leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
+          (rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
+        }, 2000);
+        $interval(function() {
+          (centerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? centerLight.attr('class', 'animated fadeIn') : centerLight.attr('class', 'animated fadeOut');
+        }, 2500);        
+      }
+
+    } 
+  };
+}); 

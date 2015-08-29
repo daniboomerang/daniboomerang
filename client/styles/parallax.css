@@ -194,7 +194,7 @@
 #BE-parallax-images .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-earth.svg); }
 #BE-parallax-images .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
 #BE-parallax-images .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
-#BE-books { background-image: url(/images/BE-books.svg); background-size: 100%; background-repeat:no-repeat; height: 100%; width: 100%; position:absolute; }
+#BE-books { height: 100%; width: 100%; position:absolute; }
 #BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 90%; width: 90%; position:absolute; }
 #BE-ruby { background-image: url(/images/BE-ruby.svg); background-size: 100%; background-repeat:no-repeat; height: 60%; width: 60%; position:absolute; }
 /*#boomerang { border: solid red; background-image: url(/images/boomerang-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }*/

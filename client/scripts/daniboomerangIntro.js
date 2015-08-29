@@ -83,8 +83,8 @@ angular.module('daniboomerangIntro', [ ])
 	    template: function (elem, attrs) { return '<div id="orbit-rocket" class="arrival"><div id="rocket" ng-include="\'/images/rocket.svg\'"></div></div>';  },
 	    link: function (scope, element, attrs) {
 
-			var orbitRocket, rocket, rightEngineFull, rightEngineFull, rightEngine, centerEngineFull, centerEngineFull,
-	      		centerEngine, leftEngine, leftEngineFull, leftEngineFull, projectionScreen, projectionScreen,
+			var orbitRocket, rocket, rightEngineFull, rightEngine, centerEngineFull,
+	      		centerEngine, leftEngine, leftEngineFull, projectionScreen, projectionScreen,
 	      		leftLight, centerLight, rightLight, projectionLight, projectionLight,
 	      		angularProjection, angularProjection, nodeProjection, nodeProjection, protractorProjection, protractorProjection,
 	      		responsiveProjection, responsiveProjection, karmaProjection, karmaProjection, browsersProjection,
