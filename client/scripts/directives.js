@@ -344,7 +344,7 @@ daniboomerangDirectives.directive('svgAliveBebooks', function($interval, $timeou
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { return '<div id="book-case" ng-include="\'/images/BE-books-test.svg\'"></div>';  },
+    template: function (elem, attrs) { return '<div id="book-case" ng-include="\'/images/BE-books.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
       var bookCase, rightEngine, centerEngine, leftEngine, leftLight, centerLight, rightLight;
