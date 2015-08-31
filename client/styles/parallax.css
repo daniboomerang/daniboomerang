@@ -9,6 +9,13 @@
 .parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 3; }
 .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
 .parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; height: 120vh;}
+.parallax__section_test { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; }
+.animated-title { text-transform: uppercase; font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; color: #FF9933; }
+@media all { .animated-title { font-size: 2.2em; } }
+@media (min-width: 768px) and (max-width: 1024px) { .animated-title { font-size: 2em; } }
+@media (min-width: 640px) and (max-width: 767px) { .animated-title { font-size: 1.8em; } }
+@media (min-width: 500px) and (max-width: 639px) { .animated-title { font-size: 1.6em; } }
+@media (min-width: 200px) and (max-width: 500px) { .animated-title { font-size: 1.4em; } }
 
 /*****************/
 /* COVER SECTION */
@@ -93,15 +100,18 @@
   #orbit-big-stone { height: 17vh; width: 17vh;  margin-top: 25%; margin-left: 25%; position: absolute;}
   #orbit-stones-circle { margin-left: 19%; margin-top: 45%;  height: 35vh; width: 35vh; }
 }
-/* ipad & ipad mini */
 
-@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
-  #remote-working-parallax-images { height: 145vh  !important;}
-}
-@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
-  #remote-working-parallax-images { height: 87vh !important;}
-}
-/************/
+  /********************/
+  /* ipad & ipad mini */
+  /********************/
+
+  @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
+    #remote-working-parallax-images { height: 145vh  !important;}
+  }
+  @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
+    #remote-working-parallax-images { height: 87vh !important;}
+  }
+  /********************/
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   #orbit-iss { margin-left: 15vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
@@ -112,8 +122,6 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 40vh; }
   #remote-working-parallax-images .parallax__layer--base { height: 160vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 80vh; }
-  /*#orbit-big-stone { height: 8vh; width: 8vh; }
-  #orbit-stones-circle { height: 20vh; width: 20vh; }*/
   #orbit-iss { margin-left: 10vh; margin-top: -15vh;  height: 25vh; width: 25vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
@@ -121,16 +129,12 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 30vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 80vh; }
   #remote-working-parallax-images .parallax__layer--base { }
-  /*#orbit-big-stone { height: 5vh; width: 5vh; }
-  #orbit-stones-circle { height: 15vh; width: 15vh; }*/
   #orbit-iss { margin-left: 10vh; margin-top: -15vh;  height: 20vh; width: 20vh; }
 }
 @media (min-width: 500px) and (max-width: 639px) {
   #remote-working-parallax-images { height: 90vh; }
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
-  /*#orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 20vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }  
 @media (min-width: 400px) and (max-width: 499px) {
@@ -138,24 +142,18 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 175vh; }
   #cliff { height: 140%; width: 140%; }
-  /*#orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 30vh; margin-top: -45vh;  height: 12vh; width: 12vh; }
 }
 @media (min-width: 320px) and (max-width: 399px) {
   #remote-working-parallax-images { height: 60vh; }
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
-  /*#orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }   
 @media (min-width: 200px) and (max-width: 319px) {
   #remote-working-parallax-images { height: 45vh; }
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 110vh; }
-  /*#orbit-big-stone { height: 3vh; width: 3vh; }
-  #orbit-stones-circle { height: 10vh; width: 10vh; }*/
   #orbit-iss { margin-left: 30vh; margin-top: -15vh;  height: 15vh; width: 15vh; }
 }   
 
@@ -168,23 +166,8 @@
 /* BACK END ANIMATED SECTION */
 /*****************************/
 #BE-parallax-section { z-index: 2; }
-#BE-parallax-section .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/BE-space-moon.svg); }
+#BE-parallax-section .parallax__layer--deep { }
 #BE-parallax-section .parallax__layer--base { }
-
-/* ipad & ipad mini */
-
-@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
-  #BE-parallax-images { height: 185vh !important; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
-}
-@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
-  #BE-parallax-images { height: 142vh !important; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 0vh !important; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
-  #BE-parallax-images .parallax__layer--back { height: 120vh !important; }
-}
-/************/
 
 /***************************/
 /* BACK END IMAGES SECTION */
@@ -192,31 +175,46 @@
 #BE-parallax-images { z-index: 1; }
 #BE-parallax-images .parallax__layer--deep { background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/BE-space.svg); }
 #BE-parallax-images .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/BE-earth.svg); }
-#BE-parallax-images .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
+#BE-parallax-images .parallax__layer--base {  background-size: 100%; background-repeat:no-repeat; background-image: url(); }
 #BE-parallax-images .parallax__layer--fore { background-size: 100%; background-repeat:no-repeat; background-image: url(); }
 #BE-books { height: 100%; width: 100%; position:absolute; }
-#BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 90%; width: 90%; position:absolute; }
-#BE-ruby { background-image: url(/images/BE-ruby.svg); background-size: 100%; background-repeat:no-repeat; height: 60%; width: 60%; position:absolute; }
-/*#boomerang { border: solid red; background-image: url(/images/boomerang-blue.svg); background-size: 100%; background-repeat:no-repeat; background-position: center; position: absolute; }*/
+/*#BE-dboom { background-image: url(/images/BE-dboom.svg); background-size: 100%; background-repeat:no-repeat; height: 90%; width: 90%; position:absolute; }*/
+#BE-ruby {background-image: url(/images/BE-ruby.svg); background-size: 100%; background-repeat:no-repeat; height: 60%; width: 60%; position:absolute; }
+
+  /********************/
+  /* ipad & ipad mini */
+  /********************/
+  @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
+    #BE-parallax-images { height: 185vh !important; }
+    #BE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
+    #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
+  }
+  @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
+    #BE-parallax-images { height: 142vh !important; }
+    #BE-parallax-images .parallax__layer--base { margin-top: 0vh !important; }
+    #BE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
+    #BE-parallax-images .parallax__layer--back { height: 120vh !important; }
+  }
+  /********************/
+
 @media all {
   #BE-parallax-images { height: 300vh; margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--deep { height: 200vh; margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 70vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 70vh; }
-  #BE-parallax-images .parallax__layer--fore { margin-top: 25vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
+  #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-books { top:0vh; left: 0vh; }
-  #BE-dboom { top: 135vh; right: -20vh; }
-  #BE-ruby { top: 110vh; right: -20vh; }
-  /*#boomerang { height: 7%; width: 7%; top:40vh; left:30vh; }*/
+  /*#BE-dboom { top: 135vh; right: -20vh; }*/
+  #BE-ruby { top: 110vh; right: -50vh; }
 }  
 @media (min-width: 1024px) and (max-width: 1279px) {
   #BE-parallax-images { height: 250vh; margin-top: 70vh; }
   #BE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 40vh; }
-  #BE-parallax-images .parallax__layer--base { margin-top: 50vh; }
+  #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
-  #BE-ruby { top: 83vh; right: -17vh; }
-  #BE-dboom { top: 110vh; right: -20vh; }
+  #BE-ruby { top: 150vh; right: 0vh; }
+  /*#BE-dboom { top: 110vh; right: -20vh; }*/
   /* #boomerang { height: 5%; width: 5%; top:37vh; left:27vh; }*/
 }
 @media (min-width: 992px) and (max-width: 1023px) { 
@@ -226,8 +224,7 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 30vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { top: 100vh; right: -10vh; }
-  /*#boomerang { height: 5%; width: 5%; top:37vh; left:25vh;}*/
+  /*#BE-dboom { top: 100vh; right: -10vh; }*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #BE-parallax-images { height: 200vh; }
@@ -236,9 +233,8 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 40vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { top: 100vh; right: -10vh; }
+  /*#BE-dboom { top: 100vh; right: -10vh; }*/
   #BE-books { height: 110%; width: 110%; }
-  /*#boomerang { height: 5%; width: 5%; top:37vh; left:25vh; }*/
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #BE-parallax-images { height: 170vh; }
@@ -247,7 +243,7 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 20vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 20vh; }
   #BE-ruby { top: 90vh; right: -20vh; }
-  #BE-dboom { top: 100vh; right: -10vh; }
+  /*#BE-dboom { top: 100vh; right: -10vh; }*/
   #BE-books { top: -10vh; height: 120%; width: 120%; }
 }
 @media (min-width: 550px) and (max-width: 639px) {
@@ -257,7 +253,7 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 10vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 10vh; }
   #BE-ruby { top: 50vh; right: -12vh; }
-  #BE-dboom { top: 35vh; right: -12vh; }
+  /*#BE-dboom { top: 35vh; right: -12vh; }*/
   #BE-books { top: -5vh; height: 110%; width: 110%; }
 }
 @media (min-width: 500px) and (max-width: 549px) {
@@ -267,7 +263,7 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 50vh; right: -12vh; }
-  #BE-dboom { top: 35vh; right: -12vh; }
+  /*#BE-dboom { top: 35vh; right: -12vh; }*/
   #BE-books { top: -5vh; height: 110%; width: 110%; }
 }
 @media (min-width: 400px) and (max-width: 499px) {
@@ -277,7 +273,7 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 65vh; right: -9vh; }
-  #BE-dboom { top: 50vh; right: -5vh; }
+  /*#BE-dboom { top: 50vh; right: -5vh; }*/
   #BE-books { top: -10vh; height: 115%; width: 115%; }
 }
 @media (min-width: 320px) and (max-width: 399px) {
@@ -287,8 +283,8 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; background-size: 180%; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 63vh; right: -9vh; }
-  #BE-dboom { top: 52vh; right: -5vh; }
-  #BE-books { top: 0vh; height: 115%; width: 115%; }
+  /*#BE-dboom { top: 52vh; right: -5vh; }*/
+  #BE-books { top: 15vh; height: 115%; width: 115%; }
 }
 @media (min-width: 200px) and (max-width: 319px) {
   #BE-parallax-images { height: 70vh; }
@@ -297,7 +293,7 @@
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; background-size: 180%; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; }
   #BE-ruby { top: 43vh; right: -9vh; }
-  #BE-dboom { top: 28vh; right: -5vh; }
+  /*#BE-dboom { top: 28vh; right: -5vh; }*/
   #BE-books { top: 0vh; height: 115%; width: 115%; }
 }
 
@@ -325,26 +321,29 @@
 #FE-books { background-size: 100%; background-repeat:no-repeat;  background-image: url(/images/FE-books.svg); height: 100%; width: 100%; position:absolute; }
 #FE-gaming { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-gaming.svg); height: 40%; width: 50%; position:absolute; }
 
-/* ipad & ipad mini */
+  /********************/
+  /* ipad & ipad mini */
+  /********************/
 
-@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
-  #FE-parallax-images { height: 175vh !important; }
-  #FE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
-  #FE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
-  #FE-mobile-tablet { top: 100vh !important; left: -20vh !important; }
-  #FE-gaming { top: 85vh !important; left: 0vh !important; }
-  #FE-books { top:10vh !important; right: -0vh !important; }
-}
-@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
-  #FE-parallax-images { height: 110vh !important; }
-  #FE-parallax-images .parallax__layer--base { margin-top: 20vh !important; }
-  #FE-parallax-images .parallax__layer--back { margin-top: 50vh !important; height: 120vh !important; }
-  #FE-parallax-images .parallax__layer--fore { margin-top: 10vh !important; }
-  #FE-mobile-tablet { top: 60vh !important; left: -20vh !important; }
-  #FE-gaming { top: 40vh !important; left: 0vh !important; }
-  #FE-books { top:0vh !important; right: -0vh !important; }
-}
-/************/
+  @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape){ 
+    #FE-parallax-images { height: 175vh !important; }
+    #FE-parallax-images .parallax__layer--base { margin-top: 5vh !important; }
+    #FE-parallax-images .parallax__layer--fore { margin-top: 0vh !important; }
+    #FE-mobile-tablet { top: 100vh !important; left: -20vh !important; }
+    #FE-gaming { top: 85vh !important; left: 0vh !important; }
+    #FE-books { top:10vh !important; right: -0vh !important; }
+  }
+  @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait){ 
+    #FE-parallax-images { height: 110vh !important; }
+    #FE-parallax-images .parallax__layer--base { margin-top: 20vh !important; }
+    #FE-parallax-images .parallax__layer--back { margin-top: 50vh !important; height: 120vh !important; }
+    #FE-parallax-images .parallax__layer--fore { margin-top: 10vh !important; }
+    #FE-mobile-tablet { top: 60vh !important; left: -20vh !important; }
+    #FE-gaming { top: 40vh !important; left: 0vh !important; }
+    #FE-books { top:0vh !important; right: -0vh !important; }
+  }
+
+  /********************/
 
 @media all { 
   #FE-parallax-images { height: 260vh; }
