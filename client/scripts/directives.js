@@ -347,7 +347,7 @@ daniboomerangDirectives.directive('aliveSvgBebooks', function($interval, $timeou
     template: function (elem, attrs) { return '<div id="book-case" ng-include="\'/images/BE-books.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
-      var bookCase, rightEngine, centerEngine, leftEngine, leftLight, centerLight, rightLight;
+      var bookCase, rightEngine, centerEngine, leftEngine, leftLight, rightLight;
 
       /****************************************/
       /* Waits the bookCase SVG to be loaded  */
@@ -360,26 +360,18 @@ daniboomerangDirectives.directive('aliveSvgBebooks', function($interval, $timeou
           bookCase = element.find('#book-case');
           
           /* Engines */
-          rightEngine = element.find('#ng-right-engine'); 
-          leftEngine = element.find('#ng-left-engine'); 
+          engine = element.find('#ng-engine'); 
           turnOnEngines();
 
           /* Lights */
           leftLight = element.find('#ng-left-light'); 
-          centerLight = element.find('#ng-center-light'); 
           rightLight = element.find('#ng-right-light');
           turnOnLights();
       }
 
       function turnOnEngines() {
-        $interval(function() {
-          (rightEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? rightEngine.attr('class', 'animated fadeIn') : rightEngine.attr('class', 'animated fadeOut');
-          (leftEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? leftEngine.attr('class', 'animated fadeIn') : leftEngine.attr('class', 'animated fadeOut');
-        }, 1750);  
-
-        $timeout(function() {
-          bookCase.attr('class', 'remarkable-suspension');
-        }, 3600);
+        $interval(function() { (engine.attr('class') ==  (undefined || 'animated fadeOut')) ? engine.attr('class', 'animated fadeIn') : engine.attr('class', 'animated fadeOut'); }, 1750);  
+        $timeout(function() { bookCase.attr('class', 'suspension'); }, 3600);
       }
 
       function turnOnLights() {
@@ -387,11 +379,53 @@ daniboomerangDirectives.directive('aliveSvgBebooks', function($interval, $timeou
           (leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
           (rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
         }, 2000);
-        $interval(function() {
-          (centerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? centerLight.attr('class', 'animated fadeIn') : centerLight.attr('class', 'animated fadeOut');
-        }, 2500);        
       }
 
+    } 
+  };
+}); 
+
+daniboomerangDirectives.directive('aliveSvgRuby', function($interval, $timeout) {
+  return {
+    restrict: 'EA',
+    scope: {},
+    template: function (elem, attrs) { return '<div id="ruby" ng-include="\'/images/BE-ruby.svg\'"></div>';  },
+    link: function (scope, element, attrs) {
+
+      //var wires = []; 
+      scope.$on('$includeContentLoaded', function () { init(); });
+
+      function init() {
+          
+          /*********/
+          // WIRES //
+          /*********/
+          var currentWireId;
+          for (var i=0; i<7; i++){
+            currentWireId = '#ng-wire-' + i.toString();
+            element.find(currentWireId).attr('class', 'visibility-hidden');
+          } 
+
+          var currentWire = element.find('#ng-wire-0');
+          currentWire.attr('class', 'animated fadeIn');
+          var currentWireNumber;
+
+          $interval(function() { 
+            currentWire.attr('class', 'visibility-hidden');
+            currentWire = element.find('#ng-wire-' + Math.floor((Math.random() * 7)).toString()); 
+            currentWire.attr('class', 'animated fadeIn');
+          }, 500);
+
+          /****************/
+          /* SERVER LIGHT */
+          /****************/
+          serverLight = element.find('#ng-server-light'); 
+          serverReflect = element.find('#ng-server-reflect'); 
+          $interval(function() { 
+            (serverLight.attr('class') ==  (undefined || 'animated fadeOut')) ? serverLight.attr('class', 'animated fadeIn') : serverLight.attr('class', 'animated fadeOut');
+            (serverReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? serverReflect.attr('class', 'animated fadeIn') : serverReflect.attr('class', 'animated fadeOut');
+          }, 2500);
+      }
     } 
   };
 }); 
