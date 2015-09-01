@@ -104,6 +104,7 @@
 }
 
 /* REMARKABLE SUSPENSION */
+
 @-webkit-keyframes remarkable-suspension {
     from {-webkit-transform:translate(0, -0vh); -ms-transform: translate(0, -0); -o-transform: translate(0, -0); -moz-transform: translate(0, -0); } 
     50% {-webkit-transform:translate(0, -3vh); -ms-transform: translate(0, -3vh); -o-transform: translate(0, -3vh); -moz-transform: translate(0, -3vh); } 

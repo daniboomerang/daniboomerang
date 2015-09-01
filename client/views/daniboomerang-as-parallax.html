@@ -48,38 +48,43 @@
       <div parallax-subsection name="about" type="text-only"></div>
     </div>
   </div>
-  <div id="BE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.backEnd}">
-    <div class="parallax__layer parallax__layer--base">
-        <div parallax-subsection name="backEnd" type="text-only"></div>
+  <div id="back-end">
+    <div id="BE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.backEnd}">
+      <div class="parallax__layer parallax__layer--base">
+          <div parallax-subsection name="backEnd" type="text-only"></div>
+      </div>
     </div>
-  </div>
-  <div id="BE-parallax-images" class="parallax__section">
-    <div class="parallax__layer parallax__layer--deep">
-      <div id="be-orbit-comet-white" class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="be-comet-white" class="comet-white comet-from-left"></div></div>
+    <div id="BE-parallax-images" class="parallax__section">
+      <div class="parallax__layer parallax__layer--deep">
+        <div id="be-orbit-comet-white" class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="be-comet-white" class="comet-white comet-from-left"></div></div>
+      </div>
+      <div class="parallax__layer parallax__layer--back"></div>  
+      <div class="parallax__layer parallax__layer--fore"><div alive-svg-bebooks id="BE-books"></div></div>
+      <div class="parallax__layer parallax__layer--base"><div alive-svg-ruby id="BE-ruby"></div>
+      </div>
     </div>
-    <div class="parallax__layer parallax__layer--back"></div>  
-    <div class="parallax__layer parallax__layer--fore"><div alive-svg-bebooks id="BE-books"></div></div>
-    <div class="parallax__layer parallax__layer--base"><div alive-svg-ruby id="BE-ruby"></div>
-    </div>
+    <a href="#back-end" du-scrollspy></a>
   </div>
   <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.loving}">
     <div class="parallax__layer parallax__layer--base">
     <div parallax-subsection name="loving" type="text-only"></div>
     </div>
   </div>
-  <div id="FE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.frontEnd}">
-    <div class="parallax__layer parallax__layer--deep"></div>
-    <div class="parallax__layer parallax__layer--base">
-      <div parallax-subsection name="frontEnd" type="text-only"></div>
+  <div id="front-end">
+    <div id="FE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.frontEnd}">
+      <div class="parallax__layer parallax__layer--base">
+        <div parallax-subsection name="frontEnd" type="text-only"></div>
+      </div>
     </div>
-  </div>
-  <div id="FE-parallax-images" class="parallax__section">
-    <div class="parallax__layer parallax__layer--deep">
-      <div id="fe-orbit-comet-blue" class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="be-comet-blue" class="comet-blue comet-from-left"></div></div>
+    <div id="FE-parallax-images" class="parallax__section">
+      <div class="parallax__layer parallax__layer--deep">
+        <div id="fe-orbit-comet-blue" class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="be-comet-blue" class="comet-blue comet-from-left"></div></div>
+      </div>
+      <div class="parallax__layer parallax__layer--back"></div>
+      <div class="parallax__layer parallax__layer--base"><div id="FE-gaming"></div></div>
+      <div class="parallax__layer parallax__layer--fore"><div id="FE-books"></div><div id="FE-mobile-tablet"></div></div>
     </div>
-    <div class="parallax__layer parallax__layer--back"></div>
-    <div class="parallax__layer parallax__layer--base"><div id="FE-gaming"></div></div>
-    <div class="parallax__layer parallax__layer--fore"><div id="FE-books"></div><div id="FE-mobile-tablet"></div></div>
+    <a href="#front-end" du-scrollspy></a>
   </div>
   <div id="work-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.work}">
     <div class="parallax__layer parallax__layer--base">

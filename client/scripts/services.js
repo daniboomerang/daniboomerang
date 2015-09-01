@@ -56,3 +56,12 @@ daniboomerangServices.factory('urlObserverService', function ($rootScope, $locat
 		}
 	}	
 });
+
+daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval){
+	
+	return {
+		cancelInterval: function (intervalName){
+			$interval.cancel(intervalName);
+		}
+	}	
+});
