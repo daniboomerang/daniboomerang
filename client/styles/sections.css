@@ -3,7 +3,7 @@
 /************/
 
 #sections { }
-.section { padding-bottom:5%; background-color: #131212; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
+.section { padding-bottom:5%; background-color: rgba(255,255,255,0.6); color: black; border-style: solid green; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0, 097); -moz-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.9); box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.9); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 1px solid ; }
 .section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
 .section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
 
@@ -13,9 +13,6 @@ ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ li
 .sublist-text li { position: relative; padding-left: 4em; }
 .sublist-text li:before { content: '\00B0'; color: #FF9933; position: absolute; left: 2em; /* same as ul padding-left */ }
 hr { border-color: rgba(255, 255, 255, 0.1) !important; margin-bottom: 1em; margin-top: 1em; }
-.section { padding-bottom:5%; background-color: black; /*#131212*/; color: white; -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; }
-.section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
-.section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
 blockquote { color: white; background-color: rgba(19, 65, 99, 0.3); border-left: 10px solid rgba(19, 65, 99, 0.7); margin: 1.5em 10px; padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019"; font-size: 1em; }
 blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
 blockquote p { display: inline; }
@@ -39,7 +36,7 @@ blockquote p { display: inline; }
 /*********************/
 .visibility-hidden { opacity:0; }
 .visibility-visible { opacity:1; }
-.animated-section { color: white; width: 100%; height:100%; /* -webkit-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); -moz-box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); box-shadow: inset 0px 0px 21px 5px rgba(163,161,163,0.27); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; */}
+.animated-section { color: white; width: 100%; height:100%; /* -webkit-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.97); -moz-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.97); box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.97); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; */}
 
 /* Extra small devices (tablets, 200px and up)*/
 @media (min-width: 200px) { .diagram {  width: 100vw; } #lightbulb { margin-left: 36vw; width: 35vw; } }

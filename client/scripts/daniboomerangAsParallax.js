@@ -5,6 +5,7 @@ angular.module('daniboomerangAsParallax', [
 	'duScroll',
 	// DANIBOOMERANG
 	'daniboomerangDirectives',
+	'daniboomerangAliveSvgDirectives',
 	'daniboomerangServices'
 ])
 .run(function (scrollObserverService, urlObserverService) {
