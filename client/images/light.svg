@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 199.82853 118.94804" width="100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin slice" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <radialGradient id="radialGradient21121" gradientUnits="userSpaceOnUse" cy="45.56" cx="7.5345" gradientTransform="matrix(.9909 0 0 .95977 7.3969 7.4413)" r="11">
+   <stop stop-opacity=".73333" stop-color="#f92b1d" offset="0"/>
+   <stop stop-opacity=".28571" stop-color="#00cef3" offset=".25477"/>
+   <stop stop-opacity="0" stop-color="#16a5c5" offset="1"/>
+  </radialGradient>
+  <radialGradient id="radialGradient63107" gradientUnits="userSpaceOnUse" cy="31.863" cx="-.70711" gradientTransform="matrix(.28051 -.29847 .55271 .51945 -2.8902 34.134)" r="2.3865">
+   <stop stop-opacity=".48627" stop-color="#aecbff" offset="0"/>
+   <stop stop-opacity=".22335" stop-color="#28c7ff" offset=".38863"/>
+   <stop stop-opacity=".20392" stop-color="#b6d9e9" offset="1"/>
+  </radialGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(517.34 -92.888)">
+  <g transform="translate(371.43 285.71)">
+   <g transform="translate(-889,-192.82)">
+    <circle id="ng-ruby-platform-light" cy="50.657" cx="14.692" r="13.5" fill="url(#radialGradient21121)">
+     <title>Ruby Platform Light</title>
+    </circle>
+    <path fill="url(#radialGradient63107)" d="m15.173 52.849-1.6636-1.6132s-0.66855-1.1847-0.30509-1.5785c0.36833-0.39906 1.6191 0.18028 1.6191 0.18028l1.6636 1.6132z" fill-rule="evenodd"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -20,7 +20,7 @@
 @media (min-width: 768px) and (orientation:portrait) { .scroll-down { margin-top: 8%; } }
 @media (min-width: 768px) and (orientation:landscape) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
 @media (min-width: 992px) { #cover { height: 200%; } .scroll-down { margin-top: 3%; } }
-@media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15vh; } .scroll-down { margin-top: 2%; } }
+@media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15%; } .scroll-down { margin-top: 2%; } }
 
 /* Extra small Devices, (phones, 200px and up) */
 @media (min-width: 200px) { }

@@ -7,6 +7,7 @@ body { margin:0; padding:0; font-size: 3px;  font-weight: 200;  -webkit-font-smo
 a { color: white; transition: all .5s ease-in-out; }
 a:hover { color: #FF9933; text-decoration:none; transition: all .5s ease-in-out; }
 .hidden { visibility: hidden; }
+.crystal { background-color: rgba(255,255,255,0.0); -webkit-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0, 097); -moz-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.9); box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.9); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; }
 
 /* TEXT */
 h1 { font-size: 2.5em; font-weight: 200; }
@@ -22,7 +23,7 @@ p { margin: 1.5em 0; }
 
 /* RESPONSIVENESS */
 /* Extra small devices (desktops, 200px and up) */
-@media (min-width: 200px) { body { font-size: 1.4em; line-height: 2; } .custom-fluid-container { width: 95%; } div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
+@media (min-width: 200px) { body { font-size: 1.4em; line-height: 2; } .custom-fluid-container {  padding-left:5%; padding-right:5%; margin-left:5%; margin-right:5%; } div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
 
 /* Medium devices (desktops, 320px and up) */
 @media (min-width: 320px) { body { font-size: 1.6em; } }
@@ -31,13 +32,13 @@ p { margin: 1.5em 0; }
 @media (min-width: 500px) { body { font-size: 1.6em; } }
 
 /* Medium devices (desktops, 640px and up) */
-@media (min-width: 640px) { .custom-fluid-container { width: 90%;} div#multiColumn { -moz-column-count: 2; -moz-column-gap: normal; -webkit-column-count: 2; -webkit-column-gap: normal; column-count: 2; column-gap: normal; } }
+@media (min-width: 640px) { div#multiColumn { -moz-column-count: 2; -moz-column-gap: normal; -webkit-column-count: 2; -webkit-column-gap: normal; column-count: 2; column-gap: normal; } }
 
 /* Medium devices (desktops, 768px and up) */
 @media (min-width: 768px) { body { font-size: 1.8em; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { body { font-size: 2em; } .custom-fluid-container { width: 80%; } }
+@media (min-width: 992px) { body { font-size: 2em; } }
 
 /* Medium devices (desktops, 1280px and up) */
 @media (min-width: 1280px) { body { font-size: 2em; } }
