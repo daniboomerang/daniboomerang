@@ -48,42 +48,37 @@
       <div parallax-subsection name="about" type="text-only"></div>
     </div>
   </div>
-  <div id="back-end">
-    <div id="BE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.backEnd}">
-      <div class="parallax__layer parallax__layer--base">
-          <div parallax-subsection name="backEnd" type="text-only"></div>
-      </div>
+  <div id="BE-parallax-images" class="parallax__section">
+    <div class="parallax__layer parallax__layer--deep">
+      <div id="be-orbit-comet-white" class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="be-comet-white" class="comet-white comet-from-left"></div></div>
     </div>
-    <div id="BE-parallax-images" class="parallax__section">
-      <div class="parallax__layer parallax__layer--deep">
-        <div id="be-orbit-comet-white" class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="be-comet-white" class="comet-white comet-from-left"></div></div>
+    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-earth id="BE-earth"></div></div>  
+    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="BE" id="BE-books"></div></div>
+    <div class="parallax__layer parallax__layer--base">
+      <div id="back-end"> <!-- This is just to trigger the event onScroll -->
+        <div parallax-subsection name="backEnd" type="text-only"></div>
+        <div alive-svg-ruby id="BE-ruby"></div></div>
       </div>
-      <div class="parallax__layer parallax__layer--back"><div alive-svg-be-earth id="BE-earth"></div></div>  
-      <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="BE" id="BE-books"></div></div>
-      <div class="parallax__layer parallax__layer--base"><div alive-svg-ruby id="BE-ruby"></div></div>
-    </div>
-    <a href="#back-end" du-scrollspy></a>
+      <a href="#back-end" du-scrollspy></a>
   </div>
   <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.loving}">
     <div class="parallax__layer parallax__layer--base">
     <div parallax-subsection name="loving" type="text-only"></div>
     </div>
   </div>
-  <div id="front-end">
-    <div id="FE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.frontEnd}">
-      <div class="parallax__layer parallax__layer--base">
+  <div id="FE-parallax-images" class="parallax__section">
+    <div class="parallax__layer parallax__layer--deep">
+      <div id="fe-orbit-comet-blue" class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="be-comet-blue" class="comet-blue comet-from-left"></div></div>
+    </div>
+    <div class="parallax__layer parallax__layer--back"><div alive-svg-fe-earth id="FE-earth"></div></div>  
+    <div class="parallax__layer parallax__layer--base">
+      <div id="front-end"> <!-- This is just to trigger the event onScroll -->
         <div parallax-subsection name="frontEnd" type="text-only"></div>
+        <div alive-svg-gaming id="FE-gaming"></div>
       </div>
+      <a href="#front-end" du-scrollspy></a>
     </div>
-    <div id="FE-parallax-images" class="parallax__section">
-      <div class="parallax__layer parallax__layer--deep">
-        <div id="fe-orbit-comet-blue" class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="be-comet-blue" class="comet-blue comet-from-left"></div></div>
-      </div>
-      <div class="parallax__layer parallax__layer--back"><div alive-svg-fe-earth id="FE-earth"></div></div>  
-      <div class="parallax__layer parallax__layer--base"><div alive-svg-gaming id="FE-gaming"></div></div>
-      <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="FE" id="FE-books"></div></div>
-    </div>
-    <a href="#front-end" du-scrollspy></a>
+    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="FE" id="FE-books"></div></div>
   </div>
   <div id="work-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.work}">
     <div class="parallax__layer parallax__layer--base">

@@ -168,8 +168,8 @@
 /***************************/
 /* BACK END IMAGES SECTION */
 /***************************/
-#BE-parallax-images { z-index: 1; }
-#BE-parallax-images .parallax__layer--deep { height: 200vh; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/BE-space.svg); }
+#BE-parallax-images { z-index: 1; margin-top: 50vh; }
+#BE-parallax-images .parallax__layer--deep { height: 150vh; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/BE-space.svg); }
 #BE-parallax-images .parallax__layer--back { }
 #BE-parallax-images .parallax__layer--base { }
 #BE-parallax-images .parallax__layer--fore { }
@@ -194,70 +194,70 @@
 
 @media all {
   #BE-parallax-images { height: 250vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 70vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby { margin-top: 130vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: 0vh; }
 }  
 @media (min-width: 1024px) and (max-width: 1279px) {
   #BE-parallax-images { height: 220vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby {  margin-top: 105vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: 0vh; }
 }
 @media (min-width: 992px) and (max-width: 1023px) { 
   #BE-parallax-images { height: 180vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby { margin-top: 100vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: 0vh; }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #BE-parallax-images { height: 160vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 50vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby { margin-top: 90vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: 10vh; height: 110%; width: 110%; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #BE-parallax-images { height: 130vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby { margin-top: 80vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: 10vh; height: 120%; width: 120%; }
 }
 @media (min-width: 550px) and (max-width: 639px) {
   #BE-parallax-images { height: 100vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 10vh; height: 120vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby { margin-top: 60vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: -15vh;  height: 110%; width: 110%; }
 }
 @media (min-width: 500px) and (max-width: 549px) {
   #BE-parallax-images { height: 100vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 20vh; height: 120vh; }
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby { margin-top: 60vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { height: 110%; width: 110%; }
 }
 @media (min-width: 400px) and (max-width: 499px) {
   #BE-parallax-images { height: 90vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 40vh; height: 120vh; background-size: 120%;}
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; } #BE-ruby { margin-top: 50vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { height: 115%; width: 115%; }
 }
 @media (min-width: 320px) and (max-width: 399px) {
   #BE-parallax-images { height: 100vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 20vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #BE-parallax-images .parallax__layer--back { margin-top: 0vh; height: 100vh;}
   #BE-parallax-images .parallax__layer--base { background-size: 180%; } #BE-ruby { margin-top: 63vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: 15vh; height: 115%; width: 115%; }
 }
 @media (min-width: 200px) and (max-width: 319px) {
   #BE-parallax-images { height: 70vh; }
-  #BE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #BE-parallax-images .parallax__layer--deep { margin-top: 0h; }
   #BE-parallax-images .parallax__layer--back { margin-top: 0vh; height: 120vh;}
   #BE-parallax-images .parallax__layer--base { margin-top: 0vh; background-size: 180%; } #BE-ruby { margin-top: 43vh; margin-left: 40vw; }
   #BE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #BE-books { margin-top: 0vh; height: 115%; width: 115%; }
@@ -278,7 +278,7 @@
 /****************************/
 /* FRONT END IMAGES SECTION */
 /****************************/
-#FE-parallax-images { z-index: 2; }
+#FE-parallax-images { z-index: 2; margin-top: 50vh; }
 #FE-parallax-images .parallax__layer--deep { height: 200vh; background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-space.svg);}
 #FE-parallax-images .parallax__layer--back { }
 #FE-parallax-images .parallax__layer--base { }
@@ -331,14 +331,14 @@
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #FE-parallax-images { height: 160vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 60vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; } #FE-gaming { margin-top: 80vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #FE-books { margin-top: 10vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #FE-parallax-images { height: 130vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 40vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; } #FE-gaming { margin-top: 70vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #FE-books { margin-top: 10vh; }
@@ -366,14 +366,14 @@
 }
 @media (min-width: 320px) and (max-width: 399px) {
   #FE-parallax-images { height: 112vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 0vh; background-size: 120%; height: 120vh;}
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; } #FE-gaming { margin-top: 67vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #FE-books { margin-top: 15vh; margin-left: -15vw; height: 120%; width: 120%; }  
 }
 @media (min-width: 200px) and (max-width: 319px) {
   #FE-parallax-images { height: 85vh; }
-  #FE-parallax-images .parallax__layer--deep { margin-top: 55vh; }
+  #FE-parallax-images .parallax__layer--deep { margin-top: 0vh; }
   #FE-parallax-images .parallax__layer--back { margin-top: 0vh; background-size: 120%; height: 120vh;}
   #FE-parallax-images .parallax__layer--base { margin-top: 0vh; } #FE-gaming { margin-top: 52vh; }
   #FE-parallax-images .parallax__layer--fore { margin-top: 0vh; } #FE-books { margin-top: 15vh; margin-left: -15vw; height: 120%; width: 120%; }

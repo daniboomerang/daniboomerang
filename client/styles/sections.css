@@ -27,10 +27,8 @@ blockquote p { display: inline; }
 #client-server-diagram { padding-top: 5vh; }
 #creativity { padding-top: 30vh; }
 #remote-working { padding-top: 30vh; }
-#back-end { padding-top: 30vh; }
-#back-end-diagram { padding-top: 5vh; }
-#front-end { padding-top: 30vh; }
-#front-end-diagram { padding-top: 5vh;}
+#back-end-title { margin-top: -50vh; padding-top: 30vh; }
+#front-end-title { margin-top: -50vh; padding-top: 30vh; }
 
 /*********************/
 /* Animated Sections */

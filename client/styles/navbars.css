@@ -3,7 +3,7 @@
 /***********/
 
 	.navbar { margin-bottom: 0 !important; }
-	#navbar-custom-fluid { background: rgba(19, 65, 99, 0.7); height: 100px ;}
+	#navbar-custom-fluid { background: rgba(19, 65, 99, 0.7); height: 100px; }
 
 	/****************************************/
 	/**************  TOP NAVBAR *************/
@@ -184,7 +184,10 @@
 /* HEADER */
 /**********/
 
-	header { margin-left:4%; margin-right:4% ;/*border-bottom: solid black 2px;*/ height: 0px; width: 92%; overflow: hidden; z-index: 1; /*background: rgba(19, 65, 99, 0.7);*/ -webkit-transition: height 0.7s; -moz-transition: height 0.7s; -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s;}
+	header {  /*border-bottom: solid black 2px;*/
+			 height: 0px; width: 100%; overflow: hidden; z-index: 1; /*background: rgba(19, 65, 99, 0.7);*/
+			 -webkit-transition: height 0.7s; -moz-transition: height 0.7s;
+			 -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s; }
 	.box-shadow-down{ /*-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); */}
 	
 	/*==========  RESPONSIVENESS FOR HEADER  ==========*/

@@ -27,7 +27,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
     template: function (elem, attrs) { var svgImg; (attrs.books ==  ('BE')) ? svgImg  = "\'/images/BE-books.svg\'" : svgImg  = "\'/images/FE-books.svg\'"; return '<div id="book-case" ng-include="' + svgImg + '"></div>';  },
     link: function (scope, element, attrs) {
 
-      var bookCase, rightEngine, centerEngine, leftEngine, leftLight, rightLight;
+      var bookCase, engine, leftLight, rightLight;
 
       /****************************************/
       /* Waits the bookCase SVG to be loaded  */
@@ -62,12 +62,12 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
       }
 
       function turnOnEngines() { 
-        $timeout(function() { bookCase.attr('class', 'suspension'); }, 3600);
-        return $interval(function() { console.log("books engines eats CPU!");(engine.attr('class') ==  (undefined || 'animated fadeOut')) ? engine.attr('class', 'animated fadeIn') : engine.attr('class', 'animated fadeOut'); }, 1750);  ;
+        //$timeout(function() { bookCase.attr('class', 'suspension'); }, 3600);
+        return $interval(function() { console.log("Bookcases engines eat CPU!"); (engine.attr('class') ==  (undefined || 'animated fadeOut')) ? engine.attr('class', 'animated fadeIn') : engine.attr('class', 'animated fadeOut'); }, 1750);  ;
       }
 
       function turnOnLights() {
-        return $interval(function() {console.log("books lights eats CPU!");
+        return $interval(function() {console.log("Bookcases lights eat CPU!");
           (leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
           (rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
         }, 2000);
@@ -248,7 +248,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgFeEarth', function($interval,
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { return '<div id="earth-right" ng-include="\'/images/FE-earth.svg\'"></div>';  },
+    template: function (elem, attrs) { return '<div id="earth-left" ng-include="\'/images/FE-earth.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
 
