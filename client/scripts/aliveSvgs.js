@@ -141,7 +141,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeEarth', function($interval,
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { return '<div id="earth-right" ng-include="\'/images/BE-earth.svg\'"></div>';  },
+    template: function (elem, attrs) { return '<div id="earth-right" ng-include="\'/images/BE-earth-test.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
 
