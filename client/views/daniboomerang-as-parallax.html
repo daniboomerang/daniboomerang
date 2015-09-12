@@ -35,7 +35,10 @@
   </div>   
   <div id="remote-working-parallax-images" class="parallax__section">
     <div class="parallax__layer parallax__layer--base">
-      <div id="cliff"></div>
+      <div id="without-boundaries"> <!-- This is just to trigger the event onScroll -->
+        <div alive-svg-cliff id="cliff"></div>
+      </div>
+      <a href="#without-boundaries" du-scrollspy></a>
     </div>
     <div class="parallax__layer parallax__layer--back">
       <div id="orbit-iss" class="spin-right-whole"><alive-svg id="iss" name="iss"></alive-svg></div>

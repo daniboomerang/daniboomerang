@@ -90,7 +90,7 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 60vh; }
   #remote-working-parallax-images .parallax__layer--base { height: 180vh; }
   #remote-working-parallax-images .parallax__layer--back { height: 140vh; margin-top: 60vh; }
-  #cliff { height: 110%; width: 110%; background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff.svg); }
+  #cliff { height: 110%; width: 110%; }
   #orbit-iss { margin-left: 15vh; margin-top: -10vh;  height: 25vh; width: 25vh; }
   #iss { height: 90%; width: 90%; }
   #orbit-earth { height: 100%; width: 100%; }
