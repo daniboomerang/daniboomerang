@@ -62,57 +62,86 @@ daniboomerangServices.factory('urlObserverService', function ($rootScope, $locat
 daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval){
 	
 	return {
-		cancelInterval: function (intervalName){
-			$interval.cancel(intervalName);
+		cancelInterval: function (interval){
+			$interval.cancel(interval);
 		}
 	}	
 });
 
-daniboomerangServices.factory('nodeConnexionsService', function ($interval){
+daniboomerangServices.factory('BENodeConnectionsService', function ($http){
 	
 	var connections = [];
-	var dataNodeRemainingConnections = {
-		'nodeZero': { remainingConnections:1 },
-		'nodeOne': { remainingConnections:2 },
-		'nodeTwo': { remainingConnections:1 },
-		'nodeFour': { remainingConnections:1 },
-		'nodeSeven': { remainingConnections:1 },
-	}
-	// Connection 
-    var connectionZeroOne =  { isActive: true,
-                          nodeA: { name: 'nodeZero', elements: ['#ng-connection-node-0', '#ng-node-0'] },
-                          connectionAB: { name: '#ng-connection-0-1' },
-                          nodeB: { name: 'nodeOne', elements: ['#ng-node-1', '#ng-connection-node-1'] }
-                        };
-    var connectionOneTwo =  { isActive: true,
-					      nodeA: { name: 'nodeOne', elements: ['#ng-connection-node-1', '#ng-node-1'] },
-					      connectionAB: { name: '#ng-connection-1-2' },
-					      nodeB: { name: 'nodeTwo', elements: ['#ng-node-2', '#ng-connection-node-2'] }
-    };
-    var connectionSevenFour =  { isActive: true,
-					      nodeA: { name: 'nodeSeven', elements: ['#ng-connection-node-7', '#ng-node-7'] },
-					      connectionAB: { name: '#ng-connection-7-4' },
-					      nodeB: { name: 'nodeFour', elements: ['#ng-node-4', '#ng-connection-node-4'] }
-    };
-    connections.push(connectionZeroOne);
-    connections.push(connectionOneTwo);
-    connections.push(connectionSevenFour);
+	var dataNodeRemainingConnections, availableConnectionIndexes;
 
 	return {
+		init: function(){
+			$http.get('/data/be-connections.json').then(function(response){
+	          	connections = response.data.pairedConnections; 
+	          	availableConnectionIndexes = response.data.availableConnectionIndexes;
+				dataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
+		    });
+		},
+      	getAvailableConnectionIndexes: function(){
+      		return availableConnectionIndexes;
+      	},
+      	getConnection: function(index){
+      		availableConnectionIndexes.splice(index, 1); // LOCKING THE CONNECTION
+      		return connections[index];
+      	},
       	getConnections: function(){
       		return connections;
       	},
-      	getNodeRemainingConnections: function(node){
-      		return dataNodeRemainingConnections[node].remainingConnections;
+      	updateConnection: function(index, connection){
+      		connections[index] = connection;
+      		availableConnectionIndexes.push(index); // UNLOCKING THE CONNECTION
       	},
-      	increaseNodeRemainingConnections: function(node){
-      		dataNodeRemainingConnections[node].remainingConnections++;
+      	getNodeRemainingConnections: function(nodeName){
+      		return dataNodeRemainingConnections[nodeName];
       	},
-      	decreaseNodeRemainingConnections: function(node){
-      		dataNodeRemainingConnections[node].remainingConnections--;
+      	increaseNodeRemainingConnections: function(nodeName){
+      		dataNodeRemainingConnections[nodeName]++;
       	},
-      	updateConnections: function(updatedConnections){
-      		connections = updatedConnections;
+      	decreaseNodeRemainingConnections: function(nodeName){
+      		dataNodeRemainingConnections[nodeName]--;
+      	}
+	}	
+});
+
+daniboomerangServices.factory('FENodeConnectionsService', function ($http){
+	
+	var connections = [];
+	var dataNodeRemainingConnections, availableConnectionIndexes;
+
+	return {
+		init: function(){
+			$http.get('/data/fe-connections.json').then(function(response){
+	          	connections = response.data.pairedConnections; 
+	          	availableConnectionIndexes = response.data.availableConnectionIndexes;
+				dataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
+		    });
+		},
+      	getAvailableConnectionIndexes: function(){
+      		return availableConnectionIndexes;
+      	},
+      	getConnection: function(index){
+      		availableConnectionIndexes.splice(index, 1); // LOCKING THE CONNECTION
+      		return connections[index];
+      	},
+      	getConnections: function(){
+      		return connections;
+      	},
+      	updateConnection: function(index, connection){
+      		connections[index] = connection;
+      		availableConnectionIndexes.push(index); // UNLOCKING THE CONNECTION
+      	},
+      	getNodeRemainingConnections: function(nodeName){
+      		return dataNodeRemainingConnections[nodeName];
+      	},
+      	increaseNodeRemainingConnections: function(nodeName){
+      		dataNodeRemainingConnections[nodeName]++;
+      	},
+      	decreaseNodeRemainingConnections: function(nodeName){
+      		dataNodeRemainingConnections[nodeName]--;
       	}
 	}	
 });
