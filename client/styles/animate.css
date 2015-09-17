@@ -15,20 +15,6 @@
 .move-from-left { -webkit-animation: move-from-left 156s infinite; -moz-animation: move-from-left 156s infinite; -o-animation: move-from-left 156s infinite; }
 .pulsing { -webkit-animation: pulse 2s linear infinite; animation: pulse 2s linear infinite; -moz-animation: pulse 2s linear infinite; -o-animation: pulse 2s linear infinite; }
 .soft-suspension { -webkit-animation: soft-suspension 5s linear infinite; animation: soft-suspension 5s linear infinite; -moz-animation: soft-suspension 5s linear infinite; -o-animation: soft-suspension 5s linear infinite; }
-.oneFadeInOut {
-  -webkit-animation-name: oneFadeInOut;
-  -webkit-animation-duration: 2.5s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-delay: 1s ;
-  -moz-animation-name: oneFadeInOut;
-  -moz-animation-duration: 2.5s;
-  -moz-animation-delay: 1s;
-  -moz-animation-iteration-count: 1;
-  -ms-animation-name: oneFadeInOut;
-  -ms-animation-duration: 2.5s;
-  -ms-animation-delay: 1s;
-  -ms-animation-iteration-count: 1;
-}
 
 /*************************/
 /* ANIMATION DEFINITIONS */
@@ -129,38 +115,4 @@
     from {-webkit-transform:translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); } 
     50% {-webkit-transform:translate(13vh, 3.2vh); -ms-transform: translate(13vh, 3.2vh); -o-transform: translate(13vh, 3.2vh); -moz-transform: translate(13vh, 3.2vh); } 
     to {-webkit-transform: translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); }
-}
-
-/* ONE FADE IN OUT */
-
-@-webkit-keyframes oneFadeInOut {
-    0% { opacity: 0; top: -.5em; }
-    25% { opacity: 1; top: 0; }
-    75% { opacity: 0; top: .5em; }
-    100% { opacity: 0; top: .5em; }
-}
-@keyframes oneFadeInOut {
-    0% { opacity: 0; top: -.5em; }
-    25% { opacity: 1; top: 0; }
-    75% { opacity: 0; top: .5em; }
-    100% { opacity: 0; top: .5em; }
-}
-
-/*
- * FadeOut animation
-*/
- 
-@-webkit-keyframes fadeOutDelay {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes fadeOutDelay {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-.fadeOutDelay {
-    -webkit-animation-name: fadeOutDelay;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-delay: 1s
 }

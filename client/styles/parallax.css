@@ -80,7 +80,7 @@
 /* REMOTE WORKING IMAGES SECTION */
 /*********************************/
 #remote-working-parallax-images { z-index: 2; }
-#remote-working-parallax-images .parallax__layer--deep {  } 
+#remote-working-parallax-images .parallax__layer--deep { } 
 #remote-working-parallax-images .parallax__layer--back { } 
 #remote-working-parallax-images .parallax__layer--base { } 
 #remote-working-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cloud-books.svg); }
@@ -91,7 +91,7 @@
   #remote-working-parallax-images .parallax__layer--base { height: 180vh; }
   #remote-working-parallax-images .parallax__layer--back { height: 140vh; margin-top: 60vh; }
   #cliff { height: 110%; width: 110%; }
-  #orbit-iss { margin-left: 15vh; margin-top: -10vh;  height: 25vh; width: 25vh; }
+  #orbit-iss { margin-left: 15vh; margin-top: -10vh;  height: 35vh; width: 35vh; }
   #iss { height: 90%; width: 90%; }
   #orbit-earth { height: 100%; width: 100%; }
   #earth-connectivity { background-image: url(/images/earth-connectivity.svg); background-size:100%; background-repeat: no-repeat; height:100%; width:100% }

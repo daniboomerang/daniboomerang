@@ -25,7 +25,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
     template: function (elem, attrs) { return '<div id="iss" class="spin-right-whole" ng-include="\'/images/iss.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
-      var centerLight;
+      var centerLight, lightOne, lightTwo, lightThree, lightFour;
 
       /***********************************/
       /* Waits the iss SVG to be loaded  */
@@ -37,6 +37,11 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
 
         /* Iss Lights */
         issCenterLight = element.find('#ng-center-light'); 
+        issLightZero = element.find('#ng-light-0'); 
+        issLightOne = element.find('#ng-light-1'); 
+        issLightTwo = element.find('#ng-light-2'); 
+        issLightThree = element.find('#ng-light-3'); 
+        
 
         // Interval promises 
         var intervalPromiseLights;
@@ -54,6 +59,10 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
         function turnOnLights() {
           return $interval(function() {
             (issCenterLight.attr('class') ==  (undefined || 'animated fadeOut')) ? issCenterLight.attr('class', 'animated fadeIn') : issCenterLight.attr('class', 'animated fadeOut');
+            (issLightZero.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightZero.attr('class', 'animated fadeIn') : issLightZero.attr('class', 'animated fadeOut');
+            (issLightOne.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightOne.attr('class', 'animated fadeIn') : issLightOne.attr('class', 'animated fadeOut');
+            (issLightTwo.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightTwo.attr('class', 'animated fadeIn') : issLightTwo.attr('class', 'animated fadeOut');
+            (issLightThree.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightThree.attr('class', 'animated fadeIn') : issLightThree.attr('class', 'animated fadeOut');
           }, 2000);
         }  
       }
