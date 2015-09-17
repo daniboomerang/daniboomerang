@@ -135,11 +135,6 @@
    <stop stop-color="#124811" offset="0"/>
    <stop stop-color="#120f11" offset="1"/>
   </linearGradient>
-  <radialGradient id="radialGradient21121" gradientUnits="userSpaceOnUse" cy="45.56" cx="7.5345" gradientTransform="matrix(.99090 0 0 .95977 -31.212 -98.98)" r="11">
-   <stop stop-opacity=".73333" stop-color="#f92b1d" offset="0"/>
-   <stop stop-opacity=".28571" stop-color="#00cef3" offset=".25477"/>
-   <stop stop-opacity="0" stop-color="#16a5c5" offset="1"/>
-  </radialGradient>
   <radialGradient id="radialGradient63107" gradientUnits="userSpaceOnUse" cy="31.863" cx="-.70711" gradientTransform="matrix(.1489 -.38157 .7066 .27573 -65.131 -51.471)" r="2.3865">
    <stop stop-opacity=".48627" stop-color="#aecbff" offset="0"/>
    <stop stop-opacity=".22335" stop-color="#28c7ff" offset=".38863"/>
@@ -150,9 +145,10 @@
    <stop stop-opacity=".11765" stop-color="#242429" offset="0"/>
    <stop stop-opacity=".5" stop-color="#646a6a" offset="1"/>
   </linearGradient>
-  <radialGradient id="radialGradient18331" gradientUnits="userSpaceOnUse" cy="106.96" cx="48.144" gradientTransform="matrix(2.4477 0 0 2.3815 -32.59 -155.16)" r="11.936">
-   <stop stop-color="#2964ff" offset="0"/>
-   <stop stop-opacity="0" stop-color="#2964ff" offset="1"/>
+  <radialGradient id="radialGradient18723" gradientUnits="userSpaceOnUse" cy="-55.765" cx="-23.917" gradientTransform="matrix(0.512 0 0 0.512 -11.671 -27.213)" r="13.5">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#fff" stop-opacity=".38095" offset=".41363"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
   </radialGradient>
  </defs>
  <metadata>
@@ -172,26 +168,26 @@
       <g transform="translate(-889,-192.82)">
        <g transform="translate(-25.912 -81.872)" fill="none">
         <g transform="matrix(.99998 .0066886 -.0066886 .99998 .68318 -.87422)">
-         <path id="ng-wire-4" d="m44.721 81.665 1.9095 3.2686-2.8975 1.7582 8.8497 13.785 163.52 27.667" stroke-opacity=".59524" stroke="#6ca9d7">
+         <path id="ng-wire-4" stroke="#6ca9d7" stroke-opacity=".59524" d="m44.721 81.665 1.9095 3.2686-2.8975 1.7582 8.8497 13.785 163.52 27.667">
           <title stroke="url(#radialGradient7352)">Wire 4</title>
          </path>
-         <path id="ng-wire-3" d="m44.71 81.475 1.9159 3.4659-1.6046 1.0041 8.7442 13.199 162.14 28.397" stroke-opacity=".54762" stroke="#c1597e">
+         <path id="ng-wire-3" stroke="#c1597e" stroke-opacity=".54762" d="m44.71 81.475 1.9159 3.4659-1.6046 1.0041 8.7442 13.199 162.14 28.397">
           <title stroke="url(#radialGradient7360)">Wire 3</title>
          </path>
-         <path id="ng-wire-2" d="m44.688 81.554 10.211 16.396 160.29 28.95" stroke-opacity=".71429" stroke="#a1a9bc" fill="none">
+         <path id="ng-wire-2" d="m44.688 81.554 10.211 16.396 160.29 28.95" stroke="#a1a9bc" stroke-opacity=".71429" fill="none">
           <title stroke="url(#radialGradient7368)">Wire 2</title>
          </path>
-         <path id="ng-wire-1" d="m44.645 81.513 2.0055 3.3539 1.5554-0.88094 7.8946 12.57 159.81 29.937" stroke-opacity=".61429" stroke="#6c45bc">
+         <path id="ng-wire-1" stroke="#6c45bc" stroke-opacity=".61429" d="m44.645 81.513 2.0055 3.3539 1.5554-0.88094 7.8946 12.57 159.81 29.937">
           <title stroke="url(#radialGradient7376)">Wire 1</title>
          </path>
         </g>
-        <path id="ng-wire-0" d="m44.827 81.009 1.9795 3.2876 3.06-1.7389 7.3358 12.163 157.78 31.455" stroke-opacity=".62857" stroke="#6ca9bc">
+        <path id="ng-wire-0" stroke="#6ca9bc" stroke-opacity=".62857" d="m44.827 81.009 1.9795 3.2876 3.06-1.7389 7.3358 12.163 157.78 31.455">
          <title>Wire 0</title>
         </path>
-        <path id="ng-wire-5" d="m44.774 80.983 2.0072 3.3874-4.3575 2.5325 9.0007 14.542 164.16 27.915" stroke-opacity=".68571" stroke="#4b3e6d">
+        <path id="ng-wire-5" stroke="#4b3e6d" stroke-opacity=".68571" d="m44.774 80.983 2.0072 3.3874-4.3575 2.5325 9.0007 14.542 164.16 27.915">
          <title stroke="url(#radialGradient7344)">Wire 5</title>
         </path>
-        <path id="ng-wire-6" d="m44.85 80.957 1.8849 3.3757 4.5344-2.5924 7.0649 11.697 157.36 32.285" stroke-opacity=".60476" stroke="#d89d27">
+        <path id="ng-wire-6" stroke="#d89d27" stroke-opacity=".60476" d="m44.85 80.957 1.8849 3.3757 4.5344-2.5924 7.0649 11.697 157.36 32.285">
          <title>Wire 6</title>
         </path>
        </g>
@@ -436,77 +432,77 @@
          <g transform="translate(859.06,-459.69)">
           <g fill-rule="evenodd">
            <text font-size="69.121px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="175.72583" x="7055.9902" line-height="125%"><tspan y="175.72583" x="7055.9902"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="67.371px" y="897.04474" x="384.92688" line-height="125%"><tspan y="897.04474" x="384.92688"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="21.895px" y="1406.7859" x="210.60287" line-height="125%"><tspan y="1406.7859" x="210.60287"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="10.106px" y="1424.0221" x="208.42023" line-height="125%"><tspan y="1424.0221" x="208.42023"/></text>
-           <text stroke-linejoin="round" font-size="17.634px" font-family="Skia" stroke-opacity=".98551" font-weight="100" xml:space="preserve" transform="matrix(.99052 .13734 -.13734 .99052 0 0)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="13.10960112, 1.09246676" y="454.50006" x="1606.3319" stroke-width="1.0924" line-height="125%" fill="#a42b23"><tspan y="454.50006" x="1606.3319" stroke-width="1.0924"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(7.8841)" font-size="25.92px" y="507.12601" x="1616.1444" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="507.12601" x="1616.1444"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1178.8884" x="1469.941" line-height="125%" fill="#e8c122"><tspan y="1178.8884" x="1469.941" fill="#e8c122"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="940.80151" x="274.23557" line-height="125%"><tspan y="940.80151" x="274.23557"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="1004.2729" x="252.52925" line-height="125%"><tspan y="1004.2729" x="252.52925"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="1006.4191" x="252.25748" line-height="125%"><tspan y="1006.4191" x="252.25748"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="797.86475" x="106.97276" font-family="Sans" line-height="125%" fill="#000000"><tspan y="797.86475" x="106.97276"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.7749px" y="870.74774" x="180.66554" font-family="Sans" line-height="125%" fill="#000000"><tspan y="870.74774" x="180.66554"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" font-size="40.312px" y="405.18146" x="1508.7495" line-height="125%"><tspan y="405.18146" x="1508.7495"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" font-size="25.799px" y="412.96759" x="453.853" line-height="125%"><tspan y="412.96759" x="453.853"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" font-size="16.512px" y="590.71069" x="108.1311" line-height="125%"><tspan y="590.71069" x="108.1311"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="67.371px" transform="rotate(-82.117)" y="897.04474" x="384.92688" line-height="125%"><tspan y="897.04474" x="384.92688"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="21.895px" transform="rotate(-82.117)" y="1406.7859" x="210.60287" line-height="125%"><tspan y="1406.7859" x="210.60287"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="10.106px" transform="rotate(-82.117)" y="1424.0221" x="208.42023" line-height="125%"><tspan y="1424.0221" x="208.42023"/></text>
+           <text stroke-linejoin="round" font-size="17.634px" font-family="Skia" stroke-opacity=".98551" xml:space="preserve" transform="matrix(.99052 .13734 -.13734 .99052 0 0)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="13.10960112, 1.09246676" stroke-width="1.0924" y="454.50006" x="1606.3319" font-weight="100" line-height="125%" fill="#a42b23"><tspan y="454.50006" x="1606.3319" stroke-width="1.0924"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="25.92px" transform="rotate(7.8841)" y="507.12601" x="1616.1444" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="507.12601" x="1616.1444"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1178.8884" x="1469.941" line-height="125%" fill="#e8c122"><tspan y="1178.8884" x="1469.941" fill="#e8c122"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="940.80151" x="274.23557" line-height="125%"><tspan y="940.80151" x="274.23557"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="1004.2729" x="252.52925" line-height="125%"><tspan y="1004.2729" x="252.52925"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="1006.4191" x="252.25748" line-height="125%"><tspan y="1006.4191" x="252.25748"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="797.86475" x="106.97276" font-family="Sans" line-height="125%" fill="#000000"><tspan y="797.86475" x="106.97276"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.7749px" transform="rotate(24.035)" y="870.74774" x="180.66554" font-family="Sans" line-height="125%" fill="#000000"><tspan y="870.74774" x="180.66554"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40.312px" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="405.18146" x="1508.7495" line-height="125%"><tspan y="405.18146" x="1508.7495"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="25.799px" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="412.96759" x="453.853" line-height="125%"><tspan y="412.96759" x="453.853"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="16.512px" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="590.71069" x="108.1311" line-height="125%"><tspan y="590.71069" x="108.1311"/></text>
            <g font-size="13.209px">
             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="496.5" x="-501.94434" line-height="125%"><tspan y="496.5" x="-501.94434"/></text>
             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="500.53119" x="-267.91684" line-height="125%"><tspan y="500.53119" x="-267.91684"/></text>
             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.099667 -.99502 .99502 -.099667 0 0)" y="842.06891" x="278.93256" line-height="125%"><tspan y="842.06891" x="278.93256"/></text>
            </g>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" font-size="10.567px" y="770.75958" x="-22.613747" line-height="125%"><tspan y="770.75958" x="-22.613747"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(263.94)" font-size="5.4105px" y="669.14917" x="-576.44012" line-height="125%"><tspan y="669.14917" x="-576.44012"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.38558 -.92267 .92267 -.38558 0 0)" font-size="5.4105px" y="675.7395" x="-394.80811" line-height="125%"><tspan y="675.7395" x="-394.80811"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" font-size="3.4627px" y="660.97205" x="-453.44647" line-height="125%"><tspan y="660.97205" x="-453.44647"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1212.8082" x="1595.8302" line-height="125%" fill="#e8c122"><tspan y="1212.8082" x="1595.8302" fill="#e8c122"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="920.0058" x="403.75488" line-height="125%"><tspan y="920.0058" x="403.75488"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="983.47711" x="382.04858" line-height="125%"><tspan y="983.47711" x="382.04858"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="985.62335" x="381.77679" line-height="125%"><tspan y="985.62335" x="381.77679"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="10.567px" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="770.75958" x="-22.613747" line-height="125%"><tspan y="770.75958" x="-22.613747"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="5.4105px" transform="rotate(263.94)" y="669.14917" x="-576.44012" line-height="125%"><tspan y="669.14917" x="-576.44012"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="5.4105px" transform="matrix(-.38558 -.92267 .92267 -.38558 0 0)" y="675.7395" x="-394.80811" line-height="125%"><tspan y="675.7395" x="-394.80811"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="3.4627px" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="660.97205" x="-453.44647" line-height="125%"><tspan y="660.97205" x="-453.44647"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1212.8082" x="1595.8302" line-height="125%" fill="#e8c122"><tspan y="1212.8082" x="1595.8302" fill="#e8c122"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="920.0058" x="403.75488" line-height="125%"><tspan y="920.0058" x="403.75488"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="983.47711" x="382.04858" line-height="125%"><tspan y="983.47711" x="382.04858"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="985.62335" x="381.77679" line-height="125%"><tspan y="985.62335" x="381.77679"/></text>
            <g font-family="Sans">
-            <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="777.06909" x="236.49207" line-height="125%" fill="#000000"><tspan y="777.06909" x="236.49207"/></text>
-            <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="3.775px" y="849.95209" x="310.18484" font-weight="bold" line-height="125%" fill="#000000"><tspan y="849.95209" x="310.18484"/></text>
+            <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="777.06909" x="236.49207" line-height="125%" fill="#000000"><tspan y="777.06909" x="236.49207"/></text>
+            <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="3.775px" transform="rotate(24.035)" y="849.95209" x="310.18484" font-weight="bold" line-height="125%" fill="#000000"><tspan y="849.95209" x="310.18484"/></text>
             <g font-weight="bold">
              <text font-size="10.534px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(-62.699)" stroke="#000000" y="997.10187" x="777.95752" stroke-width=".58521" line-height="125%"><tspan y="997.10187" x="777.95752" stroke="#000000" stroke-width=".58521"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.43588 -.9 .9 -.43588 0 0)" font-size="19.603px" y="756.9408" x="709.60107" line-height="125%"><tspan y="756.9408" x="709.60107"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.20551 -.97865 .97865 -.20551 0 0)" font-size="14.085px" y="837.63208" x="460.78851" line-height="125%"><tspan y="837.63208" x="460.78851"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="19.603px" transform="matrix(-.43588 -.9 .9 -.43588 0 0)" y="756.9408" x="709.60107" line-height="125%"><tspan y="756.9408" x="709.60107"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="14.085px" transform="matrix(-.20551 -.97865 .97865 -.20551 0 0)" y="837.63208" x="460.78851" line-height="125%"><tspan y="837.63208" x="460.78851"/></text>
             </g>
            </g>
            <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.121px" y="322.73434" x="7584.1953" line-height="125%"><tspan y="322.73434" x="7584.1953"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="67.371px" y="1440.4209" x="311.75122" line-height="125%"><tspan y="1440.4209" x="311.75122"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="21.895px" y="1950.162" x="137.42722" line-height="125%"><tspan y="1950.162" x="137.42722"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="10.106px" y="1967.3982" x="135.24457" line-height="125%"><tspan y="1967.3982" x="135.24457"/></text>
-           <text stroke-linejoin="round" style="word-spacing:0px;letter-spacing:0px" font-family="Skia" stroke-opacity=".98551" font-weight="100" xml:space="preserve" transform="matrix(.99052 .13734 -.13734 .99052 0 0)" stroke="#e5e5e5" stroke-dasharray="13.10960112, 1.09246676" font-size="17.634px" y="527.57184" x="2149.7219" stroke-width="1.0924" line-height="125%" fill="#a42b23"><tspan y="527.57184" x="2149.7219" stroke-width="1.0924"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(7.8841)" font-size="25.92px" y="580.29095" x="2159.5217" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="580.29095" x="2159.5217"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1326.5895" x="1994.5139" line-height="125%" fill="#e8c122"><tspan y="1326.5895" x="1994.5139" fill="#e8c122"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="859.92883" x="816.51953" line-height="125%"><tspan y="859.92883" x="816.51953"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="923.40015" x="794.81323" line-height="125%"><tspan y="923.40015" x="794.81323"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="925.54639" x="794.54144" line-height="125%"><tspan y="925.54639" x="794.54144"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="716.992" x="649.25671" font-family="Sans" line-height="125%" fill="#000000"><tspan y="716.992" x="649.25671"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="67.371px" transform="rotate(-82.117)" y="1440.4209" x="311.75122" line-height="125%"><tspan y="1440.4209" x="311.75122"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="21.895px" transform="rotate(-82.117)" y="1950.162" x="137.42722" line-height="125%"><tspan y="1950.162" x="137.42722"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="10.106px" transform="rotate(-82.117)" y="1967.3982" x="135.24457" line-height="125%"><tspan y="1967.3982" x="135.24457"/></text>
+           <text stroke-linejoin="round" style="word-spacing:0px;letter-spacing:0px" font-family="Skia" stroke-opacity=".98551" xml:space="preserve" transform="matrix(.99052 .13734 -.13734 .99052 0 0)" stroke="#e5e5e5" stroke-dasharray="13.10960112, 1.09246676" stroke-width="1.0924" font-size="17.634px" y="527.57184" x="2149.7219" font-weight="100" line-height="125%" fill="#a42b23"><tspan y="527.57184" x="2149.7219" stroke-width="1.0924"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="25.92px" transform="rotate(7.8841)" y="580.29095" x="2159.5217" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="580.29095" x="2159.5217"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1326.5895" x="1994.5139" line-height="125%" fill="#e8c122"><tspan y="1326.5895" x="1994.5139" fill="#e8c122"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="859.92883" x="816.51953" line-height="125%"><tspan y="859.92883" x="816.51953"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="923.40015" x="794.81323" line-height="125%"><tspan y="923.40015" x="794.81323"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="925.54639" x="794.54144" line-height="125%"><tspan y="925.54639" x="794.54144"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="716.992" x="649.25671" font-family="Sans" line-height="125%" fill="#000000"><tspan y="716.992" x="649.25671"/></text>
            <text font-size="3.7749px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(24.035)" y="789.87506" x="722.94946" font-family="Sans" line-height="125%" fill="#000000"><tspan y="789.87506" x="722.94946"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" font-size="40.312px" y="835.85114" x="1169.4325" line-height="125%"><tspan y="835.85114" x="1169.4325"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(264.39)" font-size="13.209px" y="627.8515" x="-282.61221" line-height="125%"><tspan y="627.8515" x="-282.61221"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(259.58)" font-size="10.567px" y="618.40564" x="-373.1976" line-height="125%"><tspan y="618.40564" x="-373.1976"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3839 -.92337 .92337 -.3839 0 0)" font-size="5.4105px" y="323.46112" x="-845.98438" line-height="125%"><tspan y="323.46112" x="-845.98438"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.3839 -.92337 .92337 -.3839 0 0)" font-size="3.4627px" y="292.22522" x="-928.04871" line-height="125%"><tspan y="292.22522" x="-928.04871"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1360.51" x="2120.4004" line-height="125%" fill="#e8c122"><tspan y="1360.51" x="2120.4004" fill="#e8c122"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="839.13312" x="946.03882" line-height="125%"><tspan y="839.13312" x="946.03882"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="902.60443" x="924.33252" line-height="125%"><tspan y="902.60443" x="924.33252"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="904.75067" x="924.06073" line-height="125%"><tspan y="904.75067" x="924.06073"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="696.19635" x="778.776" font-family="Sans" line-height="125%" fill="#000000"><tspan y="696.19635" x="778.776"/></text>
-           <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.775px" y="769.07941" x="852.46881" font-family="Sans" line-height="125%" fill="#000000"><tspan y="769.07941" x="852.46881"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40.312px" transform="matrix(-.3856 -.92266 .92266 -.3856 0 0)" y="835.85114" x="1169.4325" line-height="125%"><tspan y="835.85114" x="1169.4325"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="13.209px" transform="rotate(264.39)" y="627.8515" x="-282.61221" line-height="125%"><tspan y="627.8515" x="-282.61221"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="10.567px" transform="rotate(259.58)" y="618.40564" x="-373.1976" line-height="125%"><tspan y="618.40564" x="-373.1976"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="5.4105px" transform="matrix(-.3839 -.92337 .92337 -.3839 0 0)" y="323.46112" x="-845.98438" line-height="125%"><tspan y="323.46112" x="-845.98438"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="3.4627px" transform="matrix(-.3839 -.92337 .92337 -.3839 0 0)" y="292.22522" x="-928.04871" line-height="125%"><tspan y="292.22522" x="-928.04871"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1360.51" x="2120.4004" line-height="125%" fill="#e8c122"><tspan y="1360.51" x="2120.4004" fill="#e8c122"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="839.13312" x="946.03882" line-height="125%"><tspan y="839.13312" x="946.03882"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="902.60443" x="924.33252" line-height="125%"><tspan y="902.60443" x="924.33252"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="904.75067" x="924.06073" line-height="125%"><tspan y="904.75067" x="924.06073"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="696.19635" x="778.776" font-family="Sans" line-height="125%" fill="#000000"><tspan y="696.19635" x="778.776"/></text>
+           <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.775px" transform="rotate(24.035)" y="769.07941" x="852.46881" font-family="Sans" line-height="125%" fill="#000000"><tspan y="769.07941" x="852.46881"/></text>
           </g>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1351.5793" x="1199.4631" line-height="125%" fill="#e8c122"><tspan y="1351.5793" x="1199.4631" fill="#e8c122"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="1208.2579" x="94.955139" line-height="125%"><tspan y="1208.2579" x="94.955139"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="1271.7291" x="73.248901" line-height="125%"><tspan y="1271.7291" x="73.248901"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="1273.8752" x="72.977112" line-height="125%"><tspan y="1273.8752" x="72.977112"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="1065.3215" x="-72.307152" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1065.3215" x="-72.307152"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.7749px" y="1138.2043" x="1.385407" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1138.2043" x="1.385407"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1232.3948" x="1247.0559" line-height="125%" fill="#e8c122"><tspan y="1232.3948" x="1247.0559" fill="#e8c122"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="1080.6375" x="90.702209" line-height="125%"><tspan y="1080.6375" x="90.702209"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="1144.1086" x="68.995964" line-height="125%"><tspan y="1144.1086" x="68.995964"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="1146.2548" x="68.724182" line-height="125%"><tspan y="1146.2548" x="68.724182"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3888px" y="937.70105" x="-76.560089" font-family="Sans" line-height="125%" fill="#000000"><tspan y="937.70105" x="-76.560089"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1351.5793" x="1199.4631" line-height="125%" fill="#e8c122"><tspan y="1351.5793" x="1199.4631" fill="#e8c122"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="1208.2579" x="94.955139" line-height="125%"><tspan y="1208.2579" x="94.955139"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="1271.7291" x="73.248901" line-height="125%"><tspan y="1271.7291" x="73.248901"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="1273.8752" x="72.977112" line-height="125%"><tspan y="1273.8752" x="72.977112"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="1065.3215" x="-72.307152" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1065.3215" x="-72.307152"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.7749px" transform="rotate(24.035)" y="1138.2043" x="1.385407" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1138.2043" x="1.385407"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1232.3948" x="1247.0559" line-height="125%" fill="#e8c122"><tspan y="1232.3948" x="1247.0559" fill="#e8c122"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="1080.6375" x="90.702209" line-height="125%"><tspan y="1080.6375" x="90.702209"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="1144.1086" x="68.995964" line-height="125%"><tspan y="1144.1086" x="68.995964"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="1146.2548" x="68.724182" line-height="125%"><tspan y="1146.2548" x="68.724182"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3888px" transform="rotate(24.035)" y="937.70105" x="-76.560089" font-family="Sans" line-height="125%" fill="#000000"><tspan y="937.70105" x="-76.560089"/></text>
           <text font-size="3.7749px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(24.035)" y="1010.5839" x="-2.8675241" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1010.5839" x="-2.8675241"/></text>
           <g transform="matrix(.79932 -.032841 .032841 .79932 -632.78 447.36)">
            <g transform="translate(-1607.7,-114.43)">
@@ -517,37 +513,37 @@
                 <g transform="matrix(1.8248,0,0,1.8248,-478.3,736.31)">
                  <g transform="matrix(1.728,0,0,1.728,214.24,204.87)">
                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="21.921px" y="-248.46469" x="1616.8279" line-height="125%"><tspan y="-248.46469" x="1616.8279"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="21.366px" y="-372.27982" x="338.237" line-height="125%"><tspan y="-372.27982" x="338.237"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="6.9438px" y="-210.61995" x="282.95169" line-height="125%"><tspan y="-210.61995" x="282.95169"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="3.2049px" y="-205.15364" x="282.25949" line-height="125%"><tspan y="-205.15364" x="282.25949"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="21.366px" transform="rotate(-82.117)" y="-372.27982" x="338.237" line-height="125%"><tspan y="-372.27982" x="338.237"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6.9438px" transform="rotate(-82.117)" y="-210.61995" x="282.95169" line-height="125%"><tspan y="-210.61995" x="282.95169"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="3.2049px" transform="rotate(-82.117)" y="-205.15364" x="282.25949" line-height="125%"><tspan y="-205.15364" x="282.25949"/></text>
                   <g transform="matrix(-.12953 -.033219 .033219 -.12953 -160.55 -23.022)">
-                   <text stroke-linejoin="round" font-size="41.822px" font-family="Skia" stroke-opacity=".98551" font-weight="100" xml:space="preserve" transform="rotate(173.51)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="31.09136276, 2.5909469" y="-532.00525" x="110.77794" stroke-width="2.5909" line-height="125%" fill="#a42b23"><tspan y="-532.00525" x="110.77794" stroke-width="2.5909"/></text>
-                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.99357 .1132 -.1132 -.99357 0 0)" font-size="61.474px" y="-407.83047" x="134.32643" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="-407.83047" x="134.32643"/></text>
+                   <text stroke-linejoin="round" font-size="41.822px" font-family="Skia" stroke-opacity=".98551" xml:space="preserve" transform="rotate(173.51)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="31.09136276, 2.5909469" stroke-width="2.5909" y="-532.00525" x="110.77794" font-weight="100" line-height="125%" fill="#a42b23"><tspan y="-532.00525" x="110.77794" stroke-width="2.5909"/></text>
+                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="61.474px" transform="matrix(-.99357 .1132 -.1132 -.99357 0 0)" y="-407.83047" x="134.32643" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="-407.83047" x="134.32643"/></text>
                   </g>
                   <g transform="matrix(.31714 0 0 .31714 -300.9 -312.63)">
                    <g transform="translate(-786.43,-167.83)">
                     <g transform="matrix(.99999 0 0 .99999 2.8372 503.25)">
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" font-size="69.123px" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
                      <g transform="matrix(.19154 .085419 -.085419 .19154 -642.6 448.62)">
                       <title>Layer 1</title>
                      </g>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
-                     <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.775px" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.775px" transform="rotate(24.035)" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
                     </g>
                    </g>
                    <g transform="translate(-659.67,-134.07)">
-                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1682.4275" x="1631.686" line-height="125%" fill="#e8c122"><tspan y="1682.4275" x="1631.686" fill="#e8c122"/></text>
+                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1682.4275" x="1631.686" line-height="125%" fill="#e8c122"><tspan y="1682.4275" x="1631.686" fill="#e8c122"/></text>
                     <g transform="matrix(.19154 .085418 -.085418 .19154 -254.86 1257.4)">
                      <title>Layer 1</title>
                     </g>
-                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="1331.3643" x="626.07532" line-height="125%"><tspan y="1331.3643" x="626.07532"/></text>
-                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="1394.8358" x="604.36896" line-height="125%"><tspan y="1394.8358" x="604.36896"/></text>
-                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="1396.9821" x="604.09717" line-height="125%"><tspan y="1396.9821" x="604.09717"/></text>
-                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="1188.427" x="458.81195" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1188.427" x="458.81195"/></text>
-                    <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.775px" y="1261.3103" x="532.505" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1261.3103" x="532.505"/></text>
+                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="1331.3643" x="626.07532" line-height="125%"><tspan y="1331.3643" x="626.07532"/></text>
+                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="1394.8358" x="604.36896" line-height="125%"><tspan y="1394.8358" x="604.36896"/></text>
+                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="1396.9821" x="604.09717" line-height="125%"><tspan y="1396.9821" x="604.09717"/></text>
+                    <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="1188.427" x="458.81195" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1188.427" x="458.81195"/></text>
+                    <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.775px" transform="rotate(24.035)" y="1261.3103" x="532.505" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1261.3103" x="532.505"/></text>
                    </g>
                   </g>
                  </g>
@@ -555,15 +551,15 @@
                </g>
               </g>
              </g>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" font-size="69.123px" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
              <g transform="matrix(.19154 .085419 -.085419 .19154 -642.6 448.62)">
               <title>Layer 1</title>
              </g>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.775px" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.775px" transform="rotate(24.035)" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
             </g>
            </g>
            <g transform="translate(-729.95,-474.14)">
@@ -574,24 +570,24 @@
                 <g transform="matrix(1.8248,0,0,1.8248,-478.3,736.31)">
                  <g transform="matrix(1.728,0,0,1.728,214.24,204.87)">
                   <text font-size="21.921px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="-248.46469" x="1616.8279" line-height="125%"><tspan y="-248.46469" x="1616.8279"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="21.366px" y="-372.27982" x="338.237" line-height="125%"><tspan y="-372.27982" x="338.237"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="6.9438px" y="-210.61995" x="282.95169" line-height="125%"><tspan y="-210.61995" x="282.95169"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="3.2049px" y="-205.15364" x="282.25949" line-height="125%"><tspan y="-205.15364" x="282.25949"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="21.366px" transform="rotate(-82.117)" y="-372.27982" x="338.237" line-height="125%"><tspan y="-372.27982" x="338.237"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6.9438px" transform="rotate(-82.117)" y="-210.61995" x="282.95169" line-height="125%"><tspan y="-210.61995" x="282.95169"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="3.2049px" transform="rotate(-82.117)" y="-205.15364" x="282.25949" line-height="125%"><tspan y="-205.15364" x="282.25949"/></text>
                   <g transform="matrix(-.12953 -.033219 .033219 -.12953 -160.55 -23.022)">
-                   <text stroke-linejoin="round" style="word-spacing:0px;letter-spacing:0px" font-family="Skia" stroke-opacity=".98551" font-weight="100" xml:space="preserve" transform="rotate(173.51)" stroke="#e5e5e5" stroke-dasharray="31.09136276, 2.5909469" font-size="41.822px" y="-532.00525" x="110.77794" stroke-width="2.5909" line-height="125%" fill="#a42b23"><tspan y="-532.00525" x="110.77794" stroke-width="2.5909"/></text>
-                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.99357 .1132 -.1132 -.99357 0 0)" font-size="61.474px" y="-407.83047" x="134.32643" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="-407.83047" x="134.32643"/></text>
+                   <text stroke-linejoin="round" style="word-spacing:0px;letter-spacing:0px" font-family="Skia" stroke-opacity=".98551" xml:space="preserve" transform="rotate(173.51)" stroke="#e5e5e5" stroke-dasharray="31.09136276, 2.5909469" stroke-width="2.5909" font-size="41.822px" y="-532.00525" x="110.77794" font-weight="100" line-height="125%" fill="#a42b23"><tspan y="-532.00525" x="110.77794" stroke-width="2.5909"/></text>
+                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="61.474px" transform="matrix(-.99357 .1132 -.1132 -.99357 0 0)" y="-407.83047" x="134.32643" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="-407.83047" x="134.32643"/></text>
                   </g>
                   <g transform="matrix(.31714 0 0 .31714 -300.9 -312.63)">
                    <g transform="translate(-786.43,-167.83)">
                     <g transform="matrix(.99999 0 0 .99999 2.8372 503.25)">
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" font-size="69.123px" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
                      <g transform="matrix(.19154 .085419 -.085419 .19154 -642.6 448.62)">
                       <title>Layer 1</title>
                      </g>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
-                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
+                     <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
                      <text font-size="3.775px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(24.035)" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
                     </g>
                    </g>
@@ -621,49 +617,49 @@
                                 <g transform="matrix(.512 0 0 .512 198.61 -150.18)">
                                  <g fill-rule="evenodd">
                                   <g stroke-width="1.1999">
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.88311 .46916 -.46916 -.88311 0 0)" font-size="39px" y="3.0694857" x="2744.9172" line-height="125%"><tspan y="3.0694857" x="2744.9172" stroke-width="1.1999"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(69.899)" font-size="38.013px" y="-731.66913" x="142.80049" line-height="125%"><tspan y="-731.66913" x="142.80049" stroke-width="1.1999"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(69.899)" font-size="12.354px" y="-444.05542" x="44.440811" line-height="125%"><tspan y="-444.05542" x="44.440811" stroke-width="1.1999"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(69.899)" font-size="5.7019px" y="-434.33014" x="43.209286" line-height="125%"><tspan y="-434.33014" x="43.209286" stroke-width="1.1999"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="39px" transform="matrix(-.88311 .46916 -.46916 -.88311 0 0)" y="3.0694857" x="2744.9172" line-height="125%"><tspan y="3.0694857" x="2744.9172" stroke-width="1.1999"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="38.013px" transform="rotate(69.899)" y="-731.66913" x="142.80049" line-height="125%"><tspan y="-731.66913" x="142.80049" stroke-width="1.1999"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="12.354px" transform="rotate(69.899)" y="-444.05542" x="44.440811" line-height="125%"><tspan y="-444.05542" x="44.440811" stroke-width="1.1999"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="5.7019px" transform="rotate(69.899)" y="-434.33014" x="43.209286" line-height="125%"><tspan y="-434.33014" x="43.209286" stroke-width="1.1999"/></text>
                                   </g>
-                                  <text stroke-linejoin="round" font-size="9.9498px" font-family="Skia" stroke-opacity=".98551" font-weight="100" xml:space="preserve" transform="matrix(-.93915 .3435 -.3435 -.93915 0 0)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="7.39689396, 0.61640783" y="331.07025" x="-331.45035" stroke-width=".6164" line-height="125%" fill="#a42b23"><tspan y="331.07025" x="-331.45035" stroke-width=".6164"/></text>
+                                  <text stroke-linejoin="round" font-size="9.9498px" font-family="Skia" stroke-opacity=".98551" xml:space="preserve" transform="matrix(-.93915 .3435 -.3435 -.93915 0 0)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="7.39689396, 0.61640783" stroke-width=".6164" y="331.07025" x="-331.45035" font-weight="100" line-height="125%" fill="#a42b23"><tspan y="331.07025" x="-331.45035" stroke-width=".6164"/></text>
                                   <text font-size="14.625px" stroke-width=".16045" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="matrix(-.93909 .34366 -.34366 -.93909 0 0)" y="360.55124" x="-325.92654" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="360.55124" x="-325.92654" stroke-width=".16045"/></text>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.88985 .47201 -.46468 -.8773 0 0)" font-size="39.001px" y="569.27618" x="-398.10184" stroke-width=".38054" line-height="125%" fill="#e8c122"><tspan y="569.27618" x="-398.10184" stroke-width=".38054" fill="#e8c122"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="39.001px" transform="matrix(-.88985 .47201 -.46468 -.8773 0 0)" y="569.27618" x="-398.10184" stroke-width=".38054" line-height="125%" fill="#e8c122"><tspan y="569.27618" x="-398.10184" stroke-width=".38054" fill="#e8c122"/></text>
                                   <g stroke-width=".38053">
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="4.7332px" y="946.62823" x="-1013.5258" line-height="125%"><tspan y="946.62823" x="-1013.5258" stroke-width=".38053"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="1.5383px" y="982.44098" x="-1025.7732" line-height="125%"><tspan y="982.44098" x="-1025.7732" stroke-width=".38053"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size=".70996px" y="983.65192" x="-1025.9266" line-height="125%"><tspan y="983.65192" x="-1025.9266" stroke-width=".38053"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="4.7332px" y="865.97827" x="-1107.9012" font-family="Sans" line-height="125%" fill="#000000"><tspan y="865.97827" x="-1107.9012" stroke-width=".38053"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="4.7332px" transform="rotate(176.05)" y="946.62823" x="-1013.5258" line-height="125%"><tspan y="946.62823" x="-1013.5258" stroke-width=".38053"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.5383px" transform="rotate(176.05)" y="982.44098" x="-1025.7732" line-height="125%"><tspan y="982.44098" x="-1025.7732" stroke-width=".38053"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size=".70996px" transform="rotate(176.05)" y="983.65192" x="-1025.9266" line-height="125%"><tspan y="983.65192" x="-1025.9266" stroke-width=".38053"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="4.7332px" transform="rotate(176.05)" y="865.97827" x="-1107.9012" font-family="Sans" line-height="125%" fill="#000000"><tspan y="865.97827" x="-1107.9012" stroke-width=".38053"/></text>
                                    <text font-size="2.13px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(176.05)" y="907.10144" x="-1066.3213" font-family="Sans" line-height="125%" fill="#000000"><tspan y="907.10144" x="-1066.3213" stroke-width=".38053"/></text>
                                   </g>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.88986 .47202 -.46468 -.87729 0 0)" font-size="39.002px" y="744.02856" x="-75.742088" stroke-width=".38054" line-height="125%" fill="#e8c122"><tspan y="744.02856" x="-75.742088" stroke-width=".38054" fill="#e8c122"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="39.002px" transform="matrix(-.88986 .47202 -.46468 -.87729 0 0)" y="744.02856" x="-75.742088" stroke-width=".38054" line-height="125%" fill="#e8c122"><tspan y="744.02856" x="-75.742088" stroke-width=".38054" fill="#e8c122"/></text>
                                   <g stroke-width=".38054">
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="4.7333px" y="973.12311" x="-646.43457" line-height="125%"><tspan y="973.12311" x="-646.43457" stroke-width=".38054"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="1.5383px" y="1008.9359" x="-658.68201" line-height="125%"><tspan y="1008.9359" x="-658.68201" stroke-width=".38054"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size=".70997px" y="1010.1469" x="-658.83539" line-height="125%"><tspan y="1010.1469" x="-658.83539" stroke-width=".38054"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="4.7333px" y="892.47333" x="-740.81006" font-family="Sans" line-height="125%" fill="#000000"><tspan y="892.47333" x="-740.81006" stroke-width=".38054"/></text>
-                                   <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(176.05)" font-size="2.13px" y="933.5965" x="-699.23004" font-family="Sans" line-height="125%" fill="#000000"><tspan y="933.5965" x="-699.23004" stroke-width=".38054"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="4.7333px" transform="rotate(176.05)" y="973.12311" x="-646.43457" line-height="125%"><tspan y="973.12311" x="-646.43457" stroke-width=".38054"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.5383px" transform="rotate(176.05)" y="1008.9359" x="-658.68201" line-height="125%"><tspan y="1008.9359" x="-658.68201" stroke-width=".38054"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size=".70997px" transform="rotate(176.05)" y="1010.1469" x="-658.83539" line-height="125%"><tspan y="1010.1469" x="-658.83539" stroke-width=".38054"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="4.7333px" transform="rotate(176.05)" y="892.47333" x="-740.81006" font-family="Sans" line-height="125%" fill="#000000"><tspan y="892.47333" x="-740.81006" stroke-width=".38054"/></text>
+                                   <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="2.13px" transform="rotate(176.05)" y="933.5965" x="-699.23004" font-family="Sans" line-height="125%" fill="#000000"><tspan y="933.5965" x="-699.23004" stroke-width=".38054"/></text>
                                   </g>
                                  </g>
-                                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.88985 .47201 -.46468 -.8773 0 0)" font-size="39.001px" y="666.71448" x="-550.71484" stroke-width=".38053" line-height="125%" fill="#e8c122"><tspan y="666.71448" x="-550.71484" stroke-width=".38053" fill="#e8c122"/></text>
+                                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="39.001px" transform="matrix(-.88985 .47201 -.46468 -.8773 0 0)" y="666.71448" x="-550.71484" stroke-width=".38053" line-height="125%" fill="#e8c122"><tspan y="666.71448" x="-550.71484" stroke-width=".38053" fill="#e8c122"/></text>
                                  <g stroke-width=".38053">
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="4.7332px" y="1097.5365" x="-1114.682" line-height="125%"><tspan y="1097.5365" x="-1114.682" stroke-width=".38053"/></text>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="1.5383px" y="1133.3491" x="-1126.9293" line-height="125%"><tspan y="1133.3491" x="-1126.9293" stroke-width=".38053"/></text>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size=".70996px" y="1134.5601" x="-1127.0828" line-height="125%"><tspan y="1134.5601" x="-1127.0828" stroke-width=".38053"/></text>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(176.05)" font-size="4.7332px" y="1016.8868" x="-1209.0571" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1016.8868" x="-1209.0571" stroke-width=".38053"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="4.7332px" transform="rotate(176.05)" y="1097.5365" x="-1114.682" line-height="125%"><tspan y="1097.5365" x="-1114.682" stroke-width=".38053"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.5383px" transform="rotate(176.05)" y="1133.3491" x="-1126.9293" line-height="125%"><tspan y="1133.3491" x="-1126.9293" stroke-width=".38053"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size=".70996px" transform="rotate(176.05)" y="1134.5601" x="-1127.0828" line-height="125%"><tspan y="1134.5601" x="-1127.0828" stroke-width=".38053"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="4.7332px" transform="rotate(176.05)" y="1016.8868" x="-1209.0571" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1016.8868" x="-1209.0571" stroke-width=".38053"/></text>
                                   <text font-size="2.13px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(176.05)" y="1058.0099" x="-1167.4773" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1058.0099" x="-1167.4773" stroke-width=".38053"/></text>
                                  </g>
                                 </g>
                                 <g transform="matrix(-.1114 .26655 -.26655 -.1114 629.17 -598.83)">
                                  <g transform="matrix(.99999 0 0 .99999 2.8372 503.25)">
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" font-size="69.123px" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
                                   <g transform="matrix(.19154 .085419 -.085419 .19154 -642.6 448.62)">
                                    <title>Layer 1</title>
                                   </g>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
-                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
+                                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
                                   <text font-size="3.775px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(24.035)" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
                                  </g>
                                 </g>
@@ -697,14 +693,14 @@
                </g>
               </g>
              </g>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" font-size="69.123px" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
              <g transform="matrix(.19154 .085419 -.085419 .19154 -642.6 448.62)">
               <title>Layer 1</title>
              </g>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
-             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
+             <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
              <text font-size="3.775px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="rotate(24.035)" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
             </g>
            </g>
@@ -715,37 +711,37 @@
              <g transform="matrix(1.8248,0,0,1.8248,-478.3,736.31)">
               <g transform="matrix(1.728,0,0,1.728,214.24,204.87)">
                <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="21.921px" y="-248.46469" x="1616.8279" line-height="125%"><tspan y="-248.46469" x="1616.8279"/></text>
-               <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="21.366px" y="-372.27982" x="338.237" line-height="125%"><tspan y="-372.27982" x="338.237"/></text>
-               <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="6.9438px" y="-210.61995" x="282.95169" line-height="125%"><tspan y="-210.61995" x="282.95169"/></text>
-               <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-82.117)" font-size="3.2049px" y="-205.15364" x="282.25949" line-height="125%"><tspan y="-205.15364" x="282.25949"/></text>
+               <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="21.366px" transform="rotate(-82.117)" y="-372.27982" x="338.237" line-height="125%"><tspan y="-372.27982" x="338.237"/></text>
+               <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6.9438px" transform="rotate(-82.117)" y="-210.61995" x="282.95169" line-height="125%"><tspan y="-210.61995" x="282.95169"/></text>
+               <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="3.2049px" transform="rotate(-82.117)" y="-205.15364" x="282.25949" line-height="125%"><tspan y="-205.15364" x="282.25949"/></text>
                <g transform="matrix(-.12953 -.033219 .033219 -.12953 -160.55 -23.022)">
-                <text stroke-linejoin="round" font-size="41.822px" font-family="Skia" stroke-opacity=".98551" font-weight="100" xml:space="preserve" transform="rotate(173.51)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="31.09136276, 2.5909469" y="-532.00525" x="110.77794" stroke-width="2.5909" line-height="125%" fill="#a42b23"><tspan y="-532.00525" x="110.77794" stroke-width="2.5909"/></text>
-                <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(-.99357 .1132 -.1132 -.99357 0 0)" font-size="61.474px" y="-407.83047" x="134.32643" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="-407.83047" x="134.32643"/></text>
+                <text stroke-linejoin="round" font-size="41.822px" font-family="Skia" stroke-opacity=".98551" xml:space="preserve" transform="rotate(173.51)" stroke="#e5e5e5" style="word-spacing:0px;letter-spacing:0px" stroke-dasharray="31.09136276, 2.5909469" stroke-width="2.5909" y="-532.00525" x="110.77794" font-weight="100" line-height="125%" fill="#a42b23"><tspan y="-532.00525" x="110.77794" stroke-width="2.5909"/></text>
+                <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="61.474px" transform="matrix(-.99357 .1132 -.1132 -.99357 0 0)" y="-407.83047" x="134.32643" font-family="sans-serif" line-height="125%" fill="#000000"><tspan y="-407.83047" x="134.32643"/></text>
                </g>
                <g transform="matrix(.31714 0 0 .31714 -300.9 -312.63)">
                 <g transform="translate(-786.43,-167.83)">
                  <g transform="matrix(.99999 0 0 .99999 2.8372 503.25)">
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" font-size="69.123px" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071816 -.0013018 .99277 0 0)" y="867.98224" x="1245.6998" line-height="125%" fill="#e8c122"><tspan y="867.98224" x="1245.6998" fill="#e8c122"/></text>
                   <g transform="matrix(.19154 .085419 -.085419 .19154 -642.6 448.62)">
                    <title>Layer 1</title>
                   </g>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
-                  <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.775px" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="750.60248" x="-57.473526" line-height="125%"><tspan y="750.60248" x="-57.473526"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="814.07471" x="-79.18013" line-height="125%"><tspan y="814.07471" x="-79.18013"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="816.22095" x="-79.45192" line-height="125%"><tspan y="816.22095" x="-79.45192"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="607.66376" x="-224.7386" font-family="Sans" line-height="125%" fill="#000000"><tspan y="607.66376" x="-224.7386"/></text>
+                  <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.775px" transform="rotate(24.035)" y="680.54779" x="-151.04482" font-family="Sans" line-height="125%" fill="#000000"><tspan y="680.54779" x="-151.04482"/></text>
                  </g>
                 </g>
                 <g transform="translate(-659.67,-134.07)">
-                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" font-size="69.123px" y="1682.4275" x="1631.686" line-height="125%" fill="#e8c122"><tspan y="1682.4275" x="1631.686" fill="#e8c122"/></text>
+                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="69.123px" transform="matrix(1.0073 .00071815 -.0013018 .99276 0 0)" y="1682.4275" x="1631.686" line-height="125%" fill="#e8c122"><tspan y="1682.4275" x="1631.686" fill="#e8c122"/></text>
                  <g transform="matrix(.19154 .085418 -.085418 .19154 -254.86 1257.4)">
                   <title>Layer 1</title>
                  </g>
-                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="1331.3643" x="626.07532" line-height="125%"><tspan y="1331.3643" x="626.07532"/></text>
-                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="2.7264px" y="1394.8358" x="604.36896" line-height="125%"><tspan y="1394.8358" x="604.36896"/></text>
-                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="1.2583px" y="1396.9821" x="604.09717" line-height="125%"><tspan y="1396.9821" x="604.09717"/></text>
-                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(24.035)" font-size="8.3889px" y="1188.427" x="458.81195" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1188.427" x="458.81195"/></text>
-                 <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="rotate(24.035)" font-size="3.775px" y="1261.3103" x="532.505" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1261.3103" x="532.505"/></text>
+                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="1331.3643" x="626.07532" line-height="125%"><tspan y="1331.3643" x="626.07532"/></text>
+                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.7264px" transform="rotate(24.035)" y="1394.8358" x="604.36896" line-height="125%"><tspan y="1394.8358" x="604.36896"/></text>
+                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.2583px" transform="rotate(24.035)" y="1396.9821" x="604.09717" line-height="125%"><tspan y="1396.9821" x="604.09717"/></text>
+                 <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="8.3889px" transform="rotate(24.035)" y="1188.427" x="458.81195" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1188.427" x="458.81195"/></text>
+                 <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.775px" transform="rotate(24.035)" y="1261.3103" x="532.505" font-family="Sans" line-height="125%" fill="#000000"><tspan y="1261.3103" x="532.505"/></text>
                 </g>
                </g>
               </g>
@@ -753,23 +749,23 @@
             </g>
            </g>
           </g>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.97971 .23411 -.23131 .96544 0 0)" font-size="55.298px" y="1016.7275" x="965.88391" line-height="125%" fill="#e8c122"><tspan y="1016.7275" x="965.88391" fill="#e8c122"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="55.298px" transform="matrix(.97971 .23411 -.23131 .96544 0 0)" y="1016.7275" x="965.88391" line-height="125%" fill="#e8c122"><tspan y="1016.7275" x="965.88391" fill="#e8c122"/></text>
           <g transform="matrix(.13322 .10198 -.10198 .13322 -687.85 534.03)">
            <title>Layer 1</title>
           </g>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="6.711px" y="905.47229" x="55.755718" line-height="125%"><tspan y="905.47229" x="55.755718"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="2.1811px" y="956.24921" x="38.390724" line-height="125%"><tspan y="956.24921" x="38.390724"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="1.0066px" y="957.96619" x="38.173294" line-height="125%"><tspan y="957.96619" x="38.173294"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="6.711px" y="791.12317" x="-78.054138" font-family="Sans" line-height="125%" fill="#000000"><tspan y="791.12317" x="-78.054138"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="3.02px" y="849.42944" x="-19.100079" font-family="Sans" line-height="125%" fill="#000000"><tspan y="849.42944" x="-19.100079"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.97971 .23411 -.23131 .96544 0 0)" font-size="55.298px" y="726.35901" x="1662.6216" line-height="125%" fill="#e8c122"><tspan y="726.35901" x="1662.6216" fill="#e8c122"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6.711px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="905.47229" x="55.755718" line-height="125%"><tspan y="905.47229" x="55.755718"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.1811px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="956.24921" x="38.390724" line-height="125%"><tspan y="956.24921" x="38.390724"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.0066px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="957.96619" x="38.173294" line-height="125%"><tspan y="957.96619" x="38.173294"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6.711px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="791.12317" x="-78.054138" font-family="Sans" line-height="125%" fill="#000000"><tspan y="791.12317" x="-78.054138"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" font-weight="bold" xml:space="preserve" font-size="3.02px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="849.42944" x="-19.100079" font-family="Sans" line-height="125%" fill="#000000"><tspan y="849.42944" x="-19.100079"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="55.298px" transform="matrix(.97971 .23411 -.23131 .96544 0 0)" y="726.35901" x="1662.6216" line-height="125%" fill="#e8c122"><tspan y="726.35901" x="1662.6216" fill="#e8c122"/></text>
           <g transform="matrix(.13322 .10198 -.10198 .13322 61.915 416.81)">
            <title>Layer 1</title>
           </g>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="6.711px" y="356.65594" x="579.86298" line-height="125%"><tspan y="356.65594" x="579.86298"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="2.1811px" y="407.43289" x="562.49799" line-height="125%"><tspan y="407.43289" x="562.49799"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="1.0066px" y="409.14987" x="562.28058" line-height="125%"><tspan y="409.14987" x="562.28058"/></text>
-          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" font-size="6.711px" y="242.30685" x="446.05313" font-family="Sans" line-height="125%" fill="#000000"><tspan y="242.30685" x="446.05313"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6.711px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="356.65594" x="579.86298" line-height="125%"><tspan y="356.65594" x="579.86298"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="2.1811px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="407.43289" x="562.49799" line-height="125%"><tspan y="407.43289" x="562.49799"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="1.0066px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="409.14987" x="562.28058" line-height="125%"><tspan y="409.14987" x="562.28058"/></text>
+          <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="6.711px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="242.30685" x="446.05313" font-family="Sans" line-height="125%" fill="#000000"><tspan y="242.30685" x="446.05313"/></text>
           <text font-size="3.02px" font-weight="bold" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="matrix(.79406 .60783 -.60783 .79406 0 0)" y="300.61313" x="505.0072" font-family="Sans" line-height="125%" fill="#000000"><tspan y="300.61313" x="505.0072"/></text>
          </g>
         </g>
@@ -777,22 +773,19 @@
        <g transform="matrix(.99430 .10659 -.10659 .99430 -1776.5 -827.47)">
         <g transform="translate(84.286,-42.857)">
          <g transform="matrix(.072127 .0020165 -.0020165 .072127 1717.3 670.69)">
-          <path style="color:#000000" fill="url(#linearGradient5658)" d="m1169.2 118.82s95.71 7.1033 96.579 98.087c-0.1761 95.169-104.09 101.24-104.09 101.24l2238.4 53.722c31.832 0.0824 58.841 10.821 56.847-50.726-2.0076-34.876-28.21-28.357-72.543-34.727z"/>
+          <path style="color:#000000" d="m1169.2 118.82s95.71 7.1033 96.579 98.087c-0.1761 95.169-104.09 101.24-104.09 101.24l2238.4 53.722c31.832 0.0824 58.841 10.821 56.847-50.726-2.0076-34.876-28.21-28.357-72.543-34.727z" fill="url(#linearGradient5658)"/>
          </g>
         </g>
        </g>
        <rect ry=".07224" transform="rotate(-29.526)" height="1.701" width="2.7106" y="7.7379" x="15.593" fill="url(#linearGradient7559)"/>
-       <circle id="ng-ruby-platform-light" transform="matrix(.92779 -.37309 .37309 .92779 0 0)" cy="-55.765" cx="-23.917" r="13.5" fill="url(#radialGradient21121)">
-        <title>Ruby Platform Light</title>
+       <circle id="ng-ruby-platform-light" transform="matrix(.92779 -.37309 .37309 .92779 0 0)" cy="-55.765" cx="-23.917" r="6.912" fill="url(#radialGradient18723)">
+        <title fill="url(#radialGradient18723)">Ruby Platform Light</title>
        </circle>
        <path fill="url(#radialGradient63107)" d="m-41.39-40.847-2.1453-0.87604s-1.0623-0.84973-0.87198-1.3507c0.19285-0.50767 1.5695-0.43681 1.5695-0.43681l2.1453 0.87604z" fill-rule="evenodd"/>
       </g>
      </g>
     </g>
    </g>
-   <circle id="ng-ruby-shock-wave-node" stroke-width="7.9819" stroke-opacity=".63333" stroke="url(#radialGradient18331)" cy="99.565" cx="85.253" r="24.809" fill="none">
-    <title>Ruby Shock Wave Node</title>
-   </circle>
   </g>
  </g>
 </svg>

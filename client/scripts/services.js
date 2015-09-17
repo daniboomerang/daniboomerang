@@ -68,80 +68,51 @@ daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval)
 	}	
 });
 
-daniboomerangServices.factory('BENodeConnectionsService', function ($http){
+daniboomerangServices.factory('nodeConnectionsService', function ($http){
 	
-	var connections = [];
-	var dataNodeRemainingConnections, availableConnectionIndexes;
+	var BEConnections = [];
+	var BEdataNodeRemainingConnections, BEavailableConnectionIndexes;
+	var FEConnections = [];
+	var FEdataNodeRemainingConnections, FEavailableConnectionIndexes;
 
 	return {
 		init: function(){
 			$http.get('/data/be-connections.json').then(function(response){
-	          	connections = response.data.pairedConnections; 
-	          	availableConnectionIndexes = response.data.availableConnectionIndexes;
-				dataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
+	          	BEConnections = response.data.pairedConnections; 
+	          	BEavailableConnectionIndexes = response.data.availableConnectionIndexes;
+				BEdataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
+		    });
+		    $http.get('/data/fe-connections.json').then(function(response){
+	          	FEConnections = response.data.pairedConnections; 
+	          	FEavailableConnectionIndexes = response.data.availableConnectionIndexes;
+				FEdataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
 		    });
 		},
-      	getAvailableConnectionIndexes: function(){
-      		return availableConnectionIndexes;
+      	getAvailableConnectionIndexes: function(side){
+      		if (side == 'BE') { return BEavailableConnectionIndexes }
+      		else return FEavailableConnectionIndexes;
       	},
-      	getConnection: function(index){
-      		availableConnectionIndexes.splice(index, 1); // LOCKING THE CONNECTION
-      		return connections[index];
+      	getConnection: function(side, index){
+      		if (side == 'BE') { BEavailableConnectionIndexes.splice(index, 1); return BEConnections[index]; }
+      		else { FEavailableConnectionIndexes.splice(index, 1); return FEConnections[index]; }
       	},
-      	getConnections: function(){
-      		return connections;
+      	getConnections: function(side){
+      		if (side == 'BE') { return BEConnections }
+      		else return FEConnections;
       	},
-      	updateConnection: function(index, connection){
-      		connections[index] = connection;
-      		availableConnectionIndexes.push(index); // UNLOCKING THE CONNECTION
+      	updateConnection: function(side, index, connection){
+      		if (side == 'BE') { BEConnections[index] = connection; BEavailableConnectionIndexes.push(index); }
+      		else { FEConnections[index] = connection; FEavailableConnectionIndexes.push(index);  }
       	},
-      	getNodeRemainingConnections: function(nodeName){
-      		return dataNodeRemainingConnections[nodeName];
+      	getNodeRemainingConnections: function(side, nodeName){
+      		if (side == 'BE') { return BEdataNodeRemainingConnections[nodeName]; }
+      		else return FEdataNodeRemainingConnections[nodeName];
       	},
-      	increaseNodeRemainingConnections: function(nodeName){
-      		dataNodeRemainingConnections[nodeName]++;
+      	increaseNodeRemainingConnections: function(side, nodeName){
+      		(side == 'BE') ? BEdataNodeRemainingConnections[nodeName]++ : FEdataNodeRemainingConnections[nodeName]++;
       	},
-      	decreaseNodeRemainingConnections: function(nodeName){
-      		dataNodeRemainingConnections[nodeName]--;
-      	}
-	}	
-});
-
-daniboomerangServices.factory('FENodeConnectionsService', function ($http){
-	
-	var connections = [];
-	var dataNodeRemainingConnections, availableConnectionIndexes;
-
-	return {
-		init: function(){
-			$http.get('/data/fe-connections.json').then(function(response){
-	          	connections = response.data.pairedConnections; 
-	          	availableConnectionIndexes = response.data.availableConnectionIndexes;
-				dataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
-		    });
-		},
-      	getAvailableConnectionIndexes: function(){
-      		return availableConnectionIndexes;
-      	},
-      	getConnection: function(index){
-      		availableConnectionIndexes.splice(index, 1); // LOCKING THE CONNECTION
-      		return connections[index];
-      	},
-      	getConnections: function(){
-      		return connections;
-      	},
-      	updateConnection: function(index, connection){
-      		connections[index] = connection;
-      		availableConnectionIndexes.push(index); // UNLOCKING THE CONNECTION
-      	},
-      	getNodeRemainingConnections: function(nodeName){
-      		return dataNodeRemainingConnections[nodeName];
-      	},
-      	increaseNodeRemainingConnections: function(nodeName){
-      		dataNodeRemainingConnections[nodeName]++;
-      	},
-      	decreaseNodeRemainingConnections: function(nodeName){
-      		dataNodeRemainingConnections[nodeName]--;
+      	decreaseNodeRemainingConnections: function(side, nodeName){
+      		(side == 'BE') ? BEdataNodeRemainingConnections[nodeName]-- : FEdataNodeRemainingConnections[nodeName]--;
       	}
 	}	
 });

@@ -1,4 +1,3 @@
-
 var daniboomerangAliveSvgDirectives = angular.module('daniboomerangAliveSvgDirectives', ['daniboomerangServices']);
 
 /********************************/
@@ -11,14 +10,56 @@ daniboomerangAliveSvgDirectives.directive('aliveSvg', function($interval, $timeo
     scope: {},
     templateUrl: function (elem, attrs) { return '/images/' + attrs.name + '.svg'; },
     link: function (scope, element, attrs) {
-        // ISS LIGHTS 
-        $interval(function() { scope.issLight = '#' + Math.floor(Math.random()*16777215).toString(16); }, 1000);
+       
         // ET SCENE
         scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showEtFingerLight = true; }, 2500); })
         scope.$on('inactive-section:contact', function($event) { $timeout(function() { scope.showEtFingerLight = false; }, 2000); })
     }
   };
 });  
+
+daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $timeout, cancelAsynchPromiseService) {
+  return {
+    restrict: 'EA',
+    scope: {},
+    template: function (elem, attrs) { return '<div id="iss" class="spin-right-whole" ng-include="\'/images/iss.svg\'"></div>';  },
+    link: function (scope, element, attrs) {
+
+      var centerLight;
+
+      /***********************************/
+      /* Waits the iss SVG to be loaded  */
+      /***********************************/
+
+      scope.$on('$includeContentLoaded', function () { init(); });
+
+      function init() {
+
+        /* Iss Lights */
+        issCenterLight = element.find('#ng-center-light'); 
+
+        // Interval promises 
+        var intervalPromiseLights;
+
+        // We trigger the animations only when we are in the section
+        scope.$on('active-section:remote-working', function($event){ 
+          intervalPromiseLights = turnOnLights();
+        });
+
+        // And we stop them when we exit the section
+        scope.$on('inactive-section:remote-working', function($event){ 
+          cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+        });
+     
+        function turnOnLights() {
+          return $interval(function() {
+            (issCenterLight.attr('class') ==  (undefined || 'animated fadeOut')) ? issCenterLight.attr('class', 'animated fadeIn') : issCenterLight.attr('class', 'animated fadeOut');
+          }, 2000);
+        }  
+      }
+    } 
+  };
+}); 
 
 daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
@@ -29,9 +70,9 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $
 
       var rocket, centerLight, airStripLightZero, airStripLightOne;
 
-      /*************************************/
-      /* Waits the cliff SVG to be loaded  */
-      /*************************************/
+      /************************************/
+      /* Waits the cliff SVG to be loaded */
+      /************************************/
 
       scope.$on('$includeContentLoaded', function () { init(); });
 
@@ -50,14 +91,14 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $
         // Interval promises 
         var intervalPromiseAirStripLights, intervalPromiseLights;
 
-        // We trigger the animations only when we are in the creativity section
+        // We trigger the animations only when we are in the section
         scope.$on('active-section:without-boundaries', function($event){ 
           //rocket.attr('class', 'soft-suspension');
           intervalPromiseAirStripLights = turnOnAirStripLights();
           intervalPromiseLights = turnOnLights();
         });
 
-        // And we stop them when we exit that section
+        // And we stop them when we exit the section
         scope.$on('inactive-section:without-boundaries', function($event){ 
           //rocket.attr('class', '');
           cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
@@ -112,13 +153,13 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
         // Interval promises 
         var intervalPromiseEngines, intervalPromiseLights;
 
-        // We trigger the animations only when we are in the Back-end section
+        // We trigger the animations only when we are in the section
         scope.$on(onActiveSection, function($event){ 
           intervalPromiseEngines = turnOnEngines();
           intervalPromiseLights = turnOnLights();
         });
 
-        // And we stop them when we exit that section
+        // And we stop them when we exit the section
         scope.$on(onInactiveSection, function($event){ 
           cancelAsynchPromiseService.cancelInterval(intervalPromiseEngines);
           cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
@@ -147,8 +188,10 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $t
     template: function (elem, attrs) { return '<div id="ruby" ng-include="\'/images/BE-ruby.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
-      var currentWireId, currentWire, currentWireNumber;
+       /* DOM Elements */
       var rubyPlatformLight, serverLight, serverReflect, node, shockWaveNodeRuby;
+      /* Aux Variables */
+      var currentWireId, currentWire, currentWireNumber;
 
       scope.$on('$includeContentLoaded', function () { init(); });
 
@@ -166,9 +209,10 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $t
         currentWire = element.find('#ng-wire-0');
         currentWire.attr('class', 'animated fadeIn');
 
-        /******************/
-        /* SERVER AND NODE*/
-        /******************/
+        /*******************/
+        /* SERVER AND NODE */
+        /*******************/
+
         rubyPlatformLight = element.find('#ng-ruby-platform-light'); 
         serverLight = element.find('#ng-server-light'); 
         serverReflect = element.find('#ng-server-reflect'); 
@@ -178,13 +222,13 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $t
         /* Interval Promises */
         var intervalPromiseWires, intervalPromiseLights;
 
-        // We trigger the animations only when we are in the back-end section
+        // We trigger the animations only when we are in the section
         scope.$on('active-section:back-end', function($event){ 
           intervalPromiseWires = turnOnWires();
           intervalPromiseLights = turnOnNodeAndLights();
         });
         
-        // And we stop them when we exit that section
+        // And we stop them when we exit the section
         scope.$on('inactive-section:back-end', function($event){ 
           cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
           cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
@@ -211,87 +255,137 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $t
   }
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgBeEarth', function($interval, $timeout, cancelAsynchPromiseService, BENodeConnectionsService) {
+daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService) {
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { return '<div id="earth-right" ng-include="\'/images/BE-earth.svg\'"></div>';  },
+    template: function (elem, attrs) { var svgImg; (attrs.side ==  ('BE')) ? svgImg  = "\'/images/BE-earth.svg\'" : svgImg  = "\'/images/FE-earth.svg\'"; return '<div id="earth-side" ng-include="' + svgImg + '"></div>';  },
     link: function (scope, element, attrs) {
 
+      /* DOM Elements */
+      // BE
       var sqlServerLight, sqlServerReflect, sqlPlatformLight, sqlNode, sqlShockWaveNode, mongoServerLight, mongoServerReflect, mongoPlatformLight, mongoNode, mongoShockWaveNode;
+      // FE
+      var nodeMap, nodeLaptop;
+      /* Aux Variables */
+      var availableConnectionIndexes, randomFreeIndex, connectionToTurn, newStatus;
+      /* Connections */
+      var connections, DOMElementConnections;
 
       scope.$on('$includeContentLoaded', function () { init(); });
 
       function init() {
         
-        /*********************/
-        /* SERVERS AND NODES */
-        /*********************/
-        sqlServerLight = element.find('#ng-sql-server-light'); 
-        sqlServerReflect = element.find('#ng-sql-server-reflect'); 
-        sqlPlatformLight = element.find('#ng-sql-platform-light'); 
-        sqlNode = element.find('#ng-sql-node'); 
-        sqlShockWaveNode = element.find('#ng-sql-shock-wave-node'); 
-        mongoServerLight = element.find('#ng-mongo-server-light'); 
-        mongoServerReflect = element.find('#ng-mongo-server-reflect'); 
-        mongoPlatformLight = element.find('#ng-mongo-platform-light'); 
-        mongoNode = element.find('#ng-mongo-node'); 
-        mongoShockWaveNode = element.find('#ng-mongo-shock-wave-node'); 
+        if (attrs.side == 'BE') {
+          /***************/
+          /* BE ELEMENTS */
+          /***************/
+          sqlServerLight = element.find('#ng-sql-server-light'); 
+          sqlServerReflect = element.find('#ng-sql-server-reflect'); 
+          sqlPlatformLight = element.find('#ng-sql-platform-light'); 
+          sqlNode = element.find('#ng-sql-node'); 
+          sqlShockWaveNode = element.find('#ng-sql-shock-wave-node'); 
+          mongoServerLight = element.find('#ng-mongo-server-light'); 
+          mongoServerReflect = element.find('#ng-mongo-server-reflect'); 
+          mongoPlatformLight = element.find('#ng-mongo-platform-light'); 
+          mongoNode = element.find('#ng-mongo-node'); 
+          mongoShockWaveNode = element.find('#ng-mongo-shock-wave-node'); 
+        }
+        else {
+          /***************/
+          /* FE ELEMENTS */
+          /***************/
+          nodeMaps = element.find('#ng-node-maps'); 
+          nodeLaptop = element.find('#ng-node-laptop'); 
+        }
 
-        // Init Earth connections
-        var connections = BENodeConnectionsService.getConnections();
+        // Create DOMElementConnections and init them
+        connections = nodeConnectionsService.getConnections(attrs.side);
+        DOMElementConnections = createDOMElementConnections(connections);
         for (var i=0; i<connections.length; i++){
           if (connections[i].isActive){
             // NODE CONNECTION IS VISSIBLE
-            element.find(connections[i].nodeA.connection).attr('class', 'animated fadeIn'); element.find(connections[i].nodeB.connection).attr('class', 'animated fadeIn');
+            DOMElementConnections[i].nodeA.elementConnection.attr('class', 'animated fadeIn'); DOMElementConnections[i].nodeB.elementConnection.attr('class', 'animated fadeIn');
             // NODE SHOW WAVE IS NOT VISSIBLE
-            element.find(connections[i].nodeA.shockWave).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.shockWave).attr('class', 'animated fadeOut');
+            DOMElementConnections[i].nodeA.elementShockWave.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementShockWave.attr('class', 'animated fadeOut');
             // NODE CENTER IS VISSIBLE
-            element.find(connections[i].nodeA.center).attr('class', 'animated fadeIn'); element.find(connections[i].nodeB.center).attr('class', 'animated fadeIn');
+            DOMElementConnections[i].nodeA.elementCenter.attr('class', 'animated fadeIn'); DOMElementConnections[i].nodeB.elementCenter.attr('class', 'animated fadeIn');
             // THE CONNECTION IS VISSIBLE
-            element.find(connections[i].connectionAB.name).attr('class', 'animated fadeIn');
+            DOMElementConnections[i].connectionAB.elementConnection.attr('class', 'animated fadeIn');
           }
           else{
             // NODE CONNECTION IS VISSIBLE
-            element.find(connections[i].nodeA.connection).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.connection).attr('class', 'animated fadeOut');
+            DOMElementConnections[i].nodeA.elementConnection.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementConnection.attr('class', 'animated fadeOut');
             // NODE SHOW WAVE IS NOT VISSIBLE
-            element.find(connections[i].nodeA.shockWave).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.shockWave).attr('class', 'animated fadeOut');
+            DOMElementConnections[i].nodeA.elementShockWave.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementShockWave.attr('class', 'animated fadeOut');
             // NODE CENTER IS VISSIBLE
-            element.find(connections[i].nodeA.center).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.center).attr('class', 'animated fadeOut');            
-            // THE CONNECTION IS INVISSIBLE
-            element.find(connections[i].connectionAB.name).attr('class', 'animated fadeOut');
+            DOMElementConnections[i].nodeA.elementCenter.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementCenter.attr('class', 'animated fadeOut');
+            // THE CONNECTION IS VISSIBLE
+            DOMElementConnections[i].connectionAB.elementConnection.attr('class', 'animated fadeOut');
           }
         }
 
-        /**************************/
-        /* EARTH CITY CONNECTIONS */
-        /**************************/
+        if (attrs.side == 'BE') {
 
-        var intervalPromiseMongo, intervalPromiseSQL, intervalPromiseEarthConnections;
+          /***********************/
+          /* BE EARTH ANIMATIONS */
+          /***********************/
 
-        scope.$on('active-section:back-end', function($event){ 
-          intervalPromiseEarthConnections = turnOnEarthConnections();
-          intervalPromiseSQL = turnOnSLQ();
-          intervalPromiseMongo = turnOnMongo();
-        });
+          // Interval Promises 
+          var intervalPromiseMongo, intervalPromiseSQL, intervalPromiseEarthConnections;
 
-        // And we stop them when we exit that section
-        scope.$on('inactive-section:back-end', function($event){ 
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseMongo);
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseSQL);
-        });
+          scope.$on('active-section:back-end', function($event){ 
+            intervalPromiseEarthConnections = turnOnEarthConnections(attrs.side);
+            intervalPromiseSQL = turnOnSLQ();
+            intervalPromiseMongo = turnOnMongo();
+          });
+
+          // And we stop them when we exit that section
+          scope.$on('inactive-section:back-end', function($event){ 
+            cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
+            cancelAsynchPromiseService.cancelInterval(intervalPromiseMongo);
+            cancelAsynchPromiseService.cancelInterval(intervalPromiseSQL);
+          });
+        }
+
+        else {
+ 
+          /***********************/
+          /* FE EARTH ANIMATIONS */
+          /***********************/
+
+          // Interval Promises 
+          var animateNodesPromise, intervalPromiseEarthConnections;
+
+          scope.$on('active-section:front-end', function($event){ 
+            animateNodesPromise = turnOnMapsAndLaptop();
+            intervalPromiseEarthConnections = turnOnEarthConnections();
+          });
+
+          // And we stop them when we exit that section
+          scope.$on('inactive-section:front-end', function($event){ 
+            cancelAsynchPromiseService.cancelInterval(animateNodesPromise);
+            cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
+          });
+        }
       }
 
-      function turnOnEarthConnections(){
-        return intervalPromise = $interval(function() {  
-          turnNewConnection();
+      function turnOnEarthConnections(side){
+        return $interval(function() {  
+          turnNewConnection(side);
+        }, 2500);
+      }
+
+      function turnOnMapsAndLaptop(){
+        return $interval(function() {  
+          (nodeMaps.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeMaps.attr('class', 'animated fadeIn') : nodeMaps.attr('class', 'animated fadeOut');
+          (nodeLaptop.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeLaptop.attr('class', 'animated fadeIn') : nodeLaptop.attr('class', 'animated fadeOut');
         }, 2000);
       }
 
       function turnOnSLQ(){
         return intervalPromise = $interval(function() {  
-          // Mongo Server
+          // SQL Server
           (mongoServerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? mongoServerLight.attr('class', 'animated fadeIn') : mongoServerLight.attr('class', 'animated fadeOut');
           (mongoServerReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? mongoServerReflect.attr('class', 'animated fadeIn') : mongoServerReflect.attr('class', 'animated fadeOut');
           (mongoPlatformLight.attr('class') ==  (undefined || 'animated fadeOut')) ? mongoPlatformLight.attr('class', 'animated fadeIn') : mongoPlatformLight.attr('class', 'animated fadeOut');
@@ -301,64 +395,71 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeEarth', function($interval,
       }
 
       function turnOnMongo(){
+        // Mongo Server
         return intervalPromiseSQL = $interval(function() {  
           (sqlServerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerLight.attr('class', 'animated fadeIn') : sqlServerLight.attr('class', 'animated fadeOut');
           (sqlServerReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerReflect.attr('class', 'animated fadeIn') : sqlServerReflect.attr('class', 'animated fadeOut');
           (sqlPlatformLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlPlatformLight.attr('class', 'animated fadeIn') : sqlPlatformLight.attr('class', 'animated fadeOut');
           (sqlNode.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlNode.attr('class', 'animated fadeIn') : sqlNode.attr('class', 'animated fadeOut');
           (sqlShockWaveNode.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlShockWaveNode.attr('class', 'animated fadeIn') : sqlShockWaveNode.attr('class', 'animated fadeOut');
-        }, 1200);
+        }, 1500);
       }
 
-      function turnNode(node, newStatus) {
+      function turnNode(side, node, elementConnection, elementCenter, elementShockWave, newStatus) {
         // TURNING IT OFF
         if (!newStatus) {
-          BENodeConnectionsService.decreaseNodeRemainingConnections(node.name);
-          if (BENodeConnectionsService.getNodeRemainingConnections(node.name) == 0){
-            element.find(node.connection).attr('class', 'animated fadeOut');
-            $timeout(function() { element.find(node.center).attr('class', 'animated fadeOut') }, 500);
+          nodeConnectionsService.decreaseNodeRemainingConnections(side, node.name);
+          if (nodeConnectionsService.getNodeRemainingConnections(side, node.name) == 0){
+            elementConnection.attr('class', 'animated fadeOut');
+            elementCenter.attr('class', 'animated fadeOut');
           }
         }
         // TURNING IT ON
         else { 
-          BENodeConnectionsService.increaseNodeRemainingConnections(node.name);
-          element.find(node.shockWave).attr('class', 'animated fadeIn');
-          if (BENodeConnectionsService.getNodeRemainingConnections(node.name) == 1) { element.find(node.connection).attr('class', 'animated fadeIn') }
+          nodeConnectionsService.increaseNodeRemainingConnections(side, node.name);
+          elementShockWave.attr('class', 'animated fadeIn');
+          if (nodeConnectionsService.getNodeRemainingConnections(side, node.name) == 1) {
+            elementConnection.attr('class', 'animated fadeIn')
+            elementCenter.attr('class', 'animated fadeIn');
+          }
           $timeout(function() {
-            if (BENodeConnectionsService.getNodeRemainingConnections(node.name) == 1){ element.find(node.center).attr('class', 'animated fadeIn'); }
-            element.find(node.shockWave).attr('class', 'animated fadeOut');
-          }, 500);
+            elementShockWave.attr('class', 'animated fadeOut');
+          }, 500);        }
+      }
+
+      function turnNewConnection(side){   
+        
+        availableConnectionIndexes = nodeConnectionsService.getAvailableConnectionIndexes(side);
+        if (availableConnectionIndexes.length > 0) {
+          randomFreeIndex = Math.round(Math.random() * (availableConnectionIndexes.length -1));
+          // Getting the connection it gets locked
+          connectionToTurn = nodeConnectionsService.getConnection(side, randomFreeIndex);
+          currentConnectionAB = DOMElementConnections[randomFreeIndex].connectionAB.elementConnection;  
+          newStatus = !connectionToTurn.isActive;
+          turnNode(side, connectionToTurn.nodeA, DOMElementConnections[randomFreeIndex].nodeA.elementConnection, DOMElementConnections[randomFreeIndex].nodeA.elementCenter, DOMElementConnections[randomFreeIndex].nodeA.elementShockWave, newStatus);
+          (currentConnectionAB.attr('class') ==  (undefined || 'animated fadeOut')) ? currentConnectionAB.attr('class', 'animated fadeIn') : currentConnectionAB.attr('class', 'animated fadeOut');
+          turnNode(side, connectionToTurn.nodeB, DOMElementConnections[randomFreeIndex].nodeB.elementConnection, DOMElementConnections[randomFreeIndex].nodeB.elementCenter, DOMElementConnections[randomFreeIndex].nodeB.elementShockWave, newStatus);
+          // Updating Connection gets it unlocked
+          connectionToTurn.isActive = newStatus;
+          nodeConnectionsService.updateConnection(side, randomFreeIndex, connectionToTurn);
         }
       }
 
-      function turnNewConnection(){   
-        
-        var availableConnectionIndexes = BENodeConnectionsService.getAvailableConnectionIndexes();
-        if (availableConnectionIndexes.length > 0) {
-          var randomFreeIndex = Math.round(Math.random() * (availableConnectionIndexes.length -1));
-          // Getting the connection it gets locked
-          var connectionToTurn = BENodeConnectionsService.getConnection(randomFreeIndex);
-          /*console.log(availableConnectionIndexes);
-          console.log(connectionToTurn.nodeA.name);
-          console.log(connectionToTurn.connectionAB);
-          console.log(connectionToTurn.nodeB.name);
-          console.log(connectionToTurn.isActive);*/
-          /////
-          var newStatus = !connectionToTurn.isActive;
-          $timeout(function() {
-            turnNode(connectionToTurn.nodeA, newStatus);
-          }, 500);
-          $timeout(function() {
-            (element.find(connectionToTurn.connectionAB.name).attr('class') ==  (undefined || 'animated fadeOut')) ? element.find(connectionToTurn.connectionAB.name).attr('class', 'animated fadeIn') : element.find(connectionToTurn.connectionAB.name).attr('class', 'animated fadeOut');
-          }, 1100);  
-          $timeout(function() {
-            turnNode(connectionToTurn.nodeB, newStatus);
-          }, 2200);
-          /////
-          // Updating Connection gets it unlocked
-          connectionToTurn.isActive = newStatus;
-          BENodeConnectionsService.updateConnection(randomFreeIndex, connectionToTurn);
+      function createDOMElementConnections(connections){
+        var DOMElementConnections = [];
+        var currentElement;
+        for (var i=0; i<connections.length; i++){
+          currentElement = { nodeA: {}, connectionAB: {}, nodeB: {} };
+          currentElement.nodeA = { elementConnection: element.find(connections[i].nodeA.connection),
+                                   elementShockWave: element.find(connections[i].nodeA.shockWave),
+                                   elementCenter: element.find(connections[i].nodeA.center) }
+          currentElement.connectionAB = { elementConnection: element.find(connections[i].connectionAB.name) }                                   
+          currentElement.nodeB = { elementConnection: element.find(connections[i].nodeB.connection),
+                                   elementShockWave: element.find(connections[i].nodeB.shockWave),
+                                   elementCenter: element.find(connections[i].nodeB.center) }
+          DOMElementConnections.push(currentElement);
         }
+        return DOMElementConnections;
       }
     } 
   };
@@ -371,7 +472,9 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgGaming', function($interval, 
     template: function (elem, attrs) { return '<div id="gaming" ng-include="\'/images/FE-gaming.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
+      /* Aux Variables */
       var currentWireId, currentWire, currentWireNumber;
+      /* DOM Elements */
       var node, shockWaveNodeRuby;
 
       scope.$on('$includeContentLoaded', function () { init(); });
@@ -394,13 +497,13 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgGaming', function($interval, 
         /* Interval Promises */
         var intervalPromiseWires, intervalPromiseLights;
 
-        // We trigger the animations only when we are in the front-end section
+        // We trigger the animations only when we are in the section
         scope.$on('active-section:front-end', function($event){ 
           intervalPromiseWires = turnOnWires();
           intervalPromiseServerNode = turnOnNode();
         });
 
-        // And we stop them when we exit that section
+        // And we stop them when we exit the section
         scope.$on('inactive-section:front-end', function($event){ 
           cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
           cancelAsynchPromiseService.cancelInterval(intervalPromiseServerNode);
@@ -419,132 +522,6 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgGaming', function($interval, 
         return $interval(function() {  
           (node.attr('class') ==  (undefined || 'animated fadeOut')) ? node.attr('class', 'animated fadeIn') : node.attr('class', 'animated fadeOut');
         }, 2500);
-      }
-    } 
-  };
-}); 
-
-daniboomerangAliveSvgDirectives.directive('aliveSvgFeEarth', function($interval, $timeout, cancelAsynchPromiseService, FENodeConnectionsService) {
-  return {
-    restrict: 'EA',
-    scope: {},
-    template: function (elem, attrs) { return '<div id="earth-left" ng-include="\'/images/FE-earth.svg\'"></div>';  },
-    link: function (scope, element, attrs) {
-
-      var nodeMap, nodeLapto, connections, intervalPromise;
-
-      scope.$on('$includeContentLoaded', function () { init(); });
-
-      function init() {
-
-        /******************/
-        /* SERVER AND NODE*/
-        /******************/
-        nodeMaps = element.find('#ng-node-maps'); 
-        nodeLaptop = element.find('#ng-node-laptop'); 
-
-        // Init Earth connections
-        connections = FENodeConnectionsService.getConnections();
-        initConnections(connections);
-        
-        // Interval Primise 
-        var animateNodesPromise, turnOnEarthConnectionsPromise;
-
-        scope.$on('active-section:front-end', function($event){ 
-          animateNodesPromise = turnOnNodes();
-          turnOnEarthConnectionsPromise = turnOnEarthConnections();
-        });
-
-        // And we stop them when we exit that section
-        scope.$on('inactive-section:front-end', function($event){ 
-          cancelAsynchPromiseService.cancelInterval(animateNodesPromise);
-          cancelAsynchPromiseService.cancelInterval(turnOnEarthConnectionsPromise);
-        });
-      }
-
-      function turnOnNodes(){
-        return $interval(function() {  
-          (nodeMaps.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeMaps.attr('class', 'animated fadeIn') : nodeMaps.attr('class', 'animated fadeOut');
-          (nodeLaptop.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeLaptop.attr('class', 'animated fadeIn') : nodeLaptop.attr('class', 'animated fadeOut');
-        }, 1000);
-      }
-
-      function turnOnEarthConnections(){
-        return $interval(function() {  
-          // Earth connections
-          turnNewConnection();
-        }, 2500);
-      }
-
-      function initConnections(connections) {
-        for (var i=0; i<connections.length; i++){
-          if (connections[i].isActive){
-            // NODE CONNECTION IS VISSIBLE
-            element.find(connections[i].nodeA.connection).attr('class', 'animated fadeIn'); element.find(connections[i].nodeB.connection).attr('class', 'animated fadeIn');
-            // NODE SHOW WAVE IS NOT VISSIBLE
-            element.find(connections[i].nodeA.shockWave).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.shockWave).attr('class', 'animated fadeOut');
-            // NODE CENTER IS VISSIBLE
-            element.find(connections[i].nodeA.center).attr('class', 'animated fadeIn'); element.find(connections[i].nodeB.center).attr('class', 'animated fadeIn');
-            // THE CONNECTION IS VISSIBLE
-            element.find(connections[i].connectionAB.name).attr('class', 'animated fadeIn');
-          }
-          else{
-            // NODE CONNECTION IS VISSIBLE
-            element.find(connections[i].nodeA.connection).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.connection).attr('class', 'animated fadeOut');
-            // NODE SHOW WAVE IS NOT VISSIBLE
-            element.find(connections[i].nodeA.shockWave).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.shockWave).attr('class', 'animated fadeOut');
-            // NODE CENTER IS VISSIBLE
-            element.find(connections[i].nodeA.center).attr('class', 'animated fadeOut'); element.find(connections[i].nodeB.center).attr('class', 'animated fadeOut');            
-            // THE CONNECTION IS INVISSIBLE
-            element.find(connections[i].connectionAB.name).attr('class', 'animated fadeOut');
-          }
-        }
-      }
-
-      function turnNode(node, newStatus) {
-        // TURNING IT OFF
-        if (!newStatus) {
-          FENodeConnectionsService.decreaseNodeRemainingConnections(node.name);
-          if (FENodeConnectionsService.getNodeRemainingConnections(node.name) == 0){
-            element.find(node.connection).attr('class', 'animated fadeOut');
-            $timeout(function() { element.find(node.center).attr('class', 'animated fadeOut') }, 500);
-          }
-        }
-        // TURNING IT ON
-        else { 
-          FENodeConnectionsService.increaseNodeRemainingConnections(node.name);
-          element.find(node.shockWave).attr('class', 'animated fadeIn');
-          if (FENodeConnectionsService.getNodeRemainingConnections(node.name) == 1) { element.find(node.connection).attr('class', 'animated fadeIn') }
-          $timeout(function() {
-            if (FENodeConnectionsService.getNodeRemainingConnections(node.name) == 1){ element.find(node.center).attr('class', 'animated fadeIn'); }
-            element.find(node.shockWave).attr('class', 'animated fadeOut');
-          }, 500);
-        }
-      }
-
-      function turnNewConnection(){   
-        
-        var availableConnectionIndexes = FENodeConnectionsService.getAvailableConnectionIndexes();
-        if (availableConnectionIndexes.length > 0) {
-          var randomFreeIndex = Math.round(Math.random() * (availableConnectionIndexes.length -1));
-          // Getting the connection it gets locked
-          var connectionToTurn = FENodeConnectionsService.getConnection(randomFreeIndex);
-          /////
-          var newStatus = !connectionToTurn.isActive;
-          $timeout(function() {
-            turnNode(connectionToTurn.nodeA, newStatus);
-          }, 500);
-          $timeout(function() {
-            (element.find(connectionToTurn.connectionAB.name).attr('class') ==  (undefined || 'animated fadeOut')) ? element.find(connectionToTurn.connectionAB.name).attr('class', 'animated fadeIn') : element.find(connectionToTurn.connectionAB.name).attr('class', 'animated fadeOut');
-          }, 1100);  
-          $timeout(function() {
-            turnNode(connectionToTurn.nodeB, newStatus);
-          }, 2200);
-          /////
-          // Updating Connection gets it unlocked
-          connectionToTurn.isActive = newStatus;
-          FENodeConnectionsService.updateConnection(randomFreeIndex, connectionToTurn);
-        }
       }
     } 
   };

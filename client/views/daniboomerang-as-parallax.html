@@ -41,7 +41,7 @@
       <a href="#without-boundaries" du-scrollspy></a>
     </div>
     <div class="parallax__layer parallax__layer--back">
-      <div id="orbit-iss" class="spin-right-whole"><alive-svg id="iss" name="iss"></alive-svg></div>
+      <div alive-svg-iss id="orbit-iss"></div>
       <!--<div id="orbit-earth"><div id="earth-connectivity"></div></div>-->
     </div>  
     <div class="parallax__layer parallax__layer--fore"></div>
@@ -55,7 +55,7 @@
     <div class="parallax__layer parallax__layer--deep">
       <div id="be-orbit-comet-white" class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="be-comet-white" class="comet-white comet-from-left"></div></div>
     </div>
-    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-earth id="BE-earth"></div></div>  
+    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-fe-earth side="BE" id="BE-earth"></div></div>  
     <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="BE" id="BE-books"></div></div>
     <div class="parallax__layer parallax__layer--base">
       <div id="back-end"> <!-- This is just to trigger the event onScroll -->
@@ -74,7 +74,7 @@
     <div class="parallax__layer parallax__layer--deep">
       <div id="fe-orbit-comet-blue" class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="be-comet-blue" class="comet-blue comet-from-left"></div></div>
     </div>
-    <div class="parallax__layer parallax__layer--back"><div alive-svg-fe-earth id="FE-earth"></div></div>  
+    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-fe-earth side="FE" id="FE-earth"></div></div>  
     <div class="parallax__layer parallax__layer--base">
       <div id="front-end"> <!-- This is just to trigger the event onScroll -->
         <div parallax-subsection name="frontEnd" type="text-only"></div>

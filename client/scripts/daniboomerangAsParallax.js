@@ -8,11 +8,10 @@ angular.module('daniboomerangAsParallax', [
 	'daniboomerangAliveSvgDirectives',
 	'daniboomerangServices'
 ])
-.run(function (scrollObserverService, urlObserverService, BENodeConnectionsService, FENodeConnectionsService) {
+.run(function (scrollObserverService, urlObserverService, nodeConnectionsService) {
 	urlObserverService.init();
 	scrollObserverService.init();
-	BENodeConnectionsService.init();
-	FENodeConnectionsService.init();
+	nodeConnectionsService.init();
 })
 .value('duScrollEasing', function easingFunction(t) { return t*(2-t) })
 .directive('daniboomerangAsParallaxDirective', function() {
