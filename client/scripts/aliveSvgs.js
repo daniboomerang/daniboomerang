@@ -42,29 +42,142 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
         issLightTwo = element.find('#ng-light-2'); 
         issLightThree = element.find('#ng-light-3'); 
         
-
         // Interval promises 
         var intervalPromiseLights;
 
         // We trigger the animations only when we are in the section
-        scope.$on('active-section:remote-working', function($event){ 
-          intervalPromiseLights = turnOnLights();
-        });
+        scope.$on('active-section:creativity-fromTop', function($event){ intervalPromiseLights = turnOnLights(); });
+        scope.$on('active-section:active-section:without-boundaries-fromBottom', function($event){ intervalPromiseLights = turnOnLights(); });
 
-        // And we stop them when we exit the section
-        scope.$on('inactive-section:remote-working', function($event){ 
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
-        });
+        // And we stop them when we exit its sections section
+        scope.$on('active-section:connectivity-fromBottom', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseLights); });
+        scope.$on('active-section:about-fromTop', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseLights); });
      
         function turnOnLights() {
           return $interval(function() {
+            console.log('here an $interval');
             (issCenterLight.attr('class') ==  (undefined || 'animated fadeOut')) ? issCenterLight.attr('class', 'animated fadeIn') : issCenterLight.attr('class', 'animated fadeOut');
             (issLightZero.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightZero.attr('class', 'animated fadeIn') : issLightZero.attr('class', 'animated fadeOut');
             (issLightOne.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightOne.attr('class', 'animated fadeIn') : issLightOne.attr('class', 'animated fadeOut');
             (issLightTwo.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightTwo.attr('class', 'animated fadeIn') : issLightTwo.attr('class', 'animated fadeOut');
             (issLightThree.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightThree.attr('class', 'animated fadeIn') : issLightThree.attr('class', 'animated fadeOut');
-          }, 2000);
+          }, 1000);
         }  
+      }
+    } 
+  };
+}); 
+
+daniboomerangAliveSvgDirectives.directive('aliveSvgEarthConnectivity', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService) {
+  return {
+    restrict: 'EA',
+    scope: {},
+    template: function (elem, attrs) { return '<div id="earth-connectivity" ng-include="\'/images/moon-&-sun-&-earth-connections.svg\'"></div>';  },
+    link: function (scope, element, attrs) {
+
+      /***********************************/
+      /* Waits the iss SVG to be loaded  */
+      /***********************************/
+
+      scope.$on('$includeContentLoaded', function () { init(); });
+
+      function init() {
+        // Create DOMElementConnections and init them
+        connections = nodeConnectionsService.getConnections(attrs.side);
+        DOMElementConnections = nodeConnectionsService.createDOMElementConnections(element, connections);
+        for (var i=0; i<connections.length; i++){
+          if (connections[i].isActive){
+            // NODE CONNECTION IS VISSIBLE
+            DOMElementConnections[i].nodeA.elementConnection.attr('class', 'animated fadeIn'); DOMElementConnections[i].nodeB.elementConnection.attr('class', 'animated fadeIn');
+            // NODE SHOW WAVE IS NOT VISSIBLE
+            DOMElementConnections[i].nodeA.elementShockWave.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementShockWave.attr('class', 'animated fadeOut');
+            // NODE CENTER IS VISSIBLE
+            DOMElementConnections[i].nodeA.elementCenter.attr('class', 'animated fadeIn'); DOMElementConnections[i].nodeB.elementCenter.attr('class', 'animated fadeIn');
+            // THE CONNECTION IS VISSIBLE
+            DOMElementConnections[i].connectionAB.elementConnection.attr('class', 'animated fadeIn');
+          }
+          else{
+            // NODE CONNECTION IS VISSIBLE
+            DOMElementConnections[i].nodeA.elementConnection.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementConnection.attr('class', 'animated fadeOut');
+            // NODE SHOW WAVE IS NOT VISSIBLE
+            DOMElementConnections[i].nodeA.elementShockWave.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementShockWave.attr('class', 'animated fadeOut');
+            // NODE CENTER IS VISSIBLE
+            DOMElementConnections[i].nodeA.elementCenter.attr('class', 'animated fadeOut'); DOMElementConnections[i].nodeB.elementCenter.attr('class', 'animated fadeOut');
+            // THE CONNECTION IS VISSIBLE
+            DOMElementConnections[i].connectionAB.elementConnection.attr('class', 'animated fadeOut');
+          }
+        }
+
+        /********************/
+        /* EARTH ANIMATIONS */
+        /********************/
+
+        // Interval Promises 
+        var intervalPromiseEarthConnections;
+
+        // We trigger the animations only when we are in the section
+        scope.$on('active-section:creativity-fromTop', function($event){ intervalPromiseEarthConnections = turnOnEarthConnections('both'); });
+        scope.$on('active-section:active-section:without-boundaries-fromBottom', function($event){ intervalPromiseEarthConnections = turnOnEarthConnections('both'); });
+        /*scope.$on('active-section:remote-working', function($event){ 
+          if ((intervalPromiseEarthConnections != undefined) && intervalPromiseEarthConnections.cancelled ){
+            intervalPromiseEarthConnections = turnOnEarthConnections('both');
+          } 
+        });*/  
+        /*scope.$on('active-section:creativity', function($event){ 
+          if ((intervalPromiseEarthConnections != undefined) && intervalPromiseEarthConnections.cancelled ){
+            intervalPromiseEarthConnections = turnOnEarthConnections('both');
+          } 
+        });*/ 
+        // And we stop them when we exit its sections section
+        scope.$on('active-section:connectivity-fromBottom', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections); });
+        scope.$on('active-section:about-fromTop', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections); });
+      }
+
+      function turnNode(side, node, elementConnection, elementCenter, elementShockWave, newStatus) {
+        // TURNING IT OFF
+        if (!newStatus) {
+          nodeConnectionsService.decreaseNodeRemainingConnections(side, node.name);
+          if (nodeConnectionsService.getNodeRemainingConnections(side, node.name) == 0){
+            elementConnection.attr('class', 'animated fadeOut');
+            elementCenter.attr('class', 'animated fadeOut');
+          }
+        }
+        // TURNING IT ON
+        else { 
+          nodeConnectionsService.increaseNodeRemainingConnections(side, node.name);
+          elementShockWave.attr('class', 'animated flash');
+          if (nodeConnectionsService.getNodeRemainingConnections(side, node.name) == 1) {
+            elementConnection.attr('class', 'animated fadeIn')
+            elementCenter.attr('class', 'animated fadeIn');
+          }
+          $timeout(function() {
+            elementShockWave.attr('class', 'animated fadeOut');
+          }, 500);
+        }
+      }
+
+      function turnNewConnection(side){   
+        availableConnectionIndexes = nodeConnectionsService.getAvailableConnectionIndexes(side);
+        if (availableConnectionIndexes.length > 0) {
+          randomFreeIndex = Math.round(Math.random() * (availableConnectionIndexes.length -1));
+          // Getting the connection it gets locked
+          connectionToTurn = nodeConnectionsService.getConnection(side, randomFreeIndex);
+          currentConnectionAB = DOMElementConnections[randomFreeIndex].connectionAB.elementConnection;  
+          newStatus = !connectionToTurn.isActive;
+          turnNode(side, connectionToTurn.nodeA, DOMElementConnections[randomFreeIndex].nodeA.elementConnection, DOMElementConnections[randomFreeIndex].nodeA.elementCenter, DOMElementConnections[randomFreeIndex].nodeA.elementShockWave, newStatus);
+          (currentConnectionAB.attr('class') ==  (undefined || 'animated fadeOut')) ? currentConnectionAB.attr('class', 'animated fadeIn') : currentConnectionAB.attr('class', 'animated fadeOut');
+          turnNode(side, connectionToTurn.nodeB, DOMElementConnections[randomFreeIndex].nodeB.elementConnection, DOMElementConnections[randomFreeIndex].nodeB.elementCenter, DOMElementConnections[randomFreeIndex].nodeB.elementShockWave, newStatus);
+          // Updating Connection gets it unlocked
+          connectionToTurn.isActive = newStatus;
+          nodeConnectionsService.updateConnection(side, randomFreeIndex, connectionToTurn);
+        }
+      }
+
+      function turnOnEarthConnections(side){
+        return $interval(function() {
+        console.log('here an $interval') ;
+          turnNewConnection(side);
+        }, 2000);
       }
     } 
   };
@@ -117,6 +230,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $
 
       function turnOnAirStripLights() { 
         return $interval(function() {
+          console.log('here an $interval');
           (airStripLightZero.attr('class') ==  (undefined || 'animated fadeOut')) ? airStripLightZero.attr('class', 'animated fadeIn') : airStripLightZero.attr('class', 'animated fadeOut');
           (airStripLightOne.attr('class') ==  (undefined || 'animated fadeOut')) ? airStripLightOne.attr('class', 'animated fadeIn') : airStripLightOne.attr('class', 'animated fadeOut');
         }, 1000);
@@ -124,6 +238,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $
 
       function turnOnLights() {
         return $interval(function() {
+          console.log('here an $interval');
           (rocketCenterLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rocketCenterLight.attr('class', 'animated fadeIn') : rocketCenterLight.attr('class', 'animated fadeOut');
         }, 2000);
       }
@@ -157,7 +272,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
         
         var onActiveSection, onInactiveSection;
         (attrs.books ==  ('BE')) ? onActiveSection = "active-section:back-end" : onActiveSection = "active-section:front-end";
-        (attrs.books ==  ('BE')) ? onInactiveSection = "inactive-section:back-end" : onInactiveSection = "active-section:front-end";
+        (attrs.books ==  ('BE')) ? onInactiveSection = "inactive-section:back-end" : onInactiveSection = "inactive-section:front-end";
 
         // Interval promises 
         var intervalPromiseEngines, intervalPromiseLights;
@@ -177,11 +292,13 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
 
       function turnOnEngines() { 
         return $interval(function() {
+          console.log('here an $interval');
           (engine.attr('class') ==  (undefined || 'animated fadeOut')) ? engine.attr('class', 'animated fadeIn') : engine.attr('class', 'animated fadeOut');
         }, 2500);
       }
       function turnOnLights() {
         return $interval(function() {
+          console.log('here an $interval');
           (leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
           (rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
         }, 2300);
@@ -245,14 +362,16 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $t
       }
 
       function turnOnWires() { 
-        return $interval(function() {  
+        return $interval(function() {
+        console.log('here an $interval')  ;
             currentWire.attr('class', 'visibility-hidden');
             currentWire = element.find('#ng-wire-' + Math.floor((Math.random() * 7)).toString()); 
             currentWire.attr('class', 'animated fadeIn');
         }, 2000);
       }
       function turnOnNodeAndLights() {
-        return $interval(function() {  
+        return $interval(function() {
+        console.log('here an $interval')  ;
           (rubyPlatformLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rubyPlatformLight.attr('class', 'animated fadeIn') : rubyPlatformLight.attr('class', 'animated fadeOut');
           (serverLight.attr('class') ==  (undefined || 'animated fadeOut')) ? serverLight.attr('class', 'animated fadeIn') : serverLight.attr('class', 'animated fadeOut');
           (serverReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? serverReflect.attr('class', 'animated fadeIn') : serverReflect.attr('class', 'animated fadeOut');
@@ -310,7 +429,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
 
         // Create DOMElementConnections and init them
         connections = nodeConnectionsService.getConnections(attrs.side);
-        DOMElementConnections = createDOMElementConnections(connections);
+        DOMElementConnections = nodeConnectionsService.createDOMElementConnections(element, connections);
         for (var i=0; i<connections.length; i++){
           if (connections[i].isActive){
             // NODE CONNECTION IS VISSIBLE
@@ -366,9 +485,10 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
           // Interval Promises 
           var animateNodesPromise, intervalPromiseEarthConnections;
 
+        // We trigger the animations only when we are in the section
           scope.$on('active-section:front-end', function($event){ 
             animateNodesPromise = turnOnMapsAndLaptop();
-            intervalPromiseEarthConnections = turnOnEarthConnections();
+            intervalPromiseEarthConnections = turnOnEarthConnections(attrs.side);
           });
 
           // And we stop them when we exit that section
@@ -380,20 +500,23 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
       }
 
       function turnOnEarthConnections(side){
-        return $interval(function() {  
+        return $interval(function() {
+          console.log('here an $interval')  ;
           turnNewConnection(side);
-        }, 2500);
+        }, 2000);
       }
 
       function turnOnMapsAndLaptop(){
-        return $interval(function() {  
+        return $interval(function() {
+          console.log('here an $interval')  ;
           (nodeMaps.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeMaps.attr('class', 'animated fadeIn') : nodeMaps.attr('class', 'animated fadeOut');
           (nodeLaptop.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeLaptop.attr('class', 'animated fadeIn') : nodeLaptop.attr('class', 'animated fadeOut');
         }, 2000);
       }
 
       function turnOnSLQ(){
-        return intervalPromise = $interval(function() {  
+        return $interval(function() {  
+          console.log('here an $interval');
           // SQL Server
           (mongoServerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? mongoServerLight.attr('class', 'animated fadeIn') : mongoServerLight.attr('class', 'animated fadeOut');
           (mongoServerReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? mongoServerReflect.attr('class', 'animated fadeIn') : mongoServerReflect.attr('class', 'animated fadeOut');
@@ -405,7 +528,8 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
 
       function turnOnMongo(){
         // Mongo Server
-        return intervalPromiseSQL = $interval(function() {  
+        return $interval(function() {  
+                    console.log('here an $interval');
           (sqlServerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerLight.attr('class', 'animated fadeIn') : sqlServerLight.attr('class', 'animated fadeOut');
           (sqlServerReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerReflect.attr('class', 'animated fadeIn') : sqlServerReflect.attr('class', 'animated fadeOut');
           (sqlPlatformLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlPlatformLight.attr('class', 'animated fadeIn') : sqlPlatformLight.attr('class', 'animated fadeOut');
@@ -426,18 +550,18 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
         // TURNING IT ON
         else { 
           nodeConnectionsService.increaseNodeRemainingConnections(side, node.name);
-          elementShockWave.attr('class', 'animated fadeIn');
+          elementShockWave.attr('class', 'animated flash');
           if (nodeConnectionsService.getNodeRemainingConnections(side, node.name) == 1) {
             elementConnection.attr('class', 'animated fadeIn')
             elementCenter.attr('class', 'animated fadeIn');
           }
           $timeout(function() {
             elementShockWave.attr('class', 'animated fadeOut');
-          }, 500);        }
+          }, 500);
+        }
       }
 
       function turnNewConnection(side){   
-        
         availableConnectionIndexes = nodeConnectionsService.getAvailableConnectionIndexes(side);
         if (availableConnectionIndexes.length > 0) {
           randomFreeIndex = Math.round(Math.random() * (availableConnectionIndexes.length -1));
@@ -452,23 +576,6 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
           connectionToTurn.isActive = newStatus;
           nodeConnectionsService.updateConnection(side, randomFreeIndex, connectionToTurn);
         }
-      }
-
-      function createDOMElementConnections(connections){
-        var DOMElementConnections = [];
-        var currentElement;
-        for (var i=0; i<connections.length; i++){
-          currentElement = { nodeA: {}, connectionAB: {}, nodeB: {} };
-          currentElement.nodeA = { elementConnection: element.find(connections[i].nodeA.connection),
-                                   elementShockWave: element.find(connections[i].nodeA.shockWave),
-                                   elementCenter: element.find(connections[i].nodeA.center) }
-          currentElement.connectionAB = { elementConnection: element.find(connections[i].connectionAB.name) }                                   
-          currentElement.nodeB = { elementConnection: element.find(connections[i].nodeB.connection),
-                                   elementShockWave: element.find(connections[i].nodeB.shockWave),
-                                   elementCenter: element.find(connections[i].nodeB.center) }
-          DOMElementConnections.push(currentElement);
-        }
-        return DOMElementConnections;
       }
     } 
   };
@@ -520,7 +627,8 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgGaming', function($interval, 
       }
 
       function turnOnWires() { 
-        return $interval(function() {  
+        return $interval(function() {
+        console.log('here an $interval')  ;
           currentWire.attr('class', 'visibility-hidden');
           currentWire = element.find('#ng-wire-' + Math.floor((Math.random() * 7)).toString()); 
           currentWire.attr('class', 'animated fadeIn');
@@ -528,7 +636,8 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgGaming', function($interval, 
       }
 
       function turnOnNode() { 
-        return $interval(function() {  
+        return $interval(function() {
+        console.log('here an $interval')  ;
           (node.attr('class') ==  (undefined || 'animated fadeOut')) ? node.attr('class', 'animated fadeIn') : node.attr('class', 'animated fadeOut');
         }, 2500);
       }

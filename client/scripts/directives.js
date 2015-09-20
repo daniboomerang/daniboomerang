@@ -117,7 +117,7 @@ daniboomerangDirectives.directive('revealBackground', function() {
 /***************** COVER ****************/
 /****************************************/
 
-daniboomerangDirectives.directive('cover', function($timeout) {
+daniboomerangDirectives.directive('cover', function() {
   return {
     restrict: 'E',
     templateUrl: 'views/sections/cover.html',

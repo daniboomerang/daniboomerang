@@ -2,6 +2,9 @@ var daniboomerangServices = angular.module('daniboomerangServices', []);
 
 daniboomerangServices.factory('scrollObserverService', function ($rootScope, $location){
 
+	var previousSection = 'cover'; // This will helps us to know the direction from
+								   // where we are entering to a section
+
 	return {
 		init: function (){
 			$rootScope.$on('duScrollspy:becameActive', function($event, $element){
@@ -12,11 +15,23 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					$location.path('/' + section);
 					$rootScope.$apply();
 					if ('cover' == hash.substr(1)){ $rootScope.$broadcast('active-section:cover'); }
-					if ('connectivity' == hash.substr(1)){ $rootScope.$broadcast('active-section:connectivity'); }
-					if ('creativity' == hash.substr(1)){ $rootScope.$broadcast('active-section:creativity'); }
+					if ('connectivity' == hash.substr(1)){
+						$rootScope.$broadcast('active-section:connectivity');
+						if (previousSection == 'creativity') { $rootScope.$broadcast('active-section:connectivity-fromBottom'); }
+					}
+					if ('creativity' == hash.substr(1)){ 
+						$rootScope.$broadcast('active-section:creativity');
+						if (previousSection == 'connectivity') { $rootScope.$broadcast('active-section:creativity-fromTop'); }
+					 }
 					if ('remote-working' == hash.substr(1)){ $rootScope.$broadcast('active-section:remote-working'); }
-					if ('without-boundaries' == hash.substr(1)){ $rootScope.$broadcast('active-section:without-boundaries'); }
-			        if ('about' == hash.substr(1)){ $rootScope.$broadcast('active-section:about'); }
+					if ('without-boundaries' == hash.substr(1)){
+						$rootScope.$broadcast('active-section:without-boundaries');
+						if (previousSection == 'about') { $rootScope.$broadcast('active-section:without-boundaries-fromBottom'); }
+					}
+			        if ('about' == hash.substr(1)){
+			        	$rootScope.$broadcast('active-section:about');
+						if (previousSection == 'without-boundaries') { $rootScope.$broadcast('active-section:about-fromTop'); }
+			        }
 					if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:back-end'); }
 			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('active-section:loving'); }
 					if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:front-end'); }
@@ -37,6 +52,9 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 		        if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:front-end'); }
 		        if ('work' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:work'); }
 		        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('inactive-section:contact'); }
+
+		        // And we set the new inactive section as the previous section that was active
+		        previousSection = hash.substr(1);
 		    });
 		}
 	}
@@ -59,11 +77,21 @@ daniboomerangServices.factory('urlObserverService', function ($rootScope, $locat
 	}	
 });
 
-daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval){
+daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval, $timeout){
 	
 	return {
 		cancelInterval: function (interval){
 			$interval.cancel(interval);
+		},
+		cancelIntervals: function (intervals){
+			for (var i=0; i<intervals.length; i++){
+				$interval.cancel(intervals[i]);
+			}
+		},
+		cancelTimeouts: function (timeouts){
+			for (var i=0; i<timeouts.length; i++){
+				$interval.cancel(timeouts[i]);
+			}
 		}
 	}	
 });
@@ -71,48 +99,81 @@ daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval)
 daniboomerangServices.factory('nodeConnectionsService', function ($http){
 	
 	var BEConnections = [];
-	var BEdataNodeRemainingConnections, BEavailableConnectionIndexes;
+	var BEDataNodeRemainingConnections, BEAvailableConnectionIndexes;
 	var FEConnections = [];
-	var FEdataNodeRemainingConnections, FEavailableConnectionIndexes;
+	var FEDataNodeRemainingConnections, FEAvailableConnectionIndexes;
+	var earthConnections = [];
+	var earthDataNodeRemainingConnections, earthAvailableConnectionIndexes;
+
 
 	return {
 		init: function(){
 			$http.get('/data/be-connections.json').then(function(response){
 	          	BEConnections = response.data.pairedConnections; 
-	          	BEavailableConnectionIndexes = response.data.availableConnectionIndexes;
-				BEdataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
+	          	BEAvailableConnectionIndexes = response.data.availableConnectionIndexes;
+				BEDataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
 		    });
 		    $http.get('/data/fe-connections.json').then(function(response){
 	          	FEConnections = response.data.pairedConnections; 
-	          	FEavailableConnectionIndexes = response.data.availableConnectionIndexes;
-				FEdataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
+	          	FEAvailableConnectionIndexes = response.data.availableConnectionIndexes;
+				FEDataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
+		    });
+		    $http.get('/data/earth-connections.json').then(function(response){
+	          	earthConnections = response.data.pairedConnections; 
+	          	earthAvailableConnectionIndexes = response.data.availableConnectionIndexes;
+				earthDataNodeRemainingConnections = response.data.dataNodeRemainingConnections;
 		    });
 		},
       	getAvailableConnectionIndexes: function(side){
-      		if (side == 'BE') { return BEavailableConnectionIndexes }
-      		else return FEavailableConnectionIndexes;
+      		if (side == 'BE') { return BEAvailableConnectionIndexes }
+      		else if (side == 'FE') { return FEAvailableConnectionIndexes }
+      		else { return earthAvailableConnectionIndexes }
       	},
       	getConnection: function(side, index){
-      		if (side == 'BE') { BEavailableConnectionIndexes.splice(index, 1); return BEConnections[index]; }
-      		else { FEavailableConnectionIndexes.splice(index, 1); return FEConnections[index]; }
+      		if (side == 'BE') { BEAvailableConnectionIndexes.splice(index, 1); return BEConnections[index]; }
+      		else if (side == 'FE') { FEAvailableConnectionIndexes.splice(index, 1); return FEConnections[index]; }
+      		else { earthAvailableConnectionIndexes.splice(index, 1); return earthConnections[index]; }
       	},
       	getConnections: function(side){
       		if (side == 'BE') { return BEConnections }
-      		else return FEConnections;
+      		else if (side == 'FE') { return FEConnections }
+      		else { return earthConnections }
       	},
       	updateConnection: function(side, index, connection){
-      		if (side == 'BE') { BEConnections[index] = connection; BEavailableConnectionIndexes.push(index); }
-      		else { FEConnections[index] = connection; FEavailableConnectionIndexes.push(index);  }
+      		if (side == 'BE') { BEConnections[index] = connection; BEAvailableConnectionIndexes.push(index); }
+      		else if (side == 'FE') { FEConnections[index] = connection; FEAvailableConnectionIndexes.push(index); }
+      		else { earthConnections[index] = connection; earthAvailableConnectionIndexes.push(index); }
       	},
       	getNodeRemainingConnections: function(side, nodeName){
-      		if (side == 'BE') { return BEdataNodeRemainingConnections[nodeName]; }
-      		else return FEdataNodeRemainingConnections[nodeName];
+      		if (side == 'BE') { return BEDataNodeRemainingConnections[nodeName] }
+      		else if (side == 'FE') { return FEDataNodeRemainingConnections[nodeName] }
+      		else { return earthDataNodeRemainingConnections[nodeName] }
       	},
       	increaseNodeRemainingConnections: function(side, nodeName){
-      		(side == 'BE') ? BEdataNodeRemainingConnections[nodeName]++ : FEdataNodeRemainingConnections[nodeName]++;
+      		if (side == 'BE') { BEDataNodeRemainingConnections[nodeName]++ }
+      		else if (side == 'FE') { FEDataNodeRemainingConnections[nodeName]++ }
+      		else { earthDataNodeRemainingConnections[nodeName]++ }
       	},
       	decreaseNodeRemainingConnections: function(side, nodeName){
-      		(side == 'BE') ? BEdataNodeRemainingConnections[nodeName]-- : FEdataNodeRemainingConnections[nodeName]--;
-      	}
+      		if (side == 'BE') { BEDataNodeRemainingConnections[nodeName]-- }
+      		else if (side == 'FE') { FEDataNodeRemainingConnections[nodeName]-- }
+      		else { earthDataNodeRemainingConnections[nodeName]-- }
+      	},
+        createDOMElementConnections: function(element, connections){
+	        var DOMElementConnections = [];
+	        var currentElement;
+	        for (var i=0; i<connections.length; i++){
+	          currentElement = { nodeA: {}, connectionAB: {}, nodeB: {} };
+	          currentElement.nodeA = { elementConnection: element.find(connections[i].nodeA.connection),
+	                                   elementShockWave: element.find(connections[i].nodeA.shockWave),
+	                                   elementCenter: element.find(connections[i].nodeA.center) }
+	          currentElement.connectionAB = { elementConnection: element.find(connections[i].connectionAB.name) }                                   
+	          currentElement.nodeB = { elementConnection: element.find(connections[i].nodeB.connection),
+	                                   elementShockWave: element.find(connections[i].nodeB.shockWave),
+	                                   elementCenter: element.find(connections[i].nodeB.center) }
+	          DOMElementConnections.push(currentElement);
+	        }
+	        return DOMElementConnections;
+	    }
 	}	
 });

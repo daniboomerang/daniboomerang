@@ -10,7 +10,8 @@
 .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
 .parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; height: 120vh;}
 .parallax__section_test { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; }
-.animated-title { text-transform: uppercase; font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; color: #FF9933; }
+.animated-title { font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; color: #FF9933; }
+.upper-case { text-transform: uppercase; }
 @media all { .animated-title { font-size: 2.2em; } }
 @media (min-width: 768px) and (max-width: 1024px) { .animated-title { font-size: 2em; } }
 @media (min-width: 640px) and (max-width: 767px) { .animated-title { font-size: 1.8em; } }
@@ -83,7 +84,7 @@
 #remote-working-parallax-images .parallax__layer--deep { } 
 #remote-working-parallax-images .parallax__layer--back { } 
 #remote-working-parallax-images .parallax__layer--base { } 
-#remote-working-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cloud-books.svg); }
+#remote-working-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff-books.svg); }
 
 @media all { 
   #remote-working-parallax-images { height: 180vh; }
@@ -93,8 +94,8 @@
   #cliff { height: 110%; width: 110%; }
   #orbit-iss { margin-left: 15vh; margin-top: -10vh;  height: 35vh; width: 35vh; }
   #iss { height: 90%; width: 90%; }
-  #orbit-earth { height: 100%; width: 100%; }
-  #earth-connectivity { background-image: url(/images/earth-connectivity.svg); background-size:100%; background-repeat: no-repeat; height:100%; width:100% }
+  #orbit-earth-connectivity { width: 100%; }
+  #earth-connectivity { height:100%; width:100% }
 }
 
   /********************/
