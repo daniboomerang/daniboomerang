@@ -222,7 +222,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $
 
         // And we stop them when we exit the section
         scope.$on('inactive-section:without-boundaries', function($event){ 
-          //rocket.attr('class', '');
+          rocket.attr('class', '');
           cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
           cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
         });
@@ -250,7 +250,13 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { var svgImg; (attrs.books ==  ('BE')) ? svgImg  = "\'/images/BE-books.svg\'" : svgImg  = "\'/images/FE-books.svg\'"; return '<div id="book-case" ng-include="' + svgImg + '"></div>';  },
+    template: function (elem, attrs) { 
+      var svgImg;
+      if (attrs.books ==  'BE') { svgImg  = "\'/images/BE-books.svg\'" }
+      else if (attrs.books ==  'FE') { svgImg  = "\'/images/FE-books.svg\'" }
+      else { svgImg  = "\'/images/cliff-books.svg\'" }
+      return '<div id="book-case" ng-include="' + svgImg + '"></div>';
+    },
     link: function (scope, element, attrs) {
 
       var bookCase, engine, leftLight, rightLight;
@@ -271,9 +277,10 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
         rightLight = element.find('#ng-right-light');
         
         var onActiveSection, onInactiveSection;
-        (attrs.books ==  ('BE')) ? onActiveSection = "active-section:back-end" : onActiveSection = "active-section:front-end";
-        (attrs.books ==  ('BE')) ? onInactiveSection = "inactive-section:back-end" : onInactiveSection = "inactive-section:front-end";
-
+        if (attrs.books ==  'BE') {  onActiveSection = "active-section:back-end"; onInactiveSection = "inactive-section:back-end"; }
+        if (attrs.books ==  'FE') {  onActiveSection = "active-section:front-end"; onInactiveSection = "inactive-section:front-end"; }
+        if (attrs.books ==  'cliff') {  onActiveSection = "active-section:without-boundaries"; onInactiveSection = "inactive-section:without-boundaries"; }
+      
         // Interval promises 
         var intervalPromiseEngines, intervalPromiseLights;
 

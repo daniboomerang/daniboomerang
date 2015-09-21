@@ -84,7 +84,7 @@
 #remote-working-parallax-images .parallax__layer--deep { } 
 #remote-working-parallax-images .parallax__layer--back { } 
 #remote-working-parallax-images .parallax__layer--base { } 
-#remote-working-parallax-images .parallax__layer--fore { background-size:100%; background-repeat: no-repeat; background-image: url(/images/cliff-books.svg); }
+#remote-working-parallax-images .parallax__layer--fore { }
 
 @media all { 
   #remote-working-parallax-images { height: 180vh; }
