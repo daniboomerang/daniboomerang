@@ -1,20 +1,20 @@
-<div id="contact">    	
-    <div id="scroll-up" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut">
-    	<a class="arrow animated animated-section visibility-hidden" href="#work" du-smooth-scroll du-scrollspy duration="1000" style="-moz-animation-delay: 0.5s; -webkit-animation-delay: 0.5s; -ms-animation-delay: 0.5s;"><i class="fa fa-fw fa-chevron-up fa-3x"></i></a>
+<div id="contact">  
+	<div id="scroll-up" class="contact-row">
+    	<a class="arrow" href="#work" du-smooth-scroll du-scrollspy duration="1000"><i class="fa fa-fw fa-chevron-up fa-3x"></i></a>
     </div>    
-	<div id="social" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut">
-		<div id="mail-button-wrapper" class="social-button animated animated-section visibility-hidden" style="-moz-animation-delay: 0.8s; -webkit-animation-delay: 0.8s; -ms-animation-delay: 0.8s;">
-			<div button id="mail-button" size="sm" content-type="icon" icon-class="fa fa-fw fa-envelope-o fa-lg" is-active="isMailButtonActive" ng-click-function="toggleSocialButton('mail')" spin-direction='right'></div>
+	<div id="social" class="contact-row">
+		<div id="mail-button-wrapper" class="social-button">
+			<div button id="mail-button" size="sm" content-type="icon" icon-class="fa fa-fw fa-envelope-o fa-lg" is-active="isMailButtonActive" is-toogled-button="true" ng-click-function="toggleSocialButton('mail')" spin-direction='right'></div>
 		</div>
-        <div id="linkedin-button-wrapper" class="social-button animated animated-section visibility-hidden" style="-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;">
+        <div id="linkedin-button-wrapper" class="social-button">
 			<div button id="linkedin-button" size="sm" content-type="icon" icon-class="fa fa-fw fa-linkedin fa-lg" href="https://es.linkedin.com/in/estevezdani"></div>
 		</div>
-		<div id="phone-button-wrapper" class="social-button animated animated-section visibility-hidden" style="-moz-animation-delay: 1.2s; -webkit-animation-delay: 1.2s; -ms-animation-delay: 1.2s;">
-			<div button id="phone-button" size="sm" content-type="icon" icon-class="fa fa-fw fa-phone fa-lg" is-active="isPhoneButtonActive" ng-click-function="toggleSocialButton('phoneNumber')" spin-direction='left'></div>
+		<div id="phone-button-wrapper" class="social-button">
+			<div button id="phone-button" size="sm" content-type="icon" icon-class="fa fa-fw fa-phone fa-lg" is-active="isPhoneButtonActive" is-toogled-button="true" ng-click-function="toggleSocialButton('phoneNumber')" spin-direction='left'></div>
 		</div>
 	</div>
-	<div id="contact-info" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="zoomIn" animatedout="zoomOut">
-    	<span class="animated animated-section visibility-hidden" style="-moz-animation-delay: 2s; -webkit-animation-delay: 2s; -ms-animation-delay: 2s;">{{contactInfo}}</span>
+	<div id="contact-info" class="contact-row">
+    	<span>{{contactInfo}}</span>
     </div>
-	<div id="et-scene-wrapper" class="contact-row" animated-section triggeredby="contact" triggeredon="active" animatedin="fadeIn" animatedout="fadeOut"><alive-svg id="et-scene" name="et-contact-scene" class="animated animated-section visibility-hidden" style="-moz-animation-delay: 1.4s; -webkit-animation-delay: 1.4s; -ms-animation-delay: 1.4s; -moz-animation-duration: 1s; -webkit-animation-duration: 1s; -ms-animation-duration: 1s;"></alive-svg></div>
+    <div alive-svg-et id="et-scene-wrapper" class="contact-row"></div>
 </div>

@@ -5,6 +5,7 @@ describe('Introduction', function() {
 	beforeEach(function (){
 
 		module('daniboomerangIntro');
+		module('daniboomerangServices');
 		module('htmlTemplates');
 
 		inject(function($injector, $compile) {
@@ -25,7 +26,7 @@ describe('Introduction', function() {
 		// Intro
 		var intro = elm.find('#intro');
 		expect(intro.length).toBe(1);
-		expect(intro.hasClass('visibility-hidden')).toBe(true);
+		expect(intro.hasClass('fadeIn')).toBe(true);
 		// Bottom row
 		var introBottomRow = elm.find('#intro-bottom-row');
 		expect(introBottomRow.length).toBe(1);

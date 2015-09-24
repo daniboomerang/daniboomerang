@@ -2,7 +2,10 @@
 /* PARALLAX */
 /************/
 /** { -webkit-overflow-scrolling: touch; }*/
-.parallax { height: 100%; /* fallback for older browsers */ height: 100vh; overflow-x: hidden; overflow-y: scroll; -webkit-perspective: 300px; perspective: 300px; -webkit-perspective-origin-x: 100%; perspective-origin-x: 100%; }
+#parallax-wrapper { height: 100%; /* fallback for older browsers */ height: 100vh;  -webkit-transition: height 0.7s; -moz-transition: height 0.7s;
+       -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s; }
+#parallax-wrapper.contract { height: 99%; /* fallback for older browsers */ height: 99vh;  overflow-y: scroll; border-bottom: white solid 5px; }
+.parallax { overflow-x: hidden; overflow-y: auto; -webkit-perspective: 300px; perspective: 300px; -webkit-perspective-origin-x: 100%; perspective-origin-x: 100%; }
 .parallax__section { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
 .parallax__layer { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
 .parallax__layer--fore { -webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 4; }
@@ -388,5 +391,11 @@
 /***********/
 /* CONTACT */
 /***********/
-#contact-parallax-section { z-index: 2; color: white; height: 100vh; }
-#contact-parallax-section .parallax__layer--base { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
+#contact-parallax-section { z-index: 2; color: white; }
+#contact-parallax-section .parallax__layer--deep { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
+#contact-parallax-section .parallax__layer--base { height: 100%; }
+@media (min-width: 200px){ #contact-parallax-section .parallax__layer--deep { height: 80vh; } }
+@media (min-width: 400px){ #contact-parallax-section .parallax__layer--deep { height: 100vh; } }
+@media (min-width: 500px){ #contact-parallax-section .parallax__layer--deep { height: 120vh; } }
+@media (min-width: 640px){ #contact-parallax-section .parallax__layer--deep { height: 140vh; } }
+@media (min-width: 1024px){ #contact-parallax-section .parallax__layer--deep { height: 160vh; } }

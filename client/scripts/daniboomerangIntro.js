@@ -313,9 +313,10 @@ angular.module('daniboomerangIntro', [ ])
 
 	        	var intervalPromise = $interval(function() {
 	        	    console.log('here an $interval');
+	        	    if (projectionIsStopped || introIsFinished) { cancelAsynchPromiseService.cancelInterval(intervalPromise); }
 		          	if (onGoingProjection) {
 			            onGoingProjection = false;
-			            if (!projectionIsStopped) {
+			            
 				            projectElement(angularProjection)
 				            .then(function(){
 				              if (!projectionIsStopped) {
@@ -354,7 +355,6 @@ angular.module('daniboomerangIntro', [ ])
 				                	firstIteration = false;
 				              	}
 				            });
-				        }
 	          		}
 	        	}, 500);
 	

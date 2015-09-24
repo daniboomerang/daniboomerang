@@ -8,9 +8,9 @@ daniboomerangDirectives.directive('parallax', function() {
   return {
     restrict: 'A',
     scope: true,
-    link: function(scope){ 
+    link: function(scope, element){ 
       scope.dynamicSectionsHeight = {} /* This is a global scope variable updated by the children directives 
-                                       parallax dynamic sections, in order to dynamically determine their height in pixels */
+                                       parallax dynamic sections, in order to dynamically determine their height in pixels */    
     }
   }
 });
@@ -144,7 +144,7 @@ daniboomerangDirectives.directive('cover', function() {
 
 daniboomerangDirectives.directive('contact', function($document) {
   return {
-    restrict: 'E',
+    restrict: 'AE',
     templateUrl: 'views/sections/contact.html',
     scope: {},
     link: function (scope, element) {
@@ -308,7 +308,7 @@ daniboomerangDirectives.directive('button', function() {
       var buttonToogled = false;
       scope.onClick = function(){ 
         scope.ngClickFunction();
-        if ((scope.isActive == undefined) && (attrs.isToogledButton == 'true')) {
+        if ((attrs.isToogledButton == 'true')) {
           if (buttonToogled == false) { button.addClass('active'); buttonLink.addClass('active'); }
           else { button.removeClass('active'); buttonLink.removeClass('active');}
           buttonToogled = !buttonToogled;

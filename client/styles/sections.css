@@ -2,7 +2,7 @@
 /* SECTIONS */
 /************/
 
-#sections { }
+#sections { font-weight: lighter; -webkit-font-smoothing: antialiased; }
 .section { padding-bottom:5%; margin-left:4%; margin-right:4% }
 .section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
 .section a:hover { color: #FF9933; transition: all .5s ease-in-out; }

@@ -4,20 +4,6 @@ var daniboomerangAliveSvgDirectives = angular.module('daniboomerangAliveSvgDirec
 /** ALIVE SVG IMAGES DIRECTIVE **/
 /********************************/
 
-daniboomerangAliveSvgDirectives.directive('aliveSvg', function($interval, $timeout) {
-  return {
-    restrict: 'EA',
-    scope: {},
-    templateUrl: function (elem, attrs) { return '/images/' + attrs.name + '.svg'; },
-    link: function (scope, element, attrs) {
-       
-        // ET SCENE
-        scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showEtFingerLight = true; }, 2500); })
-        scope.$on('inactive-section:contact', function($event) { $timeout(function() { scope.showEtFingerLight = false; }, 2000); })
-    }
-  };
-});  
-
 daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
@@ -67,6 +53,39 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
     } 
   };
 }); 
+
+daniboomerangAliveSvgDirectives.directive('aliveSvgEt', function($interval, $timeout, cancelAsynchPromiseService) {
+  return {
+    restrict: 'EA',
+    scope: {},
+    template: function (elem, attrs) { return '<div id="et-scene" ng-include="\'/images/et-contact-scene.svg\'"></div>';  },
+    link: function (scope, element, attrs) {
+
+      /**********************************/
+      /* Waits the et SVG to be loaded  */
+      /**********************************/
+
+      scope.$on('$includeContentLoaded', function () { init(); });
+
+      function init() {
+
+        /* Finger Lights */
+        etFingerLight = element.find('#ng-et-finger-light'); 
+        
+        // Interval promises 
+        var intervalPromiseFinger;
+
+        // We trigger the animations only when we are in the section
+        scope.$on('active-section:contact', function($event){ intervalPromiseFinger = lightUpFinger(); });
+        scope.$on('inactive-section:contact', function($event){ intervalPromiseFinger = lightDownFinger(); });
+      }
+
+      function lightUpFinger(){ etFingerLight.attr('style', ''); etFingerLight.attr('class', 'animated fadeIn'); }
+      function lightDownFinger(){ etFingerLight.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;'); etFingerLight.attr('class', 'animated fadeOut'); }
+
+    }
+  };
+});  
 
 daniboomerangAliveSvgDirectives.directive('aliveSvgEarthConnectivity', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService) {
   return {
@@ -177,7 +196,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgEarthConnectivity', function(
         return $interval(function() {
         console.log('here an $interval') ;
           turnNewConnection(side);
-        }, 2000);
+        }, 1500);
       }
     } 
   };
@@ -510,7 +529,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
         return $interval(function() {
           console.log('here an $interval')  ;
           turnNewConnection(side);
-        }, 2000);
+        }, 1500);
       }
 
       function turnOnMapsAndLaptop(){
@@ -651,3 +670,5 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgGaming', function($interval, 
     } 
   };
 }); 
+
+ 
