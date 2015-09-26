@@ -123,7 +123,7 @@ daniboomerangDirectives.directive('cover', function() {
     restrict: 'E',
     templateUrl: 'views/sections/cover.html',
     link: function (scope, element, attrs) {
-      var liElements = element.find('li');
+      var liElements = element.find('li.visibility-hidden');
       var name = element.find('#name');
       var skills1 = element.find('#skills-1');
       var skills2 = element.find('#skills-2');

@@ -29,22 +29,22 @@ describe('Cover', function() {
 		// List elements
 		var liElements = elm.find('li.animated');
 		expect(liElements.length).toBe(4);
-		expect(liElements.hasClass('animated visibility-hidden zoomIn visibility-visible')).toBe(true);
+		expect(liElements.hasClass('animated zoomIn')).toBe(true);
 		// Name
 		var name = elm.find('#name');
 		expect(name.length).toBe(1);
-		expect(name.hasClass('animated visibility-hidden fadeIn visibility-visible')).toBe(true);
+		expect(name.hasClass('animated fadeIn')).toBe(true);
 		// Skills-1
 		var skills1 = elm.find('#skills-1');
 		expect(skills1.length).toBe(1);
-		expect(skills1.hasClass('animated visibility-hidden fadeIn visibility-visible')).toBe(true);
+		expect(skills1.hasClass('animated fadeIn')).toBe(true);
 		// Skills-2
 		var skills2 = elm.find('#skills-2');
 		expect(skills2.length).toBe(1);
-		expect(skills2.hasClass('animated visibility-hidden bounceIn visibility-visible')).toBe(true);
+		expect(skills2.hasClass('animated bounceIn')).toBe(true);
 		// Scroll-down
 		var scrollDownArrow = elm.find('#scroll-down');
 		expect(scrollDownArrow.length).toBe(1);
-		expect(scrollDownArrow.hasClass('animated visibility-hidden zoomInDown visibility-visible')).toBe(true);
+		expect(scrollDownArrow.hasClass('animated zoomInDown')).toBe(true);
     });	
 });
