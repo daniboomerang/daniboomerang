@@ -13,7 +13,7 @@ angular.module('daniboomerangAsParallax', [
 	scrollObserverService.init();
 	nodeConnectionsService.init();
 })
-.value('duScrollEasing', function easingFunction(t) { return t*(2-t) })
+.value('duScrollEasing', function easingFunction(t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t })
 .directive('daniboomerangAsParallaxDirective', function() {
 	return {
 		restrict: 'A',
