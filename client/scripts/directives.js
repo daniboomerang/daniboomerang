@@ -8,9 +8,9 @@ daniboomerangDirectives.directive('parallax', function() {
   return {
     restrict: 'A',
     scope: true,
-    link: function(scope){ 
+    link: function(scope, element){ 
       scope.dynamicSectionsHeight = {} /* This is a global scope variable updated by the children directives 
-                                       parallax dynamic sections, in order to dynamically determine their height in pixels */
+                                       parallax dynamic sections, in order to dynamically determine their height in pixels */    
     }
   }
 });
@@ -117,7 +117,7 @@ daniboomerangDirectives.directive('revealBackground', function() {
 /***************** COVER ****************/
 /****************************************/
 
-daniboomerangDirectives.directive('cover', function($timeout) {
+daniboomerangDirectives.directive('cover', function() {
   return {
     restrict: 'E',
     templateUrl: 'views/sections/cover.html',
@@ -144,7 +144,7 @@ daniboomerangDirectives.directive('cover', function($timeout) {
 
 daniboomerangDirectives.directive('contact', function($document) {
   return {
-    restrict: 'E',
+    restrict: 'AE',
     templateUrl: 'views/sections/contact.html',
     scope: {},
     link: function (scope, element) {
@@ -219,6 +219,7 @@ daniboomerangDirectives.directive('foot', function($timeout) {
         scope.$on('active-section:connectivity', function($event){ scope.currentSection = 'connectivity'; expandFooter(); scope.$apply(); });
         scope.$on('active-section:creativity', function($event){ scope.currentSection = 'creativity'; expandFooter(); scope.$apply(); });
         scope.$on('active-section:remote-working', function($event){ scope.currentSection = 'remote-working'; expandFooter(); scope.$apply(); });
+        scope.$on('active-section:without-boundaries', function($event){ scope.currentSection = 'without-boundaries'; expandFooter(); scope.$apply(); });
         scope.$on('active-section:about', function($event){ scope.currentSection = 'about'; expandFooter(); scope.$apply(); });
         scope.$on('active-section:back-end', function($event){ scope.currentSection = 'back-end'; expandFooter(); scope.$apply(); });
         scope.$on('active-section:loving', function($event){ scope.currentSection = 'loving'; expandFooter(); scope.$apply(); });
@@ -307,7 +308,7 @@ daniboomerangDirectives.directive('button', function() {
       var buttonToogled = false;
       scope.onClick = function(){ 
         scope.ngClickFunction();
-        if ((scope.isActive == undefined) && (attrs.isToogledButton == 'true')) {
+        if ((attrs.isToogledButton == 'true')) {
           if (buttonToogled == false) { button.addClass('active'); buttonLink.addClass('active'); }
           else { button.removeClass('active'); buttonLink.removeClass('active');}
           buttonToogled = !buttonToogled;
@@ -317,25 +318,6 @@ daniboomerangDirectives.directive('button', function() {
         if (scope.isActive == true) { button.addClass('active'); buttonLink.addClass('active'); }
         else { button.removeClass('active'); buttonLink.removeClass('active');}
       })
-    }
-  };
-});  
-
-/********************************/
-/** SVG ALIVE IMAGES DIRECTIVE **/
-/********************************/
-
-daniboomerangDirectives.directive('svgAlive', function($interval, $timeout) {
-  return {
-    restrict: 'EA',
-    scope: {},
-    templateUrl: function (elem, attrs) { return '/images/' + attrs.name + '.svg'; },
-    link: function (scope, element, attrs) {
-        // ISS LIGHTS 
-        $interval(function() { scope.issLight = '#' + Math.floor(Math.random()*16777215).toString(16); }, 1000);
-        // ET SCENE
-        scope.$on('active-section:contact', function($event){ $timeout(function() { scope.showEtFingerLight = true; }, 2500); })
-        scope.$on('inactive-section:contact', function($event) { $timeout(function() { scope.showEtFingerLight = false; }, 2000); })
     }
   };
 });  

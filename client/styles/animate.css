@@ -13,7 +13,8 @@
 .spin-left-half-faster { -webkit-animation-name: spin-left-half; -webkit-animation-duration: 8000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-left-half; -moz-animation-duration: 8000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-left-half; -ms-animation-duration: 8000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
 .spin-boomerang { -webkit-animation-name: spin-right-whole; -webkit-animation-duration: 14000ms; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; -moz-animation-name: spin-right-whole; -moz-animation-duration: 14000ms; -moz-animation-iteration-count: infinite; -moz-animation-timing-function: linear; -ms-animation-name: spin-right-whole; -ms-animation-duration: 14000ms; -ms-animation-iteration-count: infinite; -ms-animation-timing-function: linear; }
 .move-from-left { -webkit-animation: move-from-left 156s infinite; -moz-animation: move-from-left 156s infinite; -o-animation: move-from-left 156s infinite; }
-.pulsing { -webkit-animation: pulse 2s linear infinite; animation: pulse 2s linear infinite; -moz-animation: pulse 2s linear infinite; -o-animation: pulse 2s linear infinite;}
+.pulsing { -webkit-animation: pulse 2s linear infinite; animation: pulse 2s linear infinite; -moz-animation: pulse 2s linear infinite; -o-animation: pulse 2s linear infinite; }
+.soft-suspension { -webkit-animation: soft-suspension 5s linear infinite; animation: soft-suspension 5s linear infinite; -moz-animation: soft-suspension 5s linear infinite; -o-animation: soft-suspension 5s linear infinite; }
 
 /*************************/
 /* ANIMATION DEFINITIONS */
@@ -102,3 +103,16 @@
   100% { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform:scale(1.1); transform: scale(1.1); }
 }
 
+/* SOFT SUSPENSION */
+
+@-webkit-keyframes soft-suspension {
+    from {-webkit-transform: translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); } 
+    50% {-webkit-transform: translate(13vh, 4vh); -ms-transform: translate(13vh, 4vh); -o-transform: translate(13vh, 4vh); -moz-transform: translate(13vh, 4vh); } 
+    to {-webkit-transform: translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); }
+}
+
+@keyframes soft-suspension {
+    from {-webkit-transform:translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); } 
+    50% {-webkit-transform:translate(13vh, 4vh); -ms-transform: translate(13vh, 4vh); -o-transform: translate(13vh, 4vh); -moz-transform: translate(13vh, 4vh); } 
+    to {-webkit-transform: translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); }
+}

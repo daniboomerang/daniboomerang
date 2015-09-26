@@ -1,0 +1,58 @@
+{
+	"dataNodeRemainingConnections": {
+		"nodeZero": 1,
+		"nodeOne": 1,
+		"nodeTwo": 1,
+		"nodeThree": 1,
+		"nodeFour": 1,
+		"nodeFive": 0,
+		"nodeSix": 0,
+		"nodeSeven": 2,
+		"nodeEight": 1
+	},
+	"availableConnectionIndexes": [0,1,2,3,4,5,6],
+	"pairedConnections": [
+		{
+			"isActive": true,
+            "nodeA": { "name": "nodeZero", "connection": "#ng-connection-node-0", "shockWave": "#ng-node-0", "center": "#ng-node-0-center" },
+            "connectionAB": { "name": "#ng-connection-0-1" },
+            "nodeB": { "name": "nodeOne", "connection": "#ng-connection-node-1", "shockWave": "#ng-node-1", "center": "#ng-node-1-center" }
+		},
+		{
+			"isActive": false,
+			"nodeA": { "name": "nodeOne", "connection": "#ng-connection-node-1", "shockWave": "#ng-node-1", "center": "#ng-node-1-center" },
+			"connectionAB": { "name": "#ng-connection-1-2" },
+			"nodeB": { "name": "nodeTwo", "connection": "#ng-connection-node-2", "shockWave": "#ng-node-2", "center": "#ng-node-2-center" }
+    	},
+    	{
+			"isActive": true,
+			"nodeA": { "name": "nodeTwo", "connection": "#ng-connection-node-2", "shockWave": "#ng-node-2", "center": "#ng-node-2-center" },
+			"connectionAB": { "name": "#ng-connection-2-3" },
+			"nodeB": { "name": "nodeThree", "connection": "#ng-connection-node-3", "shockWave": "#ng-node-3", "center": "#ng-node-3-center" }
+    	},
+    	{
+			"isActive": false,
+            "nodeA": { "name": "nodeFive", "connection": "#ng-connection-node-5", "shockWave": "#ng-node-5", "center": "#ng-node-5-center" },
+            "connectionAB": { "name": "#ng-connection-5-6" },
+            "nodeB": { "name": "nodeSix", "connection": "#ng-connection-node-6", "shockWave": "#ng-node-6", "center": "#ng-node-6-center" }
+        },
+    	{
+			"isActive": false,
+			"nodeA": { "name": "nodeEight", "connection": "#ng-connection-node-8", "shockWave": "#ng-node-8", "center": "#ng-node-8-center" },
+			"connectionAB": { "name": "#ng-connection-8-1" },
+			"nodeB": { "name": "nodeOne", "connection": "#ng-connection-node-1", "shockWave": "#ng-node-1", "center": "#ng-node-1-center" }
+    	},
+    	{
+		 	"isActive": true,
+			"nodeA": { "name": "nodeSeven", "connection": "#ng-connection-node-7", "shockWave": "#ng-node-7", "center": "#ng-node-7-center" },
+			"connectionAB": { "name": "#ng-connection-7-4" },
+			"nodeB": { "name": "nodeFour", "connection": "#ng-connection-node-4", "shockWave": "#ng-node-4", "center": "#ng-node-4-center" }
+    	},
+    	{
+		 	"isActive": true,
+			"nodeA": { "name": "nodeSeven", "connection": "#ng-connection-node-7", "shockWave": "#ng-node-7", "center": "#ng-node-7-center" },
+			"connectionAB": { "name": "#ng-connection-7-8" },
+			"nodeB": { "name": "nodeEight", "connection": "#ng-connection-node-8", "shockWave": "#ng-node-8", "center": "#ng-node-8-center" }
+    	}
+    ]
+}    	
