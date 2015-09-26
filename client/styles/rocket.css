@@ -12,6 +12,7 @@
         -moz-animation: turn 2s ease-in-out forwards 1; }
 
 /* RESPONSIVENESS */
+
 /* Extra small devices (desktops, 200px and up) */
 @media (min-width: 200px) { #orbit-rocket { width: 100vw; height:80vh; bottom: 0vh; } 
                             #rocket { margin-left: -75%; width: 250%; }
@@ -38,24 +39,44 @@
 @media (min-width: 768px) { #orbit-rocket { bottom: 14vh; } #rocket { margin-left: -10%; width: 120%; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { #orbit-rocket { bottom: 17vh; } #rocket { margin-left: 0; width: 100%; } }
+@media (min-width: 992px) { #orbit-rocket { bottom: 14vh; } #rocket { margin-left: 0; width: 100%; } }
 
-/* Medium devices (desktops, 1280px and up) */
-@media (min-width: 1024px) { #orbit-rocket { bottom: 20vh; } }
+/* Medium devices (desktops, 1024px and up) */
+@media (min-width: 1024px) { }
 
+/* 1280 * <800 */ 
+@media (min-width: 1280px) and (max-height: 800px) { #orbit-rocket { bottom: 20vh; } }
+
+/* 1920 * 1080 */
+@media (min-width: 1366px) and (min-height: 1080px) { #orbit-rocket { bottom: 16vh; } }
+    
+/* 1920 * 1280 */
+@media (min-width: 1366px) and (min-height: 1280px) { #orbit-rocket { bottom: 12vh; } }
+
+
+/********************/
+/* ipad & ipad mini */
+/********************/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
+  #orbit-rocket { bottom: 6vh; }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+  #orbit-rocket { bottom: 0vh; }
+}
 
 /**********************/
 /***** ANIMATIONS *****/
 /**********************/
 
 @-webkit-keyframes arrival {
-    from {-webkit-transform: translate(0, 100vh); -ms-transform: translate(0, 100vh); -o-transform: translate(0, 100vh); -moz-transform: (0, 100vh); }
-    to {-webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: (0, 0); }
+    from {-webkit-transform: translate(0, 100vh); -ms-transform: translate(0, 100vh); -o-transform: translate(0, 100vh); -moz-transform: translate(0, 100vh); }
+    to {-webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: translate(0, 0); }
 }
 
 @keyframes arrival {
-  from {-webkit-transform: translate(0, 100vh); -ms-transform: translate(0, 100vh); -o-transform: translate(0, 100vh); -moz-transform: (0, 100vh); }
-    to {-webkit-transform: translate(0, 0) -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: (0, 0); }
+  from {-webkit-transform: translate(0, 100vh); -ms-transform: translate(0, 100vh); -o-transform: translate(0, 100vh); -moz-transform: translate(0, 100vh); }
+    to {-webkit-transform: translate(0, 0) -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: translate(0, 0); }
 }
 
 @-webkit-keyframes suspension {
@@ -65,9 +86,9 @@
 }
 
 @keyframes suspension {
-    from {-webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: (0, 0); } 
-    65% {-webkit-transform:translate(0, 1vh); -ms-transform: translate(0, 1vh); -o-transform: translate(0, 1vh); -moz-transform: (0, 1vh); } 
-    to {-webkit-transform: translate(0, -0vh); -ms-transform: translate(0, -0vh); -o-transform: translate(0, -0vh); -moz-transform: (0, -0vh); }
+    from {-webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: translate(0, 0); } 
+    65% {-webkit-transform:translate(0, 1vh); -ms-transform: translate(0, 1vh); -o-transform: translate(0, 1vh); -moz-transform: translate(0, 1vh); } 
+    to {-webkit-transform: translate(0, -0vh); -ms-transform: translate(0, -0vh); -o-transform: translate(0, -0vh); -moz-transform: translate(0, -0vh); }
 }
 
 @-webkit-keyframes turn {
@@ -81,27 +102,27 @@
 }
 
 @-webkit-keyframes takeoff-md{
-  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: (0, 0); }
-  60% { -webkit-transform:translate(-6vw, 10vh); -ms-transform: translate(-6vw, 10vh); -o-transform: translate(-6vw, 10vh); -moz-transform: (-6vw, 10vh); }
-  to { -webkit-transform:translate(100vw, -20vh); -ms-transform: translate(100vw, -20vh); -o-transform: translate(100vw, -20vh); -moz-transform: (100vw, -20vh); }
+  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: translate(0, 0); }
+  60% { -webkit-transform:translate(-6vw, 10vh); -ms-transform: translate(-6vw, 10vh); -o-transform: translate(-6vw, 10vh); -moz-transform: translate(-6vw, 10vh); }
+  to { -webkit-transform:translate(100vw, -20vh); -ms-transform: translate(100vw, -20vh); -o-transform: translate(100vw, -20vh); -moz-transform: translate(100vw, -20vh); }
 }
 
 @keyframes takeoff-md{
-  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: (0, 0); }
-  60% { -webkit-transform:translate(-6vw, 10vh); -ms-transform: translate(-6vw, 10vh); -o-transform: translate(-6vw, 10vh); -moz-transform: (-6vw, 10vh); }
-  to { -webkit-transform:translate(100vw, -20vh); -ms-transform: translate(100vw, -20vh); -o-transform: translate(100vw, -20vh); -moz-transform: (100vw, -20vh); }
+  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: translate(0, 0); }
+  60% { -webkit-transform:translate(-6vw, 10vh); -ms-transform: translate(-6vw, 10vh); -o-transform: translate(-6vw, 10vh); -moz-transform: translate(-6vw, 10vh); }
+  to { -webkit-transform:translate(100vw, -20vh); -ms-transform: translate(100vw, -20vh); -o-transform: translate(100vw, -20vh); -moz-transform: translate(100vw, -20vh); }
 }
 
 /* RESPONSIVENESS FOR ANIMATIONS */
 
 @-webkit-keyframes takeoff-xs{
-  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: (0, 0); }
-  60% { -webkit-transform:translate(-4vw, 10vh); -ms-transform: translate(-4vw, 10vh); -o-transform: translate(-4vw, 10vh); -moz-transform: (-4vw, 10vh); }
-  to { -webkit-transform:translate(150vw, -10vh); -ms-transform: translate(150vw, -10vh); -o-transform: translate(150vw, -10vh); -moz-transform: (150vw, -10vh); }
+  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: translate(0, 0); }
+  60% { -webkit-transform:translate(-4vw, 10vh); -ms-transform: translate(-4vw, 10vh); -o-transform: translate(-4vw, 10vh); -moz-transform: translate(-4vw, 10vh); }
+  to { -webkit-transform:translate(150vw, -10vh); -ms-transform: translate(150vw, -10vh); -o-transform: translate(150vw, -10vh); -moz-transform: translate(150vw, -10vh); }
 }
 
 @keyframes takeoff-xs{
-  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: (0, 0); }
+  from { -webkit-transform:translate(0, 0vh); -ms-transform: translate(0, 0); -o-transform: translate(0, 0); -moz-transform: translate(0, 0); }
   70% { -webkit-transform:translate(-4vw, 10vh); -ms-transform: translate(-4vw, 10vh); -o-transform: translate(-4vw, 10vh); -moz-transform: (-4vw, 10vh); }
-  to { -webkit-transform:translate(150vw, -6vh); -ms-transform: translate(150vw, -6vh); -o-transform: translate(150vw, -6vh); -moz-transform: (150vw, -6vh); }
+  to { -webkit-transform:translate(150vw, -6vh); -ms-transform: translate(150vw, -6vh); -o-transform: translate(150vw, -6vh); -moz-transform: translate(150vw, -6vh); }
 }

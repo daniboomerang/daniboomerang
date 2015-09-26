@@ -3,6 +3,7 @@
 /***********/
 
 	.navbar { margin-bottom: 0 !important; }
+	#navbar-custom-fluid { background: rgba(19, 65, 99, 0.7); height: 200px; }
 
 	/****************************************/
 	/**************  TOP NAVBAR *************/
@@ -183,47 +184,53 @@
 /* HEADER */
 /**********/
 
-	header { border-bottom: solid black 2px; height: 0px; width: 100%; overflow: hidden; z-index: 1; background: rgba(19, 65, 99, 0.7); -webkit-transition: height 0.7s; -moz-transition: height 0.7s; -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s;}
-	.box-shadow-down{ -webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); }
+	header {  /*border-bottom: solid black 2px;*/
+			 height: 0px; width: 100%; overflow: hidden; z-index: 1; /*background: rgba(19, 65, 99, 0.7);*/
+			 -webkit-transition: height 0.7s; -moz-transition: height 0.7s;
+			 -ms-transition: height 0.7s; -o-transition: height 0.7s; transition: height 0.7s; }
+	.box-shadow-down{ /*-webkit-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.6); */}
 	
 	/*==========  RESPONSIVENESS FOR HEADER  ==========*/
 
-	/* Small devices (tablets, 200px and down)*/
-	@media (min-width: 200px) {header.expand {height: 50px;}}
+	/* Extra small devices (tablets, 200px and down)*/
+	@media (min-width: 200px) { header.expand { height: 50px; }}
 
 	/* Extra small Devices, (phones, 320px and up) */
-	@media (min-width: 320px) {header.expand {height: 60px;}}
+	@media (min-width: 320px) { header.expand { height: 60px; }}
 
 	/* Extra small Devices, (phones, 500px and up) */
-	@media (min-width: 500px) {header.expand {height: 70px;}}
+	@media (min-width: 500px) { header.expand { height: 70px; }}
 
 	/*////////////////////////////////////*/
 
 	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) {header.expand {height: 80px;}}
+	@media (min-width: 640px) { header.expand { height: 70px; }}
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { header.expand { height: 80px; }}
 
 	/* Medium devices (desktops, 992px and up) */
-	@media (min-width: 992px) {header.expand {height: 80px;}}
+	@media (min-width: 992px) { header.expand { height: 80px; }}
 
 	/* Large devices (large desktops, 1280px and up) */
-	@media (min-width: 1280px) {header.expand {height: 90px;}}
+	@media (min-width: 1280px) { header.expand { height: 90px; }}
 
 	/* Large devices (large desktops, 1400px and up) */
-	@media (min-width: 1400px) {header.expand {height: 120px;}}
+	@media (min-width: 1400px) { header.expand { height: 120px; }}
 
 	/*////////////////////////////////////*/
 
 	/* Extra large devices (extra large desktops, 1600px and up) */
-	@media (min-width: 1600px) {header.expand {height: 135px;}}
+	@media (min-width: 1600px) { header.expand { height: 135px; }}
 
 	/* Extra large devices (extra large desktops, 2000px and up) */
-	@media (min-width: 2000px) {header.expand {height: 135px;}}
+	@media (min-width: 2000px) { header.expand { height: 135px; }}
 
 	/* Extra large devices (extra large desktops, 2500px and up) */
-	@media (min-width: 2500px) {header.expand {height: 175px;}}
+	@media (min-width: 2500px) { header.expand { height: 175px; }}
 
 	/* Extra large devices (extra large desktops, 3000px and up) */
-	@media (min-width: 3000px) {header.expand {height: 190px;}}
+	@media (min-width: 3000px) { header.expand { height: 190px; }}
 
 	/* Extra large devices (extra large desktops, 3500px and up) */
-	@media (min-width: 3500px) { header.expand {height: 300px;}}
+	@media (min-width: 3500px) { header.expand { height: 300px; }}

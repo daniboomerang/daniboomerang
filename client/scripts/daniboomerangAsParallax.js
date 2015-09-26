@@ -5,11 +5,13 @@ angular.module('daniboomerangAsParallax', [
 	'duScroll',
 	// DANIBOOMERANG
 	'daniboomerangDirectives',
+	'daniboomerangAliveSvgDirectives',
 	'daniboomerangServices'
 ])
-.run(function (scrollObserverService, urlObserverService) {
+.run(function (scrollObserverService, urlObserverService, nodeConnectionsService) {
 	urlObserverService.init();
 	scrollObserverService.init();
+	nodeConnectionsService.init();
 })
 .value('duScrollEasing', function easingFunction(t) { return t*(2-t) })
 .directive('daniboomerangAsParallaxDirective', function() {

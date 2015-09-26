@@ -29,7 +29,7 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
     expect(title.getAttribute('class')).toMatch('animated flipInX text-center');
     browser.sleep(2001);
     expect(title.getAttribute('class')).toMatch('animated flipOutX text-center');
-    var rocket = element(by.id('svg-alive-rocket'));
+    var rocket = element(by.id('alive-svg-rocket'));
     expect(rocket.isPresent()).toBe(true);
   });
 

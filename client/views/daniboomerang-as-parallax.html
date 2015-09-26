@@ -1,4 +1,4 @@
-<!-- DANIBOOMERANG APP -->
+<!-- DANIBOOMERANG APP AS PARALLAX-->
 <topnavbar></topnavbar>
 <div id="parallax-wrapper" class="parallax" du-scroll-container parallax>
   <div id="cover-parallax-section" class="parallax__section">
@@ -24,7 +24,7 @@
   </div>   
   <div id="remote-working-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.remoteWorking}">
     <div class="parallax__layer parallax__layer--deep">
-      <reveal-background triggeredby="app-starts" delay="1" height="100%" img="moon-&-sun"></reveal-background>
+      <div alive-svg-earth-connectivity id="orbit-earth-connectivity"></div>
     </div>
     <div class="parallax__layer parallax__layer--base">
       <div parallax-subsection name="remoteWorking" type="text-image"></div>
@@ -35,57 +35,53 @@
   </div>   
   <div id="remote-working-parallax-images" class="parallax__section">
     <div class="parallax__layer parallax__layer--base">
-      <div id="cliff"></div>
-      <!--<div id="orbit-stones-circle" class="spin-right-whole-faster">
-        <div id="stones-circle"><div id="orbit-big-stone" class="spin-left-whole"><div id="big-stone"></div></div></div>
-      </div>-->
+      <div id="without-boundaries"> <!-- This is just to trigger the event onScroll -->
+        <div alive-svg-cliff id="cliff"></div>
+      </div>
+      <a href="#without-boundaries" du-scrollspy></a>
     </div>
     <div class="parallax__layer parallax__layer--back">
-      <div id="orbit-iss" class="spin-right-whole"><svg-alive id="iss" name="iss"></svg-alive></div>
-      <div id="orbit-earth"><div id="earth"></div></div>
+      <div alive-svg-iss id="orbit-iss"></div>
     </div>  
-    <div class="parallax__layer parallax__layer--fore"></div>
+    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="cliff" id="cliff-books"></div></div>
   </div>
   <div id="about-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.about}">
     <div class="parallax__layer parallax__layer--base">
       <div parallax-subsection name="about" type="text-only"></div>
     </div>
   </div>
-  <div id="BE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.backEnd}">
-    <div class="parallax__layer parallax__layer--deep"></div>
-    <div class="parallax__layer parallax__layer--base">
-        <div parallax-subsection name="backEnd" type="text-image"></div>
-    </div>
-  </div>
   <div id="BE-parallax-images" class="parallax__section">
     <div class="parallax__layer parallax__layer--deep">
       <div id="be-orbit-comet-white" class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="be-comet-white" class="comet-white comet-from-left"></div></div>
     </div>
-    <div class="parallax__layer parallax__layer--back"></div>
-    <div class="parallax__layer parallax__layer--base"><div id="BE-ruby"></div></div>
-    <div class="parallax__layer parallax__layer--fore">
-      <div id="BE-books"></div>
-      <div id="BE-dboom"><!--<div id="boomerang" class="spin-boomerang"></div>--></div>
-    </div>
+    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-fe-earth side="BE" id="BE-earth"></div></div>  
+    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="BE" id="BE-books"></div></div>
+    <div class="parallax__layer parallax__layer--base">
+      <div id="back-end"> <!-- This is just to trigger the event onScroll -->
+        <div parallax-subsection name="backEnd" type="text-only"></div>
+        <div alive-svg-ruby id="BE-ruby"></div>
+      </div>
+      <a href="#back-end" du-scrollspy></a>
+    </div>  
   </div>
   <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.loving}">
     <div class="parallax__layer parallax__layer--base">
     <div parallax-subsection name="loving" type="text-only"></div>
     </div>
   </div>
-  <div id="FE-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.frontEnd}">
-    <div class="parallax__layer parallax__layer--deep"></div>
-    <div class="parallax__layer parallax__layer--base">
-      <div parallax-subsection name="frontEnd" type="text-image"></div>
-    </div>
-  </div>
   <div id="FE-parallax-images" class="parallax__section">
     <div class="parallax__layer parallax__layer--deep">
       <div id="fe-orbit-comet-blue" class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="be-comet-blue" class="comet-blue comet-from-left"></div></div>
     </div>
-    <div class="parallax__layer parallax__layer--back"></div>
-    <div class="parallax__layer parallax__layer--base"><div id="FE-gaming"></div></div>
-    <div class="parallax__layer parallax__layer--fore"><div id="FE-books"></div><div id="FE-mobile-tablet"></div></div>
+    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-fe-earth side="FE" id="FE-earth"></div></div>  
+    <div class="parallax__layer parallax__layer--base">
+      <div id="front-end"> <!-- This is just to trigger the event onScroll -->
+        <div parallax-subsection name="frontEnd" type="text-only"></div>
+        <div alive-svg-ipad-pro id="FE-ipad"></div>
+      </div>
+      <a href="#front-end" du-scrollspy></a>
+    </div>
+    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="FE" id="FE-books"></div></div>
   </div>
   <div id="work-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.work}">
     <div class="parallax__layer parallax__layer--base">
@@ -93,6 +89,7 @@
     </div>
   </div>
   <div id="contact-parallax-section" class="parallax__section">
+    <div class="parallax__layer parallax__layer--back"></div>
     <div class="parallax__layer parallax__layer--base"><contact></contact></div>
   </div>
 </div>
