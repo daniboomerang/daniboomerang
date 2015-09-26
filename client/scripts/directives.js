@@ -81,6 +81,7 @@ daniboomerangDirectives.directive('animatedSection', function() {
         }
       }
       var animatedSection = element.find('.animated-section');
+      animatedSection.addClass('animated');
       /*On active section*/
       var activeSectionEvent = 'active-section:' + attrs.triggeredby;
       scope.$on(activeSectionEvent, function($event){ if ('active' == attrs.triggeredon){ animateSectionIn(); } else { animateSectionOut(); } }); 
@@ -122,17 +123,21 @@ daniboomerangDirectives.directive('cover', function() {
     restrict: 'E',
     templateUrl: 'views/sections/cover.html',
     link: function (scope, element, attrs) {
-      var liElements = element.find('li.animated');
+      var liElements = element.find('li');
       var name = element.find('#name');
       var skills1 = element.find('#skills-1');
       var skills2 = element.find('#skills-2');
       var scrolDownArrowId = element.find('#scroll-down');      
       scope.$on('app-starts', function($event){
-        liElements.addClass("zoomIn visibility-visible");
-        name.addClass("fadeIn visibility-visible");
-        skills1.addClass("fadeIn visibility-visible");
-        skills2.addClass("bounceIn visibility-visible");
-        scrolDownArrowId.addClass("zoomInDown visibility-visible");
+        liElements.attr('class', 'animated zoomIn');
+        name.removeClass('visibility-hidden');
+        name.addClass('animated fadeIn');
+        skills1.removeClass('visibility-hidden');
+        skills1.addClass('animated fadeIn');
+        skills2.removeClass('visibility-hidden');
+        skills2.addClass('animated bounceIn');
+        scrolDownArrowId.removeClass('visibility-hidden');
+        scrolDownArrowId.addClass('animated zoomInDown');
       }); 
     }
   }  
