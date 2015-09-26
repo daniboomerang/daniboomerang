@@ -13,6 +13,7 @@ h1 { font-size: 2.5em; font-weight: 200; }
 h2 { font-size: 2em; font-weight: 200; color: #FF9933 }
 h3 { font-size: 1.7em; font-weight: normal; color: rgba(56, 116, 167, 0.9); }
 p { margin: 1.5em 0; }
+.custom-fluid-container { margin-left:4%; margin-right:4%; padding-left:5%; padding-right:5%; }
 
 /* COMET CLASSES */
 .orbit-comet { width: 100%; height: 5%; }
@@ -22,7 +23,7 @@ p { margin: 1.5em 0; }
 
 /* RESPONSIVENESS */
 /* Extra small devices (desktops, 200px and up) */
-@media (min-width: 200px) { body { font-size: 1.4em; line-height: 2; } .custom-fluid-container {  padding-left:5%; padding-right:5%; margin-left:4%; margin-right:4%; } div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
+@media (min-width: 200px) { body { font-size: 1.4em; line-height: 2; }  div#multiColumn { -moz-column-count: 1; -moz-column-gap: normal; -webkit-column-count: 1; -webkit-column-gap: normal; column-count: 1; column-gap: normal; } }
 
 /* Medium devices (desktops, 320px and up) */
 @media (min-width: 320px) { body { font-size: 1.6em; } }

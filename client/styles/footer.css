@@ -25,39 +25,46 @@ footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background
 
 /*========== RESPONSIVENESS ==========*/
 
+  /********************************/
+  /* iphone 6 */
+  /********************************/
+  @media (min-width: 375px) and (min-height: 627px) and (orientation: portrait){ 
+    #to-top-button-wrapper { bottom: 9% !important; right: 15% !important; } #share-button-wrapper { bottom: 9% !important; left: 15% !important; }
+  }
+
 /* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { .footer { font-size: 1em !important; } #to-top-button-wrapper { bottom: 9%; right: 10%; } #share-button-wrapper { bottom: 9%; left: 10%; } }
+@media (min-width: 200px) { .footer { font-size: 1em !important; } #to-top-button-wrapper { bottom: 8%; right: 11%; } #share-button-wrapper { bottom: 8%; left: 11%; } }
                             
 /* Extra small Devices, (phones, 320px and up) */
 @media (min-width: 320px) { .footer { font-size: 1em !important; } }
 
 /* Extra small Devices, (phones, 500px and up) */
-@media (min-width: 500px) { }
+@media (min-width: 500px) { #to-top-button-wrapper { bottom: 9%; right: 10%; } #share-button-wrapper { bottom: 9%; left: 10%; } }
 
 /* Extra small Devices, (phones, 640px and up) */
-@media (min-width: 640px) { #to-top-button-wrapper { bottom: 10%; right: 8%; } #share-button-wrapper { bottom: 10%; left: 8%; } }
+@media (min-width: 640px) { #to-top-button-wrapper { bottom: 9%; right: 9%; } #share-button-wrapper { bottom: 9%; left: 9%; } }
        
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 11%; right: 5.5%; } #share-button-wrapper { bottom: 11%; left: 5.5%; } }
+@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 9%; right: 8.5%; } #share-button-wrapper { bottom: 9%; left: 8.5%; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { .footer { font-size: 1.1em !important; } }
+@media (min-width: 992px) { .footer { font-size: 1.1em !important; } #to-top-button-wrapper { bottom: 9%; right: 7.5%; } #share-button-wrapper { bottom: 9%; left: 7.5%; } }
 
 /* Medium devices (desktops, 1024px and up) */
-@media (min-width: 1024px) { .footer { font-size: 1.2em !important; }
+@media (min-width: 1024px) { .footer { font-size: 1.2em !important; } #to-top-button-wrapper { bottom: 10%; right: 7%; } #share-button-wrapper { bottom: 10%; left: 7%; } }
                              
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { .footer { font-size: 2.3em !important; }
+@media (min-width: 1600px) { .footer { font-size: 2.3em !important; } #to-top-button-wrapper { bottom: 8.5%; right: 5.5%; } #share-button-wrapper { bottom: 8.5%; left: 5.5%; } }
                              
 /* Extra large devices (extra large desktops, 2000 and up) */
-@media (min-width: 2000px) {  .footer { font-size: 2.6em !important; } #to-top-button-wrapper { bottom: 7%; right: 5%; } #share-button-wrapper { bottom: 7%; left: 5%; } }
+@media (min-width: 2000px) {  .footer { font-size: 2.6em !important; } #to-top-button-wrapper { bottom: 7%; right: 4%; } #share-button-wrapper { bottom: 7%; left: 4%; } }
                               
 /* Extra large devices (extra large desktops, 2500 and up) */
-@media (min-width: 2500px) {  .footer { font-size: 2.8em !important; }
+@media (min-width: 2500px) {  .footer { font-size: 2.8em !important; } #to-top-button-wrapper { bottom: 8%; right: 5%; } #share-button-wrapper { bottom: 8%; left: 5%; } }
                               
 /* Extra large devices (extra large desktops, 3000 and up) */
-@media (min-width: 3000px) {  .footer { font-size: 3em !important; } 
+@media (min-width: 3000px) {  .footer { font-size: 3em !important; } }
                               
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) {  .footer { font-size: 6em !important; }
+@media (min-width: 3500px) {  .footer { font-size: 6em !important; } }
                               

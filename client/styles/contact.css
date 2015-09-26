@@ -2,7 +2,7 @@
 /* CONTACT */
 /***********/
 
-#contact { height: 100vh; max-height: 100vh; padding-top: 8vh; }
+#contact { height: 100vh; max-height: 100vh; }
 .contact-row { text-align: center; width: 100%; margin-top: 8vh; }
 
 /* ARROW */
@@ -27,7 +27,8 @@
 /*========== RESPONSIVENESS ==========*/
 
 /* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { #et-scene-wrapper { height:35%; }
+@media (min-width: 200px) { #contact { padding-top: 8vh; }
+                            #et-scene-wrapper { height:35%; }
                             #scroll-up { }
                             #social { }
                             .social-button { margin-left: 4.25%; margin-right: 4.25%;}
@@ -67,7 +68,8 @@
                             #contact-info { } }
 
 /* Medium devices (desktops, 1024px and up) */
-@media (min-width: 1024px) { #et-scene-wrapper { height:45%; }
+@media (min-width: 1024px) { #contact { padding-top: 5vh; }
+                             #et-scene-wrapper { height:45%; }
                              #social { }
                              .social-button { margin-left: 1.75%; margin-right: 1.75%;}
                              #scroll-up { }

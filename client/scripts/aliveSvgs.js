@@ -33,7 +33,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
 
         // We trigger the animations only when we are in the section
         scope.$on('active-section:creativity-fromTop', function($event){ intervalPromiseLights = turnOnLights(); });
-        scope.$on('active-section:active-section:without-boundaries-fromBottom', function($event){ intervalPromiseLights = turnOnLights(); });
+        scope.$on('active-section:without-boundaries-fromBottom', function($event){ intervalPromiseLights = turnOnLights(); });
 
         // And we stop them when we exit its sections section
         scope.$on('active-section:connectivity-fromBottom', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseLights); });
@@ -136,7 +136,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgEarthConnectivity', function(
 
         // We trigger the animations only when we are in the section
         scope.$on('active-section:creativity-fromTop', function($event){ intervalPromiseEarthConnections = turnOnEarthConnections('both'); });
-        scope.$on('active-section:active-section:without-boundaries-fromBottom', function($event){ intervalPromiseEarthConnections = turnOnEarthConnections('both'); });
+        scope.$on('active-section:without-boundaries-fromBottom', function($event){ intervalPromiseEarthConnections = turnOnEarthConnections('both'); });
         /*scope.$on('active-section:remote-working', function($event){ 
           if ((intervalPromiseEarthConnections != undefined) && intervalPromiseEarthConnections.cancelled ){
             intervalPromiseEarthConnections = turnOnEarthConnections('both');
@@ -607,11 +607,11 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
   };
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgGaming', function($interval, $timeout, cancelAsynchPromiseService) {
+daniboomerangAliveSvgDirectives.directive('aliveSvgIpadPro', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { return '<div id="gaming" ng-include="\'/images/FE-gaming.svg\'"></div>';  },
+    template: function (elem, attrs) { return '<div id="gaming" ng-include="\'/images/FE-ipadPro.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
       /* Aux Variables */

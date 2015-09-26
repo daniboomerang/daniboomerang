@@ -107,12 +107,12 @@
 
 @-webkit-keyframes soft-suspension {
     from {-webkit-transform: translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); } 
-    50% {-webkit-transform: translate(13vh, 3.2vh); -ms-transform: translate(13vh, 3.2vh); -o-transform: translate(13vh, 3.2vh); -moz-transform: translate(13vh, 3.2vh); } 
+    50% {-webkit-transform: translate(13vh, 4vh); -ms-transform: translate(13vh, 4vh); -o-transform: translate(13vh, 4vh); -moz-transform: translate(13vh, 4vh); } 
     to {-webkit-transform: translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); }
 }
 
 @keyframes soft-suspension {
     from {-webkit-transform:translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); } 
-    50% {-webkit-transform:translate(13vh, 3.2vh); -ms-transform: translate(13vh, 3.2vh); -o-transform: translate(13vh, 3.2vh); -moz-transform: translate(13vh, 3.2vh); } 
+    50% {-webkit-transform:translate(13vh, 4vh); -ms-transform: translate(13vh, 4vh); -o-transform: translate(13vh, 4vh); -moz-transform: translate(13vh, 4vh); } 
     to {-webkit-transform: translate(13vh, 3vh); -ms-transform: translate(13vh, 3vh); -o-transform: translate(13vh, 3vh); -moz-transform: translate(13vh, 3vh); }
 }

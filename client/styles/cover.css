@@ -17,7 +17,7 @@
 @media (min-width: 200px) and (orientation:portrait) { #cover { height: 120%; padding-top: 25vh; } }
 @media (min-width: 500px) { #cover { height: 120%; padding-top: 25%; } }
 @media (min-width: 768px) { #cover { height: 120%; } }
-@media (min-width: 768px) and (orientation:portrait) { .scroll-down { margin-top: 8%; } }
+@media (min-width: 768px) and (orientation:portrait) { #cover { padding-top: 35%; }.scroll-down { margin-top: 8%; } }
 @media (min-width: 768px) and (orientation:landscape) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
 @media (min-width: 992px) { #cover { height: 200%; } .scroll-down { margin-top: 3%; } }
 @media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15%; } .scroll-down { margin-top: 2%; } }
