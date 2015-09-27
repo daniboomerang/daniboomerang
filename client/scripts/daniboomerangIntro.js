@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('daniboomerangIntro', [ ])
-.directive('daniboomerangIntroDirective', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService) {
+.directive('daniboomerangIntroDirective', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService) {
 	return {
 		restrict: 'A',
 		templateUrl: 'views/daniboomerang-intro.html',
@@ -13,6 +13,12 @@ angular.module('daniboomerangIntro', [ ])
 			var isSkipActive = true;
 			var timeoutPromises = [];
 			var introIsFinished = false;
+
+			scope.socialDescription = socialSharingService.getSocialDescription();
+			scope.socialUrl = socialSharingService.getSocialUrl();
+			scope.socialMedia = socialSharingService.getSocialMedia();
+			scope.socialType = socialSharingService.getSocialType();
+			scope.socialTitle = socialSharingService.getSocialTitle();
     	
     		function startApp(){
 				intro.attr('class', 'animated fadeOut');

@@ -1,5 +1,13 @@
 {
   "name": "daniboomerang",
+  "keywords": [
+    "portfolio",
+    "parallax",
+    "animated",
+    "web",
+    "angular",
+    "angularjs"
+  ],
   "version": "0.1.0",
   "homepage": "www.daniboomerang.com",
   "license": "MIT",
@@ -10,7 +18,7 @@
     "angular-loader": "1.4.x",
     "angular-mocks": "1.4.x",
     "angular-scroll": "0.6.5",
-    "angular-social-links": "0.0.16",
+    "angularjs-socialshare": "0.1.13",
     "font-awesome": "4.3.0",
     "json3": "3.3.2",
     "es5-shim": "4.0.3"

@@ -3,7 +3,7 @@
 angular.module('daniboomerangApp', [
 	'ngRoute',
 	// VENDOR
-	'socialLinks',
+	'720kb.socialshare',
 	// DANIBOOMERANG
 	'daniboomerangIntro',
 	'daniboomerangAsParallax'

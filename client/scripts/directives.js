@@ -1,4 +1,4 @@
-var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
+var daniboomerangDirectives = angular.module('daniboomerangDirectives', ['daniboomerangServices']);
 
 /*******************************************************/
 /****************** PARALLAX SECTIONS ******************/
@@ -174,7 +174,7 @@ daniboomerangDirectives.directive('contact', function($document) {
 /***************** FOOT ****************/
 /***************************************/
 
-daniboomerangDirectives.directive('foot', function($timeout) {
+daniboomerangDirectives.directive('foot', function($timeout, socialSharingService) {
   return {
     restrict: 'E',
     templateUrl: 'views/foot.html',
@@ -182,6 +182,7 @@ daniboomerangDirectives.directive('foot', function($timeout) {
     link: function (scope, element) {
 
       var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButtonWrapper, shareButtonWrapper;
+      scope.socialDescription, scope.socialUrl, scope.socialMedia, scope.socialType, scope.socialTitle;
 
       scope.toogleFooters = function (){
         if (scope.displayMenu == SECTION_FOOTER){
@@ -204,6 +205,13 @@ daniboomerangDirectives.directive('foot', function($timeout) {
         scope.displayMenu = SECTION_FOOTER;
         /* INIT DOM ELEMENTS */
         footer = element.find('footer'); toTopButtonWrapper = element.find('#to-top-button-wrapper'); shareButtonWrapper = element.find('#share-button-wrapper');
+
+        /* SOCIAL SHARING */
+        scope.socialDescription = socialSharingService.getSocialDescription();
+        scope.socialUrl = socialSharingService.getSocialUrl();
+        scope.socialMedia = socialSharingService.getSocialMedia();
+        scope.socialType = socialSharingService.getSocialType();
+        scope.socialTitle = socialSharingService.getSocialTitle();
 
         function contractFooter(){
             footer.removeClass('expand-small'); footer.removeClass('expand-big');
