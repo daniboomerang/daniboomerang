@@ -38,7 +38,10 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 						//if (previousSection == 'without-boundaries') { $rootScope.$broadcast('active-section:about-fromTop'); }
 			        }
 					if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:back-end'); }
-			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('active-section:loving'); }
+			        if ('loving' == hash.substr(1)){ 
+			        	$rootScope.$broadcast('active-section:loving');
+			        	$rootScope.$broadcast('active-section:text');
+			        }
 					if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:front-end'); }
 			        if ('work' == hash.substr(1)){ 
 			        	$rootScope.$broadcast('active-section:work');
