@@ -2,11 +2,11 @@
 /* SECTIONS */
 /************/
 
-#sections { font-weight: lighter; -webkit-font-smoothing: antialiased; }
+#sections { font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;  }
 .section { padding-bottom:5%; margin-left:4%; margin-right:4% }
 .section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
 .section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
-.fluid-section { padding: 3%; background: rgba(0,0,0,1); color: white; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; }
+.fluid-section { padding: 3%; background: rgba(0, 0, 0, 1); color: rgba(255, 255, 255, 1); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; }
 
 ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
 .list-text li { position: relative; padding-left: 2em; }
@@ -18,6 +18,16 @@ blockquote { color: white; background-color: rgba(19, 65, 99, 0.3); border-left:
 blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
 blockquote p { display: inline; }
 
+.section-title { font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; }
+.upper-case { text-transform: uppercase; }
+@media all { .h1-title { font-size: 2.2em; } .h2-title { font-size: 2em; } }
+@media (min-width: 768px) and (max-width: 1024px) { .h1-title { font-size: 2em; } .h2-title { font-size: 1.8em; } }
+@media (min-width: 640px) and (max-width: 767px) { .h1-title { font-size: 1.8em; } .h2-title { font-size: 1.6em; } }
+@media (min-width: 500px) and (max-width: 639px) { .h1-title { font-size: 1.6em; } .h2-title { font-size: 1.4em; } }
+@media (min-width: 200px) and (max-width: 500px) { .h1-title { font-size: 1.4em; } .h2-title { font-size: 1.2em; } }
+.text-that-lightsup { -webkit-transition: color 0.3s ease-in-out; -moz-transition: color 0.3s ease-in-out; -ms-transition: color 0.3s ease-in-out; -o-transition: color 0.3s ease-in-out; transition: color 0.3s ease-in-out; }
+.text-orange { color: #FF9933; }
+.text-gray { color: rgba(115, 115, 115, 0.7); }
 
 #about { }
 #loving { }

@@ -23,7 +23,7 @@
   margin-left: -25%;
   margin-top: 25%;
   padding-top: 7%;
-  border: 0.1em solid rgba(226, 227, 225, 0.1);
+  border: 0.1em solid rgba(99, 99, 99, 0.2);
 }
 .dboom-button-link.md.active {
   border: solid #FF9933 0.1em;
@@ -36,7 +36,7 @@
 .dboom-button.md {
   text-align: center; 
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
-  border: 0.1em solid rgba(226, 227, 225, 0.1);
+  border: 0.1em solid rgba(99, 99, 99, 0.2);
   content: "";
   border-left-color: #1AA346;
   border-right-color: rgba(19, 65, 99, 1);
@@ -46,7 +46,7 @@
 }
 .dboom-button.md::before {
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
-  border: 0.4em solid rgba(226, 227, 225, 0.1);
+  border: 0.4em solid rgba(99, 99, 99, 0.2);
   content: "";
   border-top-color: rgba(19, 65, 99, 1);
   border-bottom-color: #1AA346; 
@@ -59,7 +59,7 @@
 
 .dboom-button.md::after {
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
-  border: 0.2em solid rgba(226, 227, 225, 0.1);
+  border: 0.2em solid rgba(99, 99, 99, 0.2);
   content: "";
   border-right-color: rgba(19, 65, 99, 1);
   border-left-color: #1AA346;
@@ -95,7 +95,7 @@
 .dboom-button.sm {
   text-align: center; 
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
-  border: 0.2em solid rgba(19, 65, 99, 1);
+  border: 0.1em solid rgba(19, 65, 99, 1);
   content: "";
   margin: -2.5em 0 0 -2.5em;
   height: 5em;
@@ -103,7 +103,7 @@
 }
 .dboom-button.sm::before {
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
-  border: 0.3em solid rgba(226, 227, 225, 0.1);
+  border: 0.18em solid rgba(99, 99, 99, 0.2);
   content: "";
   border-right-color: rgba(19, 65, 99, 1);
   border-left-color: #1AA346;;
@@ -154,7 +154,7 @@
 }
 .dboom-button.xs::before {
   -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%;
-  border: 0.2em solid rgba(226, 227, 225, 0.1);
+  border: 0.2em solid rgba(99, 99, 99, 0.2);
   content: "";
   border-right-color: rgba(19, 65, 99, 1);
   border-left-color: #1AA346;;

@@ -11,13 +11,6 @@
 .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
 .parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; height: 120vh;}
 .parallax__section_test { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; }
-.animated-title { font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; color: #FF9933; }
-.upper-case { text-transform: uppercase; }
-@media all { .animated-title { font-size: 2.2em; } }
-@media (min-width: 768px) and (max-width: 1024px) { .animated-title { font-size: 2em; } }
-@media (min-width: 640px) and (max-width: 767px) { .animated-title { font-size: 1.8em; } }
-@media (min-width: 500px) and (max-width: 639px) { .animated-title { font-size: 1.6em; } }
-@media (min-width: 200px) and (max-width: 500px) { .animated-title { font-size: 1.4em; } }
 
 /*****************/
 /* COVER SECTION */

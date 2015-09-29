@@ -248,7 +248,7 @@ daniboomerangDirectives.directive('foot', function($timeout, socialSharingServic
 /**************** TOPNAVBAR ***************/
 /******************************************/
 
-daniboomerangDirectives.directive('topnavbar', function() {
+daniboomerangDirectives.directive('topnavbar', function($timeout) {
   return {
     restrict: 'E',
     templateUrl: 'views/topnavbar.html',
@@ -268,15 +268,18 @@ daniboomerangDirectives.directive('topnavbar', function() {
         var contactLink = element.find('#contact-link');
         var contactIcon = element.find('.contact-icon');
 
+        var activeTimeout;
+
         /*On active section*/
-        scope.$on('active-section:about', function($event){ aboutLink.addClass('active'); aboutIcon.addClass('spin-right-whole-fastest'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:loving', function($event){ lovingLink.addClass('active'); lovingIcon.addClass('pulsing'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:work', function($event){ workLink.addClass('active'); workIcon.addClass('pulsing'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:about', function($event){ $timeout.cancel(activeTimeout); aboutLink.addClass('active'); aboutIcon.addClass('spin-right-whole-fastest'); header.attr('class', 'expand fadeIn animated navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:loving', function($event){ $timeout.cancel(activeTimeout); lovingLink.addClass('active'); lovingIcon.addClass('pulsing'); header.attr('class', 'expand fadeIn animated navbar-fixed-top box-shadow-down'); });
+        scope.$on('active-section:work', function($event){ $timeout.cancel(activeTimeout); workLink.addClass('active'); workIcon.addClass('pulsing'); header.attr('class', 'expand fadeIn animated navbar-fixed-top box-shadow-down'); });
         
         /*On inactive section*/
-        scope.$on('inactive-section:about', function($event){ header.removeClass('expand'); aboutLink.removeClass('active'); aboutIcon.removeClass('spin-right-whole-fastest'); });
-        scope.$on('inactive-section:loving', function($event){ header.removeClass('expand'); lovingLink.removeClass('active'); lovingIcon.removeClass('pulsing'); });
-        scope.$on('inactive-section:work', function($event){ header.removeClass('expand'); workLink.removeClass('active'); workIcon.removeClass('pulsing'); });
+        scope.$on('inactive-section:about', function($event){ header.removeClass('fadeIn'); header.addClass('fadeOut'); aboutLink.removeClass('active'); aboutIcon.removeClass('spin-right-whole-fastest'); activeTimeout = $timeout(function() { header.removeClass('expand'); }, 500); });
+        scope.$on('inactive-section:loving', function($event){ header.removeClass('fadeIn'); header.addClass('fadeOut'); lovingLink.removeClass('active'); lovingIcon.removeClass('pulsing'); activeTimeout = $timeout(function() { header.removeClass('expand'); }, 500); });
+        scope.$on('inactive-section:work', function($event){ header.removeClass('fadeIn'); header.addClass('fadeOut'); workLink.removeClass('active'); workIcon.removeClass('pulsing'); activeTimeout = $timeout(function() { header.removeClass('expand'); }, 500); });
+
       }
     }
   };
@@ -334,3 +337,17 @@ daniboomerangDirectives.directive('button', function() {
     }
   };
 });  
+
+
+daniboomerangDirectives.directive('lightupText', function($document) {
+  return {
+    restrict: 'AE',
+    scope: {},
+    link: function (scope, element, attrs) {
+      element.addClass('text-that-lightsup');
+      scope.$on('active-section:' + attrs.section, function($event){ element.removeClass('text-gray'); element.addClass('text-orange'); });
+      scope.$on('inactive-section:' + attrs.section, function($event){ element.removeClass('text-orange'); element.addClass('text-gray'); });
+    }
+  }
+});
+

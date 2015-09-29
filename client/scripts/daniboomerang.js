@@ -14,6 +14,6 @@ angular.module('daniboomerangApp', [
 .directive('daniboomerangContent', function() {
 	return {
 	    restrict: 'E',
-	    template: '<div id="intro-wrapper" daniboomerang-intro-directive></div><div id="app-wrapper" class="visibility-hidden" daniboomerang-as-parallax-directive></div>'
+	    template: '<div id="intro-wrapper" daniboomerang-intro-directive></div><div id="app-wrapper" daniboomerang-as-parallax-directive></div>'
   	}  
 })
