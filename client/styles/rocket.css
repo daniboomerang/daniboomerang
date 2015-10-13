@@ -6,8 +6,8 @@
 #rocket { position: relative; }
 .arrival {  -webkit-animation: arrival 2s ease-in-out forwards 1;
             -moz-animation: arrival 2s ease-in-out forwards 1; }
-.suspension { -webkit-animation: suspension 3.5s ease-in-out infinite;
-              -moz-animation: suspension 3.5s ease-in-out infinite; }
+.suspension { -webkit-animation: suspension 7.5s ease-in-out infinite;
+              -moz-animation: suspension 7.5s ease-in-out infinite; }
 .turn { -webkit-animation: turn 2s ease-in-out forwards 1;
         -moz-animation: turn 2s ease-in-out forwards 1; }
 

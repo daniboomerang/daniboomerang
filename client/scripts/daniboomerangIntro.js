@@ -34,7 +34,7 @@ angular.module('daniboomerangIntro', [ ])
 
 			intro.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;');
 			intro.attr('class', 'animated fadeIn');
-			var introTitleHtml = '<div id="intro-title" class="animated flipInX text-center">"A creative portfolio"</div>'
+			var introTitleHtml = '<div id="intro-title" class="animated flipInX text-center">A creative portfolio</div>'
 			if (!introIsFinished) { 
 				timeoutPromises.push($timeout(function() { 
 					console.log('here a $timeout');
@@ -167,12 +167,12 @@ angular.module('daniboomerangIntro', [ ])
 	        		console.log('here an $interval');
 	          		(rightEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? rightEngine.attr('class', 'animated fadeIn') : rightEngine.attr('class', 'animated fadeOut');
 	          		(leftEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? leftEngine.attr('class', 'animated fadeIn') : leftEngine.attr('class', 'animated fadeOut');
-	        	}, 2100))
+	        	}, 4100))
 
 	        	intervalPromises.push($interval(function() {
 	        		console.log('here an $interval');
 	          		(centerEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? centerEngine.attr('class', 'animated fadeIn') : centerEngine.attr('class', 'animated fadeOut');
-	        	}, 1700))       
+	        	}, 2700))       
 	      	}
 
 	      	function turnOnLights() {
@@ -180,12 +180,12 @@ angular.module('daniboomerangIntro', [ ])
 		        	console.log('here an $interval');
 		          	(leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
 		          	(rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
-		        }, 2500));
+		        }, 3500));
 
 		        intervalPromises.push($interval(function() {
 		        	console.log('here an $interval');
 		          	(centerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? centerLight.attr('class', 'animated fadeIn') : centerLight.attr('class', 'animated fadeOut');
-		        }, 700));        
+		        }, 2700));        
 		    }
 	    
 	      	function parkRocket(time){
