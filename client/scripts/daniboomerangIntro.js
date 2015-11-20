@@ -51,7 +51,7 @@ angular.module('daniboomerangIntro', [ ])
 							intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
 							$compile(intro)(scope);
 							// We make the ESC available
-							intro.append("<div id='esc' class='animated flipInX' style='-moz-animation-delay: 2s; -webkit-animation-delay: 2s; -ms-animation-delay: 2s;'><b>Press 'ESC' to skip</b> </div>");
+							intro.append("<div id='esc' class='animated flipInX' style='-moz-animation-delay: 3.5s; -webkit-animation-delay: 3.5s; -ms-animation-delay: 3.5s;'>Press 'ESC' to skip</div>");
 							$document.bind("keyup", function(event) {
 								introIsFinished = true;
 				        		if ((event.keyCode === 27) && (isSkipActive)) { startApp(); }

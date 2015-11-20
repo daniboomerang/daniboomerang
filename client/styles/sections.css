@@ -16,6 +16,7 @@ ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ li
 hr { border-color: rgba(255, 255, 255, 0.1) !important; margin-bottom: 1em; margin-top: 1em; }
 blockquote { color: white; background-color: rgba(19, 65, 99, 0.3); border-left: 10px solid rgba(19, 65, 99, 0.7); margin: 1.5em 10px; padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019"; font-size: 1em; }
 blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
+blockquote:after { color: rgba(19, 65, 99, 0.7); content: close-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
 blockquote p { display: inline; }
 
 .section-title { font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; }
