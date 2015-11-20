@@ -181,7 +181,7 @@ daniboomerangDirectives.directive('foot', function($timeout, socialSharingServic
     scope: {},
     link: function (scope, element) {
 
-      var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButtonWrapper, shareButtonWrapper;
+      var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButtonWrapper, cvButtonWrapper, shareButtonWrapper;
       scope.socialDescription, scope.socialUrl, scope.socialMedia, scope.socialType, scope.socialTitle;
 
       scope.toogleFooters = function (){
@@ -204,7 +204,7 @@ daniboomerangDirectives.directive('foot', function($timeout, socialSharingServic
         /* INIT SCOPE */
         scope.displayMenu = SECTION_FOOTER;
         /* INIT DOM ELEMENTS */
-        footer = element.find('footer'); toTopButtonWrapper = element.find('#to-top-button-wrapper'); shareButtonWrapper = element.find('#share-button-wrapper');
+        footer = element.find('footer'); toTopButtonWrapper = element.find('#to-top-button-wrapper'); cvButtonWrapper = element.find('#cv-button-wrapper'); shareButtonWrapper = element.find('#share-button-wrapper');
 
         /* SOCIAL SHARING */
         scope.socialDescription = socialSharingService.getSocialDescription();
@@ -215,17 +215,17 @@ daniboomerangDirectives.directive('foot', function($timeout, socialSharingServic
 
         function contractFooter(){
             footer.removeClass('expand-small'); footer.removeClass('expand-big');
-            toTopButtonWrapper.removeClass('rotateIn'); shareButtonWrapper.removeClass('rotateIn');
-            toTopButtonWrapper.addClass('rotateOut'); shareButtonWrapper.addClass('rotateOut');
-            toTopButtonWrapper.removeClass('visibility-visible'); shareButtonWrapper.removeClass('visibility-visible');
+            toTopButtonWrapper.removeClass('bounceInRight'); cvButtonWrapper.removeClass('bounceInLeft'); shareButtonWrapper.removeClass('bounceInUp');
+            toTopButtonWrapper.addClass('bounceOutRight'); cvButtonWrapper.addClass('bounceOutLeft'); shareButtonWrapper.addClass('bounceOutDown');
+            //toTopButtonWrapper.addClass('visibility-hidden'); cvButtonWrapper.addClass('visibility-hidden'); shareButtonWrapper.addClass('visibility-hidden');
         }
             
         function expandFooter(){
             if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
             else { footer.addClass('expand-big'); }
-            toTopButtonWrapper.addClass('visibility-visible'); shareButtonWrapper.addClass('visibility-visible');
-            toTopButtonWrapper.addClass('rotateIn'); shareButtonWrapper.addClass('rotateIn');
-            toTopButtonWrapper.removeClass('rotateOut'); shareButtonWrapper.removeClass('rotateOut');
+            toTopButtonWrapper.removeClass('visibility-hidden'); cvButtonWrapper.removeClass('visibility-hidden'); shareButtonWrapper.removeClass('visibility-hidden');
+            toTopButtonWrapper.addClass('bounceInRight'); cvButtonWrapper.addClass('bounceInLeft'); shareButtonWrapper.addClass('bounceInUp');
+            toTopButtonWrapper.removeClass('bounceOutRight'); cvButtonWrapper.removeClass('bounceOutLeft'); shareButtonWrapper.removeClass('bounceOutDown');
         }
 
         scope.$on('active-section:cover', function($event){ contractFooter(); });
