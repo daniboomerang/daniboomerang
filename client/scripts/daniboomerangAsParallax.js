@@ -17,10 +17,6 @@ angular.module('daniboomerangAsParallax', [
 .directive('daniboomerangAsParallaxDirective', function($compile) {
 	return {
 		restrict: 'A',
-		templateUrl: 'views/daniboomerang-as-parallax.html',
-		link: function (scope, element, attrs) {
-			var topnavbarWrapper = element.find('#topnavbar-wrapper');
-			var footWrapper = element.find('#foot-wrapper');
-			scope.$on('app-starts', function($event){ topnavbarWrapper.append('<topnavbar></topnavbar>'); footWrapper.append('<foot></foot>'); $compile(topnavbarWrapper)(scope); $compile(footWrapper)(scope); }); }
+		templateUrl: 'views/daniboomerang-as-parallax.html'
 	}  
 })

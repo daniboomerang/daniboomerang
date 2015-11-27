@@ -179,107 +179,107 @@ daniboomerangDirectives.directive('foot', function($timeout, socialSharingServic
     restrict: 'E',
     templateUrl: 'views/foot.html',
     scope: {},
-    link: function (scope, element) {
+    compile: function compile(tElement, tAttrs, transclude) {
 
-      var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButtonWrapper, cvButtonWrapper, shareButtonWrapper;
-      scope.socialDescription, scope.socialUrl, scope.socialMedia, scope.socialType, scope.socialTitle;
-
-      scope.toogleFooters = function (){
-        if (scope.displayMenu == SECTION_FOOTER){
-          footer.removeClass('expand-small');
-          $timeout(function() { footer.addClass('expand-big'); scope.displayMenu = SHARING_FOOTER; }, 500);
-        }
-        else {
-          footer.removeClass('expand-big');
-          $timeout(function() { footer.addClass('expand-small'); scope.displayMenu = SECTION_FOOTER; }, 500);
-        }      
-      }
-
-      init();
-
-      function init(){
-        
-        /* INIT CONSTANTS */
-        SECTION_FOOTER = 'sectionFooter'; SHARING_FOOTER = 'sharingFooter';
-        /* INIT SCOPE */
-        scope.displayMenu = SECTION_FOOTER;
-        /* INIT DOM ELEMENTS */
-        footer = element.find('footer'); toTopButtonWrapper = element.find('#to-top-button-wrapper'); cvButtonWrapper = element.find('#cv-button-wrapper'); shareButtonWrapper = element.find('#share-button-wrapper');
-
-        /* SOCIAL SHARING */
-        scope.socialDescription = socialSharingService.getSocialDescription();
-        scope.socialUrl = socialSharingService.getSocialUrl();
-        scope.socialMedia = socialSharingService.getSocialMedia();
-        scope.socialType = socialSharingService.getSocialType();
-        scope.socialTitle = socialSharingService.getSocialTitle();
-
-        function contractFooter(){
-            footer.removeClass('expand-small'); footer.removeClass('expand-big');
-            toTopButtonWrapper.removeClass('bounceInRight'); cvButtonWrapper.removeClass('bounceInLeft'); shareButtonWrapper.removeClass('bounceInUp');
-            toTopButtonWrapper.addClass('bounceOutRight'); cvButtonWrapper.addClass('bounceOutLeft'); shareButtonWrapper.addClass('bounceOutDown');
-            //toTopButtonWrapper.addClass('visibility-hidden'); cvButtonWrapper.addClass('visibility-hidden'); shareButtonWrapper.addClass('visibility-hidden');
-        }
-            
-        function expandFooter(){
-            if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
-            else { footer.addClass('expand-big'); }
-            toTopButtonWrapper.removeClass('visibility-hidden'); cvButtonWrapper.removeClass('visibility-hidden'); shareButtonWrapper.removeClass('visibility-hidden');
-            toTopButtonWrapper.addClass('bounceInRight'); cvButtonWrapper.addClass('bounceInLeft'); shareButtonWrapper.addClass('bounceInUp');
-            toTopButtonWrapper.removeClass('bounceOutRight'); cvButtonWrapper.removeClass('bounceOutLeft'); shareButtonWrapper.removeClass('bounceOutDown');
-        }
-
-        scope.$on('active-section:cover', function($event){ contractFooter(); });
-        scope.$on('active-section:connectivity', function($event){ scope.currentSection = 'connectivity'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:creativity', function($event){ scope.currentSection = 'creativity'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:remote-working', function($event){ scope.currentSection = 'remote-working'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:without-boundaries', function($event){ scope.currentSection = 'without-boundaries'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:about', function($event){ scope.currentSection = 'about'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:back-end', function($event){ scope.currentSection = 'back-end'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:loving', function($event){ scope.currentSection = 'loving'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:front-end', function($event){ scope.currentSection = 'front-end'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:work', function($event){ scope.currentSection = 'work'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:contact', function($event){ scope.currentSection = 'contact'; expandFooter(); scope.$apply(); }); 
-      }
-    }  
-  };
-});
-
-/******************************************/
-/**************** TOPNAVBAR ***************/
-/******************************************/
-
-daniboomerangDirectives.directive('topnavbar', function($timeout) {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/topnavbar.html',
-    link: function (scope, element) {
-
-      init();
+      // DOM ELEMENTS
+      var buttonsLeftSideWrapper = tElement.find('#buttons-left-side-wrapper');
+      var shareMenuWrapper = tElement.find('#share-menu-wrapper');
+      var buttonsRightSideWrapper = tElement.find('#buttons-right-side-wrapper');
+      var currentSectionWrapper = tElement.find('#current-section-wrapper'); 
+      var toNextUpButtonWrapper = tElement.find('#to-next-up-button-wrapper');
+      var toNextDownButtonWrapper = tElement.find('#to-next-down-button-wrapper');
+      var cvButtonWrapper = tElement.find('#cv-button-wrapper');
+      var shareButtonWrapper = tElement.find('#share-button-wrapper');
       
-      function init(){
+      return {
+        pre: function preLink(scope, iElement, iAttrs) { 
+     
+         function addDelayForAnimation(element, delay) {
+            var delayAnimation = '-moz-animation-delay:' + delay + 's; -webkit-animation-delay:' + delay + 's; -ms-animation-delay:' + delay + 's;'
+            element.attr('style', delayAnimation);            
+          }
 
-        var header = element.find('header');
-        var aboutLink = element.find('#about-link');
-        var aboutIcon = element.find('.about-icon');
-        var lovingLink = element.find('#loving-link');
-        var lovingIcon = element.find('.loving-icon');
-        var workLink = element.find('#work-link');
-        var workIcon = element.find('.work-icon');
-        var contactLink = element.find('#contact-link');
-        var contactIcon = element.find('.contact-icon');
+          // Lets hide the elements before the view is compiled
 
-        var activeTimeout;
+          // Left side buttons
+          buttonsLeftSideWrapper.attr('class', 'visibility-hidden');
+          cvButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(cvButtonWrapper, 0.3);
 
-        /*On active section*/
-        scope.$on('active-section:about', function($event){ $timeout.cancel(activeTimeout); aboutLink.addClass('active'); aboutIcon.addClass('spin-right-whole-fastest'); header.attr('class', 'expand fadeIn animated navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:loving', function($event){ $timeout.cancel(activeTimeout); lovingLink.addClass('active'); lovingIcon.addClass('pulsing'); header.attr('class', 'expand fadeIn animated navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:work', function($event){ $timeout.cancel(activeTimeout); workLink.addClass('active'); workIcon.addClass('pulsing'); header.attr('class', 'expand fadeIn animated navbar-fixed-top box-shadow-down'); });
-        
-        /*On inactive section*/
-        scope.$on('inactive-section:about', function($event){ header.removeClass('fadeIn'); header.addClass('fadeOut'); aboutLink.removeClass('active'); aboutIcon.removeClass('spin-right-whole-fastest'); activeTimeout = $timeout(function() { header.removeClass('expand'); }, 500); });
-        scope.$on('inactive-section:loving', function($event){ header.removeClass('fadeIn'); header.addClass('fadeOut'); lovingLink.removeClass('active'); lovingIcon.removeClass('pulsing'); activeTimeout = $timeout(function() { header.removeClass('expand'); }, 500); });
-        scope.$on('inactive-section:work', function($event){ header.removeClass('fadeIn'); header.addClass('fadeOut'); workLink.removeClass('active'); workIcon.removeClass('pulsing'); activeTimeout = $timeout(function() { header.removeClass('expand'); }, 500); });
+          // Share Menu
+          shareMenuWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(shareMenuWrapper, 0.3);
+          shareButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(shareButtonWrapper, 0.5);
 
+          // Left side buttons
+          buttonsRightSideWrapper.attr('class', 'visibility-hidden');
+          currentSectionWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(currentSectionWrapper, 0.2);
+          toNextUpButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(toNextUpButtonWrapper, 0.3);
+          toNextDownButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(toNextDownButtonWrapper, 0.5);
+          
+        },
+        post: function postLink(scope, iElement, iAttrs) { 
+          
+          var COVER, ABOUT, LOVING, WORK, CONTACT;
+          scope.currentSection, scope.toNextUpSection, scope.toNextDownSection, scope.isToogledShareMenu, scope.socialDescription, scope.socialUrl, scope.socialMedia, scope.socialType, scope.socialTitle;
+
+          scope.toogleShareMenu = function (){ 
+            scope.isToogledShareMenu = !scope.isToogledShareMenu; 
+            if (scope.isToogledShareMenu) { showShareMenu(); }
+            else { hideShareMenu(); }
+          }
+
+          function showShareMenu (){ if (scope.isToogledShareMenu) { shareMenuWrapper.attr('class', 'animated fadeInUp'); } }
+          function hideShareMenu(){ shareMenuWrapper.attr('class', 'animated fadeOutDown'); }
+
+          init();
+
+          function init(){
+            
+            /* CONSTANTS */
+            COVER = 'cover'; ABOUT = 'about'; LOVING = 'loving'; WORK = 'work';  CONTACT = 'contact'
+
+            /* DOM ELEMENTS */
+            
+
+            /* SECTIONS */
+            scope.currentSection = undefined;
+            scope.nextDownSection = ABOUT;
+            scope.nextUpSection = COVER
+
+            /* SOCIAL SHARING */
+            scope.socialDescription = socialSharingService.getSocialDescription();
+            scope.socialUrl = socialSharingService.getSocialUrl();
+            scope.socialMedia = socialSharingService.getSocialMedia();
+            scope.socialType = socialSharingService.getSocialType();
+            scope.socialTitle = socialSharingService.getSocialTitle();
+
+            function hideFooterElements(){          
+              buttonsLeftSideWrapper.attr('class','animated bounceOutDown'); buttonsRightSideWrapper.attr('class','animated bounceOutDown'); currentSectionWrapper.attr('class','animated bounceOutRight'); toNextUpButtonWrapper.attr('class','animated bounceOutRight'); toNextDownButtonWrapper.attr('class','animated bounceOutDown'); cvButtonWrapper.attr('class','animated bounceOutLeft'); shareButtonWrapper.attr('class','animated bounceOutDown');
+              hideShareMenu()
+            }       
+            function showFooterElements(){
+              buttonsLeftSideWrapper.attr('class','animated bounceInUp');  buttonsRightSideWrapper.attr('class','animated bounceInUp'); currentSectionWrapper.attr('class','animated bounceInRight');  toNextUpButtonWrapper.attr('class','animated bounceInRight');  toNextDownButtonWrapper.attr('class','animated bounceInUp'); cvButtonWrapper.attr('class','animated bounceInLeft'); shareButtonWrapper.attr('class','animated bounceInUp'); 
+              showShareMenu();
+            }
+
+            scope.$on('active-section:cover', function($event){ hideFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:connectivity', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:creativity', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:remote-working', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:without-boundaries', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:about', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeIn'); scope.currentSection = ABOUT; scope.nextUpSection = COVER; scope.nextDownSection = LOVING; scope.$apply(); });
+            scope.$on('active-section:back-end', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = ABOUT; scope.nextDownSection = LOVING; scope.$apply(); });
+            scope.$on('active-section:loving', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeIn'); scope.currentSection = LOVING; scope.nextUpSection = ABOUT; scope.nextDownSection = WORK; scope.$apply(); });
+            scope.$on('active-section:front-end', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = LOVING; scope.nextDownSection = WORK; scope.$apply(); });
+            scope.$on('active-section:work', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeIn'); scope.currentSection = WORK; scope.nextUpSection = LOVING; scope.nextDownSection = CONTACT; scope.$apply(); });
+            scope.$on('active-section:contact', function($event){ hideFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = WORK; scope.nextDownSection = CONTACT; scope.$apply(); }); 
+          }
+        }
       }
     }
   };
@@ -294,7 +294,8 @@ daniboomerangDirectives.directive('button', function() {
     restrict: 'EA',
     scope: {
       ngClickFunction: '&',
-      isActive: '='
+      isActive: '=',
+      scrollSection: '@'
     },
     template: function (elem, attrs) {
       function getLinkInfo(attrs){
@@ -303,7 +304,7 @@ daniboomerangDirectives.directive('button', function() {
         linkInfo.target = '';
         if (attrs.href != undefined) { 
           linkInfo.href = attrs.href; linkInfo.target = "target='_blank_'"; }
-        if (attrs.scrollSection != undefined) { linkInfo.href = '#' + attrs.scrollSection; }
+        if (attrs.scrollSection != undefined) { linkInfo.href = '#' + '{{scrollSection}}' }
         if (attrs.scrollDuration == undefined) { linkInfo.scrollDuration = ''; } else { linkInfo.scrollDuration = attrs.scrollDuration; }
         return linkInfo;
       }

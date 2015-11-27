@@ -1,28 +1,26 @@
 /***********/
 /* FOOTER  */
 /***********/
-footer { position: fixed; bottom: 0; text-align: center; color: white; max-height: 0; overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  -webkit-transition: max-height 0.5s;
-  -moz-transition: max-height 0.5s;
-  transition: max-height 0.5s;
-  border-radius: 9px 9px 0px 0px;
-  -moz-border-radius: 9px 9px 0px 0px;
-  -webkit-border-radius: 9px 9px 0px 0px;
-  background: rgba(0, 0, 0, 0.7);
-  bottom: -5px;
-  width: 0px;
-  -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6);
-}
-footer.expand-small { font-size: 1.3em; width: 40%; margin-left: 30%; background-color: rgba(255,255,255,0.8); max-height: 15%; transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
-footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background-color: rgba(19, 65, 99, 0.7); max-height: 25%;  transition: max-height 0.5s ease-in; -webkit-transition: max-height 0.5s; -moz-transition: max-height 0.5s; transition: max-height 0.5s; }
-.footer-container { width: auto; text-align: center; color: rgba(19, 65, 99, 0.7); }
-.floating-button { z-index: 1; }
-#footer-wrapper a { color: white; transition: all .5px ease-in-out; }
-#footer-wrapper a:hover { color: #FF9933; text-decoration:none; transition: all .5px ease-in-out; }
-#to-top-button-wrapper { position: absolute; } 
-#cv-button-wrapper { position: absolute; } 
-#share-button-wrapper { position: absolute; } 
+
+#footer a { text-align: center; color: white; transition: all .5px ease-in-out; }
+#footer a:hover { color: #FF9933; text-decoration:none; transition: all .5px ease-in-out; }
+#share-menu-wrapper { text-align: center; bottom: 0; width: 50%; left: 25%; position: fixed; border: solid 0.12em rgba(19, 65, 99, 0.7); background: rgba(19, 65, 99, 0.6); -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); border-radius: 9px 9px 0px 0px; -moz-border-radius: 9px 9px 0px 0px; -webkit-border-radius: 9px 9px 0px 0px; }
+#share-menu-container { }
+#buttons-right-side-wrapper { right: 0.2%; bottom: 0.5%; position: fixed; }
+#buttons-left-side-wrapper { left: 0.2%; bottom: 0.5%; position: fixed; }
+#cv-button-wrapper { width: 100%; height: 40%; } 
+#none-section-wrapper { width: 100%; height: 20%;  } /* None section wrapper is aimed to just occupy the same space than current-section-wrapper on the right side */ 
+#share-button-wrapper { width: 100%; height: 40%;  }
+#to-next-up-button-wrapper { width: 100%; height: 40%;  } 
+#current-section-wrapper { width: 100%; height: 20%; color: #FF9933; text-align: center; }
+#to-next-down-button-wrapper { width: 100%; height: 40%; } 
+
+/*.blurred-wrapper { position: relative; }
+.blurred-bg { width: 100%; height: 100%; background-image: radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    background-image: -o-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    background-image: -ms-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    background-image: -moz-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    background-image: -webkit-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)); -webkit-filter: blur(10px); filter: blur(10px); border-radius: 100%; }*/
 
 /*========== RESPONSIVENESS ==========*/
 
@@ -30,42 +28,37 @@ footer.expand-big { font-size: 1.08em; width: 60%; margin-left: 20%;  background
   /* iphone 6 */
   /************/
   @media (min-width: 375px) and (min-height: 627px) and (orientation: portrait){ 
-    #to-top-button-wrapper { bottom: 9% !important; right: 15% !important; } #cv-button-wrapper { bottom: 15% !important; left: 16% !important; } #share-button-wrapper { bottom: 9% !important; left: 15% !important; }
+    }
   }
 
 /* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { .footer { font-size: 1em !important; } #to-top-button-wrapper { bottom: 8%; right: 11%; } #cv-button-wrapper { bottom: 16%; left: 5.5%; } #share-button-wrapper { bottom: 8%; left: 11%; } }
-                            
+@media (min-width: 200px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 19%; height: 25%; } #buttons-left-side-wrapper { width: 19%; height: 25%; } }
 /* Extra small Devices, (phones, 320px and up) */
-@media (min-width: 320px) { .footer { font-size: 1em !important; } }
-
+@media (min-width: 320px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 17%; height: 25%; } #buttons-left-side-wrapper { width: 17%; height: 25%; } }
 /* Extra small Devices, (phones, 500px and up) */
-@media (min-width: 500px) { #to-top-button-wrapper { bottom: 9%; right: 10%; } #cv-button-wrapper { bottom: 23%; left: 5.5%; } #share-button-wrapper { bottom: 9%; left: 10%; } }
-
+@media (min-width: 500px) { #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
 /* Extra small Devices, (phones, 640px and up) */
-@media (min-width: 640px) { #to-top-button-wrapper { bottom: 9%; right: 9%; } #cv-button-wrapper { bottom: 23%; left: 5.5%; } #share-button-wrapper { bottom: 9%; left: 9%; } }
-       
+@media (min-width: 640px) { #buttons-right-side-wrapper { width: 12.5%; height: 25%; } #buttons-left-side-wrapper { width: 12.5%; height: 25%; } }
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { .footer { font-size: 1.1em !important; } footer.expand-big { font-size: 1.2em; } #to-top-button-wrapper { bottom: 9%; right: 8.5%; } #cv-button-wrapper { bottom: 21%; left: 8%; } #share-button-wrapper { bottom: 9%; left: 8.5%; } }
+@media (min-width: 768px) { #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { width: 10%; height: 30%; } #buttons-left-side-wrapper { width: 10%; height: 30%; } }
+/* Medium devices (desktops, 900px and up) */
+@media (min-width: 900px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { width: 10%; height: 32.5%; } #buttons-left-side-wrapper { width: 10%; height: 32.5%; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { .footer { font-size: 1.1em !important; } #to-top-button-wrapper { bottom: 9%; right: 7.5%; } #cv-button-wrapper { bottom: 21%; left: 7%; } #share-button-wrapper { bottom: 9%; left: 7.5%; } }
-
+@media (min-width: 992px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { width: 10%; height: 35%; } #buttons-left-side-wrapper { width: 10%; height: 35%; } }
 /* Medium devices (desktops, 1024px and up) */
-@media (min-width: 1024px) { .footer { font-size: 1.2em !important; } #to-top-button-wrapper { bottom: 10%; right: 6%; } #cv-button-wrapper { bottom: 22.5%; left: 5.5%; } #share-button-wrapper { bottom: 10%; left: 6%; } }
-                             
+@media (min-width: 1024px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 11%; height: 36.5%; } #buttons-left-side-wrapper { width: 11%; height: 36.5%; } }
+/* Medium devices (desktops, 1280px and up) */
+@media (min-width: 1280px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 8.5%; height: 37%; } #buttons-left-side-wrapper { width: 8.5%; height: 37%; } }
+/* Medium devices (desktops, 1280px and up) */
+@media (min-width: 1400px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 8.5%; height: 35%; } #buttons-left-side-wrapper { width: 8.5%; height: 35%; } }
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { .footer { font-size: 2.3em !important; } #to-top-button-wrapper { bottom: 8.5%; right: 5.5%; } #cv-button-wrapper { bottom: 23%; left: 5.5%; } #share-button-wrapper { bottom: 8.5%; left: 5.5%; } }
-                             
-/* Extra large devices (extra large desktops, 2000 and up) */
-@media (min-width: 2000px) {  .footer { font-size: 2.6em !important; } #to-top-button-wrapper { bottom: 7%; right: 4%; } #cv-button-wrapper { bottom: 23%; left: 5.5%; } #share-button-wrapper { bottom: 7%; left: 4%; } }
-                              
+@media (min-width: 1600px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 8%; height: 32.5%; } #buttons-left-side-wrapper { width: 8%; height: 32.5%; } }
+/* Large devices (large desktops, 1900px and up) */
+@media (min-width: 1900px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 7.5%; height: 32%; } #buttons-left-side-wrapper { width: 7.5%; height: 32%; } }
 /* Extra large devices (extra large desktops, 2500 and up) */
-@media (min-width: 2500px) {  .footer { font-size: 2.8em !important; } #to-top-button-wrapper { bottom: 8%; right: 5%; } #cv-button-wrapper { bottom: 23%; left: 5.5%; } #share-button-wrapper { bottom: 8%; left: 5%; } }
-                              
+@media (min-width: 2500px) {  #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 7.5%; height: 32%; } #buttons-left-side-wrapper { width: 7.5%; height: 32%; } }
 /* Extra large devices (extra large desktops, 3000 and up) */
-@media (min-width: 3000px) {  .footer { font-size: 3em !important; } }
-                              
+@media (min-width: 3000px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { width: 7.5%; height: 37%; } #buttons-left-side-wrapper { width: 7.5%; height: 37%; } }
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) {  .footer { font-size: 6em !important; } }
-                              
+@media (min-width: 3500px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { width: 8%; height: 45%; } #buttons-left-side-wrapper { width: 8%; height: 45%; } }
