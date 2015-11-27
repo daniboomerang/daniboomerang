@@ -56,6 +56,11 @@
 /* 1920 * 1280 */
 @media (min-width: 1366px) and (min-height: 1280px) { #orbit-rocket { bottom: 12vh; } }
 
+/* 2560 * 1440 */
+@media (min-width: 2560px) and (min-height: 1440px) { #orbit-rocket { bottom: 20vh; } }
+
+/* 3000 * 1440 */
+@media (min-width: 3000px) and (min-height: 1440px) { #orbit-rocket { bottom: 25vh; } }
 
 /********************/
 /* ipad & ipad mini */
