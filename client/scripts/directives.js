@@ -152,18 +152,57 @@ daniboomerangDirectives.directive('contact', function($document) {
     restrict: 'AE',
     templateUrl: 'views/sections/contact.html',
     scope: {},
-    link: function (scope, element) {
-      var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
-      init();
-      function init(){ ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; scope.contactInfo = ET_SENTENCE; scope.isPhoneButtonActive = false; scope.isMailButtonActive = false; }
-      scope.toggleSocialButton = function(button){
-        if (button == MAIL_BUTTON) {
-          if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; activeButton =  MAIL_BUTTON; scope.isPhoneButtonActive = false; scope.isMailButtonActive = true; }
-          else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.mailButtonIsToogled = false; }
-        }
-        else {
-          if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; activeButton =  PHONE_BUTTON; scope.isMailButtonActive = false; scope.isPhoneButtonActive = true; }
-          else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.phoneButtonIsToogled = true; }
+     compile: function compile(tElement, tAttrs, transclude) {
+
+      // DOM ELEMENTS
+      var contactDboomShare = tElement.find('#contact-dboom-share');
+      var contactDboomGithub = tElement.find('#contact-dboom-github');
+      
+      return {
+        pre: function preLink(scope, iElement, iAttrs) { 
+     
+          function addDelayForAnimation(element, delay) {
+            var delayAnimation = '-moz-animation-delay:' + delay + 's; -webkit-animation-delay:' + delay + 's; -ms-animation-delay:' + delay + 's;'
+            element.attr('style', delayAnimation);            
+          }
+
+          // Lets hide the elements before the view is compiled
+          contactDboomShare.attr('class', 'visibility-hidden');
+          addDelayForAnimation(contactDboomShare, 0.5);
+          contactDboomGithub.attr('class', 'visibility-hidden');
+          addDelayForAnimation(contactDboomGithub, 0.5);
+        },
+        post: function postLink(scope, iElement, iAttrs) { 
+          
+          var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
+          
+          init();
+          function init(){ 
+           
+            // variables and scope
+            ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; scope.contactInfo = ET_SENTENCE; scope.isPhoneButtonActive = false; scope.isMailButtonActive = false;
+
+            scope.$on('active-section:contact', function($event){ 
+              contactDboomShare.attr('class', 'animated fadeIn');
+              contactDboomGithub.attr('class', 'animated fadeIn');     
+            });
+
+            scope.$on('active-section:work', function($event){ 
+              contactDboomShare.attr('class', 'animated fadeOut');
+              contactDboomGithub.attr('class', 'animated fadeOut');
+            });
+          }
+
+          scope.toggleSocialButton = function(button){
+            if (button == MAIL_BUTTON) {
+              if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; activeButton =  MAIL_BUTTON; scope.isPhoneButtonActive = false; scope.isMailButtonActive = true; }
+              else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.mailButtonIsToogled = false; }
+            }
+            else {
+              if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; activeButton =  PHONE_BUTTON; scope.isMailButtonActive = false; scope.isPhoneButtonActive = true; }
+              else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.phoneButtonIsToogled = true; }
+            }
+          }
         }
       }
     }
@@ -174,7 +213,7 @@ daniboomerangDirectives.directive('contact', function($document) {
 /***************** FOOT ****************/
 /***************************************/
 
-daniboomerangDirectives.directive('foot', function($timeout, socialSharingService) {
+daniboomerangDirectives.directive('foot', function(socialSharingService) {
   return {
     restrict: 'E',
     templateUrl: 'views/foot.html',
@@ -242,9 +281,6 @@ daniboomerangDirectives.directive('foot', function($timeout, socialSharingServic
             
             /* CONSTANTS */
             COVER = 'cover'; ABOUT = 'about'; LOVING = 'loving'; WORK = 'work';  CONTACT = 'contact'
-
-            /* DOM ELEMENTS */
-            
 
             /* SECTIONS */
             scope.currentSection = undefined;

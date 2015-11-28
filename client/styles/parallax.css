@@ -498,22 +498,5 @@
 /***********/
 #contact-parallax-section { z-index: 2; color: white; }
 #contact-parallax-section .parallax__layer--base { height: 100vh; }
-#contact-parallax-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
-
-  /********************************/
-  /* ipad & ipad mini && iphone 6 */
-  /********************************/
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) { 
-    #contact-parallax-section .parallax__layer--back { height: 80vh !important; }
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) { 
-    #contact-parallax-section .parallax__layer--back { height: 80vh !important; }
-  }
-  /*******************************/
-@media (min-width: 200px){ #contact-parallax-section { height: 60vh; } }
-@media (min-width: 400px){ #contact-parallax-section { height: 80vh; } }
-@media (min-width: 500px){ #contact-parallax-section { height: 100vh; } }
-@media (min-width: 640px){ #contact-parallax-section { height: 120vh; } }
-@media (min-width: 1024px){ #contact-parallax-section { height: 140vh; } #contact-parallax-section .parallax__layer--back { height: 100vh !important; } }
-@media (min-width: 1280px){ #contact-parallax-section { height: 160vh; } #contact-parallax-section .parallax__layer--back { height: 120vh !important; } }
-@media (min-width: 1366px){ #contact-parallax-section { height: 200vh; } #contact-parallax-section .parallax__layer--back { height: 140vh !important; } }
+#contact-parallax-section .parallax__layer--back { height: 100vh; background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
+ 
