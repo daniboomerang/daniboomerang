@@ -147,7 +147,7 @@ daniboomerangDirectives.directive('cover', function() {
 /***************** CONTACT ****************/
 /******************************************/
 
-daniboomerangDirectives.directive('contact', function($document) {
+daniboomerangDirectives.directive('contact', function($document, $timeout) {
   return {
     restrict: 'AE',
     templateUrl: 'views/sections/contact.html',
@@ -155,8 +155,9 @@ daniboomerangDirectives.directive('contact', function($document) {
      compile: function compile(tElement, tAttrs, transclude) {
 
       // DOM ELEMENTS
-      var contactDboomShare = tElement.find('#contact-dboom-share');
-      var contactDboomGithub = tElement.find('#contact-dboom-github');
+      var contactDboomShareId = tElement.find('#contact-dboom-share');
+      var contactDboomGithubId = tElement.find('#contact-dboom-github');
+      var contactInfoId = tElement.find('#contact-info');
       
       return {
         pre: function preLink(scope, iElement, iAttrs) { 
@@ -167,10 +168,10 @@ daniboomerangDirectives.directive('contact', function($document) {
           }
 
           // Lets hide the elements before the view is compiled
-          contactDboomShare.attr('class', 'visibility-hidden');
-          addDelayForAnimation(contactDboomShare, 0.5);
-          contactDboomGithub.attr('class', 'visibility-hidden');
-          addDelayForAnimation(contactDboomGithub, 0.5);
+          contactDboomShareId.attr('class', 'visibility-hidden');
+          addDelayForAnimation(contactDboomShareId, 0.5);
+          contactDboomGithubId.attr('class', 'visibility-hidden');
+          addDelayForAnimation(contactDboomGithubId, 0.5);
         },
         post: function postLink(scope, iElement, iAttrs) { 
           
@@ -183,24 +184,32 @@ daniboomerangDirectives.directive('contact', function($document) {
             ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; scope.contactInfo = ET_SENTENCE; scope.isPhoneButtonActive = false; scope.isMailButtonActive = false;
 
             scope.$on('active-section:contact', function($event){ 
-              contactDboomShare.attr('class', 'animated fadeIn');
-              contactDboomGithub.attr('class', 'animated fadeIn');     
+              contactDboomShareId.attr('class', 'animated fadeInUp');
+              contactDboomGithubId.attr('class', 'animated fadeInUp');     
             });
 
             scope.$on('active-section:work', function($event){ 
-              contactDboomShare.attr('class', 'animated fadeOut');
-              contactDboomGithub.attr('class', 'animated fadeOut');
+              contactDboomShareId.attr('class', 'animated fadeOutDown');
+              contactDboomGithubId.attr('class', 'animated fadeOutDown');
             });
+          }
+
+          function changeContactInfo (info) {
+            contactInfoId.attr('class', 'animated flipOutX');
+            $timeout(function() { 
+              scope.contactInfo = info;
+              contactInfoId.attr('class', 'animated flipInX');
+            }, 500);
           }
 
           scope.toggleSocialButton = function(button){
             if (button == MAIL_BUTTON) {
-              if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; activeButton =  MAIL_BUTTON; scope.isPhoneButtonActive = false; scope.isMailButtonActive = true; }
-              else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.mailButtonIsToogled = false; }
+              if (activeButton != MAIL_BUTTON) { changeContactInfo(GMAIL); activeButton =  MAIL_BUTTON; scope.isPhoneButtonActive = false; scope.isMailButtonActive = true; }
+              else { changeContactInfo(ET_SENTENCE); activeButton = undefined; scope.mailButtonIsToogled = false; }
             }
             else {
-              if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; activeButton =  PHONE_BUTTON; scope.isMailButtonActive = false; scope.isPhoneButtonActive = true; }
-              else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.phoneButtonIsToogled = true; }
+              if (activeButton != PHONE_BUTTON) { changeContactInfo(NUMBER); activeButton =  PHONE_BUTTON; scope.isMailButtonActive = false; scope.isPhoneButtonActive = true; }
+              else { changeContactInfo(ET_SENTENCE); activeButton = undefined; scope.phoneButtonIsToogled = true; }
             }
           }
         }
@@ -295,7 +304,7 @@ daniboomerangDirectives.directive('foot', function(socialSharingService) {
             scope.socialTitle = socialSharingService.getSocialTitle();
 
             function hideFooterElements(){          
-              buttonsLeftSideWrapper.attr('class','animated bounceOutDown'); buttonsRightSideWrapper.attr('class','animated bounceOutDown'); currentSectionWrapper.attr('class','animated bounceOutRight'); toNextUpButtonWrapper.attr('class','animated bounceOutRight'); toNextDownButtonWrapper.attr('class','animated bounceOutDown'); cvButtonWrapper.attr('class','animated bounceOutLeft'); shareButtonWrapper.attr('class','animated bounceOutDown');
+              buttonsLeftSideWrapper.attr('class','animated bounceOutLeft'); buttonsRightSideWrapper.attr('class','animated bounceOutRight'); currentSectionWrapper.attr('class','animated bounceOutRight'); toNextUpButtonWrapper.attr('class','animated bounceOutRight'); toNextDownButtonWrapper.attr('class','animated bounceOutRight'); cvButtonWrapper.attr('class','animated bounceOutLeft'); shareButtonWrapper.attr('class','animated bounceOutLeft');
               hideShareMenu()
             }       
             function showFooterElements(){

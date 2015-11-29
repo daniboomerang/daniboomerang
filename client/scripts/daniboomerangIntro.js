@@ -132,7 +132,7 @@ angular.module('daniboomerangIntro', [ ])
 							skipWrapper.attr('style', '-moz-animation-delay: 0.5s; -webkit-animation-delay: 0.5s; -ms-animation-delay: 0.5s;'); // Here we remove the delay for the animation
 							skipWrapper.attr('class', 'animated fadeOut');
 							timeoutPromises.push($timeout(function() { 
-								console.log('here a $timeout');
+								/*console.log('here a $timeout');*/
 								skipWrapper.remove();
 							}, 1000));
 							timeoutPromises.push($timeout(function() { 
