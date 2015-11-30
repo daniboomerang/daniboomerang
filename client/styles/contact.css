@@ -13,7 +13,7 @@
 .social-button { display: inline-block; position: relative; }
 
 /* CONTACT-INFO */
-#contact-info { color: rgba(255,153,51,0.5); padding: 0.5em; font-size: 0.9em !important; border: solid 1px; border-radius: 9px 9px 9px 9px; -moz-border-radius: 9px 9px 9px 9px; -webkit-border-radius: 9px 9px 9px 9px; }
+#contact-info { color: rgba(255,153,51,0.5); padding: 0.5em; font-size: 1.1em !important; /*border: solid 1px; border-radius: 9px 9px 9px 9px; -moz-border-radius: 9px 9px 9px 9px; -webkit-border-radius: 9px 9px 9px 9px; */ }
 
 /* BUTTON WRAPPER */
 #linkedin-button-wrapper { width: 3em; height: 3em; }

@@ -32,33 +32,33 @@
   }
 
 /* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 19%; height: 25%; } #buttons-left-side-wrapper { width: 19%; height: 25%; } }
+@media (min-width: 200px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
 /* Extra small Devices, (phones, 320px and up) */
-@media (min-width: 320px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 17%; height: 25%; } #buttons-left-side-wrapper { width: 17%; height: 25%; } }
+@media (min-width: 320px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
 /* Extra small Devices, (phones, 500px and up) */
-@media (min-width: 500px) { #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
+@media (min-width: 500px) { #buttons-right-side-wrapper { width: 12%; height: 25%; } #buttons-left-side-wrapper { width: 12%; height: 25%; } }
 /* Extra small Devices, (phones, 640px and up) */
-@media (min-width: 640px) { #buttons-right-side-wrapper { width: 12.5%; height: 25%; } #buttons-left-side-wrapper { width: 12.5%; height: 25%; } }
+@media (min-width: 640px) { #buttons-right-side-wrapper { width: 10%; height: 25%; } #buttons-left-side-wrapper { width: 10%; height: 25%; } }
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { width: 10%; height: 30%; } #buttons-left-side-wrapper { width: 10%; height: 30%; } }
+@media (min-width: 768px) { #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { height: 30%; } #buttons-left-side-wrapper { height: 30%; } }
 /* Medium devices (desktops, 900px and up) */
-@media (min-width: 900px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { width: 10%; height: 32.5%; } #buttons-left-side-wrapper { width: 10%; height: 32.5%; } }
+@media (min-width: 900px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { height: 32.5%; } #buttons-left-side-wrapper { height: 32.5%; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { width: 10%; height: 35%; } #buttons-left-side-wrapper { width: 10%; height: 35%; } }
+@media (min-width: 992px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { height: 35%; } #buttons-left-side-wrapper { height: 35%; } }
 /* Medium devices (desktops, 1024px and up) */
-@media (min-width: 1024px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 11%; height: 36.5%; } #buttons-left-side-wrapper { width: 11%; height: 36.5%; } }
+@media (min-width: 1024px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 36.5%; } #buttons-left-side-wrapper { height: 36.5%; } }
 /* Medium devices (desktops, 1280px and up) */
-@media (min-width: 1280px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 8.5%; height: 37%; } #buttons-left-side-wrapper { width: 8.5%; height: 37%; } }
+@media (min-width: 1280px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 37%; } #buttons-left-side-wrapper { height: 37%; } }
 /* Medium devices (desktops, 1280px and up) */
-@media (min-width: 1400px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 8.5%; height: 35%; } #buttons-left-side-wrapper { width: 8.5%; height: 35%; } }
+@media (min-width: 1400px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 35%; } #buttons-left-side-wrapper { height: 35%; } }
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 8%; height: 32.5%; } #buttons-left-side-wrapper { width: 8%; height: 32.5%; } }
+@media (min-width: 1600px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 32.5%; } #buttons-left-side-wrapper { height: 32.5%; } }
 /* Large devices (large desktops, 1900px and up) */
-@media (min-width: 1900px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 7.5%; height: 32%; } #buttons-left-side-wrapper { width: 7.5%; height: 32%; } }
+@media (min-width: 1900px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 32%; } #buttons-left-side-wrapper { height: 32%; } }
 /* Extra large devices (extra large desktops, 2500 and up) */
-@media (min-width: 2500px) {  #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { width: 7.5%; height: 32%; } #buttons-left-side-wrapper { width: 7.5%; height: 32%; } }
+@media (min-width: 2500px) {  #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 32%; } #buttons-left-side-wrapper { height: 32%; } }
 /* Extra large devices (extra large desktops, 3000 and up) */
-@media (min-width: 3000px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { width: 7.5%; height: 37%; } #buttons-left-side-wrapper { width: 7.5%; height: 37%; } }
+@media (min-width: 3000px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { height: 37%; } #buttons-left-side-wrapper { height: 37%; } }
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { width: 8%; height: 45%; } #buttons-left-side-wrapper { width: 8%; height: 45%; } }
+@media (min-width: 3500px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { width: 10; height: 45%; } #buttons-left-side-wrapper { width: 10; height: 45%; } }
