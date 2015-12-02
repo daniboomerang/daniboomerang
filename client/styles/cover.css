@@ -4,12 +4,14 @@
 
 #cover { color: white; }
 #cover-content { text-align: center; margin-top: 5%; }
-#scroll-right-arrow { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.5em; }
-#scroll-down { font-weight: lighter; -webkit-font-smoothing: antialiased; font-size: 0.8em; margin-bottom: 2vh;}
+#scroll-right-arrow { font-size: 0.5em; }
+#scroll-down { font-size: 0.8em; margin-bottom: 5%; }
 
 .cover-content-row { line-height: 1.5; }
-.cover-text .name { display: block; font-size: 1.2em; }
-.cover-text .skills { display: block; text-transform: uppercase; font-weight: lighter; font-size: 1.4em; }
+.cover-text .name { display: block; font-size: 1.2em; margin-bottom: 0.5%; }
+.cover-text .skills { display: block; text-transform: uppercase; font-size: 1.4em; margin-bottom: 0.5%; }
+
+/*========== RESPONSIVENESS FOR COVER ==========*/
 
 @media all and (orientation:portrait) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
 @media all and (orientation:landscape) { #cover { padding-top: 5%; } .scroll-down { margin-top: 3%; } }
@@ -22,85 +24,26 @@
 @media (min-width: 992px) { #cover { height: 200%; } .scroll-down { margin-top: 3%; } }
 @media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15%; } .scroll-down { margin-top: 2%; } }
 
-/* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { }
-/* Extra small Devices, (phones, 320px and up) */
-@media (min-width: 320px) { }
-/* Small devices (tablets, 500px and up) */
-@media (min-width: 500px) { }
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { }
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { } 
-/* Medium devices (desktops, 1024px and up) */
-@media (min-width: 1024px) { }
-/* Medium devices (desktops, 1280px and up) */
-@media (min-width: 1280px) { }
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { } .cover-content-row { line-height: 1.8;} }
-/* Extra large devices (extra large desktops, 2000 and up) */
-@media (min-width: 2000px) { }
-/* Extra large devices (extra large desktops, 3000 and up) */
-@media (min-width: 3000px) { } 
-/* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) { } 
+@media (min-width: 1600px) { .cover-content-row { line-height: 1.8; } }
 
-/***********/
-/* NAVBAR */
-/***********/
+/****************/
+/* COVER NAVBAR */
+/****************/
 
-	.navbar { margin-bottom: 0 !important; }
-	#navbar-custom-fluid {  background-color: rgba(19, 65, 99, 0.65); height: 300px; }
-	ul.nav li { width: 25%;}
-	ul.nav li a { display: block; padding: 0; margin-right: 0.5em; margin-left: 0.5em;text-align: center; }
+	#cover-navbar { margin-bottom: 10%; padding: 0.5em 1.5em 0em 1.5em; }
+	#cover-navbar ul { list-style-type: none; margin: 0; padding: 0; }
+	#cover-navbar ul li { width: 25%; float: left; }
+	#cover-navbar ul li a { display: block; padding-bottom: 7%; border-bottom: solid white 1px; text-align: center; color: white; }
+	#cover-navbar ul li a:hover { border-bottom: solid #FF9933 1px; color: #FF9933; transition: all .7s ease-in-out; }
+	#cover-navbar ul li a:focus { text-decoration: none; }
 
-	/* Normal */
-	.navbar-custom-cover { min-height: 0px !important; font-size: 0.9em; width: 100% !important;  margin-left: auto; margin-right: auto;}
-	.navbar-custom-cover .navbar-nav>li>a:hover { background-color: rgba(118, 129, 149, 0.1) !important; border-bottom: solid #FF9933 1px; background-color: transparent !important; color: #FF9933 !important; transition: all .7s ease-in-out; }
-	.navbar-custom-cover .navbar-nav>li>a:focus { background-color: transparent !important; transition: all .7s ease-in-out; color: #FF9933 !important;}
-	.navbar-custom-cover .navbar-nav>li>a { color: white;  padding-top: 0;}
-	ul.nav-cover { width: 100%;}
-	ul.nav-cover li a { margin-right: 0em; margin-left: 0em; border-bottom: solid white 1px;}
+	/*========== RESPONSIVENESS FOR COVER NAVBAR ==========*/
 
-	/* Responsive */
-	ul.nav-cover-responsive { padding-top: 3%; padding-bottom: 3%; font-size: 1em;  text-align: center;}
-	ul.nav-cover-responsive li a { margin-right: 0em; margin-left: 0em;}
-	.nav-cover-responsive { width: auto; overflow-x: scroll; white-space: nowrap; border-radius: 7px 7px 7px 7px;
-							-moz-border-radius: 7px 7px 7px 7px; -webkit-border-radius: 7px 7px 7px 7px; border: 1px outset #000000;
-							-webkit-box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); -moz-box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); }
-	.nav-cover-responsive li { text-align: center; width: auto; margin-right: 12%; display: inline-block; /* if ie7 support needed */ *display: inline; zoom: 1; }
-	.nav-cover-responsive li a:hover {background-color: rgba(118, 129, 149, 0.1) !important; background-color: transparent !important; color: #FF9933 !important; transition: all .7s ease-in-out; }
-	.nav-cover-responsive li a:focus { background-color: transparent !important; transition: all .7s ease-in-out; color: #FF9933 !important;}
-	.nav-cover-responsive { height: auto; }
-
-	/*========== RESPONSIVENESS FOR NAVBARS ==========*/
-
-	/* Extra small Devices, (phones, 200px and up) */
-	@media (min-width: 200px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 40px; height: 40px !important;} }
-	/* Extra small Devices, (phones, 320px and up) */
-	@media (min-width: 320px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 55px; height: 55px !important; } }
-	/* Extra small Devices, (phones, 480px and up) */
-	@media (min-width: 480px) { .navbar-custom-cover { font-size: 0.7em; } }
-	/* Extra small Devices, (phones, 500px and up) */
-	@media (min-width: 500px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 70px; height: 70px !important;} }
-	/* Extra small Devices, (phones, 500px and up) */
-	@media (min-width: 680px) { .navbar-custom-cover { font-size: 0.85em; } }
-	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 75px; height: 75px !important;} .navbar-custom-cover { font-size: 0.9em; } }
-	/* Medium devices (desktops, 992px and up) */
-	@media (min-width: 992px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 95px; height: 95px !important;} }
-	/* Large devices (large desktops, 1280px and up) */
-	@media (min-width: 1280px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 105px; height: 105px !important;}	 }
-	/* Extra large devices (extra large desktops, 1400px and up) */
-	@media (min-width: 1400px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 125px; height: 125px !important;}	 }
-	/* Extra large devices (extra large desktops, 1600px and up) */
-	@media (min-width: 1600px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 160px; height: 160px !important;}	 }
-	/* Extra large devices (extra large desktops, 2000px and up) */
-	@media (min-width: 2000px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 185px; height: 185px !important;}	 }
-	/* Extra large devices (extra large desktops, 2500px and up) */
-	@media (min-width: 2500px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 205px; height: 205px !important;}	 }
-	/* Extra large devices (extra large desktops, 3000px and up) */
-	@media (min-width: 3000px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 265px; height: 265px !important;}	 }
-	/* Extra large devices (extra large desktops, 3500px and up) */
-	@media (min-width: 3500px) { .navbar-custom-cover .navbar-nav>li>a { line-height: 300px; height: 300px !important;}	 }
-
+	@media (max-width: 680px) { 
+		#cover-navbar { padding: 1em 2em 1em 2em; white-space: nowrap; overflow-x: scroll; overflow-y: hidden; border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; -webkit-border-radius: 7px 7px 7px 7px; border: 1px outset #000000; -webkit-box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); -moz-box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); }
+		#cover-navbar ul { list-style: none; }
+		#cover-navbar ul li { float: none; width: auto; margin-right: 12%; display: inline-block; /* if ie7 support needed */ *display: inline; zoom: 1; }
+		#cover-navbar ul li a { border-bottom: none; }
+		#cover-navbar ul li a:hover { border-bottom: none; }
+	}
