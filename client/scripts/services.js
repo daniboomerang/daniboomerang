@@ -95,8 +95,8 @@ daniboomerangServices.factory('urlObserverService', function ($rootScope, $locat
 daniboomerangServices.factory('socialSharingService', function (){
 	
 	var socialDescription = "An amazing parallax universe aimed to show who I am and my potential as web developer";
-	var socialUrl = 'https://daniboomerang.herokuapp.com';
-	var socialMedia = 'https://daniboomerang.herokuapp.com/images/dboom-universe.png';
+	var socialUrl = 'http://daniboomerang.com';
+	var socialMedia = 'http://daniboomerang.com/images/dboom-universe.png';
 	var socialType = 'website';
 	var socialTitle = "Daniel Estevez - A creative portfolio";
 
