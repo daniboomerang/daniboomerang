@@ -8,57 +8,48 @@
 #share-menu-container { }
 #buttons-right-side-wrapper { right: 0.2%; bottom: 0.5%; position: fixed; }
 #buttons-left-side-wrapper { left: 0.2%; bottom: 0.5%; position: fixed; }
-#cv-button-wrapper { width: 100%; height: 40%; } 
-#none-section-wrapper { width: 100%; height: 20%;  } /* None section wrapper is aimed to just occupy the same space than current-section-wrapper on the right side */ 
-#share-button-wrapper { width: 100%; height: 40%;  }
-#to-next-up-button-wrapper { width: 100%; height: 40%;  } 
+#cv-button-wrapper { position: relative; width: 100%; height: 40%; } 
+#none-section-wrapper { width: 100%; height: 20%; } /* None section wrapper is aimed to just occupy the same space than current-section-wrapper on the right side */ 
+#share-button-wrapper { position: relative; width: 100%; height: 40%; }
+#to-next-up-button-wrapper { position: relative; width: 100%; height: 40%; } 
 #current-section-wrapper { width: 100%; height: 20%; color: #FF9933; text-align: center; }
-#to-next-down-button-wrapper { width: 100%; height: 40%; } 
-
-/*.blurred-wrapper { position: relative; }
-.blurred-bg { width: 100%; height: 100%; background-image: radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-    background-image: -o-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-    background-image: -ms-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-    background-image: -moz-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-    background-image: -webkit-radial-gradient(center bottom, ellipse cover, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)); -webkit-filter: blur(10px); filter: blur(10px); border-radius: 100%; }*/
+#to-next-down-button-wrapper { position: relative; width: 100%; height: 40%; } 
 
 /*========== RESPONSIVENESS ==========*/
 
   /************/
   /* iphone 6 */
   /************/
-  @media (min-width: 375px) and (min-height: 627px) and (orientation: portrait){ 
-    }
-  }
+  @media (min-width: 375px) and (min-height: 627px) and (orientation: portrait){ }
 
 /* Extra small Devices, (phones, 200px and up) */
-@media (min-width: 200px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
+@media (min-width: 200px) { #footer { font-size: 1em; } #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
 /* Extra small Devices, (phones, 320px and up) */
-@media (min-width: 320px) { #footer { font-size: 1em !important; } #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
+@media (min-width: 320px) { #footer { font-size: 1em; } #buttons-right-side-wrapper { width: 15%; height: 25%; } #buttons-left-side-wrapper { width: 15%; height: 25%; } }
 /* Extra small Devices, (phones, 500px and up) */
 @media (min-width: 500px) { #buttons-right-side-wrapper { width: 12%; height: 25%; } #buttons-left-side-wrapper { width: 12%; height: 25%; } }
 /* Extra small Devices, (phones, 640px and up) */
 @media (min-width: 640px) { #buttons-right-side-wrapper { width: 10%; height: 25%; } #buttons-left-side-wrapper { width: 10%; height: 25%; } }
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { height: 30%; } #buttons-left-side-wrapper { height: 30%; } }
+@media (min-width: 768px) { #footer { font-size: 1.1em; } #buttons-right-side-wrapper { height: 30%; } #buttons-left-side-wrapper { height: 30%; } }
 /* Medium devices (desktops, 900px and up) */
-@media (min-width: 900px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { height: 32.5%; } #buttons-left-side-wrapper { height: 32.5%; } }
+@media (min-width: 900px) { #footer { font-size: 1.1em; } #buttons-right-side-wrapper { height: 32.5%; } #buttons-left-side-wrapper { height: 32.5%; } }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {  #footer { font-size: 1.1em !important; } #buttons-right-side-wrapper { height: 35%; } #buttons-left-side-wrapper { height: 35%; } }
+@media (min-width: 992px) { #footer { font-size: 1.1em; } #buttons-right-side-wrapper { height: 35%; } #buttons-left-side-wrapper { height: 35%; } }
 /* Medium devices (desktops, 1024px and up) */
-@media (min-width: 1024px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 36.5%; } #buttons-left-side-wrapper { height: 36.5%; } }
+@media (min-width: 1024px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { height: 36.5%; } #buttons-left-side-wrapper { height: 36.5%; } }
 /* Medium devices (desktops, 1280px and up) */
-@media (min-width: 1280px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 37%; } #buttons-left-side-wrapper { height: 37%; } }
+@media (min-width: 1280px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { height: 37%; } #buttons-left-side-wrapper { height: 37%; } }
 /* Medium devices (desktops, 1280px and up) */
-@media (min-width: 1400px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 35%; } #buttons-left-side-wrapper { height: 35%; } }
+@media (min-width: 1400px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { height: 35%; } #buttons-left-side-wrapper { height: 35%; } }
 /* Large devices (large desktops, 1600px and up) */
-@media (min-width: 1600px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 32.5%; } #buttons-left-side-wrapper { height: 32.5%; } }
+@media (min-width: 1600px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { height: 32.5%; } #buttons-left-side-wrapper { height: 32.5%; } }
 /* Large devices (large desktops, 1900px and up) */
-@media (min-width: 1900px) { #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 32%; } #buttons-left-side-wrapper { height: 32%; } }
+@media (min-width: 1900px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { height: 32%; } #buttons-left-side-wrapper { height: 32%; } }
 /* Extra large devices (extra large desktops, 2500 and up) */
-@media (min-width: 2500px) {  #footer { font-size: 1.2em !important; } #buttons-right-side-wrapper { height: 32%; } #buttons-left-side-wrapper { height: 32%; } }
+@media (min-width: 2500px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { height: 32%; } #buttons-left-side-wrapper { height: 32%; } }
 /* Extra large devices (extra large desktops, 3000 and up) */
-@media (min-width: 3000px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { height: 37%; } #buttons-left-side-wrapper { height: 37%; } }
+@media (min-width: 3000px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { height: 37%; } #buttons-left-side-wrapper { height: 37%; } }
 /* Extra large devices (extra large desktops, 3500 and up) */
-@media (min-width: 3500px) {  #footer { font-size: 1.2em !important;} #buttons-right-side-wrapper { width: 10; height: 45%; } #buttons-left-side-wrapper { width: 10; height: 45%; } }
+@media (min-width: 3500px) { #footer { font-size: 1.2em; } #buttons-right-side-wrapper { width: 10; height: 45%; } #buttons-left-side-wrapper { width: 10; height: 45%; } }

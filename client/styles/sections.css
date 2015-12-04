@@ -3,29 +3,27 @@
 /************/
 
 #sections { }
-.section { padding-top:2%; padding-bottom:2%; margin-left:10%; margin-right:10% }
+.section { font-size: 1.05em; padding-top:2%; padding-bottom:2%; margin-left:10%; margin-right:10% }
 .section a { color: rgba(56, 116, 167, 0.9); transition: all .5s ease-in-out; }
 .section a:hover { color: #FF9933; transition: all .5s ease-in-out; }
-.fluid-section { padding: 2%; background: rgba(0, 0, 0, 1); color: rgba(255, 255, 255, 1); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; }
+.fluid-section { padding: 5%; background: rgba(0, 0, 0, 1); color: rgba(255, 255, 255, 1); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; }
 
 ul { margin: 0 0 1em 0; padding: 0 0 0 1em; /* make space for li's :before */ list-style: none; }
 .list-text li { position: relative; padding-left: 2em; }
 .list-text li:before { content: '\2022'; color: #FF9933; position: absolute; left: 0.5em; /* same as ul padding-left */ }
 .sublist-text li { position: relative; padding-left: 4em; }
 .sublist-text li:before { content: '\00B0'; color: #FF9933; position: absolute; left: 2em; /* same as ul padding-left */ }
-hr { border-color: rgba(255, 255, 255, 0.1) !important; margin-bottom: 1em; margin-top: 1em; }
+hr { border-color: rgba(255, 255, 255, 0.1); margin-bottom: 1em; margin-top: 1em; }
 blockquote { color: white; background-color: rgba(19, 65, 99, 0.3); border-left: 10px solid rgba(19, 65, 99, 0.7); margin: 1.5em 10px; padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019"; font-size: 1em; }
-blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
-blockquote:after { color: rgba(19, 65, 99, 0.7); content: close-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
+blockquote:before { color: rgba(19, 65, 99, 0.7); content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.15em; vertical-align: -0.4em; font-family: 'LatoWebNormal'}
+blockquote:after { color: rgba(19, 65, 99, 0.7); content: close-quote; font-size: 4em; line-height: 0.1em; margin-left: 0.15em; vertical-align: -0.4em; font-family: 'LatoWebNormal'}
 blockquote p { display: inline; }
 
 .section-title { -webkit-font-smoothing: antialiased; text-align: center; }
+.h1-title { font-size: 2em; }
+.h2-title { font-size: 1.8em; }
+
 .upper-case { text-transform: uppercase; }
-@media all { .h1-title { font-size: 2.2em; } .h2-title { font-size: 2em; } }
-@media (min-width: 768px) and (max-width: 1024px) { .h1-title { font-size: 2em; } .h2-title { font-size: 1.8em; } }
-@media (min-width: 640px) and (max-width: 767px) { .h1-title { font-size: 1.8em; } .h2-title { font-size: 1.6em; } }
-@media (min-width: 500px) and (max-width: 639px) { .h1-title { font-size: 1.6em; } .h2-title { font-size: 1.4em; } }
-@media (min-width: 200px) and (max-width: 500px) { .h1-title { font-size: 1.4em; } .h2-title { font-size: 1.2em; } }
 .text-that-lightsup { -webkit-transition: color 0.3s ease-in-out; -moz-transition: color 0.3s ease-in-out; -ms-transition: color 0.3s ease-in-out; -o-transition: color 0.3s ease-in-out; transition: color 0.3s ease-in-out; }
 .text-orange { color: #FF9933; }
 .text-gray { color: rgba(115, 115, 115, 0.7); }
@@ -34,12 +32,13 @@ blockquote p { display: inline; }
 #loving { }
 #work { }
 #contact { }
-#connectivity { padding-top: 30vh; }
-#client-server-diagram { padding-top: 5vh; }
-#creativity { padding-top: 30vh; }
-#remote-working { padding-top: 30vh; }
-#back-end-title { margin-top: -50vh; padding-top: 30vh; }
-#front-end-title { margin-top: -50vh; padding-top: 30vh; }
+
+#connectivity { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
+#client-server-diagram { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 5vh; }
+#creativity { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
+#remote-working { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
+#back-end-title { font-size: 1.05em; margin-left:10%; margin-right:10%; margin-top: -50vh; padding-top: 30vh; }
+#front-end-title { font-size: 1.05em; margin-left:10%; margin-right:10%; margin-top: -50vh; padding-top: 30vh; }
 
 /*********************/
 /* Animated Sections */
@@ -49,15 +48,15 @@ blockquote p { display: inline; }
 .animated-section { color: white; width: 100%; height:100%; /* -webkit-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.97); -moz-box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.97); box-shadow: inset 0px 0px 21px 5px rgba(0,0,0,0.97); border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: 0px solid #000000; */}
 
 /* Extra small devices (tablets, 200px and up)*/
-@media (min-width: 200px) { .diagram {  width: 100vw; } #lightbulb { margin-left: 36vw; width: 35vw; } }
+@media (min-width: 200px) { .diagram {  width: 100%; } #lightbulb { margin-left: 37.5%; width: 60%; } }
 /* Extra small devices (tablets, 400px and up)*/
-@media (min-width: 400px) { #lightbulb { margin-left: 50vw; width: 35vw; } }
+@media (min-width: 400px) { #lightbulb { margin-left: 37.5%; width: 60%; } }
 /* Extra small devices (tablets, 500px and up)*/
-@media (min-width: 500px) { .diagram {  margin-left: 10vw; width: 80vw; } #lightbulb { margin-left: 33vw; width: 35vw; } }
+@media (min-width: 500px) { .diagram {  margin-left: 10%; width: 80%; } #lightbulb { margin-left: 25%; width: 50%; } }
 /* Small devices (tablets, 680px and up)*/
-@media (min-width: 680px) { .diagram {  margin-left: 15vw; width: 70vw; } }
+@media (min-width: 680px) { .diagram {  margin-left: 10%; width: 80%; } }
 /* Medium small Devices, (phones, 1024px and up) */
-@media (min-width: 1280px) { .diagram {  margin-left: 20vw; width: 60vw; } }
+@media (min-width: 1280px) { .diagram {  margin-left: 10%; width: 80%; } }
 
 #cv-wrapper { position: relative; height: 4em; margin: 2%; }
 #cv img.ri { position: absolute; top: 10%; left: 10%; -webkit-transition: opacity 1s ease-in-out; -moz-transition: opacity 1s ease-in-out; -o-transition: opacity 1s ease-in-out; transition: opacity 1s ease-in-out; }
@@ -77,46 +76,3 @@ blockquote p { display: inline; }
 
 @media screen and (orientation: portrait) { #cv img.ri { max-width: 14%; } #github img.ri { max-width: 20%; } }
 @media screen and (orientation: landscape) { #cv img.ri { max-height: 90%; } #github img.ri { max-height: 100%; } }
-
-/* Small devices (tablets, 200px and down)*/
-@media (min-width: 200px) { }
-
-/* Extra small Devices, (phones, 320 and up) */
-@media (min-width: 320px) { }
-
-/* Extra small Devices, (phones, 500px and up) */
-@media (min-width: 500px) { }
-
-/*////////////////////////////////////*/
-
-/* Small Devices, (phones, 640 and up) */
-@media (min-width: 640px) { }
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { }
-
-/* Large devices (large desktops, 1280px and up) */
-@media (min-width: 1280px) { }
-
-/* Large devices (large desktops, 1400px and up) */
-@media (min-width: 1400px) { }
-
-/*////////////////////////////////////*/
-
-/* Extra large devices (extra large desktops, 1600px and up) */
-@media (min-width: 1600px) { }
-
-/* Extra large devices (extra large desktops, 2000px and up) */
-@media (min-width: 2000px) { }
-
-/* Extra large devices (extra large desktops, 2500px and up) */
-@media (min-width: 2500px) { }
-
-/* Extra large devices (extra large desktops, 3000px and up) */
-@media (min-width: 3000px) { }
-
-/* Extra large devices (extra large desktops, 3500px and up) */
-@media (min-width: 3500px) { }
