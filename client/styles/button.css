@@ -27,11 +27,11 @@
 }
 .dboom-button-link.md.active {
   border: solid #FF9933 0.1em;
-  color: #FF9933;
+  color: #FF9933 !important;
 }
 .dboom-button-link.md.active:hover {
   border: solid #FF9933 0.1em;
-  color: white;
+  color: white !important;
 }
 .dboom-button.md {
   text-align: center; 
@@ -87,10 +87,10 @@
   padding-top: 4%;
 }
 .dboom-button-link.sm.active {
-  color: #FF9933;
+  color: #FF9933 !important;
 }
 .dboom-button-link.sm.active:hover {
-  color: white;
+  color: white !important;
 }
 .dboom-button.sm {
   text-align: center; 
@@ -106,7 +106,7 @@
   border: 0.18em solid rgba(99, 99, 99, 0.1);
   content: "";
   border-right-color: rgba(19, 65, 99, 1);
-  border-left-color: #1AA346;
+  border-left-color: #1AA346;;
   margin: -2em 0 0 -2em;
   height: 4em;
   width: 4em;
@@ -138,10 +138,10 @@
   padding-top: 4%;
 }
 .dboom-button-link.xs.active {
-  color: #FF9933;
+  color: #FF9933 !important;
 }
 .dboom-button-link.xs.active:hover {
-  color: white;
+  color: white !important;
 }
 .dboom-button.xs {
   text-align: center; 
@@ -157,7 +157,7 @@
   border: 0.1em solid rgba(99, 99, 99, 0.1);
   content: "";
   border-right-color: rgba(19, 65, 99, 1);
-  border-left-color: #1AA346;
+  border-left-color: #1AA346;;
   margin: -1.25em 0 0 -1.25em;
   height: 2.5em;
   width: 2.5em;

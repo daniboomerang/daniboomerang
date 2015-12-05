@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('daniboomerangIntro', [ ])
 .directive('daniboomerangIntroDirective', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService) {
 	return {
