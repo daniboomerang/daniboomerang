@@ -6,6 +6,11 @@ deployment:
     branch: master
     commands:
       - ./deploy.sh
+      # Daniboomerang is integrated to production in the "heroku way".
+      # It uses a dokku (Docker powered mini-Heroku).
+      # Add a deploy.sh file with your own production information:
+      # git remote add production dokku@your-domain.com:your-app
+      # git push production master 
 dependencies:
   pre:
     # latest stable chrome
