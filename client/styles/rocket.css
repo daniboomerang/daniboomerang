@@ -6,8 +6,8 @@
 #rocket { position: relative; }
 .arrival {  -webkit-animation: arrival 2s ease-in-out forwards 1;
             -moz-animation: arrival 2s ease-in-out forwards 1; }
-.suspension { -webkit-animation: suspension 3.5s ease-in-out infinite;
-              -moz-animation: suspension 3.5s ease-in-out infinite; }
+.suspension { -webkit-animation: suspension 7.5s ease-in-out infinite;
+              -moz-animation: suspension 7.5s ease-in-out infinite; }
 .turn { -webkit-animation: turn 2s ease-in-out forwards 1;
         -moz-animation: turn 2s ease-in-out forwards 1; }
 
@@ -42,7 +42,10 @@
 @media (min-width: 992px) { #orbit-rocket { bottom: 14vh; } #rocket { margin-left: 0; width: 100%; } }
 
 /* Medium devices (desktops, 1024px and up) */
-@media (min-width: 1024px) { }
+@media (min-width: 1024px) { #orbit-rocket { bottom: 16vh; } }
+
+/* Large devices (desktops, 1280px and up) */
+@media (min-width: 1280px) { #orbit-rocket { bottom: 20vh; } }
 
 /* 1280 * <800 */ 
 @media (min-width: 1280px) and (max-height: 800px) { #orbit-rocket { bottom: 20vh; } }
@@ -53,6 +56,11 @@
 /* 1920 * 1280 */
 @media (min-width: 1366px) and (min-height: 1280px) { #orbit-rocket { bottom: 12vh; } }
 
+/* 2560 * 1440 */
+@media (min-width: 2560px) and (min-height: 1440px) { #orbit-rocket { bottom: 20vh; } }
+
+/* 3000 * 1440 */
+@media (min-width: 3000px) and (min-height: 1440px) { #orbit-rocket { bottom: 25vh; } }
 
 /********************/
 /* ipad & ipad mini */

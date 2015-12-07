@@ -5,19 +5,11 @@
 #parallax-wrapper { height: 100%; /* fallback for older browsers */ height: 100vh; }
 .parallax { overflow-x: hidden; overflow-y: auto; -webkit-perspective: 300px; perspective: 300px; -webkit-perspective-origin-x: 100%; perspective-origin-x: 100%; }
 .parallax__section { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
-.parallax__layer { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
+.parallax__layer { position:absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -webkit-transform-origin-x: 100%; transform-origin-x: 100%; }
 .parallax__layer--fore { -webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 4; }
 .parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 3; }
 .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
-.parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; height: 120vh;}
-.parallax__section_test { position: relative; height: 100%; /* fallback for older browsers */ height: 100vh; }
-.animated-title { font-weight: lighter; -webkit-font-smoothing: antialiased; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-align: center; color: #FF9933; }
-.upper-case { text-transform: uppercase; }
-@media all { .animated-title { font-size: 2.2em; } }
-@media (min-width: 768px) and (max-width: 1024px) { .animated-title { font-size: 2em; } }
-@media (min-width: 640px) and (max-width: 767px) { .animated-title { font-size: 1.8em; } }
-@media (min-width: 500px) and (max-width: 639px) { .animated-title { font-size: 1.6em; } }
-@media (min-width: 200px) and (max-width: 500px) { .animated-title { font-size: 1.4em; } }
+.parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; left: -5%; }
 
 /*****************/
 /* COVER SECTION */
@@ -504,23 +496,6 @@
 /* CONTACT */
 /***********/
 #contact-parallax-section { z-index: 2; color: white; }
-#contact-parallax-section .parallax__layer--base { height: 100vh; }
-#contact-parallax-section .parallax__layer--back { background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
-
-  /********************************/
-  /* ipad & ipad mini && iphone 6 */
-  /********************************/
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) { 
-    #contact-parallax-section .parallax__layer--back { height: 80vh !important; }
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) { 
-    #contact-parallax-section .parallax__layer--back { height: 80vh !important; }
-  }
-  /*******************************/
-@media (min-width: 200px){ #contact-parallax-section { height: 60vh; } }
-@media (min-width: 400px){ #contact-parallax-section { height: 80vh; } }
-@media (min-width: 500px){ #contact-parallax-section { height: 100vh; } }
-@media (min-width: 640px){ #contact-parallax-section { height: 120vh; } }
-@media (min-width: 1024px){ #contact-parallax-section { height: 140vh; } #contact-parallax-section .parallax__layer--back { height: 100vh !important; } }
-@media (min-width: 1280px){ #contact-parallax-section { height: 160vh; } #contact-parallax-section .parallax__layer--back { height: 120vh !important; } }
-@media (min-width: 1366px){ #contact-parallax-section { height: 200vh; } #contact-parallax-section .parallax__layer--back { height: 140vh !important; } }
+#contact-parallax-section .parallax__layer--base { height: 100vh; background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
+#contact-parallax-section .parallax__layer--back { height: 100vh; background-size: 100%; background-repeat:no-repeat; background-image: url(/images/contact-space.svg); }
+ 

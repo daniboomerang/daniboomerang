@@ -1,4 +1,4 @@
-var daniboomerangDirectives = angular.module('daniboomerangDirectives', []);
+var daniboomerangDirectives = angular.module('daniboomerangDirectives', ['daniboomerangServices']);
 
 /*******************************************************/
 /****************** PARALLAX SECTIONS ******************/
@@ -81,6 +81,7 @@ daniboomerangDirectives.directive('animatedSection', function() {
         }
       }
       var animatedSection = element.find('.animated-section');
+      animatedSection.addClass('animated');
       /*On active section*/
       var activeSectionEvent = 'active-section:' + attrs.triggeredby;
       scope.$on(activeSectionEvent, function($event){ if ('active' == attrs.triggeredon){ animateSectionIn(); } else { animateSectionOut(); } }); 
@@ -122,17 +123,21 @@ daniboomerangDirectives.directive('cover', function() {
     restrict: 'E',
     templateUrl: 'views/sections/cover.html',
     link: function (scope, element, attrs) {
-      var liElements = element.find('li.animated');
+      var liElements = element.find('li.visibility-hidden');
       var name = element.find('#name');
       var skills1 = element.find('#skills-1');
       var skills2 = element.find('#skills-2');
       var scrolDownArrowId = element.find('#scroll-down');      
       scope.$on('app-starts', function($event){
-        liElements.addClass("zoomIn visibility-visible");
-        name.addClass("fadeIn visibility-visible");
-        skills1.addClass("fadeIn visibility-visible");
-        skills2.addClass("bounceIn visibility-visible");
-        scrolDownArrowId.addClass("zoomInDown visibility-visible");
+        liElements.attr('class', 'animated zoomIn');
+        name.removeClass('visibility-hidden');
+        name.addClass('animated fadeIn');
+        skills1.removeClass('visibility-hidden');
+        skills1.addClass('animated fadeIn');
+        skills2.removeClass('visibility-hidden');
+        skills2.addClass('animated bounceIn');
+        scrolDownArrowId.removeClass('visibility-hidden');
+        scrolDownArrowId.addClass('animated zoomInDown');
       }); 
     }
   }  
@@ -142,23 +147,71 @@ daniboomerangDirectives.directive('cover', function() {
 /***************** CONTACT ****************/
 /******************************************/
 
-daniboomerangDirectives.directive('contact', function($document) {
+daniboomerangDirectives.directive('contact', function($document, $timeout) {
   return {
     restrict: 'AE',
     templateUrl: 'views/sections/contact.html',
     scope: {},
-    link: function (scope, element) {
-      var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
-      init();
-      function init(){ ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; scope.contactInfo = ET_SENTENCE; scope.isPhoneButtonActive = false; scope.isMailButtonActive = false; }
-      scope.toggleSocialButton = function(button){
-        if (button == MAIL_BUTTON) {
-          if (activeButton != MAIL_BUTTON) { scope.contactInfo = GMAIL; activeButton =  MAIL_BUTTON; scope.isPhoneButtonActive = false; scope.isMailButtonActive = true; }
-          else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.mailButtonIsToogled = false; }
-        }
-        else {
-          if (activeButton != PHONE_BUTTON) { scope.contactInfo = NUMBER; activeButton =  PHONE_BUTTON; scope.isMailButtonActive = false; scope.isPhoneButtonActive = true; }
-          else { scope.contactInfo = ET_SENTENCE; activeButton = undefined; scope.phoneButtonIsToogled = true; }
+     compile: function compile(tElement, tAttrs, transclude) {
+
+      // DOM ELEMENTS
+      var contactDboomShareId = tElement.find('#contact-dboom-share');
+      var contactDboomGithubId = tElement.find('#contact-dboom-github');
+      var contactInfoId = tElement.find('#contact-info');
+      
+      return {
+        pre: function preLink(scope, iElement, iAttrs) { 
+     
+          function addDelayForAnimation(element, delay) {
+            var delayAnimation = '-moz-animation-delay:' + delay + 's; -webkit-animation-delay:' + delay + 's; -ms-animation-delay:' + delay + 's;'
+            element.attr('style', delayAnimation);            
+          }
+
+          // Lets hide the elements before the view is compiled
+          contactDboomShareId.attr('class', 'visibility-hidden');
+          addDelayForAnimation(contactDboomShareId, 0.5);
+          contactDboomGithubId.attr('class', 'visibility-hidden');
+          addDelayForAnimation(contactDboomGithubId, 0.5);
+        },
+        post: function postLink(scope, iElement, iAttrs) { 
+          
+          var ET_SENTENCE, MAIL_BUTTON, PHONE_BUTTON, GMAIL, NUMBER, mailButtonId, phoneButtonId, activeButton; 
+          
+          init();
+          function init(){ 
+           
+            // variables and scope
+            ET_SENTENCE = "I´ll beee...right...heeeree...";  MAIL_BUTTON = "mail"; PHONE_BUTTON = "phone"; GMAIL = 'estevez.dani@gmail.com'; NUMBER = '+34661711220'; scope.contactInfo = ET_SENTENCE; scope.isPhoneButtonActive = false; scope.isMailButtonActive = false;
+
+            scope.$on('active-section:contact', function($event){ 
+              contactDboomShareId.attr('class', 'animated fadeInUp');
+              contactDboomGithubId.attr('class', 'animated fadeInUp');     
+            });
+
+            scope.$on('active-section:work', function($event){ 
+              contactDboomShareId.attr('class', 'animated fadeOutDown');
+              contactDboomGithubId.attr('class', 'animated fadeOutDown');
+            });
+          }
+
+          function changeContactInfo (info) {
+            contactInfoId.attr('class', 'animated flipOutX');
+            $timeout(function() { 
+              scope.contactInfo = info;
+              contactInfoId.attr('class', 'animated flipInX');
+            }, 500);
+          }
+
+          scope.toggleSocialButton = function(button){
+            if (button == MAIL_BUTTON) {
+              if (activeButton != MAIL_BUTTON) { changeContactInfo(GMAIL); activeButton =  MAIL_BUTTON; scope.isPhoneButtonActive = false; scope.isMailButtonActive = true; }
+              else { changeContactInfo(ET_SENTENCE); activeButton = undefined; scope.mailButtonIsToogled = false; }
+            }
+            else {
+              if (activeButton != PHONE_BUTTON) { changeContactInfo(NUMBER); activeButton =  PHONE_BUTTON; scope.isMailButtonActive = false; scope.isPhoneButtonActive = true; }
+              else { changeContactInfo(ET_SENTENCE); activeButton = undefined; scope.phoneButtonIsToogled = true; }
+            }
+          }
         }
       }
     }
@@ -169,101 +222,114 @@ daniboomerangDirectives.directive('contact', function($document) {
 /***************** FOOT ****************/
 /***************************************/
 
-daniboomerangDirectives.directive('foot', function($timeout) {
+daniboomerangDirectives.directive('foot', function(socialSharingService) {
   return {
     restrict: 'E',
     templateUrl: 'views/foot.html',
     scope: {},
-    link: function (scope, element) {
+    compile: function compile(tElement, tAttrs, transclude) {
 
-      var SECTION_FOOTER, SHARING_FOOTER, footer, toTopButtonWrapper, shareButtonWrapper;
-
-      scope.toogleFooters = function (){
-        if (scope.displayMenu == SECTION_FOOTER){
-          footer.removeClass('expand-small');
-          $timeout(function() { footer.addClass('expand-big'); scope.displayMenu = SHARING_FOOTER; }, 500);
-        }
-        else {
-          footer.removeClass('expand-big');
-          $timeout(function() { footer.addClass('expand-small'); scope.displayMenu = SECTION_FOOTER; }, 500);
-        }      
-      }
-
-      init();
-
-      function init(){
-        
-        /* INIT CONSTANTS */
-        SECTION_FOOTER = 'sectionFooter'; SHARING_FOOTER = 'sharingFooter';
-        /* INIT SCOPE */
-        scope.displayMenu = SECTION_FOOTER;
-        /* INIT DOM ELEMENTS */
-        footer = element.find('footer'); toTopButtonWrapper = element.find('#to-top-button-wrapper'); shareButtonWrapper = element.find('#share-button-wrapper');
-
-        function contractFooter(){
-            footer.removeClass('expand-small'); footer.removeClass('expand-big');
-            toTopButtonWrapper.removeClass('rotateIn'); shareButtonWrapper.removeClass('rotateIn');
-            toTopButtonWrapper.addClass('rotateOut'); shareButtonWrapper.addClass('rotateOut');
-            toTopButtonWrapper.removeClass('visibility-visible'); shareButtonWrapper.removeClass('visibility-visible');
-        }
-            
-        function expandFooter(){
-            if (scope.displayMenu == SECTION_FOOTER) { footer.addClass('expand-small'); }
-            else { footer.addClass('expand-big'); }
-            toTopButtonWrapper.addClass('visibility-visible'); shareButtonWrapper.addClass('visibility-visible');
-            toTopButtonWrapper.addClass('rotateIn'); shareButtonWrapper.addClass('rotateIn');
-            toTopButtonWrapper.removeClass('rotateOut'); shareButtonWrapper.removeClass('rotateOut');
-        }
-
-        scope.$on('active-section:cover', function($event){ contractFooter(); });
-        scope.$on('active-section:connectivity', function($event){ scope.currentSection = 'connectivity'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:creativity', function($event){ scope.currentSection = 'creativity'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:remote-working', function($event){ scope.currentSection = 'remote-working'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:without-boundaries', function($event){ scope.currentSection = 'without-boundaries'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:about', function($event){ scope.currentSection = 'about'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:back-end', function($event){ scope.currentSection = 'back-end'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:loving', function($event){ scope.currentSection = 'loving'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:front-end', function($event){ scope.currentSection = 'front-end'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:work', function($event){ scope.currentSection = 'work'; expandFooter(); scope.$apply(); });
-        scope.$on('active-section:contact', function($event){ scope.currentSection = 'contact'; expandFooter(); scope.$apply(); }); 
-      }
-    }  
-  };
-});
-
-/******************************************/
-/**************** TOPNAVBAR ***************/
-/******************************************/
-
-daniboomerangDirectives.directive('topnavbar', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'views/topnavbar.html',
-    link: function (scope, element) {
-
-      init();
+      // DOM ELEMENTS
+      var buttonsLeftSideWrapper = tElement.find('#buttons-left-side-wrapper');
+      var shareMenuWrapper = tElement.find('#share-menu-wrapper');
+      var buttonsRightSideWrapper = tElement.find('#buttons-right-side-wrapper');
+      var currentSectionWrapper = tElement.find('#current-section-wrapper'); 
+      var toNextUpButtonWrapper = tElement.find('#to-next-up-button-wrapper');
+      var toNextDownButtonWrapper = tElement.find('#to-next-down-button-wrapper');
+      var cvButtonWrapper = tElement.find('#cv-button-wrapper');
+      var shareButtonWrapper = tElement.find('#share-button-wrapper');
       
-      function init(){
+      return {
+        pre: function preLink(scope, iElement, iAttrs) { 
+     
+          function addDelayForAnimation(element, delay) {
+            var delayAnimation = '-moz-animation-delay:' + delay + 's; -webkit-animation-delay:' + delay + 's; -ms-animation-delay:' + delay + 's;'
+            element.attr('style', delayAnimation);            
+          }
 
-        var header = element.find('header');
-        var aboutLink = element.find('#about-link');
-        var aboutIcon = element.find('.about-icon');
-        var lovingLink = element.find('#loving-link');
-        var lovingIcon = element.find('.loving-icon');
-        var workLink = element.find('#work-link');
-        var workIcon = element.find('.work-icon');
-        var contactLink = element.find('#contact-link');
-        var contactIcon = element.find('.contact-icon');
+          function addDurationForAnimation(element, duration) {
+            var durationAnimation = '-moz-animation-duration:' + duration + 's; -webkit-animation-duration:' + duration + 's; -ms-animation-duration:' + duration + 's;'
+            element.attr('style', durationAnimation);            
+          }
 
-        /*On active section*/
-        scope.$on('active-section:about', function($event){ aboutLink.addClass('active'); aboutIcon.addClass('spin-right-whole-fastest'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:loving', function($event){ lovingLink.addClass('active'); lovingIcon.addClass('pulsing'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
-        scope.$on('active-section:work', function($event){ workLink.addClass('active'); workIcon.addClass('pulsing'); header.addClass('expand'); header.addClass('navbar-fixed-top box-shadow-down'); });
-        
-        /*On inactive section*/
-        scope.$on('inactive-section:about', function($event){ header.removeClass('expand'); aboutLink.removeClass('active'); aboutIcon.removeClass('spin-right-whole-fastest'); });
-        scope.$on('inactive-section:loving', function($event){ header.removeClass('expand'); lovingLink.removeClass('active'); lovingIcon.removeClass('pulsing'); });
-        scope.$on('inactive-section:work', function($event){ header.removeClass('expand'); workLink.removeClass('active'); workIcon.removeClass('pulsing'); });
+          // Lets hide the elements before the view is compiled
+
+          // Left side buttons
+          buttonsLeftSideWrapper.attr('class', 'visibility-hidden');
+          cvButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(cvButtonWrapper, 0.3);
+
+          // Share Menu
+          shareMenuWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(shareMenuWrapper, 0.3);
+          shareButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(shareButtonWrapper, 0.5);
+
+          // Left side buttons
+          buttonsRightSideWrapper.attr('class', 'visibility-hidden');
+          currentSectionWrapper.attr('class', 'visibility-hidden');
+          addDurationForAnimation(currentSectionWrapper, 0.3);
+          toNextUpButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(toNextUpButtonWrapper, 0.3);
+          toNextDownButtonWrapper.attr('class', 'visibility-hidden');
+          addDelayForAnimation(toNextDownButtonWrapper, 0.5);
+          
+        },
+        post: function postLink(scope, iElement, iAttrs) { 
+          
+          var COVER, ABOUT, LOVING, WORK, CONTACT;
+          scope.currentSection, scope.toNextUpSection, scope.toNextDownSection, scope.isToogledShareMenu, scope.socialDescription, scope.socialUrl, scope.socialMedia, scope.socialType, scope.socialTitle;
+
+          function showShareMenu (){ shareMenuWrapper.attr('class', 'animated fadeInUp'); } 
+          function hideShareMenu(){ shareMenuWrapper.attr('class', 'animated fadeOutDown'); }
+
+          scope.toogleShareMenu = function (){ 
+            scope.isToogledShareMenu = !scope.isToogledShareMenu; 
+            if (scope.isToogledShareMenu) { showShareMenu(); }
+            else { hideShareMenu(); }
+          }
+
+          init();
+
+          function init(){
+            
+            /* CONSTANTS */
+            COVER = 'cover'; ABOUT = 'about'; LOVING = 'loving'; WORK = 'work';  CONTACT = 'contact'
+
+            /* SECTIONS */
+            scope.currentSection = undefined;
+            scope.nextDownSection = ABOUT;
+            scope.nextUpSection = undefined;
+
+            /* SOCIAL SHARING */
+            scope.socialDescription = socialSharingService.getSocialDescription();
+            scope.socialUrl = socialSharingService.getSocialUrl();
+            scope.socialMedia = socialSharingService.getSocialMedia();
+            scope.socialType = socialSharingService.getSocialType();
+            scope.socialTitle = socialSharingService.getSocialTitle();
+
+            function hideFooterElements(){          
+              buttonsLeftSideWrapper.attr('class','animated bounceOutLeft'); buttonsRightSideWrapper.attr('class','animated bounceOutRight'); currentSectionWrapper.attr('class','animated bounceOutRight'); toNextUpButtonWrapper.attr('class','animated bounceOutRight'); toNextDownButtonWrapper.attr('class','animated bounceOutRight'); cvButtonWrapper.attr('class','animated bounceOutLeft'); shareButtonWrapper.attr('class','animated bounceOutLeft');
+              if (scope.isToogledShareMenu) { hideShareMenu(); }
+            }       
+            function showFooterElements(){
+              buttonsLeftSideWrapper.attr('class','animated bounceInUp');  buttonsRightSideWrapper.attr('class','animated bounceInUp'); currentSectionWrapper.attr('class','animated bounceInRight');  toNextUpButtonWrapper.attr('class','animated bounceInRight');  toNextDownButtonWrapper.attr('class','animated bounceInUp'); cvButtonWrapper.attr('class','animated bounceInLeft'); shareButtonWrapper.attr('class','animated bounceInUp'); 
+              if (scope.isToogledShareMenu) { showShareMenu(); }
+            }
+
+            scope.$on('active-section:cover', function($event){ if (scope.nextUpSection) { hideFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); } });
+            scope.$on('active-section:connectivity', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:creativity', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:remote-working', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:without-boundaries', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:about', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeIn'); scope.currentSection = ABOUT; scope.nextUpSection = COVER; scope.nextDownSection = LOVING; scope.$apply(); });
+            scope.$on('active-section:back-end', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = ABOUT; scope.nextDownSection = LOVING; scope.$apply(); });
+            scope.$on('active-section:loving', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeIn'); scope.currentSection = LOVING; scope.nextUpSection = ABOUT; scope.nextDownSection = WORK; scope.$apply(); });
+            scope.$on('active-section:front-end', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = LOVING; scope.nextDownSection = WORK; scope.$apply(); });
+            scope.$on('active-section:work', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeIn'); scope.currentSection = WORK; scope.nextUpSection = LOVING; scope.nextDownSection = CONTACT; scope.$apply(); });
+            scope.$on('active-section:contact', function($event){ hideFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = WORK; scope.nextDownSection = CONTACT; scope.$apply(); }); 
+          }
+        }
       }
     }
   };
@@ -278,7 +344,8 @@ daniboomerangDirectives.directive('button', function() {
     restrict: 'EA',
     scope: {
       ngClickFunction: '&',
-      isActive: '='
+      isActive: '=',
+      scrollSection: '@'
     },
     template: function (elem, attrs) {
       function getLinkInfo(attrs){
@@ -287,7 +354,7 @@ daniboomerangDirectives.directive('button', function() {
         linkInfo.target = '';
         if (attrs.href != undefined) { 
           linkInfo.href = attrs.href; linkInfo.target = "target='_blank_'"; }
-        if (attrs.scrollSection != undefined) { linkInfo.href = '#' + attrs.scrollSection; }
+        if (attrs.scrollSection != undefined) { linkInfo.href = '#' + '{{scrollSection}}' }
         if (attrs.scrollDuration == undefined) { linkInfo.scrollDuration = ''; } else { linkInfo.scrollDuration = attrs.scrollDuration; }
         return linkInfo;
       }
@@ -321,3 +388,17 @@ daniboomerangDirectives.directive('button', function() {
     }
   };
 });  
+
+
+daniboomerangDirectives.directive('lightupText', function($document) {
+  return {
+    restrict: 'AE',
+    scope: {},
+    link: function (scope, element, attrs) {
+      element.addClass('text-that-lightsup');
+      scope.$on('active-section:' + attrs.section, function($event){ element.removeClass('text-gray'); element.addClass('text-orange'); });
+      scope.$on('inactive-section:' + attrs.section, function($event){ element.removeClass('text-orange'); element.addClass('text-gray'); });
+    }
+  }
+});
+

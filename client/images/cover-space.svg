@@ -18,13 +18,13 @@
    <stop stop-color="#224254" stop-opacity=".97949" offset="0"/>
    <stop stop-color="#0a1127" stop-opacity="0" offset="1"/>
   </radialGradient>
-  <path id="a" d="m57.13 192.4a6.552 6.015 0 1 1 0.0069 -0.1176" fill-rule="evenodd"/>
-  <path id="b" d="m57.13 192.4a6.552 6.015 0 1 1 0.0069 -0.1176" fill-rule="evenodd"/>
+  <path id="a" fill-rule="evenodd" d="m57.13 192.4a6.552 6.015 0 1 1 0.0069 -0.1176"/>
+  <path id="b" fill-rule="evenodd" d="m57.13 192.4a6.552 6.015 0 1 1 0.0069 -0.1176"/>
  </defs>
  <text style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="475.86761" x="1213.3606" line-height="125%"><tspan y="475.86761" x="1213.3606"/></text>
  <g transform="translate(866.46,-721.98)" fill="none">
   <g transform="matrix(.99999 0 0 .99999 -4.0495 536.7)">
-   <rect y="204.53" width="530.98" x="-860.65" height="504.21"/>
+   <rect y="204.53" width="530.98" height="504.21" x="-860.65"/>
    <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="955.93176" x="1988.6168" font-family="Sans" line-height="125%"><tspan y="955.93176" x="1988.6168" fill="none"/></text>
    <text font-size="13px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1258.5824" x="1885.1147" font-family="&apos;Arial Hebrew&apos;" line-height="125%"><tspan y="1258.5824" x="1885.1147" fill="none"/></text>
    <text font-size="6px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" y="1268.816" x="1883.8188" font-family="Krungthep" line-height="125%"><tspan y="1268.816" x="1883.8188" fill="none"/></text>
@@ -36,8 +36,8 @@
  </g>
  <g transform="translate(-284.86,-279.28)">
   <g transform="matrix(.2 0 0 .2 474.92 319.55)">
-   <rect opacity=".77" ry="0" height="2296.1" width="2025" y="-871.07" x="-334.44" fill="url(#f)"/>
-   <rect opacity=".77" transform="matrix(-.99999 -.0047846 -.0047846 .99999 0 0)" height="1663" width="1762.2" y="-179.06" x="-107.85" fill="url(#e)"/>
+   <rect opacity="0.77" ry="0" height="1633.7" width="2004.7" y="-208.71" x="-314.16" fill="url(#f)"/>
+   <rect opacity="0.77" transform="matrix(-.99999 -.0047846 -.0047846 .99999 0 0)" height="1679.9" width="1059.2" y="-199.34" x="-107.75" fill="url(#e)"/>
   </g>
  </g>
  <g transform="translate(-1124,-194.29)">
@@ -81,8 +81,8 @@
          <use xlink:href="#a" transform="matrix(0 -.056076 .061083 0 321.73 324.26)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.094607 .10305 0 458.07 323.53)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 394.96 298.06)" height="100%" width="100%" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
          <use xlink:href="#a" transform="matrix(0 -.06424 .069975 0 131.03 312.68)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.068969 .075126 0 216.07 312.05)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 210.52 268.53)" height="100%" width="100%" y="0" x="0"/>
@@ -134,8 +134,8 @@
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
       </g>
@@ -186,8 +186,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(-.36 0 0 -.36 797.46 -994.44)">
@@ -230,8 +230,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(-.36 0 0 -.36 39.133 -1321.7)">
@@ -273,8 +273,8 @@
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="translate(122.63,-1366.7)">
@@ -302,8 +302,8 @@
           <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 733.58 361.4)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 9.8773)" height="100%" width="100%" y="0" x="0"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 669.14 268.53)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.064888 .070681 0 631.39 277.2)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 579.03 242.87)" height="100%" width="100%" y="0" x="0"/>
@@ -338,7 +338,7 @@
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 282.05 388.91)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 274.96 361.4)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
           </g>
          </g>
         </g>
@@ -379,8 +379,8 @@
           <use xlink:href="#a" transform="matrix(0 -.15577 .16967 0 249.67 326.35)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 183.11 80.068)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           <g transform="translate(1022.5,340.8)">
            <use xlink:href="#a" transform="matrix(0 -.10414 .11344 0 212.7 184.03)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.05332 .058081 0 358.18 402.99)" height="100%" width="100%" y="0" x="0"/>
@@ -415,8 +415,8 @@
            <use xlink:href="#a" transform="matrix(0 -.15577 .16967 0 249.67 326.35)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 183.11 80.068)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           </g>
           <g transform="matrix(1,0,0,-1,415.09,-323.67)">
            <use xlink:href="#a" transform="matrix(0 -.10414 .11344 0 212.7 184.03)" height="100%" width="100%" y="0" x="0"/>
@@ -452,8 +452,8 @@
            <use xlink:href="#a" transform="matrix(0 -.15577 .16967 0 249.67 326.35)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 183.11 80.068)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           </g>
          </g>
         </g>
@@ -495,8 +495,8 @@
           <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
          </g>
         </g>
         <g transform="matrix(-.36 0 0 -.36 326.92 -29.368)">
@@ -538,8 +538,8 @@
           <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 183.11 80.068)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
          </g>
         </g>
         <g transform="matrix(-.36 0 0 -.36 589.58 344.36)">
@@ -590,8 +590,8 @@
           <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
           <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-          <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+          <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           <g transform="translate(259.69,-202.47)">
            <use xlink:href="#a" transform="matrix(0 -.10414 .11344 0 212.7 184.03)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.10414 .11344 0 347.55 405.56)" height="100%" width="100%" y="0" x="0"/>
@@ -629,8 +629,8 @@
            <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           </g>
           <g transform="translate(259.69,-202.47)">
            <use xlink:href="#a" transform="matrix(0 -.10414 .11344 0 212.7 184.03)" height="100%" width="100%" y="0" x="0"/>
@@ -666,8 +666,8 @@
            <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           </g>
           <g transform="translate(136.45,-136.45)">
            <use xlink:href="#a" transform="matrix(0 -.10414 .11344 0 212.7 184.03)" height="100%" width="100%" y="0" x="0"/>
@@ -705,8 +705,8 @@
            <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
            <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-           <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+           <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
           </g>
          </g>
         </g>
@@ -737,8 +737,8 @@
         <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 274.96 361.4)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 -110.57 546.38)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 -89.826 553.71)" height="100%" width="100%" y="0" x="0"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m-77.156 533.78c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m-75.456 534.34-2.38-2.3182"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m-77.156 533.78c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m-75.456 534.34-2.38-2.3182"/>
         <use xlink:href="#a" transform="matrix(0 -.06424 .069975 0 131.03 312.68)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.068969 .075126 0 96.073 375.38)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.068969 .075126 0 195.43 393.56)" height="100%" width="100%" y="0" x="0"/>
@@ -777,7 +777,7 @@
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 183.11 80.068)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
         </g>
        </g>
        <g transform="matrix(0 -.6 .6 0 -289.45 489.3)">
@@ -815,7 +815,7 @@
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 168.28 84.027)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
         </g>
        </g>
       </g>
@@ -844,7 +844,7 @@
         <use xlink:href="#a" transform="matrix(0 -.10013 .10908 0 284.38 403.04)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.080109 .087261 0 276.82 375.64)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 297.7 111.32)" height="100%" width="100%" y="0" x="0"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
         <use xlink:href="#a" transform="matrix(0 -.06424 .069975 0 131.03 312.68)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 210.52 268.53)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 120.41 242.87)" height="100%" width="100%" y="0" x="0"/>
@@ -884,8 +884,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(-.6 0 0 -.6 894.76 353.39)">
@@ -920,8 +920,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <text font-size="40px" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="matrix(0,-1,-1,0,0,0)" y="-1028.8197" x="980.93726" line-height="125%"><tspan y="-1028.8197" x="980.93726"/></text>
@@ -948,7 +948,7 @@
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 282.05 388.91)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 274.96 361.4)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 297.7 111.32)" height="100%" width="100%" y="0" x="0"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
         <use xlink:href="#a" transform="matrix(0 -.06424 .069975 0 131.03 312.68)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 210.52 268.53)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 120.41 242.87)" height="100%" width="100%" y="0" x="0"/>
@@ -988,8 +988,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(0 -.6 -.6 0 702.19 955.61)">
@@ -1024,8 +1024,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(-.6 0 0 .6 784.88 191.3)">
@@ -1060,8 +1060,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
         <g transform="translate(-720.57,770.66)" fill="#dfdfdf">
          <use xlink:href="#a" transform="matrix(0 -.10414 .11344 0 212.7 184.03)" height="100%" width="100%" y="0" x="0"/>
@@ -1090,8 +1090,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(.6 0 0 -.6 69.774 353.39)">
@@ -1126,8 +1126,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
       </g>
@@ -1159,8 +1159,8 @@
         <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 274.96 361.4)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 -110.57 546.38)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 -89.826 553.71)" height="100%" width="100%" y="0" x="0"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m-77.156 533.78c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m-75.456 534.34-2.38-2.3182"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m-77.156 533.78c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m-75.456 534.34-2.38-2.3182"/>
         <use xlink:href="#a" transform="matrix(0 -.06424 .069975 0 131.03 312.68)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.068969 .075126 0 96.073 375.38)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.068969 .075126 0 195.43 393.56)" height="100%" width="100%" y="0" x="0"/>
@@ -1201,7 +1201,7 @@
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 282.05 388.91)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 274.96 361.4)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 297.7 111.32)" height="100%" width="100%" y="0" x="0"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
         <use xlink:href="#a" transform="matrix(0 -.06424 .069975 0 131.03 312.68)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 210.52 268.53)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.081111 .088352 0 120.41 242.87)" height="100%" width="100%" y="0" x="0"/>
@@ -1241,8 +1241,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(0 -.6 .6 0 190.67 576.45)">
@@ -1277,8 +1277,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
        <g transform="matrix(.6 0 0 .6 179.65 191.3)">
@@ -1313,8 +1313,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
       </g>
@@ -1346,8 +1346,8 @@
         <use xlink:href="#a" transform="matrix(0 -.08901 .096957 0 274.96 361.4)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 -110.57 546.38)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 -89.826 553.71)" height="100%" width="100%" y="0" x="0"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m-77.156 533.78c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-        <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m-75.456 534.34-2.38-2.3182"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m-77.156 533.78c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+        <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m-75.456 534.34-2.38-2.3182"/>
         <use xlink:href="#a" transform="matrix(0 -.06424 .069975 0 131.03 312.68)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.068969 .075126 0 96.073 375.38)" height="100%" width="100%" y="0" x="0"/>
         <use xlink:href="#a" transform="matrix(0 -.068969 .075126 0 195.43 393.56)" height="100%" width="100%" y="0" x="0"/>
@@ -1392,8 +1392,8 @@
          <use xlink:href="#a" transform="matrix(0 -.066758 .072718 0 215.44 -60.123)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.11126 .1212 0 236.18 17.208)" height="100%" width="100%" y="0" x="0"/>
          <use xlink:href="#a" transform="matrix(0 -.20027 .21815 0 217.59 21.675)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
-         <path stroke-width=".2916px" stroke="#000" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m248.85-2.7157c-0.59837-1.8228 3.0764-0.0986 1.9418-1.754"/>
+         <path stroke="#000" stroke-width=".2916px" stroke-linecap="round" d="m250.55-2.16-2.38-2.3182"/>
         </g>
        </g>
       </g>
@@ -1423,10 +1423,10 @@
      <path d="m1139.7 134.5a0.22 0.22 0 1 1 0.4 -0.17z" stroke="#fff" stroke-miterlimit="0" stroke-width=".038994" fill="#fff"/>
     </g>
    </g>
-   <flowRoot style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" font-family="sans-serif" line-height="125%" fill="#000000"><flowRegion><rect y="896.86" width="501.49" height="445.14" x="290.19"/></flowRegion><flowPara/></flowRoot>
+   <flowRoot style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" font-family="sans-serif" line-height="125%" fill="#000000"><flowRegion><rect y="896.86" width="501.49" x="290.19" height="445.14"/></flowRegion><flowPara/></flowRoot>
   </g>
  </g>
- <g fill="#e93817" transform="matrix(.1388 .15721 -.15721 .1388 369.9 273.28)" fill-opacity=".70681">
+ <g fill-opacity=".70681" transform="matrix(.1388 .15721 -.15721 .1388 369.9 273.28)" fill="#e93817">
   <use xlink:href="#b" transform="matrix(.99205 0 0 1.0806 1.4242 -14.678)" height="100%" width="100%" y="0" x="0"/>
   <use xlink:href="#b" transform="matrix(.83943 0 0 .91437 110.99 46.017)" height="100%" width="100%" y="0" x="0"/>
   <use xlink:href="#b" transform="matrix(.99205 0 0 1.0806 136.27 206.85)" height="100%" width="100%" y="0" x="0"/>
@@ -1461,8 +1461,8 @@
   <use xlink:href="#b" transform="matrix(.22893 0 0 .24937 34.947 -27.324)" height="100%" width="100%" y="0" x="0"/>
   <use xlink:href="#b" transform="matrix(.38156 0 0 .41562 57.273 -54.168)" height="100%" width="100%" y="0" x="0"/>
   <use xlink:href="#b" transform="matrix(.6868 0 0 .74812 41.856 -118.05)" height="100%" width="100%" stroke="#000000" y="0" x="0"/>
-  <path stroke-width="1px" stroke="#000" stroke-linecap="round" d="m64.02 6.877c6.251-2.052 0.338 10.55 6.015 6.659"/>
-  <path stroke-width="1px" stroke="#000" stroke-linecap="round" d="m62.51 14.82 7.95-8.158"/>
+  <path stroke="#000" stroke-width="1px" stroke-linecap="round" d="m64.02 6.877c6.251-2.052 0.338 10.55 6.015 6.659"/>
+  <path stroke="#000" stroke-width="1px" stroke-linecap="round" d="m62.51 14.82 7.95-8.158"/>
  </g>
  <g transform="translate(-5.9574,-640.63)">
   <g transform="translate(-386.2,-145.43)">

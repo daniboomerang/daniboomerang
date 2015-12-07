@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('daniboomerangAsParallax', [
 	// VENDOR
 	'duScroll',
@@ -13,11 +11,10 @@ angular.module('daniboomerangAsParallax', [
 	scrollObserverService.init();
 	nodeConnectionsService.init();
 })
-.value('duScrollEasing', function easingFunction(t) { return t*(2-t) })
-.directive('daniboomerangAsParallaxDirective', function() {
+.value('duScrollEasing', function easingFunction(t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t })
+.directive('daniboomerangAsParallaxDirective', function($compile) {
 	return {
 		restrict: 'A',
-		templateUrl: 'views/daniboomerang-as-parallax.html',
-		link: function (scope, element, attrs) { scope.$on('app-starts', function($event){ element.removeClass('visibility-hidden'); }); }
+		templateUrl: 'views/daniboomerang-as-parallax.html'
 	}  
 })

@@ -1,17 +1,23 @@
-<div id="intro" class="visibility-hidden">
+<div id="intro">
 	<div id="go-button-wrapper"><div id="blur-button-bg"></div></div>
 	<div id="intro-bottom-row">
 		<div id="dboom-github">
-			<a href="https://github.com/daniboomerang/daniboomerang" target="_blank_"><i class="fa fa-fw fa-2x fa-github"></i></a><br>
-			Code under <a rel="license" href="https://github.com/daniboomerang/daniboomerang/blob/master/LICENSE" target="_blank_" style="text-decoration: underline;">MIT license</a>
+			<div id="github-link"><a href="https://github.com/daniboomerang/daniboomerang" target="_blank_"><i class="fa fa-fw fa-2x fa-github"></i></a>
+			</div>
+			<div id="license-link">
+				Code under
+				<a rel="license" href="https://github.com/daniboomerang/daniboomerang/blob/master/LICENSE" target="_blank_" style="text-decoration: underline;">
+				MIT license</a>
+			</div>
 		</div>
 		<div id="dboom-share">
-        	<a href="" custom-url="daniboomerang.herokuapp.com" social-facebook><i class="fa fa-fw fa-2x icon-facebook-circle"></i></a>&nbsp;
-			<a href="" custom-url="daniboomerang.herokuapp.com" social-gplus><i class="fa fa-fw fa-2x icon-google-plus-circle"></i></i></a>&nbsp;
-			<a href="" custom-url="daniboomerang.herokuapp.com" social-twitter><i class="fa fa-fw fa-2x icon-twitter-circle"></i></a>&nbsp;
-			<a href="" custom-url="daniboomerang.herokuapp.com" social-linkedin><i class="fa fa-fw fa-2x icon-linkedin-circle"></i></a>
-			<br>
-			© 2015 daniboomerang
+        	<div>
+	        	<a id="fb-link" href="" socialshare socialshare-provider="facebook" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600"><i class="fa fa-fw fa-2x icon-facebook-circle"></i></a>
+				<a id="gplus-link" href="" socialshare socialshare-provider="google+" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600"><i class="fa fa-fw fa-2x icon-google-plus-circle"></i></i></a>&nbsp;
+				<a id="twitter-link" href="" socialshare socialshare-provider="twitter" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600" socialshare-hashtags="daniboomerang, creative, portfolio, website, fullstackdeveloper, angularjs"><i class="fa fa-fw fa-2x icon-twitter-circle" ></i></a>&nbsp;
+				<a id="linkedin-link" href="" socialshare socialshare-provider="linkedin" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600"><i class="fa fa-fw fa-2x icon-linkedin-circle"></i></a>
+			</div>
+			<div id="dboom-copyright">© 2015 daniboomerang</div>
 		</div>
 	</div>
 </div>

@@ -13,8 +13,27 @@
 			<div button id="phone-button" size="sm" content-type="icon" icon-class="fa fa-fw fa-phone fa-lg" is-active="isPhoneButtonActive" is-toogled-button="true" ng-click-function="toggleSocialButton('phoneNumber')" spin-direction='left'></div>
 		</div>
 	</div>
-	<div id="contact-info" class="contact-row">
-    	<span>{{contactInfo}}</span>
+	<div id="contact-info-wrapper" class="contact-row">
+    	<span id="contact-info">{{contactInfo}}</span>
     </div>
-    <div alive-svg-et id="et-scene-wrapper" class="contact-row"></div>
+    <div id="contact-bottom-row">
+		<div id="contact-dboom-github">
+			<div><a href="https://github.com/daniboomerang/daniboomerang" target="_blank_"><i class="fa fa-fw fa-2x fa-github"></i></a>
+			</div>
+			<div>
+				Code under
+				<a rel="license" href="https://github.com/daniboomerang/daniboomerang/blob/master/LICENSE" target="_blank_" style="text-decoration: underline;">
+				MIT license</a>
+			</div>
+		</div>
+		<div id="contact-dboom-share">
+        	<div>
+	        	<a href="" socialshare socialshare-provider="facebook" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600"><i class="fa fa-fw fa-2x icon-facebook-circle"></i></a>&nbsp;
+				<a href="" socialshare socialshare-provider="google+" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600"><i class="fa fa-fw fa-2x icon-google-plus-circle"></i></i></a>&nbsp;
+				<a href="" socialshare socialshare-provider="twitter" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600" socialshare-hashtags="daniboomerang, creative, portfolio, website, fullstackdeveloper, angularjs"><i class="fa fa-fw fa-2x icon-twitter-circle" ></i></a>&nbsp;
+				<a href="" socialshare socialshare-provider="linkedin" socialshare-media="{{ socialMedia }}" socialshare-text="{{ socialTitle }}" socialshare-description="{{ socialDescription }}" socialshare-url="{{ socialUrl }}" socialshare-popup-height="600" socialshare-popup-width="600"><i class="fa fa-fw fa-2x icon-linkedin-circle"></i></a>
+			</div>
+			<div>© 2015 daniboomerang</div>
+		</div>
+	</div>
 </div>
