@@ -1,19 +1,15 @@
 {
   "checksum": {
-    "previous": "cb6cc462ce77d1e7a973201c50564dd3893592eca12a6b623ddb05e83f333eaf",
-    "current": "cb6cc462ce77d1e7a973201c50564dd3893592eca12a6b623ddb05e83f333eaf"
+    "previous": "6d62233f5fb2811e1f7de6c0ec0096e1b605cbdfc7ebb7748116d8562d5c90e8",
+    "current": "6d62233f5fb2811e1f7de6c0ec0096e1b605cbdfc7ebb7748116d8562d5c90e8"
   },
   "fonts": [
-    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.ttf",
-    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.svg",
-    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.woff",
-    "fontcustom/fontcustom_cb6cc462ce77d1e7a973201c50564dd3.eot"
+    "fontcustom/fontcustom_6d62233f5fb2811e1f7de6c0ec0096e1.ttf",
+    "fontcustom/fontcustom_6d62233f5fb2811e1f7de6c0ec0096e1.svg",
+    "fontcustom/fontcustom_6d62233f5fb2811e1f7de6c0ec0096e1.woff",
+    "fontcustom/fontcustom_6d62233f5fb2811e1f7de6c0ec0096e1.eot"
   ],
   "glyphs": {
-    "boomerang-gap": {
-      "codepoint": 61700,
-      "source": "svgs/boomerang-gap.svg"
-    },
     "boomerang-solid": {
       "codepoint": 61699,
       "source": "svgs/boomerang-solid.svg"
@@ -34,6 +30,10 @@
       "codepoint": 61707,
       "source": "svgs/google-plus-circle.svg"
     },
+    "heart": {
+      "codepoint": 61709,
+      "source": "svgs/heart.svg"
+    },
     "linkedin-circle": {
       "codepoint": 61705,
       "source": "svgs/linkedin-circle.svg"
@@ -42,9 +42,17 @@
       "codepoint": 61702,
       "source": "svgs/safari.svg"
     },
+    "suitcase": {
+      "codepoint": 61710,
+      "source": "svgs/suitcase.svg"
+    },
     "twitter-circle": {
       "codepoint": 61706,
       "source": "svgs/twitter-circle.svg"
+    },
+    "weixin": {
+      "codepoint": 61711,
+      "source": "svgs/weixin.svg"
     }
   },
   "options": {
@@ -70,7 +78,6 @@
     },
     "preprocessor_path": null,
     "quiet": false,
-    "skip_first": false,
     "templates": [
       "css",
       "preview"

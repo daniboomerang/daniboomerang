@@ -1,91 +1,176 @@
-'use strict';
-
 angular.module('daniboomerangIntro', [ ])
-.directive('daniboomerangIntroDirective', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService) {
+.directive('daniboomerangIntroDirective', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService) {
 	return {
 		restrict: 'A',
 		templateUrl: 'views/daniboomerang-intro.html',
-		link: function (scope, element, attrs) {
-		
-			var intro = element.find('#intro');
-			var goButtonWrapper = element.find('#go-button-wrapper');
-			var blurButtonBg = element.find('#blur-button-bg');
-			var isSkipActive = true;
-			var timeoutPromises = [];
-			var introIsFinished = false;
-    	
-    		function startApp(){
-				intro.attr('class', 'animated fadeOut');
-				// This timeout doesn´t need to be pushed
-				$timeout(function() { 
-					console.log('here a $timeout');
-					element.remove();
-					intro.remove();
-					$rootScope.$broadcast('app-starts');
-					cancelAsynchPromiseService.cancelTimeouts(timeoutPromises);
-				}, 1000);
-			}
+		compile: function compile(tElement, tAttrs, transclude) {
 
-			intro.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;');
-			intro.attr('class', 'animated fadeIn');
-			var introTitleHtml = '<div id="intro-title" class="animated flipInX text-center">"A creative portfolio"</div>'
-			if (!introIsFinished) { 
-				timeoutPromises.push($timeout(function() { 
-					console.log('here a $timeout');
-					intro.append(introTitleHtml);
-					//$compile(intro)(scope);
-					if (!introIsFinished) {
-						timeoutPromises.push($timeout(function() { 
-						    console.log('here a $timeout');
-							var introTitleId = element.find('#intro-title');
-							introTitleId.attr('class', 'animated flipOutX text-center');
-							//introTitleId.remove();
-							intro.append('<div id="alive-svg-rocket" alive-svg-rocket></div>');
-							intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
-							intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
-							$compile(intro)(scope);
-							// We make the ESC available
-							intro.append("<div id='esc' class='animated flipInX' style='-moz-animation-delay: 2s; -webkit-animation-delay: 2s; -ms-animation-delay: 2s;'><b>Press 'ESC' to skip</b> </div>");
-							$document.bind("keyup", function(event) {
-								introIsFinished = true;
-				        		if ((event.keyCode === 27) && (isSkipActive)) { startApp(); }
-				    		});
-						}, 2000));
+      		// DOM ELEMENTS
+
+      		// Intro
+      		var intro = tElement.find('#intro');
+			// Sharing
+			var dboomShare = tElement.find('#dboom-share');
+			var fbLink = tElement.find('#fb-link');
+			var gPlusLink = tElement.find('#gplus-link');
+			var linkedinLink = tElement.find('#linkedin-link'); 
+			var twitterLink = tElement.find('#twitter-link');
+			var dboomCopyright = tElement.find('#dboom-copyright');
+			// Github
+			var dboomGithub = tElement.find('#dboom-github');
+			var githubLink = tElement.find('#github-link');
+			var licenseLink = tElement.find('#license-link');
+			// Central button
+			var goButtonWrapper = tElement.find('#go-button-wrapper');
+			var blurButtonBg = tElement.find('#blur-button-bg');
+      
+      		return {
+        		pre: function preLink(scope, iElement, iAttrs) { 
+     
+	        		function addDelayForAnimation(element, delay) {
+	            		var delayAnimation = '-moz-animation-delay:' + delay + 's; -webkit-animation-delay:' + delay + 's; -ms-animation-delay:' + delay + 's;'
+	            		element.attr('style', delayAnimation);            
+	          		}
+
+	          		// Lets hide the elements before the view is compiled
+
+	          		// Intro
+	          		intro.attr('class', 'visibility-hidden');
+					addDelayForAnimation(intro, 1);
+
+		         	// Github
+		         	dboomGithub.attr('class', 'visibility-hidden');
+					githubLink.attr('class', 'visibility-hidden');
+					licenseLink.attr('class', 'visibility-hidden');
+					addDelayForAnimation(dboomGithub, 7);
+					addDelayForAnimation(githubLink, 8);
+					addDelayForAnimation(licenseLink, 7.5);
+
+					// Share options
+					dboomShare.attr('class', 'visibility-hidden');
+					fbLink.attr('class', 'visibility-hidden');
+					gPlusLink.attr('class', 'visibility-hidden');
+					twitterLink.attr('class', 'visibility-hidden');
+					linkedinLink.attr('class', 'visibility-hidden');
+					dboomCopyright.attr('class', 'visibility-hidden');
+					addDelayForAnimation(dboomShare, 3.5);
+					addDelayForAnimation(fbLink, 4.5);
+					addDelayForAnimation(gPlusLink, 5);
+					addDelayForAnimation(twitterLink, 5.5);
+					addDelayForAnimation(linkedinLink, 6);
+					addDelayForAnimation(dboomCopyright, 6.5);
+        		},
+        		post: function postLink(scope, iElement, iAttrs) { 
+          			
+          			var isSkipActive, timeoutPromises, introIsFinished;
+	    	
+	    			init();
+
+					function init() {
+
+						// Global variables
+						isSkipActive = true;
+						timeoutPromises = [];
+						introIsFinished = false;
+
+						// Init Scope
+						scope.socialDescription = socialSharingService.getSocialDescription();
+						scope.socialUrl = socialSharingService.getSocialUrl();
+						scope.socialMedia = socialSharingService.getSocialMedia();
+						scope.socialType = socialSharingService.getSocialType();
+						scope.socialTitle = socialSharingService.getSocialTitle();
+
+						// Init Dom elements with animations
+						intro.attr('class', 'animated fadeIn');
+						dboomShare.attr('class', 'animated fadeIn');
+						fbLink.attr('class', 'animated bounceIn');
+						gPlusLink.attr('class', 'animated bounceIn');
+						twitterLink.attr('class', 'animated bounceIn');
+						linkedinLink.attr('class', 'animated bounceIn');
+						dboomCopyright.attr('class', 'animated bounceIn');
+						dboomGithub.attr('class', 'animated fadeIn');
+						githubLink.attr('class', 'animated bounceIn');
+						licenseLink.attr('class', 'animated bounceIn');
+
+						var introTitleHtml = '<div id="intro-title" class="animated flipInX text-center">A creative portfolio</div>'
+						if (!introIsFinished) { 
+							timeoutPromises.push($timeout(function() { 
+								/*console.log('here a $timeout');*/
+								intro.append(introTitleHtml);
+								if (!introIsFinished) {
+									timeoutPromises.push($timeout(function() { 
+									    /*console.log('here a $timeout');*/
+										var introTitleId = iElement.find('#intro-title');
+										introTitleId.attr('class', 'animated flipOutX text-center');
+										timeoutPromises.push($timeout(function() {
+											/*console.log('here a $timeout');*/
+											introTitleId.remove();
+										}, 1000));
+										intro.append('<div id="alive-svg-rocket" alive-svg-rocket></div>');
+										intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
+										intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
+										$compile(intro)(scope);
+										// We make the skip option available
+										intro.append("<div id='skip-wrapper' class='animated fadeIn' style='-moz-animation-delay: 2.5s; -webkit-animation-delay: 2.5s; -ms-animation-delay: 2.5s;'><div id='skip' class='animated bounceIn' style='-moz-animation-delay: 3s; -webkit-animation-delay: 3s; -ms-animation-delay: 3s;'>Press 'ENTER' to skip</div></div>");
+										$document.bind("keyup", function(event) {
+											introIsFinished = true;
+							        		if ((event.keyCode === 13) && (isSkipActive)) { startApp(); }
+							    		});
+									}, 2000));
+								}
+							}, 1500));
+						}
+						
+
+						/**********************************************************/
+						// When the rocket finishes the projection we display button
+						/**********************************************************/
+						scope.$on('event:rocket-firstProjection', function($event){
+							var skipWrapper = iElement.find('#skip-wrapper');
+							skipWrapper.attr('style', '-moz-animation-delay: 0.5s; -webkit-animation-delay: 0.5s; -ms-animation-delay: 0.5s;'); // Here we remove the delay for the animation
+							skipWrapper.attr('class', 'animated fadeOut');
+							timeoutPromises.push($timeout(function() { 
+								/*console.log('here a $timeout');*/
+								skipWrapper.remove();
+							}, 1000));
+							timeoutPromises.push($timeout(function() { 
+								/*console.log('here a $timeout');*/
+								isSkipActive = false;
+								blurButtonBg.attr('class', 'animated fadeIn blurred');
+								var introButtonStartAppHtml = '<div button id="go-button" class="animated fadeIn" size="md" is-toogled-button="true" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
+								goButtonWrapper.append(introButtonStartAppHtml);
+								$compile(goButtonWrapper)(scope);
+							}, 1000));
+						});
+
+						/**************************************************************************/
+						// When the user clicks on the button we finish the projection of the rocket
+						/**************************************************************************/
+						scope.rocketTakeOff = function() {
+							goButtonWrapper.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;'); 
+							goButtonWrapper.attr('class', 'animated rotateOut');
+							$rootScope.$broadcast('event:rocket-takeoff'); }
+
+						/***************************************/
+						// When the rocket ends, we start the app
+						/***************************************/
+						scope.$on('event:rocket-tookoff', function($event){ startApp(); });		
 					}
-				}, 1500));
-			}
-				
-
-			/**********************************************************/
-			// When the rocket finishes the projection we display button
-			/**********************************************************/
-			scope.$on('event:rocket-firstProjection', function($event){
-				var esc = element.find('#esc');
-				esc.attr('class', 'animated flipOutX');
-				timeoutPromises.push($timeout(function() { 
-					console.log('here a $timeout');
-					esc.remove();
-					isSkipActive = false;
-					blurButtonBg.attr('class', 'animated fadeIn blurred');
-					var introButtonStartAppHtml = '<div button id="go-button" class="animated fadeIn" size="md" is-toogled-button="true" content-type="text" text="GO" ng-click-function="rocketTakeOff()" spin-direction="right"></div>';
-					goButtonWrapper.append(introButtonStartAppHtml);
-					$compile(goButtonWrapper)(scope);
-				}, 1000));
-			});
-
-			/**************************************************************************/
-			// When the user clicks on the button we finish the projection of the rocket
-			/**************************************************************************/
-			scope.rocketTakeOff = function() {
-				goButtonWrapper.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;'); 
-				goButtonWrapper.attr('class', 'animated rotateOut');
-				$rootScope.$broadcast('event:rocket-takeoff'); }
-
-			/***************************************/
-			// When the rocket ends, we start the app
-			/***************************************/
-			scope.$on('event:rocket-tookoff', function($event){ startApp(); });			
-		}
+	        	
+	        		function startApp(){
+						intro.attr('class', 'animated fadeOut');
+						// This timeout doesn´t need to be pushed
+						$timeout(function() { 
+							/*console.log('here a $timeout');*/
+							iElement.remove();
+							intro.remove();
+							$rootScope.$broadcast('app-starts');
+							cancelAsynchPromiseService.cancelTimeouts(timeoutPromises);
+						}, 2000);
+					}
+	        	}
+      		}
+      	}	
 	}
 })
 .directive('aliveSvgRocket', function($interval, $timeout, $q, $rootScope, cancelAsynchPromiseService) {
@@ -158,28 +243,28 @@ angular.module('daniboomerangIntro', [ ])
 
 	      	function turnOnEngines() {
 	        	intervalPromises.push($interval(function() {
-	        		console.log('here an $interval');
+	        		/*console.log('here an $interval');*/
 	          		(rightEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? rightEngine.attr('class', 'animated fadeIn') : rightEngine.attr('class', 'animated fadeOut');
 	          		(leftEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? leftEngine.attr('class', 'animated fadeIn') : leftEngine.attr('class', 'animated fadeOut');
-	        	}, 2100))
+	        	}, 4100))
 
 	        	intervalPromises.push($interval(function() {
-	        		console.log('here an $interval');
+	        		/*console.log('here an $interval');*/
 	          		(centerEngine.attr('class') ==  (undefined || 'animated fadeOut')) ? centerEngine.attr('class', 'animated fadeIn') : centerEngine.attr('class', 'animated fadeOut');
-	        	}, 1700))       
+	        	}, 2700))       
 	      	}
 
 	      	function turnOnLights() {
 		        intervalPromises.push($interval(function() {
-		        	console.log('here an $interval');
+		        	/*console.log('here an $interval');*/
 		          	(leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
 		          	(rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
-		        }, 2500));
+		        }, 3500));
 
 		        intervalPromises.push($interval(function() {
-		        	console.log('here an $interval');
+		        	/*console.log('here an $interval');*/
 		          	(centerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? centerLight.attr('class', 'animated fadeIn') : centerLight.attr('class', 'animated fadeOut');
-		        }, 700));        
+		        }, 2700));        
 		    }
 	    
 	      	function parkRocket(time){
@@ -188,7 +273,7 @@ angular.module('daniboomerangIntro', [ ])
 
 		        rocket.attr('class', 'suspension');
 		        timeoutPromises.push($timeout(function() { 
-		        	console.log('here a $timeout');
+		        	/*console.log('here a $timeout');*/
 		          	deferred.resolve(0);  //Returns 0 when finished;
 		        }, time * 1000));
 
@@ -211,7 +296,7 @@ angular.module('daniboomerangIntro', [ ])
 		            	/* We wait a second so the current projection fades out */
 
 			            $timeout(function() {
-			            	console.log('here a $timeout');
+			            	/*console.log('here a $timeout');*/
 			              	projectionScreen.attr('class', 'animated fadeOut');
 			              	projectionLight.attr('class', 'animated fadeOut'); 
 			              	deferred.resolve(0);  //Returns 0 when finished;                         
@@ -228,7 +313,7 @@ angular.module('daniboomerangIntro', [ ])
 		        var deferred = $q.defer();
 
 		        timeoutPromises.push($timeout(function() { 
-		        	console.log('here a $timeout');
+		        	/*console.log('here a $timeout');*/
 		          	rocket.attr('class', 'turn');    
 		          	deferred.resolve(0);
 		        }, 2000));
@@ -239,17 +324,17 @@ angular.module('daniboomerangIntro', [ ])
 		    function takeOff(){
 
 		        timeoutPromises.push($timeout(function() { 
-		            console.log('here a $timeout');
+		            /*console.log('here a $timeout');*/
 		          	orbitRocket.attr('class', 'takeoff');
 		          	timeoutPromises.push($timeout(function() {
-			          	console.log('here a $timeout');
+			          	/*console.log('here a $timeout');*/
 			            leftEngineFull.attr('class', 'animated fadeIn');
 			            centerEngineFull.attr('class', 'animated fadeIn');
 			            rightEngineFull.attr('class', 'animated fadeIn'); 
 		          	}, 1000));
 
 			        timeoutPromises.push($timeout(function() {
-			          	console.log('here a $timeout');
+			          	/*console.log('here a $timeout');*/
 			            $rootScope.$broadcast('event:rocket-tookoff');
 			        }, 1500));
 		          
@@ -312,7 +397,7 @@ angular.module('daniboomerangIntro', [ ])
 		        var projectionIsStopped = false;
 
 	        	var intervalPromise = $interval(function() {
-	        	    console.log('here an $interval');
+	        	    /*console.log('here an $interval');*/
 	        	    if (projectionIsStopped || introIsFinished) { cancelAsynchPromiseService.cancelInterval(intervalPromise); }
 		          	if (onGoingProjection) {
 			            onGoingProjection = false;
@@ -374,7 +459,7 @@ angular.module('daniboomerangIntro', [ ])
 		        
 		        if (!introIsFinished) {
 			        timeoutPromises.push($timeout(function() { 
-			        	console.log('here a $timeout');
+			        	/*console.log('here a $timeout');*/
 			          	elementId.attr('class','animated fadeIn');
 			          	deferred.resolve(element);
 			        }, 1000));
@@ -389,7 +474,7 @@ angular.module('daniboomerangIntro', [ ])
 		        
 		        if (!introIsFinished) {
 			        timeoutPromises.push($timeout(function() { 
-			        	console.log('here a $timeout');
+			        	/*console.log('here a $timeout');*/
 			          	elementId.attr('class','animated fadeOut');
 			          	deferred.resolve(element);
 			        }, 1000));

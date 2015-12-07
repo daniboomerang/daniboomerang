@@ -5,19 +5,30 @@
 <!--[if gt IE 8]><!-->
 <html> <!--<![endif]-->
     <head>
+        <base href="/"/>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <base href="/"/>
-        <title>Daniboomerang Portfolio</title>
-        <meta name="description" content="Daniel Estevez as Software Engineer">
+        <title>Daniel Estevez | Full Stack Web Developer</title>
         <meta name="viewport" content="width=device-width">
-    
-        <!-- CSS BOOTSTRAP PATCHED FOR TN & XXS desvices -->
-        <link rel="stylesheet" href="styles/vendor/bootstrap-patched.min.css">
-        <link rel="stylesheet" href="styles/vendor/bootstrap-xxs-tn.css">
+        <meta name="description" content="Daniboomerang is a creative portfolio. An amazing parallax universe aimed to show who I am and my job as web developer">
+        <meta name="keywords" content="fullstack web developer, web developer, software engineer, portfolio, developer, parallax, angularjs, angular, creative portfolio, front end developer, back end developer, svg, svg animation, animated">
+        <meta name="author" content="Daniboomerang">
+        <link rel="author" href="https://es.linkedin.com/in/estevezdani"/>
+        
+        <meta property="og:title" content="Daniel Estevez - A creative portfolio"/>
+        <meta property="og:type" content="website"/> 
+        <meta property="og:image" content="http://www.daniboomerang.com/images/dboom-universe.png"/>
+        <meta property="og:url" content="http://daniboomerang.com"/>
+        <meta property="og:description" content="An amazing parallax universe aimed to show who I am and my job as web developer"/>
+
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:title" content="Daniel Estevez - A creative portfolio"/>
+        <meta name="twitter:description" content="An amazing parallax universe aimed to show who I am and my job as web developer"/>
+        <meta name="twitter:image" content="http://www.daniboomerang.com/images/dboom-universe.png"/>
+        
         <!-- CSS ANIMATED -->
         <link rel="stylesheet" href="styles/vendor/animate.css">
-
+        
         <!-- CSS DANIBOOMERANG -->
         <link rel="stylesheet" href="styles/daniboomerang-app.css">
         <link rel="stylesheet" href="styles/intro.css">
@@ -27,15 +38,26 @@
         <link rel="stylesheet" href="styles/sections.css">
         <link rel="stylesheet" href="styles/animate.css">
         <link rel="stylesheet" href="styles/parallax.css">
-        <link rel="stylesheet" href="styles/navbars.css">
         <link rel="stylesheet" href="styles/footer.css">
         <link rel="stylesheet" href="styles/contact.css">
  
         <!-- CSS FONT -->
+            <link rel="stylesheet" href="styles/fonts.css">
             <!-- AWESOME -->
             <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
             <!-- DBOOM -->
             <link rel="stylesheet" href="styles/dboom-icons/fontcustom/fontcustom.css">
+
+        <!-- GOOGLE ANALYTICS -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-42975836-4', 'auto');
+          ga('send', 'pageview');
+        </script>
     </head>
 
     <!-- apply our angular app to our site -->
@@ -49,7 +71,7 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="bower_components/angular-scroll/angular-scroll.js"></script>
-      <script src="bower_components/angular-social-links/angular-social-links.js"></script>
+      <script src="bower_components/angularjs-socialshare/src/js/angular-socialshare.js"></script>
 
         <!-- DANIBOOMERANG SCRIPTS-->
         <script src="scripts/daniboomerang.js"></script>

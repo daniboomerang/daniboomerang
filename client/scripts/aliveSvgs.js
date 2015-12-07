@@ -32,12 +32,14 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
         var intervalPromiseLights;
 
         // We trigger the animations only when we are in the section
-        scope.$on('active-section:creativity-fromTop', function($event){ intervalPromiseLights = turnOnLights(); });
-        scope.$on('active-section:without-boundaries-fromBottom', function($event){ intervalPromiseLights = turnOnLights(); });
+        scope.$on('active-section:creativity-fromTop', function($event){
+         if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); }});
+        scope.$on('active-section:without-boundaries-fromBottom', function($event){
+         if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); }});
 
-        // And we stop them when we exit its sections section
-        scope.$on('active-section:connectivity-fromBottom', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseLights); });
-        scope.$on('active-section:about-fromTop', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseLights); });
+        // Entering to a text section stops all animations
+        scope.$on('active-section:text', function($event){ 
+          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights); });
      
         function turnOnLights() {
           return $interval(function() {
@@ -76,8 +78,10 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgEt', function($interval, $tim
         var intervalPromiseFinger;
 
         // We trigger the animations only when we are in the section
-        scope.$on('active-section:contact', function($event){ intervalPromiseFinger = lightUpFinger(); });
-        scope.$on('inactive-section:contact', function($event){ intervalPromiseFinger = lightDownFinger(); });
+        scope.$on('active-section:contact', function($event){ 
+          if (intervalPromiseFinger == undefined) { intervalPromiseFinger = lightUpFinger(); }});
+        scope.$on('inactive-section:contact', function($event){
+          if (intervalPromiseFinger == undefined) { intervalPromiseFinger = lightDownFinger(); }});
       }
 
       function lightUpFinger(){ etFingerLight.attr('style', ''); etFingerLight.attr('class', 'animated fadeIn'); }
@@ -135,21 +139,13 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgEarthConnectivity', function(
         var intervalPromiseEarthConnections;
 
         // We trigger the animations only when we are in the section
-        scope.$on('active-section:creativity-fromTop', function($event){ intervalPromiseEarthConnections = turnOnEarthConnections('both'); });
-        scope.$on('active-section:without-boundaries-fromBottom', function($event){ intervalPromiseEarthConnections = turnOnEarthConnections('both'); });
-        /*scope.$on('active-section:remote-working', function($event){ 
-          if ((intervalPromiseEarthConnections != undefined) && intervalPromiseEarthConnections.cancelled ){
-            intervalPromiseEarthConnections = turnOnEarthConnections('both');
-          } 
-        });*/  
-        /*scope.$on('active-section:creativity', function($event){ 
-          if ((intervalPromiseEarthConnections != undefined) && intervalPromiseEarthConnections.cancelled ){
-            intervalPromiseEarthConnections = turnOnEarthConnections('both');
-          } 
-        });*/ 
-        // And we stop them when we exit its sections section
-        scope.$on('active-section:connectivity-fromBottom', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections); });
-        scope.$on('active-section:about-fromTop', function($event){ cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections); });
+        scope.$on('active-section:creativity-fromTop', function($event){
+          if (intervalPromiseEarthConnections == undefined) { intervalPromiseEarthConnections = turnOnEarthConnections('both'); }});
+        scope.$on('active-section:without-boundaries-fromBottom', function($event){ 
+          if (intervalPromiseEarthConnections == undefined) { intervalPromiseEarthConnections = turnOnEarthConnections('both'); }});
+        // Entering to a text section stops all animations
+        scope.$on('active-section:text', function($event){ 
+          intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections); });
       }
 
       function turnNode(side, node, elementConnection, elementCenter, elementShockWave, newStatus) {
@@ -235,15 +231,22 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $
         // We trigger the animations only when we are in the section
         scope.$on('active-section:without-boundaries', function($event){ 
           //rocket.attr('class', 'soft-suspension');
-          intervalPromiseAirStripLights = turnOnAirStripLights();
-          intervalPromiseLights = turnOnLights();
+          if (intervalPromiseAirStripLights == undefined) { intervalPromiseAirStripLights = turnOnAirStripLights(); }
+          if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); }
         });
 
         // And we stop them when we exit the section
         scope.$on('inactive-section:without-boundaries', function($event){ 
-          rocket.attr('class', '');
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+          //rocket.attr('class', '');
+          intervalPromiseAirStripLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
+          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+        });
+
+        // Entering to a text section stops all animations
+        scope.$on('inactive-section:text', function($event){ 
+          //rocket.attr('class', '');
+          intervalPromiseAirStripLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
+          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
         });
       }
 
@@ -304,15 +307,21 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
         var intervalPromiseEngines, intervalPromiseLights;
 
         // We trigger the animations only when we are in the section
-        scope.$on(onActiveSection, function($event){ 
-          intervalPromiseEngines = turnOnEngines();
-          intervalPromiseLights = turnOnLights();
+        scope.$on(onActiveSection, function($event){
+          if (intervalPromiseEngines == undefined) { intervalPromiseEngines = turnOnEngines(); } 
+          if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); } 
         });
 
         // And we stop them when we exit the section
         scope.$on(onInactiveSection, function($event){ 
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseEngines);
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+          intervalPromiseEngines = cancelAsynchPromiseService.cancelInterval(intervalPromiseEngines);
+          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+        });
+        
+        // Entering to a text section stops all animations
+        scope.$on('active-section:text', function($event){ 
+          intervalPromiseEngines = cancelAsynchPromiseService.cancelInterval(intervalPromiseEngines);
+          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
         });
       }
 
@@ -375,15 +384,21 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $t
         var intervalPromiseWires, intervalPromiseLights;
 
         // We trigger the animations only when we are in the section
-        scope.$on('active-section:back-end', function($event){ 
-          intervalPromiseWires = turnOnWires();
-          intervalPromiseLights = turnOnNodeAndLights();
+        scope.$on('active-section:back-end', function($event){
+          if (intervalPromiseWires == undefined) { intervalPromiseWires = turnOnWires(); }
+          if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnNodeAndLights(); }
         });
         
         // And we stop them when we exit the section
         scope.$on('inactive-section:back-end', function($event){ 
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+          intervalPromiseWires = cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
+          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+        });
+
+        // Entering to a text section stops all animations
+        scope.$on('inactive-section:text', function($event){ 
+          intervalPromiseWires = cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
+          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
         });
       }
 
@@ -488,17 +503,24 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
           // Interval Promises 
           var intervalPromiseMongo, intervalPromiseSQL, intervalPromiseEarthConnections;
 
-          scope.$on('active-section:back-end', function($event){ 
-            intervalPromiseEarthConnections = turnOnEarthConnections(attrs.side);
-            intervalPromiseSQL = turnOnSLQ();
-            intervalPromiseMongo = turnOnMongo();
+          scope.$on('active-section:back-end', function($event){
+            if (intervalPromiseEarthConnections == undefined) { intervalPromiseEarthConnections = turnOnEarthConnections(attrs.side); }
+            if (intervalPromiseSQL == undefined) { intervalPromiseSQL = turnOnSLQ(); }
+            if (intervalPromiseMongo == undefined) { intervalPromiseMongo = turnOnMongo(); }
           });
 
           // And we stop them when we exit that section
           scope.$on('inactive-section:back-end', function($event){ 
-            cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
-            cancelAsynchPromiseService.cancelInterval(intervalPromiseMongo);
-            cancelAsynchPromiseService.cancelInterval(intervalPromiseSQL);
+            intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
+            intervalPromiseSQL = cancelAsynchPromiseService.cancelInterval(intervalPromiseSQL);
+            intervalPromiseMongo = cancelAsynchPromiseService.cancelInterval(intervalPromiseMongo);
+          });
+
+        // Entering to a text section stops all animations
+          scope.$on('inactive-section:text', function($event){ 
+            intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
+            intervalPromiseSQL = cancelAsynchPromiseService.cancelInterval(intervalPromiseSQL);
+            intervalPromiseMongo = cancelAsynchPromiseService.cancelInterval(intervalPromiseMongo);
           });
         }
 
@@ -512,15 +534,21 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
           var animateNodesPromise, intervalPromiseEarthConnections;
 
         // We trigger the animations only when we are in the section
-          scope.$on('active-section:front-end', function($event){ 
-            animateNodesPromise = turnOnMapsAndLaptop();
-            intervalPromiseEarthConnections = turnOnEarthConnections(attrs.side);
+          scope.$on('active-section:front-end', function($event){
+            if (animateNodesPromise == undefined) { animateNodesPromise = turnOnMapsAndLaptop(); } 
+            if (intervalPromiseEarthConnections == undefined) { intervalPromiseEarthConnections = turnOnEarthConnections(attrs.side); }
           });
 
           // And we stop them when we exit that section
           scope.$on('inactive-section:front-end', function($event){ 
-            cancelAsynchPromiseService.cancelInterval(animateNodesPromise);
-            cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
+            animateNodesPromise = cancelAsynchPromiseService.cancelInterval(animateNodesPromise);
+            intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
+          });
+
+          // And we stop them when we exit that section
+          scope.$on('inactive-section:text', function($event){ 
+            animateNodesPromise = cancelAsynchPromiseService.cancelInterval(animateNodesPromise);
+            intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
           });
         }
       }
@@ -555,7 +583,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
       function turnOnMongo(){
         // Mongo Server
         return $interval(function() {  
-                    console.log('here an $interval');
+          console.log('here an $interval');
           (sqlServerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerLight.attr('class', 'animated fadeIn') : sqlServerLight.attr('class', 'animated fadeOut');
           (sqlServerReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerReflect.attr('class', 'animated fadeIn') : sqlServerReflect.attr('class', 'animated fadeOut');
           (sqlPlatformLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlPlatformLight.attr('class', 'animated fadeIn') : sqlPlatformLight.attr('class', 'animated fadeOut');
@@ -637,18 +665,24 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIpadPro', function($interval,
         node = element.find('#ng-node'); 
 
         /* Interval Promises */
-        var intervalPromiseWires, intervalPromiseLights;
+        var intervalPromiseWires, intervalPromiseServerNode;
 
         // We trigger the animations only when we are in the section
         scope.$on('active-section:front-end', function($event){ 
-          intervalPromiseWires = turnOnWires();
-          intervalPromiseServerNode = turnOnNode();
+          if (intervalPromiseWires == undefined) { intervalPromiseWires = turnOnWires(); }
+          if (intervalPromiseServerNode == undefined) { intervalPromiseServerNode = turnOnNode(); }
         });
 
         // And we stop them when we exit the section
         scope.$on('inactive-section:front-end', function($event){ 
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
-          cancelAsynchPromiseService.cancelInterval(intervalPromiseServerNode);
+          intervalPromiseWires = cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
+          intervalPromiseServerNode = cancelAsynchPromiseService.cancelInterval(intervalPromiseServerNode);
+        });
+
+        // Entering to a text section stops all animations
+        scope.$on('inactive-section:text', function($event){ 
+          intervalPromiseWires = cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
+          intervalPromiseServerNode = cancelAsynchPromiseService.cancelInterval(intervalPromiseServerNode);
         });
       }
 

@@ -84,7 +84,7 @@ describe('Introduction', function() {
 		expect(intro.hasClass('animated fadeOut')).toBe(true);
 
 		// Title
-		$timeout.flush(1001);
+		$timeout.flush(2001);
 		expect($rootScope.$broadcast).toHaveBeenCalledWith('app-starts');
     }));
     	

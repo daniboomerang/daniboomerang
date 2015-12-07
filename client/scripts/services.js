@@ -14,10 +14,14 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					//Automaticly update location
 					$location.path('/' + section);
 					$rootScope.$apply();
-					if ('cover' == hash.substr(1)){ $rootScope.$broadcast('active-section:cover'); }
+					if ('cover' == hash.substr(1)){
+						$rootScope.$broadcast('active-section:cover');
+						$rootScope.$broadcast('active-section:text');
+					}
 					if ('connectivity' == hash.substr(1)){
 						$rootScope.$broadcast('active-section:connectivity');
-						if (previousSection == 'creativity') { $rootScope.$broadcast('active-section:connectivity-fromBottom'); }
+						//if (previousSection == 'creativity') { $rootScope.$broadcast('active-section:connectivity-fromBottom'); }
+						$rootScope.$broadcast('active-section:text');
 					}
 					if ('creativity' == hash.substr(1)){ 
 						$rootScope.$broadcast('active-section:creativity');
@@ -30,16 +34,24 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 					}
 			        if ('about' == hash.substr(1)){
 			        	$rootScope.$broadcast('active-section:about');
-						if (previousSection == 'without-boundaries') { $rootScope.$broadcast('active-section:about-fromTop'); }
+			        	$rootScope.$broadcast('active-section:text');
+						//if (previousSection == 'without-boundaries') { $rootScope.$broadcast('active-section:about-fromTop'); }
 			        }
 					if ('back-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:back-end'); }
-			        if ('loving' == hash.substr(1)){ $rootScope.$broadcast('active-section:loving'); }
+			        if ('loving' == hash.substr(1)){ 
+			        	$rootScope.$broadcast('active-section:loving');
+			        	$rootScope.$broadcast('active-section:text');
+			        }
 					if ('front-end' == hash.substr(1)){ $rootScope.$broadcast('active-section:front-end'); }
 			        if ('work' == hash.substr(1)){ 
 			        	$rootScope.$broadcast('active-section:work');
+			        	$rootScope.$broadcast('active-section:text');
 			        	//if (previousSection == 'contact') { $rootScope.$broadcast('active-section:work-fromBottom'); }
 			        }
-			        if ('contact' == hash.substr(1)){ $rootScope.$broadcast('active-section:contact'); }			        
+			        if ('contact' == hash.substr(1)){ 
+			        	$rootScope.$broadcast('active-section:contact');
+			        	$rootScope.$broadcast('active-section:text');
+			        }			        
 				}
 			});
 			$rootScope.$on('duScrollspy:becameInactive', function($event, $element){  
@@ -80,21 +92,43 @@ daniboomerangServices.factory('urlObserverService', function ($rootScope, $locat
 	}	
 });
 
+daniboomerangServices.factory('socialSharingService', function (){
+	
+	var socialDescription = "An amazing parallax universe aimed to show who I am and my job as web developer";
+	var socialUrl = 'http://www.daniboomerang.com';
+	var socialMedia = 'http://www.daniboomerang.com/images/dboom-universe.png';
+	var socialType = 'website';
+	var socialTitle = "Daniel Estevez - A creative portfolio";
+
+	return {
+		getSocialDescription: function (){ return socialDescription; },
+		getSocialUrl: function (){ return socialUrl; },
+		getSocialMedia: function (){ return socialMedia; },
+		getSocialType: function (){ return socialType; },
+		getSocialTitle: function (){ return socialTitle; }
+	}	
+});
+
 daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval, $timeout){
 	
 	return {
 		cancelInterval: function (interval){
 			$interval.cancel(interval);
+			return interval = undefined;
 		},
 		cancelIntervals: function (intervals){
 			for (var i=0; i<intervals.length; i++){
 				$interval.cancel(intervals[i]);
+				intervals[i] = undefined;
 			}
+			return intervals;
 		},
 		cancelTimeouts: function (timeouts){
 			for (var i=0; i<timeouts.length; i++){
-				$interval.cancel(timeouts[i]);
+				$timeout.cancel(timeouts[i]);
+				timeouts[i] = undefined;
 			}
+			return timeouts;
 		}
 	}	
 });
