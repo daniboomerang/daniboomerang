@@ -242,9 +242,14 @@ daniboomerangDirectives.directive('foot', function(socialSharingService) {
       return {
         pre: function preLink(scope, iElement, iAttrs) { 
      
-         function addDelayForAnimation(element, delay) {
+          function addDelayForAnimation(element, delay) {
             var delayAnimation = '-moz-animation-delay:' + delay + 's; -webkit-animation-delay:' + delay + 's; -ms-animation-delay:' + delay + 's;'
             element.attr('style', delayAnimation);            
+          }
+
+          function addDurationForAnimation(element, duration) {
+            var durationAnimation = '-moz-animation-duration:' + duration + 's; -webkit-animation-duration:' + duration + 's; -ms-animation-duration:' + duration + 's;'
+            element.attr('style', durationAnimation);            
           }
 
           // Lets hide the elements before the view is compiled
@@ -263,7 +268,7 @@ daniboomerangDirectives.directive('foot', function(socialSharingService) {
           // Left side buttons
           buttonsRightSideWrapper.attr('class', 'visibility-hidden');
           currentSectionWrapper.attr('class', 'visibility-hidden');
-          addDelayForAnimation(currentSectionWrapper, 0.2);
+          addDurationForAnimation(currentSectionWrapper, 0.3);
           toNextUpButtonWrapper.attr('class', 'visibility-hidden');
           addDelayForAnimation(toNextUpButtonWrapper, 0.3);
           toNextDownButtonWrapper.attr('class', 'visibility-hidden');
@@ -305,7 +310,7 @@ daniboomerangDirectives.directive('foot', function(socialSharingService) {
 
             function hideFooterElements(){          
               buttonsLeftSideWrapper.attr('class','animated bounceOutLeft'); buttonsRightSideWrapper.attr('class','animated bounceOutRight'); currentSectionWrapper.attr('class','animated bounceOutRight'); toNextUpButtonWrapper.attr('class','animated bounceOutRight'); toNextDownButtonWrapper.attr('class','animated bounceOutRight'); cvButtonWrapper.attr('class','animated bounceOutLeft'); shareButtonWrapper.attr('class','animated bounceOutLeft');
-              hideShareMenu();
+              if (scope.isToogledShareMenu) { hideShareMenu(); }
             }       
             function showFooterElements(){
               buttonsLeftSideWrapper.attr('class','animated bounceInUp');  buttonsRightSideWrapper.attr('class','animated bounceInUp'); currentSectionWrapper.attr('class','animated bounceInRight');  toNextUpButtonWrapper.attr('class','animated bounceInRight');  toNextDownButtonWrapper.attr('class','animated bounceInUp'); cvButtonWrapper.attr('class','animated bounceInLeft'); shareButtonWrapper.attr('class','animated bounceInUp'); 

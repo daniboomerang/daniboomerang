@@ -9,6 +9,7 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
   beforeEach(function() {
     browser.get('/');
     browser.ignoreSynchronization = true;
+    browser.sleep(3000);
   });
   
 
