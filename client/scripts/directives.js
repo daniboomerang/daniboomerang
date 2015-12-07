@@ -275,14 +275,14 @@ daniboomerangDirectives.directive('foot', function(socialSharingService) {
           var COVER, ABOUT, LOVING, WORK, CONTACT;
           scope.currentSection, scope.toNextUpSection, scope.toNextDownSection, scope.isToogledShareMenu, scope.socialDescription, scope.socialUrl, scope.socialMedia, scope.socialType, scope.socialTitle;
 
+          function showShareMenu (){ shareMenuWrapper.attr('class', 'animated fadeInUp'); } 
+          function hideShareMenu(){ shareMenuWrapper.attr('class', 'animated fadeOutDown'); }
+
           scope.toogleShareMenu = function (){ 
             scope.isToogledShareMenu = !scope.isToogledShareMenu; 
             if (scope.isToogledShareMenu) { showShareMenu(); }
             else { hideShareMenu(); }
           }
-
-          function showShareMenu (){ if (scope.isToogledShareMenu) { shareMenuWrapper.attr('class', 'animated fadeInUp'); } }
-          function hideShareMenu(){ shareMenuWrapper.attr('class', 'animated fadeOutDown'); }
 
           init();
 
@@ -294,7 +294,7 @@ daniboomerangDirectives.directive('foot', function(socialSharingService) {
             /* SECTIONS */
             scope.currentSection = undefined;
             scope.nextDownSection = ABOUT;
-            scope.nextUpSection = COVER
+            scope.nextUpSection = undefined;
 
             /* SOCIAL SHARING */
             scope.socialDescription = socialSharingService.getSocialDescription();
@@ -305,14 +305,14 @@ daniboomerangDirectives.directive('foot', function(socialSharingService) {
 
             function hideFooterElements(){          
               buttonsLeftSideWrapper.attr('class','animated bounceOutLeft'); buttonsRightSideWrapper.attr('class','animated bounceOutRight'); currentSectionWrapper.attr('class','animated bounceOutRight'); toNextUpButtonWrapper.attr('class','animated bounceOutRight'); toNextDownButtonWrapper.attr('class','animated bounceOutRight'); cvButtonWrapper.attr('class','animated bounceOutLeft'); shareButtonWrapper.attr('class','animated bounceOutLeft');
-              hideShareMenu()
+              hideShareMenu();
             }       
             function showFooterElements(){
               buttonsLeftSideWrapper.attr('class','animated bounceInUp');  buttonsRightSideWrapper.attr('class','animated bounceInUp'); currentSectionWrapper.attr('class','animated bounceInRight');  toNextUpButtonWrapper.attr('class','animated bounceInRight');  toNextDownButtonWrapper.attr('class','animated bounceInUp'); cvButtonWrapper.attr('class','animated bounceInLeft'); shareButtonWrapper.attr('class','animated bounceInUp'); 
-              showShareMenu();
+              if (scope.isToogledShareMenu) { showShareMenu(); }
             }
 
-            scope.$on('active-section:cover', function($event){ hideFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
+            scope.$on('active-section:cover', function($event){ if (scope.nextUpSection) { hideFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); } });
             scope.$on('active-section:connectivity', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
             scope.$on('active-section:creativity', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
             scope.$on('active-section:remote-working', function($event){ showFooterElements(); currentSectionWrapper.attr('class','animated fadeOut'); scope.nextUpSection = COVER; scope.nextDownSection = ABOUT; scope.$apply(); });
