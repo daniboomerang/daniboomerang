@@ -23,3 +23,5 @@ dependencies:
     - curl -L -o chromedriver.zip "https://chromedriver.storage.googleapis.com/2.12/chromedriver_linux64.zip"
     - unzip -p chromedriver.zip | sudo tee /usr/local/bin/chromedriver >> /dev/null
     - sudo chmod +x "/usr/local/bin/chromedriver"
+    # Making deploy.sh accesible
+    - sudo chmod +x "deploy.sh"
