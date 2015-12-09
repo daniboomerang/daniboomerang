@@ -1,6 +1,6 @@
-var daniboomerangServices = angular.module('daniboomerangServices', []);
+var parallaxServices = angular.module('parallaxServices', []);
 
-daniboomerangServices.factory('scrollObserverService', function ($rootScope, $location){
+parallaxServices.factory('scrollObserverService', function ($rootScope, $location){
 
 	var previousSection = 'cover'; // This will helps us to know the direction from
 								   // where we are entering to a section
@@ -76,7 +76,7 @@ daniboomerangServices.factory('scrollObserverService', function ($rootScope, $lo
 });
 
 
-daniboomerangServices.factory('urlObserverService', function ($rootScope, $location){
+parallaxServices.factory('urlObserverService', function ($rootScope, $location){
 	
 	var onPageReload = true;
 
@@ -92,48 +92,7 @@ daniboomerangServices.factory('urlObserverService', function ($rootScope, $locat
 	}	
 });
 
-daniboomerangServices.factory('socialSharingService', function (){
-	
-	var socialDescription = "An amazing parallax universe aimed to show who I am and my job as web developer";
-	var socialUrl = 'http://www.daniboomerang.com';
-	var socialMedia = 'http://www.daniboomerang.com/images/dboom-universe.png';
-	var socialType = 'website';
-	var socialTitle = "Daniel Estevez - A creative portfolio";
-
-	return {
-		getSocialDescription: function (){ return socialDescription; },
-		getSocialUrl: function (){ return socialUrl; },
-		getSocialMedia: function (){ return socialMedia; },
-		getSocialType: function (){ return socialType; },
-		getSocialTitle: function (){ return socialTitle; }
-	}	
-});
-
-daniboomerangServices.factory('cancelAsynchPromiseService', function ($interval, $timeout){
-	
-	return {
-		cancelInterval: function (interval){
-			$interval.cancel(interval);
-			return interval = undefined;
-		},
-		cancelIntervals: function (intervals){
-			for (var i=0; i<intervals.length; i++){
-				$interval.cancel(intervals[i]);
-				intervals[i] = undefined;
-			}
-			return intervals;
-		},
-		cancelTimeouts: function (timeouts){
-			for (var i=0; i<timeouts.length; i++){
-				$timeout.cancel(timeouts[i]);
-				timeouts[i] = undefined;
-			}
-			return timeouts;
-		}
-	}	
-});
-
-daniboomerangServices.factory('nodeConnectionsService', function ($http){
+parallaxServices.factory('nodeConnectionsService', function ($http){
 	
 	var BEConnections = [];
 	var BEDataNodeRemainingConnections, BEAvailableConnectionIndexes;

@@ -2,17 +2,13 @@
 /* INTRO */
 /*********/
 
-#intro { background-size:100%; background-repeat: no-repeat; background-image: url(/images/intro-space.svg); overflow: hidden; position: absolute; background-color: black; width: 100%; height: 100%; z-index: 10; color: white;  overflow:hidden; }
+#intro { overflow: hidden; position: absolute; background-color: black; width: 100%; height: 100%; z-index: 10; color: white;  overflow:hidden; }
 #intro-title { -webkit-font-smoothing: antialiased; position: absolute; top: 40%; width: 70%; left: 15%; text-transform: uppercase; font-size: 2.2em; }
 #skip-wrapper { font-size: 0.7em; padding: 0.5em; margin: 0.3em; position: absolute; top: 4%; left: 4%; text-align: center;  width: 100%; border: solid 0.1em rgba(19, 65, 99, 0.7); background: rgba(19, 65, 99, 0.2); -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); border-radius: 9px 9px 9px 9px; -moz-border-radius: 9px 9px 9px 9px; -webkit-border-radius: 9px 9px 9px 9px; }
 #skip { }
 #intro-bottom-row { font-size: 0.7em; position: absolute; bottom:4%; width: 100%; }
 #dboom-github { position: absolute; bottom:0; left:4%; text-align: center; padding: 0.5em; border: solid 0.1em rgba(19, 65, 99, 0.7); background: rgba(19, 65, 99, 0.2); -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); border-radius: 9px 9px 9px 9px; -moz-border-radius: 9px 9px 9px 9px; -webkit-border-radius: 9px 9px 9px 9px; }
 #dboom-share { position: absolute; bottom:0; right:4%; text-align: center; padding: 0.5em; border: solid 0.1em rgba(19, 65, 99, 0.7); background: rgba(19, 65, 99, 0.2); -webkit-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); -moz-box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); box-shadow: 0px -1px 4px 1px rgba(0,0,0,0.6); border-radius: 9px 9px 9px 9px; -moz-border-radius: 9px 9px 9px 9px; -webkit-border-radius: 9px 9px 9px 9px; }
-#intro-orbit-comet-blue { z-index:-10; position: absolute; margin-top: 40vh; margin-left: 10vh; }
-#intro-comet-blue { height: 9%; width: 5%; }
-#intro-orbit-comet-red { z-index:-10; position: absolute; margin-left: 0vw; margin-top: 30vw; }
-#intro-comet-red { height: 10%; width: 5%; }
 #go-button-wrapper { position: absolute; width: 17%; height: 30%; left: 41.5%; top: 40%; border-radius: 100%; }
 .blurred { width: 100%; height: 100%; background-color: rgba(1, 1, 1, 0.6); -webkit-filter: blur(15px); filter: blur(15px); border-radius: 100%; }
 

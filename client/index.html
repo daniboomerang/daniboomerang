@@ -3,50 +3,54 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html> <!--<![endif]-->
-    <head>
+<html ng-app="daniboomerang"> <!--<![endif]-->
+    <head social-sharing-metadata>
         <base href="/"/>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Daniel Estevez | Full Stack Web Developer</title>
         <meta name="viewport" content="width=device-width">
+        
+        <title>Daniel Estevez | Full Stack Web Developer</title>
         <meta name="description" content="Daniboomerang is a creative portfolio. An amazing parallax universe aimed to show who I am and my job as web developer">
         <meta name="keywords" content="fullstack web developer, web developer, software engineer, portfolio, developer, parallax, angularjs, angular, creative portfolio, front end developer, back end developer, svg, svg animation, animated">
         <meta name="author" content="Daniboomerang">
         <link rel="author" href="https://es.linkedin.com/in/estevezdani"/>
         
-        <meta property="og:title" content="Daniel Estevez - A creative portfolio"/>
-        <meta property="og:type" content="website"/> 
-        <meta property="og:image" content="http://www.daniboomerang.com/images/dboom-universe.png"/>
-        <meta property="og:url" content="http://daniboomerang.com"/>
-        <meta property="og:description" content="An amazing parallax universe aimed to show who I am and my job as web developer"/>
+        
+        <!-- HERE THE CSS -->
 
-        <meta name="twitter:card" content="summary"/>
-        <meta name="twitter:title" content="Daniel Estevez - A creative portfolio"/>
-        <meta name="twitter:description" content="An amazing parallax universe aimed to show who I am and my job as web developer"/>
-        <meta name="twitter:image" content="http://www.daniboomerang.com/images/dboom-universe.png"/>
-        
-        <!-- CSS ANIMATED -->
-        <link rel="stylesheet" href="styles/vendor/animate.css">
-        
-        <!-- CSS DANIBOOMERANG -->
-        <link rel="stylesheet" href="styles/daniboomerang-app.css">
-        <link rel="stylesheet" href="styles/intro.css">
-        <link rel="stylesheet" href="styles/rocket.css">
-        <link rel="stylesheet" href="styles/button.css">
-        <link rel="stylesheet" href="styles/cover.css">
-        <link rel="stylesheet" href="styles/sections.css">
-        <link rel="stylesheet" href="styles/animate.css">
-        <link rel="stylesheet" href="styles/parallax.css">
-        <link rel="stylesheet" href="styles/footer.css">
-        <link rel="stylesheet" href="styles/contact.css">
- 
-        <!-- CSS FONT -->
-            <link rel="stylesheet" href="styles/fonts.css">
-            <!-- AWESOME -->
-            <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-            <!-- DBOOM -->
-            <link rel="stylesheet" href="styles/dboom-icons/fontcustom/fontcustom.css">
+          <!-- CSS DANIBOOMERANG -->
+          <link rel="stylesheet" href="styles/daniboomerang.css">
+
+          <!-- COMPONENTS -->
+            <!-- INTRO -->
+              <link rel="stylesheet" href="components/introduction/styles/intro.css">
+              <link rel="stylesheet" href="components/introduction/styles/rocket.css">
+
+            <!-- COMMON-->
+              <!-- BUTTON -->
+              <link rel="stylesheet" href="components/common/button/button.css">
+              <!-- FOOTER -->
+              <link rel="stylesheet" href="components/common/foot/foot.css">
+              <!-- COMET -->
+              <link rel="stylesheet" href="components/common/comet/comet.css">
+          
+            <!-- PARALLAX -->
+              <link rel="stylesheet" href="components/parallax/styles/parallax.css">
+                <!-- SECTIONS -->
+                <link rel="stylesheet" href="components/parallax/modules/sections/styles/cover.css">
+                <link rel="stylesheet" href="components/parallax/modules/sections/styles/sections.css">
+                <link rel="stylesheet" href="components/parallax/modules/sections/styles/contact.css">
+
+          <!-- VENDOR -->
+          <link rel="stylesheet" href="styles/vendor/animate.css">
+   
+          <!-- CSS ICONS -->
+              <!-- AWESOME -->
+                <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+              <!-- DBOOM -->
+                <link rel="stylesheet" href="styles/dboom-icons/fontcustom/fontcustom.css">
+
 
         <!-- GOOGLE ANALYTICS -->
         <script>
@@ -58,28 +62,41 @@
           ga('create', 'UA-42975836-4', 'auto');
           ga('send', 'pageview');
         </script>
+        <!-- **************** -->
+        
     </head>
 
     <!-- apply our angular app to our site -->
-    <body ng-app="daniboomerangApp">
+    <body>
 
-      <daniboomerang-content></daniboomerang-content>
+      <ui-view></ui-view>
 
       <script src="scripts/vendor/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
       <script src="bower_components/angular-scroll/angular-scroll.js"></script>
       <script src="bower_components/angularjs-socialshare/src/js/angular-socialshare.js"></script>
 
         <!-- DANIBOOMERANG SCRIPTS-->
-        <script src="scripts/daniboomerang.js"></script>
-        <script src="scripts/daniboomerangIntro.js"></script>
-        <script src="scripts/daniboomerangAsParallax.js"></script>
-        <script src="scripts/aliveSvgs.js"></script>
-        <script src="scripts/directives.js"></script>
-        <script src="scripts/services.js"></script>
+          <script src="scripts/daniboomerang.js"></script>
+          <!-- COMPONENTS -->
+          <!-- INTRO -->
+            <script src="components/introduction/scripts/introduction.js"></script>
+          <!-- COMMON-->
+            <script src="components/common/services.js"></script>
+            <!-- BUTTON -->
+              <script src="components/common/button/button.js"></script>
+            <!-- FOOTER -->
+              <script src="components/common/foot/foot.js"></script>
+            <!-- COMET -->
+              <script src="components/common/comet/comet.js"></script>
+            <!-- COMET -->
+              <script src="components/common/share/share.js"></script>
+          <!-- PARALLAX -->
+
         <!-- -->    
 
     </body>

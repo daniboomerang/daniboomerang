@@ -1,14 +1,35 @@
-angular.module('daniboomerangIntro', [ ])
-.directive('daniboomerangIntroDirective', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService) {
-	return {
-		restrict: 'A',
-		templateUrl: 'views/daniboomerang-intro.html',
-		compile: function compile(tElement, tAttrs, transclude) {
+'use strict';
 
+var introduction = angular.module('introduction', []);
+
+introduction.config(function($stateProvider, $urlRouterProvider) {
+	$stateProvider
+    
+    //////////////////////////
+	// State Configurations //
+	//////////////////////////
+    
+     .state('introduction', {
+    	url: '/',
+        template: '<intro></intro>'
+    })
+});
+
+// Setting up Url into constant
+introduction.constant('INTRODUCTION_BASE_URL', '/components/introduction/');
+introduction.directive('intro', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService, INTRODUCTION_BASE_URL) {
+	return {
+		restrict: 'EA',
+		templateUrl: function(elem, attr){
+	      return INTRODUCTION_BASE_URL + 'views/intro.html';
+	    },
+		compile: function compile(tElement, tAttrs, transclude) {
+			
       		// DOM ELEMENTS
 
       		// Intro
       		var intro = tElement.find('#intro');
+      		
 			// Sharing
 			var dboomShare = tElement.find('#dboom-share');
 			var fbLink = tElement.find('#fb-link');
@@ -80,6 +101,12 @@ angular.module('daniboomerangIntro', [ ])
 						scope.socialType = socialSharingService.getSocialType();
 						scope.socialTitle = socialSharingService.getSocialTitle();
 
+					 	// Lets set intro background	
+						intro.css('background-size', '100%');
+						intro.css('background-repeat', 'no-repeat');
+						var backgroundImageUrl = 'url(' + INTRODUCTION_BASE_URL + '/images/intro-space.svg)';
+      					intro.css('background-image', backgroundImageUrl);
+
 						// Init Dom elements with animations
 						intro.attr('class', 'animated fadeIn');
 						dboomShare.attr('class', 'animated fadeIn');
@@ -107,8 +134,8 @@ angular.module('daniboomerangIntro', [ ])
 											introTitleId.remove();
 										}, 1000));
 										intro.append('<div id="alive-svg-rocket" alive-svg-rocket></div>');
-										intro.append('<div id="intro-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="intro-comet-blue" class="comet-blue comet-from-left"></div></div>');
-										intro.append('<div id="intro-orbit-comet-red" class="spin-left-half orbit-comet"><div id="intro-comet-red" class="comet-red comet-from-right"></div></div>');
+										intro.append('<comet color="blue"></comet>');
+										intro.append('<comet color="red"></comet>');
 										$compile(intro)(scope);
 										// We make the skip option available
 										intro.append("<div id='skip-wrapper' class='animated fadeIn' style='-moz-animation-delay: 2.5s; -webkit-animation-delay: 2.5s; -ms-animation-delay: 2.5s;'><div id='skip' class='animated bounceIn' style='-moz-animation-delay: 3s; -webkit-animation-delay: 3s; -ms-animation-delay: 3s;'>Press 'ENTER' to skip</div></div>");
@@ -173,11 +200,13 @@ angular.module('daniboomerangIntro', [ ])
       	}	
 	}
 })
-.directive('aliveSvgRocket', function($interval, $timeout, $q, $rootScope, cancelAsynchPromiseService) {
+
+
+introduction.directive('aliveSvgRocket', function($interval, $timeout, $q, $rootScope, cancelAsynchPromiseService, INTRODUCTION_BASE_URL) {
   	return {
 	    restrict: 'EA',
 	    scope: {},
-	    template: function (elem, attrs) { return '<div id="orbit-rocket" class="arrival"><div id="rocket" ng-include="\'/images/rocket.svg\'"></div></div>';  },
+	    template: function (elem, attrs) { return '<div id="orbit-rocket" class="arrival"><div id="rocket" ng-include=" \'' + INTRODUCTION_BASE_URL + '/images/rocket.svg\'"></div></div>';  },
 	    link: function (scope, element, attrs) {
 
 			var orbitRocket, rocket, rightEngineFull, rightEngine, centerEngineFull,

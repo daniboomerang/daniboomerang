@@ -1,10 +1,13 @@
-var daniboomerangAliveSvgDirectives = angular.module('daniboomerangAliveSvgDirectives', ['daniboomerangServices']);
+var aliveSvgs = angular.module('aliveSvgs', [
+  // COMMON
+  'commonServices'
+]);
 
 /********************************/
 /** ALIVE SVG IMAGES DIRECTIVE **/
 /********************************/
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $timeout, cancelAsynchPromiseService) {
+aliveSvgs.directive('aliveSvgIss', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -56,7 +59,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgIss', function($interval, $ti
   };
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgEt', function($interval, $timeout, cancelAsynchPromiseService) {
+aliveSvgs.directive('aliveSvgEt', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -91,7 +94,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgEt', function($interval, $tim
   };
 });  
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgEarthConnectivity', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService) {
+aliveSvgs.directive('aliveSvgEarthConnectivity', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -198,7 +201,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgEarthConnectivity', function(
   };
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $timeout, cancelAsynchPromiseService) {
+aliveSvgs.directive('aliveSvgCliff', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -268,7 +271,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgCliff', function($interval, $
   };
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $timeout, cancelAsynchPromiseService) {
+aliveSvgs.directive('aliveSvgBooks', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -342,7 +345,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBooks', function($interval, $
   };
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $timeout, cancelAsynchPromiseService) {
+aliveSvgs.directive('aliveSvgRuby', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -424,7 +427,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgRuby', function($interval, $t
   }
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService) {
+aliveSvgs.directive('aliveSvgBeFeEarth', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService) {
   return {
     restrict: 'EA',
     scope: {},
@@ -635,7 +638,7 @@ daniboomerangAliveSvgDirectives.directive('aliveSvgBeFeEarth', function($interva
   };
 }); 
 
-daniboomerangAliveSvgDirectives.directive('aliveSvgIpadPro', function($interval, $timeout, cancelAsynchPromiseService) {
+aliveSvgs.directive('aliveSvgIpadPro', function($interval, $timeout, cancelAsynchPromiseService) {
   return {
     restrict: 'EA',
     scope: {},

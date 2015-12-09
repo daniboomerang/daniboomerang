@@ -1,10 +1,11 @@
-angular.module('daniboomerangAsParallax', [
+var parallax = angular.module('parallax', [
 	// VENDOR
 	'duScroll',
-	// DANIBOOMERANG
-	'daniboomerangDirectives',
-	'daniboomerangAliveSvgDirectives',
-	'daniboomerangServices'
+	// PARALLAX
+	'parallaxDirectives',
+	'parallaxServices',
+	'aliveSvgs'
+
 ])
 .run(function (scrollObserverService, urlObserverService, nodeConnectionsService) {
 	urlObserverService.init();
@@ -12,9 +13,9 @@ angular.module('daniboomerangAsParallax', [
 	nodeConnectionsService.init();
 })
 .value('duScrollEasing', function easingFunction(t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t })
-.directive('daniboomerangAsParallaxDirective', function($compile) {
+.directive('parallax', function($compile) {
 	return {
 		restrict: 'A',
-		templateUrl: 'views/daniboomerang-as-parallax.html'
+		templateUrl: 'views/parallax.html'
 	}  
 })
