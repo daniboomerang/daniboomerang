@@ -27,8 +27,11 @@ share.directive('socialSharingMetadata', function($compile, SHARE_BASE_URL, soci
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
-
-      var metadata = '<meta property="og:title" content="' + socialSharingService.getSocialTitle() + '"/>' +
+      var sharingMetadata = '<meta name="description" content="Daniboomerang is a creative portfolio. An amazing parallax universe aimed to show who I am and my job as web developer">' + 
+             '<meta name="keywords" content="fullstack web developer, web developer, software engineer, portfolio, developer, parallax, angularjs, angular, creative portfolio, front end developer, back end developer, svg, svg animation, animated">' + 
+             '<meta name="author" content="Daniboomerang">' + 
+             '<link rel="author" href="https://es.linkedin.com/in/estevezdani"/>' + 
+             '<meta property="og:title" content="' + socialSharingService.getSocialTitle() + '"/>' +
              '<meta property="og:type" content="' + socialSharingService.getSocialType() + '"/>' + 
              '<meta property="og:image" content="' + socialSharingService.getSocialMedia() + '"/>' +
              '<meta property="og:url" content="' + socialSharingService.getSocialUrl() + '"/>' +
@@ -37,7 +40,7 @@ share.directive('socialSharingMetadata', function($compile, SHARE_BASE_URL, soci
              '<meta name="twitter:title" content="' + socialSharingService.getSocialTitle() + '"/>' +
              '<meta name="twitter:description" content="' + socialSharingService.getSocialDescription() + '"/>' +
              '<meta name="twitter:image" content="' + socialSharingService.getSocialMedia() + '"/>';
-      element.append(metadata);
+      element.find('title').after(sharingMetadata);
     }
   }
 });

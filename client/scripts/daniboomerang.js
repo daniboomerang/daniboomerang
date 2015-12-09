@@ -20,19 +20,9 @@ daniboomerang.config(
   	[ '$stateProvider', '$urlRouterProvider', '$locationProvider',
 	    function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-		    /////////////////////////////
-		    // Redirects and Otherwise //
-		    /////////////////////////////
-
-			// if the path doesn't match any of the urls you configured
-	    	// otherwise will take care of routing the user to the specified url
 	    	$urlRouterProvider.otherwise('/');
 
 			$stateProvider
-		      
-		    //////////////////////////
-		    // State Configurations //
-		    //////////////////////////
 		      
 		    	/*.state('404', {
 		        	url: '/{path:.*}',
