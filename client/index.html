@@ -3,24 +3,29 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html ng-app="daniboomerang"> <!--<![endif]-->
+<html> <!--<![endif]-->
     <head>
         <base href="/"/>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width">
-        
-        <title>Daniel Estevez | Full Stack Web Developer</title>
-        <meta property="og:title" metafb og="title"/>
-        <meta property="og:type" metafb og="type"/>
-        <meta property="og:image" metafb og="image"/>
-        <meta property="og:url" metafb og="url"/>
-        <meta property="og:description" metafb og="description"/>
 
-        <meta name="twitter:card" metatw tw="card"/>
-        <meta name="twitter:title" metatw tw="title"/>
-        <meta name="twitter:image" metatw tw="image">
-        <meta name="twitter:description" metatw tw="description"/>
+        <title>Daniel Estevez | Full Stack Web Developer</title>
+        <meta name="description" content="Daniboomerang is a creative portfolio. An amazing parallax universe aimed to show who I am and my job as web developer">
+        <meta name="keywords" content="fullstack web developer, web developer, software engineer, portfolio, developer, parallax, angularjs, angular, creative portfolio, front end developer, back end developer, svg, svg animation, animated">
+        <meta name="author" content="Daniel Estévez">
+        <link rel="author" href="https://es.linkedin.com/in/estevezdani"/>
+        
+        <meta property="og:title" content="Daniel Estevez - A creative portfolio"/>
+        <meta property="og:type" content="website"/> 
+        <meta property="og:image" content="http://www.daniboomerang.com/images/dboom-universe.png"/>
+        <meta property="og:url" content="http://daniboomerang.com"/>
+        <meta property="og:description" content="Daniboomerang is a creative portfolio. An amazing parallax universe aimed to show who I am and my job as web developer"/>
+
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:title" content="Daniel Estevez - A creative portfolio"/>
+        <meta name="twitter:description" content="Daniboomerang is a creative portfolio. An amazing parallax universe aimed to show who I am and my job as web developer"/>
+        <meta name="twitter:image" content="http://www.daniboomerang.com/images/dboom-universe.png"/>
+        
         
         <!-- HERE THE CSS -->
 
@@ -56,7 +61,7 @@
               <!-- DBOOM -->
                 <link rel="stylesheet" href="styles/dboom-icons/fontcustom/fontcustom.css">
 
-
+        <!-- ************ -->
         <!-- GOOGLE ANALYTICS -->
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -67,12 +72,10 @@
           ga('create', 'UA-42975836-4', 'auto');
           ga('send', 'pageview');
         </script>
-        <!-- **************** -->
-
     </head>
 
     <!-- apply our angular app to our site -->
-    <body>
+    <body ng-app="daniboomerang">
 
       <ui-view></ui-view>
 
