@@ -2,10 +2,12 @@
 
 var foot = angular.module('foot', []);
 
-foot.directive('foot', function(socialSharingService) {
+// Setting up Url into constant
+foot.constant('FOOT_BASE_URL', '/components/common/foot/');
+foot.directive('foot', function(socialSharingService, FOOT_BASE_URL) {
   return {
     restrict: 'E',
-    templateUrl: 'views/foot.html',
+    templateUrl: FOOT_BASE_URL + 'foot.html',
     scope: {},
     compile: function compile(tElement, tAttrs, transclude) {
 

@@ -27,42 +27,38 @@
         <meta name="twitter:image" content="http://www.daniboomerang.com/images/dboom-universe.png"/>
         
         
-        <!-- HERE THE CSS -->
+        <!-- STYLING -->
 
           <!-- CSS DANIBOOMERANG -->
           <link rel="stylesheet" href="styles/daniboomerang.css">
 
           <!-- COMPONENTS -->
             <!-- INTRO -->
-              <link rel="stylesheet" href="components/introduction/styles/intro.css">
-              <link rel="stylesheet" href="components/introduction/styles/rocket.css">
+            <link rel="stylesheet" href="components/introduction/styles/intro.css">
+            <link rel="stylesheet" href="components/introduction/styles/rocket.css">
 
             <!-- COMMON-->
-              <!-- BUTTON -->
-              <link rel="stylesheet" href="components/common/button/button.css">
-              <!-- FOOTER -->
-              <link rel="stylesheet" href="components/common/foot/foot.css">
-              <!-- COMET -->
-              <link rel="stylesheet" href="components/common/comet/comet.css">
+            <link rel="stylesheet" href="components/common/button/button.css"> <!-- BUTTON -->
+            <link rel="stylesheet" href="components/common/foot/foot.css"> <!-- FOOTER -->
+            <link rel="stylesheet" href="components/common/comet/comet.css"> <!-- COMET -->
           
             <!-- PARALLAX -->
-              <link rel="stylesheet" href="components/parallax/styles/parallax.css">
-                <!-- SECTIONS -->
-                <link rel="stylesheet" href="components/parallax/modules/sections/styles/cover.css">
-                <link rel="stylesheet" href="components/parallax/modules/sections/styles/sections.css">
-                <link rel="stylesheet" href="components/parallax/modules/sections/styles/contact.css">
+            <link rel="stylesheet" href="components/parallax/styles/parallax.css">
+              <!-- SECTIONS -->
+              <link rel="stylesheet" href="components/parallax/components/sections/styles/cover.css">
+              <link rel="stylesheet" href="components/parallax/components/sections/styles/sections.css">
+              <link rel="stylesheet" href="components/parallax/components/sections/styles/contact.css">
 
           <!-- VENDOR -->
           <link rel="stylesheet" href="styles/vendor/animate.css">
    
           <!-- CSS ICONS -->
-              <!-- AWESOME -->
-                <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-              <!-- DBOOM -->
-                <link rel="stylesheet" href="styles/dboom-icons/fontcustom/fontcustom.css">
+          <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"> <!-- AWESOME --> 
+          <link rel="stylesheet" href="styles/dboom-icons/fontcustom/fontcustom.css"> <!-- DBOOM -->
 
-        <!-- ************ -->
+        <!-- **************** -->
         <!-- GOOGLE ANALYTICS -->
+        <!-- **************** -->
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -72,6 +68,8 @@
           ga('create', 'UA-42975836-4', 'auto');
           ga('send', 'pageview');
         </script>
+        <!-- **************** -->
+        <!-- **************** -->
     </head>
 
     <!-- apply our angular app to our site -->
@@ -90,21 +88,30 @@
 
         <!-- DANIBOOMERANG SCRIPTS-->
           <script src="scripts/daniboomerang.js"></script>
-          <!-- COMPONENTS -->
-          <!-- INTRO -->
-            <script src="components/introduction/scripts/introduction.js"></script>
-          <!-- COMMON-->
-            <script src="components/common/services.js"></script>
-            <!-- BUTTON -->
-              <script src="components/common/button/button.js"></script>
-            <!-- FOOTER -->
-              <script src="components/common/foot/foot.js"></script>
-            <!-- COMET -->
-              <script src="components/common/comet/comet.js"></script>
-            <!-- COMET -->
-              <script src="components/common/share/share.js"></script>
-          <!-- PARALLAX -->
+          
+          <!-- COMPONENTS -->  
+            <!-- INTRO -->
+              <script src="components/introduction/scripts/introduction.js"></script>
+            
+            <!-- COMMON-->
+              <script src="components/common/cancelAsynchPromiseService.js"></script> <!-- SERVICE CANCEL -->
+              <script src="components/common/button/button.js"></script> <!-- BUTTON -->
+              <script src="components/common/foot/foot.js"></script> <!-- FOOTER -->
+              <script src="components/common/comet/comet.js"></script> <!-- COMET -->
+              <script src="components/common/share/share.js"></script> <!-- SHARE -->
+            
+            <!-- PARALLAX -->
+              <script src="components/parallax/scripts/parallax.js"></script>
+              <script src="components/parallax/scripts/directives.js"></script>
 
+              <!-- COMPONENTS -->         
+                <!-- SECTIONS -->
+                <script src="components/parallax/components/sections/scripts/sections.js"></script>
+                <script src="components/parallax/components/sections/scripts/directives.js"></script>
+                <!-- ALIVE SVGS -->
+                <script src="components/parallax/components/aliveSvgs/scripts/aliveSvgs.js"></script>
+                <script src="components/parallax/components/aliveSvgs/scripts/directives.js"></script>
+                <script src="components/parallax/components/aliveSvgs/scripts/services.js"></script>
         <!-- -->    
 
     </body>

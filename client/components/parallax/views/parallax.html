@@ -1,100 +1,49 @@
-<!-- DANIBOOMERANG APP AS PARALLAX-->
-<div id="parallax-wrapper" class="parallax" du-scroll-container parallax>
-  <div id="cover-parallax-section" class="parallax__section">
-    <div class="parallax__layer parallax__layer--deep">
-      <reveal-background triggeredby="app-starts" delay="1" height="150%" img="cover-space"></reveal-background>
-    </div>
-    <div class="parallax__layer parallax__layer--back">
-      <div id="cover-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="cover-comet-blue" class="comet-blue comet-from-left"></div></div>
-    </div>
-    <div class="parallax__layer parallax__layer--base">
-      <cover></cover>
-    </div>
+<div id="parallax-wrapper" class="parallax" du-scroll-container>
+	<div id="cover-parallax-section" class="parallax__section">
+    	<div class="parallax__layer parallax__layer--deep"><background height="150" image="cover-space"></background></div>
+    	<div class="parallax__layer parallax__layer--back"><comet color="blue"></comet><comet color="red"></comet></div>
+    	<div class="parallax__layer parallax__layer--base"><cover></cover></div>
   </div>
-  <div id="connectivity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.connectivity}">
-    <div class="parallax__layer parallax__layer--base">
-      <div parallax-subsection name="connectivity" type="text-image"></div>
-    </div>
+  <div id="connectivity-parallax-section" class="parallax__section" section-height-interceptor>
+    	<div class="parallax__layer parallax__layer--base"><div section-provider name="connectivity"></div></div>
   </div>
-  <div id="creativity-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.creativity}">
-    <div class="parallax__layer parallax__layer--base">
-      <div parallax-subsection name="creativity" type="text-only"></div>
+  <div id="creativity-parallax-section" class="parallax__section" section-height-interceptor>
+    	<div class="parallax__layer parallax__layer--base"><div section-provider name="creativity"></div></div>
+  </div>
+ 	<div id="remote-working-parallax-section" class="parallax__section" section-height-interceptor>
+    <div class="parallax__layer parallax__layer--deep"><div alive-svg-earth-connectivity id="orbit-earth-connectivity"></div>
     </div>
-  </div>   
-  <div id="remote-working-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.remoteWorking}">
-    <div class="parallax__layer parallax__layer--deep">
-      <div alive-svg-earth-connectivity id="orbit-earth-connectivity"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--base">
-      <div parallax-subsection name="remoteWorking" type="text-image"></div>
-    </div>
-    <div class="parallax__layer parallax__layer--back">
-      <div id="remote-orbit-comet-red" class="spin-right-half orbit-comet"><div id="remote-comet-red" class="comet-red comet-from-left"></div></div>
-    </div>
-  </div>   
+    <div class="parallax__layer parallax__layer--back"><comet color="white"></comet></div>
+  	<div class="parallax__layer parallax__layer--base"><div section-provider name="remote-working"></div></div>
+	</div>
   <div id="remote-working-parallax-images" class="parallax__section">
-    <div class="parallax__layer parallax__layer--base">
-      <div id="without-boundaries"> <!-- This is just to trigger the event onScroll -->
-        <div alive-svg-cliff id="cliff"></div>
-      </div>
-      <a href="#without-boundaries" du-scrollspy></a>
-    </div>
-    <div class="parallax__layer parallax__layer--back">
-      <div alive-svg-iss id="orbit-iss"></div>
-    </div>  
-    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="cliff" id="cliff-books"></div></div>
+  	<div class="parallax__layer parallax__layer--back"><div alive-svg-iss id="orbit-iss"></div></div>  
+   	<div class="parallax__layer parallax__layer--base">
+  		<div id="without-boundaries"><div alive-svg-cliff id="cliff"></div></div><a href="#without-boundaries" du-scrollspy></a> <!-- This is just to trigger the event onScroll -->
+  	</div>
+  	<div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="cliff" id="cliff-books"></div></div>
   </div>
-  <div id="about-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.about}">
-    <div class="parallax__layer parallax__layer--base">
-      <div parallax-subsection name="about" type="text-only"></div>
-    </div>
-  </div>
-  <div id="BE-parallax-images" class="parallax__section">
+  <div id="about-parallax-section" class="parallax__section" section-height-interceptor>
+  	<div class="parallax__layer parallax__layer--base"><div section-provider name="about"></div></div>
+	</div>
+	<div id="BE-parallax-images" class="parallax__section">
     <div class="parallax__layer parallax__layer--deep">
-      <div id="be-orbit-comet-white" class="spin-left-half-faster orbit-comet" style="margin-top: -20vh; margin-left: -10vh;"><div id="be-comet-white" class="comet-white comet-from-left"></div></div>
+     	<div style="margin-top: -20vh; margin-left: -10vh;"><comet color="white"></comet></div>
     </div>
-    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-fe-earth side="BE" id="BE-earth"></div></div>  
-    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="BE" id="BE-books"></div></div>
-    <div class="parallax__layer parallax__layer--base">
-      <div id="back-end"> <!-- This is just to trigger the event onScroll -->
-        <div parallax-subsection name="backEnd" type="text-only"></div>
-        <div alive-svg-ruby id="BE-ruby"></div>
-      </div>
-      <a href="#back-end" du-scrollspy></a>
-    </div>  
-  </div>
-  <div id="loving-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.loving}">
-    <div class="parallax__layer parallax__layer--base">
-    <div parallax-subsection name="loving" type="text-only"></div>
-    </div>
-  </div>
-  <div id="FE-parallax-images" class="parallax__section">
-    <div class="parallax__layer parallax__layer--deep">
-      <div id="fe-orbit-comet-blue" class="spin-right-half orbit-comet" style="margin-top: 100vh;"><div id="be-comet-blue" class="comet-blue comet-from-left"></div></div>
-    </div>
-    <div class="parallax__layer parallax__layer--back"><div alive-svg-be-fe-earth side="FE" id="FE-earth"></div></div>  
-    <div class="parallax__layer parallax__layer--base">
-      <div id="front-end"> <!-- This is just to trigger the event onScroll -->
-        <div parallax-subsection name="frontEnd" type="text-only"></div>
-        <div alive-svg-ipad-pro id="FE-ipad"></div>
-      </div>
-      <a href="#front-end" du-scrollspy></a>
-    </div>
-    <div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="FE" id="FE-books"></div></div>
-  </div>
-  <div id="work-parallax-section" class="parallax__section" ng-style="{'height': dynamicSectionsHeight.work}">
-    <div class="parallax__layer parallax__layer--base">
-      <div parallax-subsection name="work" type="text-image"></div>
-    </div>
+  	<div class="parallax__layer parallax__layer--back"><div alive-svg-be-fe-earth side="BE" id="BE-earth"></div></div>
+  	<div class="parallax__layer parallax__layer--fore"><div alive-svg-books books="BE" id="BE-books"></div></div>
+  	<div class="parallax__layer parallax__layer--base">
+    		<div id="back-end"> <!-- This is just to trigger the event onScroll -->
+        	<back-end></back-end>
+        	<div alive-svg-ruby id="BE-ruby"></div>
+    		</div>
+    		<a href="#back-end" du-scrollspy></a>
+  	</div>
+	</div>
+  <div id="loving-parallax-section" class="parallax__section" section-height-interceptor>
+    <div class="parallax__layer parallax__layer--base"><div section-provider name="loving"></div></div>
   </div>
   <div id="contact-parallax-section" class="parallax__section">
-    <!--<div class="parallax__layer parallax__layer--back">
-      <div id="contact-orbit-comet-blue" class="spin-right-half orbit-comet"><div id="contact-comet-blue" class="comet-blue comet-from-left"></div></div>
-      <div id="contact-orbit-comet-red" class="spin-right-half orbit-comet"><div id="contact-comet-red" class="comet-red comet-from-left"></div></div>
-      <div id="contact-orbit-comet-white" class="spin-right-half-faster orbit-comet"><div id="contact-comet-white" class="comet-white comet-from-left"></div></div>
-    </div>-->
     <div class="parallax__layer parallax__layer--base"><contact></contact></div>
   </div>
 </div>
-<foot></foot>
-<!-- -->

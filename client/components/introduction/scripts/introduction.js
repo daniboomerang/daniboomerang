@@ -2,7 +2,9 @@
 
 var introduction = angular.module('introduction', []);
 
-introduction.config(function($stateProvider, $urlRouterProvider) {
+// Setting up Url into constant
+introduction.constant('INTRODUCTION_BASE_URL', '/components/introduction/');
+introduction.config(function($stateProvider) {
 	$stateProvider
     
     //////////////////////////
@@ -15,9 +17,7 @@ introduction.config(function($stateProvider, $urlRouterProvider) {
     })
 });
 
-// Setting up Url into constant
-introduction.constant('INTRODUCTION_BASE_URL', '/components/introduction/');
-introduction.directive('intro', function($timeout, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService, INTRODUCTION_BASE_URL) {
+introduction.directive('intro', function($timeout, $state, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService, INTRODUCTION_BASE_URL) {
 	return {
 		restrict: 'EA',
 		templateUrl: function(elem, attr){
@@ -141,7 +141,7 @@ introduction.directive('intro', function($timeout, $rootScope, $compile, $docume
 										intro.append("<div id='skip-wrapper' class='animated fadeIn' style='-moz-animation-delay: 2.5s; -webkit-animation-delay: 2.5s; -ms-animation-delay: 2.5s;'><div id='skip' class='animated bounceIn' style='-moz-animation-delay: 3s; -webkit-animation-delay: 3s; -ms-animation-delay: 3s;'>Press 'ENTER' to skip</div></div>");
 										$document.bind("keyup", function(event) {
 											introIsFinished = true;
-							        		if ((event.keyCode === 13) && (isSkipActive)) { startApp(); }
+							        		if ((event.keyCode === 13) && (isSkipActive)) { finishIntro(); }
 							    		});
 									}, 2000));
 								}
@@ -178,21 +178,21 @@ introduction.directive('intro', function($timeout, $rootScope, $compile, $docume
 							goButtonWrapper.attr('class', 'animated rotateOut');
 							$rootScope.$broadcast('event:rocket-takeoff'); }
 
-						/***************************************/
-						// When the rocket ends, we start the app
-						/***************************************/
-						scope.$on('event:rocket-tookoff', function($event){ startApp(); });		
+						/**********************************************/
+						// When the rocket ends, we go to parallax page
+						/**********************************************/
+						scope.$on('event:rocket-tookoff', function($event){ finishIntro(); });		
 					}
 	        	
-	        		function startApp(){
+	        		function finishIntro(){
 						intro.attr('class', 'animated fadeOut');
 						// This timeout doesn´t need to be pushed
 						$timeout(function() { 
 							/*console.log('here a $timeout');*/
 							iElement.remove();
 							intro.remove();
-							$rootScope.$broadcast('app-starts');
 							cancelAsynchPromiseService.cancelTimeouts(timeoutPromises);
+							$state.go('parallax');
 						}, 2000);
 					}
 	        	}

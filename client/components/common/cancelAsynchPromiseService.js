@@ -1,8 +1,8 @@
 'use strict';
 
-var commonServices = angular.module('commonServices', []);
+var cancelAsynchPromiseService = angular.module('cancelAsynchPromiseService', []);
 
-commonServices.factory('cancelAsynchPromiseService', function ($interval, $timeout){
+cancelAsynchPromiseService.factory('cancelAsynchPromiseService', function ($interval, $timeout){
 	
 	return {
 		cancelInterval: function (interval){

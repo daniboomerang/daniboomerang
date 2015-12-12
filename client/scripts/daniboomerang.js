@@ -6,32 +6,27 @@ var daniboomerang = angular.module('daniboomerang', [
 	// VENDOR
 	'720kb.socialshare',
 	// DANIBOOMERANG COMPONENTS
-	'introduction',
-	/*'parallax'*/
+	//'introduction',
+	'parallax',
 		// COMMON
-		'commonServices',
+		'cancelAsynchPromiseService',
 		'foot',
 		'button',
 		'comet',
 		'share'
 ]);
 
-daniboomerang.config(
-  	[ '$stateProvider', '$urlRouterProvider', '$locationProvider',
-	    function ($stateProvider, $urlRouterProvider, $locationProvider) {
+daniboomerang.config(function($locationProvider) { $locationProvider.html5Mode(true); });
 
-	    	$urlRouterProvider.otherwise('/');
+daniboomerang.run(function ($rootScope, $location) {
+	
+	var onPageReload = true;
 
-			$stateProvider
-		      
-		    	/*.state('404', {
-		        	url: '/{path:.*}',
-		          	template: '<page-not-found></page-not-found>'
-		      	})*/
-
-		    $locationProvider.html5Mode(true); 
-	    }
-  	]
-);
-
-
+	$rootScope.$on("$locationChangeSuccess", function (event, current, previous, rejection) {
+		if (onPageReload){
+			onPageReload = false;
+			$location.path('/');
+		}
+	});	
+	
+});

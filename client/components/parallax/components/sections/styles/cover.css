@@ -15,14 +15,14 @@
 
 @media all and (orientation:portrait) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
 @media all and (orientation:landscape) { #cover { padding-top: 5%; } .scroll-down { margin-top: 3%; } }
-@media (min-width: 200px) and (orientation:landscape) { #cover { height: 120%; } }
+@media (min-width: 200px) and (orientation:landscape) { #cover { height: 120%; } #cover-content { margin-top: 15%; } }
 @media (min-width: 200px) and (orientation:portrait) { #cover { height: 120%; padding-top: 25vh; } }
 @media (min-width: 500px) { #cover { height: 120%; padding-top: 25%; } }
 @media (min-width: 768px) { #cover { height: 120%; } }
 @media (min-width: 768px) and (orientation:portrait) { #cover { padding-top: 35%; }.scroll-down { margin-top: 8%; } }
 @media (min-width: 768px) and (orientation:landscape) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
 @media (min-width: 992px) { #cover { height: 200%; } .scroll-down { margin-top: 3%; } }
-@media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15%; } .scroll-down { margin-top: 2%; } }
+@media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15%; } .scroll-down { margin-top: 2%; } #cover-content { margin-top: 8%; } }
 
 /* Large devices (large desktops, 1600px and up) */
 @media (min-width: 1600px) { .cover-content-row { line-height: 1.8; } }

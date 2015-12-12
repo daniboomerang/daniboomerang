@@ -1,57 +1,46 @@
-var parallaxDirectives = angular.module('parallaxDirectives', ['parallaxServices']);
+'use strict';
 
-/*******************************************************/
-/****************** PARALLAX SECTIONS ******************/
-/*******************************************************/
+var parallaxDirectives = angular.module('parallaxDirectives', []);
 
-parallaxDirectives.directive('parallax', function() {
+// Setting up Url into constant
+parallax.constant('PARALLAX_DIRECTIVES_BASE_URL', '/components/parallax/');
+parallax.directive('parallax', function(PARALLAX_DIRECTIVES_BASE_URL) {
   return {
-    restrict: 'A',
-    scope: true,
-    link: function(scope, element){ 
-      scope.dynamicSectionsHeight = {} /* This is a global scope variable updated by the children directives 
-                                       parallax dynamic sections, in order to dynamically determine their height in pixels */    
-    }
-  }
-});
+    restrict: 'E',
+    templateUrl: PARALLAX_DIRECTIVES_BASE_URL + 'views/parallax.html'
+  }  
+})
 
-parallaxDirectives.directive('parallaxSubsection', function($window) {
+
+parallax.directive('background', function(PARALLAX_DIRECTIVES_BASE_URL) {
   return {
-    restrict: 'EA',
-    templateUrl: function (elem, attrs) {
-      var hyphenName =  attrs.name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-      return 'views/sections/' + hyphenName + '.html';
+    restrict: 'E',
+    scope: {
+      image: '@'
     },
+    template: '<div class="animated visibility-hidden" style="height:{{height}}%; width: 100%; background-size: 100%; background-repeat: no-repeat; background-image: url({{imgUrl}});"</div>',
     link: function (scope, element, attrs){
+
       function isImageLoaded(img) {
         if (!img.complete) {return false;}
         if (typeof img.naturalWidth !== "undefined" && img.naturalWidth === 0) { return false; }
         return true;
       }
-      function setCurrentHeight (section) {
-          if ((typeof scope.dynamicSectionsHeight[section] == 0)) { scope.dynamicSectionsHeight[section] = element.prop('offsetHeight'); } 
-          else { scope.dynamicSectionsHeight[section] += element.prop('offsetHeight'); }
-        }
-      function calculateHeight (section, type) {  
-        /* For those sections that contain images, we wait the image to be loaded before calculate the height */
-        if (type == 'text-image') {
-          var img = new Image();
-          if (!isImageLoaded(img)) {
-            img.onload = function () { 
-              setCurrentHeight(section);
-            }
-          }
-          img.src = element.find('img').attr('src');
-        }
-        else if ( type == 'text-only') { setCurrentHeight(section); }   
+
+      function revealBackground(height, imgUrl, el) {
+        scope.height = height;
+        scope.imgUrl = imgUrl;
+        scope.$apply();
+        el.removeClass('visibility-visible');
+        el.addClass('fadeIn');
       }
-      var window = angular.element($window);
-      window.bind('resize', function () {
-        scope.dynamicSectionsHeight[attrs.name] = 0;
-        setCurrentHeight(attrs.name);
-      });
-      scope.dynamicSectionsHeight[attrs.name] = 0;
-      calculateHeight(attrs.name, attrs.type);
+      var img = new Image();
+      if (!isImageLoaded(img)) {
+        img.onload = function () { 
+         revealBackground(attrs.height, img.src, element.find('.animated')); 
+        }
+      }
+      img.src = PARALLAX_DIRECTIVES_BASE_URL + 'images/'+ scope.image +'.svg';
     }
   }
 });
