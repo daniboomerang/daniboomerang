@@ -30,6 +30,12 @@ h2 { font-size: 2em; color: #FF9933 }
 h3 { font-size: 1.7em;  color: rgba(56, 116, 167, 0.9); }
 p { margin: 1.5em 0; }
 
+/* CUSTOM SCROLL BAR */
+
+::-webkit-scrollbar { height: 1px; width: 0px; }
+::-webkit-scrollbar-track-piece  { background-color: red; border: 1px solid #fff; -webkit-border-radius: 6px; }
+::-webkit-scrollbar-thumb:horizontal { background-color: #eee; border: 1px solid #ddd; -webkit-border-radius: 6px; }
+
 .custom-fluid-container { margin-left:2%; margin-right:2%; padding-left:2%; padding-right:2%; }
 
 /* RESPONSIVENESS */

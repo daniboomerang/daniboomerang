@@ -16,7 +16,7 @@ var daniboomerang = angular.module('daniboomerang', [
 		'share'
 ]);
 
-daniboomerang.config(function($locationProvider) { $locationProvider.html5Mode(true); });
+daniboomerang.config(function($locationProvider) { $locationProvider.html5Mode(false); });
 
 daniboomerang.run(function ($rootScope, $location) {
 	

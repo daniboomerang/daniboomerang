@@ -3390,8 +3390,8 @@
                      </g>
                      <g stroke-opacity=".46667" fill-rule="evenodd" transform="matrix(-.41825 -1.0008 1.0008 -.41825 1237.5 1042.9)" stroke="#52bcff" stroke-width=".67443">
                       <g transform="translate(.07244 12.053)">
-                       <ellipse id="ng-node-laptop" stroke-opacity=".0095238" rx="11.871" transform="matrix(-1,0,0,1,-1.9028e-4,4.0212e-4)" stroke="#77d2ff" ry="12.413" filter="url(#e)" cy="-273.16" cx="-395.61" stroke-width=".0070528" fill="url(#radialGradient13041)">
-                        <title stroke="url(#radialGradient13015)" fill="url(#radialGradient13041)">Node Laptop</title>
+                       <ellipse id="ng-node-joystick" stroke-opacity=".0095238" rx="11.871" transform="matrix(-1,0,0,1,-1.9028e-4,4.0212e-4)" stroke="#77d2ff" ry="12.413" filter="url(#e)" cy="-273.16" cx="-395.61" stroke-width=".0070528" fill="url(#radialGradient13041)">
+                        <title stroke="url(#radialGradient13015)" fill="url(#radialGradient13041)">Node Joystick</title>
                        </ellipse>
                        <circle r="5.0625" cy="-273.16" cx="395.67" stroke-width=".81598" fill="url(#radialGradient38240)"/>
                       </g>

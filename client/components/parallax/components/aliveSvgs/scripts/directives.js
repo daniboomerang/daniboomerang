@@ -9,7 +9,7 @@ aliveSvgsDirectives.directive('aliveSvgIss', function($interval, $timeout, cance
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { return '<div id="iss" class="spin-right-whole" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/iss.svg\'"></div>';  },
+    template: function (elem, attrs) { return '<div id="iss" style="border: solid green" class="spin-right-whole" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/iss.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
       var centerLight, lightOne, lightTwo, lightThree, lightFour;
@@ -101,14 +101,16 @@ aliveSvgsDirectives.directive('aliveSvgEt', function($interval, $timeout, cancel
   };
 });  
 
-aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $timeout, $http, cancelAsynchPromiseService, nodeConnectionsService, ALIVE_SVGS_BASE_URL) {
+aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService, ALIVE_SVGS_BASE_URL) {
   return {
     restrict: 'EA',
     scope: {},
     template: function (elem, attrs) { 
+      return '<div id="earth-connectivity" ng-include="\'' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg\'"></div>';
+    
       //return ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg';
       //return ' <div id="wrapper" style="position:absolute;">  <div id="earth-connectivity" style="position:relative;" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg\'"></div></div'
-      return '<div id="earth-connectivity"><object id="earth-connectivity-object" type="image/svg+xml" data="' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg"></object></div>';
+      //return '<div id="earth-connectivity"><object id="earth-connectivity-object" type="image/svg+xml" data="' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg"></object></div>';
       //eturn '<div id="earth-connectivity"><un-svg svg-src="' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg"></un-svg></div>';
 
 
@@ -119,20 +121,16 @@ aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $
       /* Waits the iss SVG to be loaded  */
       /***********************************/
 
-      //scope.$on('$includeContentLoaded', function () { init(); });
+      scope.$on('$includeContentLoaded', function () { init(); });
 
-      $http.get(ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg').then(function(response) {
-      init(element.find('#earth-connectivity-object').contents().find('svg'));
-      });
-
-      function init(svg) {
+      function init() {
 
         /* Connections */
         var connections, DOMElementConnections;
 
         // Create DOMElementConnections and init them
         var connections = nodeConnectionsService.getConnections(attrs.side);
-        var DOMElementConnections = nodeConnectionsService.createDOMElementConnections(svg, connections);
+        var DOMElementConnections = nodeConnectionsService.createDOMElementConnections(element, connections);
         for (var i=0; i<connections.length; i++){
           if (connections[i].isActive){
             // NODE CONNECTION IS VISSIBLE
