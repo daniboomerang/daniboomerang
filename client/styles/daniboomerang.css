@@ -32,9 +32,10 @@ p { margin: 1.5em 0; }
 
 /* CUSTOM SCROLL BAR */
 
-::-webkit-scrollbar { height: 1px; width: 0px; }
-::-webkit-scrollbar-track-piece  { background-color: red; border: 1px solid #fff; -webkit-border-radius: 6px; }
-::-webkit-scrollbar-thumb:horizontal { background-color: #eee; border: 1px solid #ddd; -webkit-border-radius: 6px; }
+::-webkit-scrollbar { height: 1px; width: 1px; }
+::-webkit-scrollbar-track-piece  { border: 1px solid black; }
+::-webkit-scrollbar-thumb:horizontal { border: 1px solid rgba(56, 116, 167, 0.5); }
+::-webkit-scrollbar-thumb:vertical { border: 1px solid rgba(56, 116, 167, 0.9); }
 
 .custom-fluid-container { margin-left:2%; margin-right:2%; padding-left:2%; padding-right:2%; }
 

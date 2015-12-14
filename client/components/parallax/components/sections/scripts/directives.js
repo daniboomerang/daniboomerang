@@ -34,36 +34,54 @@ sections.directive('sectionProvider', function($window, SECTIONS_BASE_URL) {
     link: function (scope, element, attrs, sectionHeightInterceptorCtrl) {
       
       var height;
+      var imagesSrcs;
+      var imgs = [];
 
-      init()
+      init();
 
-      function isImageLoaded(img) {
-        if (!img.complete) {return false;}
-        if (typeof img.naturalWidth !== "undefined" && img.naturalWidth === 0) { return false; }
-        return true;
-      }
-      function setCurrentHeight () { 
-        sectionHeightInterceptorCtrl.updateHeight(element.prop('offsetHeight')); }
-      function calculateHeight () {  
-        if (element.find('img').attr('src')) {
-          var img = new Image();
-          if (!isImageLoaded(img)) {
-            img.onload = function () { 
-              setCurrentHeight();
-            }
-          }
-          img.src = SECTIONS_BASE_URL + element.find('img').attr('src');
-          element.find('img').attr('src', img.src); 
+      function getImagesSrcs(){
+        var srcs = [];
+        var imagesElements = element.find('img');
+        for (var i=0; i < imagesElements.length; i++){ 
+          // extracting the host + port (if so) and adding '/'
+          var hostWithSlash = imagesElements[i].src.split('/')[2] + '/';
+          srcs.push(SECTIONS_BASE_URL + imagesElements[i].src.split(hostWithSlash)[1]);
+          imagesElements[i].src = SECTIONS_BASE_URL + imagesElements[i].src.split(hostWithSlash)[1]
         }
-        else { setCurrentHeight(); }   
+        return srcs;
       }
+
+      function setCurrentHeight () { sectionHeightInterceptorCtrl.updateHeight(element.prop('offsetHeight')); }
+
+      function calculateHeight (imagesSrcs) {
+        if (imagesSrcs.length == 0) { setCurrentHeight(); }
+        else {
+          var cnt = 0;
+          for (var i = 0; i < imagesSrcs.length; i++) {
+              var img = new Image();
+              img.onload = function() {
+                  ++cnt;
+                  if (cnt >= imagesSrcs.length) {
+                    setCurrentHeight();
+                  } else {
+                      // still more images to load
+                  }
+              };
+              img.src = imagesSrcs[i];
+              imgs.push(img);
+          }
+        }  
+      }
+
       function init() {
         height = 0;
+        imagesSrcs = getImagesSrcs();
+        calculateHeight(imagesSrcs);
         var window = angular.element($window);
         window.bind('resize', function () {
-          setCurrentHeight();
+          if (imgs.length == imagesSrcs.length) { setCurrentHeight(); }
+          else { calculateHeight(imagesSrcs); }
         });
-        calculateHeight();
       }
     } 
   }

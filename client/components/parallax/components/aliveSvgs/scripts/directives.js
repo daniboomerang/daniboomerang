@@ -9,7 +9,7 @@ aliveSvgsDirectives.directive('aliveSvgIss', function($interval, $timeout, cance
   return {
     restrict: 'EA',
     scope: {},
-    template: function (elem, attrs) { return '<div id="iss" style="border: solid green" class="spin-right-whole" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/iss.svg\'"></div>';  },
+    template: function (elem, attrs) { return '<div id="iss" class="spin-right-whole" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/iss.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
       var centerLight, lightOne, lightTwo, lightThree, lightFour;
@@ -44,7 +44,7 @@ aliveSvgsDirectives.directive('aliveSvgIss', function($interval, $timeout, cance
      
         function turnOnLights() {
           return $interval(function() {
-            /*console.log('here an $interval');*/
+            console.log('here an $interval');
             (issCenterLight.attr('class') ==  (undefined || 'animated fadeOut')) ? issCenterLight.attr('class', 'animated fadeIn') : issCenterLight.attr('class', 'animated fadeOut');
             (issLightZero.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightZero.attr('class', 'animated fadeIn') : issLightZero.attr('class', 'animated fadeOut');
             (issLightOne.attr('class') ==  (undefined || 'animated fadeOut')) ? issLightOne.attr('class', 'animated fadeIn') : issLightOne.attr('class', 'animated fadeOut');
@@ -107,13 +107,6 @@ aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $
     scope: {},
     template: function (elem, attrs) { 
       return '<div id="earth-connectivity" ng-include="\'' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg\'"></div>';
-    
-      //return ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg';
-      //return ' <div id="wrapper" style="position:absolute;">  <div id="earth-connectivity" style="position:relative;" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg\'"></div></div'
-      //return '<div id="earth-connectivity"><object id="earth-connectivity-object" type="image/svg+xml" data="' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg"></object></div>';
-      //eturn '<div id="earth-connectivity"><un-svg svg-src="' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg"></un-svg></div>';
-
-
     },
     link: function (scope, element, attrs) {
 
@@ -218,7 +211,7 @@ aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $
 
         function turnOnEarthConnections(side){
           return $interval(function() {
-          /*console.log('here an $interval') ;*/
+          console.log('here an $interval');
             turnNewConnection(side);
           }, 1500);
         }
@@ -278,7 +271,7 @@ aliveSvgsDirectives.directive('aliveSvgCliff', function($interval, $timeout, can
         });
 
         // Entering to a text section stops all animations
-        scope.$on('inactive-section:text', function($event){ 
+        scope.$on('active-section:text', function($event){ 
           //rocket.attr('class', '');
           intervalPromiseAirStripLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
           intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
@@ -292,7 +285,7 @@ aliveSvgsDirectives.directive('aliveSvgCliff', function($interval, $timeout, can
 
         function turnOnAirStripLights() { 
           return $interval(function() {
-            /*console.log('here an $interval');*/
+            console.log('here an $interval');
             (airStripLightZero.attr('class') ==  (undefined || 'animated fadeOut')) ? airStripLightZero.attr('class', 'animated fadeIn') : airStripLightZero.attr('class', 'animated fadeOut');
             (airStripLightOne.attr('class') ==  (undefined || 'animated fadeOut')) ? airStripLightOne.attr('class', 'animated fadeIn') : airStripLightOne.attr('class', 'animated fadeOut');
           }, 1000);
@@ -300,7 +293,7 @@ aliveSvgsDirectives.directive('aliveSvgCliff', function($interval, $timeout, can
 
         function turnOnLights() {
           return $interval(function() {
-            /*console.log('here an $interval');*/
+            console.log('here an $interval');
             (rocketCenterLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rocketCenterLight.attr('class', 'animated fadeIn') : rocketCenterLight.attr('class', 'animated fadeOut');
           }, 2000);
         }
@@ -374,13 +367,13 @@ aliveSvgsDirectives.directive('aliveSvgBooks', function($interval, $timeout, can
 
       function turnOnEngines() { 
         return $interval(function() {
-          /*console.log('here an $interval');*/
+          console.log('here an $interval');
           (engine.attr('class') ==  (undefined || 'animated fadeOut')) ? engine.attr('class', 'animated fadeIn') : engine.attr('class', 'animated fadeOut');
         }, 2500);
       }
       function turnOnLights() {
         return $interval(function() {
-          /*console.log('here an $interval');*/
+          console.log('here an $interval');
           (leftLight.attr('class') ==  (undefined || 'animated fadeOut')) ? leftLight.attr('class', 'animated fadeIn') : leftLight.attr('class', 'animated fadeOut');
           (rightLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rightLight.attr('class', 'animated fadeIn') : rightLight.attr('class', 'animated fadeOut');
         }, 2300);
@@ -443,7 +436,7 @@ aliveSvgsDirectives.directive('aliveSvgRuby', function($interval, $timeout, canc
         });
 
         // Entering to a text section stops all animations
-        scope.$on('inactive-section:text', function($event){ 
+        scope.$on('active-section:text', function($event){ 
           intervalPromiseWires = cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
           intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
         });
@@ -451,7 +444,7 @@ aliveSvgsDirectives.directive('aliveSvgRuby', function($interval, $timeout, canc
 
       function turnOnWires() { 
         return $interval(function() {
-        /*console.log('here an $interval');*/
+        console.log('here an $interval');
             currentWire.attr('class', 'visibility-hidden');
             currentWire = element.find('#ng-wire-' + Math.floor((Math.random() * 7)).toString()); 
             currentWire.attr('class', 'animated fadeIn');
@@ -459,7 +452,7 @@ aliveSvgsDirectives.directive('aliveSvgRuby', function($interval, $timeout, canc
       }
       function turnOnNodeAndLights() {
         return $interval(function() {
-        /*console.log('here an $interval');*/
+        console.log('here an $interval');
           (rubyPlatformLight.attr('class') ==  (undefined || 'animated fadeOut')) ? rubyPlatformLight.attr('class', 'animated fadeIn') : rubyPlatformLight.attr('class', 'animated fadeOut');
           (serverLight.attr('class') ==  (undefined || 'animated fadeOut')) ? serverLight.attr('class', 'animated fadeIn') : serverLight.attr('class', 'animated fadeOut');
           (serverReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? serverReflect.attr('class', 'animated fadeIn') : serverReflect.attr('class', 'animated fadeOut');
@@ -565,7 +558,7 @@ aliveSvgsDirectives.directive('aliveSvgBeFeEarth', function($interval, $timeout,
           });
 
         // Entering to a text section stops all animations
-          scope.$on('inactive-section:text', function($event){ 
+          scope.$on('active-section:text', function($event){ 
             intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
             intervalPromiseSQL = cancelAsynchPromiseService.cancelInterval(intervalPromiseSQL);
             intervalPromiseMongo = cancelAsynchPromiseService.cancelInterval(intervalPromiseMongo);
@@ -594,7 +587,7 @@ aliveSvgsDirectives.directive('aliveSvgBeFeEarth', function($interval, $timeout,
           });
 
           // And we stop them when we exit that section
-          scope.$on('inactive-section:text', function($event){ 
+          scope.$on('active-section:text', function($event){ 
             animateNodesPromise = cancelAsynchPromiseService.cancelInterval(animateNodesPromise);
             intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections);
           });
@@ -608,14 +601,14 @@ aliveSvgsDirectives.directive('aliveSvgBeFeEarth', function($interval, $timeout,
 
         function turnOnEarthConnections(side){
           return $interval(function() {
-            /*console.log('here an $interval');*/
+            console.log('here an $interval');
             turnNewConnection(side);
           }, 1500);
         }
 
         function turnOnMapsAndJoystick(){
           return $interval(function() {
-            /*console.log('here an $interval');*/
+            console.log('here an $interval');
             (nodeMaps.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeMaps.attr('class', 'animated fadeIn') : nodeMaps.attr('class', 'animated fadeOut');
             (nodeJoystick.attr('class') ==  (undefined || 'animated fadeOut')) ? nodeJoystick.attr('class', 'animated fadeIn') : nodeJoystick.attr('class', 'animated fadeOut');
           }, 2000);
@@ -623,7 +616,7 @@ aliveSvgsDirectives.directive('aliveSvgBeFeEarth', function($interval, $timeout,
 
         function turnOnSLQ(){
           return $interval(function() {  
-            /*console.log('here an $interval');*/
+            console.log('here an $interval');
             // SQL Server
             (mongoServerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? mongoServerLight.attr('class', 'animated fadeIn') : mongoServerLight.attr('class', 'animated fadeOut');
             (mongoServerReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? mongoServerReflect.attr('class', 'animated fadeIn') : mongoServerReflect.attr('class', 'animated fadeOut');
@@ -636,7 +629,7 @@ aliveSvgsDirectives.directive('aliveSvgBeFeEarth', function($interval, $timeout,
         function turnOnMongo(){
           // Mongo Server
           return $interval(function() {  
-            /*console.log('here an $interval');*/
+            console.log('here an $interval');
             (sqlServerLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerLight.attr('class', 'animated fadeIn') : sqlServerLight.attr('class', 'animated fadeOut');
             (sqlServerReflect.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlServerReflect.attr('class', 'animated fadeIn') : sqlServerReflect.attr('class', 'animated fadeOut');
             (sqlPlatformLight.attr('class') ==  (undefined || 'animated fadeOut')) ? sqlPlatformLight.attr('class', 'animated fadeIn') : sqlPlatformLight.attr('class', 'animated fadeOut');
@@ -737,7 +730,7 @@ aliveSvgsDirectives.directive('aliveSvgIpadPro', function($interval, $timeout, c
         });
 
         // Entering to a text section stops all animations
-        scope.$on('inactive-section:text', function($event){ 
+        scope.$on('active-section:text', function($event){ 
           intervalPromiseWires = cancelAsynchPromiseService.cancelInterval(intervalPromiseWires);
           intervalPromiseServerNode = cancelAsynchPromiseService.cancelInterval(intervalPromiseServerNode);
         });
@@ -745,7 +738,7 @@ aliveSvgsDirectives.directive('aliveSvgIpadPro', function($interval, $timeout, c
 
       function turnOnWires() { 
         return $interval(function() {
-        /*console.log('here an $interval');*/
+        console.log('here an $interval');
           currentWire.attr('class', 'visibility-hidden');
           currentWire = element.find('#ng-wire-' + Math.floor((Math.random() * 7)).toString()); 
           currentWire.attr('class', 'animated fadeIn');
@@ -754,7 +747,7 @@ aliveSvgsDirectives.directive('aliveSvgIpadPro', function($interval, $timeout, c
 
       function turnOnNode() { 
         return $interval(function() {
-        /*console.log('here an $interval');*/
+        console.log('here an $interval');
           (node.attr('class') ==  (undefined || 'animated fadeOut')) ? node.attr('class', 'animated fadeIn') : node.attr('class', 'animated fadeOut');
         }, 2500);
       }

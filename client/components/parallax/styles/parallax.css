@@ -85,13 +85,13 @@
   #remote-working-parallax-images .parallax__layer--base { height: 180vh; }
   #remote-working-parallax-images .parallax__layer--back { height: 140vh; margin-top: 60vh; }
   #cliff { height: 110%; width: 110%; }
-  #orbit-iss { margin-left: 5vh; margin-top: -15vh;  height: 55vh; width: 55vh; }
+  #orbit-iss { margin-left: 0vh; margin-top: -15vh;  height: 55vh; width: 55vh; }
   #orbit-earth-connectivity { width: 100%; }
   #earth-connectivity { height:100%; width:100% }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-  #orbit-iss { margin-left: 5vh; margin-top: -20vh;  height: 55vh; width: 55vh; }
+  #orbit-iss { margin-left: 0vh; margin-top: -20vh;  height: 55vh; width: 55vh; }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -99,7 +99,7 @@
   #remote-working-parallax-images .parallax__layer--fore { margin-top: 40vh; }
   #remote-working-parallax-images .parallax__layer--base { height: 160vh; }
   #remote-working-parallax-images .parallax__layer--back { margin-top: 80vh; }
-  #orbit-iss { margin-left: 10vh; margin-top: -15vh;  height: 45vh; width: 45vh; }
+  #orbit-iss { margin-left: 0vh; margin-top: -15vh;  height: 45vh; width: 45vh; }
 }
 @media (min-width: 640px) and (max-width: 767px) {
   #remote-working-parallax-images { height: 105vh; }
