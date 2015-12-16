@@ -51,8 +51,8 @@ parallax.run(function($rootScope, $location, SECTIONS) {
 		if(hash) {
 			var section = hash.replace('#', '');
 			//Automaticly update location
-			$location.path(section);
-			$rootScope.$apply();
+			/*$location.path(section);
+			$rootScope.$apply();*/
 			if (SECTIONS.COVER == hash.substr(1)){
 				$rootScope.$broadcast('active-section:cover');
 				$rootScope.$broadcast('active-section:text');

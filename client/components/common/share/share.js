@@ -10,7 +10,7 @@ share.factory('socialSharingService', function (DANIBOOMERANG_URL, SHARE_BASE_UR
   
   var socialDescription = 'An amazing parallax universe aimed to show who I am and my job as web developer';
   var socialUrl = DANIBOOMERANG_URL;
-  var socialMedia = DANIBOOMERANG_URL + SHARE_BASE_URL + 'images/dboom-universe.png';
+  var socialMedia = DANIBOOMERANG_URL + SHARE_BASE_URL + 'dboom-universe.png';
   var socialType = 'website';
   var socialTitle = 'Daniel Estevez - A creative portfolio';
 

@@ -1,6 +1,10 @@
 {
   "name": "daniboomerang",
   "version": "1.0.0",
+  "engines": {
+    "node": "0.12.7",
+    "npm": "2.11.3"
+  },
   "description": "Daniboomerang is a creative portfolio. An amazing parallax universe aimed to show who I am and my job as web developer",
   "author": "Daniel Estevez <estevez.dani@gmail.com>",
   "keywords": [ "svg", "svg", "svg", "animation", "animated", "parallax", "angularjs", "angular"],

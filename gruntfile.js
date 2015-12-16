@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         protractor: {
             options: {
                 configFile: "./test/karma-e2e.conf.js",
-                keepAlive: true, // The grunt process stops when the test fails.
+                keepAlive: false, // The grunt process stops when the test fails.
                 noColor: false, // We use colors in its output.
                 args: { }
             },

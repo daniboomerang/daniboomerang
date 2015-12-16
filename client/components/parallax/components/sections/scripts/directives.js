@@ -189,6 +189,7 @@ sectionsDirectives.directive('contact', function($document, $timeout, SECTIONS_B
      compile: function compile(tElement, tAttrs, transclude) {
 
       // DOM ELEMENTS
+      var contact = tElement.find('#contact');
       var contactDboomShareId = tElement.find('#contact-dboom-share');
       var contactDboomGithubId = tElement.find('#contact-dboom-github');
       var contactInfoId = tElement.find('#contact-info');
@@ -200,6 +201,8 @@ sectionsDirectives.directive('contact', function($document, $timeout, SECTIONS_B
             var delayAnimation = '-moz-animation-delay:' + delay + 's; -webkit-animation-delay:' + delay + 's; -ms-animation-delay:' + delay + 's;'
             element.attr('style', delayAnimation);            
           }
+
+          contact.attr('style', 'background-size: 100%; background-repeat:no-repeat; background-image: url(' + SECTIONS_BASE_URL + 'images/outer-space.svg);'); 
 
           // Lets hide the elements before the view is compiled
           contactDboomShareId.attr('class', 'visibility-hidden');

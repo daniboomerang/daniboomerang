@@ -2,7 +2,7 @@
 /* CONTACT */
 /***********/
 
-#contact { height: 100vh; }
+#contact { height: 100%; }
 .contact-row { text-align: center; width: 100%; margin-bottom: 5%; }
 
 /* ARROW */
