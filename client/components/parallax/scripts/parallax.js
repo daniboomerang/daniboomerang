@@ -29,16 +29,6 @@ parallax.constant('SECTIONS', {
 });
 parallax.config(function($stateProvider) {
 
-	// Example of using function rule as param
-    /*$urlRouterProvider.otherwise(function($injector, $location){
-       var section = $location.path().replace('/', '');
-       if (!((section == SECTIONS.COVER) || (section == SECTIONS.CONNECTIVITY) || (section == SECTIONS.CREATIVITY)
-        || (section == SECTIONS.REMOTE_WORKING) || (section == SECTIONS.WITHOUT_BOUNDARIES) || (section == SECTIONS.ABOUT) || (section == SECTIONS.BACK_END)
-        || (section == SECTIONS.LOVING) || (section == SECTIONS.FRON_END) || (section == SECTIONS.ABOUT))) {
-       	$location.path('/');
-       }
-    });*/
-
 	$stateProvider
 
     //////////////////////////

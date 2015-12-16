@@ -140,8 +140,10 @@ introduction.directive('intro', function($timeout, $state, $rootScope, $compile,
 										// We make the skip option available
 										intro.append("<div id='skip-wrapper' class='animated fadeIn' style='-moz-animation-delay: 2.5s; -webkit-animation-delay: 2.5s; -ms-animation-delay: 2.5s;'><div id='skip' class='animated bounceIn' style='-moz-animation-delay: 3s; -webkit-animation-delay: 3s; -ms-animation-delay: 3s;'>Press 'ENTER' to skip</div></div>");
 										$document.bind("keyup", function(event) {
-											introIsFinished = true;
-							        		if ((event.keyCode === 13) && (isSkipActive)) { finishIntro(); }
+											if (!introIsFinished) {
+												introIsFinished = true;
+							        			if ((event.keyCode === 13) && (isSkipActive)) { finishIntro(); }
+							        		}
 							    		});
 									}, 2000));
 								}

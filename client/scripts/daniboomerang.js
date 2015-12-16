@@ -6,7 +6,7 @@ var daniboomerang = angular.module('daniboomerang', [
 	// VENDOR
 	'720kb.socialshare',
 	// DANIBOOMERANG COMPONENTS
-	//'introduction',
+	'introduction',
 	'parallax',
 		// COMMON
 		'cancelAsynchPromiseService',
@@ -16,17 +16,22 @@ var daniboomerang = angular.module('daniboomerang', [
 		'share'
 ]);
 
-daniboomerang.config(function($locationProvider) { $locationProvider.html5Mode(false); });
+daniboomerang.config(function($locationProvider) { 
 
-daniboomerang.run(function ($rootScope, $location) {
-	
+	$locationProvider.html5Mode({
+	  enabled: true,
+	  requireBase: false
+	});	
+
+});
+
+daniboomerang.run(function ($rootScope, $window, $location) {
+
 	var onPageReload = true;
 
-	$rootScope.$on("$locationChangeSuccess", function (event, current, previous, rejection) {
-		if (onPageReload){
-			onPageReload = false;
-			$location.path('/');
-		}
-	});	
+	if (onPageReload){
+		onPageReload = false;
+		$location.path('/');
+	}
 	
 });
