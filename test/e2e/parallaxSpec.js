@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Daniboomerang - common scenario for all devices when on load', function() {
+describe('Daniboomerang - common scenario for all devices entering at parallax state', function() {
 
   /////////////////////////////
   /**** DANIBOOMERANG.COM ****/
@@ -9,39 +9,12 @@ describe('Daniboomerang - common scenario for all devices when on load', functio
   beforeEach(function() {
     browser.get('/');
     browser.ignoreSynchronization = true;
+    browser.sleep(4000);
+    browser.actions().sendKeys(protractor.Key.ENTER).perform();
+    console.log('asdasddas');
     browser.sleep(3000);
   });
   
-
-  //////////////////
-  // INTRODUCTION //
-  //////////////////
-
-  // scope.$on('active-section:cover') 
-  it("should append the rocket $on(active-section:cover)", function() {
-    browser.sleep(10000);
-    var rocket = element(by.id('alive-svg-rocket'));
-    expect(rocket.isPresent()).toBe(true);
-  });
-
-  // scope.$on('event:rocket-firstProjection')
-  it("should display the button $on(event:rocket-firstProjection)", function() {
-    browser.sleep(23000);
-    var goButton = element(by.id('go-button'));
-    expect(goButton.isPresent()).toBe(true);
-    expect(goButton.getAttribute('class')).toMatch('animated fadeIn');
-  });
-  
-  // scope.$on('event:rocket-tookoff')
-  it("should start the app $on(event:rocket-tookoff)", function() {
-    browser.sleep(26000);
-    var goButton = element(by.id('go-button'));
-    expect(goButton.isPresent()).toBe(true);
-    expect(goButton.getAttribute('class')).toMatch('animated fadeIn');
-    var dboomButtonLink = element.all(by.css('.dboom-button-link')).get(0);
-    dboomButtonLink.click();
-  });
-
   //////////////
   // PARALLAX //
   //////////////  

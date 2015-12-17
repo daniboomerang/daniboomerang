@@ -166,7 +166,7 @@
 /* BACK END IMAGES SECTION */
 /***************************/
 #BE-parallax-images { z-index: 1; margin-top: 50vh; }
-#BE-parallax-images .parallax__layer--deep { height: 150vh; background-size: 100%;  background-repeat:no-repeat; background-image: url(/images/BE-space.svg); }
+#BE-parallax-images .parallax__layer--deep { height: 150vh; }
 #BE-parallax-images .parallax__layer--back { }
 #BE-parallax-images .parallax__layer--base { }
 #BE-parallax-images .parallax__layer--fore { }
@@ -329,7 +329,7 @@
 /* FRONT END IMAGES SECTION */
 /****************************/
 #FE-parallax-images { z-index: 2; margin-top: 50vh; }
-#FE-parallax-images .parallax__layer--deep { height: 200vh; background-size: 100%; background-repeat:no-repeat; background-image: url(/images/FE-space.svg);}
+#FE-parallax-images .parallax__layer--deep { height: 200vh; }
 #FE-parallax-images .parallax__layer--back { }
 #FE-parallax-images .parallax__layer--base { }
 #FE-parallax-images .parallax__layer--fore { }
