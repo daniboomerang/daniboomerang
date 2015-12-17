@@ -4,8 +4,9 @@ describe('foot', function() {
 
   beforeEach(function (){
 
-    module('daniboomerangDirectives');
+    module('share');
     module('duScroll');
+    module('foot');
     module('htmlTemplates');
   
     inject(function($rootScope, $compile) {
@@ -116,6 +117,7 @@ describe('foot', function() {
     // Toogling the share menu hides it
     isolateScope.toogleShareMenu();
     expect(shareMenuWrapper.attr('class')).toEqual('animated fadeOutDown');
+    
   });
 
 });

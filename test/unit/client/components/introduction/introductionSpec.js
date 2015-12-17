@@ -1,17 +1,20 @@
 describe('Introduction', function() {
   
 	var elm, scope;
+	var INTRODUCTION_BASE_URL = '/components/introduction/';
 
 	beforeEach(function (){
-
-		module('daniboomerangIntro');
-		module('daniboomerangServices');
+		
+		module('ui.router');
+		module('cancelAsynchPromiseService');
+		module('share');
+		module('introduction');
 		module('htmlTemplates');
 
 		inject(function($injector, $compile) {
 
 	 		$rootScope = $injector.get('$rootScope');	   
-			elm = angular.element('<div id="intro-wrapper" daniboomerang-intro-directive></div>');
+			elm = angular.element('<intro></intro>');
 			scope = $rootScope;
 			$compile(elm)(scope);
 			scope.$digest();
@@ -38,13 +41,10 @@ describe('Introduction', function() {
 			expect(scrollDownArrow.length).toBe(1);
 	});	
 
-    it('should be listening "active-section:cover" and act accordingly', inject(function($timeout, $templateCache){ 
-
-		$rootScope.$broadcast('active-section:cover');
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('active-section:cover');
+    it('should display the title', inject(function($timeout, $templateCache){ 
 
 		// Mocking the rocket ng-include
-		$templateCache.put('/images/rocket.svg', '');
+		$templateCache.put(INTRODUCTION_BASE_URL + 'images/rocket.svg', '');
 
 		// Intro
 		var intro = elm.find('#intro');
@@ -82,10 +82,7 @@ describe('Introduction', function() {
 		var intro = elm.find('#intro');
 		expect(intro.length).toBe(1);
 		expect(intro.hasClass('animated fadeOut')).toBe(true);
-
-		// Title
-		$timeout.flush(2001);
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('app-starts');
+		
     }));
     	
 });

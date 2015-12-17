@@ -10,7 +10,7 @@ sectionsDirectives.constant('SECTIONS_BASE_URL', '/components/parallax/component
  ****** ARE LOADED AND SETSUP THE SECTION HEIGHT INTERCEPTOR WITH ITS HEIGHT *****
 **********************************************************************************/
 
-sections.directive('sectionHeightInterceptor', function() {
+sectionsDirectives.directive('sectionHeightInterceptor', function() {
   return {
     restrict: 'A',
     controller: function($scope, $element, $attrs, $transclude) { 
@@ -22,7 +22,7 @@ sections.directive('sectionHeightInterceptor', function() {
   }
 });
 
-sections.directive('sectionProvider', function($window, SECTIONS_BASE_URL) {
+sectionsDirectives.directive('sectionProvider', function($window, SECTIONS_BASE_URL) {
   return {
     restrict: 'A',
     scope: true,
@@ -160,7 +160,7 @@ sectionsDirectives.directive('cover', function(SECTIONS_BASE_URL) {
 /*******************************************/
 /***************** BACK END ****************/
 /*******************************************/
-sections.directive('backEnd', function(SECTIONS_BASE_URL) {
+sectionsDirectives.directive('backEnd', function(SECTIONS_BASE_URL) {
   return {
     restrict: 'E',
     templateUrl: SECTIONS_BASE_URL + 'views/back-end.html'
@@ -170,7 +170,7 @@ sections.directive('backEnd', function(SECTIONS_BASE_URL) {
 /********************************************/
 /***************** FRONT END ****************/
 /********************************************/
-sections.directive('frontEnd', function(SECTIONS_BASE_URL) {
+sectionsDirectives.directive('frontEnd', function(SECTIONS_BASE_URL) {
   return {
     restrict: 'E',
     templateUrl: SECTIONS_BASE_URL + 'views/front-end.html'

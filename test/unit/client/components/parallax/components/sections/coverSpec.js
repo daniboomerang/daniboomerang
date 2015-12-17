@@ -4,7 +4,7 @@ describe('Cover', function() {
 
 	beforeEach(function (){
 
-		module('daniboomerangDirectives');
+		module('sectionsDirectives');
 		module('htmlTemplates');
 
 		inject(function($injector, $compile) {
@@ -20,10 +20,7 @@ describe('Cover', function() {
 		});
 	});
   
-    it('should be listening "event:app-starts" and adds the animated classes to the DOM', function (){ 
-		
-		$rootScope.$broadcast('app-starts');
-		expect($rootScope.$broadcast).toHaveBeenCalledWith('app-starts');
+    it('should add the animated classes to the DOM', function (){ 
 
 		/* Checking that the directive adds the classes as expected */
 		// List elements

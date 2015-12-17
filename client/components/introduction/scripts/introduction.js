@@ -104,7 +104,7 @@ introduction.directive('intro', function($timeout, $state, $rootScope, $compile,
 					 	// Lets set intro background	
 						intro.css('background-size', '100%');
 						intro.css('background-repeat', 'no-repeat');
-						var backgroundImageUrl = 'url(' + INTRODUCTION_BASE_URL + '/images/intro-space.svg)';
+						var backgroundImageUrl = 'url(' + INTRODUCTION_BASE_URL + 'images/intro-space.svg)';
       					intro.css('background-image', backgroundImageUrl);
 
 						// Init Dom elements with animations
@@ -208,7 +208,7 @@ introduction.directive('aliveSvgRocket', function($interval, $timeout, $q, $root
   	return {
 	    restrict: 'EA',
 	    scope: {},
-	    template: function (elem, attrs) { return '<div id="orbit-rocket" class="arrival"><div id="rocket" ng-include=" \'' + INTRODUCTION_BASE_URL + '/images/rocket.svg\'"></div></div>';  },
+	    template: function (elem, attrs) { return '<div id="orbit-rocket" class="arrival"><div id="rocket" ng-include=" \'' + INTRODUCTION_BASE_URL + 'images/rocket.svg\'"></div></div>';  },
 	    link: function (scope, element, attrs) {
 
 			var orbitRocket, rocket, rightEngineFull, rightEngine, centerEngineFull,

@@ -7,7 +7,7 @@ describe('Animated Section', function() {
 	// excuted before each "it" is run.
 	beforeEach(function (){
 
-		module('daniboomerangDirectives');
+		module('sectionsDirectives');
 		module('htmlTemplates');
 
 		// inject services.

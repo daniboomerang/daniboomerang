@@ -4,7 +4,7 @@ describe('Button', function() {
 
 	beforeEach(function (){
 
-		module('daniboomerangDirectives');
+		module('button');
 		module('htmlTemplates');
 
 		inject(function($injector, $compile) {
