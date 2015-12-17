@@ -178,3 +178,12 @@
 
 // });
 
+  // Lets click on 'to top button'
+	  // var toTopButton = footerWrapper.element(by.id('to-top-button'));
+	  // expect(toTopButton.isPresent()).toBe(true);
+	  // var toTopButtonLink = toTopButton.element(by.css('.dboom-button-link'));
+	  // expect(toTopButtonLink.isPresent()).toBe(true);
+	  // toTopButtonLink.click();
+	  // browser.sleep(4000);
+	  // // it scrolls to the Cover (check url)
+	  // expect(browser.getCurrentUrl()).toContain('/#/cover');

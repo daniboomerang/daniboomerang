@@ -11,7 +11,6 @@ describe('Daniboomerang - common scenario for all devices entering at parallax s
     browser.ignoreSynchronization = true;
     browser.sleep(4000);
     browser.actions().sendKeys(protractor.Key.ENTER).perform();
-    console.log('asdasddas');
     browser.sleep(3000);
   });
   
