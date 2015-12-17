@@ -9,7 +9,7 @@
 .parallax__layer--fore { -webkit-transform: translateZ(90px) scale(.7); transform: translateZ(90px) scale(.7); z-index: 4; }
 .parallax__layer--base { -webkit-transform: translateZ(0); transform: translateZ(0); z-index: 3; }
 .parallax__layer--back { -webkit-transform: translateZ(-300px) scale(2); transform: translateZ(-300px) scale(2); z-index: 3; }
-.parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; left: -5%; }
+.parallax__layer--deep { -webkit-transform: translateZ(-600px) scale(3); transform: translateZ(-600px) scale(3); z-index: 1; }
 
 /*****************/
 /* COVER SECTION */
