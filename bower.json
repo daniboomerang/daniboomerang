@@ -1,20 +1,12 @@
 {
   "name": "daniboomerang",
-  "keywords": [
-    "portfolio",
-    "parallax",
-    "animated",
-    "web",
-    "angular",
-    "angularjs"
-  ],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "www.daniboomerang.com",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "1.4.x",
-    "angular-route": "1.4.x",
+    "angular-ui-router": "0.2.15",
     "angular-loader": "1.4.x",
     "angular-mocks": "1.4.x",
     "angular-scroll": "0.6.5",

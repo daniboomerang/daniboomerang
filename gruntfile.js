@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         protractor: {
             options: {
                 configFile: "./test/karma-e2e.conf.js",
-                keepAlive: true, // The grunt process stops when the test fails.
+                keepAlive: false, // The grunt process stops when the test fails.
                 noColor: false, // We use colors in its output.
                 args: { }
             },
@@ -63,6 +63,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('e2eCI', ['serverAsync', 'protractor']);
     grunt.registerTask('e2eDEV', ['protractor']);
-    grunt.registerTask('testDEV', ['updateWebdriver', 'e2eDEV', 'unitDEV']);
-    grunt.registerTask('testCI', ['updateWebdriver', 'e2eCI','unitCI']);
+    grunt.registerTask('testDEV', ['updateWebdriver', 'unitDEV', 'e2eDEV']);
+    grunt.registerTask('testCI', ['updateWebdriver', 'unitCI', 'e2eCI']);
 };
