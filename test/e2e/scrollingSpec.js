@@ -5,7 +5,7 @@ describe('Daniboomerang - Scrolling scenario far all devices', function() {
 	var originalTimeout;
     beforeEach(function() {
       originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
-      jasmine.DEFAULT_TIMEOUT_INTERVAL = 40000;
+      jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
     });
 
 	beforeEach(function() {
@@ -19,7 +19,7 @@ describe('Daniboomerang - Scrolling scenario far all devices', function() {
  	// FROM UP AND DOWN BUTTONS //
  	//////////////////////////////
 
-   	it('should scroll down when clicking at the cover-down arrow', function() {
+   	it('should scroll from top to bottom and bottom to top', function() {
 
    		// Perparing Up, Down and Current section of the footer
 
@@ -99,7 +99,7 @@ describe('Daniboomerang - Scrolling scenario far all devices', function() {
 	/// FROM COVER ///
 	//////////////////
 
-   	it('should contain a bar with the 4 link sections', function() {
+   	it('should scroll to the right sections from the cover navbar', function() {
 
    		browser.sleep(5000);
 
