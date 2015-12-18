@@ -34,7 +34,7 @@ blockquote p { display: inline; }
 #contact { }
 
 #connectivity { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
-#client-server-diagram { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 5vh; }
+#client-server-diagram { font-size: 1.05em; padding-top: 5vh; }
 #creativity { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
 #remote-working { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
 #back-end-title { font-size: 1.05em; margin-left:10%; margin-right:10%; margin-top: -50vh; padding-top: 30vh; }
