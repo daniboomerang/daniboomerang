@@ -1,0 +1,48 @@
+/*********/
+/* COVER */
+/*********/
+
+#cover { color: white; }
+#cover-content { text-align: center; margin-top: 5%; }
+#scroll-down { font-size: 0.8em; margin-bottom: 5%; }
+
+.cover-content-row { line-height: 1.5; }
+.cover-text .name { display: block; font-size: 1.2em; margin-bottom: 0.5%; }
+.cover-text .skills { display: block; text-transform: uppercase; font-size: 1.4em; margin-bottom: 0.5%; }
+
+/*========== RESPONSIVENESS FOR COVER ==========*/
+
+@media all and (orientation:portrait) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
+@media all and (orientation:landscape) { #cover { padding-top: 5%; } .scroll-down { margin-top: 3%; } }
+@media (min-width: 200px) and (orientation:landscape) { #cover { height: 120%; } #cover-content { margin-top: 15%; } }
+@media (min-width: 200px) and (orientation:portrait) { #cover { height: 120%; padding-top: 25vh; } }
+@media (min-width: 500px) { #cover { height: 120%; padding-top: 25%; } }
+@media (min-width: 768px) { #cover { height: 120%; } }
+@media (min-width: 768px) and (orientation:portrait) { #cover { padding-top: 35%; }.scroll-down { margin-top: 8%; } }
+@media (min-width: 768px) and (orientation:landscape) { #cover { padding-top: 15%; } .scroll-down { margin-top: 8%; } }
+@media (min-width: 992px) { #cover { height: 200%; } .scroll-down { margin-top: 3%; } }
+@media (min-width: 1024px) { #cover { height: 150%; } #cover { padding-top: 15%; } .scroll-down { margin-top: 2%; } #cover-content { margin-top: 8%; } }
+
+/* Large devices (large desktops, 1600px and up) */
+@media (min-width: 1600px) { .cover-content-row { line-height: 1.8; } }
+
+/****************/
+/* COVER NAVBAR */
+/****************/
+
+	#cover-navbar { margin-bottom: 10%; padding: 0.5em 1.5em 0em 1.5em; }
+	#cover-navbar ul { list-style-type: none; margin: 0; padding: 0; }
+	#cover-navbar ul li { width: 25%; float: left; }
+	#cover-navbar ul li a { display: block; padding-bottom: 7%; border-bottom: solid white 1px; text-align: center; color: white; }
+	#cover-navbar ul li a:hover { border-bottom: solid #FF9933 1px; color: #FF9933; transition: all .7s ease-in-out; }
+	#cover-navbar ul li a:focus { text-decoration: none; }
+
+	/*========== RESPONSIVENESS FOR COVER NAVBAR ==========*/
+
+	@media (max-width: 680px) { 
+		#cover-navbar { padding: 1em 2em 1em 2em; white-space: nowrap; overflow-x: scroll; overflow-y: hidden; border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; -webkit-border-radius: 7px 7px 7px 7px; border: 1px outset #000000; -webkit-box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); -moz-box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); box-shadow: inset 0px 0px 6px 0px rgba(255,255,255,0.3); }
+		#cover-navbar ul { list-style: none; }
+		#cover-navbar ul li { float: none; width: auto; margin-right: 12%; display: inline-block; /* if ie7 support needed */ *display: inline; zoom: 1; }
+		#cover-navbar ul li a { border-bottom: none; }
+		#cover-navbar ul li a:hover { border-bottom: none; }
+	}
