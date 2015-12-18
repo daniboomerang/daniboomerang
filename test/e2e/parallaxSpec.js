@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Daniboomerang - common scenario for all devices entering at parallax state', function() {
+describe('Daniboomerang - Parallax for all devices', function() {
 
   /////////////////////////////
   /**** DANIBOOMERANG.COM ****/

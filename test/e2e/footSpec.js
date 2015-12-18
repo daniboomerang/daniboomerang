@@ -1,4 +1,6 @@
-describe('Daniboomerang - foot scenario for all devices', function() {
+'use strict';
+
+describe('Daniboomerang - Foot scenario for all devices', function() {
 
 	var foot, footer;
 	var buttonsLeftSideWrapper, shareMenuWrapper, buttonsRightSideWrapper, currentSectionWrapper, toNextUpButtonWrapper, toNextDownButtonWrapper, cvButtonWrapper, shareButtonWrapper; 

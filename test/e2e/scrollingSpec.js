@@ -1,189 +1,147 @@
-// describe('Daniboomerang - scrolling scenario', function() {
+'use strict';
 
-//  beforeEach(function() {
-//    browser.get('/');
-//    browser.ignoreSynchronization = true;
-//    browser.sleep(3000);
-//    browser.actions().sendKeys(protractor.Key.ENTER).perform();
-//    browser.sleep(2000);
-//  });
+describe('Daniboomerang - Scrolling scenario far all devices', function() {
 
-//  it('should scroll to cover section', function() {
-//    expect(browser.getCurrentUrl()).toContain('/#/cover');
-//  });
-  
-//  /////////////////
-//  // ON SECTIONS //
-//  /////////////////
+	var originalTimeout;
+    beforeEach(function() {
+      originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+      jasmine.DEFAULT_TIMEOUT_INTERVAL = 40000;
+    });
 
-//    it('should scroll from section to section when clicking at the topnavbar links ', function() {
+	beforeEach(function() {
+		browser.get('/');
+		browser.sleep(4000);
+		browser.actions().sendKeys(protractor.Key.ENTER).perform();
+		browser.sleep(3000);
+	});
 
-//      // Go to the the last section
-//          var contactSection = element(by.id('contact'));
-//          browser.driver.executeScript("arguments[0].scrollIntoView(true);", contactSection.getWebElement());
-//          browser.sleep(4000);
+ 	//////////////////////////////
+ 	// FROM UP AND DOWN BUTTONS //
+ 	//////////////////////////////
 
-//      // header is not expanded 
-//      var headerElement = element(by.tagName('header'));
-//        expect(headerElement.isPresent()).toBe(true);
-//        expect(headerElement.element(by.css('.expand')).isPresent()).toBe(false);
+   	it('should scroll down when clicking at the cover-down arrow', function() {
+
+   		// Perparing Up, Down and Current section of the footer
+
+   		var toNextDownButtonWrapper = element(by.id('to-next-down-button-wrapper'));
+		expect(toNextDownButtonWrapper.isPresent()).toBe(true);
+		var toNextDownButtonLink = toNextDownButtonWrapper.element(by.css('.dboom-button-link'));
+		expect(toNextDownButtonLink.isPresent()).toBe(true); 
+		var toNextUpButtonWrapper = element(by.id('to-next-up-button-wrapper'));
+       	expect(toNextUpButtonWrapper.isPresent()).toBe(true);
+		var toNextUpButtonLink = toNextUpButtonWrapper.element(by.css('.dboom-button-link'));
+		expect(toNextUpButtonLink.isPresent()).toBe(true); 
+		var currentSectionWrapper = element(by.id('current-section-wrapper'));
+
+   		// LETS GO DOWN!!!!
+
+     	///////////// Click down: Connectivity ///////////
+    	var cover = element(by.id('cover'));
+      	expect(cover.isPresent()).toBe(true);
+      	expect(cover.element(by.id('cover-content')).isPresent()).toBe(true);
+      	expect(cover.element(by.id('cover-footer')).isPresent()).toBe(true); 
+      	var coverFooter = cover.element(by.id('cover-footer'));
+      	var scrollDownButton = cover.element(by.id('scroll-down'));
+      	expect(scrollDownButton.isPresent()).toBe(true);
+      	var scrollDownButtonLink = scrollDownButton.element(by.id('scroll-down-link'));
+      	expect(scrollDownButtonLink.isPresent()).toBe(true);
+    	scrollDownButtonLink.click();
+    	browser.sleep(3500);
+
+     	///////////// click to next: About ///////////
+		toNextDownButtonLink.click();
+		browser.sleep(3500);
+		expect(currentSectionWrapper.getText("text")).toEqual('ABOUT');
+
+     	///////////// Click to next: Loving ///////////
+		toNextDownButtonLink.click();
+		browser.sleep(3500);
+		expect(currentSectionWrapper.getText("text")).toEqual('LOVING');
+
+     	///////////// Click to next: work ///////////
+    	toNextDownButtonLink.click();
+    	browser.sleep(3500);
+    	expect(currentSectionWrapper.getText("text")).toEqual('WORK');
       
-//      ///////////// CLICK ARROW TO PREVIOUS SECTION (WORK) ///////////         
-//      var scrollUpButton = element(by.id('scroll-up'));
-//      expect(scrollUpButton.isPresent()).toBe(true);
-//      var scrollUpButtonLink = scrollUpButton.element(by.css('.arrow'));
-//          expect(scrollUpButtonLink.isPresent()).toBe(true);
-//          scrollUpButtonLink.click();
-//          browser.sleep(4000);
-//           header expanded  
-//        var headerElement = element(by.tagName('header'));
-//        expect(headerElement.isPresent()).toBe(true);
-//        expect(headerElement.element(by.css('expand navbar-fixed-top box-shadow-down')).isPresent()).toBe(true);
+	    ///////////// Click to next: contact ///////////
+	    toNextDownButtonLink.click();
+	    browser.sleep(5000);
+
+	    // LETS GO UP!!!!!
+		///////////// Click up: Work ///////////
+	    var contact = element(by.id('contact'));
+	    expect(contact.isPresent()).toBe(true);
+      	var scrollUpButton = contact.element(by.id('scroll-up'));
+      	expect(scrollUpButton.isPresent()).toBe(true);
+      	var scrollUpButtonLink = scrollUpButton.element(by.id('scroll-up-link'));
+      	expect(scrollUpButtonLink.isPresent()).toBe(true);
+    	scrollUpButtonLink.click();
+    	browser.sleep(3500);
+    	expect(currentSectionWrapper.getText("text")).toEqual('WORK');
+
+    	///////////// Click to next: Loving ///////////
+		toNextUpButtonLink.click();
+		browser.sleep(3500);
+		expect(currentSectionWrapper.getText("text")).toEqual('LOVING');
+
+		///////////// Click to next: About ///////////
+		toNextUpButtonLink.click();
+		browser.sleep(3500);
+		expect(currentSectionWrapper.getText("text")).toEqual('ABOUT');
+
+		///////////// Click to next: Connectivity ///////////
+		toNextUpButtonLink.click();
+		browser.sleep(3500);
+		
+    });
+
+	//////////////////
+	/// FROM COVER ///
+	//////////////////
+
+   	it('should contain a bar with the 4 link sections', function() {
+
+   		browser.sleep(5000);
+
+		var cover = element(by.id('cover'));
+      	expect(cover.isPresent()).toBe(true);
+      	var currentSectionWrapper = element(by.id('current-section-wrapper'));
+
+      	// Click About
+      	var aboutLink = cover.element(by.id('about-li'));
+      	expect(aboutLink.isPresent()).toBe(true);
+
+		aboutLink.element(by.css('.icon-boomerang-solid')).click();
+		browser.sleep(3000);
+		expect(currentSectionWrapper.getText("text")).toEqual('ABOUT');
+
+		// Click Loving
+		var lovingLink = cover.element(by.id('loving-li'));
+      	expect(lovingLink.isPresent()).toBe(true);
+
+		lovingLink.element(by.css('.icon-heart')).click();
+		browser.sleep(3000);
+		expect(currentSectionWrapper.getText("text")).toEqual('LOVING');
+
+		// Click Work
+		var workLink = cover.element(by.id('work-li'));
+      	expect(workLink.isPresent()).toBe(true);
+
+		workLink.element(by.css('.icon-suitcase')).click();
+		browser.sleep(3500);
+		expect(currentSectionWrapper.getText("text")).toEqual('WORK');
+
+		// Click Contact
+		var contactLink = cover.element(by.id('contact-li'));
+      	expect(contactLink.isPresent()).toBe(true);
+
+		contactLink.element(by.css('.icon-weixin')).click();
+		browser.sleep(3500);
       
-//      ///////////// CLICK TO Loving ///////////
-//      var lovingLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(1);
-//      lovingLinkTopnavbar.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/loving');
-//      // navbar section gets 'active'
-//      expect(lovingLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+   	});
 
-//      ///////////// CLICK TO About ///////////
-//      var aboutLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(0);
-//      aboutLinkTopnavbar.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/about');
-//      // navbar section gets 'active'
-//      expect(aboutLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
+   	afterEach(function() {
+      jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
+    });
 
-//      ///////////// CLICK TO Work ///////////
-//      var workLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(2);
-//      workLinkTopnavbar.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/work');
-//      // navbar section gets 'active'
-//      expect(workLinkTopnavbar.element(by.css('.active')).isPresent()).toBe(true);
-      
-//      ///////////// CLICK TO Contact ///////////
-//      var contactLinkTopnavbar = element.all(by.css('.navbar-custom li')).get(3);
-//      contactLinkTopnavbar.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/contact');
-//    });
-
-// });
-
-// 'use strict';
-
-// describe('Daniboomerang - scrolling scenario', function() {
-
-//  beforeEach(function() {
-//    browser.get('/');
-//    browser.ignoreSynchronization = true;
-//    browser.sleep(3000);
-//    browser.actions().sendKeys(protractor.Key.ENTER).perform();
-//    browser.sleep(2000);
-//  });
-
-//  ////////////////
-//  /// ON COVER ///
-//  ////////////////
-
-//    it('should contain a bar with the 4 link sections', function() {
-
-//      var cover = element(by.id('cover'));
-//          expect(cover.isPresent()).toBe(true);
-
-//        element.all(by.css('.nav-cover li')).then(function(navbarList) {
-//        expect(navbarList.length).toBe(4);
-
-//        // About <li> contains boomerang icon
-//        expect(navbarList[0].element(by.css('.icon-boomerang-solid')).isPresent()).toBe(true);
-
-//            // Loving to do <li> contains heart icon
-//            expect(navbarList[1].element(by.css('.fa-heart')).isPresent()).toBe(true);
-
-//            // Work <li> contains github icon
-//        expect(navbarList[2].element(by.css('.fa-suitcase')).isPresent()).toBe(true);
-
-//            // Contact <li> contains chat icon
-//            expect(navbarList[3].element(by.css('.fa-wechat')).isPresent()).toBe(true);
-//        });
-      
-//    });
-
-//    //////////////////////////////////////
-//    // If click to navbar section About //
-//    //////////////////////////////////////
-
-//    it('should scroll to About and expand topnavbar with About link active', function() {
-
-//      var aboutLinkCover = element.all(by.css('.nav-cover li')).get(0);
-//      expect(aboutLinkCover.isPresent()).toBe(true);
-//      aboutLinkCover.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/about');
-
-//    });
-
-//    ////////////////////////////////////////
-//    // If clicks to navbar section Loving //
-//    ////////////////////////////////////////
-
-//    it('should scroll to Loving and expand topnavbar with Loving link active', function() {
-
-//      var lovingLinkCover = element.all(by.css('.nav-cover li')).get(1);
-//      expect(lovingLinkCover.isPresent()).toBe(true);
-//      lovingLinkCover.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/loving');
-
-//    });
-
-//    //////////////////////////////////////
-//    // If clicks to navbar section Work //
-//    //////////////////////////////////////
-
-//    it('should scroll to Work and expand topnavbar with Work link active', function() {
-
-//      var workLinkCover = element.all(by.css('.nav-cover li')).get(2);
-//      expect(workLinkCover.isPresent()).toBe(true);
-//      workLinkCover.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/work');
-
-//    });
-
-//    /////////////////////////////////////////
-//    // If clicks to navbar section Contact //
-//    /////////////////////////////////////////
-
-//    it('should scroll to Contact and expand topnavbar with Contact link active', function() {
-
-//      var contactLinkCover = element.all(by.css('.nav-cover li')).get(3);
-//      expect(contactLinkCover.isPresent()).toBe(true);
-//      contactLinkCover.click();
-//      browser.sleep(4000);
-//      // it scrolls to About section (check url)
-//      expect(browser.getCurrentUrl()).toContain('/#/contact');
-
-//    });
-
-// });
-
-  // Lets click on 'to top button'
-	  // var toTopButton = footerWrapper.element(by.id('to-top-button'));
-	  // expect(toTopButton.isPresent()).toBe(true);
-	  // var toTopButtonLink = toTopButton.element(by.css('.dboom-button-link'));
-	  // expect(toTopButtonLink.isPresent()).toBe(true);
-	  // toTopButtonLink.click();
-	  // browser.sleep(4000);
-	  // // it scrolls to the Cover (check url)
-	  // expect(browser.getCurrentUrl()).toContain('/#/cover');
+});
