@@ -19,12 +19,12 @@ It´s open source project aimed to show my expertise as a software engineer.
 ##### The back-end: 
 - A very simple Express server and some custom Grunt taks
 
-##### QA and Continuous Integration
+##### QA and Continuous Integration:
 - Unit and E2E tests with Karma and Protractor
 - CircleCI
 
-##### Continuous Deployment
-- With Dokku and Docker
+##### Continuous Deployment:
+- With Dokku Docker
 
 ## Tech
 Daniboomerang uses a number of open source projects to work properly:
