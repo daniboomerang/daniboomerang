@@ -10,10 +10,9 @@ It´s open source project aimed to show my expertise as a software engineer.
 - Over 30 SVG images, custom icons and logo
 
 ##### The front-end: 
-- Component Pattern with AngularJS project (only directives). 
+- Component Pattern with AngularJS (only directives). 
 - Plenty of animated SVGs
 - Grate performance: No JS on the parallax, fully optimized SVGs, and very intelligent Angular directives that trigger/stop animations dynamically.
-- Possibility to disable SVG animations in case of low hardware performace on the client side.
 - Fully Responsive
 
 ##### The back-end: 
