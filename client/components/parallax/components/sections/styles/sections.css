@@ -21,7 +21,7 @@ blockquote p { display: inline; }
 
 .section-title { -webkit-font-smoothing: antialiased; text-align: center; }
 .h1-title { font-size: 2em; }
-.h2-title { font-size: 1.8em; }
+.h2-title { font-size: 1.8em; padding-top: 2%; }
 
 .upper-case { text-transform: uppercase; }
 .text-that-lightsup { -webkit-transition: color 0.3s ease-in-out; -moz-transition: color 0.3s ease-in-out; -ms-transition: color 0.3s ease-in-out; -o-transition: color 0.3s ease-in-out; transition: color 0.3s ease-in-out; }
@@ -34,7 +34,7 @@ blockquote p { display: inline; }
 #contact { }
 
 #connectivity { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
-#client-server-diagram { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 5vh; }
+#client-server-diagram { font-size: 1.05em; padding-top: 5vh; }
 #creativity { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
 #remote-working { font-size: 1.05em; margin-left:10%; margin-right:10%; padding-top: 30vh; }
 #back-end-title { font-size: 1.05em; margin-left:10%; margin-right:10%; margin-top: -50vh; padding-top: 30vh; }
