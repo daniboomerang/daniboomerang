@@ -12,7 +12,7 @@ It´s open source project aimed to show my expertise as a software engineer.
 ##### The front-end: 
 - Component Pattern with AngularJS (only directives). 
 - Plenty of animated SVGs
-- Grate performance: No JS on the parallax, fully optimized SVGs, and very intelligent Angular directives that trigger/stop animations dynamically.
+- Great performance: No JS on the parallax, fully optimized SVGs, and very intelligent Angular directives that trigger/stop animations dynamically.
 - Fully Responsive
 
 ##### The back-end: 
@@ -32,7 +32,7 @@ Daniboomerang uses a number of open source projects to work properly:
 * [express] - fast node.js network app framework
 * [grunt] - the tasks runner
 * [jQuery] - SVGs don´t get alive alone!
-* The whole parallax thing is inspired by the grate [parallax design of Keith Clark]. Have a look at the  [practical css parallax] article
+* The whole parallax thing is inspired by the great [parallax design of Keith Clark]. Have a look at the  [practical css parallax] article
 
 And of course Daniboomerang itself is open source.
 
