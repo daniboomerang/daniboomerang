@@ -3,11 +3,51 @@
 var parallaxDirectives = angular.module('parallaxDirectives', []);
 
 // Setting up Url into constant
+parallaxDirectives.constant('SVGS_ANIMATED_STATUS', {
+  iss: false,
+  earthConnectivity: false
+});
+
+// Setting up Url into constant
 parallaxDirectives.constant('PARALLAX_BASE_URL', '/components/parallax/');
-parallaxDirectives.directive('parallax', function(PARALLAX_BASE_URL) {
+parallaxDirectives.directive('parallax', function(PARALLAX_BASE_URL, SVGS_ANIMATED_STATUS) {
   return {
     restrict: 'E',
-    templateUrl: PARALLAX_BASE_URL + 'views/parallax.html'
+    templateUrl: PARALLAX_BASE_URL + 'views/parallax.html',
+    controller: function($scope){
+
+      init()
+
+      function init(){
+        initSVGsAnimationsStatus();
+        listenScrollingChanges();
+      }
+
+      function initSVGsAnimationsStatus(){ $scope.svgsAnimatedStatus = SVGS_ANIMATED_STATUS; }
+      function listenScrollingChanges(){
+
+        /* THE ISS */
+        $scope.$on('active-section:creativity-fromTop', function($event){  $scope.svgsAnimatedStatus.iss = true; });
+        $scope.$on('active-section:without-boundaries-fromBottom', function($event){  $scope.svgsAnimatedStatus.iss = true; });
+        
+        /* THE EARTH CONNECTIVITY */
+        $scope.$on('active-section:creativity-fromTop', function($event){ $scope.svgsAnimatedStatus.earthConnectivity = true; });
+        $scope.$on('active-section:without-boundaries-fromBottom', function($event){ $scope.svgsAnimatedStatus.earthConnectivity = true; });
+        
+        /* THE CLIFF */
+        $scope.$on('active-section:without-boundaries', function($event){ $scope.svgsAnimatedStatus.cliff = true; });
+        $scope.$on('inactive-section:without-boundaries', function($event){ $scope.svgsAnimatedStatus.cliff = true; });
+        
+        /* ALL ANIMATIONS STOPPED ON TEXT SECTION  */
+        $scope.$on('active-section:text', function($event){ 
+          $scope.svgsAnimatedStatus.iss = false;
+          $scope.svgsAnimatedStatus.earthConnectivity = false; 
+          $scope.svgsAnimatedStatus.cliff = false;
+        });
+
+
+      }
+    }
   }  
 })
 

@@ -8,7 +8,7 @@ aliveSvgsDirectives.constant('ALIVE_SVGS_BASE_URL', '/components/parallax/compon
 aliveSvgsDirectives.directive('aliveSvgIss', function($interval, $timeout, cancelAsynchPromiseService, ALIVE_SVGS_BASE_URL) {
   return {
     restrict: 'EA',
-    scope: {},
+    scope: { enableAnimations: '=' },
     template: function (elem, attrs) { return '<div id="iss" class="spin-right-whole" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/iss.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
@@ -29,19 +29,24 @@ aliveSvgsDirectives.directive('aliveSvgIss', function($interval, $timeout, cance
         var issLightTwo = element.find('#ng-light-2'); 
         var issLightThree = element.find('#ng-light-3'); 
         
+        /******************/
+        /* ISS ANIMATIONS */
+        /******************/
+
         // Interval promises 
         var intervalPromiseLights;
 
-        // We trigger the animations only when we are in the section
-        scope.$on('active-section:creativity-fromTop', function($event){
-         if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); }});
-        scope.$on('active-section:without-boundaries-fromBottom', function($event){
-         if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); }});
+        scope.$watch('enableAnimations', function(animationsStatus){
+          if ((animationsStatus) && (intervalPromiseLights == undefined)) { intervalPromiseLights = turnOnLights(); }
+          else if (animationsStatus == undefined || !animationsStatus) { intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights) };
+        });
 
-        // Entering to a text section stops all animations
-        scope.$on('active-section:text', function($event){ 
-          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights); });
-     
+        /**************************************************/
+        /**************************************************/
+                     /* AUXILIARY FUNCTIONS */
+        /**************************************************/
+        /**************************************************/
+
         function turnOnLights() {
           return $interval(function() {
             /*console.log('here an $interval');*/
@@ -57,57 +62,11 @@ aliveSvgsDirectives.directive('aliveSvgIss', function($interval, $timeout, cance
   };
 }); 
 
-aliveSvgsDirectives.directive('aliveSvgEt', function($interval, $timeout, cancelAsynchPromiseService, ALIVE_SVGS_BASE_URL) {
-  return {
-    restrict: 'EA',
-    scope: {},
-    template: function (elem, attrs) { return '<div id="et-scene" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/et-contact-scene.svg\'"></div>';  },
-    link: function (scope, element, attrs) {
-
-      /**********************************/
-      /* Waits the et SVG to be loaded  */
-      /**********************************/
-
-      scope.$on('$includeContentLoaded', function () { init(); });
-
-      function init() {
-
-        /* Finger Lights */
-        var etFingerLight = element.find('#ng-et-finger-light'); 
-        
-        // Interval promises 
-        var intervalPromiseFinger;
-
-        // We trigger the animations only when we are in the section
-        scope.$on('active-section:contact', function($event){ if (intervalPromiseFinger == undefined) { intervalPromiseFinger = lightUpFinger(); }});
-        scope.$on('inactive-section:contact', function($event){ if (intervalPromiseFinger == undefined) { intervalPromiseFinger = lightDownFinger(); }});
-
-        /**************************************************/
-        /**************************************************/
-                     /* AUXILIARY FUNCTIONS */
-        /**************************************************/
-        /**************************************************/
-        
-        function lightUpFinger(){ etFingerLight.attr('style', ''); etFingerLight.attr('class', 'animated fadeIn'); }
-        function lightDownFinger(){ etFingerLight.attr('style', '-moz-animation-delay: 1s; -webkit-animation-delay: 1s; -ms-animation-delay: 1s;'); etFingerLight.attr('class', 'animated fadeOut'); }
-
-        /**************************************************/
-        /**************************************************/
-                    /* END AUXILIARY FUNCTIONS */
-        /**************************************************/
-        /**************************************************/
-      }
-    }
-  };
-});  
-
 aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $timeout, cancelAsynchPromiseService, nodeConnectionsService, ALIVE_SVGS_BASE_URL) {
   return {
     restrict: 'EA',
-    scope: {},
-    template: function (elem, attrs) { 
-      return '<div id="earth-connectivity" ng-include="\'' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg\'"></div>';
-    },
+    scope: { enableAnimations: '=' },
+    template: function (elem, attrs) { return '<div id="earth-connectivity" ng-include="\'' + ALIVE_SVGS_BASE_URL + 'images/moon-&-sun-&-earth-connections.svg\'"></div>'; },
     link: function (scope, element, attrs) {
 
       /***********************************/
@@ -154,11 +113,10 @@ aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $
         // Interval Promises 
         var intervalPromiseEarthConnections;
 
-        // We trigger the animations only when we are in the section
-        scope.$on('active-section:creativity-fromTop', function($event){ if (intervalPromiseEarthConnections == undefined) { intervalPromiseEarthConnections = turnOnEarthConnections('both'); }});
-        scope.$on('active-section:without-boundaries-fromBottom', function($event){ if (intervalPromiseEarthConnections == undefined) { intervalPromiseEarthConnections = turnOnEarthConnections('both'); }});
-        // Entering to a text section stops all animations
-        scope.$on('active-section:text', function($event){ intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections); });
+        scope.$watch('enableAnimations', function(animationsStatus){
+          if ((animationsStatus) && (intervalPromiseEarthConnections == undefined)) { intervalPromiseEarthConnections = turnOnEarthConnections('both'); }
+          else if (animationsStatus == undefined || !animationsStatus) { intervalPromiseEarthConnections = cancelAsynchPromiseService.cancelInterval(intervalPromiseEarthConnections); };
+        });
 
         /**************************************************/
         /**************************************************/
@@ -229,7 +187,7 @@ aliveSvgsDirectives.directive('aliveSvgEarthConnectivity', function($interval, $
 aliveSvgsDirectives.directive('aliveSvgCliff', function($interval, $timeout, cancelAsynchPromiseService, ALIVE_SVGS_BASE_URL) {
   return {
     restrict: 'EA',
-    scope: {},
+    scope: { enableAnimations: '=' },
     template: function (elem, attrs) { return '<div id="cliff-rocket" ng-include="\' ' + ALIVE_SVGS_BASE_URL + 'images/cliff-rocket.svg\'"></div>';  },
     link: function (scope, element, attrs) {
 
@@ -253,28 +211,22 @@ aliveSvgsDirectives.directive('aliveSvgCliff', function($interval, $timeout, can
         var airStripLightZero = element.find('#ng-airstrip-light-0'); 
         var airStripLightOne = element.find('#ng-airstrip-light-1'); 
 
+        /********************/
+        /* CLIFF ANIMATIONS */
+        /********************/
+
         // Interval promises 
         var intervalPromiseAirStripLights, intervalPromiseLights;
 
-        // We trigger the animations only when we are in the section
-        scope.$on('active-section:without-boundaries', function($event){ 
-          //rocket.attr('class', 'soft-suspension');
-          if (intervalPromiseAirStripLights == undefined) { intervalPromiseAirStripLights = turnOnAirStripLights(); }
-          if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); }
-        });
-
-        // And we stop them when we exit the section
-        scope.$on('inactive-section:without-boundaries', function($event){ 
-          //rocket.attr('class', '');
-          intervalPromiseAirStripLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
-          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
-        });
-
-        // Entering to a text section stops all animations
-        scope.$on('active-section:text', function($event){ 
-          //rocket.attr('class', '');
-          intervalPromiseAirStripLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
-          intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+        scope.$watch('enableAnimations', function(animationsStatus){
+          if (animationsStatus) {
+            if (intervalPromiseAirStripLights == undefined) { intervalPromiseAirStripLights = turnOnAirStripLights(); }
+            if (intervalPromiseLights == undefined) { intervalPromiseLights = turnOnLights(); }
+          }
+          else if (animationsStatus == undefined || !animationsStatus) { 
+            intervalPromiseAirStripLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseAirStripLights);
+            intervalPromiseLights = cancelAsynchPromiseService.cancelInterval(intervalPromiseLights);
+          };
         });
 
         /**************************************************/
