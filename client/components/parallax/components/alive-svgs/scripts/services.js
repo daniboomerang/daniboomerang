@@ -1,6 +1,25 @@
 'use strict';
 
+/*
+* @ngdoc module
+* @name aliveSvgsServices
+* @description
+* Provides the data needed by some alive svgs
+*/
+
 var aliveSvgsServices = angular.module('aliveSvgsServices', []);
+
+/*
+* @ngdoc service
+* @name nodeConnectionsService
+* @module aliveSvgsServices
+*
+* @description
+* Provides the combitation of the earth connections
+* and maintains the state of those connections
+*
+* @param $http to read data from json
+*/
 
 aliveSvgsServices.factory('nodeConnectionsService', function ($http){
 	

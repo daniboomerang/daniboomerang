@@ -1,12 +1,39 @@
 'use strict';
 
+/*
+ * @ngdoc module
+ * @name comet
+ * @description
+ * Web component: Comet
+ */
+
 var comet = angular.module('comet', []);
 
 // Setting up Url into constant
 comet.constant('COMET_BASE_URL', '/components/common/comet/');
+
+/**
+ * @ngdoc directive
+ * @name comet
+ * @module comet
+ *
+ * @restrict E
+ *
+ * @description
+ * `<comet>` is one of the available comets. Which one will depend on the parameters 
+ *
+ * @param {string=} color to know which comet svg will be representing this directive
+ *
+ * @usage
+ * <comet color="blue"></comet>
+ * <comet color="white"></comet>
+ * <comet color="red"></comet>
+ */
+ 
 comet.directive('comet', function(COMET_BASE_URL) {
   return {
     restrict: 'E',
+    scope: { },
     template: function(elem, attr){
         // Lets set intro background  
         var cometImageUrl = 'url(' + COMET_BASE_URL + 'images/comet-' + attr.color + '.svg)';

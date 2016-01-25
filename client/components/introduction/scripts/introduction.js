@@ -2,6 +2,20 @@
 
 var introduction = angular.module('introduction', []);
 
+/*
+ * @ngdoc module
+ * @name introduction
+ *
+ * @description
+ *
+ * Web Component that wrappes the introduction part of daniboomerang
+ * It has its own state into the application. 
+    .state('introduction', {
+      url: '/',
+        template: '<intro></intro>',
+    })
+ */
+
 // Setting up Url into constant
 introduction.constant('INTRODUCTION_BASE_URL', '/components/introduction/');
 introduction.config(function($stateProvider) {
@@ -16,6 +30,21 @@ introduction.config(function($stateProvider) {
         template: '<intro></intro>'
     })
 });
+
+
+/**
+ * @ngdoc directive
+ * @name intro
+ * @module introduction
+ *
+ * @restrict EA
+ *
+ * @description
+ * It handles the whole flow of execution of the introduction. When it finishes goes to parallax
+ *
+ * @usage
+ * <intro></intro>
+ */
 
 introduction.directive('intro', function($timeout, $state, $rootScope, $compile, $document, cancelAsynchPromiseService, socialSharingService, INTRODUCTION_BASE_URL) {
 	return {
@@ -203,6 +232,19 @@ introduction.directive('intro', function($timeout, $state, $rootScope, $compile,
 	}
 })
 
+/**
+ * @ngdoc directive
+ * @name aliveSvgRocket
+ * @module introduction
+ *
+ * @restrict EA
+ *
+ * @description
+ * `<alive-svg-rocket>` is the rocket
+ *
+ * @usage
+ * <div id="alive-svg-rocket" alive-svg-rocket></div>
+ */
 
 introduction.directive('aliveSvgRocket', function($interval, $timeout, $q, $rootScope, cancelAsynchPromiseService, INTRODUCTION_BASE_URL) {
   	return {

@@ -1,5 +1,14 @@
 'use strict';
 
+/*
+ * @ngdoc module
+ * @name daniboomerang
+ *
+ * @description
+ *
+ * App Web Component. It defines its dependecies
+ */
+
 var daniboomerang = angular.module('daniboomerang', [
 	'ui.router',
 	// VENDOR

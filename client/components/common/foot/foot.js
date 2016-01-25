@@ -1,9 +1,31 @@
 'use strict';
 
+/*
+ * @ngdoc module
+ * @name foot
+ * @description
+ * Web Component: Foot
+ */
+
 var foot = angular.module('foot', []);
 
 // Setting up Url into constant
 foot.constant('FOOT_BASE_URL', '/components/common/foot/');
+
+/**
+ * @ngdoc directive
+ * @name foot
+ * @module foot
+ *
+ * @restrict E
+ *
+ * @description
+ * `<foot>` the footer
+ *
+ * @usage
+ * <foot></foot>
+ */
+
 foot.directive('foot', function(socialSharingService, FOOT_BASE_URL) {
   return {
     restrict: 'E',
@@ -22,6 +44,10 @@ foot.directive('foot', function(socialSharingService, FOOT_BASE_URL) {
       var shareButtonWrapper = tElement.find('#share-button-wrapper');
       
       return {
+
+        /*  The prelink function executes before the compilation stage.
+            At this point we manipulate the DOM before the view is created */
+
         pre: function preLink(scope, iElement, iAttrs) { 
      
           function addDelayForAnimation(element, delay) {
@@ -57,6 +83,9 @@ foot.directive('foot', function(socialSharingService, FOOT_BASE_URL) {
           addDelayForAnimation(toNextDownButtonWrapper, 0.5);
           
         },
+
+        /*  The postLink function executes after the compilation stage.
+            At this point we can init elements, set listeners and so on */
         post: function postLink(scope, iElement, iAttrs) { 
           
           var COVER, ABOUT, LOVING, WORK, CONTACT;

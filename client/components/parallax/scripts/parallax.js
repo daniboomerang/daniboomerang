@@ -1,5 +1,20 @@
 'use strict';
 
+/*
+ * @ngdoc module
+ * @name parallax
+ *
+ * @description
+ *
+ * Web Component that wrappes other components into the pure css parallax
+ * It has its own state into the application. 
+    .state('parallax', {
+      url: '/',
+        template: '<parallax></parallax><foot></foot>',
+    })
+ * It uses 3rd party module duScroll for getting onScroll events
+ */
+
 var parallax = angular.module('parallax', [
 	// VENDOR
 	'duScroll',
