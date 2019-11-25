@@ -1,0 +1,52 @@
+version: 2    
+jobs:
+  deploy-job:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "ad:6b:4a:da:3a:12:ac:36:73:66:d1:4f:af:e5:ac:f3"
+  test:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      # install dependencies!
+      - run: sudo apt-get update
+      - run: sudo apt-get install lsb-release libappindicator3-1
+      # latest stable chrome
+      - run: curl -L -o google-chrome-stable.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - run: sudo dpkg -browsers google-chrome-stable.deb
+      # make chrome lxc-friendly
+      - run: sudo sed -i 's|HERE/chrome\"|HERE/chrome\" --disable-setuid-sandbox|g' /opt/google/chrome/google-chrome
+      - run: rm google-chrome-stable.deb
+      # downgrade chromedriver
+      - run: curl -L -o chromedriver.zip "https://chromedriver.storage.googleapis.com/2.12/chromedriver_linux64.zip"
+      - run: unzip -p chromedriver.zip | sudo tee /usr/local/bin/chromedriver >> /dev/null
+      - run: sudo chmod +x "/usr/local/bin/chromedriver"
+      # test application
+      - run: grunt testCI
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - .
+  deploy_production:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - attach_workspace:
+          at: .
+      - run: chmod +x deploy.sh; ./deploy.sh
+
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+      - test
+      - deploy_production:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
