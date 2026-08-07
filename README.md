@@ -31,18 +31,18 @@ Atta Labs is my lab — my own agent teams written as specifications and compile
 ## Stack
 
 <p>
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-F2EEE6?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="React" src="https://img.shields.io/badge/React-F2EEE6?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-F2EEE6?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="Postgres" src="https://img.shields.io/badge/Postgres-F2EEE6?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="GraphQL" src="https://img.shields.io/badge/GraphQL-F2EEE6?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0E0E0E?style=flat-square">
+  <img alt="React" src="https://img.shields.io/badge/React-0E0E0E?style=flat-square">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-0E0E0E?style=flat-square">
+  <img alt="Postgres" src="https://img.shields.io/badge/Postgres-0E0E0E?style=flat-square">
+  <img alt="GraphQL" src="https://img.shields.io/badge/GraphQL-0E0E0E?style=flat-square">
 </p>
 <p>
-  <img alt="Claude API" src="https://img.shields.io/badge/Claude%20API-EFD3AC?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="OpenAI API" src="https://img.shields.io/badge/OpenAI%20API-EFD3AC?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-EFD3AC?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="Vercel AI SDK" src="https://img.shields.io/badge/Vercel%20AI%20SDK-EFD3AC?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
-  <img alt="Model Context Protocol" src="https://img.shields.io/badge/Model%20Context%20Protocol-EFD3AC?style=flat-square&labelColor=0E0E0E&color=0E0E0E">
+  <img alt="Claude API" src="https://img.shields.io/badge/Claude%20API-EFD3AC?style=flat-square">
+  <img alt="OpenAI API" src="https://img.shields.io/badge/OpenAI%20API-EFD3AC?style=flat-square">
+  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-EFD3AC?style=flat-square">
+  <img alt="Vercel AI SDK" src="https://img.shields.io/badge/Vercel%20AI%20SDK-EFD3AC?style=flat-square">
+  <img alt="Model Context Protocol" src="https://img.shields.io/badge/Model%20Context%20Protocol-EFD3AC?style=flat-square">
 </p>
 
 `Agent Harness Design` · `Multi-Agent Orchestration` · `Multi-Vendor LLM Routing` · `LLM Evals` · `Streaming LLMs` · `Execution State Machines` · `Envelope Encryption (BYOK)` · `System Architecture` · `Spec-Driven Development`
@@ -58,8 +58,8 @@ Atta Labs is my lab — my own agent teams written as specifications and compile
 ## GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=daniboomerang&bg_color=00000000&color=F2EEE6&line=EFD3AC&point=EFD3AC&area_color=EFD3AC&area=true&title_color=F2EEE6&hide_border=true" alt="GitHub Activity Graph" width="100%">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=daniboomerang&bg_color=000000&color=F2EEE6&line=EFD3AC&point=EFD3AC&area_color=EFD3AC&area=true&title_color=F2EEE6&hide_border=true" alt="GitHub Activity Graph" width="100%">
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=daniboomerang&background=00000000&ring=EFD3AC&fire=EFD3AC&currStreakLabel=F2EEE6&currStreakNum=F2EEE6&sideNums=F2EEE6&sideLabels=9E9E9E&dates=9E9E9E&border=171717&hide_border=true" alt="GitHub Streak" height="165">
+  <img src="https://streak-stats.demolab.com/?user=daniboomerang&background=000000&ring=EFD3AC&fire=EFD3AC&currStreakLabel=F2EEE6&currStreakNum=F2EEE6&sideNums=F2EEE6&sideLabels=9E9E9E&dates=9E9E9E&border=171717&hide_border=true" alt="GitHub Streak" height="165">
 </p>
