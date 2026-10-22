@@ -19,11 +19,6 @@
   <a href="https://www.linkedin.com/in/estevezdani/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-estevezdani-EE601A?style=for-the-badge&logo=linkedin&logoColor=FFFFFF&labelColor=020202"></a>
 </p>
 
----
-
-## Vinaya: a pipeline of AI agents a human can trust
-
-Agents write code fast, but they fail all the time: they stall, misreport, and claim work they didn't do. On a team they quietly pile up code nobody understands. **[Vinaya](https://vinaya.attalabs.dev)** runs the whole engineering workflow as a pipeline of agents, and in it an agent never decides a fact. Code computes it, gates enforce it, the event log records it, and a human approves what matters.
 
 <p align="center">
   <a href="https://vinaya.attalabs.dev"><picture>
@@ -31,6 +26,13 @@ Agents write code fast, but they fail all the time: they stall, misreport, and c
     <img src="assets/vinaya-infinity-light.webp" alt="Vinaya: the development loop around main, drawn as an infinity" width="100%">
   </picture></a>
 </p>
+
+---
+
+## Vinaya: a pipeline of AI agents a human can trust
+
+Agents write code fast, but they fail all the time: they stall, misreport, and claim work they didn't do. On a team they quietly pile up code nobody understands. **[Vinaya](https://vinaya.attalabs.dev)** runs the whole engineering workflow as a pipeline of agents, and in it an agent never decides a fact. Code computes it, gates enforce it, the event log records it, and a human approves what matters.
+
 
 **What's under the hood**
 - **Two execution backends:** a standalone driver, and **Atta Engine**, my workflow engine. It's a YAML compiler that runs LangGraph and executes my own drivers, with checkpoints, pause and resume, stop conditions and tools enforced in code.
