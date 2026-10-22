@@ -1,16 +1,22 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0E0E0E,100:3A2E22&text=Daniel%20Estevez&fontColor=F2EEE6&fontSize=46&fontAlignY=36&desc=AI%20Systems%20Engineer%20%C2%B7%20I%20build%20the%20harness%20that%20makes%20coding%20agents%20trustworthy&descSize=15&descAlignY=58&descColor=EFD3AC&animation=fadeIn" alt="Daniel Estevez — AI Systems Engineer" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&height=190&color=020202&text=Daniel%20Estevez&fontColor=EEEEEE&fontSize=46&fontAlignY=36&desc=AI%20Systems%20Engineer%20%C2%B7%20I%20build%20the%20harness%20that%20makes%20coding%20agents%20trustworthy&descSize=15&descAlignY=58&descColor=FF6900&animation=fadeIn">
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=FCFAF6&text=Daniel%20Estevez&fontColor=020202&fontSize=46&fontAlignY=36&desc=AI%20Systems%20Engineer%20%C2%B7%20I%20build%20the%20harness%20that%20makes%20coding%20agents%20trustworthy&descSize=15&descAlignY=58&descColor=CA3500&animation=fadeIn" alt="Daniel Estevez — AI Systems Engineer" width="100%">
+  </picture>
 </p>
 
 <p align="center">
-  <a href="https://vinaya.attalabs.dev"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=900&color=EFD3AC&center=true&vCenter=true&width=720&lines=Agents+plan%2C+build+and+review.+Code+decides+what+counts.;A+planner%2C+a+developer%2C+two+independent+reviewers%2C+deterministic+gates.;Every+run%2C+check+and+verdict+recorded.+Then+the+loop+closes.;I+don't+ship+code+I+don't+understand+because+an+agent+wrote+it." alt="Typing summary"></a>
+  <a href="https://vinaya.attalabs.dev"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=900&color=FF6900&center=true&vCenter=true&width=720&lines=Agents+plan%2C+build+and+review.+Code+decides+what+counts.;A+planner%2C+a+developer%2C+two+independent+reviewers%2C+deterministic+gates.;Every+run%2C+check+and+verdict+recorded.+Then+the+loop+closes.;I+don't+ship+code+I+don't+understand+because+an+agent+wrote+it.">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=900&color=CA3500&center=true&vCenter=true&width=720&lines=Agents+plan%2C+build+and+review.+Code+decides+what+counts.;A+planner%2C+a+developer%2C+two+independent+reviewers%2C+deterministic+gates.;Every+run%2C+check+and+verdict+recorded.+Then+the+loop+closes.;I+don't+ship+code+I+don't+understand+because+an+agent+wrote+it." alt="Typing summary" >
+  </picture></a>
 </p>
 
 <p align="center">
-  <a href="https://vinaya.attalabs.dev"><img alt="Vinaya" src="https://img.shields.io/badge/Vinaya-vinaya.attalabs.dev-F2EEE6?style=for-the-badge&labelColor=0E0E0E"></a>
-  <a href="https://zerion.attalabs.dev/dev-stats"><img alt="Live results" src="https://img.shields.io/badge/Live%20results-dev--stats-F2EEE6?style=for-the-badge&labelColor=0E0E0E"></a>
-  <a href="https://herald.attalabs.dev/daniboomerang"><img alt="CV" src="https://img.shields.io/badge/CV-herald.attalabs.dev-F2EEE6?style=for-the-badge&labelColor=0E0E0E"></a>
-  <a href="https://www.linkedin.com/in/estevezdani/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-estevezdani-F2EEE6?style=for-the-badge&logo=linkedin&logoColor=EFD3AC&labelColor=0E0E0E"></a>
+  <a href="https://vinaya.attalabs.dev"><img alt="Vinaya" src="https://img.shields.io/badge/Vinaya-vinaya.attalabs.dev-EE601A?style=for-the-badge&labelColor=020202"></a>
+  <a href="https://zerion.attalabs.dev/dev-stats"><img alt="Live results" src="https://img.shields.io/badge/Live%20results-dev--stats-EE601A?style=for-the-badge&labelColor=020202"></a>
+  <a href="https://herald.attalabs.dev/daniboomerang"><img alt="CV" src="https://img.shields.io/badge/CV-herald.attalabs.dev-EE601A?style=for-the-badge&labelColor=020202"></a>
+  <a href="https://www.linkedin.com/in/estevezdani/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-estevezdani-EE601A?style=for-the-badge&logo=linkedin&logoColor=FFFFFF&labelColor=020202"></a>
 </p>
 
 ---
@@ -19,25 +25,7 @@
 
 Agents write code fast, but they fail all the time: they stall, misreport, and claim work they didn't do. On a team they quietly pile up code nobody understands. **[Vinaya](https://vinaya.attalabs.dev)** runs the whole engineering workflow as a pipeline of agents, and in it an agent never decides a fact. Code computes it, gates enforce it, the Log records it, and a human approves what matters.
 
-```mermaid
-flowchart LR
-  P[Planner<br/>writes the task] --> D[Developer agent<br/>Claude Code or Codex]
-  D --> G{Deterministic gates<br/>local + CI}
-  G -- red --> D
-  G -- green --> R1[Code reviewer]
-  G -- green --> R2[Security reviewer]
-  R1 --> A{Assess round}
-  R2 --> A
-  A -- revise --> D
-  A -- ready --> H([Human merges])
-  D -. every act .-> L[(Typed Log)]
-  G -.-> L
-  R1 -.-> L
-  R2 -.-> L
-  L --> S[Studio · live]
-  L --> E[Evals · Harbor]
-  L --> T[Retrospectives]
-```
+<!-- PORTAL-ANIMATION: animated GIF/SVG from vinaya.attalabs.dev goes here -->
 
 **What's under the hood**
 - **Two execution backends:** a standalone driver, and **Atta Engine**, my workflow engine. It's a YAML compiler that runs LangGraph and executes my own drivers, with checkpoints, pause and resume, stop conditions and tools enforced in code.
@@ -74,22 +62,22 @@ Eighteen years in software, with frontend at the centre since 2016. I've worked 
 **[My old portfolio](https://daniboomerang.attalabs.dev)** is still one of my favourite things I've made. It's built in Angular 1.2, with a three-layer CSS parallax and animations everywhere. I drew every SVG in it by hand, one by one, over four months. It's ten years old and still runs smoothly.
 
 <p>
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0E0E0E?style=flat-square&logo=typescript&logoColor=EFD3AC">
-  <img alt="React" src="https://img.shields.io/badge/React-0E0E0E?style=flat-square&logo=react&logoColor=EFD3AC">
-  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-0E0E0E?style=flat-square&logo=nextdotjs&logoColor=EFD3AC">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-0E0E0E?style=flat-square&logo=nodedotjs&logoColor=EFD3AC">
-  <img alt="Bun" src="https://img.shields.io/badge/Bun-0E0E0E?style=flat-square&logo=bun&logoColor=EFD3AC">
-  <img alt="Postgres" src="https://img.shields.io/badge/Postgres-0E0E0E?style=flat-square&logo=postgresql&logoColor=EFD3AC">
-  <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-0E0E0E?style=flat-square&logo=cloudflare&logoColor=EFD3AC">
-  <img alt="three.js" src="https://img.shields.io/badge/three.js-0E0E0E?style=flat-square&logo=threedotjs&logoColor=EFD3AC">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-020202?style=flat-square&logo=typescript&logoColor=FF6900">
+  <img alt="React" src="https://img.shields.io/badge/React-020202?style=flat-square&logo=react&logoColor=FF6900">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-020202?style=flat-square&logo=nextdotjs&logoColor=FF6900">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-020202?style=flat-square&logo=nodedotjs&logoColor=FF6900">
+  <img alt="Bun" src="https://img.shields.io/badge/Bun-020202?style=flat-square&logo=bun&logoColor=FF6900">
+  <img alt="Postgres" src="https://img.shields.io/badge/Postgres-020202?style=flat-square&logo=postgresql&logoColor=FF6900">
+  <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-020202?style=flat-square&logo=cloudflare&logoColor=FF6900">
+  <img alt="three.js" src="https://img.shields.io/badge/three.js-020202?style=flat-square&logo=threedotjs&logoColor=FF6900">
 </p>
 <p>
-  <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-EFD3AC?style=flat-square&logo=anthropic&logoColor=0E0E0E">
-  <img alt="Codex" src="https://img.shields.io/badge/Codex-EFD3AC?style=flat-square&logo=openai&logoColor=0E0E0E">
-  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-EFD3AC?style=flat-square&logo=langchain&logoColor=0E0E0E">
-  <img alt="Model Context Protocol" src="https://img.shields.io/badge/Model%20Context%20Protocol-EFD3AC?style=flat-square">
-  <img alt="Harbor evals" src="https://img.shields.io/badge/Evals-Harbor-EFD3AC?style=flat-square">
-  <img alt="Vercel AI SDK" src="https://img.shields.io/badge/Vercel%20AI%20SDK-EFD3AC?style=flat-square&logo=vercel&logoColor=0E0E0E">
+  <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-EE601A?style=flat-square&logo=anthropic&logoColor=020202">
+  <img alt="Codex" src="https://img.shields.io/badge/Codex-EE601A?style=flat-square&logo=openai&logoColor=020202">
+  <img alt="LangGraph" src="https://img.shields.io/badge/LangGraph-EE601A?style=flat-square&logo=langchain&logoColor=020202">
+  <img alt="Model Context Protocol" src="https://img.shields.io/badge/Model%20Context%20Protocol-EE601A?style=flat-square">
+  <img alt="Harbor evals" src="https://img.shields.io/badge/Evals-Harbor-EE601A?style=flat-square">
+  <img alt="Vercel AI SDK" src="https://img.shields.io/badge/Vercel%20AI%20SDK-EE601A?style=flat-square&logo=vercel&logoColor=020202">
 </p>
 
 ## Activity
@@ -101,12 +89,18 @@ Eighteen years in software, with frontend at the centre since 2016. I've worked 
   </picture>
 </p>
 <p align="center">
-  <img src="https://ghchart.rshah.org/EFD3AC/daniboomerang" alt="GitHub contribution chart" width="100%">
+  <img src="https://ghchart.rshah.org/CA3500/daniboomerang" alt="GitHub contribution chart" width="100%">
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=daniboomerang&background=0E0E0E&ring=EFD3AC&fire=EFD3AC&currStreakLabel=F2EEE6&currStreakNum=F2EEE6&sideNums=F2EEE6&sideLabels=9E9E9E&dates=9E9E9E&hide_border=true" alt="GitHub streak" height="165">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=daniboomerang&background=020202&ring=FF6900&fire=FF6900&currStreakLabel=EEEEEE&currStreakNum=EEEEEE&sideNums=EEEEEE&sideLabels=8A8380&dates=8A8380&stroke=2a2a2a&hide_border=true">
+    <img src="https://streak-stats.demolab.com/?user=daniboomerang&background=FCFAF6&ring=CA3500&fire=CA3500&currStreakLabel=020202&currStreakNum=020202&sideNums=020202&sideLabels=5C5855&dates=5C5855&stroke=E7E2DA&hide_border=true" alt="GitHub streak" height="165">
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=90&color=0:3A2E22,100:0E0E0E&section=footer" width="100%" alt="">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&height=90&color=020202&section=footer">
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=90&color=FCFAF6&section=footer" alt="" width="100%">
+  </picture>
 </p>
