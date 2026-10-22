@@ -22,8 +22,8 @@
 
 <p align="center">
   <a href="https://vinaya.attalabs.dev"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/vinaya-infinity-once-dark.webp">
-    <img src="assets/vinaya-infinity-once-light.webp" alt="Vinaya: the development loop around main, drawn as an infinity" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/vinaya-infinity-v2-dark.webp">
+    <img src="assets/vinaya-infinity-v2-light.webp" alt="Vinaya: the development loop around main, drawn as an infinity" width="100%">
   </picture></a>
 </p>
 
