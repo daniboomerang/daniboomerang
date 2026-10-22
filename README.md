@@ -1,14 +1,14 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&height=190&color=020202&text=Daniel%20Estevez&fontColor=EEEEEE&fontSize=46&fontAlignY=36&desc=AI%20Systems%20Engineer%20%C2%B7%20I%20build%20the%20harness%20that%20makes%20coding%20agents%20trustworthy&descSize=15&descAlignY=58&descColor=FF6900&animation=fadeIn">
-    <img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=FCFAF6&text=Daniel%20Estevez&fontColor=020202&fontSize=46&fontAlignY=36&desc=AI%20Systems%20Engineer%20%C2%B7%20I%20build%20the%20harness%20that%20makes%20coding%20agents%20trustworthy&descSize=15&descAlignY=58&descColor=CA3500&animation=fadeIn" alt="Daniel Estevez — AI Systems Engineer" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=rect&height=130&color=020202&text=Daniel%20Estevez&fontColor=EEEEEE&fontSize=46&fontAlignY=38&desc=AI%20Systems%20Engineer%20%C2%B7%20I%20build%20the%20harness%20that%20makes%20coding%20agents%20trustworthy&descSize=15&descAlignY=74&descColor=FF6900&animation=fadeIn">
+    <img src="https://capsule-render.vercel.app/api?type=rect&height=130&color=FCFAF6&text=Daniel%20Estevez&fontColor=020202&fontSize=46&fontAlignY=38&desc=AI%20Systems%20Engineer%20%C2%B7%20I%20build%20the%20harness%20that%20makes%20coding%20agents%20trustworthy&descSize=15&descAlignY=74&descColor=CA3500&animation=fadeIn" alt="Daniel Estevez — AI Systems Engineer" width="100%">
   </picture>
 </p>
 
 <p align="center">
   <a href="https://vinaya.attalabs.dev"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=900&color=FF6900&center=true&vCenter=true&width=720&lines=Agents+plan%2C+build+and+review.+Code+decides+what+counts.;A+planner%2C+a+developer%2C+two+independent+reviewers%2C+deterministic+gates.;Every+run%2C+check+and+verdict+recorded.+Then+the+loop+closes.;I+don't+ship+code+I+don't+understand+because+an+agent+wrote+it.">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=900&color=CA3500&center=true&vCenter=true&width=720&lines=Agents+plan%2C+build+and+review.+Code+decides+what+counts.;A+planner%2C+a+developer%2C+two+independent+reviewers%2C+deterministic+gates.;Every+run%2C+check+and+verdict+recorded.+Then+the+loop+closes.;I+don't+ship+code+I+don't+understand+because+an+agent+wrote+it." alt="Typing summary" >
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=900&color=FF6900&center=true&vCenter=true&width=720&height=32&lines=Agents+plan%2C+build+and+review.+Code+decides+what+counts.;A+planner%2C+a+developer%2C+two+independent+reviewers%2C+deterministic+gates.;Every+run%2C+check+and+verdict+recorded.+Then+the+loop+closes.;I+don't+ship+code+I+don't+understand+because+an+agent+wrote+it.">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=900&color=CA3500&center=true&vCenter=true&width=720&height=32&lines=Agents+plan%2C+build+and+review.+Code+decides+what+counts.;A+planner%2C+a+developer%2C+two+independent+reviewers%2C+deterministic+gates.;Every+run%2C+check+and+verdict+recorded.+Then+the+loop+closes.;I+don't+ship+code+I+don't+understand+because+an+agent+wrote+it." alt="Typing summary" >
   </picture></a>
 </p>
 
@@ -22,8 +22,8 @@
 
 <p align="center">
   <a href="https://vinaya.attalabs.dev"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/vinaya-infinity-v2-dark.webp">
-    <img src="assets/vinaya-infinity-v2-light.webp" alt="Vinaya: the development loop around main, drawn as an infinity" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/vinaya-infinity-v3-dark.webp">
+    <img src="assets/vinaya-infinity-v3-light.webp" alt="Vinaya: the development loop around main, drawn as an infinity" width="100%">
   </picture></a>
 </p>
 
