@@ -23,7 +23,7 @@
 
 ## Vinaya: a pipeline of AI agents a human can trust
 
-Agents write code fast, but they fail all the time: they stall, misreport, and claim work they didn't do. On a team they quietly pile up code nobody understands. **[Vinaya](https://vinaya.attalabs.dev)** runs the whole engineering workflow as a pipeline of agents, and in it an agent never decides a fact. Code computes it, gates enforce it, the Log records it, and a human approves what matters.
+Agents write code fast, but they fail all the time: they stall, misreport, and claim work they didn't do. On a team they quietly pile up code nobody understands. **[Vinaya](https://vinaya.attalabs.dev)** runs the whole engineering workflow as a pipeline of agents, and in it an agent never decides a fact. Code computes it, gates enforce it, the event log records it, and a human approves what matters.
 
 <!-- PORTAL-ANIMATION: animated GIF/SVG from vinaya.attalabs.dev goes here -->
 
